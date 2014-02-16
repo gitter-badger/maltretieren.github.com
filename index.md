@@ -10,6 +10,10 @@ I recently learned about howto host a Jekyll driven page on GitHub. I like it be
 
 This site will be mainly for my own documentation, but if anyone is interested in some findings, I'm happy :)
 
+---
+
 {% for post in site.posts limit: 5  %}
+  <p><a href='{{ post.url }}'>{{ post.title }}</a>, posted on {{ post.date | date_to_string }}</p>
   <blockquote>{{ post.content }}</blockquote>
+   <hr/>
 {% endfor %}

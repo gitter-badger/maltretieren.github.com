@@ -1,8 +1,8 @@
 ---
 layout: post
-category : test
+category : blog
 tagline: "a post to the main page"
-tags : [jekyll github]
+tags : [jekyll github frontpage]
 ---
 {% include JB/setup %}
 
