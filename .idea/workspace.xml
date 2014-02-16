@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-02-15-live-post.md" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-02-16-include.md" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.md" afterPath="$PROJECT_DIR$/index.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,7 +52,16 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="10" selection-start="149" selection-end="149" vertical-scroll-proportion="0.22920203" vertical-offset="0" max-vertical-offset="589">
+            <state line="28" column="8" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.74336284" vertical-offset="0" max-vertical-offset="565">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="2" selection-start="59" selection-end="107" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
               <folding />
             </state>
           </provider>
@@ -444,12 +450,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="2" selection-start="59" selection-end="107" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="10" selection-start="149" selection-end="149" vertical-scroll-proportion="0.22920203" vertical-offset="0" max-vertical-offset="589">
+        <state line="28" column="8" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.74336284" vertical-offset="0" max-vertical-offset="565">
           <folding />
         </state>
       </provider>
