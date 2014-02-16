@@ -2,9 +2,11 @@ _site/*
 _theme_packages/*
 
 Thumbs.db
+Gemfile.lock
 .DS_Store
 
 !.gitkeep
 
 .rbenv-version
 .rvmrc
+
