@@ -6,7 +6,7 @@ tagline: ... or make sense!
 {% include JB/setup %}
 
 ## Introduction
-I recently learned howto host a Jekyll driven page hosted on GitHub. This site will be mainly for my own documentation, but if anyone is interested in stuff I'm very happy :)
+I recently learned howto host a Jekyll driven page on GitHub. This site will be mainly for my own documentation, but if anyone is interested in stuff I'm very happy :)
 
 {% for post in site.posts limit: 5  %}
   <blockquote>{{ post.content }}</blockquote>
