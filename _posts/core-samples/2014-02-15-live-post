@@ -1,0 +1,10 @@
+---
+layout: post
+category : test
+tagline: "a post to the main page"
+tags : [test]
+---
+{% include JB/setup %}
+
+## Test 2
+This post is a live edit
