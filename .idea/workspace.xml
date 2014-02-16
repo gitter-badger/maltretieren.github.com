@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.md" afterPath="$PROJECT_DIR$/index.md" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,7 +41,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="157" selection-start="263" selection-end="263" vertical-scroll-proportion="-4.285714" vertical-offset="0" max-vertical-offset="285">
+            <state line="10" column="101" selection-start="406" selection-end="406" vertical-scroll-proportion="-5.357143" vertical-offset="0" max-vertical-offset="315">
               <folding />
             </state>
           </provider>
@@ -52,7 +53,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="8" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.74336284" vertical-offset="0" max-vertical-offset="565">
+            <state line="34" column="111" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.7876106" vertical-offset="65" max-vertical-offset="630">
               <folding />
             </state>
           </provider>
@@ -440,19 +441,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="2" selection-start="59" selection-end="107" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="157" selection-start="263" selection-end="263" vertical-scroll-proportion="-4.285714" vertical-offset="0" max-vertical-offset="285">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="2" selection-start="59" selection-end="107" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+        <state line="10" column="101" selection-start="406" selection-end="406" vertical-scroll-proportion="-5.357143" vertical-offset="0" max-vertical-offset="315">
           <folding />
         </state>
       </provider>
@@ -462,7 +463,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="8" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.74336284" vertical-offset="0" max-vertical-offset="565">
+        <state line="34" column="111" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.7876106" vertical-offset="65" max-vertical-offset="630">
           <folding />
         </state>
       </provider>
