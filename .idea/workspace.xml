@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-02-15-live-post.md" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-02-16-include.md" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.md" afterPath="$PROJECT_DIR$/index.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,13 +37,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="51" selection-start="157" selection-end="157" vertical-scroll-proportion="0.20373514" vertical-offset="0" max-vertical-offset="589">
+            <state line="8" column="157" selection-start="263" selection-end="263" vertical-scroll-proportion="-4.285714" vertical-offset="0" max-vertical-offset="285">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014-02-16-jekyll-on-github.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md">
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="10" selection-start="149" selection-end="149" vertical-scroll-proportion="0.22920203" vertical-offset="0" max-vertical-offset="589">
               <folding />
             </state>
           </provider>
@@ -68,18 +83,6 @@
         <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="39" column="10" selection-start="1651" selection-end="1651" vertical-scroll-proportion="-13.125" vertical-offset="270" max-vertical-offset="1035">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2014-02-15-live-post.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-02-15-live-post.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="24" selection-start="150" selection-end="150" vertical-scroll-proportion="-5.357143" vertical-offset="0" max-vertical-offset="255">
               <folding />
             </state>
           </provider>
@@ -113,6 +116,7 @@
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/_posts/core-samples/2014-02-15-live-post.md" />
         <option value="$PROJECT_DIR$/index.md" />
+        <option value="$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md" />
       </list>
     </option>
   </component>
@@ -374,16 +378,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-02-16-include.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="240">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/post.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="10" selection-start="1432" selection-end="1432" vertical-scroll-proportion="0.772344" vertical-offset="202" max-vertical-offset="795">
@@ -440,22 +434,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-02-15-live-post.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="24" selection-start="150" selection-end="150" vertical-scroll-proportion="-5.357143" vertical-offset="0" max-vertical-offset="255">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="51" selection-start="157" selection-end="157" vertical-scroll-proportion="0.20373514" vertical-offset="0" max-vertical-offset="589">
+        <state line="8" column="157" selection-start="263" selection-end="263" vertical-scroll-proportion="-4.285714" vertical-offset="0" max-vertical-offset="285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="10" selection-start="149" selection-end="149" vertical-scroll-proportion="0.22920203" vertical-offset="0" max-vertical-offset="589">
           <folding />
         </state>
       </provider>
