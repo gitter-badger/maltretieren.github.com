@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-02-17-ideas.md" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-02-17-ideas.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-02-16-map.md" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-02-16-map.md" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,25 +67,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2014-02-17-ideas.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="2014-02-17-ideas.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-02-17-ideas.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="167" selection-end="167" vertical-scroll-proportion="0.33737025" vertical-offset="0" max-vertical-offset="578">
+            <state line="13" column="0" selection-start="167" selection-end="167" vertical-scroll-proportion="-6.964286" vertical-offset="0" max-vertical-offset="285">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2014-02-16-map.md" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="2014-02-16-map.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-02-16-map.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="31" selection-start="201" selection-end="201" vertical-scroll-proportion="-4.821429" vertical-offset="0" max-vertical-offset="240">
+            <state line="9" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="0.23356402" vertical-offset="0" max-vertical-offset="578">
               <folding />
             </state>
           </provider>
@@ -158,8 +158,8 @@
         <option value="$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md" />
         <option value="$PROJECT_DIR$/assets/themes/twitter/css/syntax.css" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
-        <option value="$PROJECT_DIR$/_posts/core-samples/2014-02-16-map.md" />
         <option value="$PROJECT_DIR$/_posts/core-samples/2014-02-17-ideas.md" />
+        <option value="$PROJECT_DIR$/_posts/core-samples/2014-02-16-map.md" />
       </list>
     </option>
   </component>
@@ -476,16 +476,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-02-16-map.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="31" selection-start="201" selection-end="201" vertical-scroll-proportion="-4.821429" vertical-offset="0" max-vertical-offset="240">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
@@ -501,7 +491,17 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="167" selection-end="167" vertical-scroll-proportion="0.33737025" vertical-offset="0" max-vertical-offset="578">
+        <state line="13" column="0" selection-start="167" selection-end="167" vertical-scroll-proportion="-6.964286" vertical-offset="0" max-vertical-offset="285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-02-16-map.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="0.23356402" vertical-offset="0" max-vertical-offset="578">
           <folding />
         </state>
       </provider>
