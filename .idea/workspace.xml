@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-02-18-android-debug-bridge.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/themes/twitter/css/syntax.css" afterPath="$PROJECT_DIR$/assets/themes/twitter/css/syntax.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-02-18-android-debug-bridge.md" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-02-18-android-debug-bridge.md" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -111,7 +109,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="13" selection-start="445" selection-end="445" vertical-scroll-proportion="0.6234568" vertical-offset="68" max-vertical-offset="510">
+            <state line="14" column="0" selection-start="395" selection-end="395" vertical-scroll-proportion="0.5308642" vertical-offset="38" max-vertical-offset="510">
               <folding />
             </state>
           </provider>
@@ -573,7 +571,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="13" selection-start="445" selection-end="445" vertical-scroll-proportion="0.6234568" vertical-offset="68" max-vertical-offset="510">
+        <state line="14" column="0" selection-start="395" selection-end="395" vertical-scroll-proportion="0.5308642" vertical-offset="38" max-vertical-offset="510">
           <folding />
         </state>
       </provider>
