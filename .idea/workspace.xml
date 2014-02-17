@@ -64,7 +64,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="14" selection-start="208" selection-end="208" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="330">
+            <state line="13" column="6" selection-start="167" selection-end="264" vertical-scroll-proportion="-6.964286" vertical-offset="0" max-vertical-offset="330">
               <folding />
             </state>
           </provider>
@@ -76,7 +76,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="101" selection-start="396" selection-end="396" vertical-scroll-proportion="0.26548672" vertical-offset="0" max-vertical-offset="565">
+            <state line="14" column="143" selection-start="585" selection-end="585" vertical-scroll-proportion="0.37168142" vertical-offset="0" max-vertical-offset="565">
               <folding />
             </state>
           </provider>
@@ -509,16 +509,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-02-17-ideas.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="14" selection-start="208" selection-end="208" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="330">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="86" selection-end="86" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="165">
@@ -540,12 +530,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-02-17-ideas.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="6" selection-start="167" selection-end="264" vertical-scroll-proportion="-6.964286" vertical-offset="0" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-02-16-map.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="101" selection-start="396" selection-end="396" vertical-scroll-proportion="0.26548672" vertical-offset="0" max-vertical-offset="565">
+        <state line="14" column="143" selection-start="585" selection-end="585" vertical-scroll-proportion="0.37168142" vertical-offset="0" max-vertical-offset="565">
           <folding />
         </state>
       </provider>
