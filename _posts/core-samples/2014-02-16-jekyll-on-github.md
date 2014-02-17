@@ -21,7 +21,7 @@ source 'https://rubygems.org'
 gem 'github-pages'
 ```
 
-Now you run a local server with the "-w" option to enable Auto-regeneration after a file changes.
+Now you run a local server. The option "-w" enables Auto-regeneration after a file has changed.
 
 ```sh
 bundle exec jekyll serve -w
