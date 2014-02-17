@@ -9,6 +9,8 @@ tags : [jekyll github frontpage]
 ## Jekyll on GitHub
 Beside of hosting of code repositories, Github offers free hosting of Jekyll driven pages. Jekyll is a software to generate static website files out of templates. Instead of generating the files locally and push it to the repo, Github runs Jekyll on their infrastructure and you push the Jekyll files to your repository and Github builds it for you.
 
+<!-- more -->
+
 ### First steps
 Follow instructions on [Jekyll QuickStart](http://jekyllbootstrap.com/usage/jekyll-quick-start.html) to fire up the first Jekyll pages. This went quite well, except I had to generate an SSH key on my local computer and paste it to my GitHub repository.
 

@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-02-17-development-infrastructure.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-02-17-ideas.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-02-17-ideas.md" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-02-17-ideas.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.md" afterPath="$PROJECT_DIR$/index.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -32,7 +31,7 @@
       <file leaf-file-name="page.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_layouts/page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="86" selection-end="86" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="165">
+            <state line="5" column="0" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="165">
               <folding />
             </state>
           </provider>
@@ -44,7 +43,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="3" selection-start="608" selection-end="608" vertical-scroll-proportion="-9.107142" vertical-offset="0" max-vertical-offset="375">
+            <state line="16" column="4" selection-start="563" selection-end="563" vertical-scroll-proportion="-8.571428" vertical-offset="0" max-vertical-offset="375">
               <folding />
             </state>
           </provider>
@@ -56,7 +55,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="128" selection-end="128" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="630">
+            <state line="11" column="13" selection-start="513" selection-end="513" vertical-scroll-proportion="-4.428571" vertical-offset="41" max-vertical-offset="660">
               <folding />
             </state>
           </provider>
@@ -68,7 +67,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="12" selection-start="168" selection-end="168" vertical-scroll-proportion="-5.357143" vertical-offset="0" max-vertical-offset="240">
+            <state line="10" column="12" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="240">
               <folding />
             </state>
           </provider>
@@ -80,7 +79,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="8" selection-start="132" selection-end="132" vertical-scroll-proportion="0.20761245" vertical-offset="0" max-vertical-offset="578">
+            <state line="10" column="23" selection-start="174" selection-end="174" vertical-scroll-proportion="0.25951558" vertical-offset="0" max-vertical-offset="578">
               <folding />
             </state>
           </provider>
@@ -89,7 +88,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="2" selection-start="59" selection-end="107" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+            <state line="1" column="2" selection-start="59" selection-end="107" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="120">
               <folding />
             </state>
           </provider>
@@ -98,7 +97,7 @@
       <file leaf-file-name="default.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_layouts/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="180">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
               <folding />
             </state>
           </provider>
@@ -107,7 +106,7 @@
       <file leaf-file-name="page.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="165">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
               <folding />
             </state>
           </provider>
@@ -116,7 +115,7 @@
       <file leaf-file-name="default.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="10" selection-start="1651" selection-end="1651" vertical-scroll-proportion="-13.125" vertical-offset="270" max-vertical-offset="1035">
+            <state line="39" column="10" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1035">
               <folding />
             </state>
           </provider>
@@ -149,9 +148,9 @@
         <option value="$PROJECT_DIR$/_includes/themes/twitter/page.html" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/_posts/core-samples/2014-02-15-live-post.md" />
-        <option value="$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md" />
-        <option value="$PROJECT_DIR$/index.md" />
         <option value="$PROJECT_DIR$/_posts/core-samples/2014-02-17-development-infrastructure.md" />
+        <option value="$PROJECT_DIR$/index.md" />
+        <option value="$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md" />
         <option value="$PROJECT_DIR$/_posts/core-samples/2014-02-17-ideas.md" />
       </list>
     </option>
@@ -288,6 +287,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -296,14 +303,6 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -346,7 +345,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1235" height="778" extended-state="6" />
+    <frame x="0" y="22" width="1235" height="778" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -382,16 +381,12 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/settings.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="389">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="389" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="23" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0" vertical-offset="1677" max-vertical-offset="2040">
-          <folding />
-        </state>
+        <state line="14" column="23" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0" vertical-offset="1677" max-vertical-offset="2040" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/History.markdown">
@@ -399,42 +394,32 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="362">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="362" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="10" selection-start="1432" selection-end="1432" vertical-scroll-proportion="0.772344" vertical-offset="202" max-vertical-offset="795">
-          <folding />
-        </state>
+        <state line="44" column="10" selection-start="1432" selection-end="1432" vertical-scroll-proportion="0.772344" vertical-offset="202" max-vertical-offset="795" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="606">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="606" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/themes/twitter/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="13" selection-start="565" selection-end="565" vertical-scroll-proportion="0.8955224" vertical-offset="0" max-vertical-offset="1050">
-          <folding />
-        </state>
+        <state line="36" column="13" selection-start="565" selection-end="565" vertical-scroll-proportion="0.8955224" vertical-offset="0" max-vertical-offset="1050" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="10" selection-start="4149" selection-end="4158" vertical-scroll-proportion="0.43220338" vertical-offset="735" max-vertical-offset="11820">
-          <folding />
-        </state>
+        <state line="66" column="10" selection-start="4149" selection-end="4158" vertical-scroll-proportion="0.43220338" vertical-offset="735" max-vertical-offset="11820" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="86" selection-end="86" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="165">
+        <state line="5" column="0" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="165">
           <folding />
         </state>
       </provider>
@@ -455,7 +440,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="10" selection-start="1651" selection-end="1651" vertical-scroll-proportion="-13.125" vertical-offset="270" max-vertical-offset="1035">
+        <state line="39" column="10" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1035">
           <folding />
         </state>
       </provider>
@@ -467,12 +452,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-02-17-development-infrastructure.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="12" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="3" selection-start="608" selection-end="608" vertical-scroll-proportion="-9.107142" vertical-offset="0" max-vertical-offset="375">
+        <state line="16" column="4" selection-start="563" selection-end="563" vertical-scroll-proportion="-8.571428" vertical-offset="0" max-vertical-offset="375">
           <folding />
         </state>
       </provider>
@@ -482,17 +477,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="128" selection-end="128" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="630">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-02-17-development-infrastructure.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="12" selection-start="168" selection-end="168" vertical-scroll-proportion="-5.357143" vertical-offset="0" max-vertical-offset="240">
+        <state line="11" column="13" selection-start="513" selection-end="513" vertical-scroll-proportion="-4.428571" vertical-offset="41" max-vertical-offset="660">
           <folding />
         </state>
       </provider>
@@ -502,7 +487,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="8" selection-start="132" selection-end="132" vertical-scroll-proportion="0.20761245" vertical-offset="0" max-vertical-offset="578">
+        <state line="10" column="23" selection-start="174" selection-end="174" vertical-scroll-proportion="0.25951558" vertical-offset="0" max-vertical-offset="578">
           <folding />
         </state>
       </provider>
