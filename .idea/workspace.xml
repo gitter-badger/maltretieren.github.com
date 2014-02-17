@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-02-17-ideas.md" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-02-17-ideas.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.md" afterPath="$PROJECT_DIR$/index.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,7 +40,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="4" selection-start="563" selection-end="563" vertical-scroll-proportion="-8.571428" vertical-offset="0" max-vertical-offset="375">
+            <state line="16" column="4" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="375">
               <folding />
             </state>
           </provider>
@@ -55,7 +52,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="513" selection-end="513" vertical-scroll-proportion="-4.428571" vertical-offset="41" max-vertical-offset="660">
+            <state line="11" column="13" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="675">
               <folding />
             </state>
           </provider>
@@ -79,7 +76,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="23" selection-start="174" selection-end="174" vertical-scroll-proportion="0.25951558" vertical-offset="0" max-vertical-offset="578">
+            <state line="26" column="18" selection-start="477" selection-end="477" vertical-scroll-proportion="0.6747405" vertical-offset="0" max-vertical-offset="578">
               <folding />
             </state>
           </provider>
@@ -287,14 +284,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -303,6 +292,14 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -467,7 +464,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="4" selection-start="563" selection-end="563" vertical-scroll-proportion="-8.571428" vertical-offset="0" max-vertical-offset="375">
+        <state line="16" column="4" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="375">
           <folding />
         </state>
       </provider>
@@ -477,7 +474,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="513" selection-end="513" vertical-scroll-proportion="-4.428571" vertical-offset="41" max-vertical-offset="660">
+        <state line="11" column="13" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="675">
           <folding />
         </state>
       </provider>
@@ -487,7 +484,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="23" selection-start="174" selection-end="174" vertical-scroll-proportion="0.25951558" vertical-offset="0" max-vertical-offset="578">
+        <state line="26" column="18" selection-start="477" selection-end="477" vertical-scroll-proportion="0.6747405" vertical-offset="0" max-vertical-offset="578">
           <folding />
         </state>
       </provider>
