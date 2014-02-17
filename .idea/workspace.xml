@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-02-16-map.md" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-02-16-map.md" />
-    </list>
+    <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="" />
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
