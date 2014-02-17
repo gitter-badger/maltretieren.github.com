@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/geojson/drinking_water.geojson" afterPath="$PROJECT_DIR$/drinking_water.geojson" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/drinking_water.geojson" afterPath="$PROJECT_DIR$/assets/geojson/drinking_water.geojson" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-02-16-map.md" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-02-16-map.md" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
@@ -77,14 +77,14 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="100" selection-start="270" selection-end="270" vertical-scroll-proportion="0.23893805" vertical-offset="0" max-vertical-offset="565">
+            <state line="9" column="110" selection-start="280" selection-end="280" vertical-scroll-proportion="0.23893805" vertical-offset="0" max-vertical-offset="565">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="drinking_water.geojson" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/drinking_water.geojson">
+        <entry file="file://$PROJECT_DIR$/assets/geojson/drinking_water.geojson">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="12180">
               <folding />
@@ -262,6 +262,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geojson" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="_posts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -315,8 +333,8 @@
       <recent name="$PROJECT_DIR$/_data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/assets/geojson" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/assets/themes/twitter/css" />
       <recent name="$PROJECT_DIR$/assets/css" />
       <recent name="$PROJECT_DIR$/_includes/geojson" />
@@ -485,7 +503,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drinking_water.geojson">
+    <entry file="file://$PROJECT_DIR$/assets/geojson/drinking_water.geojson">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="12180">
           <folding />
@@ -528,7 +546,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="100" selection-start="270" selection-end="270" vertical-scroll-proportion="0.23893805" vertical-offset="0" max-vertical-offset="565">
+        <state line="9" column="110" selection-start="280" selection-end="280" vertical-scroll-proportion="0.23893805" vertical-offset="0" max-vertical-offset="565">
           <folding />
         </state>
       </provider>
