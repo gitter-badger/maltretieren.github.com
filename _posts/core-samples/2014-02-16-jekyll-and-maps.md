@@ -6,6 +6,8 @@ tags : [jekyll github frontpage]
 ---
 {% include JB/setup %}
 
+Test
+
 ## Include a GeoJSON hosted on GitHub
 The path to follow is to query the [OSM Overpass Turbo API](http://overpass-turbo.eu/) with the wizard e.g.
 for "Trinkbrunnen" ([more details in German](http://blog.openstreetmap.de/blog/2014/01/der-turbo-fuer-die-overpass-api/))
