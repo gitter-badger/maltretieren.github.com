@@ -11,7 +11,7 @@ published: true
 
 ## Android Debug Bridge (ADB)
 With the Android Debug Bridge (ADB) you can connect your Smartphone to your computer via USB (or WLAN) and send
-commands from the computer to the Smartphone. My plan is to use the Smartphone as a display for my Raspberry Pi. Test
+commands from the computer to the Smartphone. My plan is to use the Smartphone as a display for my Raspberry Pi.
 
 <!-- more -->
 
