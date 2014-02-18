@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-and-maps.md" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-and-maps.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/themes/twitter/css/syntax.css" afterPath="$PROJECT_DIR$/assets/themes/twitter/css/syntax.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,15 +25,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="page.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_layouts/page.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="165">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.md">
           <provider editor-type-id="MarkdownPreviewEditor">
@@ -96,10 +85,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="syntax.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="syntax.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/themes/twitter/css/syntax.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="47" selection-start="2030" selection-end="2030" vertical-scroll-proportion="0.75409836" vertical-offset="729" max-vertical-offset="1095">
+            <state line="67" column="47" selection-start="2030" selection-end="2030" vertical-scroll-proportion="0.0" vertical-offset="729" max-vertical-offset="1095">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_config.yml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="26" selection-start="366" selection-end="366" vertical-scroll-proportion="0.40983605" vertical-offset="0" max-vertical-offset="2040">
               <folding />
             </state>
           </provider>
@@ -155,7 +153,6 @@
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/_site/archive.html" />
-        <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
         <option value="$PROJECT_DIR$/_posts/core-samples/2014-02-16-include.md" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/page.html" />
@@ -169,6 +166,7 @@
         <option value="$PROJECT_DIR$/_posts/core-samples/2014-02-18-android-debug-bridge.md" />
         <option value="$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-and-maps.md" />
         <option value="$PROJECT_DIR$/assets/themes/twitter/css/syntax.css" />
+        <option value="$PROJECT_DIR$/_config.yml" />
       </list>
     </option>
   </component>
@@ -433,11 +431,6 @@
         <state line="1" column="2" selection-start="59" selection-end="107" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="23" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2040" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/themes/twitter/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="13" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050" />
@@ -531,7 +524,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/themes/twitter/css/syntax.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="47" selection-start="2030" selection-end="2030" vertical-scroll-proportion="0.75409836" vertical-offset="729" max-vertical-offset="1095">
+        <state line="67" column="47" selection-start="2030" selection-end="2030" vertical-scroll-proportion="0.0" vertical-offset="729" max-vertical-offset="1095">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="26" selection-start="366" selection-end="366" vertical-scroll-proportion="0.40983605" vertical-offset="0" max-vertical-offset="2040">
           <folding />
         </state>
       </provider>
