@@ -8,6 +8,7 @@ tags :
   - jekyll
   - github
 ---
+
 {% include JB/setup %}
 
 ## Include a GeoJSON hosted on GitHub
