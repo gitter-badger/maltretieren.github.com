@@ -1,6 +1,7 @@
 ---
 layout: post
-category : development
+categories : 
+  - frontpage
 tagline: "a post to the main page"
 tags : [development]
 ---
