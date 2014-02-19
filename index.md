@@ -12,9 +12,10 @@ This site will be mainly for my own documentation, but if anyone is interested i
 
 ---
 
-
 {% for post in site.categories.frontpage %}
+
       <p><a href='{{ post.url }}'>{{ post.title }}</a>, posted on {{ post.date | date_to_string }}</p>
        {{ post.content | split: '<!-- more -->' | first }}
        <hr/>
+       
 {% endfor %}
