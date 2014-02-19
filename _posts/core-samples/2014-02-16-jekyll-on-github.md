@@ -3,7 +3,10 @@ layout: post
 categories : 
   - blog
 tagline: "a post to the main page"
-tags : [jekyll github frontpage]
+tags : 
+  - jekyll
+  - github
+  - frontpage
 ---
 {% include JB/setup %}
 
