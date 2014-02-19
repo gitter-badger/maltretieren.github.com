@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Sense it!
-tagline: ... or make sense!
+title: Place to pee free!
+tagline: ...
 ---
 {% include JB/setup %}
 
