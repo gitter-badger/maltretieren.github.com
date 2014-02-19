@@ -8,15 +8,15 @@ tags :
   - jekyll
   - github
 ---
-
 {% include JB/setup %}
 
 ## Include a GeoJSON hosted on GitHub
 The path to follow is to query the [OSM Overpass Turbo API](http://overpass-turbo.eu/) with the wizard e.g.
 for "Trinkbrunnen" ([more details in German](http://blog.openstreetmap.de/blog/2014/01/der-turbo-fuer-die-overpass-api/))
-and exported it as GeoJSON file. Then the file is saved it to the `assets/geojson/drinking_water.json` folder of my Jekyll site 
+and exported it as GeoJSON file. Then the file is saved it to the `assets/geojson/drinking_water.json` folder of my Jekyll site
 and pushed to GitHub. For more details take a look at the [GitHub Help for Mapping GeoJson files on GitHub](https://help.github.com/articles/mapping-geojson-files-on-github)
 This is very nice and simple!
+
 
 <!-- more -->
 
