@@ -10,3 +10,8 @@ tags : [development]
 ## Development tools
 * Webstorm
 * SourceTree
+
+## Connect a folder on network device to your local computer
+{% highlight sh %}
+sshfs pi@192.168.178.30:/home/pi/workspace_node /Users/crunsh/Documents/node_workspace/pi
+{% endhighlight %}
