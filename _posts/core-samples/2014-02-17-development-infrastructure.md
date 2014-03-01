@@ -9,8 +9,7 @@ tags : [development]
 
 ## Development tools
 * Webstorm
-* SourceTree
-
+* GitHub
 
 ## Develop local, run remote
 No need to install an IDE on the Raspi - develop on your local computer, run the code on the Raspberry while it is listening for changes and updates quickly. You could either put the development folder to the Raspi and sshfs from your computer to this folder. The other way round it is more convinent as you can also develop even without connection to the Raspi.
