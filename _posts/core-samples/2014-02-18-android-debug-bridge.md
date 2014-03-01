@@ -24,7 +24,7 @@ Adb is not working when the phone is power off. One method to bootup the phone i
 Another hack could be to disassemble the phone and attach a switch to the power button which can be controlled by the
 RasPi.
 
-### Toggle Screen on/off"
+### Toggle Screen on/off
 {% highlight sh %}
 adb shell input keyevent 26
 {% endhighlight %}
@@ -89,3 +89,13 @@ adb shell monkey --pct-motion 100 100
 {% endhighlight %}
 
 ### Start App
+Check if an app is started:
+{% highlight sh %}
+adb shell pgrep com.webview
+{% endhighlight %}
+
+If not, start the app:
+{% highlight sh %}
+adb shell am start -n com.webview/com.package.name.ActivityName
+{% endhighlight %}
+
