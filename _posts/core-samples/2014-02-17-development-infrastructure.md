@@ -12,7 +12,7 @@ tags : [development]
 * GitHub
 
 ## Develop local, run remote
-No need to install an IDE on the Raspi - develop on your local computer, run the code on the Raspberry while it is listening for changes and updates quickly.
+No need to install an IDE on the Raspi - develop on your local computer, run on your Raspi while the files are synchronized as soon as you change it locally.
 
 ![Develop local, run remote](/assets/images/DevEnvironment.png)
 
