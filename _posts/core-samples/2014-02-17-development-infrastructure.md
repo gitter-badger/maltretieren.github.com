@@ -15,9 +15,13 @@ tags : [development]
 ## Develop local, run remote
 ![Develop local, run remote](/assets/images/DevEnvironment.png)
 
-## Connect a folder on network device to your local computer
-{% highlight sh %}
-sshfs pi@192.168.178.30:/home/pi/workspace_node /Users/crunsh/Documents/node_workspace/pi
-{% endhighlight %}
+    ssh into your Raspi
+    mount the dev folder on your laptop from your Raspi
+    {% highlight sh %}
+    sshfs pi@192.168.178.30:/home/pi/workspace_node /Users/crunsh/Documents/node_workspace/pi
+    {% endhighlight %}###
 
-sshfs pi@192.168.178.30:/home/pi/workspace_node /Users/crunsh/Documents/node_workspace/pi
+## Connect a folder on network device to your local computer
+
+
+
