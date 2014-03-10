@@ -10,6 +10,14 @@ tags:
 published: true
 ---
 
+## Extending the Raspi with a microphone
+I don't know how one can earn money with this - the sound card costs 1 and ships for free :)
+
+<div style="width:300px" markdown="1">
+<img src="/assets/images/cheapSoundcard.jpg" />
+http://cgi.ebay.de/ws/eBayISAPI.dll?ViewItem&item=141071608953
+</div>
+
 ## lsusb
 {% highlight sh %}
 Bus 001 Device 007: ID 0d8c:013c C-Media Electronics, Inc. CM108 Audio Controller

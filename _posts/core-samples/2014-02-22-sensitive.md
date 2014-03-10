@@ -14,7 +14,10 @@ I recently found a nodejs library for reading sensor information from smartphone
 
 ## Step by step to use sensitive for your project
 * install qrencode (
+On Mac:
 sudo port install qrencode
+On Raspi
+sudo apt-get install qrencode
 * add sensitive to your nodejs project
 * if you are already using express for your project its fine. Otherwise add connect/express to your dependencies
 * make a folder public/tmp
@@ -22,6 +25,7 @@ sudo port install qrencode
 * add sensitive folder to public/sensitive
 
 ## Challenges
+
 ### Multiple sockets
 I already had a socket connection in my application. The sensitive page gave me following error:
 

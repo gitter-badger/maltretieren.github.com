@@ -17,5 +17,8 @@ sudo vi /etc/environment
 NODE_JS_HOME=/home/pi/node-v0.10.2-linux-arm-pi
 PATH=$PATH:$NODE_JS_HOME/bin
 
+### Access Permissions
+Do not use "sudo" for install npm packages. Instead change permissions on the folders for curront user...
+
 ## Nodejs Video Tutorials
 [Modular web applications with Node.js and Express](http://vimeo.com/56166857)
