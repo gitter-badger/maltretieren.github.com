@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/2014-03-12-raspi-accessoirs/steckbruecken.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-03-12-atx-raspi.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-03-12-raspi-accessoirs.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-01-01-sandbox.md" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-01-01-sandbox.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/default.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/themes/twitter/css/syntax.css" afterPath="$PROJECT_DIR$/assets/themes/twitter/css/syntax.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-03-12-raspi-accessoirs.md" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-03-12-raspi-accessoirs.md" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,10 +37,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2014-03-12-raspi-accessoirs.md" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="2014-03-12-raspi-accessoirs.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-03-12-raspi-accessoirs.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="46" selection-start="197" selection-end="197" vertical-scroll-proportion="-4.535714" vertical-offset="98" max-vertical-offset="1050">
+            <state line="104" column="58" selection-start="4442" selection-end="4442" vertical-scroll-proportion="0.92443323" vertical-offset="1193" max-vertical-offset="1710">
               <folding />
             </state>
           </provider>
@@ -57,10 +49,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2014-02-16-jekyll-on-github.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="2014-02-16-jekyll-on-github.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="163" selection-start="1185" selection-end="1185" vertical-scroll-proportion="0.697733" vertical-offset="158" max-vertical-offset="765">
+            <state line="29" column="163" selection-start="1185" selection-end="1185" vertical-scroll-proportion="-13.642858" vertical-offset="53" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
@@ -169,9 +161,9 @@
         <option value="$PROJECT_DIR$/_posts/core-samples/2014-03-12-atx-raspi.md" />
         <option value="$PROJECT_DIR$/assets/themes/twitter/css/syntax.css" />
         <option value="$PROJECT_DIR$/_posts/core-samples/2014-01-01-sandbox.md" />
-        <option value="$PROJECT_DIR$/_posts/core-samples/2014-03-12-raspi-accessoirs.md" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md" />
+        <option value="$PROJECT_DIR$/_posts/core-samples/2014-03-12-raspi-accessoirs.md" />
       </list>
     </option>
   </component>
@@ -564,10 +556,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1233" height="778" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24597365" sideWeight="0.8329278" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24597365" sideWeight="0.8329278" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329429" sideWeight="0.49959448" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30332524" sideWeight="0.75402635" order="0" side_tool="false" content_ui="combo" />
@@ -720,9 +712,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-03-12-raspi-accessoirs.md">
+    <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="46" selection-start="197" selection-end="197" vertical-scroll-proportion="-4.535714" vertical-offset="98" max-vertical-offset="1050">
+        <state line="29" column="163" selection-start="1185" selection-end="1185" vertical-scroll-proportion="-13.642858" vertical-offset="53" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
@@ -730,9 +722,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-02-16-jekyll-on-github.md">
+    <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-03-12-raspi-accessoirs.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="163" selection-start="1185" selection-end="1185" vertical-scroll-proportion="0.697733" vertical-offset="158" max-vertical-offset="765">
+        <state line="104" column="58" selection-start="4442" selection-end="4442" vertical-scroll-proportion="0.92443323" vertical-offset="1193" max-vertical-offset="1710">
           <folding />
         </state>
       </provider>
