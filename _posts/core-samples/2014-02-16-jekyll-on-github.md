@@ -27,10 +27,10 @@ source 'https://rubygems.org'
 gem 'github-pages'
 ```
 
-Now you run a local server. The option "-w" enables Auto-regeneration after a file has changed.
+Now you run a local server. The option "-w" enables Auto-regeneration after a file has changed. LC_ALL is necessary to use german "Umlaute" and special characters.
 
 ```sh
-bundle exec jekyll serve -w
+LC_ALL="en_US.UTF-8" bundle exec jekyll serve -w
 ```
 
 Access it via a browser:
