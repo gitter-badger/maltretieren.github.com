@@ -1,5 +1,5 @@
 ---
-layout: entry
+layout: post
 preview: /assets/images/2014-03-12-raspi-accessoirs/sainsmart-srs-relay.jpg
 product: SainSmart 4 Channel 5V Solid State Relay Module Board.OMRON SSR AVR DSP Arduino
 description: For switching off power of accessoirs
@@ -15,3 +15,5 @@ tags:
 - switch
 - accessoire
 ---
+
+- Each circuit is rated for 2 amps. A fuse is hard-soldered which protects it.

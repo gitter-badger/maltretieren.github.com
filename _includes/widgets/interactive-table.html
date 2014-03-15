@@ -1,28 +1,28 @@
 <div id="entry-list">
 
-    <div class="row" style="margin-bottom:10px;">
+    <div class="row" style="margin-bottom:10px;margin-left:0px;">
         <input type="text" class="search form-control" placeholder="Search" />
     </div>
 
-    <div class="row">
-        <table class="table table-striped" style="width:80%">
+    <div class="row" style="margin-left:0px">
+        <table class="table table-striped">
             <thead>
             <tr>
-                <th style="width:20%;"><span class="sort" data-sort="name">Image</span></th>
-                <th style="width:30%;"><span class="sort" data-sort="name">Product Name</span></th>
-                <th style="width:30%;"><span class="sort" data-sort="name">Description</span></th>
-                <th style="width:10%;"><span class="sort" data-sort="city">Price</span></th>
-                <th style="width:10%;"><span class="sort" data-sort="tags">Link</span></th>
+                <th style="width:40%;"><span class="sort" data-sort="image">Image</span></th>
+                <th style="width:30%;"><span class="sort" data-sort="product">Product Name</span></th>
+                <th style="width:20%;"><span class="sort" data-sort="description">Description</span></th>
+                <th style="width:10%;"><span class="sort" data-sort="price">Price</span></th>
+                <th style="width:10%;"><span class="sort" data-sort="link">Link</span></th>
             </tr>
             </thead>
-            <tbody class="list">
+            <tbody class="list" style="margin-left:0px">
             {% for post in site.tags.accessoire %}
             <tr>
-                <td class="name"><img src="{{ post.preview }}"></td>
-                <td class="name">{{ post.product }}</td>
-                <td class="name">{{ post.description}}</td>
-                <td class="city">{{ post.price }}</td>
-                <td class="city"><a href="{{ post.link }}">LINK</a></td>
+                <td class="image"><img src="{{ post.preview }}"></td>
+                <td class="product"><a href="{{ % post % }}">{{ post.product }}<a/></td>
+                <td class="description">{{ post.description}}</td>
+                <td class="price">{{ post.price }}</td>
+                <td class="link"><a href="{{ post.link }}">Shop Link</a></td>
             </tr>
             {% endfor %}
             </tbody>
