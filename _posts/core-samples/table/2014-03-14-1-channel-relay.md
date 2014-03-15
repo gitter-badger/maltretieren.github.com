@@ -6,8 +6,9 @@ description:
 price: 0,99€
 link: http://www.ebay.de/itm/251383404102
 categories:
--
+- relay
 
 tags:
 - prototyping
+- accessoire
 ---

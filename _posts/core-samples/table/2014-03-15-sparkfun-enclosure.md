@@ -12,4 +12,5 @@ categories:
 tags:
 - enclosure
 - sparkfun
+- accessoire
 ---

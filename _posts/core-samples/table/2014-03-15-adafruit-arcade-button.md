@@ -7,9 +7,10 @@ price: 2,95€
 link: http://www.exp-tech.de/Zubehoer/Taste-Schalter/Arcade-Button-30mm-Translucent-Blau.html
 
 categories:
-- gimmick
+- electronics
 
 tags:
 - adafruit
 - button
+- accessoire
 ---

@@ -12,4 +12,5 @@ categories:
 tags:
 - adafruit
 - button
+- accessoire
 ---

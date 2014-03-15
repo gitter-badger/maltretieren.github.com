@@ -12,4 +12,5 @@ categories:
 tags:
 - temperatur
 - humidity
+- accessoire
 ---

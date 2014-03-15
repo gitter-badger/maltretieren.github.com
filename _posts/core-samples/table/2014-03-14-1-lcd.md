@@ -10,4 +10,5 @@ categories:
 
 tags:
 - lcd
+- accessoire
 ---

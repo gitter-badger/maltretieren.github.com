@@ -11,4 +11,5 @@ categories:
 
 tags:
 - push button
+- accessoire
 ---

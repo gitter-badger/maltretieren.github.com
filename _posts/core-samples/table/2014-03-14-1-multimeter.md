@@ -7,8 +7,9 @@ price: 16,99€
 link: http://www.amazon.de/gp/product/B007CTW24E
 
 categories:
-- soldering
+- electronic
 
 tags:
-- transmitter
+- multimeter
+- accessoire
 ---

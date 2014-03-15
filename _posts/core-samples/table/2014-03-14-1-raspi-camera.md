@@ -7,8 +7,9 @@ price: 28,85€
 link: http://www.amazon.de/gp/product/B00E1GGE40/ref=oh_details_o05_s00_i00?ie=UTF8&psc=1
 
 categories:
-- soldering
+- electronic
 
 tags:
 - transmitter
+- accessoire
 ---

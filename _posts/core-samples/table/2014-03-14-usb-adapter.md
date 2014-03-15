@@ -10,5 +10,5 @@ categories:
 -
 
 tags:
-- prototyping
+- accessoire
 ---

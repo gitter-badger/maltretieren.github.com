@@ -7,9 +7,10 @@ price: 4,72€
 link: http://www.exp-tech.de/Shields/Adafruit-Small-Size-Perma-Proto-Raspberry-Pi-Breadboard-PCB-Kit.html
 
 categories:
-- pcb
+- electronics
 
 tags:
 - adafruit
 - pcb
+- accessoire
 ---
