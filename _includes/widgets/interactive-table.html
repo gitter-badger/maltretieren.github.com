@@ -1,0 +1,43 @@
+<div id="entry-list">
+
+    <div class="row" style="margin-bottom:10px;">
+        <input type="text" class="search form-control" placeholder="Search" />
+    </div>
+
+    <div class="row">
+        <table class="table table-striped" style="width:80%">
+            <thead>
+            <tr>
+                <th style="width:10%;"><span class="sort" data-sort="name">Image</span></th>
+                <th style="width:10%;"><span class="sort" data-sort="name">Product Name</span></th>
+                <th style="width:10%;"><span class="sort" data-sort="name">Description</span></th>
+                <th style="width:2%;"><span class="sort" data-sort="city">Price</span></th>
+                <th style="width:2%;"><span class="sort" data-sort="tags">Link</span></th>
+            </tr>
+            </thead>
+            <tbody class="list">
+            {% for post in site.posts %}
+            <tr>
+                <td class="name"><img src="{{ post.preview }}"></td>
+                <td class="name">{{ post.product }}</td>
+                <td class="name">{{ post.description}}</td>
+                <td class="city">{{ post.price }}</td>
+                <td class="city">{{ post.link }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+
+    var options = {
+        valueNames: ['name', 'city', 'category', 'tags']
+    };
+
+    var entryList = new List('entry-list', options);
+
+</script>

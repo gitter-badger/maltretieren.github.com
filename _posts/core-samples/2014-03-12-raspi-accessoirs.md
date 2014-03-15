@@ -12,6 +12,8 @@ published: true
 
 ## Accessoirs
 
+Starter Bundle Harness Seeedstudio Grove - Protoshield Adafruit Half-size Perma-Proto Raspberry Pi Breadboard PCB Kit ProtoBoard 9cm x 15cm - 2.0mm
+
 ### Switches
 #### SainSmart 4 Channel 5V Solid State Relay Module Board.OMRON SSR AVR DSP Arduino
 Link: [SainSmart 4 Channel 5V Solid State Relay Module Board.OMRON SSR AVR DSP Arduino](http://www.ebay.de/itm/Neu-SainSmart-4-Channel-5V-Solid-State-Relay-Module-Board-OMRON-SSR-AVR-Arduino-/320857846455?)
