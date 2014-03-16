@@ -1,5 +1,5 @@
 ---
-layout: entry
+layout: post
 preview: /assets/images/2014-03-12-raspi-accessoirs/loetstation.jpg
 product: Regelbare digitale Lötstation ZD-931 mit ESD & beleuchtetem Display
 description:

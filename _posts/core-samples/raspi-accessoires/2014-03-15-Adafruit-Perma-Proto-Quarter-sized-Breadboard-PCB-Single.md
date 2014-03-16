@@ -1,5 +1,5 @@
 ---
-layout: entry
+layout: post
 preview: /assets/images/2014-03-12-raspi-accessoirs/adafruit-perma-proto-pcb.jpg
 product: Adafruit Perma-Proto Quarter-sized Breadboard PCB - Single
 description: Adafruit Perma-Proto Quarter-sized Breadboard PCB

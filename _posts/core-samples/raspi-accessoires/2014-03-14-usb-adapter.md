@@ -1,5 +1,5 @@
 ---
-layout: entry
+layout: post
 preview: /assets/images/2014-03-12-raspi-accessoirs/usb-adapter.jpg
 product: ure² High Speed Micro USB Host OTG Kabel 90° Adapter
 description:

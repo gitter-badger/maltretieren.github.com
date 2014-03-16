@@ -1,5 +1,5 @@
 ---
-layout: entry
+layout: post
 preview: /assets/images/2014-03-12-raspi-accessoirs/raspi-camera.jpg
 product: Kamera Modul für Raspberry Pi
 description:

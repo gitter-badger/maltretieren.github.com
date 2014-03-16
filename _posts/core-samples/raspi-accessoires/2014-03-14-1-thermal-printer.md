@@ -1,5 +1,5 @@
 ---
-layout: entry
+layout: post
 preview: /assets/images/2014-03-12-raspi-accessoirs/thermal-printer.jpg
 product: Thermodrucker / Thermalprinter für Bastelprojekte
 description:

@@ -1,5 +1,5 @@
 ---
-layout: entry
+layout: post
 preview: /assets/images/2014-03-12-raspi-accessoirs/solder-sucker.jpg
 product: Wentronic Entlötpumpe
 description:

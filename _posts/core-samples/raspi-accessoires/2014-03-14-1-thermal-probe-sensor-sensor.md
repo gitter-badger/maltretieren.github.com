@@ -1,5 +1,5 @@
 ---
-layout: entry
+layout: post
 preview: /assets/images/2014-03-12-raspi-accessoirs/thermal-probe.jpg
 product: Waterproof Digital Thermal Probe or Sensor DS18B20 DS18B20 Arduino Sensor
 description:

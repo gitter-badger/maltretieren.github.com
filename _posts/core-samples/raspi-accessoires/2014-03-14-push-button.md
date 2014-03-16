@@ -1,5 +1,5 @@
 ---
-layout: entry
+layout: post
 preview: /assets/images/2014-03-12-raspi-accessoirs/led-button.jpg
 product: Car Push Power Button 12mm 16mm 19mm Angel Eye LED Hole Metal Switch Latching
 description:

@@ -1,5 +1,5 @@
 ---
-layout: entry
+layout: post
 preview: /assets/images/2014-03-12-raspi-accessoirs/jumperkabel.jpg
 product: 40 hochwertige Jumper Kabel, 20cm
 description: alle Sorten (1p dupont cable wire 2.54mm)

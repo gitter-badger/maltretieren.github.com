@@ -1,5 +1,5 @@
 ---
-layout: entry
+layout: post
 preview: /assets/images/2014-03-12-raspi-accessoirs/power-supply.jpg
 product: Schaltnetzteil stabilisiert AC/DC Eco-Friendly mit 2250 mA
 description:

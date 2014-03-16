@@ -1,5 +1,5 @@
 ---
-layout: entry
+layout: post
 preview: /assets/images/2014-03-12-raspi-accessoirs/sparkfun-enclosure.jpg
 product: Sparkfun Enclosure - Flanged (Red) PRT-11366
 description: Nice and cheap :)

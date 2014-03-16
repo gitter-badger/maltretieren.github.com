@@ -1,5 +1,5 @@
 ---
-layout: entry
+layout: post
 preview: /assets/images/2014-03-12-raspi-accessoirs/transmitter.jpg
 product: 434MHz RF Link Transmitter
 description:

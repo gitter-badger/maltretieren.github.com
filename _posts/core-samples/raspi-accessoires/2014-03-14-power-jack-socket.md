@@ -1,5 +1,5 @@
 ---
-layout: entry
+layout: post
 preview: /assets/images/2014-03-12-raspi-accessoirs/power-jack-socket.jpg
 product: PCS 5.5mm x 2.1mm DC Power Jack Socket Female
 description: Panel Mount Connector plug Copper

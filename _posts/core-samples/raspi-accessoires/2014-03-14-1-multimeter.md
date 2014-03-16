@@ -1,5 +1,5 @@
 ---
-layout: entry
+layout: post
 preview: /assets/images/2014-03-12-raspi-accessoirs/multimeter.jpg
 product: Elro M970 Universal-Multimeter / Amperemeter
 description:

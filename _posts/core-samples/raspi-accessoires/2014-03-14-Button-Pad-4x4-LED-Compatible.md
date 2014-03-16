@@ -1,5 +1,5 @@
 ---
-layout: entry
+layout: post
 preview: /assets/images/2014-03-12-raspi-accessoirs/button-pad.jpg
 product: Button Pad 4x4
 description: LED Compatible COM-07835
