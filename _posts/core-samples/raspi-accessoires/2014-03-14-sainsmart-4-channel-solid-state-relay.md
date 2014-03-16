@@ -16,4 +16,8 @@ tags:
 - accessoire
 ---
 
+<img src="{{page.preview}}" style="width:100px"/>
+
 - Each circuit is rated for 2 amps. A fuse is hard-soldered which protects it.
+- Each relay draws about 10 milliamps when switched on.
+- Each relay has an LED wired to the circuit so that when the LED lights up when the relay is switched on.

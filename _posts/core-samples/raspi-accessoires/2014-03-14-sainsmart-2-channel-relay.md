@@ -1,5 +1,5 @@
 ---
-layout: entry
+layout: post
 preview: /assets/images/2014-03-12-raspi-accessoirs/sainsmart-relay.jpg
 product: Sainsmart 2-Channel 5V Relay Module for Arduino Raspberry Pi
 description: For switching off power of accessoirs
@@ -15,3 +15,6 @@ tags:
 - switch
 - accessoire
 ---
+
+http://myhowtosandprojects.blogspot.de/2014/02/sainsmart-2-channel-5v-relay-arduino.html
+<iframe width="560" height="315"  src="//www.youtube.com/embed/0UMznpwC7sw" frameborder="0"></iframe>
