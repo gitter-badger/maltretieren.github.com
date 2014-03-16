@@ -1,5 +1,5 @@
 ---
-layout: entry
+layout: post
 preview: /assets/images/2014-03-12-raspi-accessoirs/relay.jpg
 product: 1-Channel H/L Level Triger Optocoupler Relay Module for Arduino 5V
 description:
@@ -12,3 +12,5 @@ tags:
 - prototyping
 - accessoire
 ---
+
+<img src="{{page.preview}}" style="width:100px"/>
