@@ -2,7 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-sound-card.md" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-02-26-cheap-usb-soundcard.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-03-12-atx-raspi.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-03-12-raspi-accessoirs.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-sound-card.md" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-434mhz-transmitter.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-434mhz-transmitter.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-basic-kit.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-basic-kit.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-delaycon-usb-hub.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-delaycon-usb-hub.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-distance-sensor.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-distance-sensor.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-edimax-wifi.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-edimax-wifi.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-gertboard.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-gertboard.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-infrared-motion-sensor.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-infrared-motion-sensor.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-lcd.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-lcd.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-loetstation.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-loetstation.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-loetzinn.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-loetzinn.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-multimeter.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-multimeter.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-power-supply.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-power-supply.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-raspi-camera.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-raspi-camera.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-raspi.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-raspi.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-ravpower-power-bank.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-ravpower-power-bank.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-rt3570-wifi.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-rt3570-wifi.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-sandisk-sd-card.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-sandisk-sd-card.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-solder-sucker.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-solder-sucker.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-temp-humid-sensor.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-temp-humid-sensor.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-thermal-printer.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-thermal-printer.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-thermal-probe-sensor-sensor.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-thermal-probe-sensor-sensor.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-02-08-powering-the-pi.md" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-02-08-powering-the-pi.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-channel-relay.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-channel-relay.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-atx-raspi.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-atx-raspi.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,106 +55,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="2014-03-15-Adafruit-Perma-Proto-Quarter-sized-Breadboard-PCB-Single.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-Adafruit-Perma-Proto-Quarter-sized-Breadboard-PCB-Single.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="42" selection-start="463" selection-end="463" vertical-scroll-proportion="-9.107142" vertical-offset="0" max-vertical-offset="345">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2014-03-15-adafruit-small-size-perma-proto.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-adafruit-small-size-perma-proto.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="42" selection-start="438" selection-end="438" vertical-scroll-proportion="-9.107142" vertical-offset="0" max-vertical-offset="345">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2014-03-15-double-side-proto-board.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-double-side-proto-board.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="42" selection-start="360" selection-end="360" vertical-scroll-proportion="-8.571428" vertical-offset="0" max-vertical-offset="330">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2014-03-15-Grove-20cm-Kabel.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-Grove-20cm-Kabel.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="42" selection-start="356" selection-end="356" vertical-scroll-proportion="-8.571428" vertical-offset="0" max-vertical-offset="330">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2014-03-15-resitstors-kit.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-resitstors-kit.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="42" selection-start="526" selection-end="526" vertical-scroll-proportion="-8.571428" vertical-offset="0" max-vertical-offset="330">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2014-03-15-SeeedStudio-Grove-Universal-4-pin-connector-90.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-SeeedStudio-Grove-Universal-4-pin-connector-90.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="42" selection-start="436" selection-end="436" vertical-scroll-proportion="-9.107142" vertical-offset="0" max-vertical-offset="345">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2014-01-01-sandbox.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-01-01-sandbox.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="30" selection-start="762" selection-end="795" vertical-scroll-proportion="-6.714286" vertical-offset="292" max-vertical-offset="615">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2014-03-15-sparkfun-enclosure.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-sparkfun-enclosure.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="42" selection-start="391" selection-end="391" vertical-scroll-proportion="-9.107142" vertical-offset="0" max-vertical-offset="345">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2014-03-14-1-channel-relay.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="2014-03-14-1-channel-relay.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-channel-relay.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="38" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.72136223" vertical-offset="187" max-vertical-offset="510">
+            <state line="13" column="7" selection-start="284" selection-end="284" vertical-scroll-proportion="-5.642857" vertical-offset="37" max-vertical-offset="540">
               <folding />
             </state>
           </provider>
@@ -133,10 +67,106 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2014-03-15-proto-pcb.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-proto-pcb.md">
+      <file leaf-file-name="2014-02-08-powering-the-pi.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-02-08-powering-the-pi.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="42" selection-start="348" selection-end="348" vertical-scroll-proportion="-8.571428" vertical-offset="0" max-vertical-offset="330">
+            <state line="7" column="9" selection-start="106" selection-end="106" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="270">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014-03-14-banana-jack.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-banana-jack.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="330">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014-03-14-atx-raspi.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-atx-raspi.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="101" selection-start="739" selection-end="739" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="405">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014-02-27-nodejs-tutorials.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-02-27-nodejs-tutorials.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="8" selection-start="42" selection-end="51" vertical-scroll-proportion="-2.142857" vertical-offset="0" max-vertical-offset="450">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014-03-14-sound-card.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-sound-card.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="51" selection-start="510" selection-end="510" vertical-scroll-proportion="-10.714286" vertical-offset="0" max-vertical-offset="1185">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014-03-14-temp-humid-sensor.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-temp-humid-sensor.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="345">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014-03-14-solder-sucker.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-solder-sucker.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="330">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014-03-14-sandisk-sd-card.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-sandisk-sd-card.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="10" selection-start="300" selection-end="300" vertical-scroll-proportion="-4.821429" vertical-offset="0" max-vertical-offset="345">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014-03-14-loetstation.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-loetstation.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="13" selection-start="265" selection-end="265" vertical-scroll-proportion="0.3515625" vertical-offset="0" max-vertical-offset="384">
               <folding />
             </state>
           </provider>
@@ -163,14 +193,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-step-down1.md" />
-        <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-step-down2.md" />
-        <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-t-coppler.md" />
-        <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-usb-adapter.md" />
-        <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-usb-kabel.md" />
-        <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-white-led.md" />
-        <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-adafruit-arcade-button.md" />
-        <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-Adafruit-Perma-Proto-Quarter-sized-Breadboard-PCB-Single.md" />
         <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-adafruit-small-size-perma-proto.md" />
         <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-double-side-proto-board.md" />
         <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-Grove-20cm-Kabel.md" />
@@ -179,6 +201,14 @@
         <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-SeeedStudio-Grove-Universal-4-pin-connector-90.md" />
         <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-sparkfun-enclosure.md" />
         <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-channel-relay.md" />
+        <option value="$PROJECT_DIR$/_posts/core-samples/2014-02-08-powering-the-pi.md" />
+        <option value="$PROJECT_DIR$/_posts/core-samples/2014-03-12-atx-raspi.md" />
+        <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-atx-raspi.md" />
+        <option value="$PROJECT_DIR$/_posts/core-samples/2014-02-26-cheap-usb-soundcard.md" />
+        <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-sound-card.md" />
+        <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-sound-card.md" />
+        <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-sandisk-sd-card.md" />
+        <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-loetstation.md" />
       </list>
     </option>
   </component>
@@ -466,11 +496,11 @@
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2489019" sideWeight="0.8329278" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2489019" sideWeight="0.8329278" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329429" sideWeight="0.49959448" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32650074" sideWeight="0.49959448" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30332524" sideWeight="0.7510981" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30332524" sideWeight="0.7510981" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2489019" sideWeight="0.16707218" order="7" side_tool="true" content_ui="tabs" />
@@ -500,96 +530,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-t-coppler.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="42" selection-start="338" selection-end="338" vertical-scroll-proportion="-8.571428" vertical-offset="0" max-vertical-offset="330">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-usb-adapter.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="42" selection-start="304" selection-end="304" vertical-scroll-proportion="-8.035714" vertical-offset="0" max-vertical-offset="315">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-usb-kabel.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="42" selection-start="291" selection-end="291" vertical-scroll-proportion="-8.571428" vertical-offset="0" max-vertical-offset="330">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-usb-to-rs232.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-white-led.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="42" selection-start="398" selection-end="398" vertical-scroll-proportion="-8.035714" vertical-offset="0" max-vertical-offset="315">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-adafruit-arcade-button.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="42" selection-start="479" selection-end="479" vertical-scroll-proportion="-9.107142" vertical-offset="0" max-vertical-offset="345">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-Adafruit-Perma-Proto-Quarter-sized-Breadboard-PCB-Single.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="42" selection-start="463" selection-end="463" vertical-scroll-proportion="-9.107142" vertical-offset="0" max-vertical-offset="345">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-adafruit-small-size-perma-proto.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="42" selection-start="438" selection-end="438" vertical-scroll-proportion="-9.107142" vertical-offset="0" max-vertical-offset="345">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-double-side-proto-board.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="42" selection-start="360" selection-end="360" vertical-scroll-proportion="-8.571428" vertical-offset="0" max-vertical-offset="330">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-Grove-20cm-Kabel.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="42" selection-start="356" selection-end="356" vertical-scroll-proportion="-8.571428" vertical-offset="0" max-vertical-offset="330">
@@ -652,7 +592,97 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-channel-relay.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="38" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.72136223" vertical-offset="187" max-vertical-offset="510">
+        <state line="13" column="7" selection-start="284" selection-end="284" vertical-scroll-proportion="-5.642857" vertical-offset="37" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-02-08-powering-the-pi.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="9" selection-start="106" selection-end="106" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="270">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-banana-jack.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-atx-raspi.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="101" selection-start="739" selection-end="739" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="405">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-02-27-nodejs-tutorials.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="8" selection-start="42" selection-end="51" vertical-scroll-proportion="-2.142857" vertical-offset="0" max-vertical-offset="450">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-sound-card.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="51" selection-start="510" selection-end="510" vertical-scroll-proportion="-10.714286" vertical-offset="0" max-vertical-offset="1185">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-temp-humid-sensor.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="384">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-solder-sucker.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="384">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-sandisk-sd-card.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="10" selection-start="300" selection-end="300" vertical-scroll-proportion="-4.821429" vertical-offset="0" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-loetstation.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="265" selection-end="265" vertical-scroll-proportion="0.3515625" vertical-offset="0" max-vertical-offset="384">
           <folding />
         </state>
       </provider>

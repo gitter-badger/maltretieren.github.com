@@ -5,8 +5,7 @@ categories :
   - power
 tagline: "a post to the main page"
 tags : 
-  - jekyll
-  - github
+  - power
 ---
 {% include JB/setup %}
 

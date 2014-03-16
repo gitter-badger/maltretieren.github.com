@@ -11,13 +11,15 @@ categories:
 tags:
 - prototyping
 - accessoire
+- power
 ---
 
 {% include accessoires/accessoire-table %}
 
 The usecase in my project for the relay is related to following requirement: I have several devices connected to
 my Raspi that needs external power supply - a usb hub that needs 5 volts external power, and a thermal printer,
-that needs 9 volts. The devices are powered by an external battery pack. If I cut power from the Raspi (with ATX Raspi)
+that needs 9 volts. The devices are powered by an external battery pack (Note: In the schema below I replaced
+the external circuits with external powered LED for simplicity). If I cut power from the Raspi (with ATX Raspi)
 I also want to automatically cut the power of the externally powered devices so that the battery pack also deactivates
 (which has no external off switch, but deactivates after some time if no device draws power from it).
 This issue is solved by using two of these relays.

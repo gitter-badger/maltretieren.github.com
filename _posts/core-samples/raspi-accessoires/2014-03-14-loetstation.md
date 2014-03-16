@@ -7,7 +7,7 @@ price: 42,80€
 link: http://www.amazon.de/gp/product/B005CMT5U
 
 categories:
-- kit
+- electronics
 
 tags:
 - accessoire
