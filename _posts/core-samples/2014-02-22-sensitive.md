@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: 
-  - frontpage
+  -
 tagline:
 tags:
   - development

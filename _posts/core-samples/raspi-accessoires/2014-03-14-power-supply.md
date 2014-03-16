@@ -7,7 +7,7 @@ price: 10,06€
 link: http://www.ebay.de/itm/Schaltnetzteil-stabilisiert-AC-DC-Eco-Friendly-mit-2250-mA-/350703096848
 
 categories:
-- kit
+- power
 
 tags:
 - accessoire

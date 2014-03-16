@@ -6,10 +6,11 @@ description:
 price: 0,99€
 link: http://www.ebay.de/itm/251383404102
 categories:
-- relay
+- frontpage
 
 tags:
-- prototyping
+- relay
+- switch
 - accessoire
 - power
 ---
@@ -28,4 +29,5 @@ The relay needs 5 volts for operating. GPIO 2 is connected to VCC, GPIO 6 to GND
 to it. To activate the relay when Raspi starts the 3.3 volt GPIO 1 is connected to IN. Both red leds on the relay
 will light up as soon as the Raspi has power.
 
-![Relay](/assets/images/Relay.png)
+
+{% include accessoires/image-caption.html url="/assets/images/Relay.png" description="Wiring of the relay. The 'output' circuits are replaced with an external powered LED for simplicity" %}

@@ -1,5 +1,6 @@
 ---
 layout: post
+preview: /assets/images/DevicesSetup.png
 categories: 
   - test
 tagline: a post to the main page
@@ -10,4 +11,4 @@ published: true
 commentIssueId: 1
 ---
 
-![Develop local, run remote](/assets/images/DevicesSetup.png)
+{% include accessoires/image-caption.html url="/assets/images/DevicesSetup.png" description="Project wiring" %}

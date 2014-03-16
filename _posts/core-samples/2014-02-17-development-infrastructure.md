@@ -1,5 +1,6 @@
 ---
 layout: post
+preview: /assets/images/DevEnvironment.png
 categories :
   - frontpage
 tagline:
@@ -14,7 +15,7 @@ tags : [development]
 ## Develop local, run remote
 No need to install an IDE on the Raspi - develop on your local computer, run on your Raspi while the files are synchronized as soon as you change it locally. This is realized with sshf (SSH File System).
 
-![Develop local, run remote](/assets/images/DevEnvironment.png)
+{% include accessoires/image-caption.html url="/assets/images/DevEnvironment.png" description="Develop local, run remote" %}
 
 * Setup your favorite code editor and start a new project (e.g. a NodeJS project based on [nodebootstrap](https://github.com/inadarei/nodebootstrap))
 * SSH into your Raspi {% highlight sh %}ssh pi@192.168.178.30{% endhighlight %}

@@ -7,7 +7,7 @@ price: 4,38€
 link: http://www.exp-tech.de/Zubehoer/Gehaeuse/Enclosure---Flanged--Red--PRT-11366.html
 
 categories:
-- gimmick
+- case
 
 tags:
 - enclosure
