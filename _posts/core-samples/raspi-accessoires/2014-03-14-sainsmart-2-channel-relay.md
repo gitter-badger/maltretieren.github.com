@@ -16,5 +16,7 @@ tags:
 - accessoire
 ---
 
+{% include accessoires/accessoire-table %}
+
 http://myhowtosandprojects.blogspot.de/2014/02/sainsmart-2-channel-5v-relay-arduino.html
 <iframe width="560" height="315"  src="//www.youtube.com/embed/0UMznpwC7sw" frameborder="0"></iframe>

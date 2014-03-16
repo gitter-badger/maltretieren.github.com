@@ -13,3 +13,5 @@ tags:
 - hub
 - accessoire
 ---
+
+{% include accessoires/accessoire-table %}

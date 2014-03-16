@@ -13,3 +13,5 @@ tags:
 - button
 - accessoire
 ---
+
+{% include accessoires/accessoire-table %}

@@ -14,3 +14,5 @@ tags:
 - humidity
 - accessoire
 ---
+
+{% include accessoires/accessoire-table %}

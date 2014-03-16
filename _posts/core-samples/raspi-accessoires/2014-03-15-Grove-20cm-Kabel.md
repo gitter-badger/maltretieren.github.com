@@ -13,3 +13,5 @@ tags:
 - wire
 - accessoire
 ---
+
+{% include accessoires/accessoire-table %}

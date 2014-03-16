@@ -13,3 +13,5 @@ tags:
 - transmitter
 - accessoire
 ---
+
+{% include accessoires/accessoire-table %}

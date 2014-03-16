@@ -12,5 +12,6 @@ categories:
 tags:
 - prototyping
 - accessoire
-
 ---
+
+{% include accessoires/accessoire-table %}

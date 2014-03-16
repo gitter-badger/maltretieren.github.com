@@ -13,3 +13,5 @@ tags:
 - powerbank
 - accessoire
 ---
+
+{% include accessoires/accessoire-table %}

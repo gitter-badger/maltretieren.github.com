@@ -13,3 +13,5 @@ tags:
 - measure
 - accessoire
 ---
+
+{% include accessoires/accessoire-table %}

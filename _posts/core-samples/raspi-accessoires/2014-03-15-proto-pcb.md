@@ -13,3 +13,5 @@ tags:
 - resistor
 - accessoire
 ---
+
+{% include accessoires/accessoire-table %}

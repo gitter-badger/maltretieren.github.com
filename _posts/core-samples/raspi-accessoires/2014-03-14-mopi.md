@@ -14,3 +14,5 @@ tags:
 - battery
 - accessoire
 ---
+
+{% include accessoires/accessoire-table %}

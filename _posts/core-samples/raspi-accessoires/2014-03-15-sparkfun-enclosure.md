@@ -14,3 +14,5 @@ tags:
 - sparkfun
 - accessoire
 ---
+
+{% include accessoires/accessoire-table %}

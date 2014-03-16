@@ -13,3 +13,5 @@ tags:
 - motion
 - accessoire
 ---
+
+{% include accessoires/accessoire-table %}

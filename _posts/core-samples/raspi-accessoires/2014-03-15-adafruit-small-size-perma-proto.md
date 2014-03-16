@@ -14,3 +14,5 @@ tags:
 - pcb
 - accessoire
 ---
+
+{% include accessoires/accessoire-table %}

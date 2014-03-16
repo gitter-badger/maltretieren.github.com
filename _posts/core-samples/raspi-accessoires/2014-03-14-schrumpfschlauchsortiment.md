@@ -13,3 +13,5 @@ tags:
 - schrumpfschlauch
 - accessoire
 ---
+
+{% include accessoires/accessoire-table %}

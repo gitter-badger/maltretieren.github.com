@@ -12,3 +12,5 @@ tags:
 - lcd
 - accessoire
 ---
+
+{% include accessoires/accessoire-table %}

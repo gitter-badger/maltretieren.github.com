@@ -12,3 +12,5 @@ categories:
 tags:
 - accessoire
 ---
+
+{% include accessoires/accessoire-table %}

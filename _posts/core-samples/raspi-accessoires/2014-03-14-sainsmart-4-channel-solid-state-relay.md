@@ -16,7 +16,7 @@ tags:
 - accessoire
 ---
 
-<img src="{{page.preview}}" style="width:100px"/>
+{% include accessoires/accessoire-table %}
 
 - Each circuit is rated for 2 amps. A fuse is hard-soldered which protects it.
 - Each relay draws about 10 milliamps when switched on.

@@ -1,0 +1,9 @@
+<table class="table table-striped" style="table-layout: fixed">
+    <tbody class="list"><tr>
+        <td class="image"><img src="{{page.preview}}"></td>
+        <td class="product">{{page.product}}</td>
+        <td class="description">{{page.description}}</td>
+        <td class="price">{{page.price}}</td>
+        <td class="link"><a href="{{page.link}}">LINK</a></td>
+    </tr></tbody>
+</table>
