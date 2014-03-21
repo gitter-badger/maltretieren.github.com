@@ -54,6 +54,7 @@
       <div class="content">
         {{ content }}
       </div>
+        {% include widgets/comments/form.html %}
       <hr>
       <footer>
         <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}</p>
@@ -61,5 +62,6 @@
 
     </div>
     {% include JB/analytics %}
+
   </body>
 </html>

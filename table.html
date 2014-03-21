@@ -6,10 +6,17 @@ group: navigation
 ---
 {% include JB/setup %}
 
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <!--
     javascript for interacting with the table
 !-->
 <script src="assets/js/list.js"></script>
+
+<!--
+    Rating
+!-->
+<script src="assets/js/raty/jquery.raty.js"></script>
+<script src="assets/js/keenio.js"></script>
 
 <div class="content">
 
@@ -23,5 +30,47 @@ group: navigation
     {% include widgets/interactive-table.html %}
 
 </div><!-- /.container -->
+
+<script>
+    var ratyElements =  $('.raty');
+    var success = function (data) {
+        alert("success");
+    }
+    for(i=0;i<ratyElements.length;i++) {
+        $(ratyElements[i]).raty({
+            path: 'assets/js/raty/images',
+            click: function(score, evt) {
+                accessoireRating(this.id, score);
+            }
+        });
+
+    }
+
+    var getRatings = function() {
+        var url = "https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/queries/average?api_key=fca64cb411fe523d053f2d9b1d159011135be6ce55da682f1ad8d6b1d4f629b84dd564edb1c0d7a0d7575ebaaa79b55daa075f7c866d7430ace403bab51b7513aa41b30ce443f9d736d45d33c78a0b44420c2ecd35223b76d67af37df1d0cc52bf67e73cb32d949eb58cb5814e7e5e6a&event_collection=accessoires&timezone=3600&target_property=rating&group_by=id"
+        var success = function (data) {
+            for(i=0;i<data.result.length;i++)
+            {
+                var rating = data.result[i].result;
+                var element = data.result[i].id.replace("?","");
+                console.log(element);
+                console.log(rating);
+                //$("#"+element).parent().append(rating);
+                $("#"+element).raty({
+                    score: rating,
+                    path: 'assets/js/raty/images',
+                    click: function(score, evt) {
+                        accessoireRating(this.id, score);
+                    }
+                });
+            }
+        };
+        $.ajax({
+            url: url,
+            success: success
+        });
+    }
+    getRatings();
+</script>
 
 </div>

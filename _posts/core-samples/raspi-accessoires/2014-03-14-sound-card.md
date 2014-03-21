@@ -1,5 +1,6 @@
 ---
 layout: post
+uuid: a4a720e0-b077-11e3-a5e2-0800200c9a66
 preview: /assets/images/2014-03-12-raspi-accessoirs/sound-card.jpg
 product: USB 2.0 3D Soundkarte
 description: Sound card Audio Adapter 5.1

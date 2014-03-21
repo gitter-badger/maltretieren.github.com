@@ -1,5 +1,6 @@
 ---
 layout: post
+uuid: bd036fd0-b078-11e3-a5e2-0800200c9a66
 preview: /assets/images/2014-03-12-raspi-accessoirs/adafruit-small-pcb.jpg
 product: Adafruit Small-Size Perma-Proto Raspberry Pi Breadboard PCB Kit
 description: Small PCB with mounting holes

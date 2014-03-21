@@ -1,5 +1,6 @@
 ---
 layout: post
+uuid: 4b1b6450-b077-11e3-a5e2-0800200c9a66
 preview: /assets/images/2014-03-12-raspi-accessoirs/sainsmart-relay.jpg
 product: Sainsmart 2-Channel 5V Relay Module for Arduino Raspberry Pi
 description: For switching off power of accessoirs

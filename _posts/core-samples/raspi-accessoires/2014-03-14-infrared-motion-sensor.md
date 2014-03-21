@@ -1,5 +1,6 @@
 ---
 layout: post
+uuid: 462bec40-b076-11e3-a5e2-0800200c9a66
 preview: /assets/images/2014-03-12-raspi-accessoirs/motion-sensor.jpg
 product: PIR Pyroelectric Infrared Motion Sensor Detector Module
 description:

@@ -1,5 +1,6 @@
 ---
 layout: post
+uuid: 764c5e40-b077-11e3-a5e2-0800200c9a66
 preview: /assets/images/2014-03-12-raspi-accessoirs/schieblehre.jpg
 product: Incutex, Messschieber
 description: Messschieber aus Edelstahl 150mm 6", Längenmessgerät mit Tiefenmessstange und Display Digital Schieblehre

@@ -9,10 +9,11 @@
             <thead>
             <tr>
                 <th style="width:20%;"><span class="sort" data-sort="image">Preview</span></th>
-                <th style="width:30%;"><span class="sort" data-sort="product">Product</span></th>
-                <th style="width:30%;"><span class="sort" data-sort="description">Description</span></th>
+                <th style="width:20%;"><span class="sort" data-sort="product">Product</span></th>
+                <th style="width:20%;"><span class="sort" data-sort="description">Description</span></th>
                 <th style="width:10%;"><span class="sort" data-sort="price">Price</span></th>
                 <th style="width:10%;"><span class="sort" data-sort="link">Link</span></th>
+                <th style="width:20%"><span class="sort" data-sort="rating">Rating</span></th>
             </tr>
             </thead>
             <tbody class="list">
@@ -23,6 +24,7 @@
                 <td class="description">{{ post.description}}</td>
                 <td class="price">{{ post.price }}</td>
                 <td class="link"><a href="{{ post.link }}">LINK</a></td>
+                <td class="rating"><div class="raty" id="{{ post.uuid }}" style="width:200px"></div></td>
             </tr>
             {% endfor %}
             </tbody>
@@ -35,7 +37,7 @@
 <script type="text/javascript">
 
     var options = {
-        valueNames: ['image', 'product', 'description', 'price', 'link']
+        valueNames: ['image', 'product', 'description', 'price', 'link', 'rating']
     };
 
     var entryList = new List('entry-list', options);

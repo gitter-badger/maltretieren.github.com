@@ -1,5 +1,6 @@
 ---
 layout: post
+uuid: 5dc75c30-b077-11e3-a5e2-0800200c9a66
 preview: /assets/images/2014-03-12-raspi-accessoirs/sainsmart-srs-relay.jpg
 product: SainSmart 4 Channel 5V Solid State Relay Module Board.OMRON SSR AVR DSP Arduino
 description: For switching off power of externally powered devices

@@ -1,5 +1,6 @@
 ---
 layout: post
+uuid: 2ff60a50-b076-11e3-a5e2-0800200c9a66
 preview: /assets/images/2014-03-12-raspi-accessoirs/gertboard.jpg
 product: Raspberry Pi Gertboard Erweiterungsplatine (vormontiert)
 description:
