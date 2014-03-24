@@ -10,7 +10,7 @@ published: true
 ---
 
 {% include JB/setup %}
-test
+
 <div id="path">{{page.path}}</div>
 
 <form role="form" action="#">
