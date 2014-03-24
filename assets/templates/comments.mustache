@@ -1,0 +1,40 @@
+
+<div id="page-wrap" class="clear-block">
+    <div class="row" style="margin-left:0px">
+        <div class="panel panel-default widget">
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-comment"></span>
+                <h3 class="panel-title">
+                    Recent Comments</h3>
+                <span class="label label-info" style="margin-top:10px">{{result.length}}</span>
+            </div>
+            <div class="panel-body">
+                <ul class="list-group" id="recentCommentsEntries">
+
+                    {{#result}}
+                        <li class="list-group-item">
+                            <div class="row" style="margin-top:10px; margin-bottom:10px">
+                                <div class="span2">
+                                    <a href="http://www.jquery2dotnet.com/2013/10/google-style-login-page-desing-usign.html">
+                                        {{pageTitle}}</a>
+                                    <div class="mic-info">
+                                        By: <a href="#">{{firstName}} {{lastName}}</a> on 2 Aug 2013
+                                    </div>
+                                </div>
+                                <div class="span2">
+                                    <div class="comment-text">
+                                        {{message}}
+                                    </div>
+                                    <div class="action">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    {{/result}}
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+

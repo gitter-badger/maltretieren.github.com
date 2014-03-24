@@ -14,6 +14,7 @@
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script data-main="/assets/js/main.js" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.11/require.min.js"></script>
 
     <!-- Le styles -->
     <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
@@ -54,6 +55,7 @@
       <div class="content">
         {{ content }}
       </div>
+        {% include widgets/comments/recentComments.html %}
         {% include widgets/comments/form.html %}
       <hr>
       <footer>

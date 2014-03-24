@@ -20,3 +20,6 @@ manager "npm" which are easy to use...
 ## MustacheJS
 Mustache is a logic-less template syntax.
 
+## RequireJS
+(RequireJS)[http://requirejs.org/] is a JavaScript file and module loader. RequireJS will improve the speed and quality of your code.
+

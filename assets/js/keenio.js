@@ -32,3 +32,7 @@ var accessoireRating = function (id, rating) {
     // add it to the "purchases" collection
     Keen.addEvent("accessoires", purchase);
 };
+
+var commentForm = function (id, data) {
+    Keen.addEvent("comments", data);
+}

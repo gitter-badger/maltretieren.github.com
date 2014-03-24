@@ -2,82 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/raty/images/cancel-off.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/raty/images/cancel-on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/raty/images/star-half.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/raty/images/star-off.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/raty/images/star-on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-03-20-jekyll-persistance.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_includes/widgets/comments/form.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_includes/widgets/comments/form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/raty/jquery.raty.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/keenio.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-channel-relay.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1-channel-relay.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-10k-poti.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-10k-poti.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1k-poti.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-1k-poti.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-434mhz-transmitter.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-434mhz-transmitter.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-5k-poti.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-5k-poti.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-Button-Pad-4x4-LED-Compatible.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-Button-Pad-4x4-LED-Compatible.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-atx-raspi.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-atx-raspi.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-banana-jack.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-banana-jack.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-basic-kit.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-basic-kit.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-battery-holder.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-battery-holder.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-color-led.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-color-led.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-dc-buchse.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-dc-buchse.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-delaycon-usb-hub.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-delaycon-usb-hub.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-distance-sensor.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-distance-sensor.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-edimax-wifi.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-edimax-wifi.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-gertboard.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-gertboard.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-infrared-motion-sensor.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-infrared-motion-sensor.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-jumper-kabel.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-jumper-kabel.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-kondensator.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-kondensator.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-laborsteckboard.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-laborsteckboard.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-lcd.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-lcd.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-litze.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-litze.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-loetstation.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-loetstation.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-loetzinn.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-loetzinn.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-mopi.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-mopi.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-multimeter.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-multimeter.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-power-jack-socket.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-power-jack-socket.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-power-supply.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-power-supply.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-push-button.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-push-button.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-raspi-camera.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-raspi-camera.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-raspi.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-raspi.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-ravpower-power-bank.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-ravpower-power-bank.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-rt3570-wifi.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-rt3570-wifi.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-sainsmart-2-channel-relay.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-sainsmart-2-channel-relay.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-sainsmart-4-channel-solid-state-relay.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-sainsmart-4-channel-solid-state-relay.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-sandisk-sd-card.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-sandisk-sd-card.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-schieblehre.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-schieblehre.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-schrumpfschlauchsortiment.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-schrumpfschlauchsortiment.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-solder-sucker.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-solder-sucker.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-sound-card.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-sound-card.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-starter-bundle-harness.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-starter-bundle-harness.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-steckbruecken.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-steckbruecken.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-step-down1.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-step-down1.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-step-down2.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-step-down2.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-t-coppler.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-t-coppler.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-temp-humid-sensor.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-temp-humid-sensor.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-thermal-printer.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-thermal-printer.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-thermal-probe-sensor-sensor.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-thermal-probe-sensor-sensor.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-usb-adapter.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-usb-adapter.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-usb-kabel.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-usb-kabel.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-usb-to-rs232.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-usb-to-rs232.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-white-led.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-14-white-led.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-Adafruit-Perma-Proto-Quarter-sized-Breadboard-PCB-Single.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-Adafruit-Perma-Proto-Quarter-sized-Breadboard-PCB-Single.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-Grove-20cm-Kabel.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-Grove-20cm-Kabel.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-SeeedStudio-Grove-Universal-4-pin-connector-90.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-SeeedStudio-Grove-Universal-4-pin-connector-90.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-adafruit-arcade-button.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-adafruit-arcade-button.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-adafruit-small-size-perma-proto.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-adafruit-small-size-perma-proto.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-double-side-proto-board.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-double-side-proto-board.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-proto-pcb.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-proto-pcb.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-resitstors-kit.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-resitstors-kit.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-sparkfun-enclosure.md" afterPath="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-sparkfun-enclosure.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-03-24-github-edits.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/github/base64.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/templates/comments.mustache" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/form.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/github/github-functions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/github/github.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/mustache.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_includes/widgets/comments/recentComments.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_includes/widgets/comments/recentComments.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/require-text.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/require.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/github/underscore-min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/core-samples/2014-03-01-sooo-many-js-frameworks.md" afterPath="$PROJECT_DIR$/_posts/core-samples/2014-03-01-sooo-many-js-frameworks.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/default.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/widgets/interactive-table.html" afterPath="$PROJECT_DIR$/_includes/widgets/interactive-table.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/post.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/table.html" afterPath="$PROJECT_DIR$/table.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/widgets/comments/form.css" afterPath="$PROJECT_DIR$/_includes/widgets/comments/form.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/widgets/comments/form.html" afterPath="$PROJECT_DIR$/_includes/widgets/comments/form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/keenio.js" afterPath="$PROJECT_DIR$/assets/js/keenio.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
@@ -101,31 +45,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="2014-03-15-sparkfun-enclosure.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-sparkfun-enclosure.md">
+      <file leaf-file-name="form.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/form.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="42" selection-start="59" selection-end="59" vertical-scroll-proportion="-1.0714285" vertical-offset="0" max-vertical-offset="360">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="interactive-table.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_includes/widgets/interactive-table.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="90" selection-start="1502" selection-end="1502" vertical-scroll-proportion="-10.625" vertical-offset="135" max-vertical-offset="750">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="table.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/table.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="18" selection-start="1993" selection-end="1993" vertical-scroll-proportion="-5.625" vertical-offset="720" max-vertical-offset="1230">
+            <state line="28" column="59" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="816">
               <folding />
             </state>
           </provider>
@@ -134,52 +57,69 @@
       <file leaf-file-name="form.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/widgets/comments/form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="7" selection-start="1268" selection-end="1268" vertical-scroll-proportion="-13.875" vertical-offset="72" max-vertical-offset="495">
+            <state line="19" column="25" selection-start="951" selection-end="951" vertical-scroll-proportion="-11.5" vertical-offset="9" max-vertical-offset="600">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_includes/widgets/comments/form.css">
+      <file leaf-file-name="github.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/github/github.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="167" selection-start="2561" selection-end="2561" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+            <state line="777" column="0" selection-start="26291" selection-end="26291" vertical-scroll-proportion="0.0" vertical-offset="10513" max-vertical-offset="11745">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base64.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/github/base64.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="87" column="0" selection-start="2692" selection-end="2692" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1395">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="underscore-min.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/github/underscore-min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="13401" selection-start="13583" selection-end="13583" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="require.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/require.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2074" column="0" selection-start="82469" selection-end="82469" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="31200">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="73" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/post.html">
+      <file leaf-file-name="2014-03-24-github-edits.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-03-24-github-edits.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="6" selection-start="1446" selection-end="1446" vertical-scroll-proportion="-12.0" vertical-offset="402" max-vertical-offset="825">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/page.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="165">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="default.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="2" selection-start="2235" selection-end="2281" vertical-scroll-proportion="-7.0" vertical-offset="672" max-vertical-offset="1095">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2014-03-20-jekyll-persistance.md" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-03-20-jekyll-persistance.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.92840093" vertical-offset="196" max-vertical-offset="675">
+            <state line="13" column="15" selection-start="169" selection-end="169" vertical-scroll-proportion="0.2361111" vertical-offset="93" max-vertical-offset="525">
               <folding />
             </state>
           </provider>
@@ -188,11 +128,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tagCloud.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_includes/widgets/tagCloud.html">
+      <file leaf-file-name="github-functions.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/github/github-functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="495">
+            <state line="10" column="2" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comments.mustache" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/templates/comments.mustache">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="0" selection-start="1666" selection-end="1666" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="690">
+              <folding>
+                <marker date="1395615516000" expanded="true" signature="40:1717" placeholder="..." />
+                <marker date="1395615516000" expanded="true" signature="70:85" placeholder="..." />
+                <marker date="1395615516000" expanded="true" signature="86:1710" placeholder="..." />
+                <marker date="1395615516000" expanded="true" signature="135:1699" placeholder="..." />
+                <marker date="1395615516000" expanded="true" signature="175:438" placeholder="..." />
+                <marker date="1395615516000" expanded="true" signature="282:323" placeholder="..." />
+                <marker date="1395615516000" expanded="true" signature="379:394" placeholder="..." />
+                <marker date="1395615516000" expanded="true" signature="475:1684" placeholder="..." />
+                <marker date="1395615516000" expanded="true" signature="542:1664" placeholder="..." />
+                <marker date="1395615516000" expanded="true" signature="628:1610" placeholder="..." />
+                <marker date="1395615516000" expanded="true" signature="682:717" placeholder="..." />
+                <marker date="1395615516000" expanded="true" signature="718:1580" placeholder="..." />
+                <marker date="1395615516000" expanded="true" signature="770:1196" placeholder="..." />
+                <marker date="1395615516000" expanded="true" signature="896:954" placeholder="..." />
+                <marker date="1395615516000" expanded="true" signature="1013:1157" placeholder="..." />
+                <marker date="1395615516000" expanded="true" signature="1248:1545" placeholder="..." />
+                <marker date="1395615516000" expanded="true" signature="1311:1406" placeholder="..." />
+                <marker date="1395615516000" expanded="true" signature="1463:1506" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -215,22 +183,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-Adafruit-Perma-Proto-Quarter-sized-Breadboard-PCB-Single.md" />
-        <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-adafruit-small-size-perma-proto.md" />
-        <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-double-side-proto-board.md" />
-        <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-Grove-20cm-Kabel.md" />
-        <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-proto-pcb.md" />
-        <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-resitstors-kit.md" />
-        <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-SeeedStudio-Grove-Universal-4-pin-connector-90.md" />
-        <option value="$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-sparkfun-enclosure.md" />
-        <option value="$PROJECT_DIR$/table.html" />
-        <option value="$PROJECT_DIR$/_posts/core-samples/2014-03-20-dynamic-jekyll.md" />
-        <option value="$PROJECT_DIR$/_includes/widgets/comments/form.css.html" />
-        <option value="$PROJECT_DIR$/_includes/widgets/comments/form.css" />
+        <option value="$PROJECT_DIR$/assets/js/require-text.js" />
+        <option value="$PROJECT_DIR$/assets/js/mustache.js" />
+        <option value="$PROJECT_DIR$/assets/templates/comments.template" />
+        <option value="$PROJECT_DIR$/_includes/widgets/comments/recentCommentsEntry.html" />
+        <option value="$PROJECT_DIR$/assets/js/chevron.js" />
+        <option value="$PROJECT_DIR$/_includes/widgets/comments/recentComments.html" />
         <option value="$PROJECT_DIR$/_includes/widgets/comments/form.html" />
-        <option value="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
-        <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
-        <option value="$PROJECT_DIR$/_posts/core-samples/2014-03-20-jekyll-persistance.md" />
+        <option value="$PROJECT_DIR$/assets/templates/comments.mustache" />
+        <option value="$PROJECT_DIR$/assets/js/form.js" />
+        <option value="$PROJECT_DIR$/assets/js/github/base64.js" />
+        <option value="$PROJECT_DIR$/_includes/widgets/github/github-functions.js" />
+        <option value="$PROJECT_DIR$/assets/js/github/github-functions.js" />
+        <option value="$PROJECT_DIR$/assets/js/github/underscore-min.js" />
+        <option value="$PROJECT_DIR$/assets/js/main.js" />
+        <option value="$PROJECT_DIR$/assets/js/require.js" />
+        <option value="$PROJECT_DIR$/_posts/core-samples/2014-03-24-github-edits.md" />
       </list>
     </option>
   </component>
@@ -296,14 +264,6 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twitter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -341,39 +301,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="raty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maltretieren.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maltretieren.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maltretieren.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maltretieren.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="github" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -426,68 +354,6 @@
               <option name="myItemId" value="_includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="widgets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="comments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maltretieren.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maltretieren.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twitter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maltretieren.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maltretieren.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JB" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maltretieren.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maltretieren.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -503,28 +369,20 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/_posts/core-samples" />
+      <recent name="$PROJECT_DIR$/assets/themes/twitter/bootstrap" />
       <recent name="$PROJECT_DIR$/assets/js" />
       <recent name="$PROJECT_DIR$/assets/images" />
       <recent name="$PROJECT_DIR$/_posts/core-samples/table" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/js/github" />
+      <recent name="$PROJECT_DIR$/assets/js" />
       <recent name="$PROJECT_DIR$/assets/images" />
       <recent name="$PROJECT_DIR$/assets/js/raty" />
       <recent name="$PROJECT_DIR$/_posts/core-samples" />
-      <recent name="$PROJECT_DIR$/_posts/core-samples/frontpage" />
-      <recent name="$PROJECT_DIR$/assets/geojson" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -533,6 +391,14 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -619,21 +485,21 @@
     <frame x="0" y="22" width="1233" height="778" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329429" sideWeight="0.49959448" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2489019" sideWeight="0.8329278" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2489019" sideWeight="0.8329278" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329429" sideWeight="0.49959448" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32650074" sideWeight="0.49959448" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33171126" sideWeight="0.7510981" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2489019" sideWeight="0.5004055" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2489019" sideWeight="0.16707218" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329429" sideWeight="0.49959448" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -654,135 +520,143 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-adafruit-small-size-perma-proto.md">
+    <entry file="file://$PROJECT_DIR$/assets/js/mustache.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="17" selection-end="59" vertical-scroll-proportion="-1.0714285" vertical-offset="0" max-vertical-offset="360">
-          <folding />
+        <state line="24" column="37" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8640">
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-double-side-proto-board.md">
+    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="17" selection-end="59" vertical-scroll-proportion="-1.0714285" vertical-offset="0" max-vertical-offset="345">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-Grove-20cm-Kabel.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="17" selection-end="59" vertical-scroll-proportion="-1.0714285" vertical-offset="0" max-vertical-offset="345">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-proto-pcb.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="17" selection-end="59" vertical-scroll-proportion="-1.0714285" vertical-offset="0" max-vertical-offset="345">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-resitstors-kit.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="17" selection-end="59" vertical-scroll-proportion="-1.0714285" vertical-offset="0" max-vertical-offset="345">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-SeeedStudio-Grove-Universal-4-pin-connector-90.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="17" selection-end="59" vertical-scroll-proportion="-1.0714285" vertical-offset="0" max-vertical-offset="360">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/raspi-accessoires/2014-03-15-sparkfun-enclosure.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="42" selection-start="59" selection-end="59" vertical-scroll-proportion="-1.0714285" vertical-offset="0" max-vertical-offset="360">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/widgets/tagCloud.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+        <state line="57" column="1" selection-start="2359" selection-end="2416" vertical-scroll-proportion="-18.875" vertical-offset="402" max-vertical-offset="1125">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/widgets/interactive-table.html">
+    <entry file="file://$PROJECT_DIR$/_includes/widgets/comments/recentComments.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="90" selection-start="1502" selection-end="1502" vertical-scroll-proportion="-10.625" vertical-offset="135" max-vertical-offset="750">
+        <state line="2" column="78" selection-start="143" selection-end="143" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/table.html">
+    <entry file="file://$PROJECT_DIR$/_includes/widgets/comments/recentComments.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="18" selection-start="1993" selection-end="1993" vertical-scroll-proportion="-5.625" vertical-offset="720" max-vertical-offset="1230">
+        <state line="3" column="9" selection-start="125" selection-end="125" vertical-scroll-proportion="-0.9183673" vertical-offset="0" max-vertical-offset="135">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="10" selection-start="1755" selection-end="1755" vertical-scroll-proportion="-10.333333" vertical-offset="487" max-vertical-offset="1005">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/widgets/comments/form.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="167" selection-start="2561" selection-end="2561" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="436">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="394">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/widgets/comments/form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="7" selection-start="1268" selection-end="1268" vertical-scroll-proportion="-13.875" vertical-offset="72" max-vertical-offset="495">
+        <state line="19" column="25" selection-start="951" selection-end="951" vertical-scroll-proportion="-11.5" vertical-offset="9" max-vertical-offset="600">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/post.html">
+    <entry file="file://$PROJECT_DIR$/assets/templates/comments.mustache">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="6" selection-start="1446" selection-end="1446" vertical-scroll-proportion="-12.0" vertical-offset="402" max-vertical-offset="825">
+        <state line="34" column="0" selection-start="1666" selection-end="1666" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="690">
+          <folding>
+            <marker date="1395615516000" expanded="true" signature="40:1717" placeholder="..." />
+            <marker date="1395615516000" expanded="true" signature="70:85" placeholder="..." />
+            <marker date="1395615516000" expanded="true" signature="86:1710" placeholder="..." />
+            <marker date="1395615516000" expanded="true" signature="135:1699" placeholder="..." />
+            <marker date="1395615516000" expanded="true" signature="175:438" placeholder="..." />
+            <marker date="1395615516000" expanded="true" signature="282:323" placeholder="..." />
+            <marker date="1395615516000" expanded="true" signature="379:394" placeholder="..." />
+            <marker date="1395615516000" expanded="true" signature="475:1684" placeholder="..." />
+            <marker date="1395615516000" expanded="true" signature="542:1664" placeholder="..." />
+            <marker date="1395615516000" expanded="true" signature="628:1610" placeholder="..." />
+            <marker date="1395615516000" expanded="true" signature="682:717" placeholder="..." />
+            <marker date="1395615516000" expanded="true" signature="718:1580" placeholder="..." />
+            <marker date="1395615516000" expanded="true" signature="770:1196" placeholder="..." />
+            <marker date="1395615516000" expanded="true" signature="896:954" placeholder="..." />
+            <marker date="1395615516000" expanded="true" signature="1013:1157" placeholder="..." />
+            <marker date="1395615516000" expanded="true" signature="1248:1545" placeholder="..." />
+            <marker date="1395615516000" expanded="true" signature="1311:1406" placeholder="..." />
+            <marker date="1395615516000" expanded="true" signature="1463:1506" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="59" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="816">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
+    <entry file="file://$PROJECT_DIR$/assets/js/github/github.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="2" selection-start="2235" selection-end="2281" vertical-scroll-proportion="-7.0" vertical-offset="672" max-vertical-offset="1095">
+        <state line="777" column="0" selection-start="26291" selection-end="26291" vertical-scroll-proportion="0.0" vertical-offset="10513" max-vertical-offset="11745">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/github/base64.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="0" selection-start="2692" selection-end="2692" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1395">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/github/github-functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="2" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-03-20-jekyll-persistance.md">
+    <entry file="file://$PROJECT_DIR$/assets/js/github/underscore-min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.92840093" vertical-offset="196" max-vertical-offset="675">
+        <state line="4" column="13401" selection-start="13583" selection-end="13583" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="73" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/require.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2074" column="0" selection-start="82469" selection-end="82469" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="31200">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/core-samples/2014-03-24-github-edits.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="15" selection-start="169" selection-end="169" vertical-scroll-proportion="0.2361111" vertical-offset="93" max-vertical-offset="525">
           <folding />
         </state>
       </provider>

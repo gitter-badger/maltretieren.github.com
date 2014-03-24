@@ -1,14 +1,16 @@
-<link class="cssdeck" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/css/bootstrap.min.css">
+<div id="comments">
 
-<form class="well span8">
+</div>
+<div id="page-wrap" class="clear-block">
+<form id="comment" class="well" >
     <div class="row">
         <div class="span3">
             <label>First Name</label>
-            <input type="text" class="span3" placeholder="Your First Name">
+            <input type="text" class="span3" placeholder="Your First Name" name="firstName">
             <label>Last Name</label>
-            <input type="text" class="span3" placeholder="Your Last Name">
+            <input type="text" class="span3" placeholder="Your Last Name" name="lastName">
             <label>Email Address</label>
-            <input type="text" class="span3" placeholder="Your email address">
+            <input type="text" class="span3" placeholder="Your email address" name="mail">
             <label>Subject
                 <select id="subject" name="subject" class="span3">
                     <option value="na" selected="">Choose One:</option>
@@ -17,12 +19,17 @@
                     <option value="product">Product Support</option>
                 </select>
             </label>
+            <input type="hidden" name="pageTitle" value="{{page.title}}">
         </div>
-        <div class="span5">
+        <div class="span3">
             <label>Message</label>
-            <textarea name="message" id="message" class="input-xlarge span5" rows="10"></textarea>
+            <textarea name="message" id="message" class="input-xlarge span4" rows="9"></textarea>
+
         </div>
 
-        <button type="submit" class="btn btn-primary pull-right">Send</button>
     </div>
+<div class="row">
+    <button type="submit" class="btn btn-primary pull-right">Send</button>
+</div>
 </form>
+</div>
