@@ -15,7 +15,7 @@ published: true
 
 <form role="form" action="#">
   <div class="form-group">
-    <label for="exampleInputEmail1">Username</label>
+    <label for="exampleInputEmail1">Username of the repo hosting the Jekyll page</label>
     <input type="text" class="form-control" id="username" placeholder="Your Github Username" />
   </div>
   <div class="form-group">

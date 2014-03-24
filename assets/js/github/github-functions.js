@@ -5,9 +5,9 @@ var saveMarkup = function() {
     password: $(".password").val(),
     auth: "basic"
     });
-
+    var path = $('#path').text();
 var repo = github.getRepo("Maltretieren", "maltretieren.github.com");
-repo.write('master', $(".path").text, saveContent, 'First Commit from client side', function(err) {});
+repo.write('master', path, saveContent, 'First Commit from client side', function(err) {});
 };
 
 var getMarkup = function() {
