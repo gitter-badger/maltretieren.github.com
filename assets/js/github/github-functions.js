@@ -6,7 +6,7 @@ var saveMarkup = function() {
     auth: "basic"
     });
     var path = $('#path').text();
-	console("submit to: "+path)
+	console.log("submit to: "+path)
     var repo = github.getRepo("Maltretieren", "maltretieren.github.com");
     repo.write('master', path, saveContent, 'First Commit from client side', function(err) {
         console.log(err);
