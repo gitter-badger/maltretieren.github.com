@@ -11,8 +11,8 @@ var saveMarkup = function() {
 
 var getMarkup = function() {
     var github = new Github({
-        username: $(".username").val(),
-        password: $(".password").val(),
+        username: $("#username").val(),
+        password: $("#password").val(),
         auth: "basic"
     });
     var path = $('#path').text();
