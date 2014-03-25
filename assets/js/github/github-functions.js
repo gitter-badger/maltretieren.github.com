@@ -25,5 +25,5 @@ var getMarkup = function() {
 };
 
 (function() {
-	getMarkup()
-)();
+	getMarkup();
+})();
