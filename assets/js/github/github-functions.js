@@ -1,16 +1,14 @@
 var saveMarkup = function() {
     var saveContent = $("#content").val();
     var github = new Github({
-    username: $(".username").val(),
-    password: $(".password").val(),
-    auth: "basic"
+		username: $(".username").val(),
+		password: $(".password").val(),
+		auth: "basic"
     });
     var path = $('#path').text();
 	console.log("submit to: "+path)
-    var repo = github.getRepo("Maltretieren", "maltretieren.github.com");
-    repo.write('master', path, saveContent, 'First Commit from client side', function(err) {
-        console.log(err);
-    });
+	var repo = github.getRepo("Maltretieren", "maltretieren.github.com");
+	repo.write('master', path, saveContent, 'First Commit from client side', function(err) {});
 };
 
 var getMarkup = function() {
