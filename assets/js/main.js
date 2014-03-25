@@ -18,7 +18,7 @@
 		var firstScript = document.getElementsByTagName('script')[0];
 		// Set the location of the script
 		script.src      = scripts[i];
-		console.log("Script loaded: "+scripts[i]);
+		console.log("Script loaded: "+scripts[i]) ;
 		// Inject with insertBefore to avoid appendChild errors
 		firstScript.parentNode.insertBefore( script, firstScript );
 	}
