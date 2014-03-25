@@ -15,7 +15,7 @@ This page uses github.js to retrieve the Markdown from Github, Display it via ht
 
 The API queries are limited to somehow 60 Requests/Hour.
 
-> API rate limit exceeded for your IP. (But here's the good news: Authenticated requests get a higher rate limit. [Check out the documentation for more details](http://developer.github.com/v3/#rate-limiting).
+> API rate limit exceeded for your IP. (But here's the good news: Authenticated requests get a higher rate limit. [Check out the documentation for more details](http://developer.github.com/v3/#rate-limiting).)
 
 <div id="path" style="visibility:hidden">{{page.path}}</div>
 <textarea rows="30" data-provide="markdown" data-iconlibrary="fa" data-savable="true" data-width="100%" id="content">
