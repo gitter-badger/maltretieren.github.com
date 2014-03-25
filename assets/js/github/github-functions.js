@@ -23,7 +23,3 @@ var getMarkup = function() {
         $("#content").val(contents);
     });
 };
-
-var cmdSave = function() {
-	alert("save");
-}
