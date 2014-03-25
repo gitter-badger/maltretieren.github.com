@@ -7,7 +7,7 @@
 		Base: '/assets/js/github/base64.js',
 		Underscore: '/assets/js/github/underscore-min.js',
 		Github: '/assets/js/github/github.js',
-		GithubFunctions: '/assets/js/github/github-functions.js;
+		GithubFunctions: '/assets/js/github/github-functions.js'
 	};
 
 	// Very simple asynchronous script-loader
