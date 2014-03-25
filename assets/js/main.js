@@ -8,6 +8,7 @@
 		Underscore: '/assets/js/github/underscore-min.js',
 		Github: '/assets/js/github/github.js',
 		GithubFunctions: '/assets/js/github/github-functions.js'
+		BootstrapMarkdown: '/assets/js/bootstrapMarkdown/js/bootstrap-markdown.js'
 	};
 
 	// Very simple asynchronous script-loader
