@@ -2,7 +2,7 @@
 layout: post
 categories: 
   - frontpage
-tagline: a post to the main page
+tagline: with github.js
 tags: 
   - development
   - test
@@ -11,20 +11,12 @@ published: true
 
 {% include JB/setup %}
 
-<div id="path">{{page.path}}</div>
+This page uses github.js to retrieve the Markdown from Github, Display it via http://toopay.github.io/bootstrap-markdown/ and save it again with github.js. To save you need to know the password (HTTP Basic Authentication) for the repository... 
 
-<form role="form" action="#">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Username of the repo hosting the Jekyll page</label>
-    <input type="text" class="form-control" id="username" placeholder="Your Github Username" />
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="password" placeholder="Password" />
-  </div>
-  <button type="submit" class="btn btn-default" onclick="getMarkup();">Get Markup</button>
-<textarea rows="30" style="width:100%" id="content">
+The API queries are limited to somehow 60 Requests/Hour.
 
+> API rate limit exceeded for your IP. (But here's the good news: Authenticated requests get a higher rate limit. [Check out the documentation for more details](http://developer.github.com/v3/#rate-limiting).)
+
+<div id="path" style="visibility:hidden">{{page.path}}</div>
+<textarea rows="30" data-provide="markdown" data-iconlibrary="fa" data-savable="true" style="width:100%" id="content">
 </textarea>
-  <button type="submit" class="btn btn-default" onclick="saveMarkup();">Submit</button>
-</form>
