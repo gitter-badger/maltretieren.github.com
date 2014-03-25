@@ -17,11 +17,8 @@ var saveMarkup = function() {
 };
 
 var getMarkup = function() {
-    var github = new Github({
-        username: "Maltretieren",
-        password: $("#password").val(),
-        auth: "basic"
-    });
+    $("#content").val("");
+	var github = new Github();
     var path = $('#path').text();
     var repo = github.getRepo("Maltretieren", "maltretieren.github.com");
     repo.read("master", path, function(err, contents) {
