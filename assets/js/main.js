@@ -10,7 +10,7 @@
 	}
 
 	// Very simple asynchronous script-loader
-	for (var i=0; i<scripts.length; i++) 
+	for (var i=0; i<scripts.length; i++) {
 		// Create a new script element
 		var script      = document.createElement('script');
 		// Find an existing script element on the page (usually the one this code is in)
