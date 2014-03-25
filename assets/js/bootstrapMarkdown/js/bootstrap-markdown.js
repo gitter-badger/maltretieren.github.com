@@ -263,11 +263,11 @@
           handler.push(saveHandler)
           callback.push(options.onSave)
 
-          editorFooter.append('<button class="btn btn-success" data-provider="'
+          editorFooter.append('Password: <input type="password" class="form-control" id="password" placeholder="Password" /><button class="btn btn-success" data-provider="'
                               +ns
                               +'" data-handler="'
                               +saveHandler
-                              +'"><i class="icon icon-white icon-ok"></i> Save</button>')
+                              +'" onclick="saveMarkup();"><i class="icon icon-white icon-ok"></i> Save</button>')
 
           editor.append(editorFooter)
         }
