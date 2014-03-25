@@ -1,5 +1,6 @@
 var saveMarkup = function() {
 	var saveContent = $("#content").val();
+	var saveContent = $("#saveComment").val()
 	var usernameField = "Maltretieren";
 	var passwordField = $("#password").val();
 	var github = new Github({
@@ -7,8 +8,11 @@ var saveMarkup = function() {
 		password: passwordField,
 	  auth: "basic"
 	});
+	var path = $('#path').text();
 	var repo = github.getRepo("Maltretieren", "maltretieren.github.com");
-	repo.write('master', '_posts/core-samples/2014-03-24-github-edits.md', saveContent, 'First Commit from client side', function(err) {});
+	repo.write('master', path, saveContent, saveComment, function(callback) {
+		alert("saved!");
+	});
 };
 
 var getMarkup = function() {
