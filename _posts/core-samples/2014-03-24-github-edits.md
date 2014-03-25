@@ -26,5 +26,5 @@ published: true
 <textarea rows="30" style="width:100%" id="content">
 
 </textarea>
-  <button type="submit" class="btn btn-default" onclick="saveMarkup();">Submit</button>
+  <button type="submit" class="btn btn-default" onclick="saveMarkup();">Submitt</button>
 </form>
