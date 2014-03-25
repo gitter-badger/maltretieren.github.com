@@ -27,22 +27,6 @@
 		.script( "/assets/js/form.js" )
     }
 
-<<<<<<< HEAD
-require(['Github', 'Base64', 'GithubFunctions'], function () {
-
-});
-
-require({
-        'packages': [{
-            'name': 'lodash',
-            'location': '/assets/js/github/',
-            'main': 'lodash'
-        }]
-    },
-    ['lodash'], function(_) {
-        console.log(_.VERSION);
-    });
-=======
     // loading code borrowed directly from LABjs itself
     setTimeout(function () {
         if ("item" in head) { // check if ref is still a live node list
@@ -75,4 +59,3 @@ require({
         }, false);
     }
 })(window, document);
->>>>>>> FETCH_HEAD
