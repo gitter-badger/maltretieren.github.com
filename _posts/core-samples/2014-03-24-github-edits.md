@@ -10,7 +10,7 @@ published: true
 ---
 
 {% include JB/setup %}
-test
+
 This page uses github.js to retrieve the Markdown from Github, Display it via http://toopay.github.io/bootstrap-markdown/ and save it again with github.js. To save you need to know the password (HTTP Basic Authentication) for the repository... 
 
 The API queries are limited to somehow 60 Requests/Hour.
