@@ -1,12 +1,13 @@
 (function() { 
 	var scripts = {
+		Jquery: 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js',
 		Mustache: '/assets/js/mustache.js',
 		Form: '/assets/js/form.js',
 		Chevron: '/assets/js/chevron.js',
-		Base64: '/assets/js/github/base64.js',
+		Base: '/assets/js/github/base64.js',
 		Underscore: '/assets/js/github/underscore-min.js',
 		Github: '/assets/js/github/github.js',
-		GithubFunctions: '/assets/js/github/github-functions.js'
+		GithubFunctions: '/assets/js/github/github-functions.js;
 	};
 
 	// Very simple asynchronous script-loader
