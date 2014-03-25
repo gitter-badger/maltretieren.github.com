@@ -1,7 +1,3 @@
-define([
-    //dependencies
-    'Mustache'
-], function( Mustache ){
     var form = document.getElementById("comment");
 
     form.onsubmit = function (e) {
@@ -40,4 +36,3 @@ define([
     }
 
     getComments();
-});
