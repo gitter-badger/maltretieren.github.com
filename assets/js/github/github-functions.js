@@ -1,6 +1,6 @@
 var saveMarkup = function() {
 	var saveContent = $("#content").val();
-	var saveContent = $("#saveComment").val()
+	var saveComment = $("#saveComment").val();
 	var usernameField = "Maltretieren";
 	var passwordField = $("#password").val();
 	var github = new Github({
