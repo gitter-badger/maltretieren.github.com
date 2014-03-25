@@ -2,7 +2,7 @@
 layout: post
 categories: 
   - frontpage
-tagline: a post to the main page
+tagline: with github.js
 tags: 
   - development
   - test
