@@ -1,4 +1,4 @@
-### ***heading text***---
+---
 layout: post
 categories: 
   - frontpage
