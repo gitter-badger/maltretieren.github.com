@@ -23,7 +23,7 @@ published: true
     <input type="password" class="form-control" id="password" placeholder="Password" />
   </div>
   <button type="submit" class="btn btn-default" onclick="getMarkup();">Get Markup</button>
-<textarea rows="30" style="width:100%" id="content">
+<textarea rows="30" data-provide="markdown" style="width:100%" id="content">
 
 </textarea>
   <button type="submit" class="btn btn-default" onclick="saveMarkup();">Submitt</button>
