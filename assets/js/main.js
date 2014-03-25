@@ -11,15 +11,17 @@
 
 	// Very simple asynchronous script-loader
 
-	for (var i=0; i<scripts.length; i++) {
-		// Create a new script element
-		var script      = document.createElement('script');
-		// Find an existing script element on the page (usually the one this code is in)
-		var firstScript = document.getElementsByTagName('script')[0];
-		// Set the location of the script
-		script.src      = scripts[i];
-		console.log("Script loaded: "+scripts[i]) ;
-		// Inject with insertBefore to avoid appendChild errors
-		firstScript.parentNode.insertBefore( script, firstScript );
+	for (var prop in scripts) {
+		if (scripts.hasOwnProperty(prop)) {
+			// Create a new script element
+			var script      = document.createElement('script');
+			// Find an existing script element on the page (usually the one this code is in)
+			var firstScript = document.getElementsByTagName('script')[0];
+			// Set the location of the script
+			script.src      = scripts[prop];
+			console.log("Script loaded: "+scripts[prop]) ;
+			// Inject with insertBefore to avoid appendChild errors
+			firstScript.parentNode.insertBefore( script, firstScript );
+		}
 	}
-});
+})();
