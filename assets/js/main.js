@@ -12,7 +12,7 @@
 		// NOTE: We are storing a reference to the QUEUE so that
 		// we can refer to it later in the code.
 		var queue = $LAB
-		.script( "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" )
+		.script( "http://code.jquery.com/jquery-2.1.0.min.js" )
 		.wait()
 		.script( "/assets/js/mustache.js" )
 		.script( "/assets/js/chevron.js" )
@@ -25,6 +25,8 @@
 		.script( "/assets/js/github/github-functions.js" )
 		.script( "/assets/js/bootstrapMarkdown/js/bootstrap-markdown.js" )
 		.script( "/assets/js/form.js" )
+        .script( "assets/js/keenio.js" )
+        .script( "assets/js/list.js" )
     }
 
     // loading code borrowed directly from LABjs itself
