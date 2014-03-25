@@ -12,7 +12,7 @@ published: true
 {% include JB/setup %}
 
 <div id="path">{{page.path}}</div>
-
+test
 <form role="form" action="#">
   <div class="form-group">
     <label for="exampleInputEmail1">Username of the repo hosting the Jekyll page</label>
