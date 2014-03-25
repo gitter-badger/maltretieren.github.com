@@ -22,9 +22,10 @@ published: true
     <label for="exampleInputPassword1">Password</label>
     <input type="password" class="form-control" id="password" placeholder="Password" />
   </div>
-  <button type="submit" class="btn btn-default" onclick="getMarkup();">Get Markup</button>
+  <button type="submit" class="btn btn-default" onclick=";">Get Markup</button>
 <textarea rows="30" data-provide="markdown" data-iconlibrary="fa" data-savable="true" data-width="100%" id="content">
-
 </textarea>
-  <button type="submit" class="btn btn-default" onclick="saveMarkup();">Submit</button>
 </form>
+<script>
+getMarkup()
+</script>
