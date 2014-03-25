@@ -1,8 +1,10 @@
 var saveMarkup = function() {
 	var saveContent = $("#content").val();
+	var usernameField = $("#username").val();
+	var passwordField = $("#password").val();
 	var github = new Github({
-		username: $("#username").val(),
-		password: $("#password").val(),
+		username: usernameField,
+		password: passwordField,
 	  auth: "basic"
 	});
 	var repo = github.getRepo("Maltretieren", "maltretieren.github.com");
