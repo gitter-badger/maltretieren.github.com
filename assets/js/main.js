@@ -15,6 +15,17 @@ require(['Form'], function () {
 
 });
 
-require(['Github', 'Base64', 'Underscore', 'GithubFunctions'], function () {
+require(['Github', 'Base64', 'GithubFunctions'], function () {
 
 });
+
+require({
+        'packages': [{
+            'name': 'lodash',
+            'location': '/assets/js/github/',
+            'main': 'lodash'
+        }]
+    },
+    ['lodash'], function(_) {
+        console.log(_.VERSION);
+    });
