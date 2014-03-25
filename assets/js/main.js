@@ -20,4 +20,4 @@
 		// Inject with insertBefore to avoid appendChild errors
 		firstScript.parentNode.insertBefore( script, firstScript );
 	}
-);
+)};
