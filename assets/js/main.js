@@ -1,12 +1,12 @@
 (function() { 
 	var scripts = {
-		Mustache: '/assets/js/mustache',
-		Form: '/assets/js/form',
-		Chevron: '/assets/js/chevron',
-		Github: '/assets/js/github/github',
-		Base64: '/assets/js/github/base64',
-		Underscore: '/assets/js/github/underscore-min',
-		GithubFunctions: '/assets/js/github/github-functions'
+		Mustache: '/assets/js/mustache.js',
+		Form: '/assets/js/form.js',
+		Chevron: '/assets/js/chevron.js',
+		Github: '/assets/js/github/github.js',
+		Base64: '/assets/js/github/base64.js',
+		Underscore: '/assets/js/github/underscore-min.js',
+		GithubFunctions: '/assets/js/github/github-functions.js'
 	};
 
 	// Very simple asynchronous script-loader
