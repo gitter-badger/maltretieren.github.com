@@ -1,6 +1,6 @@
 var saveMarkup = function() {
 	var saveContent = $("#content").val();
-	var usernameField = $("#username").val();
+	var usernameField = "Maltretieren";
 	var passwordField = $("#password").val();
 	var github = new Github({
 		username: usernameField,
@@ -13,7 +13,7 @@ var saveMarkup = function() {
 
 var getMarkup = function() {
     var github = new Github({
-        username: $("#username").val(),
+        username: "Maltretieren",
         password: $("#password").val(),
         auth: "basic"
     });
