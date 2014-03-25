@@ -28,6 +28,7 @@ var getMarkup = function() {
     var path = $('#path').text();
     var repo = github.getRepo("Maltretieren", "maltretieren.github.com");
     repo.read("master", path, function(err, contents) {
+		console.log("Error, maybe too many unothorized requests... "+err);
         $("#content").val(contents);
     });
 };
