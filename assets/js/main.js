@@ -16,9 +16,12 @@
 		.wait()
 		.script( "/assets/js/mustache.js" )
 		.script( "/assets/js/chevron.js" )
+		.wait()
 		.script( "/assets/js/github/base64.js" )
+		.script( "/assets/js/github/underscore-min.js" )
 		.wait()
 		.script( "/assets/js/github/github.js" )
+		.wait()
 		.script( "/assets/js/github/github-functions.js" )
 		.script( "/assets/js/bootstrapMarkdown/js/bootstrap-markdown.js" )
     }
