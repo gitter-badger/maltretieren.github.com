@@ -7,9 +7,10 @@
 		Base64: '/assets/js/github/base64',
 		Underscore: '/assets/js/github/underscore-min',
 		GithubFunctions: '/assets/js/github/github-functions'
-	}
+	};
 
 	// Very simple asynchronous script-loader
+
 	for (var i=0; i<scripts.length; i++) {
 		// Create a new script element
 		var script      = document.createElement('script');
