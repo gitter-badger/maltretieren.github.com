@@ -25,8 +25,8 @@
 		.script( "/assets/js/github/github-functions.js" )
 		.script( "/assets/js/bootstrapMarkdown/js/bootstrap-markdown.js" )
 		.script( "/assets/js/form.js" )
-        .script( "assets/js/keenio.js" )
-        .script( "assets/js/list.js" )
+        .script( "/assets/js/keenio.js" )
+        .script( "/assets/js/list.js" )
     }
 
     // loading code borrowed directly from LABjs itself
