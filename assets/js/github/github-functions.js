@@ -1,5 +1,5 @@
 var saveMarkup = function() {
-	var saveContent = $("#content").val();
+	var saveContent = $("#target-editor").val();
 	var saveComment = $("#saveComment").val();
 	console.log(saveComment);
 	var usernameField = "Maltretieren";
@@ -17,7 +17,7 @@ var saveMarkup = function() {
 };
 
 var getMarkup = function() {
-    $("#content").val("");
+    $("#target-editor").val("");
 	var usernameField = "Maltretieren";
 	var passwordField = $("#password").val();
 	var github = new Github({
@@ -31,7 +31,7 @@ var getMarkup = function() {
 		if(err) {
 			console.log("Error, maybe too many unothorized requests... "+err);
 		}
-        $("#content").val(contents);
+        $("#target-editor").val(contents);
     });
 };
 
