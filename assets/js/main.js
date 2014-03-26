@@ -12,7 +12,7 @@
 		// NOTE: We are storing a reference to the QUEUE so that
 		// we can refer to it later in the code.
 		var queue = $LAB
-		.script( "http://code.jquery.com/jquery-2.1.0.min.js" )
+		.script( "/assets/js/jquery/jquery-2.1.0.min.js" )
 		.wait()
         .script( "/assets/js/list.js" )
 		.script( "/assets/js/mustache.js" )
@@ -23,11 +23,23 @@
 		.wait()
 		.script( "/assets/js/github/github.js" )
 		.wait()
-		.script( "/assets/js/github/github-functions.js" )
+		.script( "/assets/js/bootstrapMarkdown/libs/to-markdown.js" )
+		.script( "/assets/js/bootstrapMarkdown/libs/markdown.js" )
+		.wait()
 		.script( "/assets/js/bootstrapMarkdown/js/bootstrap-markdown.js" )
+		.wait()
+		.script( "/assets/js/github/github-functions.js" )
+		.wait()
+		.script( "/assets/js/list.js" )
+		.wait()
 		.script( "/assets/js/form.js" )
+<<<<<<< HEAD
         .script( "/assets/js/keenio.js" )
 
+=======
+		.wait()
+		.script( "/assets/js/keenio.js" )
+>>>>>>> FETCH_HEAD
     }
 
     // loading code borrowed directly from LABjs itself

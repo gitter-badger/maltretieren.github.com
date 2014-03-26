@@ -22,6 +22,7 @@ Keen.configure({
     readKey: "fca64cb411fe523d053f2d9b1d159011135be6ce55da682f1ad8d6b1d4f629b84dd564edb1c0d7a0d7575ebaaa79b55daa075f7c866d7430ace403bab51b7513aa41b30ce443f9d736d45d33c78a0b44420c2ecd35223b76d67af37df1d0cc52bf67e73cb32d949eb58cb5814e7e5e6a"    // required for doing analysis
     });
 
+// send a new rating
 var accessoireRating = function (id, rating) {
     // create an event as a JS object
     var purchase = {
@@ -33,6 +34,7 @@ var accessoireRating = function (id, rating) {
     Keen.addEvent("accessoires", purchase);
 };
 
+// send a new comment
 var commentForm = function (id, data) {
     Keen.addEvent("comments", data);
 }

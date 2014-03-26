@@ -13,6 +13,23 @@
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<!-- script loader and init functions -->
+	<script src="/assets/js/main.js"></script>
+	
+	{% if site.enforce_ssl %}´
+		<!--
+		Redirect users to the https version of the website.
+		But: only check when on the production domain, as set in _config.yml.
+		Thanks to konklone on https://github.com/jekyll/jekyll-redirect-from/issues/18
+		-->
+
+		<script type="text/javascript">
+		  var enforce = "{{ site.enforce_ssl }}";
+		  if ((enforce == window.location.host) && (window.location.protocol != "https:"))
+			window.location = window.location.toString().replace(/^http:/, "https:");
+		</script>
+    {% endif %}
+	
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -69,9 +86,11 @@
       </footer>
 
     </div>
-    {% include JB/analytics %}
 
+<<<<<<< HEAD
     <!-- Path for GitHub edit -->
     <div id="path" style="visibility:hidden">{{page.path}}</div>
+=======
+>>>>>>> FETCH_HEAD
   </body>
 </html>
