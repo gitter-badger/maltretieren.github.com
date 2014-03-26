@@ -55,5 +55,6 @@ var urlParams;
 	var editEnabled = urlParams['edit'];
 	if(typeof editEnabled != 'undefined') {
 		var editorContent = getMarkup();
+		$("#content").markdown({autofocus:false,savable:true})
 	}
 })();
