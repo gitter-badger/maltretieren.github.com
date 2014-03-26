@@ -10,7 +10,13 @@
     <div class="content">
       {{ content }}
     </div>
-
+	<div>
+		<!-- edit a page (activated if a ?edit=true was added to the address. Page path is the url to the post of the github repository -->
+		<div id="path" style="display:none">{{page.path}}</div>
+		<textarea rows="30" data-provide="markdown" data-iconlibrary="fa" data-savable="true" style="width:100%;display:none;" id="content"></textarea>
+	</div>
+	
+	
   {% unless page.categories == empty %}
     <ul class="tag_box inline">
       <li><i class="icon-folder-open"></i></li>

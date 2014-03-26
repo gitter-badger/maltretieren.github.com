@@ -73,12 +73,6 @@
       <div class="content">
         {{ content }}
       </div>
-	  
-	  	<!-- for edits to know the path in the repository -->
-		<div id="path" style="display:none">{{page.path}}</div>
-	  <textarea rows="30" data-provide="markdown" data-iconlibrary="fa" data-savable="true" style="width:100%" id="content">
-</textarea>
-	  
         {% include widgets/comments/recentComments.html %}
         {% include widgets/comments/form.html %}
       <hr>
