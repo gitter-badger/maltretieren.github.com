@@ -33,13 +33,8 @@
 		.script( "/assets/js/list.js" )
 		.wait()
 		.script( "/assets/js/form.js" )
-<<<<<<< HEAD
-        .script( "/assets/js/keenio.js" )
-
-=======
 		.wait()
 		.script( "/assets/js/keenio.js" )
->>>>>>> FETCH_HEAD
     }
 
     // loading code borrowed directly from LABjs itself
