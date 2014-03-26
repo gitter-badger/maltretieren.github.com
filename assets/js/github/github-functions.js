@@ -12,7 +12,8 @@ var saveMarkup = function() {
 	var path = $('#path').text();
 	var repo = github.getRepo("Maltretieren", "maltretieren.github.com");
 	repo.write('master', path, saveContent, saveComment, function(callback) {
-		alert("saved!");
+        var url = $('#url').text()+"?success=true";
+        window.location = url;
 	});
 };
 

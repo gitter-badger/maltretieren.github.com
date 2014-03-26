@@ -1,5 +1,7 @@
 <div class="page-header">
-  <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
+  <h1 style="float:left">{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
+  <div style="padding-top:20px;text-align:right"><a href="?edit=true" class="btn btn-warning btn-middle">Edit <i class="icon-white icon-pencil"></i></a></div>
+  <div style="clear:both;"></div>
 </div>
 
 <div class="row-fluid post-full">
@@ -15,6 +17,7 @@
 		Page path is the url to the post of the github repository -->
 
 		<div id="path" style="display:none">{{page.path}}</div>
+        <div id="url" style="display:none">{{page.url}}</div>
 		<textarea id="target-editor" style="display:none"></textarea>
 	</div>
 	
