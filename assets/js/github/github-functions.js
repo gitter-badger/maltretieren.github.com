@@ -59,5 +59,6 @@ var urlParams;
 			savable:true,
 			data-iconlibrary:"fa"
 		});
+		$('#target-editor').show();
 	}
 })();
