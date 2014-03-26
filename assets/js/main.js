@@ -24,7 +24,12 @@
 		.wait()
 		.script( "/assets/js/github/github-functions.js" )
 		.script( "/assets/js/bootstrapMarkdown/js/bootstrap-markdown.js" )
+		.wait()
+		.script( "/assets/js/list.js" )
+		.wait()
 		.script( "/assets/js/form.js" )
+		.wait
+		.script( "/assets/js/keenio.js" )
     }
 
     // loading code borrowed directly from LABjs itself
