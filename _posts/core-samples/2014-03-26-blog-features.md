@@ -14,7 +14,7 @@ published: true
 
 {% include JB/setup %}
 
-- Completly OpenSource
+- Completly OpenSourcee
 - GitHub Pages compatible
 - HTTPS always
 - edit feature (append ?edit=true to the url and see, edit, provide password and save)
