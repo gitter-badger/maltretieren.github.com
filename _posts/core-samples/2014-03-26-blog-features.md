@@ -16,3 +16,4 @@ published: true
 - interactive tables build out of blog posts - beautiful, searchable, sortable
 - comments via keen.io
 - ratings via keen.io
+- image captions
