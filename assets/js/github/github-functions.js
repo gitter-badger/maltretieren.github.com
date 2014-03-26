@@ -49,9 +49,10 @@ var urlParams;
 })();
 
 (function() {
-	getMarkup();
 	var editEnabled = urlParams['edit'];
+	console.log(editEnabled);
 	if(editEnabled != 'undefined') {
+		var contents = 	getMarkup();
 		$("#content").val(contents);
 	}
 })();
