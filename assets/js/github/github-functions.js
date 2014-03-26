@@ -33,6 +33,7 @@ var getMarkup = function() {
 			console.log("Error, maybe too many unothorized requests... "+err);
 		}
         editorContent = contents;
+		return editorContent;
     });
 	return editorContent;
 };
