@@ -28,7 +28,7 @@
 		.script( "/assets/js/list.js" )
 		.wait()
 		.script( "/assets/js/form.js" )
-		.wait
+		.wait()
 		.script( "/assets/js/keenio.js" )
     }
 
