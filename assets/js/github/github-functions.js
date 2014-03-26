@@ -57,6 +57,6 @@ var urlParams;
 		var editorContent = getMarkup();
 		$('#target-editor').markdown({
 			savable:true
-		};
+		});
 	}
 })();
