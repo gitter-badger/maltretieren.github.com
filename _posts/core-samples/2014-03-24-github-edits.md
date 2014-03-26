@@ -20,5 +20,5 @@ The API queries are limited to somehow 60 requests/hour for unautorized requests
 To enable the edit function you need to append ?edit=true to the address of the post.
 
 <div id="path" style="visibility:hidden">{{page.path}}</div>
-<textarea id="content" style="visibility:hidden">
+<textarea id="content" style="display:none">
 </textarea>
