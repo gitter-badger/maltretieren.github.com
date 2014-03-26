@@ -35,6 +35,9 @@ var getMarkup = function() {
     });
 };
 
+/**
+	This is a helper function
+**/
 var urlParams;
 (window.onpopstate = function () {
     var match,
@@ -50,7 +53,6 @@ var urlParams;
 
 (function() {
 	var editEnabled = urlParams['edit'];
-	console.log(editEnabled);
 	if(typeof editEnabled != 'undefined') {
 		var contents = 	getMarkup();
 		$("#content").val(contents);
