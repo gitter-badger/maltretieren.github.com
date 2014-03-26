@@ -18,6 +18,7 @@ var saveMarkup = function() {
 
 var getMarkup = function() {
     $("#content").val("");
+	var editorContent = "";
 	var usernameField = "Maltretieren";
 	var passwordField = $("#password").val();
 	var github = new Github({
@@ -31,8 +32,9 @@ var getMarkup = function() {
 		if(err) {
 			console.log("Error, maybe too many unothorized requests... "+err);
 		}
-        return contents;
+        editorContent = contents;
     });
+	return editorContent;
 };
 
 /**
@@ -54,8 +56,7 @@ var urlParams;
 (function() {
 	var editEnabled = urlParams['edit'];
 	if(typeof editEnabled != 'undefined') {
-		var contents = 	getMarkup();
-		console.log(contents);
-		$("#content").val(contents);
+		var editorContent = getMarkup();
+		$("#content").val(editorContent);
 	}
 })();
