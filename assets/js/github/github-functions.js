@@ -28,8 +28,10 @@ var getMarkup = function() {
     var path = $('#path').text();
     var repo = github.getRepo("Maltretieren", "maltretieren.github.com");
     repo.read("master", path, function(err, contents) {
-		console.log("Error, maybe too many unothorized requests... "+err);
-        $("#content").val(contents);
+		if(err) {
+			console.log("Error, maybe too many unothorized requests... "+err);
+		}
+        return contents;
     });
 };
 
@@ -48,5 +50,8 @@ var urlParams;
 
 (function() {
 	getMarkup();
-	alert(urlParams['edit']);
+	var editEnabled = urlParams['edit'];
+	if(editEnabled != 'undefined') {
+		$("#content").val(contents);
+	}
 })();
