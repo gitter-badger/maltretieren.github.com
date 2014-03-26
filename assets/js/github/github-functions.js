@@ -56,7 +56,8 @@ var urlParams;
 	if(typeof editEnabled != 'undefined') {
 		var editorContent = getMarkup();
 		$('#target-editor').markdown({
-			savable:true
+			savable:true,
+			data-iconlibrary:"fa"
 		});
 	}
 })();
