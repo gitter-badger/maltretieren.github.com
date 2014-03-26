@@ -73,6 +73,12 @@
       <div class="content">
         {{ content }}
       </div>
+	  
+	  	<!-- for edits to know the path in the repository -->
+		<div id="path" style="display:none">{{page.path}}</div>
+	  <textarea id="content" style="display:none"></textarea>
+	  
+	  
         {% include widgets/comments/recentComments.html %}
         {% include widgets/comments/form.html %}
       <hr>
@@ -81,7 +87,6 @@
       </footer>
 
     </div>
-	<!-- for edits to know the path in the repository -->
-	<div id="path" style="display:none">{{page.path}}</div>
+
   </body>
 </html>
