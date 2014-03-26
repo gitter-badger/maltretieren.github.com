@@ -5,6 +5,8 @@ permalink: /:categories/:year/:month/:day/:title
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 pygments: true
 
+
+
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
@@ -25,7 +27,10 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://username.github.io
+production_url : https://maltretieren.github.io
+# redirect users to the https version of the website. Do not include protocol, just the domain. 
+# but: only check when on the production domain, as set in _config.yml.
+enforce_ssl: maltretieren.github.io
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
