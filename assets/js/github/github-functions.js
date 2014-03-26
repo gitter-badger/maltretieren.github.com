@@ -57,7 +57,7 @@ var urlParams;
 		var editorContent = getMarkup();
 		$('#target-editor').markdown({
 			savable:true,
-			'data-iconlibrary':"fa"
+			iconlibrary:"fa"
 		});
 		$('#target-editor').show();
 	}
