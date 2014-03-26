@@ -4,8 +4,11 @@ categories:
   - frontpage
 tagline: with github.js
 tags: 
-  - development
-  - test
+  - developmentdevelopment
+  - jekyll
+  - edit
+  - github
+
 published: true
 ---
 
