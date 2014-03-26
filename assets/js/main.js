@@ -24,6 +24,8 @@
 		.wait()
 		.script( "/assets/js/github/github-functions.js" )
 		.script( "/assets/js/bootstrapMarkdown/js/bootstrap-markdown.js" )
+		.script( "/assets/js/bootstrapMarkdown/libs/to-markdown.js" )
+		.script( "/assets/js/bootstrapMarkdown/libs/markdown.js" )
 		.wait()
 		.script( "/assets/js/list.js" )
 		.wait()
