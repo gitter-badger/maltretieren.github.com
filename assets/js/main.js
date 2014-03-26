@@ -1,3 +1,14 @@
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+
 // HOWTO: load LABjs itself dynamically!
 // inline this code in your page to load LABjs itself dynamically, if you're so inclined.
 
@@ -12,7 +23,7 @@
 		// NOTE: We are storing a reference to the QUEUE so that
 		// we can refer to it later in the code.
 		var queue = $LAB
-		.script( "http://code.jquery.com/jquery-2.1.0.min.js" )
+		.script( "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" )
 		.wait()
 		.script( "/assets/js/mustache.js" )
 		.script( "/assets/js/chevron.js" )
@@ -25,8 +36,6 @@
 		.script( "/assets/js/github/github-functions.js" )
 		.script( "/assets/js/bootstrapMarkdown/js/bootstrap-markdown.js" )
 		.script( "/assets/js/form.js" )
-        .script( "/assets/js/keenio.js" )
-        .script( "/assets/js/list.js" )
     }
 
     // loading code borrowed directly from LABjs itself

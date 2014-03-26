@@ -1,1 +1,0 @@
-window.location = window.location.toString().replace(/^http:/, "https:");
