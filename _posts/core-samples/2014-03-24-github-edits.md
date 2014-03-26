@@ -17,6 +17,8 @@ The API queries are limited to somehow 60 requests/hour for unautorized requests
 
 > API rate limit exceeded for your IP. (But here's the good news: Authenticated requests get a higher rate limit. [Check out the documentation for more details](http://developer.github.com/v3/#rate-limiting).)
 
+To enable the edit function you need to append ?edit=true to the address of the post.
+
 <div id="path" style="visibility:hidden">{{page.path}}</div>
 <textarea rows="30" data-provide="markdown" data-iconlibrary="fa" data-savable="true" style="width:100%" id="content">
 </textarea>
