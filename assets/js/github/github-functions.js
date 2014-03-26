@@ -54,7 +54,6 @@ var urlParams;
 (function() {
 	var editEnabled = urlParams['edit'];
 	if(typeof editEnabled != 'undefined') {
-		$("#content").markdown({'data-iconlibrary':'fa','savable':true})
 		var editorContent = getMarkup();
 	}
 })();
