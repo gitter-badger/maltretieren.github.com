@@ -14,6 +14,7 @@
 		var queue = $LAB
 		.script( "http://code.jquery.com/jquery-2.1.0.min.js" )
 		.wait()
+        .script( "/assets/js/list.js" )
 		.script( "/assets/js/mustache.js" )
 		.script( "/assets/js/chevron.js" )
 		.wait()
@@ -26,7 +27,7 @@
 		.script( "/assets/js/bootstrapMarkdown/js/bootstrap-markdown.js" )
 		.script( "/assets/js/form.js" )
         .script( "/assets/js/keenio.js" )
-        .script( "/assets/js/list.js" )
+
     }
 
     // loading code borrowed directly from LABjs itself

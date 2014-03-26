@@ -35,4 +35,10 @@
         });
     }
 
+    var options = {
+        valueNames: ['date', 'title', 'tags']
+    };
+
+    var entryList = new List('entry-list', options);
+
     getComments();
