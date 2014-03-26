@@ -19,3 +19,7 @@ published: true
 - comments via keen.io
 - ratings via keen.io
 - image captions
+
+# Planned Improvements
+- Add new posts
+- Cleanup
