@@ -1,7 +1,7 @@
 <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
@@ -10,71 +10,72 @@
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- script loader and init functions -->
-	<script src="/assets/js/main.js"></script>
-	
-	{% if site.enforce_ssl %}
-		<!--
-		Redirect users to the https version of the website.
-		But: only check when on the production domain, as set in _config.yml.
-		Thanks to konklone on https://github.com/jekyll/jekyll-redirect-from/issues/18
-		-->
+    <!-- script loader and init functions -->
+    <script src="/assets/js/main.js"></script>
 
-		<script type="text/javascript">
-		  var enforce = "{{ site.enforce_ssl }}";
-		  if ((enforce == window.location.host) && (window.location.protocol != "https:"))
-			window.location = window.location.toString().replace(/^http:/, "https:");
-		</script>
+    {% if site.enforce_ssl %}
+    <!--
+    Redirect users to the https version of the website.
+    But: only check when on the production domain, as set in _config.yml.
+    Thanks to konklone on https://github.com/jekyll/jekyll-redirect-from/issues/18
+    -->
+
+    <script type="text/javascript">
+        var enforce = "{{ site.enforce_ssl }}";
+        if ((enforce == window.location.host) && (window.location.protocol != "https:"))
+            window.location = window.location.toString().replace(/^http:/, "https:");
+    </script>
     {% endif %}
 
     <!-- Le styles -->
     <link href="/assets/themes/bootstrap-3.1.1/css/lumen/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/themes/syntax/style-addition.css?body=1" rel="stylesheet" type="text/css" media="all">
     <link href="/assets/themes/syntax/syntax.css" rel="stylesheet" type="text/css" media="all">
-	<link href="/assets/js/bootstrapMarkdown/css/bootstrap-markdown.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/js/bootstrapMarkdown/css/bootstrap-markdown.min.css" rel="stylesheet" type="text/css" media="all">
 
 
     <!-- Le fav and touch icons -->
-  <!-- Update these with your own images
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-  -->
+    <!-- Update these with your own images
+      <link rel="shortcut icon" href="images/favicon.ico">
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    -->
 
     <!-- atom & rss feed -->
     <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
     <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
-  </head>
+</head>
 
-  <body>
-  <!-- Loading scripts -->
-  <div class="navbar navbar-default ">
+<body>
+<!-- Loading scripts -->
+<div class="navbar navbar-default ">
+    <div class="container col-lg-7 col-centered" style="float:none">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav">
+                {% assign pages_list = site.pages %}
+                {% assign group = 'navigation' %}
+                {% include JB/pages_list %}
+            </ul>
+            <form class="navbar-form navbar-right" style="padding-right:0px">
+                <input class="form-control col-lg-8" style="padding-right:0px" placeholder="Search" type="text">
+            </form>
+        </div>
+    </div>
+</div>
+<div class="container col-lg-7 col-centered" style="float:none">
+{{ content }}
 
-      <div class="container col-lg-7 col-centered" style="float:none">
-          <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
-      </div>
-      <div class="navbar-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-nav">
-              {% assign pages_list = site.pages %}
-              {% assign group = 'navigation' %}
-              {% include JB/pages_list %}
-          </ul>
-          <form class="navbar-form navbar-right">
-              <input class="form-control col-lg-8" placeholder="Search" type="text">
-          </form>
-      </div>
-      </div>
-  </div>
-  {{ content }}
-
-  {% include widgets/comments/recentComments.html %}
-  {% include widgets/comments/form.html %}
-  </body>
+{% include widgets/comments/recentComments.html %}
+{% include widgets/comments/form.html %}
+</div>
+</body>
 </html>
