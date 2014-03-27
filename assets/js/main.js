@@ -34,9 +34,10 @@
 		.wait()
 		.script( "/assets/js/list.js" )
 		.wait()
+        .script( "/assets/js/keenio.js" )
+        .wait()
 		.script( "/assets/js/form.js" )
-		.wait()
-		.script( "/assets/js/keenio.js" )
+
     }
 
     // loading code borrowed directly from LABjs itself
