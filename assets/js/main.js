@@ -16,6 +16,8 @@
         .wait()
         .script( "/assets/themes/bootstrap-3.1.1/js/bootstrap.min.js" )
         .wait()
+        .wait()
+        .script( "/assets/js/keenio.js" )
         .script( "/assets/js/list.js" )
 		.script( "/assets/js/mustache.js" )
 		.script( "/assets/js/chevron.js" )
@@ -33,8 +35,6 @@
 		.script( "/assets/js/github/github-functions.js" )
 		.wait()
 		.script( "/assets/js/list.js" )
-		.wait()
-        .script( "/assets/js/keenio.js" )
         .wait()
 		.script( "/assets/js/form.js" )
 
