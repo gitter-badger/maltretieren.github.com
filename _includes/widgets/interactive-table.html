@@ -19,7 +19,7 @@
             <tbody class="list">
             {% for post in site.tags.accessoire %}
             <tr>
-                <td class="image"><img src="{{ post.preview }}"></td>
+                <td class="image"><img width="100px" src="{{ post.preview }}"></td>
                 <td class="product"><a href="{{ post.url}}">{{ post.product }}</a></td>
                 <td class="description">{{ post.description}}</td>
                 <td class="price">{{ post.price }}</td>
