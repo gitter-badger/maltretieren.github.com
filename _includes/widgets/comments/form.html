@@ -2,34 +2,25 @@
 
 </div>
 <div id="page-wrap" class="clear-block">
-<form id="comment" class="well" >
-    <div class="row">
-        <div class="span3">
-            <label>First Name</label>
-            <input type="text" class="span3" placeholder="Your First Name" name="firstName">
-            <label>Last Name</label>
-            <input type="text" class="span3" placeholder="Your Last Name" name="lastName">
-            <label>Email Address</label>
-            <input type="text" class="span3" placeholder="Your email address" name="mail">
-            <label>Subject
-                <select id="subject" name="subject" class="span3">
-                    <option value="na" selected="">Choose One:</option>
-                    <option value="service">General Customer Service</option>
-                    <option value="suggestions">Suggestions</option>
-                    <option value="product">Product Support</option>
-                </select>
-            </label>
-            <input type="hidden" name="pageTitle" value="{{page.title}}">
-        </div>
-        <div class="span3">
-            <label>Message</label>
-            <textarea name="message" id="message" class="input-xlarge span4" rows="9"></textarea>
-
-        </div>
-
+    <div class="col-lg-* well">
+        <form id="comment" class="form-horizontal" >
+            <fieldset>
+                <legend>Comment</legend>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label" for="name">Name</label>
+                    <div class="col-lg-3">
+                        <input class="form-control" id="name" placeholder="Your Name" type="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label" for="name">Message</label>
+                    <div class="col-lg-3">
+                        <input type="hidden" name="pageTitle" value="{{page.title}}">
+                        <label for="textArea" class="form-control">Textarea</label>
+                    </div>
+                   <button type="submit" class="btn btn-primary pull-right">Send</button>
+                </div>
+            </fieldset>
+        </form>
     </div>
-<div class="row">
-    <button type="submit" class="btn btn-primary pull-right">Send</button>
-</div>
-</form>
 </div>

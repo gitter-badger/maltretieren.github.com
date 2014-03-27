@@ -6,10 +6,10 @@ uuid: frontpage
 ---
 {% include JB/setup %}
 
-<div class="lead">
+<p class="lead">
 Hey!!! Welcome to my kind of "techblog" about mostly Raspberry Pi topics and also some technology I find everyday.
 Still work in progress and propably ever will be :). Hopefully someone finds something usefull...
-</div>
+</p>
 <hr>
 <div id="entry-list">
 
@@ -29,7 +29,7 @@ Still work in progress and propably ever will be :). Hopefully someone finds som
             <tbody class="list">
             {% for post in site.categories.frontpage %}
             <tr>
-                <td class="date">{{ post.date | date_to_string }} <img src="{{post.preview}}"</td>
+                <td class="date">{{ post.date | date_to_string }} {% if post.preview %}<img width="150px" src="{{post.preview}}"{% endif %}</td>
                 <td class="title"><a href="{{ post.url}}">{{ post.title }}</a></td>
                 <td class="tags">
                     {% for tag in post.tags %}
@@ -43,9 +43,6 @@ Still work in progress and propably ever will be :). Hopefully someone finds som
     </div>
 
 </div>
-<<<<<<< HEAD
-=======
-
 <script type="text/javascript">
     var options = {
         valueNames: ['date', 'title', 'tags']
@@ -53,4 +50,3 @@ Still work in progress and propably ever will be :). Hopefully someone finds som
 
     var entryList = new List('entry-list', options);
 </script>
->>>>>>> FETCH_HEAD
