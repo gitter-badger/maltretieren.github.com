@@ -22,7 +22,14 @@
         var success = function (data) {
             var renderData = data.result.slice(5, data.length);
             $.get('/assets/templates/comments.mustache', function(template) {
-                var output = Mustache.render(template, data);
+                // Filter array to match current page title
+                var title = document.title;
+                // n is the current element, i the index
+                var resultSet = $.grep(data.result, function (element) {
+                    return (element.pageTitle === title);
+                });
+                var result = {result:resultSet}
+                var output = Mustache.render(template, result);
                 $('#comments').append(output);
             });
                 //$("#comments").append("<div class='comment'><div class='commentheader'><div class='commentgravatar'>" + '<img src="" alt="" width="20" height="20">' + "</div><a class='commentuser' href=''></a><a class='commentdate' href=''></a></div><div class='commentbody'>" + message + "</div></div>");

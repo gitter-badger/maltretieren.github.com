@@ -1,40 +1,29 @@
+<div class="row">
+    <div class="panel panel-default widget" style="margin-left:13px;margin-right:13px">
+        <div class="panel-heading">
+            <span class="glyphicon glyphicon-comment"></span>
+            <h3 class="panel-title">Recent Comments</h3>
+            <span class="label label-info">{{result.length}}</span>
+        </div>
+        <div class="panel-body">
+            <ul class="list-group">
+                {{#result}}
+                <li class="list-group-item">
+                    <div class="row">
 
-<div id="page-wrap" class="clear-block">
-    <div class="row" style="margin-left:0px">
-        <div class="panel panel-default widget">
-            <div class="panel-heading">
-                <span class="glyphicon glyphicon-comment"></span>
-                <h3 class="panel-title">
-                    Recent Comments</h3>
-                <span class="label label-info" style="margin-top:10px">{{result.length}}</span>
-            </div>
-            <div class="panel-body">
-                <ul class="list-group" id="recentCommentsEntries">
-
-                    {{#result}}
-                        <li class="list-group-item">
-                            <div class="row" style="margin-top:10px; margin-bottom:10px">
-                                <div class="span2">
-                                    <a href="http://www.jquery2dotnet.com/2013/10/google-style-login-page-desing-usign.html">
-                                        {{pageTitle}}</a>
-                                    <div class="mic-info">
-                                        By: <a href="#">{{firstName}} {{lastName}}</a> {{keen.timestamp}}
-                                    </div>
-                                </div>
-                                <div class="span2">
-                                    <div class="comment-text">
-                                        {{message}}
-                                    </div>
-                                    <div class="action">
-                                    </div>
+                        <div class="col-xs-10 col-md-11">
+                            <div>
+                                <a href="{{pageUrl}}">{{pageTitle}}</a>
+                                <div class="mic-info"> By: <a href="mailto:{{mail}}">{{name}}</a> on {{keen.timestamp}}
                                 </div>
                             </div>
-                        </li>
-                    {{/result}}
-                </ul>
-
-            </div>
+                            <div class="comment-text">{{message}}</div>
+                        </div>
+                    </div>
+                </li>
+                {{/result}}
+            </ul>
+            <a href="#" class="btn btn-primary btn-sm btn-block" role="button"><span class="glyphicon glyphicon-refresh"></span> More</a>
         </div>
     </div>
 </div>
-

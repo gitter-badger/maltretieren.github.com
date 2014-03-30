@@ -10,21 +10,18 @@
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- script loader and init functions -->
-    <script src="/assets/js/main.js"></script>
-
     {% if site.enforce_ssl %}
-    <!--
-    Redirect users to the https version of the website.
-    But: only check when on the production domain, as set in _config.yml.
-    Thanks to konklone on https://github.com/jekyll/jekyll-redirect-from/issues/18
-    -->
+        <!--
+        Redirect users to the https version of the website.
+        But: only check when on the production domain, as set in _config.yml.
+        Thanks to konklone on https://github.com/jekyll/jekyll-redirect-from/issues/18
+        -->
 
-    <script type="text/javascript">
-        var enforce = "{{ site.enforce_ssl }}";
-        if ((enforce == window.location.host) && (window.location.protocol != "https:"))
-            window.location = window.location.toString().replace(/^http:/, "https:");
-    </script>
+        <script type="text/javascript">
+            var enforce = "{{ site.enforce_ssl }}";
+            if ((enforce == window.location.host) && (window.location.protocol != "https:"))
+                window.location = window.location.toString().replace(/^http:/, "https:");
+        </script>
     {% endif %}
 
     <!-- Le styles -->
@@ -47,7 +44,7 @@
     <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
 </head>
 
-<body>
+<body style="background-image: url(/assets/themes/patterns/paper.png); background-position: initial initial; background-repeat: initial initial;">
 <!-- Loading scripts -->
 <div class="navbar navbar-default ">
     <div class="container col-lg-7 col-centered" style="float:none">
@@ -77,5 +74,7 @@
     {% include widgets/comments/recentComments.html %}
     {% include widgets/comments/form.html %}
 </div>
+<!-- script loader and init functions -->
+<script src="/assets/js/main.js"></script>
 </body>
 </html>
