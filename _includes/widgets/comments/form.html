@@ -1,15 +1,12 @@
+<legend>Drop me a line!</legend>
 <div class="row">
-    <div class="col-sm-2">
-        <legend>Feedback</legend>
-    </div>
-
-    <div class="col-sm-10 contact-form">
+    <div class="col-sm-12 contact-form">
         <form id="comment" class="form" role="form">
             <div class="row">
                 <div class="col-xs-6 col-md-6 form-group">
                     <div class="input-group">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                        <input class="form-control" id="name" name="name" placeholder="Your Name" type="text" required autofocus />
+                        <input class="form-control" id="name" name="name" placeholder="Your Name" type="text" required />
                     </div>
                 </div>
                 <div class="col-xs-6 col-md-6 form-group">
@@ -21,7 +18,7 @@
             </div>
             <div class="input-group" >
                 <span class="input-group-addon" style="vertical-align: top"><span class="glyphicon glyphicon-comment" style="margin-top:3px"></span></span>
-                <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5"></textarea>
+                <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5" required></textarea>
                 <input type="hidden" name="pageTitle" value="{{page.title}}">
                 <input type="hidden" name="pageUrl" value="{{page.url}}">
             </div>

@@ -263,7 +263,7 @@
           handler.push(saveHandler)
           callback.push(options.onSave)
 
-          editorFooter.append('Password: <input type="password" class="form-control" id="password" placeholder="Password" /> Comment: <input type="text" class="form-control" id="saveComment" placeholder="Description" /><button class="btn btn-success" data-provider="'
+          editorFooter.append('<div class="input-group" ><label for="password" class="col-md-2">Password:</label><input type="password" class="col-md-3 form-control" id="password" placeholder="Password" /></div><div class="input-group" ><label for="saveComment">Comment:</label><input type="text" class="form-control" id="saveComment" placeholder="Description" /></div><button class="btn btn-success" data-provider="'
                               +ns
                               +'" data-handler="'
                               +saveHandler

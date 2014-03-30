@@ -25,9 +25,11 @@
                 // Filter array to match current page title
                 var title = document.title;
                 // n is the current element, i the index
-                var resultSet = $.grep(data.result, function (element) {
-                    return (element.pageTitle === title);
-                });
+                if(document.URL.indexOf("index.html") != -1) {
+                    var resultSet = $.grep(data.result, function (element) {
+                        return (element.pageTitle === title);
+                    });
+                };
                 var result = {result:resultSet}
                 var output = Mustache.render(template, result);
                 $('#comments').append(output);
