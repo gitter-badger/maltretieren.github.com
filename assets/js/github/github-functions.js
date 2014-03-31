@@ -64,9 +64,11 @@ var urlParams;
 	}
 	
 	var oauthCode = urlParams['code'];
-	$.getJSON('http://maltretieren.herokuapp.com/authenticate/'+oauthCode, function(data) {
-		console.log(data.token);
-	});
+	if(typeof oauthCode != 'undefined') {
+		$.getJSON('http://maltretieren.herokuapp.com/authenticate/'+oauthCode, function(data) {
+			console.log(data.token);
+		});
+	}
 	
 	$('.oatutButton').click(function(e) {
 		e.preventDefault();
@@ -83,6 +85,6 @@ var urlParams;
 			jso_provider: "github",
 			jso_allowia: true
 		});
-	}
+	});
 	
 })();
