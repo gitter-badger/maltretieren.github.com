@@ -23,18 +23,23 @@ var getMarkup = function() {
 	var passwordField = $("#password").val();
 	
 	var oauthToken = localStorage.getItem("oauthToken");
-	console.log("oauthToken: "+oauthToken);
+	var github = null;
+	
 	if(oauthToken != "undefined" && oauthToken != null) {
 		console.log("oauthToken is available");
+		github = new Github({
+			token: oauthToken,
+			auth: "oauth"
+		});
 	} else {
 		console.log("oauthToken is not available or not valid");
+		github = new Github({
+			username: usernameField,
+			password: passwordField,
+			auth: "basic"
+		});
 	}
-	
-	var github = new Github({
-		username: usernameField,
-		password: passwordField,
-	  auth: "basic"
-	});
+		
     var path = $('#path').text();
     var repo = github.getRepo("Maltretieren", "maltretieren.github.com");
     repo.read("master", path, function(err, contents) {
