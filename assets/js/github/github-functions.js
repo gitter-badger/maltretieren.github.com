@@ -21,6 +21,14 @@ var getMarkup = function() {
     $("#target-editor").val("");
 	var usernameField = "Maltretieren";
 	var passwordField = $("#password").val();
+	
+	var oauthToken = localStorage.getItem("oauthToken");
+	if(typeof oauthCode != 'undefined') {
+		console.log("oauthToken is available");
+	} else {
+		console.log("oauthToken is not available");
+	}
+	
 	var github = new Github({
 		username: usernameField,
 		password: passwordField,
@@ -67,7 +75,7 @@ var urlParams;
 	if(typeof oauthCode != 'undefined') {
 		$.getJSON('http://maltretieren.herokuapp.com/authenticate/'+oauthCode, function(data) {
 			console.log("final github token:"+data.token);
-			localStorage.setItem("github_token", data.token);
+			localStorage.setItem("oauthToken", data.token);
 		});
 	}
 	
