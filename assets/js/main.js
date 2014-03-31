@@ -14,8 +14,8 @@
 		var queue = $LAB
         .script( "/assets/js/jquery/jquery-2.1.0.min.js" )
         .wait()
-        .script( "/assets/themes/bootstrap-3.1.1/js/bootstrap.min.js" )
-        .wait()
+
+
 		.script( "/assets/js/oauth/jso.js" )
         .wait()
         .script( "/assets/js/keenio.js" )
@@ -38,6 +38,22 @@
 		.script( "/assets/js/list.js" )
         .wait()
 		.script( "/assets/js/form.js" )
+        .wait()
+        .script( "/assets/js/angular/angular.js" )
+        .wait()
+        .script( "/assets/js/angular/angular-route.min.js" )
+        .wait()
+        .script( "/assets/themes/bootstrap-3.1.1/js/bootstrap.min.js" )
+            .wait()
+        .script("/assets/themes/bootstrap-3.1.1/js/ui-bootstrap-tpls-0.10.0.min.js")
+        .wait()
+        .script( "/assets/js/angular-app/routes.js" )
+        .script( "/assets/js/angular-app/services.js" )
+        .script( "/assets/js/angular-app/controllers.js" )
+        .script( "/assets/js/angular-app/filters.js" )
+        .script( "/assets/js/angular-app/directives.js" )
+        .wait()
+        .script( "/assets/js/angular-app/example.js" )
     }
 
     // loading code borrowed directly from LABjs itself
