@@ -31,7 +31,7 @@ production_url : https://maltretieren.github.io
 # redirect users to the https version of the website. Do not include protocol, just the domain. 
 # but: only check when on the production domain, as set in _config.yml.
 # If it is empty there is no redirect to https
-enforce_ssl: maltretieren.github.
+enforce_ssl: maltretieren.github.io
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
