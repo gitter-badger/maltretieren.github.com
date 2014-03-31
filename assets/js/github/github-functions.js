@@ -64,5 +64,8 @@ var urlParams;
 	}
 	
 	var oauthCode = urlParams['code'];
-	alert("oauthCode: "+oauthCode);
+	$.getJSON('http://maltretieren.herokuapp.com/authenticate/'+oauthCode, function(data) {
+		alert("oauthCode: "+oauthCode);
+		console.log(data.token);
+	});
 })();
