@@ -24,7 +24,7 @@ var getMarkup = function() {
 	
 	var oauthToken = localStorage.getItem("oauthToken");
 	console.log("oauthToken: "+oauthToken);
-	if(typeof oauthToken != 'undefined' && oauthToken != null) {
+	if(oauthToken != "undefined" && oauthToken != null) {
 		console.log("oauthToken is available");
 	} else {
 		console.log("oauthToken is not available or not valid");
