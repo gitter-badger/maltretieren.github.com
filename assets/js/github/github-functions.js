@@ -67,4 +67,22 @@ var urlParams;
 	$.getJSON('http://maltretieren.herokuapp.com/authenticate/'+oauthCode, function(data) {
 		console.log(data.token);
 	});
+	
+	$('.oatutButton').click(function(e) {
+		e.preventDefault();
+		
+		jso_configure({
+			"github": {
+				client_id: "e5923f3d7f1182fe886f",
+				redirect_uri: "http://maltretieren.github.com",
+				authorization: "https://github.com/login/oauth/authorize",
+			}
+		});
+	
+	 	$.oajax({
+			jso_provider: "github",
+			jso_allowia: true
+		});
+	}
+	
 })();
