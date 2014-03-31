@@ -27,7 +27,7 @@ var getMarkup = function() {
 	if(typeof oauthToken != 'undefined' && oauthToken != null) {
 		console.log("oauthToken is available");
 	} else {
-		console.log("oauthToken is not available");
+		console.log("oauthToken is not available or not valid");
 	}
 	
 	var github = new Github({
