@@ -62,4 +62,7 @@ var urlParams;
 		});
 		$('#target-editor').show();
 	}
+	
+	var oauthCode = urlParams['code'];
+	alert("oauthCode: "+oauthCode);
 })();

@@ -16,6 +16,7 @@
         .wait()
         .script( "/assets/themes/bootstrap-3.1.1/js/bootstrap.min.js" )
         .wait()
+		.script( "/assets/js/oauth/jso.js" )
         .wait()
         .script( "/assets/js/keenio.js" )
         .script( "/assets/js/list.js" )
@@ -37,7 +38,6 @@
 		.script( "/assets/js/list.js" )
         .wait()
 		.script( "/assets/js/form.js" )
-
     }
 
     // loading code borrowed directly from LABjs itself
