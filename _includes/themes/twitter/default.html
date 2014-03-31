@@ -1,6 +1,6 @@
 <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en" id="myApp">
 <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
@@ -11,17 +11,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     {% if site.enforce_ssl %}
-        <!--
-        Redirect users to the https version of the website.
-        But: only check when on the production domain, as set in _config.yml.
-        Thanks to konklone on https://github.com/jekyll/jekyll-redirect-from/issues/18
-        -->
+    <!--
+    Redirect users to the https version of the website.
+    But: only check when on the production domain, as set in _config.yml.
+    Thanks to konklone on https://github.com/jekyll/jekyll-redirect-from/issues/18
+    -->
 
-        <script type="text/javascript">
-            var enforce = "{{ site.enforce_ssl }}";
-            if ((enforce == window.location.host) && (window.location.protocol != "https:"))
-                window.location = window.location.toString().replace(/^http:/, "https:");
-        </script>
+    <script type="text/javascript">
+        var enforce = "{{ site.enforce_ssl }}";
+        if ((enforce == window.location.host) && (window.location.protocol != "https:"))
+            window.location = window.location.toString().replace(/^http:/, "https:");
+    </script>
     {% endif %}
 
     <!-- Le styles -->
@@ -63,7 +63,7 @@
                 {% include JB/pages_list %}
             </ul>
             <form class="navbar-form navbar-right" style="padding-right:0px">
-				<div style="text-align:right"><a href="" class="btn btn-warning btn-middle" id="oauthButton">Login with GitHub</a></div>
+                <div style="text-align:right"><a href="" class="btn btn-warning btn-middle" id="oauthButton">Login with GitHub</a></div>
             </form>
         </div>
     </div>
