@@ -66,7 +66,7 @@ var urlParams;
 	var oauthCode = urlParams['code'];
 	if(typeof oauthCode != 'undefined') {
 		$.getJSON('http://maltretieren.herokuapp.com/authenticate/'+oauthCode, function(data) {
-			console.log(data.token);
+			console.log("final github token:"+data.token);
 		});
 	}
 	
