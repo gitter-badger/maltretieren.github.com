@@ -70,7 +70,7 @@ var urlParams;
 		});
 	}
 	
-	$('.oauthButton').click(function(e) {
+	$('#oauthButton').click(function(e) {
 		e.preventDefault();
 		
 		jso_configure({
