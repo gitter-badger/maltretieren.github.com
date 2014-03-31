@@ -23,7 +23,7 @@ var getMarkup = function() {
 	var passwordField = $("#password").val();
 	
 	var oauthToken = localStorage.getItem("oauthToken");
-	if(typeof oauthCode != 'undefined') {
+	if(typeof oauthCode != 'undefined' || oauthCode != null) {
 		console.log("oauthToken is available");
 	} else {
 		console.log("oauthToken is not available");
