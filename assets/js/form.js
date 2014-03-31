@@ -22,15 +22,20 @@
         var success = function (data) {
             var renderData = data.result.slice(5, data.length);
             $.get('/assets/templates/comments.mustache', function(template) {
-                // Filter array to match current page title
+                // Filter array to match current page title, on frontpage show everything
                 var title = document.title;
                 // n is the current element, i the index
-                if(document.URL.indexOf("index.html") != -1) {
+                var result = data;
+
+                // a little hacky way to know if it is the frontpage
+                var parts = window.location.href.split("/");
+                if(parts.length != 4) {
                     var resultSet = $.grep(data.result, function (element) {
                         return (element.pageTitle === title);
                     });
+                    result = {result:resultSet};
                 };
-                var result = {result:resultSet}
+
                 var output = Mustache.render(template, result);
                 $('#comments').append(output);
             });
