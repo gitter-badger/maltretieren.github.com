@@ -16,7 +16,6 @@
 		.script( "/assets/js/oauth/jso.js" )
         .script( "/assets/js/keenio.js" )
         .script( "/assets/js/list.js" )
-		.script( "/assets/js/mustache.js" )
 		.script( "/assets/js/chevron.js" )
 		.script( "/assets/js/github/base64.js" )
 		.script( "/assets/js/github/underscore-min.js" )

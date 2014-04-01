@@ -7,7 +7,7 @@
         </div>
         <div class="panel-body">
             <ul class="list-group">
-                <li class="list-group-item" ng:repeat="comment in comments.entries | orderBy:'comment.keen.created_at':true">
+                <li class="list-group-item" ng:repeat="comment in comments.entries | limitTo:5 | orderBy:'comment.keen.created_at':true">
                     <div class="row">
 
                         <div class="col-xs-10 col-md-11">
