@@ -70,6 +70,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
         });
 
     $scope.quantity = 5;
+    $scope.sortorder = 'comments.keen.timestamp'
     $scope.more = function() {
         $scope.quantity += 5;
     }

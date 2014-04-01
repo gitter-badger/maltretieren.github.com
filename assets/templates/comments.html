@@ -8,7 +8,7 @@
         </div>
         <div class="panel-body">
             <ul class="list-group">
-                <li class="list-group-item" ng:repeat="comment in comments.entries | limitTo:quantity | orderBy:'comment.keen.created_at':true">
+                <li class="list-group-item" ng:repeat="comment in comments.entries | limitTo:quantity | orderBy:sortorder:true">
                     <div class="row">
 
                         <div class="col-xs-10 col-md-11">
@@ -17,7 +17,7 @@
                                 <div class="mic-info"> By: <a href="mailto:{{mail}}">{{comment.name}}</a> on {{comment.keen.timestamp}}
                                 </div>
                             </div>
-                            <div class="comment-text">{{commentmessage}}</div>
+                            <div class="comment-text">{{comment.message}}</div>
                         </div>
                     </div>
                 </li>
