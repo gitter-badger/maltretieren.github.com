@@ -1,4 +1,5 @@
 angular.module('plunker', ['ui.bootstrap']);
+
 var ModalDemoCtrl = function ($scope, $modal, $log) {
 
   $scope.items = ['item1', 'item2', 'item3'];
@@ -6,7 +7,7 @@ var ModalDemoCtrl = function ($scope, $modal, $log) {
   $scope.open = function () {
 
     var modalInstance = $modal.open({
-      templateUrl: '/assets/modal.html',
+      templateUrl: 'myModalContent.html',
       controller: ModalInstanceCtrl,
       resolve: {
         items: function () {
@@ -22,6 +23,9 @@ var ModalDemoCtrl = function ($scope, $modal, $log) {
     });
   };
 };
+
+// Please note that $modalInstance represents a modal window (instance) dependency.
+// It is not the same as the $modal service used above.
 
 var ModalInstanceCtrl = function ($scope, $modalInstance, items) {
 
