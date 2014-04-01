@@ -54,7 +54,7 @@ myApp.controller("CommentsCtrl",function ($scope) {
 	var success = function (data) {			
 		$scope.comments = {
 			entries: data.result;
-		};
+		}
 	};
 
 	$.ajax({
