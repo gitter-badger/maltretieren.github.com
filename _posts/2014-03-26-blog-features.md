@@ -16,6 +16,8 @@ published: true
 
 - Completly OpenSourcee
 - GitHub Pages compatible
+- Responsive Layout (based on bootswatch)
+- Interactive via AngularJS
 - HTTPS always
 - edit feature (append ?edit=true to the url and see, edit, provide password and save)
 - Interactive tables build out of blog posts - beautiful, searchable, sortable
