@@ -1,4 +1,4 @@
-angular.module('plunker', ['ui.bootstrap']);
+angular.module('myApp', ['ui.bootstrap']);
 
 var ModalDemoCtrl = function ($scope, $modal, $log) {
 
