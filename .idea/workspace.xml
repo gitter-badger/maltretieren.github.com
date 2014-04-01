@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/wikiquotes/wikiquote-api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/angular-app/controllers.js" afterPath="$PROJECT_DIR$/assets/js/angular-app/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/default.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/main.js" afterPath="$PROJECT_DIR$/assets/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/page.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/wikiquotes/wikiquote-api.js" afterPath="$PROJECT_DIR$/assets/js/wikiquotes/wikiquote-api.js" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,10 +72,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/angular-app/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="44" selection-start="2723" selection-end="2723" vertical-scroll-proportion="0.7082658" vertical-offset="928" max-vertical-offset="1590">
+            <state line="91" column="44" selection-start="2723" selection-end="2723" vertical-scroll-proportion="0.0" vertical-offset="928" max-vertical-offset="1590">
               <folding />
             </state>
           </provider>
@@ -105,10 +99,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wikiquote-api.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="wikiquote-api.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/wikiquotes/wikiquote-api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="211" column="5" selection-start="7119" selection-end="7119" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3255">
+            <state line="4" column="24" selection-start="77" selection-end="77" vertical-scroll-proportion="0.10135135" vertical-offset="0" max-vertical-offset="3255">
               <folding />
             </state>
           </provider>
@@ -153,12 +147,12 @@
         <option value="$PROJECT_DIR$/_includes/widgets/comments/recentComments.html" />
         <option value="$PROJECT_DIR$/assets/js/github/github-functions.js" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/assets/js/wikiquotes/wikiquote-api.js" />
         <option value="$PROJECT_DIR$/assets/js/main.js" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/page.html" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/assets/js/angular-app/controllers.js" />
+        <option value="$PROJECT_DIR$/assets/js/wikiquotes/wikiquote-api.js" />
       </list>
     </option>
   </component>
@@ -260,6 +254,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wikiquotes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -635,13 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/wikiquotes/wikiquote-api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="211" column="5" selection-start="7119" selection-end="7119" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3255">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="8" selection-start="1106" selection-end="1106" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1260">
@@ -695,7 +704,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/angular-app/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="44" selection-start="2723" selection-end="2723" vertical-scroll-proportion="0.7082658" vertical-offset="928" max-vertical-offset="1590">
+        <state line="91" column="44" selection-start="2723" selection-end="2723" vertical-scroll-proportion="0.0" vertical-offset="928" max-vertical-offset="1590">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/wikiquotes/wikiquote-api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="24" selection-start="77" selection-end="77" vertical-scroll-proportion="0.10135135" vertical-offset="0" max-vertical-offset="3255">
           <folding />
         </state>
       </provider>
