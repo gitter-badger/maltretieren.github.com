@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="panel panel-default widget" style="margin-left:13px;margin-right:13px">
+        <div class="panel-heading">
+            <span class="glyphicon glyphicon-comment"></span>
+            <h3 class="panel-title">Recent Comments</h3>
+            <span class="label label-info">{{result.length}}</span>
+        </div>
+        <div class="panel-body">
+            <ul class="list-group">
+                <li class="list-group-item" ng:repeat="comment in comments.entries | orderBy:'comment.keen.created_at':true">
+                    <div class="row">
+
+                        <div class="col-xs-10 col-md-11">
+                            <div>
+                                <a href="{{comment.pageUrl}}">{{comment.pageTitle}}</a>
+                                <div class="mic-info"> By: <a href="mailto:{{mail}}">{{comment.name}}</a> on {{comment.keen.timestamp}}
+                                </div>
+                            </div>
+                            <div class="comment-text">{{commentmessage}}</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <a href="#" class="btn btn-primary btn-sm btn-block" role="button"><span class="glyphicon glyphicon-refresh"></span> More</a>
+        </div>
+    </div>
+</div>
