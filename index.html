@@ -69,9 +69,9 @@ Still work in progress and propably ever will be :). Hopefully someone finds som
 
 </div>
 
-<div ng-controller="CommentsCtrl">
+<div ng-controller="CommentsCtrl" ng-model="CommentsCtrl">
 	<ul>
-		<li ng:repeat="item in items">{{ "{{ item "}}}}</li>
+		<li ng:repeat="comment in comments.entries">{{ "{{ comment.pageTitle "}}}}</li>
 	</ul>
 </div>
 
