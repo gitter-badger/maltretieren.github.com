@@ -36,7 +36,6 @@
         .script( "/assets/js/angular-app/controllers.js" )
         .script( "/assets/js/angular-app/filters.js" )
         .script( "/assets/js/angular-app/directives.js" )
-
         .script( "/assets/js/angular-app/example.js" )
             .wait(function(){
                 // this is needed for manual bootstrapping
