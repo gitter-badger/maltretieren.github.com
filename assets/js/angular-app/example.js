@@ -37,7 +37,6 @@ var ModalInstanceCtrl = function ($scope, $modalInstance, items) {
 
   $scope.ok = function () {
     $modalInstance.close($scope.selected.item);
-	$log.info("scope selected from modal:"+$scope.selected.item);
   };
 
   $scope.cancel = function () {
