@@ -28,10 +28,8 @@
 		.script( "/assets/js/list.js" )
 		.script( "/assets/js/form.js" )
         .script( "/assets/js/angular/angular.min.js" )
-            .script( "/assets/js/angular/angular-route.min.js" )
+        .script( "/assets/js/angular/angular-route.min.js" )
         .script( "/assets/js/angular-app/routes.js" )
-
-
         .script( "/assets/themes/bootstrap-3.1.1/js/bootstrap.min.js" )
         .script("/assets/themes/bootstrap-3.1.1/js/ui-bootstrap-tpls-0.10.0.min.js")
         .script( "/assets/js/angular-app/services.js" )
@@ -43,8 +41,7 @@
             .wait(function(){
                 // this is needed for manual bootstrapping
                 // angularjs, otherwise it's called wrong time
-                var root = document.getElementById('myApp')
-                angular.bootstrap(root ,['myApp']);
+                angular.bootstrap(document.body ,['myApp']);
             })
     }
 
