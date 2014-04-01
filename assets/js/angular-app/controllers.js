@@ -16,7 +16,7 @@ myApp.controller("ModalDemoCtrl",function ($scope, $modal, $log) {
 
     var modalInstance = $modal.open({
       templateUrl: 'modal.html',
-      controller: ModalInstanceCtrl,
+      controller: 'ModalInstanceCtrl',
       resolve: {
         items: function () {
           return $scope.items;
