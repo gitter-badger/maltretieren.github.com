@@ -84,3 +84,18 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
         $scope.quantity += 5;
     }
 });
+
+/**
+ * Receive a complete list of all comments
+ */
+myApp.controller("WikiquoteCtrl",function ($scope) {
+    WikiquoteApi.getRandomQuote("Programming",
+        function(newQuote) {
+            $scope.wikiquote = newQuote.quote;
+            $scope.$apply();
+        },
+        function(msg){
+            alert(msg);
+        }
+    );
+});
