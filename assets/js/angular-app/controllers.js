@@ -31,7 +31,7 @@ myApp.controller("ModalDemoCtrl" ,function ($scope, $modal, $log) {
       $log.info('Modal dismissed at: ' + new Date());
     });
   };
-};
+});
 
 // Please note that $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $modal service used above.
