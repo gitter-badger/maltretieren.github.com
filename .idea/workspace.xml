@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/wikiquotes/wikiquote-api.js" afterPath="$PROJECT_DIR$/assets/js/wikiquotes/wikiquote-api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/angular-app/controllers.js" afterPath="$PROJECT_DIR$/assets/js/angular-app/controllers.js" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,10 +72,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="directives.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/angular-app/directives.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/angular-app/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="44" selection-start="2723" selection-end="2723" vertical-scroll-proportion="0.0" vertical-offset="928" max-vertical-offset="1590">
+            <state line="97" column="69" selection-start="2934" selection-end="2934" vertical-scroll-proportion="0.8541329" vertical-offset="928" max-vertical-offset="1590">
               <folding />
             </state>
           </provider>
@@ -99,22 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wikiquote-api.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="wikiquote-api.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/wikiquotes/wikiquote-api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="24" selection-start="77" selection-end="77" vertical-scroll-proportion="0.10135135" vertical-offset="0" max-vertical-offset="3255">
+            <state line="110" column="19" selection-start="3739" selection-end="3739" vertical-scroll-proportion="-18.0" vertical-offset="1200" max-vertical-offset="3255">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="post.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/post.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="15.291667" vertical-offset="367" max-vertical-offset="960">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -151,8 +149,8 @@
         <option value="$PROJECT_DIR$/_includes/themes/twitter/page.html" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/assets/js/angular-app/controllers.js" />
         <option value="$PROJECT_DIR$/assets/js/wikiquotes/wikiquote-api.js" />
+        <option value="$PROJECT_DIR$/assets/js/angular-app/controllers.js" />
       </list>
     </option>
   </component>
@@ -595,15 +593,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/templates/comments.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="370" selection-end="1121" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="495">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/form.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="13" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
@@ -702,16 +691,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/angular-app/controllers.js">
+    <entry file="file://$PROJECT_DIR$/assets/js/wikiquotes/wikiquote-api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="44" selection-start="2723" selection-end="2723" vertical-scroll-proportion="0.0" vertical-offset="928" max-vertical-offset="1590">
+        <state line="110" column="19" selection-start="3739" selection-end="3739" vertical-scroll-proportion="-18.0" vertical-offset="1200" max-vertical-offset="3255">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/wikiquotes/wikiquote-api.js">
+    <entry file="file://$PROJECT_DIR$/assets/js/angular-app/directives.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="24" selection-start="77" selection-end="77" vertical-scroll-proportion="0.10135135" vertical-offset="0" max-vertical-offset="3255">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/angular-app/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="69" selection-start="2934" selection-end="2934" vertical-scroll-proportion="0.8541329" vertical-offset="928" max-vertical-offset="1590">
           <folding />
         </state>
       </provider>

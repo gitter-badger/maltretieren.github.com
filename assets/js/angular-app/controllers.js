@@ -95,7 +95,7 @@ myApp.controller("WikiquoteCtrl",function ($scope) {
             $scope.$apply();
         },
         function(msg){
-            alert(msg);
+            console.log("Error while retrieving quote from wikiquote "+msg);
         }
     );
 });
