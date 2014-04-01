@@ -70,7 +70,16 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
         });
 
     $scope.quantity = 5;
-    $scope.sortorder = 'created_at'
+    $scope.sortorder = 'created_at';
+
+    // hacky way to determine if it is the frontpage
+    // -> on frontpage show all comments
+    var parts = window.location.href.split("/");
+    if(parts.length != 4) {
+        $scope.filterString = document.title;
+    } else {
+        $scope.filterString = '';
+    }
     $scope.more = function() {
         $scope.quantity += 5;
     }

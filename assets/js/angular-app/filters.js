@@ -23,6 +23,3 @@ myApp.filter('orderObjectBy', function() {
         return filtered;
     };
 });
-
-// just copy paste the example above to add more filters
-

@@ -5,6 +5,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/templates/comments.html" afterPath="$PROJECT_DIR$/assets/templates/comments.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/angular-app/controllers.js" afterPath="$PROJECT_DIR$/assets/js/angular-app/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/angular-app/filters.js" afterPath="$PROJECT_DIR$/assets/js/angular-app/filters.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/github/github-functions.js" afterPath="$PROJECT_DIR$/assets/js/github/github-functions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/widgets/comments/recentComments.html" afterPath="$PROJECT_DIR$/_includes/widgets/comments/recentComments.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,19 +30,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1245">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="form.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/form.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="594" selection-end="646" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="435">
+            <state line="23" column="13" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="list.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/list.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="933" selection-end="1222" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="765">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="10648" max-vertical-offset="11265">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="keenio.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/keenio.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="github-functions.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/js/github/github-functions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="80" column="24" selection-start="2266" selection-end="2266" vertical-scroll-proportion="0.35714287" vertical-offset="975" max-vertical-offset="1635">
               <folding />
             </state>
           </provider>
@@ -48,8 +80,10 @@
       <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/angular-app/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="24" selection-start="2219" selection-end="2219" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1230">
-              <folding />
+            <state line="78" column="45" selection-start="2449" selection-end="2449" vertical-scroll-proportion="0.0" vertical-offset="703" max-vertical-offset="1365">
+              <folding>
+                <marker date="1396377552000" expanded="true" signature="1279:2571" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -63,10 +97,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comments.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="comments.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/templates/comments.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="61" selection-start="856" selection-end="856" vertical-scroll-proportion="0.40472177" vertical-offset="0" max-vertical-offset="593">
+            <state line="8" column="0" selection-start="370" selection-end="1121" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="495">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -74,28 +108,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pages.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="285">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="filters.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/angular-app/filters.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="27" selection-start="294" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_includes/widgets/comments/form.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="23" selection-start="23" selection-end="23" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="615">
+            <state line="24" column="3" selection-start="657" selection-end="657" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
               <folding />
             </state>
           </provider>
@@ -104,16 +120,7 @@
       <file leaf-file-name="recentComments.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/widgets/comments/recentComments.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="76" selection-start="232" selection-end="232" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="165">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="default.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="54" selection-start="3532" selection-end="3532" vertical-scroll-proportion="-18.208334" vertical-offset="658" max-vertical-offset="1290">
+            <state line="4" column="6" selection-start="174" selection-end="174" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="150">
               <folding />
             </state>
           </provider>
@@ -137,22 +144,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/assets/templates/comments.mustache" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
         <option value="$PROJECT_DIR$/assets/js/bootstrapMarkdown/js/bootstrap-markdown.js" />
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_posts/2014-03-31-heroku.md" />
         <option value="$PROJECT_DIR$/assets/js/angular-app/routes.js" />
         <option value="$PROJECT_DIR$/assets/js/angular-app/example.js" />
-        <option value="$PROJECT_DIR$/_includes/widgets/comments/recentComments.html" />
         <option value="$PROJECT_DIR$/assets/js/form.js" />
         <option value="$PROJECT_DIR$/assets/js/main.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/_includes/widgets/comments/form.html" />
-        <option value="$PROJECT_DIR$/assets/js/angular-app/controllers.js" />
         <option value="$PROJECT_DIR$/assets/js/angular-app/filters.js" />
         <option value="$PROJECT_DIR$/assets/templates/comments.html" />
+        <option value="$PROJECT_DIR$/_includes/widgets/comments/recentComments.html" />
+        <option value="$PROJECT_DIR$/assets/js/angular-app/controllers.js" />
+        <option value="$PROJECT_DIR$/assets/js/github/github-functions.js" />
       </list>
     </option>
   </component>
@@ -272,6 +279,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="github" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -595,13 +624,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/js/angular-app/example.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="28" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/post.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="4.6666665" vertical-offset="112" max-vertical-offset="960">
@@ -614,34 +636,6 @@
     <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="39" selection-start="729" selection-end="729" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1230">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="11700">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/keenio.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/form.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="594" selection-end="646" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="435">
           <folding />
         </state>
       </provider>
@@ -667,13 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/widgets/comments/recentComments.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="76" selection-start="232" selection-end="232" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="165">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/widgets/comments/form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="23" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
@@ -688,26 +675,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/angular-app/controllers.js">
+    <entry file="file://$PROJECT_DIR$/_includes/widgets/comments/recentComments.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="24" selection-start="2219" selection-end="2219" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1230">
+        <state line="4" column="6" selection-start="174" selection-end="174" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="150">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/angular-app/filters.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="27" selection-start="294" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+        <state line="24" column="3" selection-start="657" selection-end="657" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/templates/comments.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="61" selection-start="856" selection-end="856" vertical-scroll-proportion="0.40472177" vertical-offset="0" max-vertical-offset="593">
+        <state line="8" column="0" selection-start="370" selection-end="1121" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="495">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/angular-app/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="45" selection-start="2449" selection-end="2449" vertical-scroll-proportion="0.0" vertical-offset="703" max-vertical-offset="1365">
+          <folding>
+            <marker date="1396377552000" expanded="true" signature="1279:2571" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="13" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1245">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="11700">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/keenio.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/github/github-functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="24" selection-start="2266" selection-end="2266" vertical-scroll-proportion="0.35714287" vertical-offset="975" max-vertical-offset="1635">
+          <folding />
         </state>
       </provider>
     </entry>
