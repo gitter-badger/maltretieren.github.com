@@ -24,7 +24,6 @@ var getMarkup = function() {
 	
 	var oauthToken = localStorage.getItem("oauthToken");
 	var github = null;
-	
 	if(oauthToken != "undefined" && oauthToken != null) {
 		console.log("oauthToken is available");
 		github = new Github({
