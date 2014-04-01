@@ -17,6 +17,7 @@ var ModalDemoCtrl = function ($scope, $modal, $log) {
 
     modalInstance.result.then(function (selectedItem) {
       $scope.selected = selectedItem;
+	  console.log($scope.selected);
     }, function () {
       $log.info('Modal dismissed at: ' + new Date());
     });
