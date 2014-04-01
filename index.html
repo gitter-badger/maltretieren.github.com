@@ -24,6 +24,18 @@ Still work in progress and propably ever will be :). Hopefully someone finds som
     </div>
 </div>
 <hr>
+<ul class="menu">
+    <li><a href="#/view1">view1</a></li>
+    <li><a href="#/view2">view2</a></li>
+</ul>
+
+<div ng-controller="ModalDemoCtrl">
+    <button class="btn" ng-click="open()">Open me!</button>
+    <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+</div>
+
+<div ng-view></div>
+<hr>
 <div id="entry-list">
 
     <div class="" style="">
