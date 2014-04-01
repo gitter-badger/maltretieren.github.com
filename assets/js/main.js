@@ -27,7 +27,7 @@
 		.script( "/assets/js/github/github-functions.js" )
 		.script( "/assets/js/list.js" )
 		.script( "/assets/js/form.js" )
-        .script( "/assets/js/angular/angular.min.js" )
+        .script( "///ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js" )
         .script( "/assets/js/angular/angular-route.min.js" )
         .script( "/assets/js/angular-app/routes.js" )
         .script( "/assets/themes/bootstrap-3.1.1/js/bootstrap.min.js" )
