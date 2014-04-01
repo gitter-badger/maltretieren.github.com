@@ -48,3 +48,8 @@ myApp.controller("ModalInstanceCtrl",function ($scope, $modalInstance, items) {
   };
 });
 // you may add more controllers below
+
+myApp.controller("CommentsCtrl",function ($scope) {
+	alert("CommentsCtrl init");
+});
+// you may add more controllers below
