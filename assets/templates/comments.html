@@ -7,7 +7,7 @@
         </div>
         <div class="panel-body">
             <ul class="list-group">
-                <li class="list-group-item" ng:repeat="comment in comments.entries | limitTo:5 | orderBy:'comment.keen.created_at':true">
+                <li class="list-group-item" ng:repeat="comment in comments.entries | limitTo:quantity | orderBy:'comment.keen.created_at':true">
                     <div class="row">
 
                         <div class="col-xs-10 col-md-11">
@@ -21,7 +21,7 @@
                     </div>
                 </li>
             </ul>
-            <a href="#" class="btn btn-primary btn-sm btn-block" role="button"><span class="glyphicon glyphicon-refresh"></span> More</a>
+            <a href="#" class="btn btn-primary btn-sm btn-block" role="button" ng-click="more()"><span class="glyphicon glyphicon-refresh"></span> More</a>
         </div>
     </div>
 </div>

@@ -69,7 +69,8 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
             alert("Error while getting comments from keen.io: "+status)
         });
 
-    $scope.getPartial = function () {
-        return '/assets/templates/comments.html';
+    $scope.quantity = 5;
+    $scope.more = function() {
+        $scope.quantity += 5;
     }
 });

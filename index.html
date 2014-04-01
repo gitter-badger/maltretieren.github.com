@@ -11,31 +11,6 @@ Hey!!! Welcome to my kind of "techblog" about mostly Raspberry Pi topics and als
 Still work in progress and propably ever will be :). Hopefully someone finds something usefull...
 </p>
 <hr>
-<div ng-init="qty=1;cost=2">
-    <b>Invoice:</b>
-    <div>
-        Quantity: <input type="number" ng-model="qty" required >
-    </div>
-    <div>
-        Costs: <input type="number" ng-model="cost" required >
-    </div>
-    <div class="ng-binding">
-        <b>Total:</b> {{ "{{ qty * cost | currency " }}}}
-    </div>
-</div>
-<hr>
-<ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-</ul>
-
-<div ng-controller="ModalDemoCtrl">
-    <button class="btn btn-default" ng-click="open()">Open me!</button>
-    <div ng-show="selected">Selection from a modal: {{ selected }}</div>
-</div>
-
-<div ng-view></div>
-<hr>
 <div id="entry-list">
 
     <div class="" style="">
