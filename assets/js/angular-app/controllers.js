@@ -36,7 +36,7 @@ myApp.controller("ModalDemoCtrl" ,function ($scope, $modal, $log) {
 // Please note that $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $modal service used above.
 
-myApp.controller("ModalInstanceCtrl", function ($scope, $modalInstance, items) {
+var ModalInstanceCtrl = myApp.controller("ModalInstanceCtrl", function ($scope, $modalInstance, items) {
   $scope.items = items;
   $scope.selected = {
     item: $scope.items[0]
