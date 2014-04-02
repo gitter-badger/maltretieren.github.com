@@ -1,7 +1,8 @@
 # Introduction
 
 As soon as I discovered Jekyll on GitHub I'm keen to push the technology of this blog forward.
-Starting with Jekyll Bootstrap I enhanced it with many different features...
+Starting with Jekyll Bootstrap I enhanced it with many different features... See it running on
+https://maltretieren.github.io
 
 ## Philosophy
 Easy to use, user friendly, cool
@@ -21,6 +22,10 @@ Easy to use, user friendly, cool
 - Bootstrap 3.1.1
 - AngularJS
 
+## External Services
+- GitHub
+- Keen.io
+- Heroku
 
 ## Directory Layout
 Inspired by https://github.com/angular/angular-seed & https://github.com/plusjade/jekyll-bootstrap/
