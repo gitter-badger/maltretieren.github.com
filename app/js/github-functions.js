@@ -11,7 +11,7 @@ var saveMarkup = function(saveContent) {
         console.log("oauthToken is not available or not valid");
         alert("Did you login via github? Otherwise you can connect via Basic Authentication... Please provide a username and password...")
     }
-	var path = $('#path').text();
+	var path = "/"+$('#path').text();
 	var repo = github.getRepo("Maltretieren", "maltretieren.github.com");
 	repo.write('master', path, saveContent, "predifined comment", function(callback) {
         var url = $('#url').text()+"?success=true";
