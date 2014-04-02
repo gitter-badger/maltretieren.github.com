@@ -26,18 +26,22 @@ Inspired by https://github.com/angular/angular-seed & https://github.com/plusjad
     _layouts                 --> ???
     _plugins                 --> ???
     _posts                   --> blog posts, sorted in subfolders
-    assets                   --> files inside this dir can be referenced from your webapp
-      geojson/               --> GeoJSON files (from OpenStreetMap)
-      images/                --> Images used in blog posts & yED files
-      js/                    --> own Javascript files & Libraries
+    assets                   --> 
+
+      images/                --> Source files for graphics (yED)
+      js/                    --> Libraries (not customized stuff)
         angular              --> AngularJS
-        angular-app          --> Controllers, Routes, Directives...
-        templates/           --> partials loaded with angularjs
         themes/              --> Bootstrap & Syntax files
           bootstrap-3.1.1    --> Bootstrap 3
-          patterns           --> 
+          bg-patterns        --> Background textures
           syntax             --> CSS for syntax highlighting
-    app                      --> Controllers, Routes, Directives...
+    app                      --> Self created stuff
+	    css                  --> Own CSS files
+		data                 --> Static data files
+		    geojson/         --> GeoJSON files (from OpenStreetMap), to be rendered on GitHub
+		img                  --> Images used in blog posts & 
+		js                   --> App.js, Angular Controllers, Routes, Directives...
+		partials             --> Templates loaded with AngularJS
 	    
 			
 
