@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/github-functions.js" afterPath="$PROJECT_DIR$/app/js/github-functions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,7 +49,7 @@
       <file leaf-file-name="github-functions.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/github-functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="34" selection-start="3116" selection-end="3116" vertical-scroll-proportion="0.5319149" vertical-offset="1260" max-vertical-offset="1890">
+            <state line="101" column="14" selection-start="3181" selection-end="3181" vertical-scroll-proportion="0.6028369" vertical-offset="1260" max-vertical-offset="1920">
               <folding />
             </state>
           </provider>
@@ -673,7 +672,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/github-functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="34" selection-start="3116" selection-end="3116" vertical-scroll-proportion="0.5319149" vertical-offset="1260" max-vertical-offset="1890">
+        <state line="101" column="14" selection-start="3181" selection-end="3181" vertical-scroll-proportion="0.6028369" vertical-offset="1260" max-vertical-offset="1920">
           <folding />
         </state>
       </provider>
