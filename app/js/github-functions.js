@@ -13,7 +13,7 @@ var saveMarkup = function(saveContent) {
     }
 
     var path = $('#path').text();
-    var repo = github.getRepo("Maltretieren", "maltretieren.github.com");
+    var repo = github.getRepo("maltretieren", "maltretieren.github.com");
     repo.write("master", path, saveContent, "predifined comment", function(err, contents) {
         if(err) {
             console.log("Error, maybe too many unothorized requests... "+err);
@@ -26,7 +26,7 @@ var saveMarkup = function(saveContent) {
 
 var getMarkup = function() {
     $("#target-editor").val("");
-	var usernameField = "Maltretieren";
+	var usernameField = "maltretieren";
 	var passwordField = $("#password").val();
 	
 	var oauthToken = localStorage.getItem("oauthToken");
