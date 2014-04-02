@@ -26,16 +26,16 @@
 		.script( "/assets/js/github/github-functions.js" )
 		.script( "/assets/js/list.js" )
 		.script( "/assets/js/form.js" )
-        .script( "/assets/js/angular/angular.min.js" )
-        .script( "/assets/js/angular/angular-route.min.js" )
+        .script( "/assets/js/angular-1.3.0/angular.min.js" )
+        .script( "/assets/js/angular-1.3.0/angular-route.min.js" )
         .script( "/assets/js/angular-app/routes.js" )
         .script( "/assets/themes/bootstrap-3.1.1/js/bootstrap.min.js" )
         .script("/assets/themes/bootstrap-3.1.1/js/ui-bootstrap-tpls-0.10.0.min.js")
-        .script( "/assets/js/angular-app/services.js" )
-        .script( "/assets/js/angular-app/controllers.js" )
-        .script( "/assets/js/angular-app/filters.js" )
-        .script( "/assets/js/angular-app/directives.js" )
-        .script( "/assets/js/angular-app/example.js" )
+        .script( "/app/js/services.js" )
+        .script( "/app/js/controllers.js" )
+        .script( "/app/js/filters.js" )
+        .script( "/app/js/directives.js" )
+        .script( "/app/js/example.js" )
             .wait(function(){
                 // this is needed for manual bootstrapping
                 // angularjs, otherwise it's called wrong time
