@@ -106,7 +106,7 @@ myApp.controller("WikiquoteCtrl",function ($scope) {
 myApp.controller("TableCtrl",function ($scope, $http) {
     var postsUrl = "/posts.json"
 	
-	$http({method: 'GET', url: postssUrl}).
+	$http({method: 'GET', url: postsUrl}).
 		success(function(data, status, headers, config) {
 			// this callback will be called asynchronously
 			// when the response is available
