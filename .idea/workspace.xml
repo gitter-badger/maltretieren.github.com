@@ -37,16 +37,19 @@
       <file leaf-file-name="2014-03-31-heroku.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2014-03-31-heroku.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="18" selection-start="1604" selection-end="1604" vertical-scroll-proportion="0.0" vertical-offset="1095" max-vertical-offset="1230">
+            <state line="73" column="18" selection-start="1602" selection-end="1602" vertical-scroll-proportion="0.0" vertical-offset="1095" max-vertical-offset="1230">
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="github-functions.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/github-functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="33" selection-start="583" selection-end="583" vertical-scroll-proportion="0.4964539" vertical-offset="0" max-vertical-offset="1725">
+            <state line="18" column="30" selection-start="822" selection-end="822" vertical-scroll-proportion="0.6028369" vertical-offset="15" max-vertical-offset="1725">
               <folding />
             </state>
           </provider>
@@ -67,6 +70,9 @@
             <state line="26" column="2" selection-start="604" selection-end="613" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="705">
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
           </provider>
         </entry>
       </file>
@@ -184,6 +190,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -400,7 +407,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -426,6 +432,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -434,14 +448,6 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -656,7 +662,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2014-03-31-heroku.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="18" selection-start="1604" selection-end="1604" vertical-scroll-proportion="0.0" vertical-offset="1095" max-vertical-offset="1230">
+        <state line="73" column="18" selection-start="1602" selection-end="1602" vertical-scroll-proportion="0.0" vertical-offset="1095" max-vertical-offset="1230">
           <folding />
         </state>
       </provider>
@@ -666,7 +672,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/github-functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="33" selection-start="583" selection-end="583" vertical-scroll-proportion="0.4964539" vertical-offset="0" max-vertical-offset="1725">
+        <state line="18" column="30" selection-start="822" selection-end="822" vertical-scroll-proportion="0.6028369" vertical-offset="15" max-vertical-offset="1725">
           <folding />
         </state>
       </provider>
