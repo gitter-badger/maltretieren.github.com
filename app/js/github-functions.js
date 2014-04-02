@@ -14,7 +14,7 @@ var saveMarkup = function(saveContent) {
 
     var path = $('#path').text();
     var repo = github.getRepo("Maltretieren", "maltretieren.github.com");
-    repo.write("master", "test.html", saveContent, "predifined comment", function(err, contents) {
+    repo.write("master", path, saveContent, "predifined comment", function(err) {
         var url = $('#url').text()+"?success=true";
         alert(path);
     });
@@ -97,6 +97,7 @@ var urlParams;
 			"github": {
 				client_id: "e5923f3d7f1182fe886f",
 				redirect_uri: "http://maltretieren.github.com",
+                scope: "public_repo",   
 				authorization: "https://github.com/login/oauth/authorize",
 			}
 		});
