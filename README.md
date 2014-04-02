@@ -5,7 +5,8 @@ Starting with Jekyll Bootstrap I enhanced it with many different features... See
 https://maltretieren.github.io
 
 ## Philosophy
-Easy to use, user friendly, cool
+To use the power of the static site generator as much content as possible should be prerendered.
+Only data dynamically loaded should be imported via a template.
 
 ## Features
 - Free to Fork - MIT License
