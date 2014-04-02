@@ -23,7 +23,7 @@
 		.script( "/assets/js/bootstrap-markdown-2.3.1/libs/markdown.js" )
 		.script( "/assets/js/bootstrap-markdown-2.3.1/js/bootstrap-markdown.js" )
         .script ( "/assets/js/wikiquotes/wikiquote-api.js" )
-		.script( "/assets/js/github/github-functions.js" )
+		.script( "/assets/js/github-0.9.0/github-functions.js" )
 		.script( "/assets/js/list.js" )
 		.script( "/assets/js/form.js" )
         .script( "/assets/js/angular-1.3.0/angular.min.js" )
