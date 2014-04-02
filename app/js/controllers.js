@@ -104,7 +104,7 @@ myApp.controller("WikiquoteCtrl",function ($scope) {
  * Function for table sort and search
  */
 myApp.controller("TableCtrl",function ($scope, $http) {
-    var postsUrl = "/posts.json"
+    var postsUrl = "/postsFrontpage.json"
 	
 	$http({method: 'GET', url: postsUrl}).
 		success(function(data, status, headers, config) {
