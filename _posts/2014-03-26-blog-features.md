@@ -25,10 +25,11 @@ published: true
 - Comments via keen.io
 - Ratings via keen.io
 
-
 # Design
 - Responsive Layout (based on Bootstrap 3 & Bootswatch theme)
 - Image captions
 - Interactive via AngularJS
+
 # Planned Improvements
 - Cleanup
+- Create a page to post new posts
