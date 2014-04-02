@@ -23,6 +23,8 @@ Easy to use, user friendly, cool
     - Responsive Design
 - [AngularJS](http://angularjs.org/)
     - Dynamic Content
+- [Bootstrap UI](http://angular-ui.github.io/bootstrap/)
+    - Well, a single JavaScript file to wire Bootstrap and Angular
 - [LABjs](http://labjs.com/)
     - ScriptLoader
 - [Github.js](https://github.com/michael/github) 
@@ -30,9 +32,12 @@ Easy to use, user friendly, cool
 	- Has itself dependencies to underscore.js and base64.js
 
 ## External Services
-- GitHub
-- Keen.io
-- Heroku
+- [GitHub](https://github.com/)
+    - you know it...
+- [Keen.io](https://keen.io)
+    - Cloud database (build for analytics)
+- [Heroku](https://dashboard.heroku.com)
+    - Hosting of nodejs apps
 
 ## Directory Layout
 Inspired by https://github.com/angular/angular-seed & https://github.com/plusjade/jekyll-bootstrap/
