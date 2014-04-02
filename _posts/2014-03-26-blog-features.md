@@ -14,18 +14,20 @@ published: true
 
 {% include JB/setup %}
 
+# Overview
 - Completly OpenSourcee
 - GitHub Pages compatible
-- Responsive Layout (based on Bootstrap 3 & Bootswatch theme)
-- Interactive via AngularJS
 - HTTPS always
 - Edit feature (append ?edit=true to the url and see, edit, provide password and save)
 - Login via Github
 - Interactive tables build out of blog posts - beautiful, searchable, sortable
 - Comments via keen.io
 - Ratings via keen.io
+
+
+# Design
+- Responsive Layout (based on Bootstrap 3 & Bootswatch theme)
 - Image captions
-
-
+- Interactive via AngularJS
 # Planned Improvements
 - Cleanup
