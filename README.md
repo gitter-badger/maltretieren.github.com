@@ -26,8 +26,7 @@ Inspired by https://github.com/angular/angular-seed & https://github.com/plusjad
     _layouts                 --> ???
     _plugins                 --> ???
     _posts                   --> blog posts, sorted in subfolders
-    assets                   --> 
-
+    assets                   --> Unchanged assets
       images/                --> Source files for graphics (yED)
       js/                    --> Libraries (not customized stuff)
         angular              --> AngularJS
@@ -36,7 +35,7 @@ Inspired by https://github.com/angular/angular-seed & https://github.com/plusjad
           bg-patterns        --> Background textures
           syntax             --> CSS for syntax highlighting
     app                      --> Self created stuff
-	    css                  --> Own CSS files
+	    css                  --> Own CSS files, customizing some asset css files
 		data                 --> Static data files
 		    geojson/         --> GeoJSON files (from OpenStreetMap), to be rendered on GitHub
 		img                  --> Images used in blog posts & 
