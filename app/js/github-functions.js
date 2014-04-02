@@ -1,6 +1,6 @@
-var saveMarkup = function() {
-	console.log(saveComment);
+var saveMarkup = function(saveContent) {
     var github = null;
+    var oauthToken = localStorage.getItem("oauthToken");
     if(oauthToken != "undefined" && oauthToken != null) {
         console.log("oauthToken is available");
         github = new Github({
@@ -13,8 +13,9 @@ var saveMarkup = function() {
     }
 	var path = $('#path').text();
 	var repo = github.getRepo("Maltretieren", "maltretieren.github.com");
-	repo.write('master', path, saveContent, saveComment, function(callback) {
+	repo.write('master', path, saveContent, "predifined comment", function(callback) {
         var url = $('#url').text()+"?success=true";
+        alert(url);
         //window.location = url;
 	});
 };
@@ -73,7 +74,10 @@ var urlParams;
 		var editorContent = getMarkup();
 		$('#target-editor').markdown({
 			savable:true,
-			height:500
+			height:500,
+            onSave: function(e) {
+                saveMarkup(e.getContent())
+            }
 		});
 		$('#target-editor').show();
 	}
