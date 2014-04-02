@@ -12,13 +12,13 @@
 		// NOTE: We are storing a reference to the QUEUE so that
 		// we can refer to it later in the code.
 		var queue = $LAB
-        .script( "/assets/js/jquery/jquery-2.1.0.min.js" )
+        .script( "/assets/js/jquery-2.1.0/jquery-2.1.0.min.js" )
 		.script( "/assets/js/oauth/jso.js" )
         .script( "/assets/js/keenio.js" )
         .script( "/assets/js/list.js" )
-		.script( "/assets/js/github/base64.js" )
-		.script( "/assets/js/github/underscore-min.js" )
-		.script( "/assets/js/github/github.js" )
+		.script( "/assets/js/github-0.9.0/base64.js" )
+		.script( "/assets/js/github-0.9.0/underscore-min.js" )
+		.script( "/assets/js/github-0.9.0/github.js" )
 		.script( "/assets/js/bootstrap-markdown-2.3.1/libs/to-markdown.js" )
 		.script( "/assets/js/bootstrap-markdown-2.3.1/libs/markdown.js" )
 		.script( "/assets/js/bootstrap-markdown-2.3.1/js/bootstrap-markdown.js" )
@@ -28,7 +28,7 @@
 		.script( "/assets/js/form.js" )
         .script( "/assets/js/angular-1.3.0/angular.min.js" )
         .script( "/assets/js/angular-1.3.0/angular-route.min.js" )
-        .script( "/assets/js/angular-app/routes.js" )
+        .script( "/app/js/routes.js" )
         .script( "/assets/themes/bootstrap-3.1.1/js/bootstrap.min.js" )
         .script("/assets/themes/bootstrap-3.1.1/js/ui-bootstrap-tpls-0.10.0.min.js")
         .script( "/app/js/services.js" )
