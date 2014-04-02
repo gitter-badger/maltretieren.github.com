@@ -14,8 +14,7 @@
                         <div class="col-xs-10 col-md-11">
                             <div>
                                 <a href="{{comment.pageUrl}}">{{comment.pageTitle}}</a>
-                                <div class="mic-info"> By: <a href="mailto:{{mail}}">{{comment.name}}</a> on {{comment.keen.timestamp}}
-                                </div>
+                                <div class="mic-info"> By: <a href="mailto:{{mail}}">{{comment.name}}</a> on {{comment.keen.timestamp | date:'MMM-dd-yyyy' }}</div>
                             </div>
                             <div class="comment-text">{{comment.message}}</div>
                         </div>
