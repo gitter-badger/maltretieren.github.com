@@ -36,11 +36,11 @@
         .script( "/app/js/filters.js" )
         .script( "/app/js/directives.js" )
         .script( "/app/js/example.js" )
-            .wait(function(){
-                // this is needed for manual bootstrapping
-                // angularjs, otherwise it's called wrong time
-                angular.bootstrap(document.body ,['myApp']);
-            })
+		.wait(function(){
+			// this is needed for manual bootstrapping
+			// angularjs, otherwise it's called wrong time
+			angular.bootstrap(document.body ,['myApp']);
+		});
     }
 
     // loading code borrowed directly from LABjs itself
