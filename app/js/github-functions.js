@@ -16,8 +16,11 @@ var saveMarkup = function(saveContent) {
     var repo = github.getRepo("Maltretieren", "maltretieren.github.com");
     repo.write("master", path, saveContent, "predifined comment", function(err) {
         var url = $('#url').text()+"?success=true";
-        console.log(err)
-        //window.location = url;
+        if(err) {
+            alert("Maybe you are not the owner of this repo - you can try to commit a pull request...")
+        } else {
+            window.location = url;
+        }
     });
 };
 
