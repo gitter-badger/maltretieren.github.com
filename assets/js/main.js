@@ -62,7 +62,7 @@
             scriptdone = true;
             LABjsLoaded();
         };
-        scriptElem.src = "/assets/js/LAB.min.js";
+        scriptElem.src = "/assets/js/labjs-2.0.3/LAB.min.js";
         head.insertBefore(scriptElem, head.firstChild);
     }, 0);
 
