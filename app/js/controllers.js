@@ -104,8 +104,7 @@ myApp.controller("WikiquoteCtrl",function ($scope) {
  * Function for table sort and search
  */
 myApp.controller("TableCtrl",function ($scope, $http) {
-    var postsUrl = "/postsFrontpage.json"
-	
+    var postsUrl = "/postsFrontpage.json";
 	$http({method: 'GET', url: postsUrl}).
 		success(function(data, status, headers, config) {
 			// this callback will be called asynchronously
@@ -118,5 +117,8 @@ myApp.controller("TableCtrl",function ($scope, $http) {
 		error(function(data, status, headers, config) {
 			alert("Error while getting json for posts: "+status)
 	});
-	
+
+    $scope.orderByField = 'Date';
+    $scope.reverseSort = false;
+    $scope.searchText = "";
 });
