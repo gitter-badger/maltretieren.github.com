@@ -49,6 +49,7 @@ Inspired by https://github.com/angular/angular-seed & https://github.com/plusjad
 - Register on keen.io to get comments & rating
 - Adjust config with your keen details (for now the settings are stored inside the files)
 - Push to your github page
+- If you want to use "Login with GitHub" you need to install Gatekeeper on e.g. heroku (register and deploy gatekeeper)
 
 ## License
 
