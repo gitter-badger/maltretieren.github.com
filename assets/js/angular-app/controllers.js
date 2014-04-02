@@ -89,7 +89,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
  * Receive a complete list of all comments
  */
 myApp.controller("WikiquoteCtrl",function ($scope) {
-    WikiquoteApi.getRandomQuote("Programming",
+    WikiquoteApi.getRandomQuote("Programming|Computer",
         function(newQuote) {
             $scope.wikiquote = newQuote.quote;
             $scope.$apply();
