@@ -37,6 +37,8 @@ Inspired by https://github.com/angular/angular-seed & https://github.com/plusjad
           bootstrap-3.1.1    --> Bootstrap 3
           patterns           --> 
           syntax             --> CSS for syntax highlighting
+    app                      --> Controllers, Routes, Directives...
+	    
 			
 
 ## Setup
