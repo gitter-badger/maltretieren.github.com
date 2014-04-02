@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2014-03-31-heroku.md" afterPath="$PROJECT_DIR$/_posts/2014-03-31-heroku.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/bootstrap-markdown-2.3.1/js/bootstrap-markdown.js" afterPath="$PROJECT_DIR$/assets/js/bootstrap-markdown-2.3.1/js/bootstrap-markdown.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/github-functions.js" afterPath="$PROJECT_DIR$/app/js/github-functions.js" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,7 +49,7 @@
       <file leaf-file-name="github-functions.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/github-functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.3073394" vertical-offset="570" max-vertical-offset="1635">
+            <state line="2" column="22" selection-start="79" selection-end="79" vertical-scroll-proportion="0.07092199" vertical-offset="0" max-vertical-offset="1665">
               <folding />
             </state>
           </provider>
@@ -147,7 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/assets/js/github/github-functions.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/assets/js/main.js" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/page.html" />
@@ -163,6 +159,7 @@
         <option value="$PROJECT_DIR$/app/partials/postsFrontpage.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/_posts/2014-03-31-heroku.md" />
+        <option value="$PROJECT_DIR$/app/js/github-functions.js" />
       </list>
     </option>
   </component>
@@ -695,7 +692,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/github-functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.3073394" vertical-offset="570" max-vertical-offset="1635">
+        <state line="2" column="22" selection-start="79" selection-end="79" vertical-scroll-proportion="0.07092199" vertical-offset="0" max-vertical-offset="1665">
           <folding />
         </state>
       </provider>

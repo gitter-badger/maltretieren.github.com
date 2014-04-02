@@ -1,19 +1,21 @@
 var saveMarkup = function() {
-	var saveContent = $("#target-editor").val();
-	var saveComment = $("#saveComment").val();
 	console.log(saveComment);
-	var usernameField = "Maltretieren";
-	var passwordField = $("#password").val();
-	var github = new Github({
-		username: usernameField,
-		password: passwordField,
-	  auth: "basic"
-	});
+    var github = null;
+    if(oauthToken != "undefined" && oauthToken != null) {
+        console.log("oauthToken is available");
+        github = new Github({
+            token: oauthToken,
+            auth: "oauth"
+        });
+    } else {
+        console.log("oauthToken is not available or not valid");
+        alert("Did you login via github? Otherwise you can connect via Basic Authentication... Please provide a username and password...")
+    }
 	var path = $('#path').text();
 	var repo = github.getRepo("Maltretieren", "maltretieren.github.com");
 	repo.write('master', path, saveContent, saveComment, function(callback) {
         var url = $('#url').text()+"?success=true";
-        window.location = url;
+        //window.location = url;
 	});
 };
 
