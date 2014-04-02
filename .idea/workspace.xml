@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/comments.html" afterPath="$PROJECT_DIR$/app/partials/comments.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/postsFrontpage.json" afterPath="$PROJECT_DIR$/app/data/postsFrontpage.json" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -257,10 +256,6 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -273,6 +268,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -296,11 +295,11 @@
       <recent name="$PROJECT_DIR$/assets/js/angular-app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/data" />
       <recent name="$PROJECT_DIR$/assets/themes/patterns" />
       <recent name="$PROJECT_DIR$/assets/themes/bootstrap-3.1.1/css" />
       <recent name="$PROJECT_DIR$/assets/themes/bootstrap-3.1.1/css/darkly" />
       <recent name="$PROJECT_DIR$/assets/themes/bootstrap-3.1.1" />
-      <recent name="$PROJECT_DIR$/assets/themes/syntax" />
     </key>
   </component>
   <component name="RunManager">
