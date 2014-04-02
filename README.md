@@ -20,10 +20,10 @@ Easy to use, user friendly, cool
 ## Libraries
 - Bootstrap 3.1.1
 - AngularJS
-- 
 
 
 ## Directory Layout
+Inspired by https://github.com/angular/angular-seed & https://github.com/plusjade/jekyll-bootstrap/
 
     _drafts                  --> blog posts, not published yet
     _includes                --> Jekyll includes
@@ -34,7 +34,7 @@ Easy to use, user friendly, cool
       geojson/               --> GeoJSON files (from OpenStreetMap)
       images/                --> Images used in blog posts & yED files
       js/                    --> own Javascript files & Libraries
-        angular			   --> AngularJS
+        angular              --> AngularJS
         angular-app          --> Controllers, Routes, Directives...
         templates/           --> partials loaded with angularjs
         themes/              --> Bootstrap & Syntax files
