@@ -97,8 +97,7 @@ var urlParams;
 			"github": {
 				client_id: "e5923f3d7f1182fe886f",
 				redirect_uri: "http://maltretieren.github.com",
-                scopes: ["public_repo"],
-				authorization: "https://github.com/login/oauth/authorize",
+				authorization: "https://github.com/login/oauth/authorize?scope=public_repo"
 			}
 		});
 	
