@@ -4,6 +4,7 @@ layout: none
 [{% for post in site.categories.frontpage %}{
     "Date": "{{ post.date | date_to_string }}",
     "Title": "{{ post.title }}",
+	"Url": "{{ post.url}}",
     "Preview": "{{ post.preview  }}",
     "Tags": "{{post.tags | array_to_sentence_string}}"
 }{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
