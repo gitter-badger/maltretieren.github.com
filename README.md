@@ -23,11 +23,11 @@ Inspired by https://github.com/angular/angular-seed & https://github.com/plusjad
 
     _drafts                  --> blog posts, not published yet
     _includes                --> Jekyll includes
-    _layouts                 --> ???
-    _plugins                 --> ???
+    _layouts                 --> Jekyll templates for different pages
+    _plugins                 --> Only a Debug plugin, nothing else...
     _posts                   --> blog posts, sorted in subfolders
-    assets                   --> Unchanged assets
-      images/                --> Source files for graphics (yED)
+    assets                   --> Unchanged assets, include version number in folder name
+      img/                   --> Source files for graphics (yED)
       js/                    --> Libraries (not customized stuff)
         angular              --> AngularJS
         themes/              --> Bootstrap & Syntax files
