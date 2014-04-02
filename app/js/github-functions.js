@@ -13,20 +13,16 @@ var saveMarkup = function(saveContent) {
     }
 
     var path = $('#path').text();
-    var repo = github.getRepo("maltretieren", "maltretieren.github.com");
-    repo.write("master", path, saveContent, "predifined comment", function(err, contents) {
-        if(err) {
-            console.log("Error, maybe too many unothorized requests... "+err);
-        } else {
-            var url = $('#url').text()+"?success=true";
-            alert(path);
-        }
+    var repo = github.getRepo("Maltretieren", "maltretieren.github.com");
+    repo.write("master", "test.html", saveContent, "predifined comment", function(err, contents) {
+        var url = $('#url').text()+"?success=true";
+        alert(path);
     });
 };
 
 var getMarkup = function() {
     $("#target-editor").val("");
-	var usernameField = "maltretieren";
+	var usernameField = "Maltretieren";
 	var passwordField = $("#password").val();
 	
 	var oauthToken = localStorage.getItem("oauthToken");
