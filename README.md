@@ -24,8 +24,6 @@ Easy to use, user friendly, cool
 
 
 ## Directory Layout
-- Inspired by https://github.com/angular/angular-seed & https://github.com/plusjade/jekyll-bootstrap/
-
 
     _drafts                  --> blog posts, not published yet
     _includes                --> Jekyll includes
