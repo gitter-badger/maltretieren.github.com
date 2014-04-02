@@ -17,26 +17,32 @@ Easy to use, user friendly, cool
 - Ratings via keen.io
 - Nice image captions
 
-## Directory Structure
+## Libraries
+- Bootstrap 3.1.1
+- AngularJS
+- 
+
+
+## Directory Layout
 - Inspired by https://github.com/angular/angular-seed & https://github.com/plusjade/jekyll-bootstrap/
 
 
-  _drafts                  --> blog posts, not published yet
-  _includes                --> Jekyll includes
-  _layouts                 --> ???
-  _plugins                 --> ???
-  _posts                   --> blog posts, sorted in subfolders
-  assets                   --> files inside this dir can be referenced from your webapp
-    geojson/               --> GeoJSON files (from OpenStreetMap)
-    images/                --> Images used in blog posts & yED files
-    js/                    --> own Javascript files & Libraries
-      angular			   --> AngularJS
-      angular-app          --> Controllers, Routes, Directives...
-      templates/           --> partials loaded with angularjs
-      themes/              --> Bootstrap & Syntax files
-        bootstrap-3.1.1    --> Bootstrap 3
-        patterns           --> 
-        syntax             --> CSS for syntax highlighting
+    _drafts                  --> blog posts, not published yet
+    _includes                --> Jekyll includes
+    _layouts                 --> ???
+    _plugins                 --> ???
+    _posts                   --> blog posts, sorted in subfolders
+    assets                   --> files inside this dir can be referenced from your webapp
+      geojson/               --> GeoJSON files (from OpenStreetMap)
+      images/                --> Images used in blog posts & yED files
+      js/                    --> own Javascript files & Libraries
+        angular			   --> AngularJS
+        angular-app          --> Controllers, Routes, Directives...
+        templates/           --> partials loaded with angularjs
+        themes/              --> Bootstrap & Syntax files
+          bootstrap-3.1.1    --> Bootstrap 3
+          patterns           --> 
+          syntax             --> CSS for syntax highlighting
 			
 
 ## Setup
