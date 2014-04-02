@@ -23,10 +23,3 @@ myApp.filter('orderObjectBy', function() {
         return filtered;
     };
 });
-
-myApp.filter('dateFormat', function() {
-    return function(dateString) {
-        var o = dateSTR.replace(/-/g, "/"); // Replaces hyphens with slashes
-        return Date.parse(o + " -0000"); // No TZ subtraction on this sample
-    }
-});
