@@ -98,7 +98,7 @@ var urlParams;
             });
             var user = github.getUser();
             user.show('', function(err, res) {
-                console.log(res.login);
+                console.log(res);
             });
 		});
 	}
