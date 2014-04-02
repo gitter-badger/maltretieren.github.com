@@ -19,13 +19,15 @@ Easy to use, user friendly, cool
 - Nice image captions
 
 ## Libraries
-- Bootstrap 3.1.1 - Responsive Design
+- [Bootstrap](http://getbootstrap.com/)
+    - Responsive Design
 - [AngularJS](http://angularjs.org/)
     - Dynamic Content
 - [LABjs](http://labjs.com/)
     - ScriptLoader
 - [Github.js](https://github.com/michael/github) 
     - GitHub commits from the client 
+	- Has itself dependencies to underscore.js and base64.js
 
 ## External Services
 - GitHub
