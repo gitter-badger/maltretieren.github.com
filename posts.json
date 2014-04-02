@@ -1,0 +1,9 @@
+---
+layout: none
+---
+[{% for post in site.posts %}{
+    "Date": "{{ post.date | date_to_string }}",
+    "Title": "{{ post.title }}",
+	"Preview": "{{ post.preview  }}",
+    "Tags": "{{post.tags}}"
+}{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
