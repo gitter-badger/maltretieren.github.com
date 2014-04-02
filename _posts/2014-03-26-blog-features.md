@@ -15,6 +15,7 @@ published: true
 {% include JB/setup %}
 
 # Overview
+- Build with Jekyll (based on Jekyll Bootstrap)
 - Completly OpenSourcee
 - GitHub Pages compatible
 - HTTPS always
