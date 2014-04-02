@@ -103,6 +103,6 @@ myApp.controller("WikiquoteCtrl",function ($scope) {
 /**
  * Function for table sort and search
  */
-myApp.controller("WikiquoteCtrl",function ($scope) {
+myApp.controller("TableCtrl",function ($scope) {
     
 });
