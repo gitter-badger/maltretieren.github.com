@@ -30,6 +30,17 @@ Easy to use, user friendly, cool
 - [Github.js](https://github.com/michael/github) 
     - GitHub commits from the client 
 	- Has itself dependencies to underscore.js and base64.js
+- [Wikiquotes Javascript API](https://github.com/natetyler/wikiquotes-api)
+    - Programming related quotes on the frontpage
+- [jQuery](http://jquery.com/)
+    - you know it...
+- [Raty](http://wbotelhos.com/raty/)
+    - Star Rating jQuery Plugin
+- [Bootstrap Markdown](http://toopay.github.io/bootstrap-markdown/)
+    - Markdown Editor for the edit feature
+	- (optional) dependencies to markdown.js and to-markdown.js for the preview functionality
+- [JSO](https://github.com/andreassolberg/jso)
+    - Javascript OAuth Library
 
 ## External Services
 - [GitHub](https://github.com/)
