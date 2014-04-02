@@ -18,7 +18,8 @@ Easy to use, user friendly, cool
 - Ratings via keen.io
 - Nice image captions
 
-## Libraries
+## Dependencies
+### Libraries
 - [Bootstrap](http://getbootstrap.com/)
     - Responsive Design
 - [AngularJS](http://angularjs.org/)
@@ -42,7 +43,7 @@ Easy to use, user friendly, cool
 - [JSO](https://github.com/andreassolberg/jso)
     - Javascript OAuth Library
 
-## External Services
+### External Services
 - [GitHub](https://github.com/)
     - you know it...
 - [Keen.io](https://keen.io)
