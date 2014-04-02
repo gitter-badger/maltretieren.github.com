@@ -49,6 +49,9 @@ Inspired by https://github.com/angular/angular-seed & https://github.com/plusjad
 
 ## Software Stack
 ### Frameworks / Libraries
+- [Jekyll](http://jekyllrb.com/)
+    - Static site generator
+	- As a starting point I used [Jekyll Bootstrap](http://jekyllbootstrap.com/)
 - [Bootstrap](http://getbootstrap.com/)
     - Responsive Design
 - [AngularJS](http://angularjs.org/)
