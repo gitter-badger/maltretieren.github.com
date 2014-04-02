@@ -47,8 +47,8 @@ Inspired by https://github.com/angular/angular-seed & https://github.com/plusjad
 - Push to your github page
 - If you want to use "Login with GitHub" you need to install Gatekeeper on e.g. heroku (register and deploy gatekeeper)
 
-## Dependencies
-### Libraries
+## Software Stack
+### Frameworks / Libraries
 - [Bootstrap](http://getbootstrap.com/)
     - Responsive Design
 - [AngularJS](http://angularjs.org/)
