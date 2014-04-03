@@ -84,6 +84,7 @@ myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService) {
     return {
         helloGithub : function() {
         	var userName = GithubUserService.user();
+			return userName;
         }
     }
 	
