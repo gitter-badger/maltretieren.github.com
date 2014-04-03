@@ -26,15 +26,14 @@ myApp.service("UtilSrvc", function () {
     }
 });
 
-myApp.service("GithubAuthService", function ($http) {
+myApp.service("GithubAuthService", function (GithubUserService, $http) {
 	return {
-        github: null;
 		instance : function(oauthToken) {
-            localStorage.setItem("oauthToken", data.token);
-		    this.github = new Github({
+		    var github = new Github({
 				token: oauthToken,
 				auth: "oauth"
 			});
+			return github;
 		},
 		requestCode: function() {
 			console.log("Request a new token, the page will be reloaded with code appended to the address...");
@@ -57,7 +56,9 @@ myApp.service("GithubAuthService", function ($http) {
                 success(function(data, status, headers, config) {
                     if(typeof oauthCode != 'undefined') {
                         console.log("Yaayy, got a token:"+data.token);
+                        localStorage.setItem("oauthToken", data.token);
                         this.instance(data.token);
+                        GithubUserService.user(token);
                     } else {
                         console.log("It was not possible to get a token with the provided code");
                     }
@@ -80,7 +81,7 @@ myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService, $htt
     return {
         // there are different states: token & code provided, token or code, nothing
         helloGithub : function(oauthCode, oauthToken) {
-            if((oauthCode === 'undefined' || oauthCode === null) && (oauthToken === "undefined" || oauthToken === null)) {
+			if((oauthCode === 'undefined' || oauthCode === null) && (oauthToken === "undefined" || oauthToken === null)) {
 				console.log("nothing (no code, no token) provided, redirect to github to grant permissions and after reloading there should be the code");
                 GithubAuthService.requestCode();
                 // after page reload code is available and it will requestToken()
@@ -114,20 +115,21 @@ myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService, $htt
 	// 		- request a token
 });
 
-myApp.service("GithubUserService", function (UserModel) {
+myApp.service("GithubUserService", function (GithubAuthService, UserModel) {
 	return {
-        // as soon as github changes from null, request the user
+        // as soon as github is
 		user : function() {
-            /**user.show('', function(err, res) {
+            user.show('', function(err, res) {
 				if(err) {
 					console.log("there was an error getting user information, maybe the token is invalid?");
 					// delete the token from localStorage, because it is invalid...
+                    GithubAuthService.clearLocalStorage();
+					GithubAuthService.requestToken();
 				} else {
 				    console.log("login successfull: "+res.login);
 					UserModel.login(res.login);
 				}
             });
-             */
         },
 		isAdmin : function() {
 			console.log("isAdmin? : true");
