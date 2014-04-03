@@ -75,11 +75,11 @@ myApp.service("GithubAuthService", function () {
     }
 });
 
-myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService) {
+myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService, UserModel) {
     return {
         helloGithub : function() {
-        	var result = GithubUserService.user();
-        	return result;
+        	var userName = GithubUserService.user();
+			UserModel.login(userName);
         }
     }
 	
