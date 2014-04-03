@@ -93,7 +93,7 @@ var urlParams;
 	if(typeof oauthCode != 'undefined' && (oauthToken === "undefined" || oauthToken === null)) {
 		console.log("Oauth token is not defined - but there was a code: try to request and save the final token");
 		$.getJSON('https://maltretieren.herokuapp.com/authenticate/'+oauthCode, function(data) {
-			if(typeof oauthCode != 'undefined')
+			if(typeof oauthCode != 'undefined') {
 				console.log("final github token:"+data.token);
 				localStorage.setItem("oauthToken", data.token);
 			} else {
