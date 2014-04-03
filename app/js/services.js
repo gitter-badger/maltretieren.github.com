@@ -87,7 +87,7 @@ myApp.service("GithubAuthService", function ($http) {
     }
 });
 
-myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService, $http) {
+myApp.service("GithubSrvc", function (GithubAuthService, $http) {
     return {
         // there are different states: token & code provided, token or code, nothing
         helloGithub : function(oauthCode, oauthToken) {
@@ -97,7 +97,7 @@ myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService, $htt
                 // after page reload code is available and it will requestToken()
 			} else if(oauthToken != "undefined" && oauthToken != null) {
 				console.log("Token provided, try to use it - Token: "+oauthToken);
-				GithubUserService.user();
+				//GithubUserService.user();
 			} else if(oauthCode != "undefined" && oauthCode != null) {
 				console.log("Code provided, no Token, request token - Code: "+oauthCode)
                 GithubAuthService.requestToken();
