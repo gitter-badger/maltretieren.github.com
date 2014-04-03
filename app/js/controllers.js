@@ -135,6 +135,7 @@ myApp.controller("GithubCtrl", function ($scope, GithubSrvc) {
 	// if token is available, fetch user information...
 	var oauthToken = localStorage.getItem("oauthToken");
 	if(oauthToken != "undefined" && oauthToken != null) {
+		console.log("Token provided, get username");
 		GithubSrvc.helloGithub();
 	}
 	
