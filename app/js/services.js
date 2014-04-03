@@ -25,3 +25,17 @@ myApp.service("UtilSrvc", function () {
         }
     }
 });
+
+// EXAMPLE OF CORRECT DECLARATION OF SERVICE
+// here is a declaration of simple utility function to know if an given param is a String.
+myApp.service("GithSrvc", function () {
+    return {
+        helloWorld : function(name) {
+        	var result = "Hum, Hello you, but your name is too weird...";
+        	if (this.isAString(name)) {
+        		result = "Hello, " + name;
+        	}
+        	return result;
+        }
+    }
+});

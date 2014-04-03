@@ -1,5 +1,10 @@
 'use strict';
 
+/**
+*	The controller must be responsible for binding model data to views using $scope.
+*	It does not contain logic to fetch the data or manipulating it.
+*/
+
 myApp.controller("MyCtrl1" ,function ($scope, UtilSrvc) {
     $scope.aVariable = 'anExampleValueWithinScope';
     $scope.valueFromService = UtilSrvc.helloWorld("Amy");
@@ -121,4 +126,11 @@ myApp.controller("TableCtrl",function ($scope, $http) {
     $scope.orderByField = 'Date';
     $scope.reverseSort = false;
     $scope.searchText = "";
+});
+
+/**
+ * GitHub controller using the GitHub service
+ */
+myApp.controller("GithubCtrl", function ($scope) {
+    console.log("GitHub controller ready");
 });
