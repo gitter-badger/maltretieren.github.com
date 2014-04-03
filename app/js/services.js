@@ -26,13 +26,14 @@ myApp.service("UtilSrvc", function () {
     }
 });
 
-myApp.service("GithubUserService", function (GithubAuthService) {
+myApp.service("GithubUserService", function (GithubAuthService, UserModel) {
 	return {
 		user : function() {
 		    var githubInstance = GithubAuthService.instance();
         	var user = githubInstance.getUser();
             user.show('', function(err, res) {
                 console.log(res);
+				UserModel.login(userName);
             });
         },
 		isAdmin : function() {
@@ -75,11 +76,10 @@ myApp.service("GithubAuthService", function () {
     }
 });
 
-myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService, UserModel) {
+myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService) {
     return {
         helloGithub : function() {
         	var userName = GithubUserService.user();
-			UserModel.login(userName);
         }
     }
 	
