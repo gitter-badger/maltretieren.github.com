@@ -94,9 +94,7 @@ myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService) {
 
 // Inspired by http://joelhooks.com/blog/2013/04/24/modeling-data-and-state-in-your-angularjs-application/
 myApp.service("UserModel", function (GithubUserService) {
-	this.user = {
-		name: "Maltretieren"
-	}
+	this.user = {}
 	this.loggedIn = false;
 	this.login = function(userName) {
 		this.loggedIn = true;
