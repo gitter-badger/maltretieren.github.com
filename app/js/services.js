@@ -33,7 +33,27 @@ myApp.service("GithubUserService", function () {
         	return userName;
         }
     }
-}
+});
+
+myApp.service("GithubAuthService", function () {
+	return {
+		github : {
+			var oauthToken = localStorage.getItem("oauthToken");
+			if(oauthToken != "undefined" && oauthToken != null) {
+				console.log("oauthToken is available");
+				github = new Github({
+					token: oauthToken,
+					auth: "oauth"
+				});
+				return github;
+			} else {
+				console.log("oauthToken is not available or not valid");
+				alert("Did you login via github? Otherwise you can connect via Basic Authentication... Please provide a username and password...")
+				return null;
+			}
+		}
+    }
+});
 
 myApp.service("GithubSrvc", function (GithubUserService) {
     return {
