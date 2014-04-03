@@ -33,7 +33,9 @@ myApp.service("GithubUserService", function (GithubAuthService, UserModel) {
         	var user = githubInstance.getUser();
             user.show('', function(err, res) {
                 console.log(res);
-				if(!err) {
+				if(err) {
+					console.log("there was an error getting user information");
+				} else {
 					UserModel.login(res.login);
 				}
             });
