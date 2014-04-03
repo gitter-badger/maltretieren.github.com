@@ -126,18 +126,18 @@ myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService) {
 
 // Inspired by http://joelhooks.com/blog/2013/04/24/modeling-data-and-state-in-your-angularjs-application/
 myApp.service("UserModel", function ($rootScope) {
-	this.user = {}
+	this.user = {};
 	this.loggedIn = false;
 	this.login = function(userName) {
 		this.loggedIn = true;
 		this.user = {
 			name: userName
-		}
+		};
 		console.log("send a userLoggedIn event for user: "+userName);
 		$rootScope.$broadcast('UserModel::userLoggedIn', userName);
-	}
+	};
 	this.logout = function() {
-		this.user = {]
+		this.user = {};
 		this.loggedIn = flase;
 		console.log("send a userLoggedOut event");
 		$rootScope.$broadcast('UserModel::userLoggedOut');
