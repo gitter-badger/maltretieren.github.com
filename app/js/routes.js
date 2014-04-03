@@ -18,10 +18,8 @@ myApp.config(function($routeProvider, $locationProvider) {
     		controller: 'MyCtrl2'
     	});
     $routeProvider.otherwise({
-        redirectTo: '/view1'
+            redirectTo: '/view1'
     });
-	$locationProvider({
-		// turning on html5Mode to have access to the parameters of the url
-		html5Mode: true;
-	});
+	// turning on html5Mode to have access to the parameters of the url
+	$locationProvider.html5Mode(true);
 });
