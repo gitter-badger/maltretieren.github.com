@@ -82,8 +82,11 @@ myApp.controller("TableCtrl",function ($scope, $http) {
 /**
  * GitHub controller using the GitHub service
  */
-myApp.controller("GithubCtrl", function ($scope, UserModel, GithubSrvc) {
+myApp.controller("GithubCtrl", function ($scope, $routeParams, UserModel, GithubSrvc) {
 	// if token is available, fetch user information...
+	var oauthCode = $routeParams.code;
+	console.log("The address contains a oauth code. If there is a token already available there is the question, if it is needed to request a new token or if the old token is still valid?");
+	
 	var oauthToken = localStorage.getItem("oauthToken");
 	if(oauthToken != "undefined" && oauthToken != null) {
 		console.log("Token provided, get username");
@@ -96,6 +99,7 @@ myApp.controller("GithubCtrl", function ($scope, UserModel, GithubSrvc) {
 		GithubSrvc.helloGithub();
 	}
 
+	// bind user model to the view and listen for events
 	$scope.user = UserModel.user.name;
 	$scope.$on('UserModel::userLoggedIn', function(event) {
 		console.log("the GithubCtrl received an userLoggedIn event for user: "+UserModel.user.name);

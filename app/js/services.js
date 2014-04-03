@@ -101,11 +101,13 @@ myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService) {
 	
 	// the service should be responsible for
 	// - check if a token is available
-	// - if a token is available get user information
-	// - update "Login with github" to match the username
-	// - try a commit to the repository
-	// - if the commit is successfull it's the admin user
-	// - else it's a guest user
+	// 		- if a token is available get user information
+	// 		- update "Login with github" to match the username
+	// 		- try a commit to the repository
+	// 		- if the commit is successfull it's the admin user
+	// 		- else it's a guest user
+	// - if no token is available
+	// 		- request a token
 });
 
 // Inspired by http://joelhooks.com/blog/2013/04/24/modeling-data-and-state-in-your-angularjs-application/
