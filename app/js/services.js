@@ -81,6 +81,7 @@ myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService) {
         },
 		goodByeGithub : function() {
 			GithubUserService.logout();
+			console.log("Clear localStorage");
 			GithubAuthService.clearLocalStorage();
 		}
     }
