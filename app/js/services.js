@@ -40,6 +40,7 @@ myApp.service("GithubUserService", function (GithubAuthService) {
 myApp.service("GithubAuthService", function () {
 	return {
 		github : function() {
+			var github = null;
 			var oauthToken = localStorage.getItem("oauthToken");
 			if(oauthToken != "undefined" && oauthToken != null) {
 				console.log("oauthToken is available");
@@ -47,12 +48,11 @@ myApp.service("GithubAuthService", function () {
 					token: oauthToken,
 					auth: "oauth"
 				});
-				return github;
 			} else {
 				console.log("oauthToken is not available or not valid");
 				alert("Did you login via github? Otherwise you can connect via Basic Authentication... Please provide a username and password...")
-				return null;
 			}
+			return github;
 		}
     }
 });
