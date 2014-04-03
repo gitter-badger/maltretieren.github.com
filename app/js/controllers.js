@@ -85,43 +85,15 @@ myApp.controller("TableCtrl",function ($scope, $http) {
 myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, GithubSrvc) {
 	// if token is available, fetch user information...
 	var oauthCode = $location.search().code;
-	console.log(oauthCode);
 	var oauthToken = localStorage.getItem("oauthToken");
-	// token available: request user information
-	// code available: request token, request user information
-	
-	//console.log("The address contains a oauth code. If there is a token already available there is the question, if it is needed to request a new token or if the old token is still valid?");
 	
 	console.log("Token: "+oauthToken);
 	console.log("Code: "+oauthCode);
-	if(typeof oauthCode != 'undefined' && (oauthToken === "undefined" || oauthToken === null)) {
-		console.log("Oauth token is not defined - but there was a code: try to request and save the final token");
-		$http({method: 'GET', url: 'https://maltretieren.herokuapp.com/authenticate/'+oauthCode}).
-			success(function(data, status, headers, config) {
-				if(typeof oauthCode != 'undefined') {
-					console.log("Yaayy, got a token:"+data.token);
-					localStorage.setItem("oauthToken", data.token);
-				} else {
-					console.log("It was not possible to get a token with the provided code");
-				}
-			}).
-			error(function(data, status, headers, config) {
-				alert("Error while getting a token for the provided code");
-		});
-	} else {
-		console.log("Either a token is available or no oauthCode provided. Seems to be logged in... :"+oauthToken);
-	};		
-	
-	var oauthToken = localStorage.getItem("oauthToken");
-	if(oauthToken != "undefined" && oauthToken != null) {
-		console.log("Token provided, get username");
-		GithubSrvc.helloGithub();
-	}
 	
 	// if no token is available listen for button click...
 	$scope.login = function() {
 		console.log("Request login");
-		GithubSrvc.helloGithub();
+		GithubSrvc.helloGithub(oauthCode, oauthToken);
 	}
 	
 	// logout - this is not really a logout from github, but the access token is deleted

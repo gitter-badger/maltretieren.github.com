@@ -75,7 +75,29 @@ myApp.service("GithubAuthService", function () {
 
 myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService) {
     return {
-        helloGithub : function() {
+        helloGithub : function(oauthCode, oauthToken) {
+			if(typeof oauthCode != 'undefined' && (oauthToken === "undefined" || oauthToken === null)) {
+				console.log("Oauth token is not defined - but there was a code: try to request and save the final token");
+				$http({method: 'GET', url: 'https://maltretieren.herokuapp.com/authenticate/'+oauthCode}).
+					success(function(data, status, headers, config) {
+						if(typeof oauthCode != 'undefined') {
+							console.log("Yaayy, got a token:"+data.token);
+							localStorage.setItem("oauthToken", data.token);
+						} else {
+							console.log("It was not possible to get a token with the provided code");
+						}
+					}).
+					error(function(data, status, headers, config) {
+						alert("Error while getting a token for the provided code");
+				});
+			} else {
+				console.log("Either a token is available or no oauthCode provided. Seems to be logged in... :"+oauthToken);
+			};		
+
+			if(oauthToken != "undefined" && oauthToken != null) {
+				console.log("Token provided, get username");
+				GithubSrvc.helloGithub();
+			}
         	var userName = GithubUserService.user();
 			return userName;
         },
