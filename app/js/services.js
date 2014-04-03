@@ -45,6 +45,9 @@ myApp.service("GithubUserService", function (GithubAuthService, UserModel) {
         },
 		isAdmin : function() {
 			console.log("isAdmin? : true");
+		},
+		logout : function() {
+			UserModel.logout();
 		}
     }
 });
@@ -103,6 +106,7 @@ myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService) {
 			return userName;
         },
 		goodByeGithub : function() {
+			GithubUserService.logout();
 			GithubAuthService.clearLocalStorage();
 		}
     }
@@ -131,5 +135,11 @@ myApp.service("UserModel", function ($rootScope) {
 		}
 		console.log("send a userLoggedIn event for user: "+userName);
 		$rootScope.$broadcast('UserModel::userLoggedIn', userName);
+	}
+	this.logout = function() {
+		this.user = {]
+		this.loggedIn = flase;
+		console.log("send a userLoggedOut event");
+		$rootScope.$broadcast('UserModel::userLoggedOut');
 	}
 });
