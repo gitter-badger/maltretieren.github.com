@@ -90,11 +90,11 @@ myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService, $htt
 					error(function(data, status, headers, config) {
 						alert("Error while getting a token for the provided code");
 				});
-			} else if(oauthToken != "undefined" || oauthToken != null) {
+			} else if(oauthToken != "undefined" && oauthToken != null) {
 				console.log("Token provided, try to use it - Token: "+oauthToken);
 				var userName = GithubUserService.user();
 				return userName;
-			} else if(oauthCode != "undefined" || oauthCode != null) {
+			} else if(oauthCode != "undefined" && oauthCode != null) {
 				console.log("Code provided, request Token - Code: "+oauthCode)
 			} else {
 				console.log("There is something wrong with the login");
