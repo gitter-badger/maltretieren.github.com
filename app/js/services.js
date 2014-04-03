@@ -26,12 +26,19 @@ myApp.service("UtilSrvc", function () {
     }
 });
 
-// EXAMPLE OF CORRECT DECLARATION OF SERVICE
-// here is a declaration of simple utility function to know if an given param is a String.
-myApp.service("GithubSrvc", function () {
+myApp.service("GithubUserService", function () {
+	return {
+        user : function() {
+        	var userName = "Maltretieren";
+        	return userName;
+        }
+    }
+}
+
+myApp.service("GithubSrvc", function (GithubUserService) {
     return {
         helloGithub : function() {
-        	var result = "Hello Github Service!";
+        	var result = GithubUserService.user();
         	return result;
         }
     }
