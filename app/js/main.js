@@ -31,8 +31,10 @@
         .script( "/app/js/routes.js" )
         .script( "/assets/themes/bootstrap-3.1.1/js/bootstrap.min.js" )
         .script("/assets/themes/bootstrap-3.1.1/js/ui-bootstrap-tpls-0.10.0.min.js")
-        .script( "/app/js/services.js" )
         .script( "/app/js/controllers.js" )
+		.wait()
+		// controllers are injected to services, so the services should be loaded after controller
+		.script( "/app/js/services.js" )
         .script( "/app/js/filters.js" )
         .script( "/app/js/directives.js" )
         .script( "/app/js/example.js" )

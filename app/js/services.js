@@ -35,4 +35,12 @@ myApp.service("GithubSrvc", function () {
         	return result;
         }
     }
+	
+	// the service should be responsible for
+	// - check if a token is available
+	// - if a token is available get user information
+	// - update "Login with github" to match the username
+	// - try a commit to the repository
+	// - if the commit is successfull it's the admin user
+	// - else it's a guest user
 });
