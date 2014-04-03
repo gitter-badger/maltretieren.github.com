@@ -26,7 +26,7 @@ myApp.service("UtilSrvc", function () {
     }
 });
 
-myApp.service("GithubAuthService", function (GithubUserService, $http) {
+myApp.service("GithubAuthService", function ($http) {
 	return {
 		instance : function(oauthToken) {
 		    var github = new Github({
@@ -58,7 +58,6 @@ myApp.service("GithubAuthService", function (GithubUserService, $http) {
                         console.log("Yaayy, got a token:"+data.token);
                         localStorage.setItem("oauthToken", data.token);
                         this.instance(data.token);
-                        GithubUserService.user(token);
                     } else {
                         console.log("It was not possible to get a token with the provided code");
                     }
@@ -117,7 +116,8 @@ myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService, $htt
 
 myApp.service("GithubUserService", function (GithubAuthService, UserModel) {
 	return {
-		user : function(github) {
+        // as soon as github changes from null, request the user
+		user : function() {
             user.show('', function(err, res) {
 				if(err) {
 					console.log("there was an error getting user information, maybe the token is invalid?");
