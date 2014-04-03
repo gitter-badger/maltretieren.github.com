@@ -89,6 +89,7 @@ var urlParams;
 	var oauthCode = urlParams['code'];
 	var oauthToken = localStorage.getItem("oauthToken");
 	console.log("Token: "+oauthToken);
+	console.log("Code: "+oauthCode);
 	if(typeof oauthCode != 'undefined' && oauthToken === "undefined" && oauthToken === null) {
 		console.log("Oauth token is not defined - but there was a code: try to request and save the final token");
 		$.getJSON('https://maltretieren.herokuapp.com/authenticate/'+oauthCode, function(data) {
