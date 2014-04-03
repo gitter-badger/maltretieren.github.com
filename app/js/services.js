@@ -26,7 +26,7 @@ myApp.service("UtilSrvc", function () {
     }
 });
 
-myApp.service("GithubAuthService", function () {
+myApp.service("GithubAuthService", function ($http) {
 	return {
 		instance : function() {
 			var github = null;
