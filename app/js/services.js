@@ -29,7 +29,7 @@ myApp.service("UtilSrvc", function () {
 myApp.service("GithubUserService", function (GithubAuthService) {
 	return {
         user : function() {
-        	var user = GithubAuthService.instance.getUser();
+        	var user = GithubAuthService.instance().getUser();
             user.show('', function(err, res) {
                 console.log(res);
             });
