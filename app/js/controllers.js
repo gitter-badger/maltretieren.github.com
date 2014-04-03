@@ -85,8 +85,12 @@ myApp.controller("TableCtrl",function ($scope, $http) {
 myApp.controller("GithubCtrl", function ($scope, $routeParams, $http, UserModel, GithubSrvc) {
 	// if token is available, fetch user information...
 	var oauthCode = $routeParams.code;
-	console.log("The address contains a oauth code. If there is a token already available there is the question, if it is needed to request a new token or if the old token is still valid?");
 	var oauthToken = localStorage.getItem("oauthToken");
+	// token available: request user information
+	// code available: request token, request user information
+	
+	//console.log("The address contains a oauth code. If there is a token already available there is the question, if it is needed to request a new token or if the old token is still valid?");
+	
 	console.log("Token: "+oauthToken);
 	console.log("Code: "+oauthCode);
 	if(typeof oauthCode != 'undefined' && (oauthToken === "undefined" || oauthToken === null)) {
