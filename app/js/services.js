@@ -63,7 +63,7 @@ myApp.service("GithubAuthService", function ($http) {
 				jso_allowia: true
 			});
 		},
-        requestToken: function() {
+        requestToken: function(oauthCode) {
             $http({method: 'GET', url: 'https://maltretieren.herokuapp.com/authenticate/'+oauthCode}).
                 success(function(data, status, headers, config) {
                     if(typeof oauthCode != 'undefined') {
@@ -97,10 +97,10 @@ myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService, $htt
                 // after page reload code is available and it will requestToken()
 			} else if(oauthToken != "undefined" && oauthToken != null) {
 				console.log("Token provided, try to use it - Token: "+oauthToken);
-				GithubUserService.user();
+				GithubUserService.user(oauthToken);
 			} else if(oauthCode != "undefined" && oauthCode != null) {
 				console.log("Code provided, no Token, request token - Code: "+oauthCode)
-                GithubAuthService.requestToken();
+                GithubAuthService.requestToken(oauthCode);
 			} else {
 				console.log("There is something wrong with the login");
 			}
