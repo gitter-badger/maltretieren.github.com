@@ -94,5 +94,7 @@ var urlParams;
 			console.log("final github token:"+data.token);
 			localStorage.setItem("oauthToken", data.token);
 		});
+	} else {
+		console.log("either a token is available or no oauthCode provided. Token:"+oauthToken);
 	};		
 })();
