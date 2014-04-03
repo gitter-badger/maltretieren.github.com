@@ -100,7 +100,7 @@ myApp.controller("GithubCtrl", function ($scope, $routeParams, UserModel, Github
 	}
 	
 	// logout - this is not really a logout from github, but the access token is deleted
-	var logout = function() {
+	$scope.logout = function() {
 		console.log("Logout");
 		GithubSrvc.goodByeGithub();
 	}
