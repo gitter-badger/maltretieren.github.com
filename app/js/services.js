@@ -75,6 +75,7 @@ myApp.service("GithubAuthService", function () {
 
 myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService, $http) {
     return {
+        // there are different states: token & code provided, token or code, nothing
         helloGithub : function(oauthCode, oauthToken) {
 			if((oauthCode === 'undefined' || oauthCode === null) && (oauthToken === "undefined" || oauthToken === null)) {
 				console.log("nothing (no code, no token) provided, redirect to github to grant permissions and after reloading there should be the code");
