@@ -42,7 +42,7 @@ myApp.service("GithubAuthService", function () {
 
 			} else {
 				console.log("oauthToken is not available or not valid");
-				alert("Did you login via github? Otherwise you can connect via Basic Authentication... Please provide a username and password...")
+				console.log("Did you login via github? Otherwise you can connect via Basic Authentication... Please provide a username and password...")
 				this.requestToken();
 			}
 			return github;
