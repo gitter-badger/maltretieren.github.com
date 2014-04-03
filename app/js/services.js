@@ -28,11 +28,23 @@ myApp.service("UtilSrvc", function () {
 
 myApp.service("GithubAuthService", function (GithubUserService, $http) {
 	return {
-		instance : function(oauthToken) {
-		    var github = new Github({
-				token: oauthToken,
-				auth: "oauth"
-			});
+		instance : function() {
+			var github = null;
+			var oauthToken = localStorage.getItem("oauthToken");
+			if(oauthToken != "undefined" && oauthToken != null) {
+				console.log("oauthToken is available");
+				github = new Github({
+					token: oauthToken,
+					auth: "oauth"
+				});
+				this.isTokenValid(oauthToken);
+				// test the token, if it is still valid... if not, 
+
+			} else {
+				console.log("oauthToken is not available or not valid");
+				console.log("Did you login via github? Otherwise you can connect via Basic Authentication... Please provide a username and password...")
+				this.requestToken();
+			}
 			return github;
 		},
 		requestCode: function() {
@@ -57,7 +69,6 @@ myApp.service("GithubAuthService", function (GithubUserService, $http) {
                     if(typeof oauthCode != 'undefined') {
                         console.log("Yaayy, got a token:"+data.token);
                         localStorage.setItem("oauthToken", data.token);
-                        this.instance(data.token);
                         GithubUserService.user(token);
                     } else {
                         console.log("It was not possible to get a token with the provided code");
@@ -117,13 +128,12 @@ myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService, $htt
 
 myApp.service("GithubUserService", function (GithubAuthService, UserModel) {
 	return {
-        // as soon as github is
-		user : function() {
+		user : function(github) {
             user.show('', function(err, res) {
 				if(err) {
 					console.log("there was an error getting user information, maybe the token is invalid?");
 					// delete the token from localStorage, because it is invalid...
-                    GithubAuthService.clearLocalStorage();
+					GithubAuthService.clearLocalStorage();
 					GithubAuthService.requestToken();
 				} else {
 				    console.log("login successfull: "+res.login);
