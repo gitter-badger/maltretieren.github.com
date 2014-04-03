@@ -101,6 +101,7 @@ myApp.service("UserModel", function ($rootScope, GithubUserService) {
 		this.user = {
 			name: userName
 		}
+		console.log("send a userLoggedIn event for user: "+userName);
 		$rootScope.$broadcast('UserModel::userLoggedIn', userName);
 	}
 });
