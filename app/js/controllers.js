@@ -84,8 +84,8 @@ myApp.controller("TableCtrl",function ($scope, $http) {
  */
 myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, GithubSrvc) {
 	// if token is available, fetch user information...
-	console.log($location.search());
-	var oauthCode = $location.search().code
+	var oauthCode = ($location.search()).target;}, true);
+	console.log(oauthCode);
 	var oauthToken = localStorage.getItem("oauthToken");
 	// token available: request user information
 	// code available: request token, request user information
