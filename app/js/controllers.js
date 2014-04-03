@@ -94,13 +94,13 @@ myApp.controller("GithubCtrl", function ($scope, $routeParams, UserModel, Github
 	}
 	
 	// if no token is available listen for button click...
-	$scope.login = function() {
+	var login = function() {
 		console.log("Request login");
 		GithubSrvc.helloGithub();
 	}
 	
 	// logout - this is not really a logout from github, but the access token is deleted
-	$scope.logout = function() {
+	var logout = function() {
 		console.log("Logout");
 		GithubSrvc.goodByeGithub();
 	}
