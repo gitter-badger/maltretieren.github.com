@@ -94,7 +94,7 @@ myApp.controller("GithubCtrl", function ($scope, $routeParams, UserModel, Github
 	}
 	
 	// if no token is available listen for button click...
-	var login = function() {
+	$scope.login = function() {
 		console.log("Request login");
 		GithubSrvc.helloGithub();
 	}
