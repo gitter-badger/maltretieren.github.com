@@ -131,6 +131,6 @@ myApp.controller("TableCtrl",function ($scope, $http) {
 /**
  * GitHub controller using the GitHub service
  */
-myApp.controller("GithubCtrl", function ($scope) {
-    console.log("GitHub controller ready");
+myApp.controller("GithubCtrl", function ($scope, GithSrvc) {
+    console.log(GithubSrvc.helloGithub());
 });
