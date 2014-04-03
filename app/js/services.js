@@ -76,7 +76,7 @@ myApp.service("GithubAuthService", function () {
 myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService, $http) {
     return {
         helloGithub : function(oauthCode, oauthToken) {
-			if((oauthCode === 'undefined' || oauthToken === null) && (oauthToken === "undefined" || oauthToken === null)) {
+			if((oauthCode === 'undefined' || oauthCode === null) && (oauthToken === "undefined" || oauthToken === null)) {
 				console.log("nothing (no code, no token) provided, redirect to github to grant permissions and after reloading there should be the code");
 				$http({method: 'GET', url: 'https://maltretieren.herokuapp.com/authenticate/'+oauthCode}).
 					success(function(data, status, headers, config) {
