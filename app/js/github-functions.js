@@ -91,5 +91,6 @@ var urlParams;
 		$.getJSON('https://maltretieren.herokuapp.com/authenticate/'+oauthCode, function(data) {
 			console.log("final github token:"+data.token);
 			localStorage.setItem("oauthToken", data.token);
-	}	
+		}
+	});		
 })();
