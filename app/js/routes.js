@@ -2,7 +2,7 @@
 
 var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap']);
 
-myApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+myApp.config(function ($routeProvider, $locationProvider) {
     $routeProvider.when(
     	'/view1', 
     	{
