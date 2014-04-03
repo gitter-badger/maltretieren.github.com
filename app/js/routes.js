@@ -1,12 +1,10 @@
 'use strict';
 
 
-var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap', '$locationProvider', function($locationProvider) {
-	// turning on html5Mode to have access to the parameters of the url
-	$locationProvider.html5Mode(true);
-}]);
+var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap', '$locationProvider']);
 
-myApp.config(function($routeProvider) {
+
+myApp.config(function($routeProvider, $locationProvider) {
     $routeProvider.when(
     	'/view1', 
     	{
@@ -23,4 +21,8 @@ myApp.config(function($routeProvider) {
         {
             redirectTo: '/view1'
         });
+	$locationProvider {
+		// turning on html5Mode to have access to the parameters of the url
+		$locationProvider.html5Mode(true);
+	});
 });
