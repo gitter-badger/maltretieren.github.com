@@ -57,25 +57,30 @@ myApp.service("GithubAuthService", function () {
 					token: oauthToken,
 					auth: "oauth"
 				});
+				// test the token, if it is still valid... if not, 
+				requestToken();
 			} else {
 				console.log("oauthToken is not available or not valid");
 				alert("Did you login via github? Otherwise you can connect via Basic Authentication... Please provide a username and password...")
 				
-				// request a token
-				jso_configure({
-					"github": {
-						client_id: "e5923f3d7f1182fe886f",
-						redirect_uri: "http://maltretieren.github.com",
-						authorization: "https://github.com/login/oauth/authorize?scope=public_repo"
-					}
-				});
-		
-				$.oajax({
-					jso_provider: "github",
-					jso_allowia: true
-				});
+				
 			}
 			return github;
+		},
+		requestToken: function() {
+			// request a token
+			jso_configure({
+				"github": {
+					client_id: "e5923f3d7f1182fe886f",
+					redirect_uri: "http://maltretieren.github.com",
+					authorization: "https://github.com/login/oauth/authorize?scope=public_repo"
+				}
+			});
+	
+			$.oajax({
+				jso_provider: "github",
+				jso_allowia: true
+			});
 		}
     }
 });
