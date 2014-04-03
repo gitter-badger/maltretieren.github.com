@@ -99,7 +99,7 @@ myApp.service("UserModel", function (GithubUserService) {
 	this.login = function(userName) {
 		this.loggedIn = true;
 		this.user = {
-			name: userName
+			name: "Maltretieren"
 		}
 		$rootScope.$broadcast('UserModel::userLoggedIn', userName);
 	}
