@@ -28,7 +28,9 @@ myApp.service("UtilSrvc", function () {
 
 myApp.service("GithubAuthService", function ($http) {
 	return {
-        github: null;
+        github: null,
+        code: null,
+        token: null,
 		instance : function(oauthToken) {
             localStorage.setItem("oauthToken", data.token);
 		    this.github = new Github({
@@ -79,7 +81,14 @@ myApp.service("GithubAuthService", function ($http) {
 myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService, $http) {
     return {
         // there are different states: token & code provided, token or code, nothing
+
         helloGithub : function(oauthCode, oauthToken) {
+            // watch token, code, user, github
+            // code available: request token
+            // token available: init github
+            // github available: get user
+            // user available: update view (logout -> clear token, code, user, github)
+
             if((oauthCode === 'undefined' || oauthCode === null) && (oauthToken === "undefined" || oauthToken === null)) {
 				console.log("nothing (no code, no token) provided, redirect to github to grant permissions and after reloading there should be the code");
                 GithubAuthService.requestCode();
