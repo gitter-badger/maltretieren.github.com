@@ -17,11 +17,10 @@ myApp.config(function($routeProvider, $locationProvider) {
     		templateUrl: '/assets/partials/partial2.html',
     		controller: 'MyCtrl2'
     	});
-    $routeProvider.otherwise(
-        {
+    $routeProvider.otherwise({
             redirectTo: '/view1'
         });
-	$locationProvider {
+	$locationProvider({
 		// turning on html5Mode to have access to the parameters of the url
 		$locationProvider.html5Mode(true);
 	});
