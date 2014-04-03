@@ -145,7 +145,7 @@ myApp.controller("GithubCtrl", function ($scope, UserModel, GithubSrvc) {
 		GithubSrvc.helloGithub();
 	}
 
-	$scope.user = "";
+	$scope.user = UserModel.user.name;
 	$scope.$on('UserModel::userLoggedIn', function(event) {
         $scope.user = UserModel.user.name;
     });
