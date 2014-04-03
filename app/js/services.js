@@ -76,6 +76,9 @@ myApp.service("GithubAuthService", function () {
 myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService) {
     return {
         helloGithub : function(oauthCode, oauthToken) {
+			if(oauthToken === "undefined" || oauthToken === null) {
+				console.log("Token provided, try to use it...");
+			}
 			if(typeof oauthCode != 'undefined' && (oauthToken === "undefined" || oauthToken === null)) {
 				console.log("Oauth token is not defined - but there was a code: try to request and save the final token");
 				$http({method: 'GET', url: 'https://maltretieren.herokuapp.com/authenticate/'+oauthCode}).
