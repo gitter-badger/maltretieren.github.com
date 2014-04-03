@@ -101,8 +101,13 @@ myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService) {
         helloGithub : function() {
         	var userName = GithubUserService.user();
 			return userName;
-        }
+        },
+		goodByeGithub : function() {
+			GithubAuthService.clearLocalStorage();
+		}
     }
+	
+
 	
 	// the service should be responsible for
 	// - check if a token is available
