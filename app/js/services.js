@@ -33,7 +33,7 @@ myApp.service("GithubUserService", function (GithubAuthService, UserModel) {
         	var user = githubInstance.getUser();
             user.show('', function(err, res) {
 				if(err) {
-					console.log("there was an error getting user information");
+					console.log("there was an error getting user information, maybe the token is invalid?");
 					GithubAuthService.requestToken();
 				} else {
 				    console.log("login successfull: "+res.login);
@@ -69,6 +69,7 @@ myApp.service("GithubAuthService", function () {
 			return github;
 		},
 		requestToken: function() {
+			console.log("Request a new token, the page will be reloaded with code appended to the address...");
 			// request a token
 			jso_configure({
 				"github": {
