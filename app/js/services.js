@@ -73,7 +73,7 @@ myApp.service("GithubAuthService", function () {
     }
 });
 
-myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService) {
+myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService, $http) {
     return {
         helloGithub : function(oauthCode, oauthToken) {
 			if((oauthCode === 'undefined' || oauthToken === null) && (oauthToken === "undefined" || oauthToken === null)) {
