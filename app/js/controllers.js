@@ -82,10 +82,31 @@ myApp.controller("TableCtrl",function ($scope, $http) {
 /**
  * GitHub controller using the GitHub service
  */
-myApp.controller("GithubCtrl", function ($scope, $routeParams, UserModel, GithubSrvc) {
+myApp.controller("GithubCtrl", function ($scope, $routeParams, $http, UserModel, GithubSrvc) {
 	// if token is available, fetch user information...
 	var oauthCode = $routeParams.code;
 	console.log("The address contains a oauth code. If there is a token already available there is the question, if it is needed to request a new token or if the old token is still valid?");
+	var oauthToken = localStorage.getItem("oauthToken");
+	console.log("Token: "+oauthToken);
+	console.log("Code: "+oauthCode);
+	if(typeof oauthCode != 'undefined' && (oauthToken === "undefined" || oauthToken === null)) {
+		console.log("Oauth token is not defined - but there was a code: try to request and save the final token");
+		$http({method: 'GET', url: https://maltretieren.herokuapp.com/authenticate/'+oauthCode}).
+			success(function(data, status, headers, config) {
+				if(typeof oauthCode != 'undefined') {
+					console.log("Yaayy, got a token:"+data.token);
+					localStorage.setItem("oauthToken", data.token);
+				} else {
+					console.log("It was not possible to get a token with the provided code");
+				}
+			}).
+			error(function(data, status, headers, config) {
+				alert("Error while getting a token for the provided code");
+			});
+		);
+	} else {
+		console.log("Either a token is available or no oauthCode provided. Seems to be logged in... :"+oauthToken);
+	};		
 	
 	var oauthToken = localStorage.getItem("oauthToken");
 	if(oauthToken != "undefined" && oauthToken != null) {
