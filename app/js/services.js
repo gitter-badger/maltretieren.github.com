@@ -91,3 +91,16 @@ myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService) {
 	// - if the commit is successfull it's the admin user
 	// - else it's a guest user
 });
+
+myApp.service("UserModel", function (GithubUserService) {
+	this.user = {}
+	this.loggedIn = false;
+	
+	this.login(userName) {
+		this.loggedIn = true;
+		this.user = {
+			name: userName;
+		}
+		$rootScope.$broadcast('UserModel::userLoggedIn', userName);
+	}
+});

@@ -131,7 +131,7 @@ myApp.controller("TableCtrl",function ($scope, $http) {
 /**
  * GitHub controller using the GitHub service
  */
-myApp.controller("GithubCtrl", function ($scope, GithubSrvc) {
+myApp.controller("GithubCtrl", function ($scope, UserModel, GithubSrvc) {
 	// if token is available, fetch user information...
 	var oauthToken = localStorage.getItem("oauthToken");
 	if(oauthToken != "undefined" && oauthToken != null) {
@@ -144,4 +144,9 @@ myApp.controller("GithubCtrl", function ($scope, GithubSrvc) {
 		console.log("Request login");
 		GithubSrvc.helloGithub();
 	}
+
+	$scope.user = "";
+	$scope.$on('UserModel::userLoggedIn', function(event) {
+        $scope.user = UserModel.user.name;
+    });
 });
