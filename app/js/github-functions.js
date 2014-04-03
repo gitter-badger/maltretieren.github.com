@@ -97,6 +97,6 @@ var urlParams;
 			localStorage.setItem("oauthToken", data.token);
 		});
 	} else {
-		console.log("Either a token is available or no oauthCode provided. Token:"+oauthToken);
+		console.log("Either a token is available or no oauthCode provided. Seems to be logged in... :"+oauthToken);
 	};		
 })();
