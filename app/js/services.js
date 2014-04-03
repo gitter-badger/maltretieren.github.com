@@ -35,6 +35,7 @@ myApp.service("GithubUserService", function (GithubAuthService, UserModel) {
 				if(err) {
 					console.log("there was an error getting user information, maybe the token is invalid?");
 					// delete the token from localStorage, because it is invalid...
+					GithubAuthService.clearLocalStorage();
 					//GithubAuthService.requestToken();
 				} else {
 				    console.log("login successfull: "+res.login);
@@ -87,6 +88,10 @@ myApp.service("GithubAuthService", function () {
 		},
 		isTokenValid: function(token) {
 			console.log("Test if the token is still valid...");
+		},
+		clearLocalStorage: function() {
+			// tokens are stored in local storage
+			localStorage.clear();
 		}
     }
 });
