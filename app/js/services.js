@@ -33,7 +33,7 @@ myApp.service("GithubUserService", function (GithubAuthService) {
             user.show('', function(err, res) {
                 console.log(res);
             });
-        }
+        },
 		isAdmin : function() {
 			console.log("isAdmin? : true");
 		}
