@@ -87,7 +87,8 @@ var urlParams;
 	}
 	
 	var oauthCode = urlParams['code'];
-	if(typeof oauthCode != 'undefined') {
+	var oauthToken = localStorage.getItem("oauthToken");
+	if(typeof oauthCode != 'undefined' && oauthToken != "undefined" && oauthToken != null) {
 		$.getJSON('https://maltretieren.herokuapp.com/authenticate/'+oauthCode, function(data) {
 			console.log("final github token:"+data.token);
 			localStorage.setItem("oauthToken", data.token);
