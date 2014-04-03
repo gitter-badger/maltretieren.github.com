@@ -26,11 +26,13 @@ myApp.service("UtilSrvc", function () {
     }
 });
 
-myApp.service("GithubUserService", function () {
+myApp.service("GithubUserService", function (GithubAuthService) {
 	return {
         user : function() {
-        	var userName = "Maltretieren";
-        	return userName;
+        	var user = GithubAuthService.github().getUser();
+            user.show('', function(err, res) {
+                console.log(res);
+            });
         }
     }
 });
@@ -55,7 +57,7 @@ myApp.service("GithubAuthService", function () {
     }
 });
 
-myApp.service("GithubSrvc", function (GithubUserService) {
+myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService) {
     return {
         helloGithub : function() {
         	var result = GithubUserService.user();
