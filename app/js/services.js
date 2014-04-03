@@ -128,7 +128,9 @@ myApp.service("GithubUserService", function (GithubAuthService, UserModel) {
 // Inspired by http://joelhooks.com/blog/2013/04/24/modeling-data-and-state-in-your-angularjs-application/
 myApp.service("UserModel", function ($rootScope) {
 	this.user = {};
-	this.loggedIn = false;
+	this.isAdmin = false;
+	this.token = "";
+	
 	this.login = function(userName) {
 		this.loggedIn = true;
 		this.user = {
