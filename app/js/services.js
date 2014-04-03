@@ -29,7 +29,7 @@ myApp.service("UtilSrvc", function () {
 myApp.service("GithubUserService", function (GithubAuthService) {
 	return {
         user : function() {
-        	var user = GithubAuthService.github().getUser();
+        	var user = GithubAuthService.instance.getUser();
             user.show('', function(err, res) {
                 console.log(res);
             });
@@ -39,7 +39,7 @@ myApp.service("GithubUserService", function (GithubAuthService) {
 
 myApp.service("GithubAuthService", function () {
 	return {
-		github : function() {
+		instance : function() {
 			var github = null;
 			var oauthToken = localStorage.getItem("oauthToken");
 			if(oauthToken != "undefined" && oauthToken != null) {
