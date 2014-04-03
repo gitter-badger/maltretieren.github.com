@@ -34,6 +34,7 @@ myApp.service("GithubUserService", function (GithubAuthService, UserModel) {
             user.show('', function(err, res) {
 				if(err) {
 					console.log("there was an error getting user information, maybe the token is invalid?");
+					// delete the token from localStorage, because it is invalid...
 					GithubAuthService.requestToken();
 				} else {
 				    console.log("login successfull: "+res.login);
