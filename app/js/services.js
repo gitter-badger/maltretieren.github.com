@@ -26,32 +26,6 @@ myApp.service("UtilSrvc", function () {
     }
 });
 
-myApp.service("GithubUserService", function (GithubAuthService, UserModel) {
-	return {
-		user : function() {
-		    var githubInstance = GithubAuthService.instance();
-        	var user = githubInstance.getUser();
-            user.show('', function(err, res) {
-				if(err) {
-					console.log("there was an error getting user information, maybe the token is invalid?");
-					// delete the token from localStorage, because it is invalid...
-					GithubAuthService.clearLocalStorage();
-					GithubAuthService.requestToken();
-				} else {
-				    console.log("login successfull: "+res.login);
-					UserModel.login(res.login);
-				}
-            });
-        },
-		isAdmin : function() {
-			console.log("isAdmin? : true");
-		},
-		logout : function() {
-			UserModel.logout();
-		}
-    }
-});
-
 myApp.service("GithubAuthService", function () {
 	return {
 		instance : function() {
@@ -124,6 +98,32 @@ myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService) {
 	// 		- request a token
 });
 
+myApp.service("GithubUserService", function (GithubAuthService, UserModel) {
+	return {
+		user : function() {
+		    var githubInstance = GithubAuthService.instance();
+        	var user = githubInstance.getUser();
+            user.show('', function(err, res) {
+				if(err) {
+					console.log("there was an error getting user information, maybe the token is invalid?");
+					// delete the token from localStorage, because it is invalid...
+					GithubAuthService.clearLocalStorage();
+					GithubAuthService.requestToken();
+				} else {
+				    console.log("login successfull: "+res.login);
+					UserModel.login(res.login);
+				}
+            });
+        },
+		isAdmin : function() {
+			console.log("isAdmin? : true");
+		},
+		logout : function() {
+			UserModel.logout();
+		}
+    }
+});
+
 // Inspired by http://joelhooks.com/blog/2013/04/24/modeling-data-and-state-in-your-angularjs-application/
 myApp.service("UserModel", function ($rootScope) {
 	this.user = {};
@@ -138,7 +138,7 @@ myApp.service("UserModel", function ($rootScope) {
 	};
 	this.logout = function() {
 		this.user = {};
-		this.loggedIn = flase;
+		this.loggedIn = false;
 		console.log("send a userLoggedOut event");
 		$rootScope.$broadcast('UserModel::userLoggedOut');
 	}
