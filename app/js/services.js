@@ -26,7 +26,7 @@ myApp.service("UtilSrvc", function () {
     }
 });
 
-myApp.service("GithubAuthService", function (GithubUserService, $http) {
+myApp.service("GithubAuthService", function ($http) {
 	return {
 		instance : function() {
 			var github = null;
@@ -63,13 +63,12 @@ myApp.service("GithubAuthService", function (GithubUserService, $http) {
 				jso_allowia: true
 			});
 		},
-        requestToken: function(oauthCode) {
+        requestToken: function() {
             $http({method: 'GET', url: 'https://maltretieren.herokuapp.com/authenticate/'+oauthCode}).
                 success(function(data, status, headers, config) {
                     if(typeof oauthCode != 'undefined') {
                         console.log("Yaayy, got a token:"+data.token);
                         localStorage.setItem("oauthToken", data.token);
-                        GithubUserService.user(token);
                     } else {
                         console.log("It was not possible to get a token with the provided code");
                     }
@@ -98,10 +97,10 @@ myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService, $htt
                 // after page reload code is available and it will requestToken()
 			} else if(oauthToken != "undefined" && oauthToken != null) {
 				console.log("Token provided, try to use it - Token: "+oauthToken);
-				GithubUserService.user(oauthCode);
+				GithubUserService.user();
 			} else if(oauthCode != "undefined" && oauthCode != null) {
 				console.log("Code provided, no Token, request token - Code: "+oauthCode)
-                GithubAuthService.requestToken(oauthCode);
+                GithubAuthService.requestToken();
 			} else {
 				console.log("There is something wrong with the login");
 			}
@@ -128,7 +127,9 @@ myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService, $htt
 
 myApp.service("GithubUserService", function (GithubAuthService, UserModel) {
 	return {
-		user : function(github) {
+		user : function() {
+		    var githubInstance = GithubAuthService.instance();
+        	var user = githubInstance.getUser();
             user.show('', function(err, res) {
 				if(err) {
 					console.log("there was an error getting user information, maybe the token is invalid?");
