@@ -76,11 +76,8 @@ myApp.service("GithubAuthService", function () {
 myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService) {
     return {
         helloGithub : function(oauthCode, oauthToken) {
-			if(oauthToken === "undefined" || oauthToken === null) {
-				console.log("Token provided, try to use it...");
-			}
-			if(typeof oauthCode != 'undefined' && (oauthToken === "undefined" || oauthToken === null)) {
-				console.log("Oauth token is not defined - but there was a code: try to request and save the final token");
+			if((authCode === 'undefined' || oauthToken === null) && (oauthToken === "undefined" || oauthToken === null)) {
+				console.log("nothing (no code, no token) provided, redirect to github to grant permissions and after reloading there should be the code");
 				$http({method: 'GET', url: 'https://maltretieren.herokuapp.com/authenticate/'+oauthCode}).
 					success(function(data, status, headers, config) {
 						if(typeof oauthCode != 'undefined') {
@@ -93,16 +90,15 @@ myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService) {
 					error(function(data, status, headers, config) {
 						alert("Error while getting a token for the provided code");
 				});
+			} else if(oauthToken != "undefined" || oauthToken != null) {
+				console.log("Token provided, try to use it - Token: "+oauthToken);
+				var userName = GithubUserService.user();
+				return userName;
+			} else if(oauthCode != "undefined" || oauthCode != null) {
+				console.log("Code provided, request Token - Code: "+oauthCode)
 			} else {
-				console.log("Either a token is available or no oauthCode provided. Seems to be logged in... :"+oauthToken);
-			};		
-
-			if(oauthToken != "undefined" && oauthToken != null) {
-				console.log("Token provided, get username");
-				GithubSrvc.helloGithub();
+				console.log("There is something wrong with the login");
 			}
-        	var userName = GithubUserService.user();
-			return userName;
         },
 		goodByeGithub : function() {
 			GithubUserService.logout();
