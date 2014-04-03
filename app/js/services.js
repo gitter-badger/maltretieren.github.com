@@ -126,28 +126,25 @@ myApp.service("GithubSrvc", function (GithubAuthService, $http) {
 });
 
 myApp.service("GithubUserService", function (GithubAuthService, UserModel) {
-	return {
-		user : function() {
-		    var githubInstance = GithubAuthService.instance();
-        	var user = githubInstance.getUser();
-            user.show('', function(err, res) {
-				if(err) {
-					console.log("there was an error getting user information, maybe the token is invalid?");
-					// delete the token from localStorage, because it is invalid...
-					GithubAuthService.clearLocalStorage();
-					GithubAuthService.requestToken();
-				} else {
-				    console.log("login successfull: "+res.login);
-					UserModel.login(res.login);
-				}
-            });
-        },
-		isAdmin : function() {
-			console.log("isAdmin? : true");
-		},
-		logout : function() {
-			UserModel.logout();
-		}
+    var user = function() {
+        var githubInstance = GithubAuthService.instance();
+        var user = githubInstance.getUser();
+        user.show('', function(err, res) {
+            if(err) {
+                console.log("there was an error getting user information, maybe the token is invalid?");
+                // delete the token from localStorage, because it is invalid...
+                GithubAuthService.clearLocalStorage();
+                GithubAuthService.requestToken();
+            } else {
+                console.log("login successfull: "+res.login);
+                UserModel.login(res.login);
+            }
+        });
+    };
+
+    return {
+        user: function() { return user(); },
+        logout: function() { return UserModel.logout(); }
     }
 });
 
