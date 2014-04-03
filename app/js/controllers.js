@@ -133,10 +133,14 @@ myApp.controller("TableCtrl",function ($scope, $http) {
  */
 myApp.controller("GithubCtrl", function ($scope, GithubSrvc) {
 	// if token is available, fetch user information...
+	var oauthToken = localStorage.getItem("oauthToken");
+	if(oauthToken != "undefined" && oauthToken != null) {
+		GithubSrvc.helloGithub();
+	}
 	
 	// if no token is available listen for button click...
 	$scope.loginWithGithub = function() {
 		console.log("Request login");
-		GithubSrvc.helloGithub()
+		GithubSrvc.helloGithub();
 	}
 });
