@@ -34,6 +34,7 @@ myApp.service("GithubUserService", function (GithubAuthService, UserModel) {
             user.show('', function(err, res) {
 				if(err) {
 					console.log("there was an error getting user information");
+					this.requestToken();
 				} else {
 				    console.log("login successfull: "+res.login);
 					UserModel.login(res.login);
