@@ -95,10 +95,9 @@ myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService) {
 myApp.service("UserModel", function (GithubUserService) {
 	this.user = {}
 	this.loggedIn = false;
-	
-	this.login(userName) {
+	this.login = function(userName) {
 		this.loggedIn = true;
-		this.user = {
+		this.user: {
 			name: userName;
 		}
 		$rootScope.$broadcast('UserModel::userLoggedIn', userName);
