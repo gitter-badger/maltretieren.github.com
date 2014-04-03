@@ -132,5 +132,11 @@ myApp.controller("TableCtrl",function ($scope, $http) {
  * GitHub controller using the GitHub service
  */
 myApp.controller("GithubCtrl", function ($scope, GithubSrvc) {
-    console.log(GithubSrvc.helloGithub());
+	// if token is available, fetch user information...
+	
+	// if no token is available listen for button click...
+	$scope.loginWithGithub = function() {
+		console.log("Request login");
+		GithubSrvc.helloGithub()
+	}
 });

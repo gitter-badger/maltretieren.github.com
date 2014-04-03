@@ -85,39 +85,4 @@ var urlParams;
 		});
 		$('#target-editor').show();
 	}
-	
-	var oauthCode = urlParams['code'];
-	if(typeof oauthCode != 'undefined') {
-		$.getJSON('https://maltretieren.herokuapp.com/authenticate/'+oauthCode, function(data) {
-			console.log("final github token:"+data.token);
-			localStorage.setItem("oauthToken", data.token);
-
-            var github = new Github({
-                token: data.token,
-                auth: "oauth"
-            });
-            var user = github.getUser();
-            user.show('', function(err, res) {
-                console.log(res);
-            });
-		});
-	}
-	
-	$('#oauthButton').click(function(e) {
-		e.preventDefault();
-		
-		jso_configure({
-			"github": {
-				client_id: "e5923f3d7f1182fe886f",
-				redirect_uri: "http://maltretieren.github.com",
-				authorization: "https://github.com/login/oauth/authorize?scope=public_repo"
-			}
-		});
-	
-	 	$.oajax({
-			jso_provider: "github",
-			jso_allowia: true
-		});
-	});
-	
 })();
