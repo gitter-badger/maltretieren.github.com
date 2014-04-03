@@ -47,7 +47,7 @@ myApp.service("GithubAuthService", function () {
 			}
 			return github;
 		},
-		requestToken: function() {
+		requestCode: function() {
 			console.log("Request a new token, the page will be reloaded with code appended to the address...");
 			// request a token
 			jso_configure({
@@ -63,6 +63,20 @@ myApp.service("GithubAuthService", function () {
 				jso_allowia: true
 			});
 		},
+        requestToken: function() {
+            $http({method: 'GET', url: 'https://maltretieren.herokuapp.com/authenticate/'+oauthCode}).
+                success(function(data, status, headers, config) {
+                    if(typeof oauthCode != 'undefined') {
+                        console.log("Yaayy, got a token:"+data.token);
+                        localStorage.setItem("oauthToken", data.token);
+                    } else {
+                        console.log("It was not possible to get a token with the provided code");
+                    }
+                }).
+                error(function(data, status, headers, config) {
+                    alert("Error while getting a token for the provided code");
+            });
+        },
 		isTokenValid: function(token) {
 			console.log("Test if the token is still valid...");
 		},
@@ -79,24 +93,14 @@ myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService, $htt
         helloGithub : function(oauthCode, oauthToken) {
 			if((oauthCode === 'undefined' || oauthCode === null) && (oauthToken === "undefined" || oauthToken === null)) {
 				console.log("nothing (no code, no token) provided, redirect to github to grant permissions and after reloading there should be the code");
-				$http({method: 'GET', url: 'https://maltretieren.herokuapp.com/authenticate/'+oauthCode}).
-					success(function(data, status, headers, config) {
-						if(typeof oauthCode != 'undefined') {
-							console.log("Yaayy, got a token:"+data.token);
-							localStorage.setItem("oauthToken", data.token);
-						} else {
-							console.log("It was not possible to get a token with the provided code");
-						}
-					}).
-					error(function(data, status, headers, config) {
-						alert("Error while getting a token for the provided code");
-				});
+
 			} else if(oauthToken != "undefined" && oauthToken != null) {
 				console.log("Token provided, try to use it - Token: "+oauthToken);
 				var userName = GithubUserService.user();
 				return userName;
 			} else if(oauthCode != "undefined" && oauthCode != null) {
-				console.log("Code provided, request Token - Code: "+oauthCode)
+				console.log("Code provided, no Token, request token - Code: "+oauthCode)
+                GithubAuthService.requestToken();
 			} else {
 				console.log("There is something wrong with the login");
 			}
