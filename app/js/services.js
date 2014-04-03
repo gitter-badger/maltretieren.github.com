@@ -33,7 +33,7 @@ myApp.service("GithubUserService", function (GithubAuthService, UserModel) {
         	var user = githubInstance.getUser();
             user.show('', function(err, res) {
                 console.log(res);
-				UserModel.login(userName);
+				UserModel.login(res.login);
             });
         },
 		isAdmin : function() {
