@@ -106,8 +106,7 @@ myApp.controller("GithubCtrl", function ($scope, $routeParams, $http, UserModel,
 			}).
 			error(function(data, status, headers, config) {
 				alert("Error while getting a token for the provided code");
-			});
-		);
+		});
 	} else {
 		console.log("Either a token is available or no oauthCode provided. Seems to be logged in... :"+oauthToken);
 	};		
