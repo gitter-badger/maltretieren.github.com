@@ -58,12 +58,11 @@ myApp.service("GithubAuthService", function () {
 					auth: "oauth"
 				});
 				// test the token, if it is still valid... if not, 
-				//this.requestToken();
+
 			} else {
 				console.log("oauthToken is not available or not valid");
 				alert("Did you login via github? Otherwise you can connect via Basic Authentication... Please provide a username and password...")
-				
-				
+				this.requestToken();
 			}
 			return github;
 		},
@@ -81,6 +80,9 @@ myApp.service("GithubAuthService", function () {
 				jso_provider: "github",
 				jso_allowia: true
 			});
+		},
+		isTokenValid: function(token) {
+			console.log("Test if the token is still valid...");
 		}
     }
 });
