@@ -82,7 +82,7 @@ myApp.controller("TableCtrl",function ($scope, $http) {
 /**
  * GitHub controller using the GitHub service
  */
-myApp.controller("GithubCtrl", function ($scope, $http, UserModel, GithubSrvc) {
+myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, GithubSrvc) {
 	// if token is available, fetch user information...
 	console.log(($location.search()).code);
 	var oauthCode = ($location.search()).code;
