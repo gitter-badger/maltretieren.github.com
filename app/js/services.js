@@ -114,7 +114,7 @@ myApp.service("GithubSrvc", function (GithubUserService, GithubAuthService, $htt
 	// 		- request a token
 });
 
-myApp.service("GithubUserService", function (GithubAuthService, UserModel) {
+myApp.service("GithubUserService", function (UserModel) {
 	return {
         // as soon as github changes from null, request the user
 		user : function() {
@@ -122,8 +122,6 @@ myApp.service("GithubUserService", function (GithubAuthService, UserModel) {
 				if(err) {
 					console.log("there was an error getting user information, maybe the token is invalid?");
 					// delete the token from localStorage, because it is invalid...
-                    GithubAuthService.clearLocalStorage();
-					GithubAuthService.requestToken();
 				} else {
 				    console.log("login successfull: "+res.login);
 					UserModel.login(res.login);
