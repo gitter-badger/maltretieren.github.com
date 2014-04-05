@@ -91,7 +91,7 @@ myApp.service("GithubSrvc", function (GithubAuthService, UserModel, ParameterSrv
 			} else if(typeof oauthCode != "undefined" && (oauthToken != 'undefined' || oauthToken != null)) {
 				console.log("Code provided, no Token, request token - Code: "+oauthCode)
                 var callback = function() {
-                    this.userInfo().user();
+                    GithubSrvc.userInfo().user();
                 }
                 GithubAuthService.requestToken(oauthCode, callback);
 			} else {
