@@ -82,8 +82,24 @@ myApp.controller("TableCtrl",function ($scope, $http) {
 /**
  * GitHub controller using the GitHub service
  */
-myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, GithubSrvc) {
-	var oauthCode = $location.search().code;
+myApp.controller("GithubCtrl", function ($scope, $window, $http, UserModel, GithubSrvc) {
+    /**
+     This is a helper function
+     **/
+    var urlParams;
+    ($window.onpopstate = function () {
+        var match,
+            pl     = /\+/g,  // Regex for replacing addition symbol with a space
+            search = /([^&=]+)=?([^&]*)/g,
+            decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+            query  = window.location.search.substring(1);
+
+        urlParams = {};
+        while (match = search.exec(query))
+            urlParams[decode(match[1])] = decode(match[2]);
+    })();
+
+	var oauthCode = urlParams['code'];
 	var oauthToken = localStorage.getItem("oauthToken");
 	
 	console.log("Token: "+oauthToken);
@@ -114,3 +130,4 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, Gi
         $scope.user = "";
     });
 });
+
