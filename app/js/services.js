@@ -103,13 +103,35 @@ myApp.service("GithubSrvc", function (GithubAuthService, ParameterSrvc, $http) {
                 // after page reload code is available and it will requestToken()
 			} else if(oauthToken != "undefined" && oauthToken != null) {
 				console.log("Token provided, try to use it - Token: "+oauthToken);
-				//GithubUserService.user();
+			    userInfo();
 			} else if(oauthCode != "undefined" && oauthCode != null) {
 				console.log("Code provided, no Token, request token - Code: "+oauthCode)
                 GithubAuthService.requestToken(oauthCode);
 			} else {
 				console.log("There is something wrong with the login");
 			}
+        },
+        userInfo: function() {
+            var user = function() {
+                var githubInstance = GithubAuthService.instance();
+                var user = githubInstance.getUser();
+                user.show('', function(err, res) {
+                    if(err) {
+                        console.log("there was an error getting user information, maybe the token is invalid?");
+                        // delete the token from localStorage, because it is invalid...
+                        GithubAuthService.clearLocalStorage();
+                        GithubAuthService.requestToken();
+                    } else {
+                        console.log("login successfull: "+res.login);
+                        UserModel.login(res.login);
+                    }
+                });
+            };
+
+            return {
+                user: function() { return user(); },
+                logout: function() { return UserModel.logout(); }
+            }
         },
 		goodByeGithub : function() {
 			GithubUserService.logout();
@@ -129,29 +151,6 @@ myApp.service("GithubSrvc", function (GithubAuthService, ParameterSrvc, $http) {
 	// 		- else it's a guest user
 	// - if no token is available
 	// 		- request a token
-});
-
-myApp.service("GithubUserService", function (GithubAuthService, UserModel) {
-    var user = function() {
-        var githubInstance = GithubAuthService.instance();
-        var user = githubInstance.getUser();
-        user.show('', function(err, res) {
-            if(err) {
-                console.log("there was an error getting user information, maybe the token is invalid?");
-                // delete the token from localStorage, because it is invalid...
-                GithubAuthService.clearLocalStorage();
-                GithubAuthService.requestToken();
-            } else {
-                console.log("login successfull: "+res.login);
-                UserModel.login(res.login);
-            }
-        });
-    };
-
-    return {
-        user: function() { return user(); },
-        logout: function() { return UserModel.logout(); }
-    }
 });
 
 // Inspired by http://joelhooks.com/blog/2013/04/24/modeling-data-and-state-in-your-angularjs-application/
