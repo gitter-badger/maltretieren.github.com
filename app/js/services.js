@@ -72,6 +72,8 @@ myApp.service("GithubAuthService", function ($http) {
 });
 
 myApp.service("GithubSrvc", function (GithubAuthService, UserModel, ParameterSrvc, $http) {
+    var self = this;
+
     return {
         // there are different states: token & code provided, token or code, nothing
         helloGithub : function(oauthCode, oauthToken) {
@@ -91,7 +93,7 @@ myApp.service("GithubSrvc", function (GithubAuthService, UserModel, ParameterSrv
 			} else if(typeof oauthCode != "undefined" && (oauthToken != 'undefined' || oauthToken != null)) {
 				console.log("Code provided, no Token, request token - Code: "+oauthCode)
                 var callback = function() {
-                    GithubSrvc.userInfo().user();
+                    self.userInfo().user();
                 }
                 GithubAuthService.requestToken(oauthCode, callback);
 			} else {
