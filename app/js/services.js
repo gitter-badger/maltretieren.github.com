@@ -18,7 +18,7 @@ myApp.service("GithubAuthService", function ($http) {
             error =function() {
                 alert("error");
             }
-        }
+        },
 		instance : function() {
 			var github = null;
 			var oauthToken = localStorage.getItem("oauthToken");
