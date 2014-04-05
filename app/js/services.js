@@ -26,7 +26,7 @@ myApp.service("UtilSrvc", function () {
     }
 });
 
-myApp.service("GithubAuthService", function ($http) {
+myApp.service("GithubAuthService", function ($http, $scope) {
 	return {
 		instance : function() {
 			var github = null;
@@ -63,12 +63,13 @@ myApp.service("GithubAuthService", function ($http) {
 				jso_allowia: true
 			});
 		},
-        requestToken: function(oauthCode) {
+        requestToken: function(oauthCode, callback) {
             $http({method: 'GET', url: 'https://maltretieren.herokuapp.com/authenticate/'+oauthCode}).
                 success(function(data, status, headers, config) {
                     if(typeof oauthCode != 'undefined') {
                         console.log("Yaayy, got a token:"+data.token);
                         localStorage.setItem("oauthToken", data.token);
+                        callback();
                     } else {
                         console.log("It was not possible to get a token with the provided code");
                     }
@@ -102,11 +103,14 @@ myApp.service("GithubSrvc", function (GithubAuthService, UserModel, ParameterSrv
                 GithubAuthService.requestCode();
                 // after page reload code is available and it will requestToken()
 			} else if(typeof oauthToken != 'undefined' && oauthToken != null && oauthToken != 'undefined') {
-				console.log("Token provided, try to use it - Token: "+oauthToken);
+				console.log("Token provided, try to use it - Token: "+oauthToken)
 			    this.userInfo().user();
 			} else if(typeof oauthCode != "undefined" && (oauthToken != 'undefined' || oauthToken != null)) {
 				console.log("Code provided, no Token, request token - Code: "+oauthCode)
-                GithubAuthService.requestToken(oauthCode);
+                var callback = function() {
+                    alert("callback");
+                }
+                GithubAuthService.requestToken(oauthCode, callback);
 			} else {
 				console.log("There is something wrong with the login");
 			}
