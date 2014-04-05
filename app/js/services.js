@@ -103,7 +103,7 @@ myApp.service("GithubSrvc", function (GithubAuthService, ParameterSrvc, $http) {
                 // after page reload code is available and it will requestToken()
 			} else if(typeof oauthToken != 'undefined' || oauthToken != null || oauthToken != 'undefined') {
 				console.log("Token provided, try to use it - Token: "+oauthToken);
-			    this.userInfo();
+			    this.userInfo().user();
 			} else if(oauthCode != "undefined" && oauthCode != null) {
 				console.log("Code provided, no Token, request token - Code: "+oauthCode)
                 GithubAuthService.requestToken(oauthCode);
