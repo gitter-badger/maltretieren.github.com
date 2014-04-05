@@ -97,11 +97,11 @@ myApp.service("GithubSrvc", function (GithubAuthService, UserModel, ParameterSrv
             console.log("Token: "+oauthToken);
             console.log("Code: "+oauthCode);
 
-			if((typeof oauthCode === 'undefined' || oauthCode === null) && (typeof oauthToken === "undefined" || oauthToken === null)) {
+			if(typeof oauthCode === 'undefined' && (typeof oauthToken === 'undefined' || oauthToken === "undefined" || oauthToken === null) ) {
 				console.log("nothing (no code, no token) provided, redirect to github to grant permissions and after reloading there should be the code");
                 GithubAuthService.requestCode();
                 // after page reload code is available and it will requestToken()
-			} else if(typeof oauthToken != 'undefined' || oauthToken != null || oauthToken != 'undefined') {
+			} else if(typeof oauthToken != 'undefined' && oauthToken != null && oauthToken != 'undefined') {
 				console.log("Token provided, try to use it - Token: "+oauthToken);
 			    this.userInfo().user();
 			} else if(typeof oauthCode != "undefined" && (oauthToken != 'undefined' || oauthToken != null)) {
@@ -134,7 +134,7 @@ myApp.service("GithubSrvc", function (GithubAuthService, UserModel, ParameterSrv
             }
         },
 		goodByeGithub : function() {
-			GithubUserService.logout();
+			UserModel.logout();
 			console.log("Clear localStorage");
 			GithubAuthService.clearLocalStorage();
 		}
