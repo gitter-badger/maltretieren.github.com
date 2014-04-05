@@ -97,13 +97,13 @@ myApp.service("GithubSrvc", function (GithubAuthService, ParameterSrvc, $http) {
             console.log("Token: "+oauthToken);
             console.log("Code: "+oauthCode);
 
-			if((oauthCode === 'undefined' || oauthCode === null) && (oauthToken === "undefined" || oauthToken === null)) {
+			if((typeof oauthCode === 'undefined' || oauthCode === null) && (typeof oauthToken === "undefined" || oauthToken === null)) {
 				console.log("nothing (no code, no token) provided, redirect to github to grant permissions and after reloading there should be the code");
                 GithubAuthService.requestCode();
                 // after page reload code is available and it will requestToken()
-			} else if(oauthToken != "undefined" && oauthToken != null) {
+			} else if(typeof oauthToken != 'undefined' || oauthToken != null || oauthToken != 'undefined') {
 				console.log("Token provided, try to use it - Token: "+oauthToken);
-			    userInfo();
+			    this.userInfo();
 			} else if(oauthCode != "undefined" && oauthCode != null) {
 				console.log("Code provided, no Token, request token - Code: "+oauthCode)
                 GithubAuthService.requestToken(oauthCode);
