@@ -87,10 +87,16 @@ myApp.service("GithubAuthService", function ($http) {
     }
 });
 
-myApp.service("GithubSrvc", function (GithubAuthService, $http) {
+myApp.service("GithubSrvc", function (GithubAuthService, ParameterSrvc, $http) {
     return {
         // there are different states: token & code provided, token or code, nothing
         helloGithub : function(oauthCode, oauthToken) {
+            var oauthCode = ParameterSrvc.urlParams['code'];
+            var oauthToken = localStorage.getItem("oauthToken");
+
+            console.log("Token: "+oauthToken);
+            console.log("Code: "+oauthCode);
+
 			if((oauthCode === 'undefined' || oauthCode === null) && (oauthToken === "undefined" || oauthToken === null)) {
 				console.log("nothing (no code, no token) provided, redirect to github to grant permissions and after reloading there should be the code");
                 GithubAuthService.requestCode();
@@ -168,4 +174,25 @@ myApp.service("UserModel", function ($rootScope) {
 		console.log("send a userLoggedOut event");
 		$rootScope.$broadcast('UserModel::userLoggedOut');
 	}
+});
+
+/**
+ This is a helper function
+ **/
+myApp.service("ParameterSrvc", function ($window) {
+    var urlParams;
+    ($window.onpopstate = function () {
+        var match,
+            pl     = /\+/g,  // Regex for replacing addition symbol with a space
+            search = /([^&=]+)=?([^&]*)/g,
+            decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+            query  = window.location.search.substring(1);
+
+        urlParams = {};
+        while (match = search.exec(query))
+            urlParams[decode(match[1])] = decode(match[2]);
+    })();
+    return {
+        urlParams: urlParams
+    }
 });

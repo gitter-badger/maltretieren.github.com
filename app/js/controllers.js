@@ -83,35 +83,13 @@ myApp.controller("TableCtrl",function ($scope, $http) {
  * GitHub controller using the GitHub service
  */
 myApp.controller("GithubCtrl", function ($scope, $window, $http, UserModel, GithubSrvc) {
-    /**
-     This is a helper function
-     **/
-    var urlParams;
-    ($window.onpopstate = function () {
-        var match,
-            pl     = /\+/g,  // Regex for replacing addition symbol with a space
-            search = /([^&=]+)=?([^&]*)/g,
-            decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
-            query  = window.location.search.substring(1);
-
-        urlParams = {};
-        while (match = search.exec(query))
-            urlParams[decode(match[1])] = decode(match[2]);
-    })();
-
-	var oauthCode = urlParams['code'];
-	var oauthToken = localStorage.getItem("oauthToken");
-	
-	console.log("Token: "+oauthToken);
-	console.log("Code: "+oauthCode);
-	
 	// if no token is available listen for button click...
-	$scope.login = function(oauthCode, oauthToken) {
+	$scope.login = function() {
 		console.log("Request login");
-		GithubSrvc.helloGithub(oauthCode, oauthToken);
+		GithubSrvc.helloGithub();
 	}
 	// try to login if there is already
-	$scope.login(oauthCode, oauthToken);
+	$scope.login();
 	
 	// logout - this is not really a logout from github, but the access token is deleted
 	$scope.logout = function() {
