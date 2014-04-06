@@ -31,6 +31,7 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
 		instance : function() {
 			var github = null;
 			var oauthToken = localStorage.getItem("oauthToken");
+            console.log(oauthToken);
 			if(oauthToken != "undefined" && oauthToken != null) {
 				console.log("oauthToken is available");
 				github = new Github({
