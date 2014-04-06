@@ -14,6 +14,7 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
         self: function() {
             success = function() {
                 console.log("sucess");
+                
             }
             return {success: success()}
         },
