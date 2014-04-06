@@ -74,7 +74,7 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
                 success(function(data, status, headers, config) {
                     if(typeof data.token != 'undefined') {
                         console.log("Yaayy, got a token: "+data.token);
-                        self.success(data.token);
+                        this.success(data.token);
                     } else {
                         console.log("It was not possible to get a token with the provided code");
 
