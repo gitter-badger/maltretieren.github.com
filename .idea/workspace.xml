@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/demos/2014-04-04-demo.md" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/default.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/routes.js" afterPath="$PROJECT_DIR$/app/js/routes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services.js" afterPath="$PROJECT_DIR$/app/js/services.js" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
@@ -43,8 +39,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="57" column="0" selection-start="1973" selection-end="1973" vertical-scroll-proportion="-0.08" vertical-offset="853" max-vertical-offset="1815">
               <folding>
+                <marker date="1396546440000" expanded="true" signature="2016:2079" placeholder="/** Function for table sort and search ...*/" />
+                <marker date="1396546440000" expanded="true" signature="2173:2624" placeholder="{...}" />
+                <marker date="1396546440000" expanded="true" signature="2311:2416" placeholder="{...}" />
+                <marker date="1396546440000" expanded="true" signature="2402:2411" placeholder="{...}" />
+                <marker date="1396546440000" expanded="true" signature="2511:2526" placeholder="{...}" />
+                <marker date="1396546440000" expanded="true" signature="2628:2681" placeholder="/** GitHub controller using the GitHub service ...*/" />
+                <marker date="1396546440000" expanded="true" signature="2858:3825" placeholder="{...}" />
                 <marker date="1396546440000" expanded="true" signature="2893:2940" placeholder="{...}" />
                 <marker date="1396546440000" expanded="true" signature="3114:3135" placeholder="{...}" />
+                <marker date="1396546440000" expanded="true" signature="3235:3350" placeholder="{...}" />
+                <marker date="1396546440000" expanded="true" signature="3491:3629" placeholder="{...}" />
+                <marker date="1396546440000" expanded="true" signature="3723:3803" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -53,16 +59,8 @@
       <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="839" selection-end="839" vertical-scroll-proportion="0.46979865" vertical-offset="180" max-vertical-offset="2640">
-              <folding>
-                <marker date="1396557248000" expanded="true" signature="824:907" placeholder="{...}" />
-                <marker date="1396557248000" expanded="true" signature="1719:2209" placeholder="{...}" />
-                <marker date="1396557248000" expanded="true" signature="1735:2144" placeholder="{&quot;client_id&quot;: &quot;e5923f3d7f1182fe886f&quot;...}" />
-                <marker date="1396557248000" expanded="true" signature="2345:2537" placeholder="{&quot;jso_provider&quot;: &quot;github&quot;...}" />
-                <marker date="1396557248000" expanded="true" signature="3740:3873" placeholder="{...}" />
-                <marker date="1396557248000" expanded="true" signature="3963:4005" placeholder="{...}" />
-                <marker date="1396557248000" expanded="true" signature="5919:6011" placeholder="{...}" />
-              </folding>
+            <state line="35" column="10" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.3691275" vertical-offset="360" max-vertical-offset="2730">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -446,10 +444,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1230" height="778" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329429" sideWeight="0.49959448" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2489019" sideWeight="0.8329278" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2489019" sideWeight="0.8329278" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329429" sideWeight="0.49959448" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24938875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3520325" sideWeight="0.7510981" order="0" side_tool="false" content_ui="combo" />
@@ -579,24 +577,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="0" selection-start="1973" selection-end="1973" vertical-scroll-proportion="-0.08" vertical-offset="853" max-vertical-offset="1815">
           <folding>
+            <marker date="1396546440000" expanded="true" signature="2016:2079" placeholder="/** Function for table sort and search ...*/" />
+            <marker date="1396546440000" expanded="true" signature="2173:2624" placeholder="{...}" />
+            <marker date="1396546440000" expanded="true" signature="2311:2416" placeholder="{...}" />
+            <marker date="1396546440000" expanded="true" signature="2402:2411" placeholder="{...}" />
+            <marker date="1396546440000" expanded="true" signature="2511:2526" placeholder="{...}" />
+            <marker date="1396546440000" expanded="true" signature="2628:2681" placeholder="/** GitHub controller using the GitHub service ...*/" />
+            <marker date="1396546440000" expanded="true" signature="2858:3825" placeholder="{...}" />
             <marker date="1396546440000" expanded="true" signature="2893:2940" placeholder="{...}" />
             <marker date="1396546440000" expanded="true" signature="3114:3135" placeholder="{...}" />
+            <marker date="1396546440000" expanded="true" signature="3235:3350" placeholder="{...}" />
+            <marker date="1396546440000" expanded="true" signature="3491:3629" placeholder="{...}" />
+            <marker date="1396546440000" expanded="true" signature="3723:3803" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="839" selection-end="839" vertical-scroll-proportion="0.46979865" vertical-offset="180" max-vertical-offset="2640">
-          <folding>
-            <marker date="1396557248000" expanded="true" signature="824:907" placeholder="{...}" />
-            <marker date="1396557248000" expanded="true" signature="1719:2209" placeholder="{...}" />
-            <marker date="1396557248000" expanded="true" signature="1735:2144" placeholder="{&quot;client_id&quot;: &quot;e5923f3d7f1182fe886f&quot;...}" />
-            <marker date="1396557248000" expanded="true" signature="2345:2537" placeholder="{&quot;jso_provider&quot;: &quot;github&quot;...}" />
-            <marker date="1396557248000" expanded="true" signature="3740:3873" placeholder="{...}" />
-            <marker date="1396557248000" expanded="true" signature="3963:4005" placeholder="{...}" />
-            <marker date="1396557248000" expanded="true" signature="5919:6011" placeholder="{...}" />
-          </folding>
+        <state line="35" column="10" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.3691275" vertical-offset="360" max-vertical-offset="2730">
+          <folding />
         </state>
       </provider>
     </entry>

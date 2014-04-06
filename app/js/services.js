@@ -28,6 +28,12 @@ myApp.service("UtilSrvc", function () {
 
 myApp.service("GithubAuthService", function ($http) {
 	return {
+        self: function() {
+            success = function() {
+                console.log("sucess");
+            }
+            return {success: success()}
+        },
 		instance : function() {
 			var github = null;
 			var oauthToken = localStorage.getItem("oauthToken");
