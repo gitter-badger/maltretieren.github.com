@@ -12,8 +12,14 @@ myApp.value('version', '0.1');
 myApp.service("GithubAuthService", function ($http, UserModel) {
 	return {
         self: function() {
-            success =function() {
-                alert("success");
+            success = function(data, status, headers, config) {
+                if(typeof oauthCode != 'undefined') {
+                    console.log("Yaayy, got a token:"+data.token);
+                    localStorage.setItem("oauthToken", data.token);
+                    this.userInfo().user();
+                } else {
+                    console.log("It was not possible to get a token with the provided code");
+                }
             },
             error = function() {
                 alert("error");
