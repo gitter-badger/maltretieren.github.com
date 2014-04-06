@@ -12,14 +12,13 @@ myApp.value('version', '0.1');
 myApp.service("GithubAuthService", function ($http, UserModel) {
 	return {
         self: function() {
-            success = function() {
-
-                    console.log("Yaayy, got a token:"+data.token);
+            success =function() {
+                alert("success");
             },
             error = function() {
                 alert("error");
             }
-            return { success: success(), error: error() }
+            return { success: success() }
         },
 		instance : function() {
 			var github = null;
