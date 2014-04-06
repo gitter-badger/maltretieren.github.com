@@ -34,7 +34,7 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
                 localStorage.setItem("oauthToken", oauthToken);
                 console.log("sucess");
             }
-            return {success: success()}
+            return {success: success}
         },
 		instance : function() {
 			var github = null;
@@ -74,7 +74,7 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
         requestToken: function(oauthCode) {
             $http({method: 'GET', url: 'https://maltretieren.herokuapp.com/authenticate/'+oauthCode}).
                 success(function(data, status, headers, config) {
-                    if(typeof oauthCode != 'undefined') {
+                    if(typeof data.token != 'undefined') {
                         console.log("Yaayy, got a token:"+data.token);
                         self.success(data.token);
                     } else {
