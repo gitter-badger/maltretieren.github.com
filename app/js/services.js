@@ -97,19 +97,24 @@ myApp.service("GithubSrvc", function (GithubAuthService, $http) {
     return {
         // there are different states: token & code provided, token or code, nothing
         helloGithub : function(oauthCode, oauthToken) {
-			if((oauthCode === 'undefined' || oauthCode === null) && (oauthToken === "undefined" || oauthToken === null)) {
-				console.log("nothing (no code, no token) provided, redirect to github to grant permissions and after reloading there should be the code");
-                GithubAuthService.requestCode();
+            var oauthCode = ParameterSrvc.urlParams['code'];
+            var oauthToken = localStorage.getItem("oauthToken");
+
+            console.log("Token: "+oauthToken);
+            console.log("Code: "+oauthCode);
+
+            if(typeof oauthToken != 'undefined' && oauthToken != null && oauthToken != 'undefined') {
+                console.log("Token provided, try to use it - Token: "+oauthToken)
+                GithubAuthService.userInfo().user();
+            } else if(typeof oauthCode === 'undefined' && (typeof oauthToken === 'undefined' || oauthToken === "undefined" || oauthToken === null) ) {
+                console.log("nothing (no code, no token) provided, wait until user presses login button");
                 // after page reload code is available and it will requestToken()
-			} else if(oauthToken != "undefined" && oauthToken != null) {
-				console.log("Token provided, try to use it - Token: "+oauthToken);
-				//GithubUserService.user();
-			} else if(oauthCode != "undefined" && oauthCode != null) {
-				console.log("Code provided, no Token, request token - Code: "+oauthCode)
-                GithubAuthService.requestToken();
-			} else {
-				console.log("There is something wrong with the login");
-			}
+            } else if(typeof oauthCode != "undefined" && (oauthToken != 'undefined' || oauthToken != null)) {
+                console.log("Code provided, no Token, request token - Code: "+oauthCode)
+                GithubAuthService.requestToken(oauthCode);
+            } else {
+                console.log("There is something wrong with the login");
+            }
         },
 		goodByeGithub : function() {
 			GithubUserService.logout();
