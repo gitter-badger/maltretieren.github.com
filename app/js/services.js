@@ -28,11 +28,6 @@ myApp.service("UtilSrvc", function () {
 
 myApp.service("GithubAuthService", function ($http, UserModel) {
 	return {
-        success: function(oauthToken) {
-            this.UserInfo().user();
-            localStorage.setItem("oauthToken", oauthToken);
-            console.log("sucess");
-        },
 		instance : function() {
 			var github = null;
 			var oauthToken = localStorage.getItem("oauthToken");
@@ -74,7 +69,8 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
                 success(function(data, status, headers, config) {
                     if(typeof data.token != 'undefined') {
                         console.log("Yaayy, got a token: "+data.token);
-                        that.success(data.token);
+                        that.userInfo().user();
+                        localStorage.setItem("oauthToken", oauthToken);
                     } else {
                         console.log("It was not possible to get a token with the provided code");
 
