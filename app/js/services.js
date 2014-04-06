@@ -14,8 +14,11 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
         self: function() {
             success =function() {
                 alert("success");
+            },
+            error = function() {
+                alert("error");
             }
-            return { success, error }
+            return { success: success }
         },
 		instance : function() {
 			var github = null;
@@ -52,20 +55,9 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
 				jso_allowia: true
 			});
 		},
-        requestToken: function(oauthCode) {
+        requestToken: function(oauthCode, callback) {
             $http({method: 'GET', url: 'https://maltretieren.herokuapp.com/authenticate/'+oauthCode}).
-                success(function(data, status, headers, config) {
-                    if(typeof oauthCode != 'undefined') {
-                        console.log("Yaayy, got a token:"+data.token);
-                        //localStorage.setItem("oauthToken", data.token);
-                        //userInfo().user();
-                    } else {
-                        console.log("It was not possible to get a token with the provided code");
-                    }
-                }).
-                error(function(data, status, headers, config) {
-                    alert("Error while getting a token for the provided code");
-                });
+                success(self.success).error(self.error)
         },
 		isTokenValid: function(token) {
 			console.log("Test if the token is still valid...");
