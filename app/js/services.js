@@ -11,12 +11,6 @@ myApp.value('version', '0.1');
 
 myApp.service("GithubAuthService", function ($http, UserModel) {
 	return {
-        self: function() {
-            success =function() {
-                alert("success");
-            }
-            return { success: success }
-        },
 		instance : function() {
 			var github = null;
 			var oauthToken = localStorage.getItem("oauthToken");
