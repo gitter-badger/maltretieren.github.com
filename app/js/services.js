@@ -14,10 +14,8 @@ myApp.service("GithubAuthService", function ($http) {
         self: function() {
             success =function() {
                 alert("success");
-            },
-            error =function() {
-                alert("error");
             }
+            return { success: success() }
         },
 		instance : function() {
 			var github = null;
@@ -56,7 +54,7 @@ myApp.service("GithubAuthService", function ($http) {
 		},
         requestToken: function(oauthCode, callback) {
             $http({method: 'GET', url: 'https://maltretieren.herokuapp.com/authenticate/'+oauthCode}).
-                success(self.success).error(self.error)
+                success(self.success).error(alert("error"))
         },
 		isTokenValid: function(token) {
 			console.log("Test if the token is still valid...");
@@ -67,7 +65,7 @@ myApp.service("GithubAuthService", function ($http) {
 		},
         userInfo: function() {
             var user = function() {
-                var githubInstance = this.instance();
+                var githubInstance = GithubAuthService.instance();
                 var user = githubInstance.getUser();
                 user.show('', function(err, res) {
                     if(err) {
