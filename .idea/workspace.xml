@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/demos/2014-04-04-demo.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services.js" afterPath="$PROJECT_DIR$/app/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,9 +48,21 @@
       <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="42" selection-start="525" selection-end="525" vertical-scroll-proportion="0.53691274" vertical-offset="0" max-vertical-offset="2910">
+            <state line="115" column="18" selection-start="4296" selection-end="4296" vertical-scroll-proportion="0.30201343" vertical-offset="1590" max-vertical-offset="2910">
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014-04-04-demo.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/demos/2014-04-04-demo.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="8" selection-start="38" selection-end="38" vertical-scroll-proportion="-1.6071428" vertical-offset="0" max-vertical-offset="315">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
           </provider>
         </entry>
       </file>
@@ -56,15 +70,6 @@
         <entry file="file://$PROJECT_DIR$/app/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="31" column="66" selection-start="1547" selection-end="1547" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1275">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="table.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/table.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1215">
               <folding />
             </state>
           </provider>
@@ -82,7 +87,7 @@
       <file leaf-file-name="routes.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="37" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="480">
+            <state line="4" column="37" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
               <folding />
             </state>
           </provider>
@@ -133,7 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/_includes/themes/twitter/page.html" />
         <option value="$PROJECT_DIR$/assets/js/wikiquotes/wikiquote-api.js" />
         <option value="$PROJECT_DIR$/assets/js/angular-app/controllers.js" />
         <option value="$PROJECT_DIR$/app/partials/comments.html" />
@@ -148,6 +152,7 @@
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/app/js/routes.js" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
+        <option value="$PROJECT_DIR$/_posts/demos/2014-04-04-demo.md" />
         <option value="$PROJECT_DIR$/app/js/services.js" />
       </list>
     </option>
@@ -293,6 +298,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="_posts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_posts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="_includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -348,11 +385,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_posts/demos" />
       <recent name="$PROJECT_DIR$/assets/js/bootstrap-markdown-2.3.1/js" />
       <recent name="$PROJECT_DIR$/assets/templates" />
       <recent name="$PROJECT_DIR$/assets/themes/bootstrap-3.1.1/js" />
       <recent name="$PROJECT_DIR$/assets" />
-      <recent name="$PROJECT_DIR$/assets/partials" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -500,14 +537,11 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/partials/postsFrontpage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="102" selection-start="1092" selection-end="1092" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="570" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2014-01-01-sandbox.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="2" selection-start="604" selection-end="613" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="705" />
+        <state line="26" column="2" selection-start="604" selection-end="613" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="705">
+          <folding />
+        </state>
       </provider>
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
@@ -534,13 +568,6 @@
       </provider>
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/directives.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="460">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/table.html">
@@ -585,9 +612,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/routes.js">
+    <entry file="file://$PROJECT_DIR$/_posts/demos/2014-04-04-demo.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="37" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="480">
+        <state line="3" column="8" selection-start="38" selection-end="38" vertical-scroll-proportion="-1.6071428" vertical-offset="0" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="460">
           <folding />
         </state>
       </provider>
@@ -599,9 +636,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="37" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="480">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="42" selection-start="525" selection-end="525" vertical-scroll-proportion="0.53691274" vertical-offset="0" max-vertical-offset="2910">
+        <state line="115" column="18" selection-start="4296" selection-end="4296" vertical-scroll-proportion="0.30201343" vertical-offset="1590" max-vertical-offset="2910">
           <folding />
         </state>
       </provider>
