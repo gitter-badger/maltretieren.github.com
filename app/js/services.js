@@ -93,7 +93,7 @@ myApp.service("GithubAuthService", function ($http) {
     }
 });
 
-myApp.service("GithubSrvc", function (GithubAuthService, $http) {
+myApp.service("GithubSrvc", function (GithubAuthService, ParameterSrvc, $http) {
     return {
         // there are different states: token & code provided, token or code, nothing
         helloGithub : function(oauthCode, oauthToken) {
