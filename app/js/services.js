@@ -116,6 +116,9 @@ myApp.service("GithubSrvc", function (GithubAuthService, ParameterSrvc, $http) {
                 console.log("There is something wrong with the login");
             }
         },
+        requestCode: function() {
+            GithubAuthService.requestCode();
+        },
 		goodByeGithub : function() {
 			GithubUserService.logout();
 			console.log("Clear localStorage");
