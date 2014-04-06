@@ -26,7 +26,7 @@ myApp.service("UtilSrvc", function () {
     }
 });
 
-myApp.service("GithubAuthService", function ($http) {
+myApp.service("GithubAuthService", function ($http, UserModel) {
 	return {
         self: function() {
             success = function(oauthToken) {
