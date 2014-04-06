@@ -3,6 +3,8 @@
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$/_posts/2014-03-02-mac-osx-essentials.md" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/_posts/2014-03-24-github-edits.md" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/_posts/demos/2014-04-06-observer-pattern-in-services.md" charset="UTF-16" />
+    <file url="file://$PROJECT_DIR$/_posts/demos/2014-04-06-watch-vs-watch-collection.md" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/_posts/table_accessoires/2014-03-14-sound-card.md" charset="UTF-8" />
   </component>
 </project>

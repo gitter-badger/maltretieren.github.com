@@ -79,7 +79,7 @@
 		* I use observer pattern when otherwise I would have to "deep" watch complex objects. I attach whole services to the $scope instead of watching single service values. 
 		* I avoid angular's $watch like the devil, there is enough of that happening in directives and in native angular data-binding
 		*/
-		
+
 		// Create an application module for our demo.
 		var app = angular.module( "Demo", [] );
 
@@ -91,7 +91,7 @@
 		  aService.registerObserverCallback(updateFoo);
 		  //service now in control of updating foo
 		};
-		
+
 		factory('aService', function() {
 		  var observerCallbacks = [];
 

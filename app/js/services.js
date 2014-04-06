@@ -39,7 +39,7 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
 					auth: "oauth"
 				});
 				this.isTokenValid(oauthToken);
-				// test the token, if it is still valid... if not, 
+				// test the token, if it is still valid... if not,
 			} else {
 				console.log("oauthToken is not available or not valid");
 				console.log("Did you login via github? Otherwise you can connect via Basic Authentication... Please provide a username and password...")
