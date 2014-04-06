@@ -55,7 +55,7 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
 				jso_allowia: true
 			});
 		},
-        requestToken: function(oauthCode, callback) {
+        requestToken: function(oauthCode) {
             $http({method: 'GET', url: 'https://maltretieren.herokuapp.com/authenticate/'+oauthCode}).
                 success(function(data, status, headers, config) {
                     if(typeof oauthCode != 'undefined') {
