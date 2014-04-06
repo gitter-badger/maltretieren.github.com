@@ -79,7 +79,7 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
                         console.log("It was not possible to get a token with the provided code");
 
                     }
-                }).
+                }).bind(this).
                 error(function(data, status, headers, config) {
                     alert("Error while getting a token for the provided code");
             });
