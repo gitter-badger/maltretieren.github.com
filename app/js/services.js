@@ -29,7 +29,9 @@ myApp.service("UtilSrvc", function () {
 myApp.service("GithubAuthService", function ($http) {
 	return {
         self: function() {
-            success = function() {
+            success = function(oauthToken) {
+                alert(oauthToken);
+                localStorage.setItem("oauthToken", oauthToken);
                 console.log("sucess");
             }
             return {success: success()}
@@ -74,9 +76,10 @@ myApp.service("GithubAuthService", function ($http) {
                 success(function(data, status, headers, config) {
                     if(typeof oauthCode != 'undefined') {
                         console.log("Yaayy, got a token:"+data.token);
-                        localStorage.setItem("oauthToken", data.token);
+                        self.success(data.token);
                     } else {
                         console.log("It was not possible to get a token with the provided code");
+
                     }
                 }).
                 error(function(data, status, headers, config) {
