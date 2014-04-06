@@ -9,8 +9,14 @@
 // EXAMPLE OF CORRECT DECLARATION OF SERVICE AS A VALUE
 myApp.value('version', '0.1');
 
-myApp.service("GithubAuthService", function ($http, UserModel) {
+myApp.service("GithubAuthService", function ($http) {
 	return {
+        self: function() {
+            success =function() {
+                alert("success");
+            }
+            return { success: success() }
+        },
 		instance : function() {
 			var github = null;
 			var oauthToken = localStorage.getItem("oauthToken");
@@ -48,7 +54,7 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
 		},
         requestToken: function(oauthCode, callback) {
             $http({method: 'GET', url: 'https://maltretieren.herokuapp.com/authenticate/'+oauthCode}).
-                success(console.log("success")).error(self.error)
+                success(self.success).error(alert("error"))
         },
 		isTokenValid: function(token) {
 			console.log("Test if the token is still valid...");
@@ -58,9 +64,8 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
 			localStorage.clear();
 		},
         userInfo: function() {
-            var self = this;
             var user = function() {
-                var githubInstance = self.instance();
+                var githubInstance = GithubAuthService.instance();
                 var user = githubInstance.getUser();
                 user.show('', function(err, res) {
                     if(err) {
@@ -95,21 +100,19 @@ myApp.service("GithubSrvc", function (GithubAuthService, UserModel, ParameterSrv
             console.log("Token: "+oauthToken);
             console.log("Code: "+oauthCode);
 
-            if(typeof oauthToken != 'undefined' && oauthToken != null && oauthToken != 'undefined') {
-                console.log("Token provided, try to use it - Token: "+oauthToken)
-                GithubAuthService.userInfo().user();
-            } else if(typeof oauthCode === 'undefined' && (typeof oauthToken === 'undefined' || oauthToken === "undefined" || oauthToken === null) ) {
-				console.log("nothing (no code, no token) provided, wait until user presses login button");
+			if(typeof oauthCode === 'undefined' && (typeof oauthToken === 'undefined' || oauthToken === "undefined" || oauthToken === null) ) {
+				console.log("nothing (no code, no token) provided, redirect to github to grant permissions and after reloading there should be the code");
+                GithubAuthService.requestCode();
                 // after page reload code is available and it will requestToken()
+			} else if(typeof oauthToken != 'undefined' && oauthToken != null && oauthToken != 'undefined') {
+				console.log("Token provided, try to use it - Token: "+oauthToken)
+                GithubAuthService.userInfo().user();
 			} else if(typeof oauthCode != "undefined" && (oauthToken != 'undefined' || oauthToken != null)) {
 				console.log("Code provided, no Token, request token - Code: "+oauthCode)
                 GithubAuthService.requestToken(oauthCode);
 			} else {
 				console.log("There is something wrong with the login");
 			}
-        },
-        requestCode: function() {
-            GithubAuthService.requestCode();
         },
 		goodByeGithub : function() {
 			UserModel.logout();
