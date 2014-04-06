@@ -48,7 +48,7 @@ myApp.controller("WikiquoteCtrl",function ($scope) {
     WikiquoteApi.getRandomQuote("Programming|Computer",
         function(newQuote) {
             $scope.wikiquote = newQuote.quote;
-            $scope.$apply();
+            //$scope.$apply();
         },
         function(msg){
             console.log("Error while retrieving quote from wikiquote "+msg);
@@ -90,6 +90,10 @@ myApp.controller("GithubCtrl", function ($scope, $window, $http, UserModel, Gith
 	}
 	// try to login if there is already
 	$scope.login();
+
+    $scope.requestCode = function() {
+        GithubSrvc.requestCode();
+    }
 	
 	// logout - this is not really a logout from github, but the access token is deleted
 	$scope.logout = function() {
