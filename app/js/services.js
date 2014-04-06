@@ -15,10 +15,6 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
             success = function() {
 
                     console.log("Yaayy, got a token:"+data.token);
- 
-                } else {
-                    console.log("It was not possible to get a token with the provided code");
-                }
             },
             error = function() {
                 alert("error");
