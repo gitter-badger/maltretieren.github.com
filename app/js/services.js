@@ -92,7 +92,30 @@ myApp.service("GithubAuthService", function ($http) {
 		clearLocalStorage: function() {
 			// tokens are stored in local storage
 			localStorage.clear();
-		}
+		},
+        userInfo: function() {
+            var self = this;
+            var user = function() {
+                var githubInstance = self.instance();
+                var user = githubInstance.getUser();
+                user.show('', function(err, res) {
+                    if(err) {
+                        console.log("there was an error getting user information, maybe the token is invalid?");
+                        // delete the token from localStorage, because it is invalid...
+                        GithubAuthService.clearLocalStorage();
+                        GithubAuthService.requestToken();
+                    } else {
+                        console.log("login successfull: "+res.login);
+                        UserModel.login(res.login);
+                    }
+                });
+            };
+
+            return {
+                user: function() { return user(); },
+                logout: function() { return UserModel.logout(); }
+            }
+        }
     }
 });
 
@@ -140,29 +163,6 @@ myApp.service("GithubSrvc", function (GithubAuthService, ParameterSrvc, $http) {
 	// 		- else it's a guest user
 	// - if no token is available
 	// 		- request a token
-});
-
-myApp.service("GithubUserService", function (GithubAuthService, UserModel) {
-    var user = function() {
-        var githubInstance = GithubAuthService.instance();
-        var user = githubInstance.getUser();
-        user.show('', function(err, res) {
-            if(err) {
-                console.log("there was an error getting user information, maybe the token is invalid?");
-                // delete the token from localStorage, because it is invalid...
-                GithubAuthService.clearLocalStorage();
-                GithubAuthService.requestToken();
-            } else {
-                console.log("login successfull: "+res.login);
-                UserModel.login(res.login);
-            }
-        });
-    };
-
-    return {
-        user: function() { return user(); },
-        logout: function() { return UserModel.logout(); }
-    }
 });
 
 // Inspired by http://joelhooks.com/blog/2013/04/24/modeling-data-and-state-in-your-angularjs-application/
