@@ -72,8 +72,10 @@
 <div class="container col-lg-7 col-centered" style="float:none">
     {{ content }}
 
+{% if page.comments != false %}
     {% include widgets/comments/recentComments.html %}
     {% include widgets/comments/form.html %}
+{% endif %}
 </div>
 <!-- script loader and init functions -->
 <script src="/app/js/main.js"></script>
