@@ -12,7 +12,7 @@ myApp.value('version', '0.1');
 myApp.service("GithubAuthService", function ($http, UserModel) {
 	return {
         self: function() {
-            success: function() {
+            success = function() {
                 console.log("sucess");
             }
             return {success: success()}
