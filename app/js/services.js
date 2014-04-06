@@ -13,7 +13,8 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
 	return {
         self: function() {
             success = function(data, status, headers, config) {
-                if(typeof oauthCode != 'undefined') {
+                var token = data.token;
+                if(token != 'undefined') {
                     console.log("Yaayy, got a token:"+data.token);
                     localStorage.setItem("oauthToken", data.token);
                     this.userInfo().user();
