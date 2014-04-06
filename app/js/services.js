@@ -28,7 +28,7 @@ myApp.service("UtilSrvc", function () {
 
 myApp.service("GithubAuthService", function ($http, UserModel) {
 	return {
-        self: this,
+        that: this,
         success: function(oauthToken) {
             alert(oauthToken);
             localStorage.setItem("oauthToken", oauthToken);
@@ -70,16 +70,17 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
 			});
 		},
         requestToken: function(oauthCode) {
+            var that = this;
             $http({method: 'GET', url: 'https://maltretieren.herokuapp.com/authenticate/'+oauthCode}).
                 success(function(data, status, headers, config) {
                     if(typeof data.token != 'undefined') {
                         console.log("Yaayy, got a token: "+data.token);
-                        this.success(data.token);
+                        that.success(data.token);
                     } else {
                         console.log("It was not possible to get a token with the provided code");
 
                     }
-                }).bind(this).
+                }).
                 error(function(data, status, headers, config) {
                     alert("Error while getting a token for the provided code");
             });
