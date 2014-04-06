@@ -28,7 +28,6 @@ myApp.service("UtilSrvc", function () {
 
 myApp.service("GithubAuthService", function ($http, UserModel) {
 	return {
-        that: this,
         success: function(oauthToken) {
             alert(oauthToken);
             localStorage.setItem("oauthToken", oauthToken);
