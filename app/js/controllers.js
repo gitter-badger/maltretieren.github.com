@@ -45,16 +45,15 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
  * Receive a complete list of all comments
  */
 myApp.controller("WikiquoteCtrl",function ($scope) {
-    /**WikiquoteApi.getRandomQuote("Programming|Computer",
+    WikiquoteApi.getRandomQuote("Programming|Computer",
         function(newQuote) {
-            //$scope.wikiquote = newQuote.quote;
-            //$scope.$apply();
+            $scope.wikiquote = newQuote.quote;
+            $scope.$apply();
         },
         function(msg){
             console.log("Error while retrieving quote from wikiquote "+msg);
         }
     );
-     */
 });
 
 /**
@@ -83,18 +82,20 @@ myApp.controller("TableCtrl",function ($scope, $http) {
 /**
  * GitHub controller using the GitHub service
  */
-myApp.controller("GithubCtrl", function ($scope, $window, $http, UserModel, GithubSrvc) {
+myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, GithubSrvc) {
+	var oauthCode = $location.search().code;
+	var oauthToken = localStorage.getItem("oauthToken");
+	
+	console.log("Token: "+oauthToken);
+	console.log("Code: "+oauthCode);
+	
 	// if no token is available listen for button click...
-	$scope.login = function() {
+	$scope.login = function(oauthCode, oauthToken) {
 		console.log("Request login");
-		GithubSrvc.helloGithub();
+		GithubSrvc.helloGithub(oauthCode, oauthToken);
 	}
 	// try to login if there is already
-	$scope.login();
-
-    $scope.requestCode = function() {
-        GithubSrvc.requestCode();
-    }
+	$scope.login(oauthCode, oauthToken);
 	
 	// logout - this is not really a logout from github, but the access token is deleted
 	$scope.logout = function() {
@@ -113,4 +114,3 @@ myApp.controller("GithubCtrl", function ($scope, $window, $http, UserModel, Gith
         $scope.user = "";
     });
 });
-

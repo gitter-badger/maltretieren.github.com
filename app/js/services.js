@@ -9,15 +9,25 @@
 // EXAMPLE OF CORRECT DECLARATION OF SERVICE AS A VALUE
 myApp.value('version', '0.1');
 
-myApp.service("GithubAuthService", function ($http, UserModel) {
-	return {
-        self: function() {
-            success = function() {
-                console.log("sucess");
-                
-            }
-            return {success: success()}
+// EXAMPLE OF CORRECT DECLARATION OF SERVICE
+// here is a declaration of simple utility function to know if an given param is a String.
+myApp.service("UtilSrvc", function () {
+    return {
+        isAString: function(o) {
+            return typeof o == "string" || (typeof o == "object" && o.constructor === String);
         },
+        helloWorld : function(name) {
+        	var result = "Hum, Hello you, but your name is too weird...";
+        	if (this.isAString(name)) {
+        		result = "Hello, " + name;
+        	}
+        	return result;
+        }
+    }
+});
+
+myApp.service("GithubAuthService", function ($http) {
+	return {
 		instance : function() {
 			var github = null;
 			var oauthToken = localStorage.getItem("oauthToken");
@@ -53,9 +63,19 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
 				jso_allowia: true
 			});
 		},
-        requestToken: function(oauthCode, callback) {
+        requestToken: function() {
             $http({method: 'GET', url: 'https://maltretieren.herokuapp.com/authenticate/'+oauthCode}).
-                success(self.success).error(self.error)
+                success(function(data, status, headers, config) {
+                    if(typeof oauthCode != 'undefined') {
+                        console.log("Yaayy, got a token:"+data.token);
+                        localStorage.setItem("oauthToken", data.token);
+                    } else {
+                        console.log("It was not possible to get a token with the provided code");
+                    }
+                }).
+                error(function(data, status, headers, config) {
+                    alert("Error while getting a token for the provided code");
+            });
         },
 		isTokenValid: function(token) {
 			console.log("Test if the token is still valid...");
@@ -63,63 +83,30 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
 		clearLocalStorage: function() {
 			// tokens are stored in local storage
 			localStorage.clear();
-		},
-        userInfo: function() {
-            var self = this;
-            var user = function() {
-                var githubInstance = self.instance();
-                var user = githubInstance.getUser();
-                user.show('', function(err, res) {
-                    if(err) {
-                        console.log("there was an error getting user information, maybe the token is invalid?");
-                        // delete the token from localStorage, because it is invalid...
-                        GithubAuthService.clearLocalStorage();
-                        GithubAuthService.requestToken();
-                    } else {
-                        console.log("login successfull: "+res.login);
-                        UserModel.login(res.login);
-                    }
-                });
-            };
-
-            return {
-                user: function() { return user(); },
-                logout: function() { return UserModel.logout(); }
-            }
-        },
+		}
     }
 });
 
-myApp.service("GithubSrvc", function (GithubAuthService, UserModel, ParameterSrvc, $http) {
-    var self = this;
-
+myApp.service("GithubSrvc", function (GithubAuthService, $http) {
     return {
         // there are different states: token & code provided, token or code, nothing
         helloGithub : function(oauthCode, oauthToken) {
-            var oauthCode = ParameterSrvc.urlParams['code'];
-            var oauthToken = localStorage.getItem("oauthToken");
-
-            console.log("Token: "+oauthToken);
-            console.log("Code: "+oauthCode);
-
-            if(typeof oauthToken != 'undefined' && oauthToken != null && oauthToken != 'undefined') {
-                console.log("Token provided, try to use it - Token: "+oauthToken)
-                GithubAuthService.userInfo().user();
-            } else if(typeof oauthCode === 'undefined' && (typeof oauthToken === 'undefined' || oauthToken === "undefined" || oauthToken === null) ) {
-				console.log("nothing (no code, no token) provided, wait until user presses login button");
+			if((oauthCode === 'undefined' || oauthCode === null) && (oauthToken === "undefined" || oauthToken === null)) {
+				console.log("nothing (no code, no token) provided, redirect to github to grant permissions and after reloading there should be the code");
+                GithubAuthService.requestCode();
                 // after page reload code is available and it will requestToken()
-			} else if(typeof oauthCode != "undefined" && (oauthToken != 'undefined' || oauthToken != null)) {
+			} else if(oauthToken != "undefined" && oauthToken != null) {
+				console.log("Token provided, try to use it - Token: "+oauthToken);
+				//GithubUserService.user();
+			} else if(oauthCode != "undefined" && oauthCode != null) {
 				console.log("Code provided, no Token, request token - Code: "+oauthCode)
-                GithubAuthService.requestToken(oauthCode);
+                GithubAuthService.requestToken();
 			} else {
 				console.log("There is something wrong with the login");
 			}
         },
-        requestCode: function() {
-            GithubAuthService.requestCode();
-        },
 		goodByeGithub : function() {
-			UserModel.logout();
+			GithubUserService.logout();
 			console.log("Clear localStorage");
 			GithubAuthService.clearLocalStorage();
 		}
@@ -136,6 +123,29 @@ myApp.service("GithubSrvc", function (GithubAuthService, UserModel, ParameterSrv
 	// 		- else it's a guest user
 	// - if no token is available
 	// 		- request a token
+});
+
+myApp.service("GithubUserService", function (GithubAuthService, UserModel) {
+    var user = function() {
+        var githubInstance = GithubAuthService.instance();
+        var user = githubInstance.getUser();
+        user.show('', function(err, res) {
+            if(err) {
+                console.log("there was an error getting user information, maybe the token is invalid?");
+                // delete the token from localStorage, because it is invalid...
+                GithubAuthService.clearLocalStorage();
+                GithubAuthService.requestToken();
+            } else {
+                console.log("login successfull: "+res.login);
+                UserModel.login(res.login);
+            }
+        });
+    };
+
+    return {
+        user: function() { return user(); },
+        logout: function() { return UserModel.logout(); }
+    }
 });
 
 // Inspired by http://joelhooks.com/blog/2013/04/24/modeling-data-and-state-in-your-angularjs-application/
@@ -158,25 +168,4 @@ myApp.service("UserModel", function ($rootScope) {
 		console.log("send a userLoggedOut event");
 		$rootScope.$broadcast('UserModel::userLoggedOut');
 	}
-});
-
-/**
- This is a helper function
- **/
-myApp.service("ParameterSrvc", function ($window) {
-    var urlParams;
-    ($window.onpopstate = function () {
-        var match,
-            pl     = /\+/g,  // Regex for replacing addition symbol with a space
-            search = /([^&=]+)=?([^&]*)/g,
-            decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
-            query  = window.location.search.substring(1);
-
-        urlParams = {};
-        while (match = search.exec(query))
-            urlParams[decode(match[1])] = decode(match[2]);
-    })();
-    return {
-        urlParams: urlParams
-    }
 });

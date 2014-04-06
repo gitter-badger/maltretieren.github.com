@@ -2,7 +2,7 @@
 
 var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap']);
 
-myApp.config(function ($routeProvider) {
+myApp.config(function ($routeProvider, $locationProvider) {
 
 	$routeProvider.when(
     	'/view1', 
@@ -22,5 +22,5 @@ myApp.config(function ($routeProvider) {
         });
 	// turning on html5Mode to have access to the parameters of the url
 	// see also: http://johan.driessen.se/posts/Manipulating-history-with-the-HTML5-History-API-and-AngularJS
-	//$locationProvider.html5Mode(true);
+
 });
