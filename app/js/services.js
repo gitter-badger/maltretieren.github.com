@@ -119,7 +119,7 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
     }
 });
 
-myApp.service("GithubSrvc", function (GithubAuthService, ParameterSrvc, $http) {
+myApp.service("GithubSrvc", function (GithubAuthService, UserModel, ParameterSrvc, $http) {
     return {
         // there are different states: token & code provided, token or code, nothing
         helloGithub : function(oauthCode, oauthToken) {
@@ -146,7 +146,7 @@ myApp.service("GithubSrvc", function (GithubAuthService, ParameterSrvc, $http) {
             GithubAuthService.requestCode();
         },
 		goodByeGithub : function() {
-			GithubUserService.logout();
+			UserModel.logout();
 			console.log("Clear localStorage");
 			GithubAuthService.clearLocalStorage();
 		}

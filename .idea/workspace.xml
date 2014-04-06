@@ -37,7 +37,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="5" selection-start="3283" selection-end="3283" vertical-scroll-proportion="-10.88" vertical-offset="1243" max-vertical-offset="1875">
+            <state line="101" column="5" selection-start="3283" selection-end="3283" vertical-scroll-proportion="-12.08" vertical-offset="1213" max-vertical-offset="1875">
               <folding />
             </state>
           </provider>
@@ -46,7 +46,7 @@
       <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="61" selection-start="905" selection-end="905" vertical-scroll-proportion="0.093959734" vertical-offset="378" max-vertical-offset="3210">
+            <state line="121" column="67" selection-start="4276" selection-end="4276" vertical-scroll-proportion="-0.30872482" vertical-offset="1953" max-vertical-offset="3210">
               <folding />
             </state>
           </provider>
@@ -584,14 +584,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="5" selection-start="3283" selection-end="3283" vertical-scroll-proportion="-10.88" vertical-offset="1243" max-vertical-offset="1875">
+        <state line="101" column="5" selection-start="3283" selection-end="3283" vertical-scroll-proportion="-12.08" vertical-offset="1213" max-vertical-offset="1875">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="61" selection-start="905" selection-end="905" vertical-scroll-proportion="0.093959734" vertical-offset="378" max-vertical-offset="3210">
+        <state line="121" column="67" selection-start="4276" selection-end="4276" vertical-scroll-proportion="-0.30872482" vertical-offset="1953" max-vertical-offset="3210">
           <folding />
         </state>
       </provider>
