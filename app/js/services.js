@@ -64,8 +64,9 @@ myApp.service("GithubAuthService", function ($http) {
 			localStorage.clear();
 		},
         userInfo: function() {
+            var self = this;
             var user = function() {
-                var githubInstance = this.instance();
+                var githubInstance = self.instance();
                 var user = githubInstance.getUser();
                 user.show('', function(err, res) {
                     if(err) {
