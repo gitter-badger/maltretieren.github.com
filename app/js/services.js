@@ -22,7 +22,6 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
 					token: oauthToken,
 					auth: "oauth"
 				});
-				this.isTokenValid(oauthToken);
 				// test the token, if it is still valid... if not,
 			} else {
 				console.log("oauthToken is not available or not valid");
