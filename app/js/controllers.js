@@ -82,21 +82,14 @@ myApp.controller("TableCtrl",function ($scope, $http) {
 /**
  * GitHub controller using the GitHub service
  */
-myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, GithubSrvc) {
-	var oauthCode = $location.search().code;
-	var oauthToken = localStorage.getItem("oauthToken");
-	
-	console.log("Token: "+oauthToken);
-	console.log("Code: "+oauthCode);
-	
+myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, GithubSrvc) {	
 	// if no token is available listen for button click...
-	$scope.login = function(oauthCode, oauthToken) {
+	($scope.login = function() {
 		console.log("Request login");
-		GithubSrvc.helloGithub(oauthCode, oauthToken);
-	}
-	// try to login if there is already
-	$scope.login(oauthCode, oauthToken);
+		GithubSrvc.helloGithub();
+	})();
 
+	// Request a login code from github if the user presses the login button
     $scope.requestCode = function() {
         GithubSrvc.requestCode();
     }
