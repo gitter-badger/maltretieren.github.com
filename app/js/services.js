@@ -9,29 +9,11 @@
 // EXAMPLE OF CORRECT DECLARATION OF SERVICE AS A VALUE
 myApp.value('version', '0.1');
 
-// EXAMPLE OF CORRECT DECLARATION OF SERVICE
-// here is a declaration of simple utility function to know if an given param is a String.
-myApp.service("UtilSrvc", function () {
-    return {
-        isAString: function(o) {
-            return typeof o == "string" || (typeof o == "object" && o.constructor === String);
-        },
-        helloWorld : function(name) {
-        	var result = "Hum, Hello you, but your name is too weird...";
-        	if (this.isAString(name)) {
-        		result = "Hello, " + name;
-        	}
-        	return result;
-        }
-    }
-});
-
 myApp.service("GithubAuthService", function ($http, UserModel) {
 	return {
 		instance : function() {
 			var github = null;
 			var oauthToken = localStorage.getItem("oauthToken");
-            console.log("tttt"+oauthToken);
 			if(oauthToken != "undefined" && oauthToken != null) {
 				console.log("oauthToken is available");
 				github = new Github({
@@ -49,7 +31,7 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
 		},
 		requestCode: function() {
 			console.log("Request a new token, the page will be reloaded with code appended to the address...");
-			// request a token
+			// request a token, this generates a state random string, the string has to be validated after login
 			jso_configure({
 				"github": {
 					client_id: "e5923f3d7f1182fe886f",
@@ -83,10 +65,6 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
 		isTokenValid: function(token) {
 			console.log("Test if the token is still valid...");
 		},
-		clearLocalStorage: function() {
-			// tokens are stored in local storage
-			localStorage.clear();
-		},
         userInfo: function() {
             var self = this;
             var user = function() {
@@ -96,7 +74,6 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
                     if(err) {
                         console.log("there was an error getting user information, maybe the token is invalid?");
                         // delete the token from localStorage, because it is invalid...
-                        GithubAuthService.clearLocalStorage();
                         GithubAuthService.requestToken();
                     } else {
                         console.log("login successfull: "+res.login);
@@ -141,8 +118,6 @@ myApp.service("GithubSrvc", function (GithubAuthService, UserModel, ParameterSrv
         },
 		goodByeGithub : function() {
 			UserModel.logout();
-			console.log("Clear localStorage");
-			GithubAuthService.clearLocalStorage();
 		}
     }
 	
@@ -176,6 +151,7 @@ myApp.service("UserModel", function ($rootScope) {
 	this.logout = function() {
 		this.user = {};
 		this.loggedIn = false;
+		localStorage.clear();
 		console.log("send a userLoggedOut event");
 		$rootScope.$broadcast('UserModel::userLoggedOut');
 	}
@@ -199,5 +175,22 @@ myApp.service("ParameterSrvc", function ($window) {
     })();
     return {
         urlParams: urlParams
+    }
+});
+
+// EXAMPLE OF CORRECT DECLARATION OF SERVICE
+// here is a declaration of simple utility function to know if an given param is a String.
+myApp.service("UtilSrvc", function () {
+    return {
+        isAString: function(o) {
+            return typeof o == "string" || (typeof o == "object" && o.constructor === String);
+        },
+        helloWorld : function(name) {
+        	var result = "Hum, Hello you, but your name is too weird...";
+        	if (this.isAString(name)) {
+        		result = "Hello, " + name;
+        	}
+        	return result;
+        }
     }
 });
