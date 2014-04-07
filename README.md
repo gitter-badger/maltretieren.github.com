@@ -5,15 +5,21 @@ Starting with Jekyll Bootstrap I enhanced it with many different features... See
 https://maltretieren.github.io
 
 ## Philosophy
+Jekyll Bootstrap states: "The Quickest Way to Blog on GitHub Pages". I'm hoping to provide the
+"Quickest and Easiest Way to Blog on Github Pages", because you don't even need to have any
+software installed on your computer. You only need an GitHub account. You visit maltretieren.github.io
+and "Login with GitHub" - Click on "fork". That's it! You have your own instance running on your github
+account. Create/Edit your own content from your site...
+
 To use the power of the static site generator as much content as possible should be prerendered.
-Only data dynamically loaded should be imported via a template.
+With the power of Javascript and external services you can make your static site even pretty dynamic.
 
 ## Features
 - Free to Fork - MIT License
 - GitHub Pages compatible (uses only GitHub whitelistet plugins)
 - HTTPS always (redirect to HTTPS if the user visits via HTTP)
 - Edit feature (append ?edit=true to the url and see, edit, provide password and save)
-- Permanent Login via GitHub oAuth2 (login once, edit everytime)
+- Permanent Login via GitHub oAuth2 (login once, edit everytime) / Requires a piece of software running on Heroku. If you don't like that you can edit with your github username/password
 - Interactive tables build out of blog posts - beautiful, searchable, sortable
 - Comments via keen.io
 - Ratings via keen.io
@@ -46,11 +52,16 @@ Inspired by https://github.com/angular/angular-seed & https://github.com/plusjad
 			
 
 ## Setup
-- gitclone my repository
-- Setup a github page
+- login with your github account / click on "Fork"
+- Wait until you get feedback that your site is available...
+
+### Enbable advanced features
+#### Comments and Rating
 - Register on keen.io to get comments & rating
 - Adjust config with your keen details (for now the settings are stored inside the files)
-- Push to your github page
+- Goto xyz.github.io and provide your settings
+
+#### Login with github
 - If you want to use "Login with GitHub" you need to install Gatekeeper on e.g. heroku (register and deploy gatekeeper)
 
 ## Software Stack

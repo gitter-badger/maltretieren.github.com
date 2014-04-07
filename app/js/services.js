@@ -13,6 +13,8 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
 	return {
 		instance : function() {
 			var github = null;
+			// this should ask for the UserModel - user object, and get the token from there...
+			// maybe store the instance in localStorage????
 			var oauthToken = localStorage.getItem("oauthToken");
 			if(oauthToken != "undefined" && oauthToken != null) {
 				console.log("oauthToken is available");
@@ -62,9 +64,6 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
                     alert("Error while getting a token for the provided code");
             });
         },
-		isTokenValid: function(token) {
-			console.log("Test if the token is still valid...");
-		},
         userInfo: function() {
             var self = this;
             var user = function() {
@@ -120,18 +119,6 @@ myApp.service("GithubSrvc", function (GithubAuthService, UserModel, ParameterSrv
 			UserModel.logout();
 		}
     }
-	
-
-	
-	// the service should be responsible for
-	// - check if a token is available
-	// 		- if a token is available get user information
-	// 		- update "Login with github" to match the username
-	// 		- try a commit to the repository
-	// 		- if the commit is successfull it's the admin user
-	// 		- else it's a guest user
-	// - if no token is available
-	// 		- request a token
 });
 
 // Inspired by http://joelhooks.com/blog/2013/04/24/modeling-data-and-state-in-your-angularjs-application/

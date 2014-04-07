@@ -83,6 +83,12 @@ myApp.controller("TableCtrl",function ($scope, $http) {
  * GitHub controller using the GitHub service
  */
 myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, GithubSrvc) {	
+	// login by the owner of the repository: edits on the blog are possible
+	// login by someone else: create an empty fork of the repository, automatically available
+	//      - ask for a name: the fork will be created for that name: xyz.github.io
+	//      - poll for repo.contents until the forked repo is ready
+	//      - guide them with a link to the new repo and encourage them to click on "edit"
+	
 	// if no token is available listen for button click...
 	($scope.login = function() {
 		console.log("Request login");
