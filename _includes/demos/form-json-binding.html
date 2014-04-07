@@ -1,7 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!doctype html>
 <html ng-app="angularjs-starter">
 <head>
-	<meta charset="utf-8" />
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
 
 	<title>
 		Two Way Data Binding of nested JSON and a Form
@@ -13,14 +14,14 @@
 
     <h1>Two Way Data Binding of nested JSON and a Form</h1>
     <div ng-repeat="(key, value) in inputs">
-		<h2>{{key}}</h2>
+		<h2>&#123;&#123;key&#125;&#125;</h2>
 		<div ng-repeat="(key2, value2) in value">
-			{{key2}}: <input placeholder="{{value2}}" ng-model="newValue" ng-change="setOutput(key, key2, newValue)">
+            &#123;&#123;key2&#125;&#125;: <input placeholder="&#123;&#123;value2&#125;&#125;" ng-model="newValue" ng-change="setOutput(key, key2, newValue)">
 		</div>
 	</div>
 	<h1>Inputs</h1>
 	<pre ng-bind="inputs | json"></pre>
-	
+
 	<h2>Reference</h2>
 	<p><a href="http://stackoverflow.com/questions/14626414/angluarjs-binding-json-data-to-form">AngluarJS binding JSON data to Form</a></p>
 	<p><a href="http://www.bennadel.com/blog/2456-Grouping-Nested-ngRepeat-Lists-In-AngularJS.htm">Grouping Nested ngRepeat Lists In AngularJS </a></p>

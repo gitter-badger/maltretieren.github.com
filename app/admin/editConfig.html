@@ -1,0 +1,20 @@
+---
+layout: page
+title : Edit Config
+header : Frontend Configuration
+comments: false
+---
+{% raw %}
+
+    <div ng-controller="ConfigCtrl">
+        <h1>Two Way Data Binding of nested JSON and a Form</h1>
+        <div ng-repeat="(key, value) in inputs">
+            <h2>&#123;&#123;key&#125;&#125;</h2>
+            <div ng-repeat="(key2, value2) in value">
+                &#123;&#123;key2&#125;&#125;: <input placeholder="&#123;&#123;value2&#125;&#125;" ng-model="newValue" ng-change="setOutput(key, key2, newValue)">
+            </div>
+        </div>
+        <h1>Inputs</h1>
+        <pre ng-bind="inputs | json"></pre>
+    </div>
+{% endraw %}
