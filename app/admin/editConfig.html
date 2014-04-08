@@ -9,14 +9,17 @@ comments: false
     <div ng-controller="ConfigCtrl">
         <h1>Two Way Data Binding of nested JSON and a Form</h1>
         <div ng-repeat="(key, value) in inputs">
-            <h2>&#123;&#123;key&#125;&#125;</h2>
-            <div ng-repeat="(key2, value2) in value">
-                &#123;&#123;key2&#125;&#125;: <input placeholder="&#123;&#123;value2&#125;&#125;" ng-model="newValue" ng-change="setOutput(key, key2, newValue)">
-            </div>
+            <h2>{{key}}</h2>
+			<form class="form-horizontal" role="form">
+				<div clsse="form-group" ng-repeat="(key2, value2) in value">
+					<label for="{{key2}}" class="col-sm-2 control-label">{{key2}}</label>
+					<div class="col-sm-10">
+						<input placeholder="{{value2}}" id="{{key2}}" class="form-control" ng-model="newValue" ng-change="setOutput(key, key2, newValue)">
+					</div>
+				</div>
+			</form>
         </div>
-        <h1>Inputs</h1>
-        <pre ng-bind="inputs | json"></pre>
-		<button class='btn btn-default' ng-click="githubCommit()">Commit to github</button>
+		<button class='btn btn-warning' ng-click="githubCommit()">Commit to github</button>
     </div>
 
 {% endraw %}
