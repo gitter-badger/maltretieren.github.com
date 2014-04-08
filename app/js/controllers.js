@@ -152,8 +152,9 @@ myApp.controller('ToasterController', function($scope, toaster) {
     };
 });
 
-myApp.controller('GithubForkCtrl', function($scope, toaster) {	
+myApp.controller('GithubForkCtrl', function($scope, toaster, GithubSrvc) {	
 	$scope.fork = function() {
 		toaster.pop('success', "Create a fork!", '<ul><li>Lets go...</li></ul>', 5000, 'trustedHtml');
+		GithubSrvc.fork();
 	};
 });

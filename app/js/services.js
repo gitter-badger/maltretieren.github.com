@@ -114,6 +114,13 @@ myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, 
         requestCode: function() {
             GithubAuthService.requestCode();
         },
+		fork: function() {
+			var githubInstance = GithubAuthService.instance();
+			var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
+			repo.fork(function(err) {
+				alert("there was an error");
+			});
+		}
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
