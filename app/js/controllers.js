@@ -118,23 +118,11 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, Gi
     });
 });
 
-myApp.controller('ConfigCtrl', function($scope) {
-    $scope.inputs =  {
-        keenio : {
-            comments_url: "comments_urlString",
-            projectId: "projectIdString",
-            writeKey: "writeKeyString", // required for sending events
-            readKey: "readKeyString"    // required for doing analysis
-        },
-        github : {
-            client_id: "client_idString",
-            redirection_url: "redirection_urlString",
-            authorization: "authorizationString"
-        },
-        heroku : {
-            authenticate: "authenticateString"
-        }
-    }
+myApp.controller('ConfigCtrl', function($scope, $http) {
+    $scope.inputs = {}
+	$http({method: 'GET', url: '/someUrl'}).success(function(data, status, headers, config) {
+		$scope.inputs = data;
+	}
     $scope.setOutput = function(key, key2, newValue) {
         $scope.inputs[key][key2] = newValue;
     }
