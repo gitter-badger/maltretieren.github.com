@@ -168,3 +168,9 @@ myApp.controller('GithubForkCtrl', function($scope, toaster, GithubSrvc) {
 		$scope.$apply();
     };
 });
+
+myApp.controller('PostCtrl', function($scope, toaster, GithubSrvc) {
+    var scope = $scope;
+
+
+});
