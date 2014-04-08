@@ -115,7 +115,16 @@ myApp.service("GithubSrvc", function (GithubAuthService, UserModel, ParameterSrv
             GithubAuthService.requestCode();
         },
 		commit: function(text, path) {
-            alert("commit: "+text);
+            var githubInstance = GithubAuthService.instance();
+			var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
+			repo.write("master", path, text, "Updated config.js from GUI", function(err) {
+				var url = $('#url').text()+"?success=true";
+				if(err) {
+					alert("Maybe you are not the owner of this repo - you can try to commit a pull request...")
+				} else {
+					window.location = url;
+				}
+			});
         },
 		goodByeGithub : function() {
 			UserModel.logout();
