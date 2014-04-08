@@ -46,7 +46,7 @@
       <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="136" column="28" selection-start="5721" selection-end="5721" vertical-scroll-proportion="0.46784922" vertical-offset="1829" max-vertical-offset="3450">
+            <state line="131" column="45" selection-start="5503" selection-end="5503" vertical-scroll-proportion="0.36807096" vertical-offset="1799" max-vertical-offset="3360">
               <folding />
             </state>
           </provider>
@@ -55,10 +55,19 @@
       <file leaf-file-name="github.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/github-0.9.0/github.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="769" column="0" selection-start="25755" selection-end="25755" vertical-scroll-proportion="-15.84" vertical-offset="11139" max-vertical-offset="11625">
+            <state line="257" column="21" selection-start="8484" selection-end="8484" vertical-scroll-proportion="-12.28" vertical-offset="3548" max-vertical-offset="11625">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/form.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -89,15 +98,6 @@
                 <element signature="n#!!doc" expanded="true" />
                 <marker date="1396970783000" expanded="true" signature="354:2232" placeholder="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="observer-pattern-in-service.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_includes/demos/observer-pattern-in-service.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="21" selection-start="0" selection-end="2752" vertical-scroll-proportion="-6.5833335" vertical-offset="937" max-vertical-offset="1860">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -570,16 +570,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_posts/demos/2014-04-06-json-form-data-binding.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="5" selection-start="84" selection-end="84" vertical-scroll-proportion="-4.821429" vertical-offset="0" max-vertical-offset="255">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="436">
@@ -669,10 +659,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/github-0.9.0/github.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="769" column="0" selection-start="25755" selection-end="25755" vertical-scroll-proportion="-15.84" vertical-offset="11139" max-vertical-offset="11625">
+        <state line="257" column="21" selection-start="8484" selection-end="8484" vertical-scroll-proportion="-12.28" vertical-offset="3548" max-vertical-offset="11625">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="464">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -685,7 +682,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="28" selection-start="5721" selection-end="5721" vertical-scroll-proportion="0.46784922" vertical-offset="1829" max-vertical-offset="3450">
+        <state line="131" column="45" selection-start="5503" selection-end="5503" vertical-scroll-proportion="0.36807096" vertical-offset="1799" max-vertical-offset="3360">
           <folding />
         </state>
       </provider>
