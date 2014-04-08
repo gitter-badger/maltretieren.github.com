@@ -129,13 +129,13 @@ myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, 
                 repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
                 var that = this;
                 (function tick() {
-                    repo.contents("master", "_plugins", function(err, contents) {
+                    repo.contents("master", "_posts/", function(err, contents) {
                         if(err) {
                             $timeout(tick, 1000);
                         } else {
                             that.patch();
                         }
-                    }, true);
+                    });
                 })();
 
             } else {
