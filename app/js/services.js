@@ -135,7 +135,7 @@ myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, 
                         } else {
                             that.patch();
                         }
-                    });
+                    }, true);
                 })();
 
             } else {
