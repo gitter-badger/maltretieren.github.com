@@ -164,7 +164,7 @@ myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, 
                         $timeout(tick, 5000);
                     } else {
                         console.log("content of _posts:");
-                        for (var i=0; i < contents.length; i++){
+                        for (var i=0; i < 2; i++){
                             var json = JSON.parse(contents);
                             var obj = json[i];
                             repo.remove('master', obj.path, function(err) {
