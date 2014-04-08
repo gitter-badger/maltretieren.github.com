@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/themes/bootstrap-3.1.1/css/angularui/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/default.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/themes/bootstrap-3.1.1/css/angularui/bootstrap.min.css" afterPath="$PROJECT_DIR$/assets/themes/bootstrap-3.1.1/css/angularui/bootstrap.min.css" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,10 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.min.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="bootstrap.min.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/themes/bootstrap-3.1.1/css/angularui/bootstrap.min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="99400" selection-start="99548" selection-end="99548" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+            <state line="6" column="35324" selection-start="35472" selection-end="35472" vertical-scroll-proportion="0.22556391" vertical-offset="0" max-vertical-offset="399">
               <folding />
             </state>
           </provider>
@@ -94,10 +93,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="default.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="60" selection-start="1081" selection-end="1081" vertical-scroll-proportion="0.7728337" vertical-offset="75" max-vertical-offset="1515">
+            <state line="27" column="60" selection-start="1081" selection-end="1081" vertical-scroll-proportion="-13.75" vertical-offset="75" max-vertical-offset="1515">
               <folding />
             </state>
           </provider>
@@ -107,7 +106,10 @@
         <entry file="file://$PROJECT_DIR$/app/admin/createPost.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="2" column="23" selection-start="40" selection-end="40" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="420">
-              <folding />
+              <folding>
+                <marker date="1396989458000" expanded="true" signature="137:795" placeholder="..." />
+                <marker date="1396989458000" expanded="true" signature="196:784" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,8 +158,8 @@
         <option value="$PROJECT_DIR$/app/js/services.js" />
         <option value="$PROJECT_DIR$/app/admin/createPost.html" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
-        <option value="$PROJECT_DIR$/assets/themes/bootstrap-3.1.1/css/angularui/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
+        <option value="$PROJECT_DIR$/assets/themes/bootstrap-3.1.1/css/angularui/bootstrap.min.css" />
       </list>
     </option>
   </component>
@@ -222,6 +224,128 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap-3.1.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap-3.1.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fonts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap-3.1.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap-3.1.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angularui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -640,7 +764,10 @@
     <entry file="file://$PROJECT_DIR$/app/admin/createPost.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="23" selection-start="40" selection-end="40" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="420">
-          <folding />
+          <folding>
+            <marker date="1396989458000" expanded="true" signature="137:795" placeholder="..." />
+            <marker date="1396989458000" expanded="true" signature="196:784" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -658,16 +785,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/themes/bootstrap-3.1.1/css/angularui/bootstrap.min.css">
+    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="99400" selection-start="99548" selection-end="99548" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+        <state line="27" column="60" selection-start="1081" selection-end="1081" vertical-scroll-proportion="-13.75" vertical-offset="75" max-vertical-offset="1515">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
+    <entry file="file://$PROJECT_DIR$/assets/themes/bootstrap-3.1.1/css/angularui/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="60" selection-start="1081" selection-end="1081" vertical-scroll-proportion="0.7728337" vertical-offset="75" max-vertical-offset="1515">
+        <state line="6" column="35324" selection-start="35472" selection-end="35472" vertical-scroll-proportion="0.22556391" vertical-offset="0" max-vertical-offset="399">
           <folding />
         </state>
       </provider>
