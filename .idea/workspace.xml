@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/themes/bootstrap-3.1.1/css/angularui/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/default.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="209" column="38" selection-start="6582" selection-end="6582" vertical-scroll-proportion="1.5321507" vertical-offset="2444" max-vertical-offset="3240">
+            <state line="209" column="38" selection-start="6582" selection-end="6582" vertical-scroll-proportion="0.0" vertical-offset="2444" max-vertical-offset="3240">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.min.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/themes/bootstrap-3.1.1/css/angularui/bootstrap.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="99400" selection-start="99548" selection-end="99548" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
               <folding />
             </state>
           </provider>
@@ -84,19 +94,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editConfig.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/admin/editConfig.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="30" selection-start="335" selection-end="335" vertical-scroll-proportion="-5.0" vertical-offset="75" max-vertical-offset="480">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="default.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="default.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="76" selection-start="4391" selection-end="4391" vertical-scroll-proportion="-12.5" vertical-offset="840" max-vertical-offset="1515">
+            <state line="27" column="60" selection-start="1081" selection-end="1081" vertical-scroll-proportion="0.7728337" vertical-offset="75" max-vertical-offset="1515">
               <folding />
             </state>
           </provider>
@@ -141,7 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/_includes/demos/watch-vs-watch-collection.html" />
         <option value="$PROJECT_DIR$/_posts/demos/2014-04-06-watch-vs-watch-collection.md" />
         <option value="$PROJECT_DIR$/_layouts/demo.html" />
         <option value="$PROJECT_DIR$/_posts/demos/2014-04-06-json-form-data-binding.md" />
@@ -154,9 +154,10 @@
         <option value="$PROJECT_DIR$/_posts/2014-01-01-sandbox.md" />
         <option value="$PROJECT_DIR$/assets/js/github-0.9.0/github.js" />
         <option value="$PROJECT_DIR$/app/js/services.js" />
-        <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/app/admin/createPost.html" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
+        <option value="$PROJECT_DIR$/assets/themes/bootstrap-3.1.1/css/angularui/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
       </list>
     </option>
   </component>
@@ -551,13 +552,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_layouts/default.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="4" selection-end="28" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="180">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/demo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="23" selection-start="58" selection-end="58" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="165">
@@ -643,13 +637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="76" selection-start="4391" selection-end="4391" vertical-scroll-proportion="-12.5" vertical-offset="840" max-vertical-offset="1515">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/createPost.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="23" selection-start="40" selection-end="40" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="420">
@@ -666,7 +653,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="38" selection-start="6582" selection-end="6582" vertical-scroll-proportion="1.5321507" vertical-offset="2444" max-vertical-offset="3240">
+        <state line="209" column="38" selection-start="6582" selection-end="6582" vertical-scroll-proportion="0.0" vertical-offset="2444" max-vertical-offset="3240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/themes/bootstrap-3.1.1/css/angularui/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="99400" selection-start="99548" selection-end="99548" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="60" selection-start="1081" selection-end="1081" vertical-scroll-proportion="0.7728337" vertical-offset="75" max-vertical-offset="1515">
           <folding />
         </state>
       </provider>
