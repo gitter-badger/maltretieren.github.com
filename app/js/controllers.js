@@ -140,6 +140,7 @@ myApp.controller('ToasterController', function($scope, toaster) {
 	});
 	
 	$scope.pop = function(text){
+		console.log("TOAAAST!");
 		toaster.pop('success', "title", '<ul><li>Saved on GitHub. Changes take some time to appear (after page reload)...</li></ul>', 5000, 'trustedHtml');
     };
     
