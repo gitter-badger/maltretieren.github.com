@@ -449,7 +449,7 @@
             // MANUAL BUGFIX
             // https://github.com/darktears/github/commit/b176d9f24bb3fe1929bb3ab195fb7ad4da34c1f2
             this.contents = function(branch, path, cb, sync) {
-                return _request("GET", repoPath + "/contents/" + path + "?ref=" + branch, null, cb, 'raw', sync);
+                return _request("GET", repoPath + "/contents/" + path, null, cb, 'json', sync);
             };
 
             // Fork repository
