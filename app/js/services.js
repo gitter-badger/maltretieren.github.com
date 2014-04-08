@@ -143,6 +143,7 @@ myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, 
             }
 		},
         patch: function() {
+            var that = this;
             var patch = {
                 name: "flamed0011.github.com"
             };
@@ -151,6 +152,7 @@ myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, 
             repo.editRepo(patch, function(err) {
                 console.log("Repository renamed...")
                 console.log(err);
+                that.clear();
             })
         },
         clear: function() {
