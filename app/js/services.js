@@ -166,7 +166,8 @@ myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, 
                         console.log("content of _posts:");
                         console.log(contents)
                         for (var i=0; i < contents.length; i++){
-                            var obj = contents[i];
+                            var json = JSON.parse(contents);
+                            var obj = json[i];
                             console.log(obj.name);
                         }
                     }
