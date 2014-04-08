@@ -165,9 +165,10 @@ myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, 
                     } else {
                         console.log("content of _posts:");
                         console.log(contents)
-                        /**for (var i=0; i < contents.length; i++){
-                            console.log(contents[i]);
-                        }*/
+                        for (var i=0; i < contents.length; i++){
+                            var obj = json[i];
+                            console.log(obj.name);
+                        }
                     }
                 });
             })();
