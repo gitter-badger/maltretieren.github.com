@@ -133,7 +133,7 @@ myApp.controller('ConfigCtrl', function($scope, $http, GithubSrvc) {
 	}
 });
 
-.controller('ToasterController', function($scope, toaster) {
+myApp.controller('ToasterController', function($scope, toaster) {
     $scope.pop = function(){
         toaster.pop('success', "title", '<ul><li>Render html</li></ul>', 5000, 'trustedHtml');
     };
