@@ -88,7 +88,18 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
     }
 });
 
-myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, ParameterSrvc, $http) {
+myApp.service("PollingSrvc", function($scope, $timeout, Data) {
+    $scope.data = [];
+
+    var tick = function() {
+        $scope.data = Data.query(function(){
+            console.log("tick");
+            $timeout(tick, 1000);
+        });
+    };
+});
+
+myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, ParameterSrvc, PollingSrvc, $http) {
     return {
         // there are different states: token & code provided, token or code, nothing
         helloGithub : function(oauthCode, oauthToken) {
@@ -126,7 +137,8 @@ myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, 
                 });
                // poll for content
                // http://stackoverflow.com/questions/4777535/how-do-i-rename-a-github-repository-via-their-api
-               this.patch();
+               //this.patch();
+               PollingSrvc.tick();
             } else {
                 console.log("no token provided... Please login");
             }
