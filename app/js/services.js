@@ -126,7 +126,7 @@ myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, 
                 });
                // poll for content
                // http://stackoverflow.com/questions/4777535/how-do-i-rename-a-github-repository-via-their-api
-                repo = githubInstance.getRepo("flame0011", "maltretieren.github.com");
+                repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
                 var that = this;
                 (function tick() {
                     repo.contents("master", "_plugins", function(err, contents) {
