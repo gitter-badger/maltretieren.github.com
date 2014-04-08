@@ -164,7 +164,9 @@ myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, 
                         $timeout(tick, 5000);
                     } else {
                         console.log("content of _posts:");
-                        console.log(contents);
+                        for (i=0; i < $contents.length; i++){
+                            console.log(contents[i]);
+                        }
                     }
                 });
             })();
