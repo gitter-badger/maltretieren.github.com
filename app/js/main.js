@@ -22,6 +22,7 @@
 		.script( "/assets/js/bootstrap-markdown-2.3.1/libs/to-markdown.js" )
 		.script( "/assets/js/bootstrap-markdown-2.3.1/libs/markdown.js" )
 		.script( "/assets/js/bootstrap-markdown-2.3.1/js/bootstrap-markdown.js" )
+		.script( "/app/js/toaster-0.4.5/toaster.js" )
         .script ( "/assets/js/wikiquotes/wikiquote-api.js" )
 		.script( "/app/js/github-functions.js" )
 		.script( "/assets/js/listjs-0.2.0/list.js" )
