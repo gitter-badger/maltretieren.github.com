@@ -64,14 +64,14 @@
             </ul>
             <form class="navbar-form navbar-right" style="padding-right:0px" ng-controller="GithubCtrl">
                 <button type="button" class="btn btn-warning btn-middle" ng-click="requestCode()" ng-show="!user">Login with Github</button>
-				<div style="text-align:right ng-hide" class="btn-group" ng-show="user">
+				<div style="text-align:right" class="btn-group" ng-show="user">
                     <button type="button" class="btn btn-success btn-middle" ng-click="logout()" >{% raw %} {{user}} {% endraw %}</button>
                     <button type="button" class="btn btn-success btn-middle dropdown-toggle" style="height:36px" data-toggle="dropdown">
                         <span class="caret"></span>
                         <span class="sr-only">Toggle Dropdown</span>
                     </button>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="fork.html">Fork</a></li>
+                        <li><a href="app/admin/fork.html">Fork</a></li>
                         <li><a href="app/admin/editConfig.html">Edit Config</a></li>
                     </ul>
                 </div>
