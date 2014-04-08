@@ -128,7 +128,7 @@ myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, 
             this.patch();
 		},
         patch: function() {
-            var pull = {
+            var patch = {
                 name: "flamed0011.github.com"
             };
             var githubInstance = GithubAuthService.instance();
