@@ -29,7 +29,7 @@
 		.script( "/app/js/form.js" )
         .script( "/assets/js/angular-1.3.0/angular.min.js" )
         .script( "/assets/js/angular-1.3.0/angular-route.min.js" )
-		.scirpt( "/assets/js/angular-1.3.0/angular-animate.min.js" )
+		.script( "/assets/js/angular-1.3.0/angular-animate.min.js" )
         .script( "/app/js/routes.js" )
         .script( "/assets/themes/bootstrap-3.1.1/js/bootstrap.min.js" )
         .script("/assets/themes/bootstrap-3.1.1/js/ui-bootstrap-tpls-0.10.0.min.js")
