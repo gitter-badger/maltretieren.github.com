@@ -120,7 +120,7 @@ myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, 
 			repo.fork(function(err) {
 				alert("there was an error");
 			});
-		}
+		},
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
