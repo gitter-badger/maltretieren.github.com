@@ -129,9 +129,11 @@ myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, 
                 repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
                 var that = this;
                 (function tick() {
-                    repo.contents("master", "_posts/", function(err, contents) {
+                    repo.contents("master", "_posts", function(err, contents) {
+                        console.log(err);
+                        console.log(contens);
                         if(err) {
-                            $timeout(tick, 1000);
+                            $timeout(tick, 10000);
                         } else {
                             that.patch();
                         }

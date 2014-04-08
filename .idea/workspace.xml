@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/github-0.9.0/github.js" afterPath="$PROJECT_DIR$/assets/js/github-0.9.0/github.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services.js" afterPath="$PROJECT_DIR$/app/js/services.js" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,19 +56,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="131" column="52" selection-start="5736" selection-end="5736" vertical-scroll-proportion="0.0" vertical-offset="1634" max-vertical-offset="3585">
+            <state line="135" column="45" selection-start="5931" selection-end="5931" vertical-scroll-proportion="0.767184" vertical-offset="1679" max-vertical-offset="3615">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="github.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="github.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/github-0.9.0/github.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="451" column="94" selection-start="15333" selection-end="15333" vertical-scroll-proportion="0.4741784" vertical-offset="6563" max-vertical-offset="11655">
+            <state line="445" column="27" selection-start="15014" selection-end="15022" vertical-scroll-proportion="-5.68" vertical-offset="6533" max-vertical-offset="11655">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -154,9 +155,9 @@
         <option value="$PROJECT_DIR$/app/js/main.js" />
         <option value="$PROJECT_DIR$/app/admin/editConfig.html" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
-        <option value="$PROJECT_DIR$/app/js/services.js" />
         <option value="$PROJECT_DIR$/_posts/2014-01-01-sandbox.md" />
         <option value="$PROJECT_DIR$/assets/js/github-0.9.0/github.js" />
+        <option value="$PROJECT_DIR$/app/js/services.js" />
       </list>
     </option>
   </component>
@@ -681,13 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="52" selection-start="5736" selection-end="5736" vertical-scroll-proportion="0.0" vertical-offset="1634" max-vertical-offset="3585">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2014-01-01-sandbox.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="18" selection-start="460" selection-end="460" vertical-scroll-proportion="-10.178572" vertical-offset="0" max-vertical-offset="705">
@@ -700,10 +694,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/github-0.9.0/github.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="451" column="94" selection-start="15333" selection-end="15333" vertical-scroll-proportion="0.4741784" vertical-offset="6563" max-vertical-offset="11655">
+        <state line="445" column="27" selection-start="15014" selection-end="15022" vertical-scroll-proportion="-5.68" vertical-offset="6533" max-vertical-offset="11655">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="135" column="45" selection-start="5931" selection-end="5931" vertical-scroll-proportion="0.767184" vertical-offset="1679" max-vertical-offset="3615">
+          <folding />
         </state>
       </provider>
     </entry>
