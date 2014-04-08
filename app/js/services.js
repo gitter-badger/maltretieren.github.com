@@ -164,11 +164,14 @@ myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, 
                         $timeout(tick, 5000);
                     } else {
                         console.log("content of _posts:");
-                        console.log(contents)
                         for (var i=0; i < contents.length; i++){
                             var json = JSON.parse(contents);
                             var obj = json[i];
-                            console.log(obj.name);
+                            repo.remove('master', obj.path, function(err) {
+                                if(err) {
+                                    console.log("Error: "+err);
+                                }
+                            });
                         }
                     }
                 });
