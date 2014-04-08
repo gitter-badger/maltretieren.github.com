@@ -122,7 +122,7 @@ myApp.controller('ConfigCtrl', function($scope, $http) {
     $scope.inputs = {}
 	$http({method: 'GET', url: '/app/js/config.json'}).success(function(data, status, headers, config) {
 		$scope.inputs = data;
-	}
+	});
     $scope.setOutput = function(key, key2, newValue) {
         $scope.inputs[key][key2] = newValue;
     }
