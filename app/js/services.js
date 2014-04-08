@@ -131,7 +131,7 @@ myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, 
                 (function tick() {
                     repo.contents("master", "_posts", function(err, contents) {
                         console.log(err);
-                        console.log(contens);
+                        console.log(contents);
                         if(err) {
                             $timeout(tick, 10000);
                         } else {
