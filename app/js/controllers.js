@@ -143,7 +143,7 @@ myApp.controller('ToasterController', function($scope, toaster) {
 	
 	$scope.pop = function(text){
 		console.log("TOAAAST!");
-		toaster.pop('success', "Commit to GitHub successful", '<ul><li>Edits a saved on GitHub. Changes take some time to appear (refresh page after around 1 Minute)...</li></ul>', 5000, 'trustedHtml');
+		toaster.pop('success', "Commit to GitHub successful", '<ul><li>Edits saved on GitHub. Changes take some time to appear (refresh page after around 1 minute)...</li></ul>', 5000, 'trustedHtml');
 		$scope.$apply();
     };
     
