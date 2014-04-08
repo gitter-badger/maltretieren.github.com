@@ -252,6 +252,13 @@
                 _request("DELETE", repoPath + "/git/refs/"+ref, options, cb);
             };
 
+            // Edit a repo
+            // -------
+
+            this.editRepo = function(options, cb) {
+                _request("PATCH", repoPath, options, cb);
+            };
+
             // Create a repo
             // -------
 
@@ -357,11 +364,6 @@
                         "content": content,
                         "encoding": "utf-8"
                     };
-                } else {
-                    content = {
-                        "content": btoa(String.fromCharCode.apply(null, new Uint8Array(content))),
-                        "encoding": "base64"
-                    };
                 }
 
                 _request("POST", repoPath + "/git/blobs", content, function(err, res) {
@@ -451,8 +453,15 @@
             // Fork repository
             // -------
 
-            this.fork = function(cb) {
-                _request("POST", repoPath + "/forks", null, cb);
+            this.fork = function(org, cb) {
+                if(typeof org =="function"){
+                    cb = org;
+                    org = null;
+                }
+                else{
+                    org = {organization: org};
+                }
+                _request("POST", repoPath + "/forks", org, cb);
             };
 
             // Branch repository
@@ -549,23 +558,6 @@
                     });
                 });
             };
-
-            // Delete a file from the tree
-            // -------
-
-            this.delete = function(branch, path, cb) {
-                that.getSha(branch, path, function(err, sha) {
-                    if (!sha) return cb("not found", null);
-                    var delPath = repoPath + "/contents/" + path;
-                    var params = {
-                        "message": "Deleted " + path,
-                        "sha": sha
-                    };
-                    delPath += "?message=" + encodeURIComponent(params.message);
-                    delPath += "&sha=" + encodeURIComponent(params.sha);
-                    _request("DELETE", delPath, null, cb);
-                })
-            }
 
             // Move a file to a new location
             // -------
