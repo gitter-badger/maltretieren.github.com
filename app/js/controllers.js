@@ -135,9 +135,7 @@ myApp.controller('ConfigCtrl', function($scope, $http, GithubSrvc) {
 
 myApp.controller('ToasterController', function($scope, toaster) {
     $scope.$on('Toast::githubCommitSuccess', function(event) {
-		$scope.pop = function(){
-			toaster.pop('success', "title", '<ul><li>Saved on GitHub. Changes take some time to appear (after page reload)...</li></ul>', 5000, 'trustedHtml');
-		};
+		toaster.pop('success', "title", '<ul><li>Saved on GitHub. Changes take some time to appear (after page reload)...</li></ul>', 5000, 'trustedHtml');
 	});
     
     $scope.clear = function(){
