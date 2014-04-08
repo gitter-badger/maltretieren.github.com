@@ -139,6 +139,7 @@ myApp.controller('ToasterController', function($scope, toaster) {
 	$scope.$on('Toast::githubCommitSuccess', function(event) {
 		console.log("received a githubCommitSuccess event");
 		scope.pop();
+		$scope.$apply();
 	});
 	
 	$scope.pop = function(text){
