@@ -126,4 +126,8 @@ myApp.controller('ConfigCtrl', function($scope, $http) {
     $scope.setOutput = function(key, key2, newValue) {
         $scope.inputs[key][key2] = newValue;
     }
+	
+	$scope.githubCommit = function() {
+		alert($scope.inputs);
+	}
 });
