@@ -153,7 +153,9 @@ myApp.controller('ToasterController', function($scope, toaster) {
 });
 
 myApp.controller('GithubForkCtrl', function($scope, toaster, GithubSrvc) {	
-	$scope.fork = function() {
+	var scope = $scope;
+
+    $scope.fork = function() {
 		GithubSrvc.fork();
 		
 	};
