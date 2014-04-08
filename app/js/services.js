@@ -123,6 +123,7 @@ myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, 
 					alert("Maybe you are not the owner of this repo - you can try to commit a pull request...")
 				} else {
 					//window.location = url;
+					console.log("send a githubCommitSuccess event");
 					$rootScope.$broadcast('Toast::githubCommitSuccess');
 				}
 			});
