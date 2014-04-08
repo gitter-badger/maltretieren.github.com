@@ -114,6 +114,9 @@ myApp.service("GithubSrvc", function (GithubAuthService, UserModel, ParameterSrv
         requestCode: function() {
             GithubAuthService.requestCode();
         },
+		commit: function(text, path) {
+            alert("commit: "+text);
+        },
 		goodByeGithub : function() {
 			UserModel.logout();
 		}

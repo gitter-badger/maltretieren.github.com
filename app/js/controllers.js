@@ -119,7 +119,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, Gi
     });
 });
 
-myApp.controller('ConfigCtrl', function($scope, $http) {
+myApp.controller('ConfigCtrl', function($scope, $http, GithubSrvc) {
     $scope.inputs = {}
 	$http({method: 'GET', url: '/app/js/config.json'}).success(function(data, status, headers, config) {
 		$scope.inputs = data;
@@ -129,6 +129,6 @@ myApp.controller('ConfigCtrl', function($scope, $http) {
     }
 	
 	$scope.githubCommit = function() {
-		alert($scope.inputs);
+		GithubSrvc.commit($scope.inputs, "/app/js/config.json");
 	}
 });
