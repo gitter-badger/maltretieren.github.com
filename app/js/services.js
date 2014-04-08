@@ -130,10 +130,8 @@ myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, 
                 var that = this;
                 (function tick() {
                     repo.contents("master", "_posts", function(err, contents) {
-                        console.log(err);
-                        console.log(contents);
                         if(err) {
-                            $timeout(tick, 10000);
+                            $timeout(tick, 5000);
                         } else {
                             that.patch();
                         }
@@ -151,8 +149,24 @@ myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, 
             var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
             repo.editRepo(patch, function(err) {
+                console.log("Repository renamed...")
                 console.log(err);
             })
+        },
+        clear: function() {
+            var githubInstance = GithubAuthService.instance();
+            var repo = githubInstance.getRepo("flamed0011", "flamed0011.github.com");
+            (function tick() {
+                repo.contents("master", "_posts", function(err, contents) {
+                    if(err) {
+                        $timeout(tick, 5000);
+                    } else {
+                        console.log("content of _posts:");
+                        console.log(contents);
+                    }
+                });
+            })();
+
         },
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
