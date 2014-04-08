@@ -7,7 +7,7 @@ comments: false
 {% raw %}
 
     <div ng-controller="ConfigCtrl">
-        <h1>Two Way Data Binding of nested JSON and a Form</h1>
+        <h1>Edit Frontend Configuration</h1>
         <div ng-repeat="(key, value) in inputs">
             <h2>{{key}}</h2>
 			<form class="form-horizontal" role="form">
@@ -19,7 +19,7 @@ comments: false
 				</div>
 			</form>
         </div>
-		<div class="col-sm-10">
+		<div class="container col-sm-12">
 			<button class='btn btn-warning pull-right' ng-click="githubCommit()">Commit to GitHub</button>
 		</div>
     </div>
