@@ -134,16 +134,16 @@ myApp.controller('ConfigCtrl', function($scope, $http, GithubSrvc) {
 });
 
 myApp.controller('ToasterController', function($scope, toaster) {
-    var scope = $scope;
+    // save a reference to the current scope...
+	var scope = $scope;
 	
 	$scope.$on('Toast::githubCommitSuccess', function(event) {
-		console.log("received a githubCommitSuccess event");
 		scope.pop();
 	});
 	
 	$scope.pop = function(text){
 		console.log("TOAAAST!");
-		toaster.pop('success', "title", '<ul><li>Saved on GitHub. Changes take some time to appear (after page reload)...</li></ul>', 5000, 'trustedHtml');
+		toaster.pop('success', "Commit to GitHub successful", '<ul><li>Edits a saved on GitHub. Changes take some time to appear (refresh page after around 1 Minute)...</li></ul>', 5000, 'trustedHtml');
 		$scope.$apply();
     };
     
