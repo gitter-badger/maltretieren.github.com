@@ -132,3 +132,13 @@ myApp.controller('ConfigCtrl', function($scope, $http, GithubSrvc) {
 		GithubSrvc.commit(JSON.stringify($scope.inputs), "app/js/config.json");
 	}
 });
+
+.controller('ToasterController', function($scope, toaster) {
+    $scope.pop = function(){
+        toaster.pop('success', "title", '<ul><li>Render html</li></ul>', 5000, 'trustedHtml');
+    };
+    
+    $scope.clear = function(){
+        toaster.clear();
+    };
+});

@@ -46,7 +46,7 @@
 </head>
 
 <body style="background-image: url(/assets/themes/patterns/paper.png); background-position: initial initial; background-repeat: initial initial;" id="myApp">
-
+<toaster-container toaster-options="{'time-out': 3000}"></toaster-container>
 <div class="navbar navbar-default ">
     <div class="container col-lg-7 col-centered" style="float:none">
         <div class="navbar-header">
@@ -83,6 +83,7 @@
 <div class="container col-lg-7 col-centered" style="float:none">
     {{ content }}
 
+<div ng-controller="ToasterController" ng-click="pop()">Toast</div>
 {% if page.comments != false %}
     {% include widgets/comments/recentComments.html %}
     {% include widgets/comments/form.html %}
