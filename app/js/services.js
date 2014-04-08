@@ -88,7 +88,7 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
     }
 });
 
-myApp.service("GithubSrvc", function (GithubAuthService, UserModel, ParameterSrvc, $http) {
+myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, ParameterSrvc, $http) {
     return {
         // there are different states: token & code provided, token or code, nothing
         helloGithub : function(oauthCode, oauthToken) {
@@ -122,7 +122,8 @@ myApp.service("GithubSrvc", function (GithubAuthService, UserModel, ParameterSrv
 				if(err) {
 					alert("Maybe you are not the owner of this repo - you can try to commit a pull request...")
 				} else {
-					window.location = url;
+					//window.location = url;
+					$rootScope.$broadcast('Toast::githubCommitSuccess');
 				}
 			});
         },

@@ -119,7 +119,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, Gi
     });
 });
 
-myApp.controller('ConfigCtrl', function($scope, $http, GithubSrvc) {
+myApp.controller('ConfigCtrl', function($scope, $http, GithubSrvc, ToasterService) {
     $scope.inputs = {}
 	$http({method: 'GET', url: '/app/js/config.json'}).success(function(data, status, headers, config) {
 		$scope.inputs = data;
@@ -134,9 +134,11 @@ myApp.controller('ConfigCtrl', function($scope, $http, GithubSrvc) {
 });
 
 myApp.controller('ToasterController', function($scope, toaster) {
-    $scope.pop = function(){
-        toaster.pop('success', "title", '<ul><li>Render html</li></ul>', 5000, 'trustedHtml');
-    };
+    scope.$on('Toast::githubCommitSuccess', function(event) {
+		$scope.pop = function(){
+			toaster.pop('success', "title", '<ul><li>Saved on GitHub. Changes take some time to appear (after page reload)...</li></ul>', 5000, 'trustedHtml');
+		};
+	}
     
     $scope.clear = function(){
         toaster.clear();
