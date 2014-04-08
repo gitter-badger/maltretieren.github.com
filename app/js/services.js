@@ -117,7 +117,7 @@ myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, 
 		fork: function() {
 			var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
-			repo.fork(function(err) {
+			repo.fork("flamed0011.github.com", function(err) {
 				if(!err) {
 					console.log("send a githubForkSuccess event");
 					$rootScope.$broadcast('Toast::githubForkSuccess');
