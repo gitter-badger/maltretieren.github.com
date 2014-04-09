@@ -2,7 +2,10 @@
 
 As soon as I discovered Jekyll on GitHub I'm keen to push the technology of this blog forward.
 Starting with Jekyll Bootstrap I enhanced it with many different features... See it running on
-https://maltretieren.github.io
+https://maltretieren.github.io . I will provide you method to fork and run thie piece of software
+on your own repository - without the need to install even git on your local computer. Login with 
+your Github account on https://maltretieren.github.io and then choose "Fork". That's it. After
+some minutes your own blog is running in your repository!!! Try it...
 
 ## Philosophy
 Jekyll Bootstrap states: "The Quickest Way to Blog on GitHub Pages". I'm hoping to provide the
