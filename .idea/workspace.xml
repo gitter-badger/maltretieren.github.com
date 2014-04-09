@@ -35,19 +35,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="157" column="56" selection-start="6872" selection-end="6872" vertical-scroll-proportion="-8.64" vertical-offset="2139" max-vertical-offset="3840">
+            <state line="158" column="48" selection-start="6923" selection-end="6923" vertical-scroll-proportion="0.57746476" vertical-offset="2124" max-vertical-offset="3825">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fork.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="fork.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/fork.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="35" selection-start="167" selection-end="167" vertical-scroll-proportion="0.3068182" vertical-offset="0" max-vertical-offset="440">
+            <state line="9" column="32" selection-start="164" selection-end="164" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="375">
               <folding />
             </state>
           </provider>
@@ -154,8 +154,8 @@
         <option value="$PROJECT_DIR$/app/js/main.js" />
         <option value="$PROJECT_DIR$/app/partials/postsFrontpage.html" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
-        <option value="$PROJECT_DIR$/app/js/services.js" />
         <option value="$PROJECT_DIR$/app/admin/fork.html" />
+        <option value="$PROJECT_DIR$/app/js/services.js" />
       </list>
     </option>
   </component>
@@ -756,16 +756,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/services.js">
+    <entry file="file://$PROJECT_DIR$/app/admin/fork.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="56" selection-start="6872" selection-end="6872" vertical-scroll-proportion="-8.64" vertical-offset="2139" max-vertical-offset="3840">
+        <state line="9" column="32" selection-start="164" selection-end="164" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="375">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/fork.html">
+    <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="35" selection-start="167" selection-end="167" vertical-scroll-proportion="0.3068182" vertical-offset="0" max-vertical-offset="440">
+        <state line="158" column="48" selection-start="6923" selection-end="6923" vertical-scroll-proportion="0.57746476" vertical-offset="2124" max-vertical-offset="3825">
           <folding />
         </state>
       </provider>
