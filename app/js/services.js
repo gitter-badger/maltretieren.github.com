@@ -86,7 +86,7 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
     }
 });
 
-myApp.service("GithubSrvc", function ($rootScope, $q, GithubAuthService, UserModel, ParameterSrvc, $http, $timeout) {
+myApp.service("GithubSrvc", function ($rootScope, $q, delay, GithubAuthService, UserModel, ParameterSrvc, $http, $timeout) {
     return {
         // there are different states: token & code provided, token or code, nothing
         helloGithub : function(oauthCode, oauthToken) {
@@ -153,14 +153,17 @@ myApp.service("GithubSrvc", function ($rootScope, $q, GithubAuthService, UserMod
             var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo("flamed0011", "flamed0011.github.com");
             var branch = repo.getBranch("master");
+
                 $q.when(branch.contents("_posts")).then(function(res) {
                     console.log("cleanup of _posts...");
-                    for (var i=0; i < res.length; i++){
-                        var obj = res[i];
-                        $q.when(branch.remove(obj.path, "deleted")).then(function(res) {
-                            console.log("removed file: "+obj.path);
-                        });
-                    }
+                    var i = 0;
+                    (function tick() {
+                        if(i < res[i].length) {
+                            $q.when(branch.remove(obj.path, "deleted")).then(function(res) {
+                                $timeout(tick, 1000);
+                            });
+                        }
+                    })();
                 }, function(err) {
                     console.log("err"+err);
                     $timeout(tick, 5000);
@@ -246,3 +249,13 @@ myApp.service("UtilSrvc", function () {
         }
     }
 });
+
+myApp.module( /* load your module */ ).service('delay', ['$q', '$timeout', function ($q, $timeout) {
+    return {
+        start: function () {
+            var deferred = $q.defer();
+            $timeout(deferred.resolve, 1000);
+            return deferred.promise;
+        }
+    };
+}]);
