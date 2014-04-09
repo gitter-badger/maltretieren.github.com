@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/themes/bootstrap-3.1.1/css/angularui/bootstrap.min.css" afterPath="$PROJECT_DIR$/assets/themes/bootstrap-3.1.1/css/angularui/bootstrap.min.css" />
-    </list>
+    <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="" />
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,10 +32,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.min.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="bootstrap.min.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/themes/bootstrap-3.1.1/css/angularui/bootstrap.min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="35324" selection-start="35472" selection-end="35472" vertical-scroll-proportion="0.22556391" vertical-offset="0" max-vertical-offset="399">
+            <state line="6" column="35324" selection-start="35472" selection-end="35472" vertical-scroll-proportion="-1.7307693" vertical-offset="0" max-vertical-offset="180">
               <folding />
             </state>
           </provider>
@@ -114,13 +112,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="38" selection-start="1543" selection-end="1543" vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="1305">
+            <state line="31" column="38" selection-start="1543" selection-end="1543" vertical-scroll-proportion="0.49223948" vertical-offset="243" max-vertical-offset="1305">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <marker date="1396970783000" expanded="true" signature="354:2232" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -266,6 +263,10 @@
               <option name="myItemId" value="bootstrap-3.1.1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -316,36 +317,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maltretieren.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maltretieren.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-3.1.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angularui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -725,16 +696,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="38" selection-start="1543" selection-end="1543" vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="1305">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1396970783000" expanded="true" signature="354:2232" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/form.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="464">
@@ -794,8 +755,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/themes/bootstrap-3.1.1/css/angularui/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="35324" selection-start="35472" selection-end="35472" vertical-scroll-proportion="0.22556391" vertical-offset="0" max-vertical-offset="399">
+        <state line="6" column="35324" selection-start="35472" selection-end="35472" vertical-scroll-proportion="-1.7307693" vertical-offset="0" max-vertical-offset="180">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="38" selection-start="1543" selection-end="1543" vertical-scroll-proportion="0.49223948" vertical-offset="243" max-vertical-offset="1305">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
