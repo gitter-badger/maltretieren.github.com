@@ -146,32 +146,27 @@ myApp.service("GithubSrvc", function ($rootScope, $q, GithubAuthService, UserMod
             var repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
             $q.when(repo.updateInfo(patch)).then(function(res) {
                 console.log("Repository renamed...")
-                console.log(err);
                 that.clear();
             })
         },
         clear: function() {
             var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo("flamed0011", "flamed0011.github.com");
-            (function tick() {
-                repo.contents("master", "_posts", function(err, contents) {
-                    if(err) {
-                        $timeout(tick, 5000);
-                    } else {
-                        console.log("content of _posts:");
-                        for (var i=0; i < 2; i++){
-                            var json = JSON.parse(contents);
-                            var obj = json[i];
-                            repo.remove('master', obj.path, function(err) {
-                                if(err) {
-                                    console.log("Error: "+err);
-                                }
-                            });
+            var branch = repo.getBranch("master");
+            $q.when(repo.contents("master", "_posts")).then(function(res) {
+                console.log("content of _posts:");
+                for (var i=0; i < 2; i++){
+                    var json = JSON.parse(contents);
+                    var obj = json[i];
+                    repo.remove('master', obj.path, function(err) {
+                        if(err) {
+                            console.log("Error: "+err);
                         }
-                    }
-                });
-            })();
-
+                    });
+                }
+            }, function(err) {
+                console.log("err":err)
+            });
         },
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
