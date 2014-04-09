@@ -158,7 +158,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, GithubAuthService, UserMod
                     console.log("cleanup of _posts...");
                     for (var i=0; i < res.length; i++){
                         var obj = res[i];
-                        $q.when(branch.remove(obj.path)).then(function(res) {
+                        $q.when(branch.remove(obj.path, "deleted")).then(function(res) {
                             console.log("removed file: "+obj.path);
                         });
                     }
