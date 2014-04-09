@@ -45,7 +45,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
  * Receive a complete list of all comments
  */
 myApp.controller("WikiquoteCtrl",function ($scope) {
-    WikiquoteApi.getRandomQuote("Programming|Computer",
+    /**WikiquoteApi.getRandomQuote("Programming|Computer",
         function(newQuote) {
             $scope.wikiquote = newQuote.quote;
             $scope.$apply();
@@ -53,7 +53,7 @@ myApp.controller("WikiquoteCtrl",function ($scope) {
         function(msg){
             console.log("Error while retrieving quote from wikiquote "+msg);
         }
-    );
+    );*/
 });
 
 /**
