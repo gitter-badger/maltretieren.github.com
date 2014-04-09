@@ -157,12 +157,10 @@ myApp.service("GithubSrvc", function ($rootScope, $q, GithubAuthService, UserMod
                 $q.when(branch.contents("_posts")).then(function(res) {
                     console.log("content of _posts:");
                     for (var i=0; i < 2; i++){
-                        var json = JSON.parse(contents);
+                        var json = JSON.parse(res);
                         var obj = json[i];
-                        repo.remove('master', obj.path, function(err) {
-                            if(err) {
-                                console.log("Error: "+err);
-                            }
+                        $q.when(branch.remove(obj.path)).then(function(res) {
+                            console.log("removed file: "+obj.path);
                         });
                     }
                 }, function(err) {
