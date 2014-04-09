@@ -1,17 +1,8 @@
-# Introduction
-
-As soon as I discovered Jekyll on GitHub I'm keen to push the technology of this blog forward.
-Starting with Jekyll Bootstrap I enhanced it with many different features... See it running on
-https://maltretieren.github.io . I will provide you method to fork and run thie piece of software
-on your own repository - without the need to install even git on your local computer. Login with 
-your Github account on https://maltretieren.github.io and then choose "Fork". That's it. After
-some minutes your own blog is running in your repository!!! Try it...
-
-## Philosophy
+# Philosophy
 Jekyll Bootstrap states: "The Quickest Way to Blog on GitHub Pages". I'm hoping to provide the
 "Quickest and Easiest Way to Blog on Github Pages", because you don't even need to have any
-software installed on your computer. You only need an GitHub account. You visit maltretieren.github.io
-and "Login with GitHub" - Click on "fork". That's it! You have your own instance running on your github
+software installed on your computer. You only need an GitHub account. You visit https://maltretieren.github.io
+and "Login with GitHub" - Click on "Fork". That's it! You have your own instance running on your github
 account. Create/Edit your own content from your site...
 
 To use the power of the static site generator as much content as possible should be prerendered.
