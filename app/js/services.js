@@ -144,7 +144,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, GithubAuthService, UserMod
             };
             var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
-            repo.editRepo(patch, function(err) {
+            $q.when(repo.updateInfo(patch)).then(function(res) {
                 console.log("Repository renamed...")
                 console.log(err);
                 that.clear();

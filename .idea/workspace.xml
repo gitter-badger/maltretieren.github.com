@@ -34,19 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.min.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/themes/bootstrap-3.1.1/css/angularui/bootstrap.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="35324" selection-start="35472" selection-end="35472" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="180">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="128" column="47" selection-start="5706" selection-end="5706" vertical-scroll-proportion="0.685446" vertical-offset="1628" max-vertical-offset="3900">
+            <state line="148" column="32" selection-start="6461" selection-end="6461" vertical-scroll-proportion="0.75586855" vertical-offset="1898" max-vertical-offset="3900">
               <folding />
             </state>
           </provider>
@@ -72,6 +63,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="github.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/github-0.9.0/github.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="257" column="24" selection-start="8480" selection-end="8487" vertical-scroll-proportion="-5.68" vertical-offset="3653" max-vertical-offset="11595">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="github-functions.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/github-functions.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -84,7 +84,7 @@
       <file leaf-file-name="octokit.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/octokit-0.9.19/octokit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1004" column="34" selection-start="49058" selection-end="49063" vertical-scroll-proportion="-5.68" vertical-offset="14918" max-vertical-offset="20025">
+            <state line="965" column="50" selection-start="47158" selection-end="47163" vertical-scroll-proportion="-14.08" vertical-offset="14123" max-vertical-offset="20025">
               <folding />
             </state>
           </provider>
@@ -355,6 +355,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="octokit-0.9.19" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="github-0.9.0" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -673,13 +695,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/github-0.9.0/github.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="445" column="27" selection-start="15014" selection-end="15022" vertical-scroll-proportion="0.0" vertical-offset="6533" max-vertical-offset="11655">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/createPost.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="23" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="420">
@@ -745,13 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/octokit-0.9.19/octokit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1004" column="34" selection-start="49058" selection-end="49063" vertical-scroll-proportion="-5.68" vertical-offset="14918" max-vertical-offset="20025">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/partials/postsFrontpage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="24" selection-start="711" selection-end="711" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="570">
@@ -766,9 +774,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/github-0.9.0/github.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="257" column="24" selection-start="8480" selection-end="8487" vertical-scroll-proportion="-5.68" vertical-offset="3653" max-vertical-offset="11595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/octokit-0.9.19/octokit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="965" column="50" selection-start="47158" selection-end="47163" vertical-scroll-proportion="-14.08" vertical-offset="14123" max-vertical-offset="20025">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="47" selection-start="5706" selection-end="5706" vertical-scroll-proportion="0.685446" vertical-offset="1628" max-vertical-offset="3900">
+        <state line="148" column="32" selection-start="6461" selection-end="6461" vertical-scroll-proportion="0.75586855" vertical-offset="1898" max-vertical-offset="3900">
           <folding />
         </state>
       </provider>
