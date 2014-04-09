@@ -126,7 +126,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, GithubAuthService, UserMod
                 var branch = repo.getBranch("master");
                 var that = this;
                 (function tick() {
-                    $q.when(branch.read("_posts",false)).then(function(res) {
+                    $q.when(branch.read("README.md",false)).then(function(res) {
                         that.patch();
                     }, function(err) {
                         $timeout(tick, 5000);
