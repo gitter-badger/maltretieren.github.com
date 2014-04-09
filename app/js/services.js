@@ -86,7 +86,7 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
     }
 });
 
-myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, ParameterSrvc, $http, $timeout) {
+myApp.service("GithubSrvc", function ($rootScope, $q, GithubAuthService, UserModel, ParameterSrvc, $http, $timeout) {
     return {
         // there are different states: token & code provided, token or code, nothing
         helloGithub : function(oauthCode, oauthToken) {
@@ -125,14 +125,13 @@ myApp.service("GithubSrvc", function ($rootScope, GithubAuthService, UserModel, 
                // poll for content
                // http://stackoverflow.com/questions/4777535/how-do-i-rename-a-github-repository-via-their-api
                 repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
+                var branch = repo.getBranch("master");
                 var that = this;
                 (function tick() {
-                    repo.contents("master", "_posts", function(err, contents) {
-                        if(err) {
-                            $timeout(tick, 5000);
-                        } else {
-                            that.patch();
-                        }
+                    $q.when(branch.read("_posts",false)).then(function(res) {
+                        that.patch();
+                    }, function(err) {
+                        $timeout(tick, 5000);
                     });
                 })();
 
