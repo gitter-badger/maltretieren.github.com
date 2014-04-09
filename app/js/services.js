@@ -203,7 +203,7 @@ myApp.service("UserModel", function ($rootScope) {
 			name: userName
 		};
 		console.log("send a userLoggedIn event for user: "+userName);
-		$rootScope.$broadcast('UserModel::userLoggedIn', userName);
+		//$rootScope.$broadcast('UserModel::userLoggedIn', userName);
 	};
 	this.logout = function() {
 		this.user = {};
