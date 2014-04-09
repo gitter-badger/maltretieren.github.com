@@ -249,13 +249,3 @@ myApp.service("UtilSrvc", function () {
         }
     }
 });
-
-myApp.module( /* load your module */ ).service('delay', ['$q', '$timeout', function ($q, $timeout) {
-    return {
-        start: function () {
-            var deferred = $q.defer();
-            $timeout(deferred.resolve, 1000);
-            return deferred.promise;
-        }
-    };
-}]);
