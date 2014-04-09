@@ -160,13 +160,13 @@ myApp.service("GithubSrvc", function ($rootScope, $q, GithubAuthService, UserMod
                     (function tick() {
                         if(i < res[i].length) {
                             $q.when(branch.remove(obj.path, "deleted")).then(function(res) {
+                                i++;
                                 $timeout(tick, 1000);
                             });
                         }
-                    })();
+                    })(i);
                 }, function(err) {
                     console.log("err"+err);
-                    $timeout(tick, 5000);
                 });
         },
 		commit: function(text, path) {
