@@ -68,7 +68,7 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
             var user = function() {
                 var githubInstance = self.instance();
                 var user = githubInstance.getUser();
-                user.show('', function(err, res) {
+                user.getInfo('', function(err, res) {
                     if(err) {
                         console.log("there was an error getting user information, maybe the token is invalid?");
                         // delete the token from localStorage, because it is invalid...
