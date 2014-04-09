@@ -165,7 +165,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, GithubAuthService, UserMod
                     });
                 }
             }, function(err) {
-                console.log("err":err)
+                console.log("err"+err);
             });
         },
 		commit: function(text, path) {
