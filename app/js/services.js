@@ -154,7 +154,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, GithubAuthService, UserMod
             var repo = githubInstance.getRepo("flamed0011", "flamed0011.github.com");
             var branch = repo.getBranch("master");
             (function tick() {
-                $q.when(branch.contents("master", "_posts/")).then(function(res) {
+                $q.when(branch.contents("master", "app")).then(function(res) {
                     console.log("content of _posts:");
                     for (var i=0; i < 2; i++){
                         var json = JSON.parse(contents);
