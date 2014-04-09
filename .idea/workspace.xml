@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/fork.html" afterPath="$PROJECT_DIR$/app/admin/fork.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services.js" afterPath="$PROJECT_DIR$/app/js/services.js" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
@@ -38,7 +37,7 @@
       <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="158" column="48" selection-start="6923" selection-end="6923" vertical-scroll-proportion="0.57746476" vertical-offset="2124" max-vertical-offset="3825">
+            <state line="158" column="56" selection-start="6929" selection-end="6929" vertical-scroll-proportion="0.57746476" vertical-offset="2124" max-vertical-offset="3825">
               <folding />
             </state>
           </provider>
@@ -765,7 +764,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="158" column="48" selection-start="6923" selection-end="6923" vertical-scroll-proportion="0.57746476" vertical-offset="2124" max-vertical-offset="3825">
+        <state line="158" column="56" selection-start="6929" selection-end="6929" vertical-scroll-proportion="0.57746476" vertical-offset="2124" max-vertical-offset="3825">
           <folding />
         </state>
       </provider>
