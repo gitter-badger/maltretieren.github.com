@@ -9,7 +9,7 @@
 // EXAMPLE OF CORRECT DECLARATION OF SERVICE AS A VALUE
 myApp.value('version', '0.1');
 
-myApp.service("GithubAuthService", function ($http, UserModel) {
+myApp.service("GithubAuthService", function ($http, $q, UserModel) {
 	return {
 		instance : function() {
 			var github = null;
