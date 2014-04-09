@@ -68,15 +68,13 @@ myApp.service("GithubAuthService", function ($http, UserModel) {
             var user = function() {
                 var githubInstance = self.instance();
                 var user = githubInstance.getUser();
-                user.getInfo('', function(err, res) {
-                    if(err) {
-                        console.log("there was an error getting user information, maybe the token is invalid?");
-                        // delete the token from localStorage, because it is invalid...
-                        GithubAuthService.requestToken();
-                    } else {
-                        console.log("login successfull: "+res.login);
-                        UserModel.login(res.login);
-                    }
+                $q.when(user.getInfo()).then(function(res) {
+                    console.log("login successfull: "+res.login);
+                    UserModel.login(res.login);
+                }, function(err) {
+                    console.log("there was an error getting user information, maybe the token is invalid?");
+                    // delete the token from localStorage, because it is invalid...
+                    GithubAuthService.requestToken();
                 });
             };
 
