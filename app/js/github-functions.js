@@ -3,7 +3,7 @@ var saveMarkup = function(saveContent) {
     var oauthToken = localStorage.getItem("oauthToken");
     if(oauthToken != "undefined" && oauthToken != null) {
         console.log("oauthToken is available");
-        github = new Github({
+        github = new Octokit({
             token: oauthToken,
             auth: "oauth"
         });
@@ -33,13 +33,13 @@ var getMarkup = function() {
 	var github = null;
 	if(oauthToken != "undefined" && oauthToken != null) {
 		console.log("oauthToken is available");
-		github = new Github({
+        github = new Octokit({
 			token: oauthToken,
 			auth: "oauth"
 		});
 	} else {
 		console.log("oauthToken is not available or not valid");
-		github = new Github({
+        github = new Octokit({
 			username: usernameField,
 			password: passwordField,
 			auth: "basic"
