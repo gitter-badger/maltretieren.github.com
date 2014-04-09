@@ -153,20 +153,23 @@ myApp.service("GithubSrvc", function ($rootScope, $q, GithubAuthService, UserMod
             var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo("flamed0011", "flamed0011.github.com");
             var branch = repo.getBranch("master");
-            $q.when(branch.contents("master", "_posts")).then(function(res) {
-                console.log("content of _posts:");
-                for (var i=0; i < 2; i++){
-                    var json = JSON.parse(contents);
-                    var obj = json[i];
-                    repo.remove('master', obj.path, function(err) {
-                        if(err) {
-                            console.log("Error: "+err);
-                        }
-                    });
-                }
-            }, function(err) {
-                console.log("err"+err);
-            });
+            (function tick() {
+                $q.when(branch.contents("master", "_posts")).then(function(res) {
+                    console.log("content of _posts:");
+                    for (var i=0; i < 2; i++){
+                        var json = JSON.parse(contents);
+                        var obj = json[i];
+                        repo.remove('master', obj.path, function(err) {
+                            if(err) {
+                                console.log("Error: "+err);
+                            }
+                        });
+                    }
+                }, function(err) {
+                    console.log("err"+err);
+                    $timeout(tick, 5000);
+                });
+            })();
         },
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
