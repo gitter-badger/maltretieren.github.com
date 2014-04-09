@@ -46,7 +46,7 @@
       <file leaf-file-name="fork.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/fork.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="40" selection-start="131" selection-end="131" vertical-scroll-proportion="0.27272728" vertical-offset="0" max-vertical-offset="440">
+            <state line="9" column="33" selection-start="165" selection-end="165" vertical-scroll-proportion="0.3068182" vertical-offset="0" max-vertical-offset="440">
               <folding />
             </state>
           </provider>
@@ -790,7 +790,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/fork.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="40" selection-start="131" selection-end="131" vertical-scroll-proportion="0.27272728" vertical-offset="0" max-vertical-offset="440">
+        <state line="9" column="33" selection-start="165" selection-end="165" vertical-scroll-proportion="0.3068182" vertical-offset="0" max-vertical-offset="440">
           <folding />
         </state>
       </provider>
