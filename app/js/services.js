@@ -158,7 +158,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, GithubAuthService, UserMod
             $q.when(branch.contents("_posts")).then(function(res) {
 					console.log("cleanup of _posts...");
 					for(var i=0; i<res.length; i++) {
-						content[res[i].path] = null;
+						content[res[i].path] = "hello";
 					}
 				}, function(err) {
 					console.log("err"+err);
