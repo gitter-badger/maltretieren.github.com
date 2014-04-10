@@ -915,7 +915,7 @@
                                         var content, data, isBase64, path,
                                             _this = this;
                                         path = _arg[0], data = _arg[1];
-                                        content = data.content || data;
+                                        content = data;
                                         isBase64 = data.isBase64 || false;
                                         return _git.postBlob(content, isBase64).then(function(blob) {
                                             return {
