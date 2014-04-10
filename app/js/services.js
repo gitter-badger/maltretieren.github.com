@@ -162,11 +162,9 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
 					branch.remove(res[i].path.path, "deleted");
 					i++;
 				}, 100, res.length);
-					content[] = "deleted";
-				}, function(err) {
-					console.log("err"+err);
-				}
-			)
+			}, function(err) {
+				console.log("err"+err);
+			});
         },
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
