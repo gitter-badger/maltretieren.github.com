@@ -165,6 +165,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
 							branch.remove(res[i].path, "deleted");
 						} else {
 							console.log(res[i].path + " is a folder - delete the content instead");
+							tick(res[i].path);
 						}
 						i++;
 					}, 1100, res.length);
