@@ -170,7 +170,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, GithubAuthService, UserMod
 				}, function(error) {
 					console.log("eerrrror while writng");
 				}
-			)};
+			)});
         },
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
