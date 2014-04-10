@@ -86,7 +86,7 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
     }
 });
 
-myApp.service("GithubSrvc", function ($rootScope, $q, delay, GithubAuthService, UserModel, ParameterSrvc, $http, $timeout) {
+myApp.service("GithubSrvc", function ($rootScope, $q, GithubAuthService, UserModel, ParameterSrvc, $http, $timeout) {
     return {
         // there are different states: token & code provided, token or code, nothing
         helloGithub : function(oauthCode, oauthToken) {
@@ -165,12 +165,11 @@ myApp.service("GithubSrvc", function ($rootScope, $q, delay, GithubAuthService, 
 				}
 			).then(function() {
 				console.log(content);
-				//$q.all([delay.start(),
-				for(var i=0;i<content.length;i++) {
-					console.log(contents[i]);
-					// http://answer.techwikihow.com/950637/github-api-issue-file-upload.html
-					// branch.remove(contents[i].path, "deleted");
-				}
+				var i = 0;
+				$interval(function() {
+					branch.remove(contents[i].path, "deleted");
+					i++;
+				}, 5000, content.length);
 			});
         },
 		commit: function(text, path) {
@@ -253,14 +252,3 @@ myApp.service("UtilSrvc", function () {
         }
     }
 });
-
-// Delay service, use if with github delete multiple files
-myApp.service('delay', ['$q', '$timeout', function ($q, $timeout) {
-    return {
-        start: function () {
-            var deferred = $q.defer();
-            $timeout(deferred.resolve, 100);
-            return deferred.promise;
-        }
-    };
-}]);
