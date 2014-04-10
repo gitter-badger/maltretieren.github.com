@@ -86,7 +86,7 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
     }
 });
 
-myApp.service("GithubSrvc", function ($rootScope, $q, GithubAuthService, UserModel, ParameterSrvc, $http, $timeout) {
+myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthService, UserModel, ParameterSrvc, $http, $timeout) {
     return {
         // there are different states: token & code provided, token or code, nothing
         helloGithub : function(oauthCode, oauthToken) {
