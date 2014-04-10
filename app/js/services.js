@@ -154,16 +154,19 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
             var repo = githubInstance.getRepo("flamed0011", "flamed0011.github.com");
             var branch = repo.getBranch("master");
 
-            $q.when(branch.contents("_posts")).then(function(res) {
-				console.log("cleanup of _posts...");
-				var i = 0;
-				$interval(function() {
-					branch.remove(res[i].path, "deleted");
-					i++;
-				}, 500, res.length);
-			}, function(err) {
-				console.log("err"+err);
-			});
+			(function tick() {
+				$q.when(branch.contents("_posts")).then(function(res) {
+					console.log("cleanup of _posts...");
+					var i = 0;
+					$interval(function() {
+						branch.remove(res[i].path, "deleted");
+						i++;
+					}, 500, res.length);
+				}, function(err) {
+					$timeout(tick, 5000);
+				});
+			})();
+
         },
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
