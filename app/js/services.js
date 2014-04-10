@@ -156,15 +156,9 @@ myApp.service("GithubSrvc", function ($rootScope, $q, GithubAuthService, UserMod
 
                 $q.when(branch.contents("_posts")).then(function(res) {
                     console.log("cleanup of _posts...");
-                    var i = 0;
-                    (function tick() {
-                        if(i < res[i].length) {
-                            $q.when(branch.remove(obj.path, "deleted")).then(function(res) {
-                                i++;
-                                $timeout(tick, 1000);
-                            });
-                        }
-                    })(i);
+                    $q.when(branch.remove("_posts")).then(function(res) {
+						console.log(res);
+                    });
                 }, function(err) {
                     console.log("err"+err);
                 });
