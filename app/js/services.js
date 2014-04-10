@@ -146,12 +146,12 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
             var repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
             $q.when(repo.updateInfo(patch)).then(function(res) {
                 console.log("Repository renamed...")
-                that.clear();
+                that.clear(forkName);
             })
         },
-        clear: function() {
+        clear: function(forkName) {
             var githubInstance = GithubAuthService.instance();
-            var repo = githubInstance.getRepo("flamed0011", "flamed0011.github.com");
+            var repo = githubInstance.getRepo("flamed0011", forkName);
             var branch = repo.getBranch("master");
 
 			// polling for the posts dir every second until rename complete,
