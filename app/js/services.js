@@ -154,10 +154,10 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
             var repo = githubInstance.getRepo("flamed0011", "flamed0011.github.com");
             var branch = repo.getBranch("master");
 
-			// polling every second until rename complete,
-			// then start delete every second....
-			(function tick() {
-				$q.when(branch.contents("_posts")).then(function(res) {
+			// polling for the posts dir every second until rename complete,
+			// then start delete every second.... 
+			(function tick(path) {
+				$q.when(branch.contents(path)).then(function(res) {
 					console.log("cleanup of _posts...");
 					var i = 0;
 					$interval(function() {
@@ -167,9 +167,9 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
 							console.log(res[i].path + " is a folder - delete the content instead");
 						}
 						i++;
-					}, 1000, res.length);
+					}, 1100, res.length);
 				}, function(err) {
-					$timeout(tick, 1000);
+					$timeout(tick("_posts"), 1000);
 				});
 			})();
 
