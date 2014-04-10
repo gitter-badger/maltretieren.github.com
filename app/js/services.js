@@ -169,7 +169,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, GithubAuthService, UserMod
 					console.log(response)
 				}, function(error) {
 					console.log("eerrrror while writng");
-				};
+				}
 			)};
         },
 		commit: function(text, path) {
