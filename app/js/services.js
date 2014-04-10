@@ -168,7 +168,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
 							tick(res[i].path);
 						}
 						i++;
-					}, 1100, res.length);
+					}, 1500, res.length);
 				}, function(err) {
 					$timeout(tick("_posts"), 1000);
 				});
