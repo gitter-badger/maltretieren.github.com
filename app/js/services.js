@@ -157,20 +157,17 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
 			var content = {}
             $q.when(branch.contents("_posts")).then(function(res) {
 					console.log("cleanup of _posts...");
-					for(var i=0; i<res.length; i++) {
-						content[res[i].path] = "deleted";
+					var i = 0;
+					$interval(function() {
+						branch.remove(res[i].path.path, "deleted");
+						i++;
+					}, 100, res.length);
+						content[] = "deleted";
 					}
 				}, function(err) {
 					console.log("err"+err);
 				}
-			).then(function() {
-				console.log(content);
-				var i = 0;
-				$interval(function() {
-					branch.remove(content[i].path, "deleted");
-					i++;
-				}, 100, content.length);
-			});
+			);
         },
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
