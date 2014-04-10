@@ -160,7 +160,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, GithubAuthService, UserMod
 					for(var i=0; i<res.length; i++) {
 						content[res[i].path] = null;
 					}
-					$q.when(branch.writeMany(contents, "deleted")).then(function(response) {
+					$q.when(branch.writeMany(content, "deleted")).then(function(response) {
 						console.log(response)
                     });
                 }, function(err) {
