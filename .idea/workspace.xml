@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/fork.html" afterPath="$PROJECT_DIR$/app/admin/fork.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services.js" afterPath="$PROJECT_DIR$/app/js/services.js" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,19 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="155" column="23" selection-start="5242" selection-end="5242" vertical-scroll-proportion="0.3685446" vertical-offset="2168" max-vertical-offset="3285">
+            <state line="159" column="30" selection-start="5296" selection-end="5296" vertical-scroll-proportion="-9.28" vertical-offset="2153" max-vertical-offset="3270">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="209" column="8" selection-start="8389" selection-end="8389" vertical-scroll-proportion="0.0" vertical-offset="2999" max-vertical-offset="3945">
+            <state line="142" column="30" selection-start="6166" selection-end="6166" vertical-scroll-proportion="0.767184" vertical-offset="1784" max-vertical-offset="3945">
               <folding />
             </state>
           </provider>
@@ -149,9 +149,9 @@
         <option value="$PROJECT_DIR$/app/js/github-functions.js" />
         <option value="$PROJECT_DIR$/app/js/main.js" />
         <option value="$PROJECT_DIR$/app/partials/postsFrontpage.html" />
-        <option value="$PROJECT_DIR$/app/js/services.js" />
         <option value="$PROJECT_DIR$/app/admin/fork.html" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
+        <option value="$PROJECT_DIR$/app/js/services.js" />
       </list>
     </option>
   </component>
@@ -217,6 +217,10 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -233,6 +237,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -515,13 +533,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="8" selection-start="8389" selection-end="8389" vertical-scroll-proportion="0.0" vertical-offset="2999" max-vertical-offset="3945">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/editConfig.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="55" selection-start="499" selection-end="523" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="480">
@@ -540,7 +551,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="23" selection-start="5242" selection-end="5242" vertical-scroll-proportion="0.3685446" vertical-offset="2168" max-vertical-offset="3285">
+        <state line="159" column="30" selection-start="5296" selection-end="5296" vertical-scroll-proportion="-9.28" vertical-offset="2153" max-vertical-offset="3270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="30" selection-start="6166" selection-end="6166" vertical-scroll-proportion="0.767184" vertical-offset="1784" max-vertical-offset="3945">
           <folding />
         </state>
       </provider>

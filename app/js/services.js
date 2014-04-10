@@ -112,7 +112,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
         requestCode: function() {
             GithubAuthService.requestCode();
         },
-		fork: function() {
+		fork: function(forkName) {
 			var githubInstance = GithubAuthService.instance();
 			if(githubInstance != null) {
                 var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
@@ -127,7 +127,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
                 var that = this;
                 (function tick() {
                     $q.when(branch.read("README.md",false)).then(function(res) {
-                        that.rename();
+                        that.rename(forkName);
                     }, function(err) {
                         $timeout(tick, 5000);
                     });
@@ -137,10 +137,10 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
                 console.log("no token provided... Please login");
             }
 		},
-        rename: function() {
+        rename: function(forkName) {
             var that = this;
             var patch = {
-                name: "flamed0011.github.com"
+                name: forkName
             };
             var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
