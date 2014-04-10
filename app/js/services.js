@@ -163,12 +163,12 @@ myApp.service("GithubSrvc", function ($rootScope, $q, GithubAuthService, UserMod
 				}, function(err) {
 					console.log("err"+err);
 				}
-			).when(branch.writeMany(content, "deleted")).then(function(response) {
-				console.log(content);
-				console.log(response)
-			}, function(error) {
-					console.log("eerrrror while writng");
-				};
+				).when(branch.writeMany(content, "deleted")).then(function(response) {
+					console.log(content);
+					console.log(response)
+				}, function(error) {
+						console.log("eerrrror while writng");
+				}
 			);
         },
 		commit: function(text, path) {
