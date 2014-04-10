@@ -86,7 +86,7 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
     }
 });
 
-myApp.service("GithubSrvc", function ($rootScope, $q, GithubAuthService, UserModel, ParameterSrvc, $http, $timeout) {
+myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthService, UserModel, ParameterSrvc, $http, $timeout) {
     return {
         // there are different states: token & code provided, token or code, nothing
         helloGithub : function(oauthCode, oauthToken) {
@@ -154,20 +154,26 @@ myApp.service("GithubSrvc", function ($rootScope, $q, GithubAuthService, UserMod
             var repo = githubInstance.getRepo("flamed0011", "flamed0011.github.com");
             var branch = repo.getBranch("master");
 
-                $q.when(branch.contents("_posts")).then(function(res) {
-                    console.log("cleanup of _posts...");
-                    var i = 0;
-                    (function tick() {
-                        if(i < res[i].length) {
-                            $q.when(branch.remove(obj.path, "deleted")).then(function(res) {
-                                i++;
-                                $timeout(tick, 1000);
-                            });
-                        }
-                    })(i);
-                }, function(err) {
-                    console.log("err"+err);
-                });
+			// polling for the posts dir every second until rename complete,
+			// then start delete every second.... 
+			(function tick(path) {
+				$q.when(branch.contents(path)).then(function(res) {
+					console.log("cleanup of _posts...");
+					var i = 0;
+					$interval(function() {
+						if(res[i].type === "file") {
+							branch.remove(res[i].path, "deleted");
+						} else {
+							console.log(res[i].path + " is a folder - delete the content instead");
+							tick(res[i].path);
+						}
+						i++;
+					}, 1500, res.length);
+				}, function(err) {
+					$timeout(tick("_posts"), 1000);
+				});
+			})();
+
         },
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
