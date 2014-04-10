@@ -127,7 +127,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
                 var that = this;
                 (function tick() {
                     $q.when(branch.read("README.md",false)).then(function(res) {
-                        that.patch();
+                        that.rename();
                     }, function(err) {
                         $timeout(tick, 5000);
                     });
@@ -137,7 +137,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
                 console.log("no token provided... Please login");
             }
 		},
-        patch: function() {
+        rename: function() {
             var that = this;
             var patch = {
                 name: "flamed0011.github.com"
@@ -207,7 +207,7 @@ myApp.service("UserModel", function ($rootScope) {
 			name: userName
 		};
 		console.log("send a userLoggedIn event for user: "+userName);
-		//$rootScope.$broadcast('UserModel::userLoggedIn', userName);
+		$rootScope.$broadcast('UserModel::userLoggedIn', userName);
 	};
 	this.logout = function() {
 		this.user = {};
