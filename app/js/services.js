@@ -161,7 +161,11 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
 					console.log("cleanup of _posts...");
 					var i = 0;
 					$interval(function() {
-						branch.remove(res[i].path, "deleted");
+						if(res[i].type === "file") {
+							branch.remove(res[i].path, "deleted");
+						} else {
+							console.log(res[i].path + " is a folder - delete the content instead");
+						}
 						i++;
 					}, 1000, res.length);
 				}, function(err) {
