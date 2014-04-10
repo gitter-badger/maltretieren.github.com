@@ -155,7 +155,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
             var branch = repo.getBranch("master");
 
 			// polling every second until rename complete,
-			// then start delete every half a second....
+			// then start delete every second....
 			(function tick() {
 				$q.when(branch.contents("_posts")).then(function(res) {
 					console.log("cleanup of _posts...");
@@ -163,7 +163,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
 					$interval(function() {
 						branch.remove(res[i].path, "deleted");
 						i++;
-					}, 500, res.length);
+					}, 1000, res.length);
 				}, function(err) {
 					$timeout(tick, 1000);
 				});
