@@ -167,7 +167,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
 				console.log(content);
 				var i = 0;
 				$interval(function() {
-					branch.remove(contents[i].path, "deleted");
+					branch.remove(content[i].path, "deleted");
 					i++;
 				}, 5000, content.length);
 			});
