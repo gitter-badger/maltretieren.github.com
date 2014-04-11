@@ -211,7 +211,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
                 (function tick() {
                     $q.when(branch.read("README.md",false)).then(function(res) {
                         that.deleteBranch(forkName, "heads/template");
-                    }, function(err) {
+                    }, function(err) { 
                         $timeout(tick, 5000);
                     });
                 })(branch);
