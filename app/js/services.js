@@ -202,7 +202,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
 			var forkName = forkName;
 			branch.createBranch(branchName).done(function() {
 				console.log("master branch created from template branch");
-				that.deleteBranch(forkName, "heads/template"),
+				that.deleteBranch(forkName, "heads/template");
 			});
         },
 		commit: function(text, path) {
