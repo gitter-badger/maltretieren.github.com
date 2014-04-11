@@ -175,6 +175,13 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
 			})();
 
         },
+        deleteBranch: function() {
+			var githubInstance = GithubAuthService.instance();
+			var repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");			
+			repo.git.deleteRef("master").done(function(result) {
+				console.log("deleted branch"+branchName);
+			});
+        },
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
