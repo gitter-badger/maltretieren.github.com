@@ -210,11 +210,12 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
                 branch = repo.getBranch("master");
                 (function tick() {
                     $q.when(branch.read("README.md",false)).then(function(res) {
-                        var branch = repo.getBranch("template");
+                        that.deleteBranch(forkName, "heads/template");
                     }, function(err) {
                         $timeout(tick, 5000);
                     });
                 })();
+                $timeout(that.deleteBranch(forkName, "heads/template"), 5000);
 			});
         },
 		commit: function(text, path) {
