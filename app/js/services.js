@@ -290,3 +290,12 @@ myApp.service("UtilSrvc", function () {
         }
     }
 });
+
+// EXAMPLE OF CORRECT DECLARATION OF SERVICE
+// here is a declaration of simple utility function to know if an given param is a String.
+myApp.service("PollingSrvc", function () {
+    return {
+        // poll for availability - implement as promise, resolve as soon as it is available
+    }
+});
+
