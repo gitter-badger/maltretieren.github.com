@@ -180,6 +180,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
 
         },
         deleteBranch: function(forkName, branchName) {
+			var that = this;
 			var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo("flamed0011", forkName);			
 			repo.git.deleteRef(branchName).done(function(result) {
@@ -188,6 +189,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
 			});
         },
         renameBranch: function(forkName) {
+			var that = this;
 			var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo("flamed0011", forkName);			
 			repo.git.deleteRef("heads/master").done(function(result) {
@@ -196,6 +198,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
 			});
         },
         createBranch: function(forkName, branchName) {
+			var that = this;
 			var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo("flamed0011", forkName);
 			var branch = repo.getBranch("template");
