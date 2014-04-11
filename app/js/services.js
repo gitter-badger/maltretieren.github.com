@@ -215,7 +215,6 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
                         $timeout(tick, 5000);
                     });
                 })();
-                $timeout(that.deleteBranch(forkName, "heads/template"), 5000);
 			});
         },
 		commit: function(text, path) {
