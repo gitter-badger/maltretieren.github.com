@@ -86,7 +86,7 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
     }
 });
 
-myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthService, UserModel, ParameterSrvc, $http, $timeout) {
+myApp.service("GithubSrvc", function ($rootScope, $q, $interval, $timeout, GithubAuthService, UserModel, ParameterSrvc, $http, $timeout) {
     return {
         // there are different states: token & code provided, token or code, nothing
         helloGithub : function(oauthCode, oauthToken) {
@@ -207,7 +207,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
 			console.log("create master branch from template");
 			branch.createBranch("master").done(function() {
 				console.log("master branch created from template branch");
-				that.deleteBranch(forkName, "heads/template");
+				$timeout(that.deleteBranch(forkName, "heads/template"), 5000);
 			});
         },
 		commit: function(text, path) {
