@@ -204,7 +204,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
 			console.log("switch to template branche");
 			var branch = repo.getBranch("template");
 			var forkName = forkName;
-			console.log("create master branch from template);
+			console.log("create master branch from template");
 			branch.createBranch(branchName).done(function() {
 				console.log("master branch created from template branch");
 				//that.deleteBranch(forkName, "heads/template");
