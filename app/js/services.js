@@ -146,7 +146,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
             var repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
             $q.when(repo.updateInfo(patch)).then(function(res) {
                 console.log("Repository renamed...")
-                that.clear(forkName);
+                that.deleteBranch(forkName);
             })
         },
         clear: function(forkName) {
@@ -175,9 +175,9 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
 			})();
 
         },
-        deleteBranch: function() {
+        deleteBranch: function(forkName) {
 			var githubInstance = GithubAuthService.instance();
-			var repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");			
+			var repo = githubInstance.getRepo("flamed0011", forkName);			
 			repo.git.deleteRef("master").done(function(result) {
 				console.log("deleted branch"+branchName);
 			});
