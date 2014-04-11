@@ -127,7 +127,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
                 var that = this;
                 (function tick() {
                     $q.when(branch.read("README.md",false)).then(function(res) {
-                        that.rename(forkName);
+                        that.renameRepo(forkName);
                     }, function(err) {
                         $timeout(tick, 5000);
                     });
@@ -137,7 +137,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
                 console.log("no token provided... Please login");
             }
 		},
-        rename: function(forkName) {
+        renameRepo: function(forkName) {
 			if(!forkName || forkName.length < 5){
 				forkName = "flamed0011.github.com"
 			}
@@ -150,7 +150,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
             var repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
             $q.when(repo.updateInfo(patch)).then(function(res) {
                 console.log("Repository renamed...")
-                that.deleteBranch(forkName);
+                that.renameBranch(forkName, "heads/master");
             })
         },
         clear: function(forkName) {
@@ -179,11 +179,30 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
 			})();
 
         },
-        deleteBranch: function(forkName) {
+        deleteBranch: function(forkName, branchName) {
+			var githubInstance = GithubAuthService.instance();
+			var repo = githubInstance.getRepo("flamed0011", forkName);			
+			repo.git.deleteRef(branchName).done(function(result) {
+				console.log("deleted branch"+branchName);
+				that.renameBranch(forkName);
+			});
+        },
+        ranameBranch: function(forkName) {
 			var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo("flamed0011", forkName);			
 			repo.git.deleteRef("heads/master").done(function(result) {
-				console.log("deleted branch");
+				console.log("deleted master branch");
+				that.createBranch(forkName, "master");
+			});
+        },
+        createBranch: function(forkName, branchName) {
+			var githubInstance = GithubAuthService.instance();
+			var repo = githubInstance.getRepo("flamed0011", forkName);
+			var branch = repo.getBranch("template");
+			var forkName = forkName;
+			branch.createBranch(branchName).done(function() {
+				console.log("master branch created from template branch");
+				that.deleteBranch(forkName, "heads/template"),
 			});
         },
 		commit: function(text, path) {
