@@ -28,7 +28,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="30" selection-start="5296" selection-end="5296" vertical-scroll-proportion="-9.28" vertical-offset="2153" max-vertical-offset="3270">
+            <state line="159" column="30" selection-start="5296" selection-end="5296" vertical-scroll-proportion="0.0" vertical-offset="2153" max-vertical-offset="3270">
               <folding />
             </state>
           </provider>
@@ -37,7 +37,7 @@
       <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="260" column="22" selection-start="10014" selection-end="10014" vertical-scroll-proportion="0.8004435" vertical-offset="3539" max-vertical-offset="4080">
+            <state line="209" column="16" selection-start="8648" selection-end="8648" vertical-scroll-proportion="0.7649667" vertical-offset="2790" max-vertical-offset="4605">
               <folding />
             </state>
           </provider>
@@ -46,10 +46,8 @@
       <file leaf-file-name="fork.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/fork.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="79" selection-start="376" selection-end="376" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="405">
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="12" column="79" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="405">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -57,7 +55,7 @@
       <file leaf-file-name="editConfig.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/editConfig.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="55" selection-start="499" selection-end="523" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="480">
+            <state line="16" column="55" selection-start="499" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="480">
               <folding />
             </state>
           </provider>
@@ -216,10 +214,6 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -236,38 +230,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maltretieren.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maltretieren.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maltretieren.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maltretieren.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -288,13 +250,13 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../node-github" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="86" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="850" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="935" />
-    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="93" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="88" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
   </component>
@@ -315,14 +277,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -331,6 +285,14 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -485,9 +447,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/octokit-0.9.19/underscore-min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13401" selection-start="13583" selection-end="13583" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
-          <folding />
-        </state>
+        <state line="4" column="13401" selection-start="13583" selection-end="13583" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/github-functions.js">
@@ -534,30 +494,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/editConfig.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="55" selection-start="499" selection-end="523" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="480">
+        <state line="16" column="55" selection-start="499" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="480">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/fork.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="79" selection-start="376" selection-end="376" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="405">
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="12" column="79" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="405">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="30" selection-start="5296" selection-end="5296" vertical-scroll-proportion="-9.28" vertical-offset="2153" max-vertical-offset="3270">
+        <state line="159" column="30" selection-start="5296" selection-end="5296" vertical-scroll-proportion="0.0" vertical-offset="2153" max-vertical-offset="3270">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="260" column="22" selection-start="10014" selection-end="10014" vertical-scroll-proportion="0.8004435" vertical-offset="3539" max-vertical-offset="4080">
+        <state line="209" column="16" selection-start="8648" selection-end="8648" vertical-scroll-proportion="0.7649667" vertical-offset="2790" max-vertical-offset="4605">
           <folding />
         </state>
       </provider>
