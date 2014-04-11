@@ -187,7 +187,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
 				that.renameBranch(forkName);
 			});
         },
-        ranameBranch: function(forkName) {
+        renameBranch: function(forkName) {
 			var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo("flamed0011", forkName);			
 			repo.git.deleteRef("heads/master").done(function(result) {
