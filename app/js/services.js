@@ -138,7 +138,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
             }
 		},
         rename: function(forkName) {
-			if(forkName.length < 5){
+			if(!forkName && forkName.length < 5){
 				forkname = "flamed0011.github.com"
 			}
 			
