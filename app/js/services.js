@@ -214,7 +214,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
                     }, function(err) {
                         $timeout(tick, 5000);
                     });
-                })();
+                })(branch);
 			});
         },
 		commit: function(text, path) {
