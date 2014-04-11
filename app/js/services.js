@@ -207,7 +207,14 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
 			console.log("create master branch from template");
 			branch.createBranch("master").done(function() {
 				console.log("master branch created from template branch");
-				$timeout(that.deleteBranch(forkName, "heads/template"), 5000);
+                branch = repo.getBranch("masterr");
+                (function tick() {
+                    $q.when(branch.read("README.md",false)).then(function(res) {
+                        var branch = repo.getBranch("template");
+                    }, function(err) {
+                        $timeout(tick, 5000);
+                    });
+                })();
 			});
         },
 		commit: function(text, path) {
