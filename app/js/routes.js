@@ -1,6 +1,6 @@
 'use strict';
 
-var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'toaster']);
+var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'toaster', "ngCsp"]);
 
 myApp.config(function ($routeProvider, $locationProvider) {
 
