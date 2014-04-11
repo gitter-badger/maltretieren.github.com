@@ -178,7 +178,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
         deleteBranch: function(forkName) {
 			var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo("flamed0011", forkName);			
-			repo.git.deleteRef("master").done(function(result) {
+			repo.git.deleteRef("heads/master").done(function(result) {
 				console.log("deleted branch"+branchName);
 			});
         },
