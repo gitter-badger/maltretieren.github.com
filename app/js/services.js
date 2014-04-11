@@ -207,7 +207,7 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
 			console.log("create master branch from template");
 			branch.createBranch("master").done(function() {
 				console.log("master branch created from template branch");
-                branch = repo.getBranch("masterr");
+                branch = repo.getBranch("master");
                 (function tick() {
                     $q.when(branch.read("README.md",false)).then(function(res) {
                         var branch = repo.getBranch("template");
