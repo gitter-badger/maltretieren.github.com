@@ -26,6 +26,14 @@ functionality and get more experienced...
 
 Jekyll on Github was fun. I disliked the provided
 
+# Editing
+First I found prose.io - an online GUI for editing content on GitHub
+accounts. I thought it would be cool to have this kind of functionality
+more integrated with my blog. So I introduced a Markdown editor and a
+JavaScript library it interact with the GitHub API. This was simple
+and I was now able to change the content of the posts and commit it
+back to GitHub. After GitHub rendering it is available for all people...
+
 # Forking
 I thought it is cool to have a zero effort fork process and get a
 clone of this blog with just one mouse click. Therefore I imported
