@@ -297,7 +297,7 @@ myApp.service("UtilSrvc", function () {
     }
 });
 
-myApp.service("PollingSrvc", function ($q) {
+myApp.service("PollingSrvc", function ($q, $timeout) {
     // poll for availability - implement as promise, resolve as soon as it is available
     var pollForBranchContent = function (branch, resource, callback) {
         $q.when(branch.read(resource,false)).then(function(res) {
