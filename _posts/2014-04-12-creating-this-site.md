@@ -59,3 +59,8 @@ and find/replace the "title". Then commit. That's it...
 As soon as I started out with the GitHub fork functionality there the need
 for a deployment workflow rises because it was needed to commit to a master
 branch and get a template branch out of it, but filtering out some stuff.
+
+I found http://www.dhar.fr/blog/2012/07/23/some-fun-with-git-hooks-and-grunt-dot-js/
+which describes how to deal with commits to two branches: it uses the hooks
+in git to run a script after every commit... It switches to template branch (checkout)
+and then removes the posts in _posts and commits to template branch
