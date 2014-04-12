@@ -1,3 +1,6 @@
-/**
- * Created by crunsh on 12.04.14.
- */
+{
+    "name": "GittiHubbi",
+    "version": "0.0.9",
+    "author": "Maltretieren",
+    "description": "A GitHub Blog ready to clone..."
+}
