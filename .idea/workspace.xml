@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services.js" afterPath="$PROJECT_DIR$/app/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/fork.html" afterPath="$PROJECT_DIR$/app/admin/fork.html" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="166" column="29" selection-start="5475" selection-end="5475" vertical-scroll-proportion="0.58093125" vertical-offset="2228" max-vertical-offset="3375">
+            <state line="155" column="23" selection-start="5242" selection-end="5242" vertical-scroll-proportion="0.0" vertical-offset="2213" max-vertical-offset="3345">
               <folding />
             </state>
           </provider>
@@ -44,10 +44,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fork.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="fork.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/fork.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="14" selection-start="715" selection-end="715" vertical-scroll-proportion="-9.041667" vertical-offset="38" max-vertical-offset="465">
+            <state line="12" column="79" selection-start="376" selection-end="376" vertical-scroll-proportion="0.3325527" vertical-offset="38" max-vertical-offset="465">
               <folding />
             </state>
           </provider>
@@ -138,9 +138,9 @@
         <option value="$PROJECT_DIR$/app/js/github-functions.js" />
         <option value="$PROJECT_DIR$/app/js/main.js" />
         <option value="$PROJECT_DIR$/app/partials/postsFrontpage.html" />
-        <option value="$PROJECT_DIR$/app/admin/fork.html" />
         <option value="$PROJECT_DIR$/app/js/services.js" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
+        <option value="$PROJECT_DIR$/app/admin/fork.html" />
       </list>
     </option>
   </component>
@@ -511,13 +511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/fork.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="14" selection-start="715" selection-end="715" vertical-scroll-proportion="-9.041667" vertical-offset="38" max-vertical-offset="465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="134" column="43" selection-start="5954" selection-end="5954" vertical-scroll-proportion="-11.64" vertical-offset="1719" max-vertical-offset="4800">
@@ -527,7 +520,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="29" selection-start="5475" selection-end="5475" vertical-scroll-proportion="0.58093125" vertical-offset="2228" max-vertical-offset="3375">
+        <state line="155" column="23" selection-start="5242" selection-end="5242" vertical-scroll-proportion="0.0" vertical-offset="2213" max-vertical-offset="3345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/fork.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="79" selection-start="376" selection-end="376" vertical-scroll-proportion="0.3325527" vertical-offset="38" max-vertical-offset="465">
           <folding />
         </state>
       </provider>
