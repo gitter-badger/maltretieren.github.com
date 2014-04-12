@@ -86,7 +86,10 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
     }
 });
 
-myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthService, UserModel, ParameterSrvc, $http, $timeout) {
+myApp.service("GithubSrvc", function (
+    $rootScope, $q, $interval, GithubAuthService,
+    UserModel, PollingSrvc, ParameterSrvc, $http, $timeout) {
+
     return {
         // there are different states: token & code provided, token or code, nothing
         helloGithub : function(oauthCode, oauthToken) {
@@ -208,13 +211,10 @@ myApp.service("GithubSrvc", function ($rootScope, $q, $interval, GithubAuthServi
 			branch.createBranch("master").done(function() {
 				console.log("master branch created from template branch");
                 branch = repo.getBranch("master");
-                (function tick() {
-                    $q.when(branch.read("README.md",false)).then(function(res) {
-                        repo.git.deleteRef("heads/template");
-                    }, function(err) {
-                        $timeout(tick, 5000);
-                    });
-                })(branch);
+                var callback = function() {
+                    repo.git.deleteRef("heads/template");
+                };
+                PollingSrvc.checkForAvailability(branch, "README.md", callback);
 			});
         },
 		commit: function(text, path) {
@@ -298,11 +298,16 @@ myApp.service("UtilSrvc", function () {
     }
 });
 
-// EXAMPLE OF CORRECT DECLARATION OF SERVICE
-// here is a declaration of simple utility function to know if an given param is a String.
 myApp.service("PollingSrvc", function () {
-    return {
-        // poll for availability - implement as promise, resolve as soon as it is available
-    }
+    // poll for availability - implement as promise, resolve as soon as it is available
+    var checkForAvailability = function (branch, resource, callback) {
+        $q.when(branch.read(resource,false)).then(function(res) {
+            callback();
+        }, function(err) {
+            $timeout(tick, 5000);
+        });
+    };
+
+    return checkForAvailability;
 });
 
