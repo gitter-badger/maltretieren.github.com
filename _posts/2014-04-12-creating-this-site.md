@@ -32,6 +32,21 @@ clone of this blog with just one mouse click. Therefore I imported
 a JavaScript project to communicate with the GitHub API to control
 forking, branching, renaming of this blog.
 
+The process is as following: I keep a template branch next to the
+master branch which is missing e.g. the different posts. As soon
+as the user is logged in with his GitHub account he can visit the
+fork page. He presses the fork button. Now a fork of my repository
+is created. Now it is time to rename the repo to match the users'
+decision on the site name. The renamed repo still  contains the
+master & the template branch. Because GitHub renders the Github
+Pages out of the master branch which contain all of my posts.
+Therefore firstly the master is deleted on the forked
+repo and then the template branch is renamed to master.
+
+One last postprocessing step is to adjust _config.yml to insert
+the page slogan chosen by the user - get the content of _config.yml
+and find/replace the "title". Then commit. That's it...
+
 # Getting more professional
 As soon as I started out with the GitHub fork functionality there the need
 for a deployment workflow rises because it was needed to commit to a master
