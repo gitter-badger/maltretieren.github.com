@@ -156,8 +156,8 @@ myApp.controller('GithubForkCtrl', function($scope, toaster, GithubSrvc) {
 	var scope = $scope;
 
     var options = {
-        $scope.forkName,
-        $scope.forkSlogan
+        forkName: $scope.forkName,
+        forkSlogan: $scope.forkSlogan
     }
 
     $scope.fork = function() {
