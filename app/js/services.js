@@ -128,14 +128,10 @@ myApp.service("GithubSrvc", function (
                 repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
                 var branch = repo.getBranch("master");
                 var that = this;
-                (function tick() {
-                    $q.when(branch.read("README.md",false)).then(function(res) {
-                        that.renameRepo(forkName);
-                    }, function(err) {
-                        $timeout(tick, 5000);
-                    });
-                })();
-
+                var callback = function() {
+                    that.renameRepo(forkName);
+                };
+                PollingSrvc.checkForBranchContent(branch, "README.md", callback);
             } else {
                 console.log("no token provided... Please login");
             }
@@ -156,13 +152,13 @@ myApp.service("GithubSrvc", function (
                 that.renameBranch(forkName, "heads/master");
             })
         },
-        clear: function(forkName) {
+        batchDelete: function(forkName) {
             var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo("flamed0011", forkName);
             var branch = repo.getBranch("master");
 
 			// polling for the posts dir every second until rename complete,
-			// then start delete every second.... 
+			// then start delete every second....
 			(function tick(path) {
 				$q.when(branch.contents(path)).then(function(res) {
 					console.log("cleanup of _posts...");
