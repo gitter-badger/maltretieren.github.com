@@ -125,7 +125,8 @@ myApp.service("GithubSrvc", function (
                 });
                // poll for content
                // http://stackoverflow.com/questions/4777535/how-do-i-rename-a-github-repository-via-their-api
-                repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
+                var userName = UserModel.getUser().name;
+                repo = githubInstance.getRepo(userName, "maltretieren.github.com");
                 var branch = repo.getBranch("master");
                 var that = this;
                 var callback = function() {
@@ -146,7 +147,8 @@ myApp.service("GithubSrvc", function (
                 name: forkName
             };
             var githubInstance = GithubAuthService.instance();
-            var repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
+            var userName = UserModel.getUser().name;
+            var repo = githubInstance.getRepo(userName, "maltretieren.github.com");
             $q.when(repo.updateInfo(patch)).then(function(res) {
                 console.log("Repository renamed...")
                 that.renameBranch(forkName, "heads/master");
