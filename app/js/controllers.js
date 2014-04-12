@@ -155,10 +155,16 @@ myApp.controller('ToasterController', function($scope, toaster) {
 myApp.controller('GithubForkCtrl', function($scope, toaster, GithubSrvc) {	
 	var scope = $scope;
     $scope.forkName;
+    $scope.forkSlogan;
 
+    var options = {
+        forkName: $scope.forkName,
+        forkSlogan: $scope.forkSlogan
+    }
 
     $scope.fork = function() {
-		GithubSrvc.fork($scope.forkName);
+        // pass in options
+		GithubSrvc.fork(options);
 	};
 	
 	$scope.$on('Toast::githubForkSuccess', function(event) {

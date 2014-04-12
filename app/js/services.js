@@ -115,7 +115,8 @@ myApp.service("GithubSrvc", function (
         requestCode: function() {
             GithubAuthService.requestCode();
         },
-		fork: function(forkName) {
+		fork: function(options) {
+            // options contain the name for the new github page and the site slogan
 			var githubInstance = GithubAuthService.instance();
 			if(githubInstance != null) {
                 var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
@@ -130,7 +131,7 @@ myApp.service("GithubSrvc", function (
                 var branch = repo.getBranch("master");
                 var that = this;
                 var callback = function() {
-                    that.renameRepo(forkName);
+                    that.renameRepo(options.forkName);
                 };
                 PollingSrvc.checkForBranchContent(branch, "README.md", callback);
             } else {
