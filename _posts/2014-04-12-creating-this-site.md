@@ -24,7 +24,7 @@ about some things, but you don't have an idea what it is about. Then
 you dive more into and find it fun to play with it. You discover more
 functionality and get more experienced...
 
-Jekyll on Github was fun.
+Jekyll on Github was fun...
 
 # Editing
 First I found prose.io - an online GUI for editing content on GitHub
