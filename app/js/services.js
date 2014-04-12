@@ -313,7 +313,7 @@ myApp.service("UtilSrvc", function () {
 
 myApp.service("PollingSrvc", function ($q, $timeout) {
     // poll for availability - implement as promise, resolve as soon as it is available
-    var checkForBranchContent = function (branch, resource, callback) {
+    var poll = function (branch, resource, callback) {
         var branch = branch;
         var resource = resource;
         var callback = callback;
@@ -324,5 +324,7 @@ myApp.service("PollingSrvc", function ($q, $timeout) {
             $timeout(poll(branch, resource, callback), 5000);
         });
     };
+
+    return { checkForBranchContent: poll }
 });
 
