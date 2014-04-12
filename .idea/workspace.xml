@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md" afterPath="$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -95,7 +93,7 @@
       <file leaf-file-name="2014-04-12-creating-this-site.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="67" selection-start="2652" selection-end="2652" vertical-scroll-proportion="0.93119264" vertical-offset="569" max-vertical-offset="1065">
+            <state line="65" column="68" selection-start="2653" selection-end="2653" vertical-scroll-proportion="0.93119264" vertical-offset="569" max-vertical-offset="1065">
               <folding />
             </state>
           </provider>
@@ -515,7 +513,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="67" selection-start="2652" selection-end="2652" vertical-scroll-proportion="0.93119264" vertical-offset="569" max-vertical-offset="1065">
+        <state line="65" column="68" selection-start="2653" selection-end="2653" vertical-scroll-proportion="0.93119264" vertical-offset="569" max-vertical-offset="1065">
           <folding />
         </state>
       </provider>
