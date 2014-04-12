@@ -28,7 +28,7 @@
       <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="327" column="34" selection-start="12569" selection-end="12590" vertical-scroll-proportion="-11.64" vertical-offset="4614" max-vertical-offset="5040">
+            <state line="327" column="34" selection-start="12569" selection-end="12590" vertical-scroll-proportion="0.0" vertical-offset="4614" max-vertical-offset="5040">
               <folding />
             </state>
           </provider>
@@ -46,7 +46,7 @@
       <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="19" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+            <state line="12" column="19" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="300">
               <folding />
             </state>
           </provider>
@@ -55,7 +55,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="330">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
               <folding />
             </state>
           </provider>
@@ -64,7 +64,7 @@
       <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="45" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+            <state line="20" column="45" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="420">
               <folding />
             </state>
           </provider>
@@ -73,7 +73,7 @@
       <file leaf-file-name="postsFrontpage.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/postsFrontpage.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="225">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
               <folding />
             </state>
           </provider>
@@ -82,10 +82,8 @@
       <file leaf-file-name="default.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="20" selection-start="3920" selection-end="3920" vertical-scroll-proportion="-10.625" vertical-offset="810" max-vertical-offset="1560">
-              <folding>
-                <element signature="n#style#0;n#button#1;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="71" column="20" selection-start="3920" selection-end="3920" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1560">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,12 +91,9 @@
       <file leaf-file-name="2014-04-12-creating-this-site.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="68" selection-start="2653" selection-end="2653" vertical-scroll-proportion="0.93119264" vertical-offset="569" max-vertical-offset="1065">
+            <state line="65" column="69" selection-start="2654" selection-end="2654" vertical-scroll-proportion="0.8060345" vertical-offset="601" max-vertical-offset="1065">
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
           </provider>
         </entry>
       </file>
@@ -114,7 +109,7 @@
       <file leaf-file-name="config.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="173" selection-start="173" selection-end="173" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
+            <state line="0" column="173" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
               <folding />
             </state>
           </provider>
@@ -188,6 +183,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -222,7 +218,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -237,13 +232,13 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../node-github" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="86" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="935" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="850" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="935" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="93" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="88" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
   </component>
@@ -264,6 +259,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -272,14 +275,6 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -455,10 +450,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="20" selection-start="3920" selection-end="3920" vertical-scroll-proportion="-10.625" vertical-offset="810" max-vertical-offset="1560">
-          <folding>
-            <element signature="n#style#0;n#button#1;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="71" column="20" selection-start="3920" selection-end="3920" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1560">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -478,7 +471,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="327" column="34" selection-start="12569" selection-end="12590" vertical-scroll-proportion="-11.64" vertical-offset="4614" max-vertical-offset="5040">
+        <state line="327" column="34" selection-start="12569" selection-end="12590" vertical-scroll-proportion="0.0" vertical-offset="4614" max-vertical-offset="5040">
           <folding />
         </state>
       </provider>
@@ -513,7 +506,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="68" selection-start="2653" selection-end="2653" vertical-scroll-proportion="0.93119264" vertical-offset="569" max-vertical-offset="1065">
+        <state line="65" column="69" selection-start="2654" selection-end="2654" vertical-scroll-proportion="0.8060345" vertical-offset="601" max-vertical-offset="1065">
           <folding />
         </state>
       </provider>
