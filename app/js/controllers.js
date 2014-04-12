@@ -161,7 +161,6 @@ myApp.controller('GithubForkCtrl', function($scope, toaster, GithubSrvc) {
 
     $scope.fork = function() {
         // pass in options
-        console.log($scope.options);
 		GithubSrvc.fork($scope.options);
 	};
 	
