@@ -301,14 +301,14 @@ myApp.service("UtilSrvc", function () {
 
 myApp.service("PollingSrvc", function ($q, $timeout) {
     // poll for availability - implement as promise, resolve as soon as it is available
-    var pollForBranchContent = function (branch, resource, callback) {
+    var poll = function (branch, resource, callback) {
         $q.when(branch.read(resource,false)).then(function(res) {
             callback();
         }, function(err) {
-            $timeout(tick, 5000);
+            $timeout(poll, 5000);
         });
     };
 
-    return { checkForBranchContent: pollForBranchContent }
+    return { checkForBranchContent: poll }
 });
 
