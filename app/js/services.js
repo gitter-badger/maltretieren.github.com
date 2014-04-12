@@ -117,6 +117,7 @@ myApp.service("GithubSrvc", function (
         },
 		fork: function(options) {
             // options contain the name for the new github page and the site slogan
+            console.log(options.forkSlogan);
 			var githubInstance = GithubAuthService.instance();
 			if(githubInstance != null) {
                 var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
