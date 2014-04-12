@@ -214,7 +214,7 @@ myApp.service("GithubSrvc", function (
                 var callback = function() {
                     repo.git.deleteRef("heads/template");
                 };
-                PollingSrvc.checkForAvailability(branch, "README.md", callback);
+                PollingSrvc.checkForBranchContent(branch, "README.md", callback);
 			});
         },
 		commit: function(text, path) {
