@@ -218,6 +218,18 @@ myApp.service("GithubSrvc", function (
                 PollingSrvc.checkForBranchContent(branch, "README.md", callback);
 			});
         },
+        postProcess: function() {
+            // change page slogan:
+            // request _config.yml
+            // search/replace "title : Place to pee free!"/"title: slogan)
+            // commit
+        },
+        getContent: function() {
+            // change page slogan:
+            // request _config.yml
+            // search/replace "title : Place to pee free!"/"title: slogan)
+            // commit
+        },
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
@@ -302,6 +314,11 @@ myApp.service("UtilSrvc", function () {
 myApp.service("PollingSrvc", function ($q, $timeout) {
     // poll for availability - implement as promise, resolve as soon as it is available
     var poll = function (branch, resource, callback) {
+        var branch = branch;
+        var resource = resource;
+        var callback = callback;
+        console.log(branch);
+
         $q.when(branch.read(resource,false)).then(function(res) {
             callback();
         }, function(err) {
