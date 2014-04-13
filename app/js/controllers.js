@@ -176,6 +176,7 @@ myApp.controller('GithubForkCtrl', function($scope, toaster, UserModel) {
     $scope.$on('UserModel::userLoggedIn', function(event) {
         console.log(event);
         $scope.options.forkName = event.userName+".github.com";
+        $scope.$apply();
     });
 
     $scope.fork = function() {
