@@ -115,27 +115,28 @@ myApp.service("GithubSrvc", function (
         requestCode: function() {
             GithubAuthService.requestCode();
         },
+        clone : function(options) {
+            // poll for content
+            // http://stackoverflow.com/questions/4777535/how-do-i-rename-a-github-repository-via-their-api
+            var self = this;
+            self.fork(options)
+            .then( PollingSrvc.checkForBranchContent("maltretieren.github.com", "master"))
+            .then( self.renameRepo(forkName))
+            .then( PollingSrvc.checkForBranchContent("flamed0011.github.com", "template"))
+            .then( self.deleteBranch("master"))
+            .then( self.renameBranch("template", "master"))
+            .then( console.log("READY!!!"))
+        },
 		fork: function(options) {
             // options contain the name for the new github page and the site slogan
 			var githubInstance = GithubAuthService.instance();
 			if(githubInstance != null) {
                 // this is the name of the original repo
                 var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
-                $q.when(repo.fork()).then(function(res) {
+                var promise = $q.when(repo.fork()).then(function(res) {
                     console.log("send a githubForkSuccess event");
                     $rootScope.$broadcast('Toast::githubForkSuccess');
                 });
-               // poll for content
-               // http://stackoverflow.com/questions/4777535/how-do-i-rename-a-github-repository-via-their-api
-                //var userName = UserModel.getUser();
-                //console.log(userName);
-                repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
-                var branch = repo.getBranch("master");
-                var that = this;
-                var callback = function() {
-                    that.renameRepo(options.forkName);
-                };
-                PollingSrvc.checkForBranchContent(branch, "README.md", callback);
             } else {
                 console.log("no token provided... Please login");
             }
@@ -229,6 +230,8 @@ myApp.service("GithubSrvc", function (
             // request _config.yml
             // search/replace "title : Place to pee free!"/"title: slogan)
             // commit
+            var githubInstance = GithubAuthService.instance();
+            var repo = githubInstance.getRepo("flamed0011", forkName);
         },
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
@@ -312,19 +315,21 @@ myApp.service("UtilSrvc", function () {
 });
 
 myApp.service("PollingSrvc", function ($q, $timeout) {
+    var deferred = $q.defer();
     // poll for availability - implement as promise, resolve as soon as it is available
-    var poll = function (branch, resource, callback) {
+    var repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
+    var branch = repo.getBranch("master");
+    var poll = function (branch, resource) {
         var branch = branch;
         var resource = resource;
         var callback = callback;
 
         $q.when(branch.read(resource,false)).then(function(res) {
-            callback();
+            deferred.resolve();
         }, function(err) {
-            $timeout(poll(branch, resource, callback), 5000);
+            $timeout(poll(branch, resource), 5000);
         });
     };
-
-    return { checkForBranchContent: poll }
+    return deferred.promise;
 });
 
