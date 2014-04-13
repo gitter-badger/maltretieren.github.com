@@ -156,8 +156,24 @@ myApp.controller('GithubForkCtrl', function($scope, toaster, GithubSrvc) {
 	var scope = $scope;
 
     $scope.options = {}
-    $scope.options.forkName;
     $scope.options.forkSlogan;
+
+    $scope.options.forkName = function () {
+        $http({
+            method: 'GET',
+            url: $scope.options.forkName
+        }).success(function (data, status, headers, config) {
+                $scope.message = '';
+                if (data.success == false) {
+                    console.log("success")
+                }
+                else {
+                    console.log("error");
+                }
+            }).error(function (data, status, headers, config) {
+                console.log("unexpected error");
+            });
+    };
 
     $scope.fork = function() {
         // pass in options
