@@ -137,6 +137,7 @@ myApp.service("GithubSrvc", function (
                     console.log("send a githubForkSuccess event");
                     $rootScope.$broadcast('Toast::githubForkSuccess');
                 });
+                return promise;
             } else {
                 console.log("no token provided... Please login");
             }
