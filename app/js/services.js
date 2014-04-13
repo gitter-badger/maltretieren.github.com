@@ -314,9 +314,10 @@ myApp.service("UtilSrvc", function () {
     }
 });
 
-myApp.service("PollingSrvc", function ($q, $timeout) {
+myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
     var deferred = $q.defer();
     // poll for availability - implement as promise, resolve as soon as it is available
+    var githubInstance = GithubAuthService.instance();
     var repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
     var branch = repo.getBranch("master");
     var poll = function (branch, resource) {
