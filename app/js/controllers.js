@@ -174,7 +174,7 @@ myApp.controller('GithubForkCtrl', function($scope, toaster, UserModel) {
 
     //$scope.$watch('options.forkName', checkUnique);
     $scope.$on('UserModel::userLoggedIn', function(event) {
-        console.log("the GithubCtrl received an userLoggedIn event for user: "+UserModel.user.name);
+        console.log("the GithubForkController received an userLoggedIn event for user: "+UserModel.user.name);
         $scope.user = UserModel.user.name;
         $scope.options.forkName = user;
         $scope.apply();
