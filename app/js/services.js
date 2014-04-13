@@ -121,11 +121,11 @@ myApp.service("GithubSrvc", function (
             var self = this;
             self.fork(options)
             .then( PollingSrvc.checkForBranchContent("maltretieren.github.com", "master"))
-            .then( self.renameRepo(forkName))
+            .then( self.renameRepo("flamed0011.github.com"))
             .then( PollingSrvc.checkForBranchContent("flamed0011.github.com", "template"))
             .then( self.deleteBranch("master"))
             .then( self.renameBranch("template", "master"))
-            .then( console.log("READY!!!"))
+            .then( console.log("READY!!!") )
         },
 		fork: function(options) {
             // options contain the name for the new github page and the site slogan
@@ -318,8 +318,8 @@ myApp.service("UtilSrvc", function () {
 myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
     var deferred = $q.defer();
 
-    var poll = function (resource) {
-        var resource = resource;
+    var poll = function () {
+        var resource = "README.md";
         // poll for availability - implement as promise, resolve as soon as it is available
         var githubInstance = GithubAuthService.instance();
         var repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
