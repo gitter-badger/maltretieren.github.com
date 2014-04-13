@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="" />
+    <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md" afterPath="$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md" />
+    </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -101,7 +103,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="75" selection-start="2660" selection-end="2660" vertical-scroll-proportion="0.79357797" vertical-offset="629" max-vertical-offset="1065">
+            <state line="65" column="74" selection-start="2659" selection-end="2659" vertical-scroll-proportion="0.79357797" vertical-offset="629" max-vertical-offset="1065">
               <folding />
             </state>
           </provider>
@@ -516,7 +518,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="75" selection-start="2660" selection-end="2660" vertical-scroll-proportion="0.79357797" vertical-offset="629" max-vertical-offset="1065">
+        <state line="65" column="74" selection-start="2659" selection-end="2659" vertical-scroll-proportion="0.79357797" vertical-offset="629" max-vertical-offset="1065">
           <folding />
         </state>
       </provider>
