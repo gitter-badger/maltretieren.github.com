@@ -324,11 +324,13 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
         var githubInstance = GithubAuthService.instance();
         var repo = githubInstance.getRepo("flamed0011", repoName);
         var branch = repo.getBranch(branchName);
+        var repoName = repoName;
+        var branchName = branchName;
 
         var promise = $q.when(branch.read(resource,false)).then(function(res) {
             deferred.resolve();
         }, function(err) {
-            $timeout(poll(resource), 5000);
+            $timeout(poll(repoName, branchName), 5000);
         });
         return promise;
     };
