@@ -330,7 +330,7 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
         var promise = $q.when(branch.read(resource,false)).then(function(res) {
             deferred.resolve();
         }, function(err) {
-            $timeout(poll(repoName, branchName), 5000);
+            //$timeout(poll(repoName, branchName), 5000);
         });
         return promise;
     };
