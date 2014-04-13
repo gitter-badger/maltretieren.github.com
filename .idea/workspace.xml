@@ -28,7 +28,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="32" selection-start="5335" selection-end="5335" vertical-scroll-proportion="0.08450704" vertical-offset="2349" max-vertical-offset="3630">
+            <state line="154" column="59" selection-start="5205" selection-end="5205" vertical-scroll-proportion="0.11308204" vertical-offset="2259" max-vertical-offset="3630">
               <folding />
             </state>
           </provider>
@@ -55,7 +55,7 @@
       <file leaf-file-name="fork.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/fork.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="32" selection-start="976" selection-end="976" vertical-scroll-proportion="-7.1666665" vertical-offset="83" max-vertical-offset="510">
+            <state line="17" column="32" selection-start="976" selection-end="976" vertical-scroll-proportion="0.0" vertical-offset="83" max-vertical-offset="510">
               <folding />
             </state>
           </provider>
@@ -189,6 +189,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -301,7 +302,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -316,13 +316,13 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../node-github" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="86" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="935" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="850" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="935" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="93" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="88" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
   </component>
@@ -343,6 +343,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -351,14 +359,6 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -577,14 +577,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/fork.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="32" selection-start="976" selection-end="976" vertical-scroll-proportion="-7.1666665" vertical-offset="83" max-vertical-offset="510">
+        <state line="17" column="32" selection-start="976" selection-end="976" vertical-scroll-proportion="0.0" vertical-offset="83" max-vertical-offset="510">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="32" selection-start="5335" selection-end="5335" vertical-scroll-proportion="0.08450704" vertical-offset="2349" max-vertical-offset="3630">
+        <state line="154" column="59" selection-start="5205" selection-end="5205" vertical-scroll-proportion="0.11308204" vertical-offset="2259" max-vertical-offset="3630">
           <folding />
         </state>
       </provider>
