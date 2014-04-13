@@ -317,19 +317,18 @@ myApp.service("UtilSrvc", function () {
 
 myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
     var deferred = $q.defer();
-    // poll for availability - implement as promise, resolve as soon as it is available
-    var githubInstance = GithubAuthService.instance();
-    var repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
-    var branch = repo.getBranch("master");
-    var poll = function (branch, resource) {
-        var branch = branch;
+
+    var poll = function (resource) {
         var resource = resource;
-        var callback = callback;
+        // poll for availability - implement as promise, resolve as soon as it is available
+        var githubInstance = GithubAuthService.instance();
+        var repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
+        var branch = repo.getBranch("master");
 
         var promise = $q.when(branch.read(resource,false)).then(function(res) {
             deferred.resolve();
         }, function(err) {
-            $timeout(poll(branch, resource), 5000);
+            $timeout(poll(resource), 5000);
         });
         return promise;
     };
