@@ -29,6 +29,7 @@
         .script( "/assets/js/angular-1.3.0/angular.min.js" )
         .script( "/assets/js/angular-1.3.0/angular-route.min.js" )
 		.script( "/assets/js/angular-1.3.0/angular-animate.min.js" )
+        .script( "/assets/js/angular-1.3.0/angular-resource.min.js" )
         .script( "/app/js/routes.js" )
 		.script( "/assets/js/toaster-0.4.5/toaster.js" )
         .script( "/assets/themes/bootstrap-3.1.1/js/bootstrap.min.js" )

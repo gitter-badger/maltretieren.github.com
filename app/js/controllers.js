@@ -152,28 +152,27 @@ myApp.controller('ToasterController', function($scope, toaster) {
     };
 });
 
-myApp.controller('GithubForkCtrl', function($scope, toaster, GithubSrvc) {	
+myApp.controller('GithubForkCtrl', function($scope, toaster, GithubSrvc) {
 	var scope = $scope;
 
     $scope.options = {}
-    $scope.options.forkSlogan;
+    $scope.options.forkSlogan = "";
+    $scope.options.forkName = GithubSrvc.User;
 
-    $scope.options.forkName = function () {
-        $http({
-            method: 'GET',
-            url: $scope.options.forkName
-        }).success(function (data, status, headers, config) {
-                $scope.message = '';
-                if (data.success == false) {
-                    console.log("success")
-                }
-                else {
-                    console.log("error");
-                }
-            }).error(function (data, status, headers, config) {
-                console.log("unexpected error");
-            });
+    var checkUnique = function() {
+        var url = "";
+        var forkName = $scope.options.forkName;
+
+        if(forkName.length>4) {
+            if(forkName.indexOf(".")===-1) {
+                url =  "http://"+forkName+".github.io";
+            }
+
+            console.log("here the test should come if the url is available: "+url);
+        }
     };
+
+    $scope.$watch('options.forkName', checkUnique);
 
     $scope.fork = function() {
         // pass in options

@@ -1,8 +1,8 @@
 'use strict';
 
-var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'toaster']);
+var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ngResource', 'ui.bootstrap', 'toaster']);
 
-myApp.config(function ($routeProvider, $locationProvider) {
+myApp.config(function ($routeProvider) {
 
 	$routeProvider.when(
     	'/view1', 
@@ -20,6 +20,7 @@ myApp.config(function ($routeProvider, $locationProvider) {
         {
             redirectTo: '/view1'
         });
+
 	// turning on html5Mode to have access to the parameters of the url
 	// see also: http://johan.driessen.se/posts/Manipulating-history-with-the-HTML5-History-API-and-AngularJS
 
