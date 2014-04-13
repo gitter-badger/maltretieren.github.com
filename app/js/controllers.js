@@ -157,8 +157,7 @@ myApp.controller('GithubForkCtrl', function($scope, toaster, GithubSrvc) {
 
     $scope.options = {}
     $scope.options.forkSlogan = "";
-    $scope.options.forkName = GithubSrvc.user;
-    console.log(GithubSrvc.user);
+    $scope.options.forkName = GithubSrvc.userInfo().getUser();
 
     var checkUnique = function() {
         var url = "";
