@@ -123,7 +123,7 @@ myApp.service("GithubSrvc", function (
             .then( PollingSrvc.checkForBranchContent("maltretieren.github.com", "master"))
             .then( self.renameRepo("flamed0011.github.com"))
             .then( PollingSrvc.checkForBranchContent("flamed0011.github.com", "template"))
-            .then( self.deleteBranch("master"))
+            .then( self.deleteBranch("flamed0011.github.com", "master"))
             .then( self.renameBranch("template", "master"))
             .then( console.log("READY!!!") )
         },
@@ -318,12 +318,12 @@ myApp.service("UtilSrvc", function () {
 myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
     var deferred = $q.defer();
 
-    var poll = function () {
+    var poll = function (repoName, branchName) {
         var resource = "README.md";
         // poll for availability - implement as promise, resolve as soon as it is available
         var githubInstance = GithubAuthService.instance();
-        var repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
-        var branch = repo.getBranch("master");
+        var repo = githubInstance.getRepo("flamed0011", repoName);
+        var branch = repo.getBranch(branchName);
 
         var promise = $q.when(branch.read(resource,false)).then(function(res) {
             deferred.resolve();
