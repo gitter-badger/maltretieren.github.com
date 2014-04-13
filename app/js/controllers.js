@@ -173,7 +173,7 @@ myApp.controller('GithubForkCtrl', function($scope, toaster, GithubSrvc) {
         }
     };
 
-    $scope.$watch('options.forkName', checkUnique);
+    //$scope.$watch('options.forkName', checkUnique);
 
     $scope.fork = function() {
         // pass in options
