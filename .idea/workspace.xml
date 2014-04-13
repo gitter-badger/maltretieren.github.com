@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +29,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="176" column="42" selection-start="5849" selection-end="5849" vertical-scroll-proportion="0.767184" vertical-offset="2294" max-vertical-offset="3600">
+            <state line="176" column="48" selection-start="5855" selection-end="5855" vertical-scroll-proportion="0.767184" vertical-offset="2294" max-vertical-offset="3600">
               <folding />
             </state>
           </provider>
@@ -46,7 +47,7 @@
       <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="294" column="3" selection-start="11494" selection-end="11494" vertical-scroll-proportion="0.0" vertical-offset="3749" max-vertical-offset="5040">
+            <state line="264" column="65" selection-start="10663" selection-end="10663" vertical-scroll-proportion="0.0" vertical-offset="3749" max-vertical-offset="5040">
               <folding />
             </state>
           </provider>
@@ -147,13 +148,13 @@
         <option value="$PROJECT_DIR$/assets/js/octokit-0.9.19/base64.js" />
         <option value="$PROJECT_DIR$/app/js/github-functions.js" />
         <option value="$PROJECT_DIR$/app/partials/postsFrontpage.html" />
-        <option value="$PROJECT_DIR$/app/js/services.js" />
         <option value="$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md" />
         <option value="$PROJECT_DIR$/_posts/2014-01-01-sandbox.md" />
         <option value="$PROJECT_DIR$/app/js/directives.js" />
         <option value="$PROJECT_DIR$/app/admin/fork.html" />
         <option value="$PROJECT_DIR$/app/js/main.js" />
         <option value="$PROJECT_DIR$/app/js/routes.js" />
+        <option value="$PROJECT_DIR$/app/js/services.js" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
       </list>
     </option>
@@ -577,14 +578,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="294" column="3" selection-start="11494" selection-end="11494" vertical-scroll-proportion="0.0" vertical-offset="3749" max-vertical-offset="5040">
+        <state line="264" column="65" selection-start="10663" selection-end="10663" vertical-scroll-proportion="0.0" vertical-offset="3749" max-vertical-offset="5040">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="42" selection-start="5849" selection-end="5849" vertical-scroll-proportion="0.767184" vertical-offset="2294" max-vertical-offset="3600">
+        <state line="176" column="48" selection-start="5855" selection-end="5855" vertical-scroll-proportion="0.767184" vertical-offset="2294" max-vertical-offset="3600">
           <folding />
         </state>
       </provider>
