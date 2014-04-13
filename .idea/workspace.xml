@@ -28,7 +28,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="45" selection-start="5348" selection-end="5348" vertical-scroll-proportion="0.767184" vertical-offset="2039" max-vertical-offset="3540">
+            <state line="161" column="34" selection-start="5385" selection-end="5385" vertical-scroll-proportion="0.50110865" vertical-offset="2189" max-vertical-offset="3540">
               <folding />
             </state>
           </provider>
@@ -64,7 +64,7 @@
       <file leaf-file-name="directives.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="498" selection-end="549" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+            <state line="22" column="0" selection-start="498" selection-end="549" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="420">
               <folding />
             </state>
           </provider>
@@ -72,6 +72,9 @@
       </file>
       <file leaf-file-name="2014-01-01-sandbox.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2014-01-01-sandbox.md">
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state line="13" column="4" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="705">
               <folding />
@@ -108,6 +111,9 @@
       </file>
       <file leaf-file-name="2014-04-12-creating-this-site.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md">
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state line="65" column="70" selection-start="2655" selection-end="2655" vertical-scroll-proportion="0.0" vertical-offset="975" max-vertical-offset="1065">
               <folding />
@@ -183,7 +189,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -296,6 +301,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -310,13 +316,13 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../node-github" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="86" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="850" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="935" />
-    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="93" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="88" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
   </component>
@@ -337,14 +343,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -353,6 +351,14 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -578,7 +584,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="45" selection-start="5348" selection-end="5348" vertical-scroll-proportion="0.767184" vertical-offset="2039" max-vertical-offset="3540">
+        <state line="161" column="34" selection-start="5385" selection-end="5385" vertical-scroll-proportion="0.50110865" vertical-offset="2189" max-vertical-offset="3540">
           <folding />
         </state>
       </provider>

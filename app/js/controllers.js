@@ -152,12 +152,12 @@ myApp.controller('ToasterController', function($scope, toaster) {
     };
 });
 
-myApp.controller('GithubForkCtrl', function($scope, toaster, GithubSrvc) {
+myApp.controller('GithubForkCtrl', function($scope, toaster, GithubCtrl) {
 	var scope = $scope;
 
     $scope.options = {}
     $scope.options.forkSlogan = "";
-    $scope.options.forkName = GithubSrvc.user;
+    $scope.options.forkName = GithubCtrl.user;
 
     var checkUnique = function() {
         var url = "";
