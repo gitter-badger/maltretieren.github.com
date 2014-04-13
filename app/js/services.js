@@ -326,12 +326,13 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
         var resource = resource;
         var callback = callback;
 
-        $q.when(branch.read(resource,false)).then(function(res) {
+        var promise = $q.when(branch.read(resource,false)).then(function(res) {
             deferred.resolve();
         }, function(err) {
             $timeout(poll(branch, resource), 5000);
         });
+        return promise;
     };
-    return deferred.promise;
+    return { checkForBranchContent: poll }
 });
 
