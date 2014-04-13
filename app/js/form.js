@@ -1,5 +1,6 @@
-    var form = document.getElementById("comment");
+var form = document.getElementById("comment");
 
+if(form !== null) {
     form.onsubmit = function (e) {
         // stop the regular form submission
         e.preventDefault();
@@ -22,3 +23,4 @@
     };
 
     var entryList = new List('entry-list', options);
+}
