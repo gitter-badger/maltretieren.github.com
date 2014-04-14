@@ -318,6 +318,7 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
     var deferred = $q.defer();
     var poll = function (repoName, branchName) {
         var resource = "README.md";
+        console.log(deferred);
 
         // poll for availability - implement as promise, resolve as soon as it is available
         var githubInstance = GithubAuthService.instance();
