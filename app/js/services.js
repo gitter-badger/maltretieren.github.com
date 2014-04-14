@@ -316,8 +316,10 @@ myApp.service("UtilSrvc", function () {
 myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
 
     var deferred = $q.defer();
-    return poll = function () {
-        return deferred.promise;
-    };
+    return {
+        poll: function () {
+            return deferred.promise;
+        }
+    }
 });
 
