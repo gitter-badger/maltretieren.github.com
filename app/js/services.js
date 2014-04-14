@@ -328,7 +328,7 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
 
 
         
-        $q.when(branch.read(resource,false)).then(function(res) {
+        branch.read(resource,false).then(function(res) {
             console.log("polling promise resolved")
             deferred.resolve();
         }, function(err) {
