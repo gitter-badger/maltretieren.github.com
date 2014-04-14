@@ -330,7 +330,7 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
         branch.read(resource,false)
         .done(function(res) {
             console.log("polling promise resolved")
-            deferred.resolve();
+            //deferred.resolve();
         })
         .fail(function(err) {
             var repeat = function() {
