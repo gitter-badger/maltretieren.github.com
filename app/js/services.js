@@ -315,7 +315,7 @@ myApp.service("UtilSrvc", function () {
 
 myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
 
-    var deferred = $q.defer();
+
     var poll = function (repoName, branchName, def) {
         var resource = "README.md";
 
@@ -325,6 +325,7 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
         var branch = repo.getBranch(branchName);
         var repoName = repoName;
         var branchName = branchName;
+        var deferred = $q.defer();
 
         branch.read(resource,false)
         .done(function(res) {
