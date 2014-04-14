@@ -336,7 +336,7 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
             var repeat = function() {
                 console.log(repoName);
                 console.log(branchName);
-                self.poll(repoName, branchName)
+                poll(repoName, branchName)
             }
             $timeout(repeat, 5000);
         });
