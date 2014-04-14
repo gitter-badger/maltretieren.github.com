@@ -316,6 +316,7 @@ myApp.service("UtilSrvc", function () {
 myApp.factory("PollingSrvc", function ($q) {
     return {
         poll: function () {
+            console.log("polling");
             var deferred = $q.defer();
             return deferred.promise;
         }
