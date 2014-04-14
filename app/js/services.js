@@ -313,11 +313,10 @@ myApp.service("UtilSrvc", function () {
     }
 });
 
-myApp.factory("PollingSrvc", function ($q, $timeout, GithubAuthService) {
-
-    var deferred = $q.defer();
+myApp.factory("PollingSrvc", function ($q) {
     return {
         poll: function () {
+            var deferred = $q.defer();
             return deferred.promise;
         }
     }
