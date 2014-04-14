@@ -315,30 +315,8 @@ myApp.service("UtilSrvc", function () {
 
 myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
 
-
-    var poll = function (repoName, branchName, def) {
-        var resource = "README.md";
-
-        // poll for availability - implement as promise, resolve as soon as it is available
-        var githubInstance = GithubAuthService.instance();
-        var repo = githubInstance.getRepo("flamed0011", repoName);
-        var branch = repo.getBranch(branchName);
-        var repoName = repoName;
-        var branchName = branchName;
-        var deferred = $q.defer();
-
-        branch.read(resource,false)
-        .done(function(res) {
-            console.log("polling promise resolved")
-            //deferred.resolve();
-        })
-        .fail(function(err) {
-            var repeat = function() {
-                poll(repoName, branchName, deferred)
-            }
-            $timeout(repeat, 5000);
-        });
-
+    var deferred = $q.defer();
+    var poll = function (repoName, branchName) {
         return deferred.promise;
     };
     return { checkForBranchContent: poll }
