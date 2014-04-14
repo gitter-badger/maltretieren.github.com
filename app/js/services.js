@@ -319,6 +319,7 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
     var poll = function (repoName, branchName) {
         var resource = "README.md";
         console.log(deferred);
+        var self = this;
 
         // poll for availability - implement as promise, resolve as soon as it is available
         var githubInstance = GithubAuthService.instance();
@@ -332,7 +333,12 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
             console.log("polling returned a result")
             deferred.resolve();
         }, function(err) {
-            //$timeout(poll(repoName, branchName), 5000);
+            var repeat = function() {
+                console.log(repoName);
+                console.log(branchName);
+                self.poll(repoName, branchName)
+            }
+            $timeout(repeat, 5000);
         });
 
         return deferred.promise;
