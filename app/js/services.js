@@ -328,14 +328,16 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
 
 
         var promise = $q.when(branch.read(resource,false));
-        promise.then(function(res) {
-            console.log("polling promise resolved")
-            deferred.resolve();
-        }, function(err) {
-            var repeat = function() {
-                poll(repoName, branchName)
-            }
-            $timeout(repeat, 5000);
+        scope.$apply(function(){
+            promise.then(function(res) {
+                console.log("polling promise resolved")
+                deferred.resolve();
+            }, function(err) {
+                var repeat = function() {
+                    poll(repoName, branchName)
+                }
+                $timeout(repeat, 5000);
+            });
         });
 
         return deferred.promise;
