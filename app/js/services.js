@@ -120,7 +120,7 @@ myApp.service("GithubSrvc", function (
             // http://stackoverflow.com/questions/4777535/how-do-i-rename-a-github-repository-via-their-api
             var self = this;
             self.fork(options)
-            .then( PollingSrvc.checkForBranchContent("maltretieren.github.com", "master"))
+            .then( PollingSrvc.checkForBranchContent("maltretieren.github.com", "master") )
             .then( self.renameRepo("flamed0011.github.com"))
             //.then( PollingSrvc.checkForBranchContent("flamed0011.github.com", "template"))
             //.then( self.deleteBranch("flamed0011.github.com", "master"))
@@ -315,7 +315,7 @@ myApp.service("UtilSrvc", function () {
 
 myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
 
-    var deferred = $q.defer();
+
     var poll = function (repoName, branchName) {
         var resource = "README.md";
 
@@ -325,10 +325,11 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
         var branch = repo.getBranch(branchName);
         var repoName = repoName;
         var branchName = branchName;
+        var deferred = $q.defer();
 
         var promise = $q.when(branch.read(resource,false));
         promise.then(function(res) {
-            console.log("polling returned a result")
+            console.log("polling promise resolved")
             deferred.resolve();
         }, function(err) {
             var repeat = function() {
