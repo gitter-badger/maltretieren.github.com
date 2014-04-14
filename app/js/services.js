@@ -133,10 +133,7 @@ myApp.service("GithubSrvc", function (
 			if(githubInstance != null) {
                 // this is the name of the original repo
                 var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
-                var promise = $q.when(repo.fork()).then(function(res) {
-                    console.log("send a githubForkSuccess event");
-                    $rootScope.$broadcast('Toast::githubForkSuccess');
-                });
+                var promise = $q.when(repo.fork());
                 return promise;
             } else {
                 console.log("no token provided... Please login");
@@ -327,11 +324,9 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
         var repoName = repoName;
         var branchName = branchName;
 
-        var promise = $q.when(branch.read(resource,false)).then(function(res) {
-            deferred.resolve();
-        }, function(err) {
-            //$timeout(poll(repoName, branchName), 5000);
-        });
+        var promise = $q.when(branch.read(resource,false));
+         //$timeout(poll(repoName, branchName), 5000);
+
         return promise;
     };
     return { checkForBranchContent: poll }
