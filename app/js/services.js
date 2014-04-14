@@ -121,7 +121,7 @@ myApp.service("GithubSrvc", function (
             var self = this;
             self.fork(options)
             .then( PollingSrvc.checkForBranchContent("maltretieren.github.com", "master") )
-            .then( self.renameRepo("flamed0011.github.com"))
+            .then( console.log("ready?" ))
             //.then( PollingSrvc.checkForBranchContent("flamed0011.github.com", "template"))
             //.then( self.deleteBranch("flamed0011.github.com", "master"))
             //.then( self.renameBranch("template", "master"))
@@ -315,7 +315,7 @@ myApp.service("UtilSrvc", function () {
 
 myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
 
-
+    var deferred = $q.defer();
     var poll = function (repoName, branchName) {
         var resource = "README.md";
 
@@ -325,7 +325,7 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
         var branch = repo.getBranch(branchName);
         var repoName = repoName;
         var branchName = branchName;
-        var deferred = $q.defer();
+
 
         var promise = $q.when(branch.read(resource,false));
         promise.then(function(res) {
