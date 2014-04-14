@@ -121,11 +121,6 @@ myApp.service("GithubSrvc", function (
             var self = this;
             self.fork(options)
             .then( PollingSrvc.checkForBranchContent("maltretieren.github.com", "master"))
-            .then( self.renameRepo("flamed0011.github.com"))
-            .then( PollingSrvc.checkForBranchContent("flamed0011.github.com", "template"))
-            .then( self.deleteBranch("flamed0011.github.com", "master"))
-            .then( self.renameBranch("template", "master"))
-            .then( console.log("READY!!!") )
         },
 		fork: function(options) {
             // options contain the name for the new github page and the site slogan
