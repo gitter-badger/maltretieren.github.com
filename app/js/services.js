@@ -332,7 +332,7 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
             console.log("polling returned a result")
             deferred.resolve();
         }, function(err) {
-            $timeout(poll(repoName, branchName), 5000);
+            //$timeout(poll(repoName, branchName), 5000);
         });
 
         return deferred.promise;
