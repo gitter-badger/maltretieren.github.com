@@ -313,10 +313,10 @@ myApp.service("UtilSrvc", function () {
     }
 });
 
-myApp.service("PollingSrvc", function ($q, $scope, $timeout, GithubAuthService) {
+myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
 
     var deferred = $q.defer();
-    var poll = function (repoName, branchName) {
+    var poll = function (repoName, branchName, def) {
         var resource = "README.md";
 
         // poll for availability - implement as promise, resolve as soon as it is available
@@ -328,16 +328,18 @@ myApp.service("PollingSrvc", function ($q, $scope, $timeout, GithubAuthService) 
 
 
         var promise = $q.when(branch.read(resource,false));
-        $scope.$apply(function(){
-            promise.then(function(res) {
-                console.log("polling promise resolved")
+        promise.then(function(res) {
+            console.log("polling promise resolved")
+            if(def!=null) {
                 deferred.resolve();
-            }, function(err) {
-                var repeat = function() {
-                    poll(repoName, branchName)
-                }
-                $timeout(repeat, 5000);
-            });
+            } else {
+                def.resolve();
+            }
+        }, function(err) {
+            var repeat = function() {
+                poll(repoName, branchName, deferred)
+            }
+            $timeout(repeat, 5000);
         });
 
         return deferred.promise;
