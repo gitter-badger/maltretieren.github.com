@@ -140,7 +140,8 @@ myApp.service("GithubSrvc", function (
             }
 		},
         renameRepo: function(forkName) {
-			if(!forkName || forkName.length < 5){
+			console.log("rename repo");
+            if(!forkName || forkName.length < 5){
 				forkName = "flamed0011.github.com"
 			}
 			
@@ -327,6 +328,7 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
 
         var promise = $q.when(branch.read(resource,false));
         promise.then(function(res) {
+            console.log("polling returned a result")
             deferred.resolve();
         }, function(err) {
             $timeout(poll(repoName, branchName), 5000);
