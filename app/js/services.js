@@ -326,12 +326,12 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
         var repoName = repoName;
         var branchName = branchName;
 
-
-        
-        branch.read(resource,false).then(function(res) {
+        branch.read(resource,false)
+        .done(function(res) {
             console.log("polling promise resolved")
             deferred.resolve();
-        }, function(err) {
+        })
+        .fail(function(err) {
             var repeat = function() {
                 poll(repoName, branchName, deferred)
             }
