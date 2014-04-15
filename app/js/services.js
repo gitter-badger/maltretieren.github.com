@@ -132,9 +132,9 @@ myApp.service("GithubSrvc", function (
             .then( function() {
                 return self.deleteBranch("flamed0011.github.com", "heads/master")
             })
-            //.then( function() {
-            //    return self.renameBranch("heads/template", "heads/master")
-            //})
+            .then( function() {
+                return self.createBranch("flamed0011.github.com", "master")
+            })
             .then( function() {
                 console.log("READY!!!")
             });
