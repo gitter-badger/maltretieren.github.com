@@ -165,7 +165,7 @@ myApp.service("GithubSrvc", function (
             var repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
             $q.when(repo.updateInfo(patch)).then(function(res) {
                 console.log("Repository renamed...")
-                that.renameBranch(forkName, "heads/master");
+                //that.renameBranch(forkName, "heads/master");
             })
         },
         batchDelete: function(forkName) {
@@ -198,16 +198,16 @@ myApp.service("GithubSrvc", function (
 			var that = this;
 			var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo("flamed0011", forkName);			
-			repo.git.deleteRef(branchName).done(function(result) {
+			return repo.git.deleteRef(branchName).done(function(result) {
 				console.log("deleted branch"+branchName);
-				that.renameBranch(forkName);
+				//that.renameBranch(forkName);
 			});
         },
         renameBranch: function(forkName) {
 			var that = this;
 			var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo("flamed0011", forkName);			
-			repo.git.deleteRef("heads/master").done(function(result) {
+			return repo.git.deleteRef("heads/master").done(function(result) {
 				console.log("deleted master branch");
 				that.createBranch(forkName, "master");
 			});
@@ -220,13 +220,13 @@ myApp.service("GithubSrvc", function (
 			var branch = repo.getBranch("template");
 			var forkName = forkName;
 			console.log("create master branch from template");
-			branch.createBranch("master").done(function() {
+			return branch.createBranch("master").done(function() {
 				console.log("master branch created from template branch");
                 branch = repo.getBranch("master");
                 var callback = function() {
                     repo.git.deleteRef("heads/template");
                 };
-                PollingSrvc.checkForBranchContent(branch, "README.md", callback);
+                //PollingSrvc.checkForBranchContent(branch, "README.md", callback);
 			});
         },
         postProcess: function() {
