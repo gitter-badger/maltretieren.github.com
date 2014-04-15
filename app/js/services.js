@@ -344,7 +344,7 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
             $timeout(poll(repoName, branchName), 5000);
         });
 
-        return deferred.promise();
+        return deferred.promise;
     };
     return { checkForBranchContent: poll }
 });
