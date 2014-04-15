@@ -122,7 +122,7 @@ myApp.service("GithubSrvc", function (
             //var promise = ;
 
             self.fork(options)
-            .then( PollingSrvc.poll() )
+            .then( function() { PollingSrvc.poll() } )
             .then( function() {
                 console.log("ready?" );
             })
