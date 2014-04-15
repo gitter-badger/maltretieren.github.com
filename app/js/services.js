@@ -132,9 +132,9 @@ myApp.service("GithubSrvc", function (
             .then( function() {
                 return self.deleteBranch("flamed0011.github.com", "heads/master")
             })
-            .then( function() {
-                return self.renameBranch("heads/template", "heads/master")
-            })
+            //.then( function() {
+            //    return self.renameBranch("heads/template", "heads/master")
+            //})
             .then( function() {
                 console.log("READY!!!")
             });
@@ -209,7 +209,7 @@ myApp.service("GithubSrvc", function (
 			var repo = githubInstance.getRepo("flamed0011", forkName);			
 			return repo.git.deleteRef("heads/master").done(function(result) {
 				console.log("deleted master branch");
-				that.createBranch(forkName, "master");
+				//that.createBranch(forkName, "master");
 			});
         },
         createBranch: function(forkName, branchName) {
@@ -224,7 +224,7 @@ myApp.service("GithubSrvc", function (
 				console.log("master branch created from template branch");
                 branch = repo.getBranch("master");
                 var callback = function() {
-                    repo.git.deleteRef("heads/template");
+                    //repo.git.deleteRef("heads/template");
                 };
                 //PollingSrvc.checkForBranchContent(branch, "README.md", callback);
 			});
