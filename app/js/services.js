@@ -119,7 +119,8 @@ myApp.service("GithubSrvc", function (
             // poll for content
             // http://stackoverflow.com/questions/4777535/how-do-i-rename-a-github-repository-via-their-api
             var self = this;
-            $q.all([self.fork(options), PollingSrvc.poll] )
+            self.fork(options)
+            .then( PollingSrvc.poll )
             .then( console.log("ready?" ))
             //.then( PollingSrvc.checkForBranchContent("flamed0011.github.com", "template"))
             //.then( self.deleteBranch("flamed0011.github.com", "master"))
@@ -312,12 +313,15 @@ myApp.service("UtilSrvc", function () {
     }
 });
 
-myApp.factory("PollingSrvc", function ($q) {
+myApp.factory("PollingSrvc", function ($q, $timeout, GithubAuthService) {
+
+    var deferred = $q.defer();
     return {
         poll: function () {
-            console.log("polling");
-            var deferred = $q.defer();
-            return deferred.promise;
+            $timeout(function() {
+                deferred.resolve('All done... eventually');
+            }, 5000);
+            return deferred.promise
         }
     }
 });
