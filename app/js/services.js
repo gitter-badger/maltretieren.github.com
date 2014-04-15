@@ -120,7 +120,6 @@ myApp.service("GithubSrvc", function (
             // http://stackoverflow.com/questions/4777535/how-do-i-rename-a-github-repository-via-their-api
             var self = this;
             var promise = PollingSrvc.poll();
-            console.log(poll);
 
             //self.fork(options)
             //.then( poll )
