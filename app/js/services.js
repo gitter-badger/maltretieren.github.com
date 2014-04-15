@@ -163,7 +163,7 @@ myApp.service("GithubSrvc", function (
             var githubInstance = GithubAuthService.instance();
             //var userName = UserModel.getUser().name;
             var repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
-            $q.when(repo.updateInfo(patch)).then(function(res) {
+            return $q.when(repo.updateInfo(patch)).then(function(res) {
                 console.log("Repository renamed...")
                 //that.renameBranch(forkName, "heads/master");
             })
