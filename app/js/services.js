@@ -122,9 +122,9 @@ myApp.service("GithubSrvc", function (
             var poll = PollingSrvc.poll();
             console.log(poll);
 
-            self.fork(options)
-            .then( poll )
-            .then( console.log("ready?" ))
+            //self.fork(options)
+            //.then( poll )
+            //poll.then( console.log("ready?" ))
             //.then( PollingSrvc.checkForBranchContent("flamed0011.github.com", "template"))
             //.then( self.deleteBranch("flamed0011.github.com", "master"))
             //.then( self.renameBranch("template", "master"))
