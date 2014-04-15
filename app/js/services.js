@@ -125,9 +125,9 @@ myApp.service("GithubSrvc", function (
             .then( PollingSrvc.poll() )
             .then( function() {
                 console.log("ready?" );
-            });
+            })
             //.then( PollingSrvc.checkForBranchContent("flamed0011.github.com", "template"))
-            //.then( self.deleteBranch("flamed0011.github.com", "master"))
+            .then( self.deleteBranch("flamed0011.github.com", "master"))
             //.then( self.renameBranch("template", "master"))
             //.then( console.log("READY!!!") )
         },
