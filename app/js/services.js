@@ -130,10 +130,10 @@ myApp.service("GithubSrvc", function (
                 return PollingSrvc.checkForBranchContent("flamed0011.github.com", "template")
             })
             .then( function() {
-                return self.deleteBranch("flamed0011.github.com", "master")
+                return self.deleteBranch("flamed0011.github.com", "heads/master")
             })
             .then( function() {
-                return self.renameBranch("template", "master")
+                return self.renameBranch("heads/template", "heads/master")
             })
             .then( function() {
                 console.log("READY!!!")
