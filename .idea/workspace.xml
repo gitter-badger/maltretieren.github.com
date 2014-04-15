@@ -65,7 +65,7 @@
       <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="24" selection-start="5254" selection-end="5254" vertical-scroll-proportion="0.33259425" vertical-offset="1725" max-vertical-offset="5040">
+            <state line="323" column="36" selection-start="12382" selection-end="12382" vertical-scroll-proportion="0.5676275" vertical-offset="4589" max-vertical-offset="5055">
               <folding />
             </state>
           </provider>
@@ -559,13 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="183" column="24" selection-start="6014" selection-end="6014" vertical-scroll-proportion="0.0" vertical-offset="2369" max-vertical-offset="3615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/fork.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="69" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.0" vertical-offset="83" max-vertical-offset="510">
@@ -580,9 +573,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="183" column="24" selection-start="6014" selection-end="6014" vertical-scroll-proportion="0.0" vertical-offset="2369" max-vertical-offset="3615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="24" selection-start="5254" selection-end="5254" vertical-scroll-proportion="0.33259425" vertical-offset="1725" max-vertical-offset="5040">
+        <state line="323" column="36" selection-start="12382" selection-end="12382" vertical-scroll-proportion="0.5676275" vertical-offset="4589" max-vertical-offset="5055">
           <folding />
         </state>
       </provider>

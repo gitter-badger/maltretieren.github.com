@@ -321,6 +321,7 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
         poll: function () {
             var deferred = $q.defer();
             $timeout(function() {
+                console.log("here");
                 deferred.resolve('All done... eventually');
             }, 5000);
             return deferred.promise
