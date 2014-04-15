@@ -119,19 +119,25 @@ myApp.service("GithubSrvc", function (
             // poll for content
             // http://stackoverflow.com/questions/4777535/how-do-i-rename-a-github-repository-via-their-api
             var self = this;
-            var promise =
-
             self.fork(options)
             .then( function() {
-                return PollingSrvc.poll();
+                return PollingSrvc.checkForBranchContent("maltretieren.github.com", "master")
             })
             .then( function() {
-                console.log("ready?" );
+                return self.renameRepo("flamed0011.github.com");
+            })
+            .then( function() {
+                return PollingSrvc.checkForBranchContent("flamed0011.github.com", "template")
+            })
+            .then( function() {
+                return self.deleteBranch("flamed0011.github.com", "master")
+            })
+            .then( function() {
+                return self.renameBranch("template", "master")
+            })
+            .then( function() {
+                console.log("READY!!!")
             });
-            //.then( PollingSrvc.checkForBranchContent("flamed0011.github.com", "template"))
-            //.then( self.deleteBranch("flamed0011.github.com", "master"))
-            //.then( self.renameBranch("template", "master"))
-            //.then( console.log("READY!!!") )
         },
 		fork: function(options) {
             // options contain the name for the new github page and the site slogan
@@ -146,8 +152,7 @@ myApp.service("GithubSrvc", function (
             }
 		},
         renameRepo: function(forkName) {
-			console.log("rename repo");
-            if(!forkName || forkName.length < 5){
+			if(!forkName || forkName.length < 5){
 				forkName = "flamed0011.github.com"
 			}
 			
@@ -160,7 +165,7 @@ myApp.service("GithubSrvc", function (
             var repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
             $q.when(repo.updateInfo(patch)).then(function(res) {
                 console.log("Repository renamed...")
-                //that.renameBranch(forkName, "heads/master");
+                that.renameBranch(forkName, "heads/master");
             })
         },
         batchDelete: function(forkName) {
@@ -320,15 +325,27 @@ myApp.service("UtilSrvc", function () {
 });
 
 myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
-    return {
-        poll: function () {
-            var deferred = $q.defer();
-            $timeout(function() {
-                console.log("here");
-                deferred.resolve('All done... eventually');
-            }, 5000);
-            return deferred.promise
-        }
-    }
+
+
+    var poll = function (repoName, branchName) {
+        var resource = "README.md";
+        var deferred = $q.defer();
+        // poll for availability - implement as promise, resolve as soon as it is available
+        var githubInstance = GithubAuthService.instance();
+        var repo = githubInstance.getRepo("flamed0011", repoName);
+        var branch = repo.getBranch(branchName);
+        var repoName = repoName;
+        var branchName = branchName;
+
+        var promise = $q.when(branch.read(resource,false));
+        promise.then(function(res) {
+            deferred.resolve();
+        }, function(err) {
+            $timeout(poll(repoName, branchName), 5000);
+        });
+
+        return deferred.promise();
+    };
+    return { checkForBranchContent: poll }
 });
 
