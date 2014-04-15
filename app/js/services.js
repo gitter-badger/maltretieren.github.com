@@ -122,8 +122,8 @@ myApp.service("GithubSrvc", function (
             var promise = PollingSrvc.poll();
 
             self.fork(options)
-            //.then( poll )
-            promise.then( function() {
+            .then( promise )
+            .then( function() {
                 console.log("ready?" );
             });
             //.then( PollingSrvc.checkForBranchContent("flamed0011.github.com", "template"))
