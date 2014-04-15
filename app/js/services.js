@@ -119,12 +119,12 @@ myApp.service("GithubSrvc", function (
             // poll for content
             // http://stackoverflow.com/questions/4777535/how-do-i-rename-a-github-repository-via-their-api
             var self = this;
-            var poll = PollingSrvc.poll();
+            var promise = ollingSrvc.poll();
             console.log(poll);
 
             //self.fork(options)
             //.then( poll )
-            //poll.then( console.log("ready?" ))
+            promise.then( console.log("ready?" ))
             //.then( PollingSrvc.checkForBranchContent("flamed0011.github.com", "template"))
             //.then( self.deleteBranch("flamed0011.github.com", "master"))
             //.then( self.renameBranch("template", "master"))
