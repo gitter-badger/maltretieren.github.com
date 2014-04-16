@@ -168,9 +168,12 @@ myApp.controller('GithubForkCtrl', function($scope, $http, toaster, GithubSrvc, 
             if($scope.options.forkName.indexOf(".")===-1) {
                 url =  "http://"+$scope.options.forkName+".github.io";
             }
-            $http.jsonp("http://"+$scope.options.forkName).success(function(data){
-                console.log("success");
-            })
+            function jsonp_callback(data) {
+                // returning from async callbacks is (generally) meaningless
+                console.log(data.found);
+            }
+
+            $http.jsonp("http://"+$scope.options.forkName);
             console.log("here the test should come if the url is available: "+$scope.options.forkName);
         }
     };
