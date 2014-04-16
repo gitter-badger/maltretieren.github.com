@@ -242,24 +242,13 @@ myApp.service("GithubSrvc", function (
             var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
             var branch = repo.getBranch("master");
-            var path = "'/"+path+"'";
             console.log(path);
             //console.log(text);
-            branch.write(text, path, "save", false).done(function() {
+            branch.write(path, text, "save", false).done(function() {
                 console.log("saved");
+                //window.location = url;
+                $rootScope.$broadcast('Toast::githubCommitSuccess');
             });
-
-			/**repo.write("master", path, text, "Updated config.js from GUI", function(err) {
-				var url = $('#url').text()+"?success=true";
-				if(err) {
-					alert("Maybe you are not the owner of this repo - you can try to commit a pull request...")
-				} else {
-					//window.location = url;
-					console.log("send a githubCommitSuccess event");
-					$rootScope.$broadcast('Toast::githubCommitSuccess');
-				}
-			});
-            */
         },
 		goodByeGithub : function() {
 			UserModel.logout();
