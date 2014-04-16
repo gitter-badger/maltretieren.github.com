@@ -229,7 +229,7 @@ myApp.service("GithubSrvc", function (
                     savable:true,
                     height:500,
                     onSave: function(e) {
-                        saveMarkup(e.getContent())
+                        commit(e.getContent())
                     }
                 });
                 $('#target-editor').show();
@@ -239,7 +239,8 @@ myApp.service("GithubSrvc", function (
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
-			repo.write("master", path, text, "Updated config.js from GUI", function(err) {
+            console.log("save");
+			/**repo.write("master", path, text, "Updated config.js from GUI", function(err) {
 				var url = $('#url').text()+"?success=true";
 				if(err) {
 					alert("Maybe you are not the owner of this repo - you can try to commit a pull request...")
@@ -249,6 +250,7 @@ myApp.service("GithubSrvc", function (
 					$rootScope.$broadcast('Toast::githubCommitSuccess');
 				}
 			});
+            */
         },
 		goodByeGithub : function() {
 			UserModel.logout();
