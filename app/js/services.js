@@ -242,7 +242,7 @@ myApp.service("GithubSrvc", function (
             var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
             var branch = repo.getBranch("master");
-            //console.log(path);
+            console.log(path);
             //console.log(text);
             branch.write(path, text, "save", true).done(function() {
                 console.log("saved");
