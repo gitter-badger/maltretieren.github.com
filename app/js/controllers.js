@@ -198,7 +198,7 @@ myApp.controller('GithubForkCtrl', function($scope, toaster, GithubSrvc) {
                 return GithubSrvc.createBranch("flamed0011.github.com", "master")
             })
             .then( function() {
-                console.log("READY!!!")
+                scope.pop();
             });
 	};
 	
