@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services.js" afterPath="$PROJECT_DIR$/app/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,7 +59,7 @@
       <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="226" column="18" selection-start="9246" selection-end="9246" vertical-scroll-proportion="0.4345898" vertical-offset="3194" max-vertical-offset="5595">
+            <state line="234" column="43" selection-start="9566" selection-end="9566" vertical-scroll-proportion="0.7006652" vertical-offset="3194" max-vertical-offset="5715">
               <folding />
             </state>
           </provider>
@@ -87,7 +88,7 @@
       <file leaf-file-name="github-functions.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/github-functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="8" selection-start="1823" selection-end="1857" vertical-scroll-proportion="0.0" vertical-offset="509" max-vertical-offset="1440">
+            <state line="78" column="0" selection-start="2472" selection-end="2663" vertical-scroll-proportion="-6.24" vertical-offset="1014" max-vertical-offset="1440">
               <folding />
             </state>
           </provider>
@@ -629,13 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/github-functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="8" selection-start="1823" selection-end="1857" vertical-scroll-proportion="0.0" vertical-offset="509" max-vertical-offset="1440">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="70" selection-start="355" selection-end="355" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="360">
@@ -652,9 +646,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/github-functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="0" selection-start="2472" selection-end="2663" vertical-scroll-proportion="-6.24" vertical-offset="1014" max-vertical-offset="1440">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="226" column="18" selection-start="9246" selection-end="9246" vertical-scroll-proportion="0.4345898" vertical-offset="3194" max-vertical-offset="5595">
+        <state line="234" column="43" selection-start="9566" selection-end="9566" vertical-scroll-proportion="0.7006652" vertical-offset="3194" max-vertical-offset="5715">
           <folding />
         </state>
       </provider>

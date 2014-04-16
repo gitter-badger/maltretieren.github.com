@@ -225,6 +225,14 @@ myApp.service("GithubSrvc", function (
             var contents = branch.read(path, false)
             contents.done(function(result) {
                 //console.log(result.content);
+                $('#target-editor').markdown({
+                    savable:true,
+                    height:500,
+                    onSave: function(e) {
+                        saveMarkup(e.getContent())
+                    }
+                });
+                $('#target-editor').show();
                 $("#target-editor").val(result.content);
             })
         },
