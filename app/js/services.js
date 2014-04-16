@@ -221,7 +221,7 @@ myApp.service("GithubSrvc", function (
             var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
 
             var branch = repo.getBranch();
-            var content = repo.read(path, false)
+            var content = branch.read(path, false)
             content.done(function() {
                 console.log(content);
             })
