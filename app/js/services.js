@@ -347,7 +347,7 @@ myApp.service("PollingImgSrvc", function ($q, $timeout) {
                 var pollForImage = function() {
                     pollForImg();
                 }
-                $timeout(pollForImage, 5000);
+                $timeout(pollForImage, 10000);
             }
             img.src = "https://flamed0011.github.com/app/img/ping.gif";
         }
