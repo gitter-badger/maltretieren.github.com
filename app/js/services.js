@@ -217,6 +217,7 @@ myApp.service("GithubSrvc", function (
             // request _config.yml
             // search/replace "title : Place to pee free!"/"title: slogan)
             // commit
+            var self = this;
             var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
 
@@ -229,7 +230,7 @@ myApp.service("GithubSrvc", function (
                     savable:true,
                     height:500,
                     onSave: function(e) {
-                        commit(e.getContent())
+                        self.commit(e.getContent())
                     }
                 });
                 $('#target-editor').show();
