@@ -218,6 +218,7 @@ myApp.service("GithubSrvc", function (
             // search/replace "title : Place to pee free!"/"title: slogan)
             // commit
             var self = this;
+            var path = path;
             var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
 
@@ -230,7 +231,7 @@ myApp.service("GithubSrvc", function (
                     savable:true,
                     height:500,
                     onSave: function(e) {
-                        self.commit(e.getContent())
+                        self.commit(e.getContent(), path)
                     }
                 });
                 $('#target-editor').show();
@@ -240,7 +241,11 @@ myApp.service("GithubSrvc", function (
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
-            console.log("save");
+            var branch = repo.getBranch("master");
+            branch.write(text, path, "save", false).done(function() {
+                console.log("saved");
+            });
+
 			/**repo.write("master", path, text, "Updated config.js from GUI", function(err) {
 				var url = $('#url').text()+"?success=true";
 				if(err) {
