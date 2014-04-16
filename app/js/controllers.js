@@ -222,7 +222,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
             return $q.when(scope.pop("Fork to GitHub successful"))
         })
         .then(function(){
-            PollingImgSrvc.checkReady();
+            return PollingImgSrvc.checkReady();
         })
         .then(function() {
             return $q.when(scope.pop("Page available"))
