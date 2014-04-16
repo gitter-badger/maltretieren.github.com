@@ -34,6 +34,9 @@ JavaScript library it interact with the GitHub API. This was simple
 and I was now able to change the content of the posts and commit it
 back to GitHub. After GitHub rendering it is available for all people...
 
+## Editing config files with the GUI
+
+
 # Forking
 I thought it is cool to have a zero effort fork process and get a
 clone of this blog with just one mouse click. Therefore I imported
