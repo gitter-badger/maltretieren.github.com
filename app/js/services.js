@@ -244,7 +244,7 @@ myApp.service("GithubSrvc", function (
             var branch = repo.getBranch("master");
             console.log(path);
             var contents = {}
-            contents[path] = text;
+            contents["README.md"] = text;
 
             console.log(contents);
             branch.writeMany(contents, "save").done(function() {
