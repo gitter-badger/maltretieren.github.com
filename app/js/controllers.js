@@ -1,7 +1,8 @@
 'use strict';
 
 /**
-*	The controller must be responsible for binding model data to views using $scope.
+*	The controller must be responsible for binding model data to views using $scope,
+ *	and control information flow.
 *	It does not contain logic to fetch the data or manipulating it.
 */
 
@@ -180,26 +181,28 @@ myApp.controller('GithubForkCtrl', function($scope, toaster, GithubSrvc, Polling
     });
 
     $scope.fork = function() {
+        var forkName = $scope.options.forkName;
+
         // pass in options
         GithubSrvc.fork($scope.options)
-            .then( function() {
-                return PollingSrvc.checkForBranchContent("maltretieren.github.com", "master")
-            })
-            .then( function() {
-                return GithubSrvc.renameRepo("flamed0011.github.com");
-            })
-            .then( function() {
-                return PollingSrvc.checkForBranchContent("flamed0011.github.com", "template")
-            })
-            .then( function() {
-                return GithubSrvc.deleteBranch("flamed0011.github.com", "heads/master")
-            })
-            .then( function() {
-                return GithubSrvc.createBranch("flamed0011.github.com", "master")
-            })
-            .then( function() {
-                scope.pop();
-            });
+        .then( function() {
+            return PollingSrvc.checkForBranchContent("maltretieren.github.com", "master")
+        })
+        .then( function() {
+            return GithubSrvc.renameRepo(forkName);
+        })
+        .then( function() {
+            return PollingSrvc.checkForBranchContent(forkName, "template")
+        })
+        .then( function() {
+            return GithubSrvc.deleteBranch(forkName, "heads/master")
+        })
+        .then( function() {
+            return GithubSrvc.createBranch(forkName, "master")
+        })
+        .then( function() {
+            scope.pop();
+        });
 	};
 	
 	$scope.$on('Toast::githubForkSuccess', function(event) {

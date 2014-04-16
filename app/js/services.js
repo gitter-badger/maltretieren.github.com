@@ -115,12 +115,6 @@ myApp.service("GithubSrvc", function (
         requestCode: function() {
             GithubAuthService.requestCode();
         },
-        clone : function(options) {
-            // poll for content
-            // http://stackoverflow.com/questions/4777535/how-do-i-rename-a-github-repository-via-their-api
-            var self = this;
-
-        },
 		fork: function(options) {
             // options contain the name for the new github page and the site slogan
 			var githubInstance = GithubAuthService.instance();
