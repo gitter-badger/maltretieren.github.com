@@ -336,17 +336,17 @@ myApp.service("PollingImgSrvc", function ($q, $timeout) {
 
         var pollForImg = function() {
             console.log("poll");
-            this.img = new Image();
+            var img = new Image();
 
-            this.img.onload = function() {
+            img.onload = function() {
                 console.log("yehh");
                 deferred.resolve();
             }
-            this.img.onerror = function() {
+            img.onerror = function() {
                 console.log("oh noooo");
                 $timeout(pollForImg(), 5000);
             }
-            self.img.src = "https://flamed0011.github.com/app/img/ping.gif";
+            img.src = "https://flamed0011.github.com/app/img/ping.gif";
         }
         pollForImg();
 
