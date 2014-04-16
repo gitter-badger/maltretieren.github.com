@@ -225,6 +225,7 @@ myApp.service("GithubSrvc", function (
             var contents = branch.read(path, false)
             contents.done(function(result) {
                 console.log(result.content);
+                $("#target-editor").val(result.content);
             })
         },
 		commit: function(text, path) {
