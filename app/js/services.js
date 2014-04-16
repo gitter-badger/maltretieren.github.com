@@ -223,8 +223,8 @@ myApp.service("GithubSrvc", function (
             //console.log(path);
             var branch = repo.getBranch("master");
             var contents = branch.read(path, false)
-            contents.done(function(content) {
-                console.log(content);
+            contents.done(function(result) {
+                console.log(result.content);
             })
         },
 		commit: function(text, path) {
