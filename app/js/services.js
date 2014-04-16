@@ -244,7 +244,7 @@ myApp.service("GithubSrvc", function (
             var branch = repo.getBranch("master");
             console.log(path);
             //console.log(text);
-            branch.write(path, text, "save", false).done(function() {
+            branch.write("'"+path+"'", text, "save", false).done(function() {
                 console.log("saved");
             });
 
