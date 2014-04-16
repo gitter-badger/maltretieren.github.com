@@ -334,13 +334,14 @@ myApp.service("PollingImgSrvc", function ($q, $timeout) {
     var poll = function (repoName, branchName) {
         var deferred = $q.defer();
 
+        var self = this;
         this.img = new Image();
 
         this.img.onload = function() {_good();};
         this.img.onerror = function(e) { error(e);};
 
         var pollForImg = function() {
-            this.img.src = "https://flamed0011.github.com/app/img/ping.gif";
+            self.img.src = "https://flamed0011.github.com/app/img/ping.gif";
         }
         pollForImg();
 
