@@ -58,7 +58,8 @@ and find/replace the "title". Then commit. That's it...
 
 ## Promises
 This is the first time I started with promises to chain the different
-operations together. This is how it looks like:
+operations together. It is very important for me to have clean, easy
+understandable code. I think promises helped me alot. This is how it looks like:
 
 {% highlight javascript linenos=table %}
     GithubSrvc.fork($scope.options)

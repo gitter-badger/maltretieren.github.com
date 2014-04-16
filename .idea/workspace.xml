@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md" afterPath="$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services.js" afterPath="$PROJECT_DIR$/app/js/services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,7 +40,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="18" selection-start="2899" selection-end="2899" vertical-scroll-proportion="0.93119264" vertical-offset="824" max-vertical-offset="1470">
+            <state line="61" column="54" selection-start="2341" selection-end="2341" vertical-scroll-proportion="0.2087156" vertical-offset="824" max-vertical-offset="1485">
               <folding />
             </state>
           </provider>
@@ -609,7 +606,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="18" selection-start="2899" selection-end="2899" vertical-scroll-proportion="0.93119264" vertical-offset="824" max-vertical-offset="1470">
+        <state line="61" column="54" selection-start="2341" selection-end="2341" vertical-scroll-proportion="0.2087156" vertical-offset="824" max-vertical-offset="1485">
           <folding />
         </state>
       </provider>
