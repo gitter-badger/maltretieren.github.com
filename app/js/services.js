@@ -240,8 +240,9 @@ myApp.service("GithubSrvc", function (
         },
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
-			var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
-            var branch = repo.getBranch();
+            var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
+            //console.log(path);
+            var branch = repo.getBranch("master");
             console.log(path);
             //var path = "'"+path+"'";
             var contents = {}
