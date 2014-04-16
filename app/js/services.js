@@ -245,7 +245,7 @@ myApp.service("GithubSrvc", function (
             var path = "'"+path+"'";
             console.log(path);
             //console.log(text);
-            branch.write(path, text, "save", false).done(function() {
+            branch.write(path, text, "save", true).done(function() {
                 console.log("saved");
             });
 
