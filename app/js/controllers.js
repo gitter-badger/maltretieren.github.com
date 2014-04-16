@@ -164,9 +164,9 @@ myApp.controller('GithubForkCtrl', function($scope, $http, toaster, GithubSrvc, 
         var url = "";
         var forkName = $scope.options.forkName;
 
-        if(forkName.length>4) {
-            if(forkName.indexOf(".")===-1) {
-                url =  "http://"+forkName+".github.io";
+        if($scope.options.forkName.length>4) {
+            if($scope.options.forkName.indexOf(".")===-1) {
+                url =  "http://"+$scope.options.forkName+".github.io";
             }
             $http.jsonp(url).success(function(){
                 console.log("success");
