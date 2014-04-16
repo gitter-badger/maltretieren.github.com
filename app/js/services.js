@@ -346,12 +346,12 @@ myApp.service("PollingImgSrvc", function ($q, $timeout) {
         }
         pollForImg();
 
-        var good= function() {
+        this.good = function() {
             console.log("yehh");
             deferred.resolve();
         }
 
-        var error= function() {
+        this.error= function() {
             console.log("oh noooo");
             $timeout(pollForImg(), 5000);
         }
