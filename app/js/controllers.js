@@ -175,7 +175,7 @@ myApp.controller('GithubForkCtrl', function($scope, toaster, GithubSrvc, Polling
         }
     };
 
-    //$scope.$watch('options.forkName', checkUnique);
+    $scope.$watch('options.forkName', checkUnique);
     $scope.$on('UserModel::userLoggedIn', function(event, userName) {
         console.log(event);
         $scope.options.forkName = userName+".github.com";
