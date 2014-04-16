@@ -119,25 +119,7 @@ myApp.service("GithubSrvc", function (
             // poll for content
             // http://stackoverflow.com/questions/4777535/how-do-i-rename-a-github-repository-via-their-api
             var self = this;
-            self.fork(options)
-            .then( function() {
-                return PollingSrvc.checkForBranchContent("maltretieren.github.com", "master")
-            })
-            .then( function() {
-                return self.renameRepo("flamed0011.github.com");
-            })
-            .then( function() {
-                return PollingSrvc.checkForBranchContent("flamed0011.github.com", "template")
-            })
-            .then( function() {
-                return self.deleteBranch("flamed0011.github.com", "heads/master")
-            })
-            .then( function() {
-                return self.createBranch("flamed0011.github.com", "master")
-            })
-            .then( function() {
-                console.log("READY!!!")
-            });
+
         },
 		fork: function(options) {
             // options contain the name for the new github page and the site slogan

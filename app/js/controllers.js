@@ -181,7 +181,25 @@ myApp.controller('GithubForkCtrl', function($scope, toaster, GithubSrvc) {
 
     $scope.fork = function() {
         // pass in options
-		GithubSrvc.clone($scope.options);
+        GithubSrvc.fork($scope.options)
+            .then( function() {
+                return PollingSrvc.checkForBranchContent("maltretieren.github.com", "master")
+            })
+            .then( function() {
+                return GithubSrvc.renameRepo("flamed0011.github.com");
+            })
+            .then( function() {
+                return PollingSrvc.checkForBranchContent("flamed0011.github.com", "template")
+            })
+            .then( function() {
+                return GithubSrvc.deleteBranch("flamed0011.github.com", "heads/master")
+            })
+            .then( function() {
+                return GithubSrvc.createBranch("flamed0011.github.com", "master")
+            })
+            .then( function() {
+                console.log("READY!!!")
+            });
 	};
 	
 	$scope.$on('Toast::githubForkSuccess', function(event) {
