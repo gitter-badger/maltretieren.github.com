@@ -239,6 +239,14 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
     };
 });
 
+myApp.controller('GithubEditCtrl', function(ParameterSrvc, GithubSrvc) {
+    var scope = $scope;
+
+    $scope.options = {}
+    var path = ParameterSrvc.urlParams['code'];
+    // get params
+});
+
 myApp.controller('PostCtrl', function($scope, toaster, GithubSrvc) {
     $scope.today = function() {
         $scope.dt = new Date();
