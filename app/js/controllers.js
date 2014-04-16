@@ -218,11 +218,21 @@ myApp.controller('GithubForkCtrl', function($scope, $http, toaster, GithubSrvc, 
         .then( function() {
             return GithubSrvc.createBranch(forkName, "master")
         })
-        .then( scope.pop("Fork to GitHub successful" ))
+        .then( function() {
+            var deferred = $q.defer();
+            scope.pop("Fork to GitHub successful");
+            deferred.resolve;
+            return deferred.promise;
+        })
         .then(function(){
             PollingImgSrvc.checkReady();
         })
-        .then( scope.pop("Page available..."));
+        .then(function() {
+             var deferred = $q.defer();
+             deferred.resolve();
+             scope.pop("Fork to GitHub successful");
+             return deferred.resolve();
+        })
 	};
 	
 	$scope.$on('Toast::githubForkSuccess', function(event) {
