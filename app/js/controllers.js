@@ -161,11 +161,6 @@ myApp.controller('GithubForkCtrl', function($scope, $http, toaster, GithubSrvc, 
     $scope.options.forkName = "";
 
     var checkUnique = function() {
-        function jsonp_callback(data) {
-            // returning from async callbacks is (generally) meaningless
-            console.log(data.found);
-        }
-
         var url = "";
         var forkName = $scope.options.forkName;
 
@@ -174,16 +169,17 @@ myApp.controller('GithubForkCtrl', function($scope, $http, toaster, GithubSrvc, 
                 url =  "http://"+$scope.options.forkName+".github.io";
             }
 
-            $.ajax({
-                url: "http://"+$scope.options.forkName,
-                success: function (response) {
-                    var resp = JSON.parse(response)
-                    alert(resp.status);
-                },
-                error: function (xhr, status) {
-                    alert("error");
-                }
-            });
+            this.img = new Image();
+
+            this.img.onload = function() {_that.good();};
+            this.img.onerror = function() {_that.good();};
+
+            this.img.src = "http://"+$scope.options.forkName;
+
+            var good= function() {
+                console.log("yehh");
+            }
+
             //$http.jsonp("http://"+$scope.options.forkName+"&callback=JSON_CALLBACK");
             console.log("here the test should come if the url is available: "+$scope.options.forkName);
         }
