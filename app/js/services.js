@@ -337,8 +337,8 @@ myApp.service("PollingImgSrvc", function ($q, $timeout) {
         var self = this;
         this.img = new Image();
 
-        this.img.onload = function() {_good();};
-        this.img.onerror = function() { error();};
+        this.img.onload = function() {_self.good();};
+        this.img.onerror = function() { self.error();};
 
         var pollForImg = function() {
             console.log("poll");
