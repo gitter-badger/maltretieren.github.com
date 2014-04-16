@@ -174,8 +174,17 @@ myApp.controller('GithubForkCtrl', function($scope, $http, toaster, GithubSrvc, 
                 url =  "http://"+$scope.options.forkName+".github.io";
             }
 
-
-            $http.jsonp("http://"+$scope.options.forkName+"&callback=JSON_CALLBACK");
+            $.ajax({
+                url: "http://"+$scope.options.forkName,
+                success: function (response) {
+                    var resp = JSON.parse(response)
+                    alert(resp.status);
+                },
+                error: function (xhr, status) {
+                    alert("error");
+                }
+            });
+            //$http.jsonp("http://"+$scope.options.forkName+"&callback=JSON_CALLBACK");
             console.log("here the test should come if the url is available: "+$scope.options.forkName);
         }
     };
