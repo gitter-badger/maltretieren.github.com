@@ -219,10 +219,13 @@ myApp.controller('GithubForkCtrl', function($scope, $http, toaster, GithubSrvc, 
             return GithubSrvc.createBranch(forkName, "master")
         })
         .then( function() {
-            scope.pop();
+            scope.pop("Fork to GitHub successful");
         })
         .then(function(){
             PollingImgSrvc.checkReady();
+        })
+        .then(function() {
+            scope.pop("Page available...");
         });
 	};
 	
@@ -231,7 +234,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, toaster, GithubSrvc, 
 	});
 	
 	$scope.pop = function(text){
-		toaster.pop('success', "Fork to GitHub successful", '<ul><li>You will be notified, when the fork is ready...</li></ul>', 5000, 'trustedHtml');
+		toaster.pop('success', text, '<ul><li>You will be notified, when the fork is ready...</li></ul>', 5000, 'trustedHtml');
 		$scope.$apply();
     };
 });
