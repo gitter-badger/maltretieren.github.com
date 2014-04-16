@@ -219,13 +219,13 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
             return GithubSrvc.createBranch(forkName, "master")
         })
         .then( function() {
-            return $q.when(scope.pop("Fork to GitHub successful"))
+            scope.pop("Fork to GitHub successful");
         })
         .then(function(){
             return PollingImgSrvc.checkReady();
         })
         .then(function() {
-            return $q.when(scope.pop("Page available"))
+            scope.pop("Page available")
         })
 	};
 	
