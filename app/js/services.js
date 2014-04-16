@@ -303,7 +303,6 @@ myApp.service("UtilSrvc", function () {
 
 myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
 
-
     var poll = function (repoName, branchName) {
         var resource = "README.md";
         var deferred = $q.defer();
@@ -330,3 +329,32 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
     return { checkForBranchContent: poll }
 });
 
+myApp.service("PollingImageSrvc", function ($q, $timeout) {
+
+    var poll = function (repoName, branchName) {
+        var deferred = $q.defer();
+
+        this.img = new Image();
+
+        this.img.onload = function() {_good();};
+        this.img.onerror = function(e) { error(e);};
+
+        var pollForImg = function() {
+            this.img.src = "https://flamed0011.github.com/app/img/ping.gif";
+        }
+
+        var good= function() {
+            console.log("yehh");
+            deferred.resolve();
+        }
+
+        var error= function(e) {
+            console.log("oh noooo");
+            $timeout(pollForImg(), 5000);
+        }
+
+
+        return deferred.promise;
+    };
+    return { checkReady: poll }
+});
