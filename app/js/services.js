@@ -334,27 +334,31 @@ myApp.service("PollingImgSrvc", function ($q, $timeout) {
     var poll = function (repoName, branchName) {
         var deferred = $q.defer();
 
-        var self = this;
-        this.img = new Image();
 
-        this.img.onload = function() {_self.good();};
-        this.img.onerror = function() { self.error();};
 
         var pollForImg = function() {
             console.log("poll");
+            var self = this;
+            this.img = new Image();
+
+            this.img.onload = function() {_self.good();};
+            this.img.onerror = function() { self.error();};
+
+            this.good = function() {
+                console.log("yehh");
+                deferred.resolve();
+            }
+
+            this.error= function() {
+                console.log("oh noooo");
+                $timeout(pollForImg(), 5000);
+            }
+
             self.img.src = "https://flamed0011.github.com/app/img/ping.gif";
         }
         pollForImg();
 
-        this.good = function() {
-            console.log("yehh");
-            deferred.resolve();
-        }
 
-        this.error= function() {
-            console.log("oh noooo");
-            $timeout(pollForImg(), 5000);
-        }
 
 
         return deferred.promise;
