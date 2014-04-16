@@ -228,10 +228,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
             PollingImgSrvc.checkReady();
         })
         .then(function() {
-             var deferred = $q.defer();
-             deferred.resolve();
              scope.pop("Fork to GitHub successful");
-             return deferred.promise;
         })
 	};
 	
