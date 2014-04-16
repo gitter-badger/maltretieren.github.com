@@ -212,13 +212,16 @@ myApp.service("GithubSrvc", function (
             // search/replace "title : Place to pee free!"/"title: slogan)
             // commit
         },
-        getContent: function() {
+        getContent: function(path) {
             // change page slogan:
             // request _config.yml
             // search/replace "title : Place to pee free!"/"title: slogan)
             // commit
             var githubInstance = GithubAuthService.instance();
-            var repo = githubInstance.getRepo("flamed0011", forkName);
+            var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
+
+            var content = repo.getContent(path);
+            console.log(content);
         },
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();

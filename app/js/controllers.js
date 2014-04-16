@@ -239,12 +239,14 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
     };
 });
 
-myApp.controller('GithubEditCtrl', function(ParameterSrvc, GithubSrvc) {
+myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
     var scope = $scope;
 
     $scope.options = {}
-    var path = ParameterSrvc.urlParams['code'];
-    // get params
+    var path = ParameterSrvc.urlParams['path'];
+    var url = ParameterSrvc.urlParams['url'];
+
+    GithubSrvc.getContent(path);
 });
 
 myApp.controller('PostCtrl', function($scope, toaster, GithubSrvc) {
