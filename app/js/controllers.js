@@ -218,7 +218,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
         .then( function() {
             return GithubSrvc.createBranch(forkName, "master")
         })
-        .then(
+        .then( function() {
             return $q.when(scope.pop("Fork to GitHub successful"))
         })
         .then(function(){
