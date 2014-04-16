@@ -174,7 +174,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, toaster, GithubSrvc, 
             this.img.onload = function() {_good();};
             this.img.onerror = function() { error(e);};
 
-            this.img.src = "https://"+$scope.options.forkName/favicon.ico;
+            this.img.src = "https://"+$scope.options.forkName;
 
             var good= function() {
                 console.log("yehh");
