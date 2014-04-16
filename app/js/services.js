@@ -320,9 +320,9 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
             deferred.resolve();
         }, function(err) {
             var restartPolling = function(){
-                poll(repoName, branchName);
+
             }
-            $timeout(restartPolling, 2000);
+            $timeout(poll(repoName, branchName), 2000);
         });
 
         return deferred.promise;
