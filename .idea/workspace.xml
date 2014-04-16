@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services.js" afterPath="$PROJECT_DIR$/app/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +29,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="189" column="3" selection-start="6091" selection-end="6739" vertical-scroll-proportion="0.0" vertical-offset="2654" max-vertical-offset="3930">
+            <state line="191" column="14" selection-start="6302" selection-end="6302" vertical-scroll-proportion="0.0" vertical-offset="2654" max-vertical-offset="3930">
               <folding />
             </state>
           </provider>
@@ -67,7 +68,7 @@
       <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="323" column="35" selection-start="12358" selection-end="12358" vertical-scroll-proportion="0.63414633" vertical-offset="4559" max-vertical-offset="5055">
+            <state line="130" column="52" selection-start="5542" selection-end="5542" vertical-scroll-proportion="0.63192904" vertical-offset="1665" max-vertical-offset="5070">
               <folding />
             </state>
           </provider>
@@ -708,13 +709,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="189" column="3" selection-start="6091" selection-end="6739" vertical-scroll-proportion="0.0" vertical-offset="2654" max-vertical-offset="3930">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2014-01-01-sandbox.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
@@ -742,9 +736,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="191" column="14" selection-start="6302" selection-end="6302" vertical-scroll-proportion="0.0" vertical-offset="2654" max-vertical-offset="3930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="323" column="35" selection-start="12358" selection-end="12358" vertical-scroll-proportion="0.63414633" vertical-offset="4559" max-vertical-offset="5055">
+        <state line="130" column="52" selection-start="5542" selection-end="5542" vertical-scroll-proportion="0.63192904" vertical-offset="1665" max-vertical-offset="5070">
           <folding />
         </state>
       </provider>
