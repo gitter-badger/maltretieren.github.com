@@ -172,13 +172,18 @@ myApp.controller('GithubForkCtrl', function($scope, $http, toaster, GithubSrvc, 
             this.img = new Image();
 
             this.img.onload = function() {_good();};
-            this.img.onerror = function() { good();};
+            this.img.onerror = function() { error();};
 
             this.img.src = "http://"+$scope.options.forkName;
 
             var good= function() {
                 console.log("yehh");
             }
+
+            var error= function() {
+                console.log("oh noooo");
+            }
+
 
             //$http.jsonp("http://"+$scope.options.forkName+"&callback=JSON_CALLBACK");
             console.log("here the test should come if the url is available: "+$scope.options.forkName);
