@@ -172,7 +172,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, toaster, GithubSrvc, 
             this.img = new Image();
 
             this.img.onload = function() {_good();};
-            this.img.onerror = function() { error();};
+            this.img.onerror = function() { error(e);};
 
             this.img.src = "https://"+$scope.options.forkName/favicon.ico;
 
@@ -180,8 +180,9 @@ myApp.controller('GithubForkCtrl', function($scope, $http, toaster, GithubSrvc, 
                 console.log("yehh");
             }
 
-            var error= function() {
+            var error= function(e) {
                 console.log("oh noooo");
+                console.log(e);
             }
 
 
