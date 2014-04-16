@@ -342,6 +342,7 @@ myApp.service("PollingImgSrvc", function ($q, $timeout) {
         var pollForImg = function() {
             this.img.src = "https://flamed0011.github.com/app/img/ping.gif";
         }
+        pollForImg();
 
         var good= function() {
             console.log("yehh");
