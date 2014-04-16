@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md" afterPath="$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/default.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services.js" afterPath="$PROJECT_DIR$/app/js/services.js" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,10 +46,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="default.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="56" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.42154565" vertical-offset="225" max-vertical-offset="1560">
+            <state line="27" column="56" selection-start="1077" selection-end="1077" vertical-scroll-proportion="-7.5" vertical-offset="225" max-vertical-offset="1560">
               <folding />
             </state>
           </provider>
@@ -66,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="20" selection-start="2555" selection-end="2559" vertical-scroll-proportion="0.0" vertical-offset="779" max-vertical-offset="5010">
+            <state line="323" column="35" selection-start="12358" selection-end="12358" vertical-scroll-proportion="0.63414633" vertical-offset="4559" max-vertical-offset="5055">
               <folding />
             </state>
           </provider>
@@ -153,10 +151,10 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/js/form.js" />
         <option value="$PROJECT_DIR$/app/admin/fork.html" />
-        <option value="$PROJECT_DIR$/app/js/services.js" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
+        <option value="$PROJECT_DIR$/app/js/services.js" />
       </list>
     </option>
   </component>
@@ -717,13 +715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="20" selection-start="2555" selection-end="2559" vertical-scroll-proportion="0.0" vertical-offset="779" max-vertical-offset="5010">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2014-01-01-sandbox.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
@@ -746,7 +737,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="56" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.42154565" vertical-offset="225" max-vertical-offset="1560">
+        <state line="27" column="56" selection-start="1077" selection-end="1077" vertical-scroll-proportion="-7.5" vertical-offset="225" max-vertical-offset="1560">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="323" column="35" selection-start="12358" selection-end="12358" vertical-scroll-proportion="0.63414633" vertical-offset="4559" max-vertical-offset="5055">
           <folding />
         </state>
       </provider>
