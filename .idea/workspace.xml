@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services.js" afterPath="$PROJECT_DIR$/app/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,7 +82,7 @@
       <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="250" column="15" selection-start="10240" selection-end="10240" vertical-scroll-proportion="0.5343681" vertical-offset="3509" max-vertical-offset="5715">
+            <state line="239" column="10" selection-start="9714" selection-end="9714" vertical-scroll-proportion="0.46784922" vertical-offset="3374" max-vertical-offset="5760">
               <folding />
             </state>
           </provider>
@@ -546,7 +547,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -667,7 +668,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="250" column="15" selection-start="10240" selection-end="10240" vertical-scroll-proportion="0.5343681" vertical-offset="3509" max-vertical-offset="5715">
+        <state line="239" column="10" selection-start="9714" selection-end="9714" vertical-scroll-proportion="0.46784922" vertical-offset="3374" max-vertical-offset="5760">
           <folding />
         </state>
       </provider>
