@@ -220,6 +220,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
         })
         .then( function() {
             var deferred = $q.defer();
+            deferred.resolve();
             scope.pop("Fork to GitHub successful");
             return deferred.promise;
         })
