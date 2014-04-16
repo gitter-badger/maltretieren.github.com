@@ -171,8 +171,8 @@ myApp.controller('GithubForkCtrl', function($scope, $http, toaster, GithubSrvc, 
 
             this.img = new Image();
 
-            this.img.onload = function() {_that.good();};
-            this.img.onerror = function() {_that.good();};
+            this.img.onload = function() {_good();};
+            this.img.onerror = function() { good();};
 
             this.img.src = "http://"+$scope.options.forkName;
 
