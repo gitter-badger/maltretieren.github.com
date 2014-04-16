@@ -17,7 +17,7 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
 			// maybe store the instance in localStorage????
 			var oauthToken = localStorage.getItem("oauthToken");
 			if(oauthToken != "undefined" && oauthToken != null) {
-				console.log("oauthToken is available");
+				//console.log("oauthToken is available");
                 github = new Octokit({
 					token: oauthToken,
 					auth: "oauth"
@@ -243,7 +243,7 @@ myApp.service("GithubSrvc", function (
 			var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
             var branch = repo.getBranch("master");
             console.log(path);
-            var path = "'"+path"'";
+            var path = "'"+path+"'";
             var contents = {}
             contents["'README.md'"] = text;
 
