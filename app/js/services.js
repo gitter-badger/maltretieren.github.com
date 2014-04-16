@@ -338,7 +338,7 @@ myApp.service("PollingImgSrvc", function ($q, $timeout) {
         this.img = new Image();
 
         this.img.onload = function() {_good();};
-        this.img.onerror = function(e) { error(e);};
+        this.img.onerror = function() { error();};
 
         var pollForImg = function() {
             console.log("poll");
@@ -351,7 +351,7 @@ myApp.service("PollingImgSrvc", function ($q, $timeout) {
             deferred.resolve();
         }
 
-        var error= function(e) {
+        var error= function() {
             console.log("oh noooo");
             $timeout(pollForImg(), 5000);
         }
