@@ -153,7 +153,7 @@ myApp.controller('ToasterController', function($scope, toaster) {
     };
 });
 
-myApp.controller('GithubForkCtrl', function($scope, $http, toaster, GithubSrvc, PollingSrvc, PollingImgSrvc) {
+myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSrvc, PollingSrvc, PollingImgSrvc) {
 	var scope = $scope;
 
     $scope.options = {}
