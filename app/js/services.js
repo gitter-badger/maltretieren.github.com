@@ -220,6 +220,7 @@ myApp.service("GithubSrvc", function (
             var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
 
+            console.log(path);
             var branch = repo.getBranch("master");
             var content = branch.read(path, false)
             content.done(function() {
