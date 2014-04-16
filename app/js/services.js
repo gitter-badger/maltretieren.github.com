@@ -329,7 +329,7 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
     return { checkForBranchContent: poll }
 });
 
-myApp.service("PollingImageSrvc", function ($q, $timeout) {
+myApp.service("PollingImgSrvc", function ($q, $timeout) {
 
     var poll = function (repoName, branchName) {
         var deferred = $q.defer();
