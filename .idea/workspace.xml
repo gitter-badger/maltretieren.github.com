@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/post.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/edit.html" afterPath="$PROJECT_DIR$/app/admin/edit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
@@ -65,10 +65,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="post.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/post.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="119" selection-start="465" selection-end="465" vertical-scroll-proportion="0.1119403" vertical-offset="0" max-vertical-offset="975">
+            <state line="3" column="119" selection-start="465" selection-end="465" vertical-scroll-proportion="-0.9183673" vertical-offset="0" max-vertical-offset="975">
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h1#0;n#div#0;n#!!top" expanded="true" />
@@ -96,11 +96,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="edit.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="70" selection-start="355" selection-end="355" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="360">
+            <state line="8" column="37" selection-start="128" selection-end="128" vertical-scroll-proportion="0.27272728" vertical-offset="0" max-vertical-offset="440">
               <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -155,10 +156,10 @@
         <option value="$PROJECT_DIR$/app/admin/fork.html" />
         <option value="$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
-        <option value="$PROJECT_DIR$/app/admin/edit.html" />
         <option value="$PROJECT_DIR$/app/js/services.js" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
+        <option value="$PROJECT_DIR$/app/admin/edit.html" />
       </list>
     </option>
   </component>
@@ -614,15 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="70" selection-start="355" selection-end="355" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="360">
-          <folding>
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="136" column="53" selection-start="4664" selection-end="4664" vertical-scroll-proportion="0.0" vertical-offset="3389" max-vertical-offset="4440">
@@ -660,11 +652,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="119" selection-start="465" selection-end="465" vertical-scroll-proportion="0.1119403" vertical-offset="0" max-vertical-offset="975">
+        <state line="3" column="119" selection-start="465" selection-end="465" vertical-scroll-proportion="-0.9183673" vertical-offset="0" max-vertical-offset="975">
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h1#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="37" selection-start="128" selection-end="128" vertical-scroll-proportion="0.27272728" vertical-offset="0" max-vertical-offset="440">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
