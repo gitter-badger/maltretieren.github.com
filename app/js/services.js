@@ -224,7 +224,7 @@ myApp.service("GithubSrvc", function (
             var branch = repo.getBranch("master");
             var contents = branch.read(path, false)
             contents.done(function(result) {
-                console.log(result.content);
+                //console.log(result.content);
                 $("#target-editor").val(result.content);
             })
         },
