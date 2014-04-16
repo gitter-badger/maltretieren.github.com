@@ -225,7 +225,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
             return PollingImgSrvc.checkReady();
         })
         .then(function() {
-            scope.pop("Page available", "Visit "+forkName+" to see it live...");
+            return $q.when(scope.pop("Page available", "Visit "+forkName+" to see it live..."));
         })
 	};
 	
