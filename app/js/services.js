@@ -242,7 +242,7 @@ myApp.service("GithubSrvc", function (
             var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
             //console.log(path);
-            var branch = repo.getDefaultBranch();
+            var branch = repo.getBranch("master");
             console.log(path);
             var path = "'"+path+"'";
             var text = "'"+text+"'";
@@ -252,7 +252,7 @@ myApp.service("GithubSrvc", function (
             //contents[path] = text;
 
             console.log(contents);
-            branch.writeMany(contents, "save").done(function() {
+            branch.write(contents, 'save').done(function() {
                 console.log("saved");
                 //window.location = url;
                 $rootScope.$broadcast('Toast::githubCommitSuccess');
