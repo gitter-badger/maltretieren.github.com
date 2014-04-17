@@ -302,23 +302,6 @@ myApp.service("ParameterSrvc", function ($window) {
     }
 });
 
-// EXAMPLE OF CORRECT DECLARATION OF SERVICE
-// here is a declaration of simple utility function to know if an given param is a String.
-myApp.service("UtilSrvc", function () {
-    return {
-        isAString: function(o) {
-            return typeof o == "string" || (typeof o == "object" && o.constructor === String);
-        },
-        helloWorld : function(name) {
-        	var result = "Hum, Hello you, but your name is too weird...";
-        	if (this.isAString(name)) {
-        		result = "Hello, " + name;
-        	}
-        	return result;
-        }
-    }
-});
-
 myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
 
     var poll = function (repoName, branchName) {
