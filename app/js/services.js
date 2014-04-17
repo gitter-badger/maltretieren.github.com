@@ -243,7 +243,6 @@ myApp.service("GithubSrvc", function (
             var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
             //console.log(path);
             var branch = repo.getBranch("master");
-            var path = "'"+path+"'";
             var contents = {};
             contents[path] = text;
 
