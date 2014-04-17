@@ -246,8 +246,10 @@ myApp.service("GithubSrvc", function (
             console.log(path);
             var path = "'"+path+"'";
             var text = "'"+text+"'";
-            var contents = {}
-            contents[path] = text;
+            var contents = {
+                'test':'test1'
+            }
+            //contents[path] = text;
 
             console.log(contents);
             branch.writeMany(contents, "save").done(function() {
