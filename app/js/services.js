@@ -244,7 +244,8 @@ myApp.service("GithubSrvc", function (
             //console.log(path);
             var branch = repo.getDefaultBranch();
             console.log(path);
-            //var path = "'"+path+"'";
+            var path = "'"+path+"'";
+            var text = "'"+text+"'";
             var contents = {}
             contents[path] = text;
 
