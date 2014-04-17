@@ -245,7 +245,6 @@ myApp.service("GithubSrvc", function (
             var branch = repo.getBranch("master");
             var contents = {};
             contents[path] = text;
-            console.log(contents);
 
             branch.writeMany(contents, 'Save from GUI').done(function() {
                 console.log("saved");
