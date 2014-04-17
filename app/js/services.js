@@ -248,7 +248,7 @@ myApp.service("GithubSrvc", function (
             contents[path] = text;
 
             console.log(contents);
-            branch.write(contents, 'Save from GUI').done(function() {
+            branch.writeMany(contents, 'Save from GUI').done(function() {
                 console.log("saved");
                 //window.location = url;
                 $rootScope.$broadcast('Toast::githubCommitSuccess');
