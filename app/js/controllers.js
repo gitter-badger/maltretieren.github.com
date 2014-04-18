@@ -260,7 +260,7 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
 
         var promise = GithubSrvc.editContent(path);
         promise.then(function() {
-            alert(yeah);
+            alert("yeah");
         });
     } else {
         console.log("new content...")
