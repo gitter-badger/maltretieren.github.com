@@ -277,7 +277,8 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
             var path = "_posts/"+$scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replace(" ","-")+".md";
             console.log("new content");
             console.log("path: "+path);
-            console.log("conten: t"+content);
+            console.log("conten: " +content);
+            GithubSrvc.commit(content, path);
         });
     }
 
