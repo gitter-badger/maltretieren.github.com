@@ -212,7 +212,17 @@ myApp.service("GithubSrvc", function (
             // search/replace "title : Place to pee free!"/"title: slogan)
             // commit
         },
-        getContent: function(path) {
+        newContent: function(path) {
+            $('#target-editor').markdown({
+                savable:true,
+                height:500,
+                onSave: function(e) {
+                    self.commit(e.getContent(), path)
+                }
+            });
+            $('#target-editor').show();
+        },
+        editContent: function(path) {
             // change page slogan:
             // request _config.yml
             // search/replace "title : Place to pee free!"/"title: slogan)

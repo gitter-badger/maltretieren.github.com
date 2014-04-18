@@ -258,9 +258,10 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
             }
         }
 
-        GithubSrvc.getContent(path);
+        GithubSrvc.editContent(path);
     } else {
         console.log("new content...")
+        GithubSrvc.newContent(path);
     }
 
     $scope.options.date = date;
