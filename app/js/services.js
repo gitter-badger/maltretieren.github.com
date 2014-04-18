@@ -213,14 +213,17 @@ myApp.service("GithubSrvc", function (
             // commit
         },
         newContent: function(path) {
+            var deferred = $q.defer();
             $('#target-editor').markdown({
                 savable:true,
                 height:500,
                 onSave: function(e) {
-                    self.commit(e.getContent(), path)
+                    //self.commit(e.getContent(), path)
+                    deferred.resolve();
                 }
             });
             $('#target-editor').show();
+            return deferred.promise;
         },
         editContent: function(path) {
             // change page slogan:

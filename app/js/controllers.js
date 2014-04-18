@@ -266,7 +266,11 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
         });
     } else {
         console.log("new content...")
-        GithubSrvc.newContent(path);
+
+        var promise = GithubSrvc.newContent(path);
+        promise.then(function() {
+            alert("yeah");
+        });
     }
 
     $scope.delete = function() {
