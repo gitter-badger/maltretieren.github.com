@@ -239,49 +239,48 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
     };
 });
 
-myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
+myApp.controller('GithubEditCtrl', function($scope, $dialogs, ParameterSrvc, GithubSrvc) {
     var scope = $scope;
 
     $scope.options = {}
     var path = ParameterSrvc.urlParams['path'];
     var url = ParameterSrvc.urlParams['url'];
     var date = "";
-    var title = "";
+    $scope.options.title = "";
 
     if(typeof(path) != 'undefined' && typeof(url) !='undefined') {
         var splif = path.split("-");
         date = splif[0].split("/")[1]+"-"+splif[1]+"-"+splif[2];
-        title = "";
         for(var i=3;i<splif.length;i++) {
             if(i!==splif.length-1) {
-                title += splif[i]+" ";
+                $scope.options.title += splif[i]+" ";
             } else {
-                title += splif[i].split(".")[0];
+                $scope.options.title += splif[i].split(".")[0];
             }
         }
 
         var promise = GithubSrvc.editContent(path);
         promise.then(function(content) {
-            var path = $scope.options.date+"-"+title.replace(" ","-");
+            var path = $scope.options.date+"-"+$scope.options.title.replace(" ","-");
             console.log("edit existing content");
             console.log("should check, if the path has changed... if yes, it should post/delete or move/commit")
             console.log("path"+path);
-            console.log("content"+content);
+            console.log("content: "+content);
         });
     } else {
         console.log("new content...")
 
         var promise = GithubSrvc.newContent(path);
         promise.then(function(content) {
-            var path = $scope.options.date+"-"+title.replace(" ","-");
+            var path = $scope.options.date+"-"+$scope.options.title.replace(" ","-");
             console.log("new content");
             console.log("path"+path);
-            console.log("content"+content);
+            console.log("content: "+content);
         });
     }
 
     $scope.delete = function() {
-        alert("Do you really want to delete this post?")
+
     }
 
     $scope.options.date = date;
