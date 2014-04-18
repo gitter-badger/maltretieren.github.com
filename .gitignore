@@ -10,5 +10,5 @@ Gemfile.lock
 .rbenv-version
 .rvmrc
 node_modules
-.idea/workspace.xml
+.idea/
 
