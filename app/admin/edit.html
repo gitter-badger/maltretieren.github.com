@@ -10,7 +10,7 @@ comments: false
         <h1>Edit</h1>
         <div class="row" style="background-color:green;">
             <form class="form-inline" role="form">
-                <div class="form-group">
+                <div class="form-group col-md-6">
                     <div class="input-group">
                       <label for="date" class="col-md-1 control-label">Date</label>
                       <input type="text" class="form-control col-md-4" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" id="date"/>
@@ -19,7 +19,7 @@ comments: false
                       </span>
                     </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group col-md-6">
                     <label for="title" class="col-md-2 control-label">Title</label>
                     <input type="text" class=" col-md-4 form-control" id="title" ng-model="options.title">
                  </div>
