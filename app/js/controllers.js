@@ -239,7 +239,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
     };
 });
 
-myApp.controller('GithubEditCtrl', function($scope, $dialogs, ParameterSrvc, GithubSrvc) {
+myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
     var scope = $scope;
 
     $scope.options = {}
