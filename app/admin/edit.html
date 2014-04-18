@@ -9,17 +9,20 @@ comments: false
     <div style="padding-bottom:15px" ng-controller="GithubEditCtrl" class="containter">
         <h1>Edit</h1>
         <div class="row" style="background-color:green;">
-            <div class="col-md-4">
-                <p class="input-group">
-                  <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" id="date"/>
-                  <span class="input-group-btn">
-                    <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-                  </span>
-                </p>
-            </div>
-            <div class="col-md-6">
-                <input type="text" class="form-control" id="title" ng-model="options.title">
-            </div>
+            <form class="form-inline" role="form">
+                <div class="col-md-4">
+                    <p class="input-group">
+                      <label for="date">Password</label>
+                      <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" id="date"/>
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                      </span>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" id="title" ng-model="options.title">
+                </div>
+            </form>
         </div>
 
         <div class="clearfix"></div>
