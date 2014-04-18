@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/edit.html" afterPath="$PROJECT_DIR$/app/admin/edit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,7 +101,7 @@
       <file leaf-file-name="edit.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="63" selection-start="869" selection-end="869" vertical-scroll-proportion="0.5971897" vertical-offset="0" max-vertical-offset="600">
+            <state line="16" column="28" selection-start="788" selection-end="788" vertical-scroll-proportion="0.5620609" vertical-offset="0" max-vertical-offset="525">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#div#0;n#!!top" expanded="true" />
@@ -683,7 +684,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="63" selection-start="869" selection-end="869" vertical-scroll-proportion="0.5971897" vertical-offset="0" max-vertical-offset="600">
+        <state line="16" column="28" selection-start="788" selection-end="788" vertical-scroll-proportion="0.5620609" vertical-offset="0" max-vertical-offset="525">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#div#0;n#!!top" expanded="true" />
