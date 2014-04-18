@@ -315,8 +315,7 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
         'starting-day': 1
     };
 
-    $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'shortDate'];
-    $scope.format = $scope.formats[0];
+    $scope.format = 'yyyy-MM-dd';
 });
 
 myApp.controller('PostCtrl', function($scope, toaster, GithubSrvc) {
