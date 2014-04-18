@@ -245,11 +245,13 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
     $scope.options = {}
     var path = ParameterSrvc.urlParams['path'];
     var url = ParameterSrvc.urlParams['url'];
+    var date = "";
+    var title = "";
 
     if(typeof(path) != 'undefined' && typeof(url) !='undefined') {
         var splif = path.split("-");
-        var date = splif[0].split("/")[1]+"-"+splif[1]+"-"+splif[2];
-        var title = "";
+        date = splif[0].split("/")[1]+"-"+splif[1]+"-"+splif[2];
+        title = "";
         for(var i=3;i<splif.length;i++) {
             if(i!==splif.length-1) {
                 title += splif[i]+" ";
@@ -282,7 +284,12 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
     $scope.today = function() {
         $scope.dt = new Date();
     };
-    $scope.today();
+
+    if(typeof date==='undefined') {
+        $scope.today();
+    } else {
+        $scope.dt = date;
+    }
 
     $scope.showWeeks = true;
     $scope.toggleWeeks = function () {
