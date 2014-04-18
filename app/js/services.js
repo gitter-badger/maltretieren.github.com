@@ -212,20 +212,6 @@ myApp.service("GithubSrvc", function (
             // search/replace "title : Place to pee free!"/"title: slogan)
             // commit
         },
-        newContent: function(path) {
-            var deferred = $q.defer();
-            $('#target-editor').markdown({
-                savable:true,
-                height:500,
-                onSave: function(e) {
-                    //self.commit(e.getContent(), path)
-                    deferred.resolve(e.getContent());
-                }
-            });
-            $('#target-editor').show();
-            $("#target-editor").val("---<br/>layout: post/n---");
-            return deferred.promise;
-        },
         editContent: function(path) {
             // change page slogan:
             // request _config.yml
@@ -251,7 +237,6 @@ myApp.service("GithubSrvc", function (
                     }
                 });
                 $('#target-editor').show();
-                console.log(result.content);
                 $("#target-editor").val(result.content);
             })
             return deferred.promise;

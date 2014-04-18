@@ -272,7 +272,7 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
     } else {
         console.log("new content...")
 
-        var promise = GithubSrvc.newContent(path);
+        var promise = GithubSrvc.editContent("_posts/templates/2014-01-01-edit-template.md");
         promise.then(function(content) {
             var path = "_posts/"+$scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replace(" ","-")+".md";
             console.log("new content");
