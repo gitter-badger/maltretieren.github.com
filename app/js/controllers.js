@@ -267,7 +267,7 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
         GithubSrvc.newContent(path);
     }
 
-    var delete = function() {
+    $scope.delete = function() {
         alert("Do you really want to delete this post?")
     }
 
