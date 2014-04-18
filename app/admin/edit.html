@@ -10,7 +10,6 @@ comments: false
         <h1>Edit</h1>
         <div class="row" style="background-color:green;">
             <form class="form-inline" role="form">
-                <div class="col-md-6">
                       <label for="date">Date</label>
                     <span class="input-group">
                       <input type="text" class="form-control col-md-5" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" id="date"/>
@@ -18,10 +17,7 @@ comments: false
                         <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
                       </span>
                     </span>
-                </div>
-                <div class="col-md-6">
                     <input type="text" class="form-control" id="title" ng-model="options.title">
-                </div>
             </form>
         </div>
 
