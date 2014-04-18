@@ -261,8 +261,12 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
         }
 
         var promise = GithubSrvc.editContent(path);
-        promise.then(function() {
-            alert("yeah");
+        promise.then(function(content) {
+            var path = $scope.options.date+"-"+title.replace(" ","-");
+            console.log("edit existing content");
+            console.log("should check, if the path has changed...")
+            console.log("path"+path);
+            console.log("content"+content);
         });
     } else {
         console.log("new content...")
