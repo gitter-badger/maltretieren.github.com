@@ -246,15 +246,21 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
     var path = ParameterSrvc.urlParams['path'];
     var url = ParameterSrvc.urlParams['url'];
 
-    var splif = path.split("-");
-    var date = splif[0].split("/")[1]+"-"+splif[1]+"-"+splif[2];
-    var title = "";
-    for(var i=3;i<splif.length;i++) {
-        if(i!==splif.length-1) {
-            title += splif[i]+" ";
-        } else {
-            title += splif[i].split(".")[0];
+    if(path!=='undefined' && url !=='undefined') {
+        var splif = path.split("-");
+        var date = splif[0].split("/")[1]+"-"+splif[1]+"-"+splif[2];
+        var title = "";
+        for(var i=3;i<splif.length;i++) {
+            if(i!==splif.length-1) {
+                title += splif[i]+" ";
+            } else {
+                title += splif[i].split(".")[0];
+            }
         }
+
+        GithubSrvc.getContent(path);
+    } else {
+        console.log("new content...")
     }
 
     $scope.options.date = date;
@@ -263,7 +269,7 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
     console.log(date);
     console.log(title);
 
-    GithubSrvc.getContent(path);
+
 
     $scope.today = function() {
         $scope.dt = new Date();
