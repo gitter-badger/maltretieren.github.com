@@ -223,7 +223,7 @@ myApp.service("GithubSrvc", function (
                 }
             });
             $('#target-editor').show();
-            $("#target-editor").val("---/nlayout: post/n---");
+            $("#target-editor").val("---<br/>layout: post/n---");
             return deferred.promise;
         },
         editContent: function(path) {
