@@ -235,18 +235,21 @@ myApp.service("GithubSrvc", function (
             //console.log(path);
             var branch = repo.getBranch("master");
             var contents = branch.read(path, false)
+            var deferred = $q.defer();
             contents.done(function(result) {
                 //console.log(result.content);
                 $('#target-editor').markdown({
                     savable:true,
                     height:500,
                     onSave: function(e) {
-                        self.commit(e.getContent(), path)
+                        //self.commit(e.getContent(), path)
+                        deferred.resolve();
                     }
                 });
                 $('#target-editor').show();
                 $("#target-editor").val(result.content);
             })
+            return deferred.promise;
         },
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
