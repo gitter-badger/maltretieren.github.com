@@ -251,6 +251,7 @@ myApp.service("GithubSrvc", function (
                     }
                 });
                 $('#target-editor').show();
+                console.log(result.content);
                 $("#target-editor").val(result.content);
             })
             return deferred.promise;
