@@ -243,7 +243,7 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
     var scope = $scope;
 
     $scope.options = {}
-    $scope.options.date = "";
+    var date = "";
     $scope.options.title = "";
 
     var path = ParameterSrvc.urlParams['path'];
