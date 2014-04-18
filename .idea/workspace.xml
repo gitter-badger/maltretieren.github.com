@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services.js" afterPath="$PROJECT_DIR$/app/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/editConfig.html" afterPath="$PROJECT_DIR$/app/admin/editConfig.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/post.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +29,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="257" column="13" selection-start="8497" selection-end="8497" vertical-scroll-proportion="0.0" vertical-offset="3809" max-vertical-offset="5385">
+            <state line="257" column="13" selection-start="8497" selection-end="8497" vertical-scroll-proportion="0.0" vertical-offset="3599" max-vertical-offset="5385">
               <folding />
             </state>
           </provider>
@@ -38,7 +38,7 @@
       <file leaf-file-name="default.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="50" selection-start="4113" selection-end="4113" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="1575">
+            <state line="73" column="50" selection-start="4113" selection-end="4113" vertical-scroll-proportion="-10.625" vertical-offset="840" max-vertical-offset="1575">
               <folding />
             </state>
           </provider>
@@ -65,16 +65,16 @@
       <file leaf-file-name="post.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/post.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="19" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="975">
+            <state line="2" column="204" selection-start="365" selection-end="365" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="960">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="234" column="32" selection-start="9455" selection-end="9455" vertical-scroll-proportion="0.5654102" vertical-offset="3255" max-vertical-offset="5625">
+            <state line="229" column="28" selection-start="9239" selection-end="9239" vertical-scroll-proportion="0.0" vertical-offset="3375" max-vertical-offset="5625">
               <folding />
             </state>
           </provider>
@@ -89,11 +89,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editConfig.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="editConfig.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/editConfig.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="19" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="480">
-              <folding />
+            <state line="9" column="174" selection-start="311" selection-end="311" vertical-scroll-proportion="0.31615925" vertical-offset="0" max-vertical-offset="495">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,7 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/js/github-functions.js" />
         <option value="$PROJECT_DIR$/app/partials/postsFrontpage.html" />
         <option value="$PROJECT_DIR$/_posts/2014-01-01-sandbox.md" />
         <option value="$PROJECT_DIR$/app/js/directives.js" />
@@ -143,13 +144,14 @@
         <option value="$PROJECT_DIR$/app/js/form.js" />
         <option value="$PROJECT_DIR$/app/admin/fork.html" />
         <option value="$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md" />
-        <option value="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
         <option value="$PROJECT_DIR$/assets/js/octokit-0.9.19/octokit.js" />
         <option value="$PROJECT_DIR$/app/js/main.js" />
         <option value="$PROJECT_DIR$/app/admin/edit.html" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/app/js/services.js" />
+        <option value="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
+        <option value="$PROJECT_DIR$/app/admin/editConfig.html" />
       </list>
     </option>
   </component>
@@ -413,13 +415,13 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../node-github" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="86" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="935" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="850" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="935" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="93" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="88" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
   </component>
@@ -440,14 +442,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -456,6 +450,14 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -639,13 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/editConfig.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="19" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="480">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="47" selection-start="722" selection-end="722" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="495">
@@ -660,20 +655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="19" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="975">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="50" selection-start="4113" selection-end="4113" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="1575">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="257" column="13" selection-start="8497" selection-end="8497" vertical-scroll-proportion="0.0" vertical-offset="3809" max-vertical-offset="5385">
@@ -683,8 +664,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="234" column="32" selection-start="9455" selection-end="9455" vertical-scroll-proportion="0.5654102" vertical-offset="3255" max-vertical-offset="5625">
+        <state line="229" column="28" selection-start="9239" selection-end="9239" vertical-scroll-proportion="0.0" vertical-offset="3135" max-vertical-offset="5625">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="50" selection-start="4113" selection-end="4113" vertical-scroll-proportion="-10.625" vertical-offset="840" max-vertical-offset="1575">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="204" selection-start="365" selection-end="365" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="960">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/editConfig.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="174" selection-start="311" selection-end="311" vertical-scroll-proportion="0.31615925" vertical-offset="0" max-vertical-offset="495">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

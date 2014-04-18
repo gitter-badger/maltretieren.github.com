@@ -7,6 +7,7 @@ comments: false
 {% raw %}
 
     <div ng-controller="ConfigCtrl">
+        <div style="text-align:right"><a href="?path={{page.path}}&url={{page.url}}" class="btn btn-danger btn-middle">Delete <i class="icon-white icon-pencil"></i></a></div>
         <h1>Edit Frontend Configuration</h1>
         <div ng-repeat="(key, value) in inputs">
             <h2>{{key|uppercase}}</h2>
