@@ -243,10 +243,11 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
     var scope = $scope;
 
     $scope.options = {}
-    var path = ParameterSrvc.urlParams['path'];
-    var url = ParameterSrvc.urlParams['url'];
     $scope.options.date = "";
     $scope.options.title = "";
+
+    var path = ParameterSrvc.urlParams['path'];
+    var url = ParameterSrvc.urlParams['url'];
 
     if(typeof(path) != 'undefined' && typeof(url) !='undefined') {
         var splif = path.split("-");
@@ -254,15 +255,15 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
         $scope.options.title = "";
         for(var i=3;i<splif.length;i++) {
             if(i!==splif.length-1) {
-                scope.options.title += splif[i]+" ";
+                $scope.options.title += splif[i]+" ";
             } else {
-                scope.options.title += splif[i].split(".")[0];
+                $scope.options.title += splif[i].split(".")[0];
             }
         }
 
         var promise = GithubSrvc.editContent(path);
         promise.then(function(content) {
-            var path = scope.options.date+"-"+scope.options.title.replace(" ","-");
+            var path = $scope.options.date+"-"+$scope.options.title.replace(" ","-");
             console.log("edit existing content");
             console.log("should check, if the path has changed... if yes, it should post/delete or move/commit")
             console.log("path"+path);
@@ -273,7 +274,7 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
 
         var promise = GithubSrvc.newContent(path);
         promise.then(function(content) {
-            var path = scope.options.date+"-"+scope.options.title.replace(" ","-");
+            var path = $scope.options.date+"-"+$scope.options.title.replace(" ","-");
             console.log("new content");
             console.log("path"+path);
             console.log("content"+content);
@@ -283,9 +284,6 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
     $scope.delete = function() {
 
     }
-
-    $scope.options.date = date;
-    $scope.options.title = title;
 
     $scope.today = function() {
         $scope.options.date = new Date();
