@@ -274,7 +274,7 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
 
         var promise = GithubSrvc.newContent(path);
         promise.then(function(content) {
-            var path = $scope.options.date+"-"+$scope.options.title.replace(" ","-");
+            var path = $scope.options.date.toISOString()+"-"+$scope.options.title.replace(" ","-");
             console.log("new content");
             console.log("path"+path);
             console.log("content"+content);
