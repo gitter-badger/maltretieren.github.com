@@ -10,14 +10,15 @@ comments: false
         <h1>Edit</h1>
         <div class="row" style="background-color:green;">
             <form class="form-inline" role="form">
-                      <label for="date">Date</label>
-                    <span class="input-group">
+
+                    <span class="input-group col-md-6">
+                      <label for="date" class="col-md-1">Date</label>
                       <input type="text" class="form-control col-md-5" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" id="date"/>
                       <span class="input-group-btn">
                         <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
                       </span>
                     </span>
-                    <input type="text" class="form-control" id="title" ng-model="options.title">
+                    <input type="text" class="form-control col-md-6" id="title" ng-model="options.title">
             </form>
         </div>
 
