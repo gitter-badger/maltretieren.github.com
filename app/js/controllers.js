@@ -264,7 +264,7 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
         promise.then(function(content) {
             var path = $scope.options.date+"-"+title.replace(" ","-");
             console.log("edit existing content");
-            console.log("should check, if the path has changed...")
+            console.log("should check, if the path has changed... if yes, it should post/delete or move/commit")
             console.log("path"+path);
             console.log("content"+content);
         });
