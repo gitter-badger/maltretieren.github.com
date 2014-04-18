@@ -278,7 +278,7 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
             console.log("new content");
             console.log("path: "+path);
             console.log("conten: " +content);
-            
+
             GithubSrvc.commit(content, path);
         });
     }
