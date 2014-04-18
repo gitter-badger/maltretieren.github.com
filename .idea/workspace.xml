@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/edit.html" afterPath="$PROJECT_DIR$/app/admin/edit.html" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +28,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="264" column="67" selection-start="8766" selection-end="8766" vertical-scroll-proportion="0.23096447" vertical-offset="3869" max-vertical-offset="5670">
+            <state line="247" column="4" selection-start="8112" selection-end="8127" vertical-scroll-proportion="-0.4543147" vertical-offset="3884" max-vertical-offset="5670">
               <folding />
             </state>
           </provider>
@@ -641,7 +640,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="264" column="67" selection-start="8766" selection-end="8766" vertical-scroll-proportion="0.23096447" vertical-offset="3869" max-vertical-offset="5670">
+        <state line="247" column="4" selection-start="8112" selection-end="8127" vertical-scroll-proportion="-0.4543147" vertical-offset="3884" max-vertical-offset="5670">
           <folding />
         </state>
       </provider>

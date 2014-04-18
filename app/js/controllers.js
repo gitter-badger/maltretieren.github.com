@@ -245,7 +245,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, ParameterSrvc, Git
     $scope.options = {}
     var path = ParameterSrvc.urlParams['path'];
     var url = ParameterSrvc.urlParams['url'];
-    var date = "";
+    $scope.options.date = "";
     $scope.options.title = "";
 
     if(typeof(path) != 'undefined' && typeof(url) !='undefined') {
@@ -254,15 +254,15 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, ParameterSrvc, Git
         $scope.options.title = "";
         for(var i=3;i<splif.length;i++) {
             if(i!==splif.length-1) {
-                $scope.options.title += splif[i]+" ";
+                scope.options.title += splif[i]+" ";
             } else {
-                $scope.options.title += splif[i].split(".")[0];
+                scope.options.title += splif[i].split(".")[0];
             }
         }
 
         var promise = GithubSrvc.editContent(path);
         promise.then(function(content) {
-            var path = $scope.options.date+"-"+$scope.options.title.replace(" ","-");
+            var path = scope.options.date+"-"+scope.options.title.replace(" ","-");
             console.log("edit existing content");
             console.log("should check, if the path has changed... if yes, it should post/delete or move/commit")
             console.log("path"+path);
@@ -273,7 +273,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, ParameterSrvc, Git
 
         var promise = GithubSrvc.newContent(path);
         promise.then(function(content) {
-            var path = $scope.options.date+"-"+$scope.options.title.replace(" ","-");
+            var path = scope.options.date+"-"+scope.options.title.replace(" ","-");
             console.log("new content");
             console.log("path"+path);
             console.log("content"+content);
