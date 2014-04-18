@@ -280,7 +280,7 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
         $scope.options.date = new Date();
     };
 
-    if(typeof date==='undefined') {
+    if(typeof date==='') {
         $scope.today();
     } else {
         $scope.options.date = date;
