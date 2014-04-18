@@ -251,6 +251,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, ParameterSrvc, Git
     if(typeof(path) != 'undefined' && typeof(url) !='undefined') {
         var splif = path.split("-");
         date = splif[0].split("/")[1]+"-"+splif[1]+"-"+splif[2];
+        $scope.options.title = "";
         for(var i=3;i<splif.length;i++) {
             if(i!==splif.length-1) {
                 $scope.options.title += splif[i]+" ";
@@ -265,7 +266,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, ParameterSrvc, Git
             console.log("edit existing content");
             console.log("should check, if the path has changed... if yes, it should post/delete or move/commit")
             console.log("path"+path);
-            console.log("content: "+content);
+            console.log("content"+content);
         });
     } else {
         console.log("new content...")
@@ -275,7 +276,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, ParameterSrvc, Git
             var path = $scope.options.date+"-"+$scope.options.title.replace(" ","-");
             console.log("new content");
             console.log("path"+path);
-            console.log("content: "+content);
+            console.log("content"+content);
         });
     }
 
