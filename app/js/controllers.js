@@ -276,19 +276,14 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
     $scope.options.date = date;
     $scope.options.title = title;
 
-    console.log(date);
-    console.log(title);
-
-
-
     $scope.today = function() {
-        $scope.dt = new Date();
+        options.date = new Date();
     };
 
     if(typeof date==='undefined') {
         $scope.today();
     } else {
-        $scope.dt = date;
+        options.date = date;
     }
 
     $scope.showWeeks = true;
@@ -297,7 +292,7 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
     };
 
     $scope.clear = function () {
-        $scope.dt = null;
+        options.date = null;
     };
 
     // Disable weekend selection
