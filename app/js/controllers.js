@@ -274,11 +274,10 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
 
         var promise = GithubSrvc.newContent(path);
         promise.then(function(content) {
-            var date = $scope.options.date.getMonth()+1 + "-" + $scope.options.date.getDate() + "-" + $scope.options.date.getYear();
-            var path = date+"-"+$scope.options.title.replace(" ","-");
+            var path = $scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replace(" ","-");
             console.log("new content");
-            console.log("path"+path);
-            console.log("content"+content);
+            console.log("path: "+path);
+            console.log("conten: t"+content);
         });
     }
 
