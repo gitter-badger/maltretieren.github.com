@@ -233,7 +233,7 @@ myApp.service("GithubSrvc", function (
                     height:500,
                     onSave: function(e) {
                         //self.commit(e.getContent(), path)
-                        deferred.resolve();
+                        deferred.resolve(e.getContent());
                     }
                 });
                 $('#target-editor').show();
