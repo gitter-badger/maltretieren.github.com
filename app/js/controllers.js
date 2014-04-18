@@ -246,7 +246,7 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
     var path = ParameterSrvc.urlParams['path'];
     var url = ParameterSrvc.urlParams['url'];
 
-    if(path!='undefined' && url !='undefined') {
+    if(typeof(path) != 'undefined' && typeof(url) !='undefined') {
         var splif = path.split("-");
         var date = splif[0].split("/")[1]+"-"+splif[1]+"-"+splif[2];
         var title = "";
