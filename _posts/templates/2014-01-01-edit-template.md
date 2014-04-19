@@ -13,3 +13,4 @@ published: true
 
 {% include JB/setup %}
 
+test
