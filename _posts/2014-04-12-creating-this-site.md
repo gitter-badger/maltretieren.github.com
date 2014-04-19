@@ -15,7 +15,7 @@ published: true
 ---
 
 {% include JB/setup %}
-
+jb
 This is a short writeup of the history of creating this page.
 
 Out of the noise in the internet some things pop up more recently.
