@@ -27,7 +27,9 @@ functionality and get more experienced...
 Jekyll on GitHub is fun...
 
 # Create/Read/Update/Delete
-For a blogging platform it is import to have Create/Read/Update/Delete (CRUD) functionality. Because this blog is powered by GitHub Pages this means to interact with GIT via the Github API. The normal Jekyll way is to install GIT/GitHub software on your computer and make these changes locally and then push it to GitHub. But I wanted to be able to take some notes also from my Smartphone where no GIT is installed. An intermediate solution is to use prose.io - an online GUI for editing content on GitHub accounts. I thought it would be cool to have this kind of functionality more integrated with my blog. So I introduced a Markdown editor and a
+For a blogging platform it is import to have Create/Read/Update/Delete (CRUD) functionality. Because this blog is powered by GitHub Pages this means to interact with GIT via the Github API. The normal Jekyll way is to install GIT/GitHub software on your computer and make these changes locally and then push it to GitHub. Github renders the page and serves it to the public. 
+
+I wanted to be able to take some notes also from my Smartphone where no GIT is installed. An intermediate solution is to use prose.io - an online GUI for editing content on GitHub accounts. I thought it would be cool to have this kind of functionality more integrated with my blog. So I introduced a Markdown editor and a
 JavaScript library to interact with the GitHub API. This was simple 
 and I was now able to change the content of the posts and commit it
 back to GitHub. After GitHub rendering it is available for all people...
