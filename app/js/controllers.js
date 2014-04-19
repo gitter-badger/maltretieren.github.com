@@ -285,6 +285,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, ParameterS
     });
 
     $scope.delete = function() {
+        console.log("delete....");
         var dlg = $dialogs.confirm('Please Confirm','Is this awesome or what?');
         dlg.result.then(function(btn){
             $scope.confirmed = 'You thought this quite awesome!';
