@@ -284,14 +284,19 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, ParameterS
         GithubSrvc.commit(content, commitPath);
     });
 
+    $scope.confirmed = 'You have yet to be confirmed!';
     $scope.delete = function() {
         console.log("delete....");
-        var dlg = $dialogs.confirm('Please Confirm','Is this awesome or what?');
+        var dlg = $dialogs.confirm('Please Confirm','Do you want to delete the post?');
         dlg.result.then(function(btn){
             $scope.confirmed = 'You thought this quite awesome!';
         },function(btn){
             $scope.confirmed = 'Shame on you for not thinking this is awesome!';
         });
+    }
+    $scope.$watch('confirmed', $scope.deleteConfirmed);
+    $scope.deleteConfirmed = function() {
+        console.log("delete confirmed...");
     }
 
     $scope.today = function() {
