@@ -239,7 +239,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
     };
 });
 
-myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, ParameterSrvc, GithubSrvc) {
+myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, ParameterSrvc, GithubSrvc) {
     var scope = $scope;
 
     $scope.options = {}
@@ -284,11 +284,13 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, ParameterS
         return GithubSrvc.commit(content, commitPath);
     }).then(function() {
         console.log("post saved.... wait for 5 seconds and redirect to the site...")
-        if(typeof(url) !='undefined') {
-            window.location = url;
-        } else {
-            console.log("post saved, there is no url provided to redirect - should be constructed from the commit path...")
-        }
+        $timeout(function(){
+            if(typeof(url) !='undefined') {
+                window.location = url;
+            } else {
+                console.log("post saved, there is no url provided to redirect - should be constructed from the commit path...")
+            }
+        }, 5000);
     });
 
     $scope.confirmed = 'You have yet to be confirmed!';
