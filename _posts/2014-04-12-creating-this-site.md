@@ -31,11 +31,13 @@ For a blogging platform it is import to have Create/Read/Update/Delete (CRUD) fu
 
 I wanted to be able to take some notes also from my Smartphone where no GIT is installed. An intermediate solution is to use prose.io - an online GUI for editing content on GitHub accounts. I thought it would be cool to have this kind of functionality more integrated with my blog. So I introduced a Markdown editor and a
 JavaScript library to interact with the GitHub API. This was simple 
-and I was now able to change the content of the posts and commit it
-back to GitHub. After GitHub rendering it is available for all people...
+and I was able to change the content of the posts and commit it
+back to GitHub in April 2014.
 
 ## Detail
- For delete confirmation I wanted a modal window
+Github Oauth2 worklow, token.... 
+
+For delete confirmation I wanted a modal window
 to confirm that you really, really want to delete - so the
 (dialogs)[https://github.com/m-e-conroy/angular-dialog-service) where introduced...
 
