@@ -86,6 +86,15 @@ understandable code. I think promises helped me alot. This is how it looks like:
     });
 {% endhighlight %}
 
+# Edit / Create content
+For a blogging platform it is import to have edit / delete / create functionality.
+This was introduced in April 2014. For delete confirmation I wanted a modal window
+to confirm that you really, really want to delete - so the dialogs whrere introduced...
+
+One feature missing is the support of folders inside the _posts directory to keep
+the folder a little bit more organized. It would be also greate to have some
+basic support of image uploading...
+
 # Getting more professional
 As soon as I started out with the GitHub fork functionality there the need
 for a deployment workflow rises because it was needed to commit to a master

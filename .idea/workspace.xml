@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/routes.js" afterPath="$PROJECT_DIR$/app/js/routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md" afterPath="$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,12 +34,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="routes.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="76" selection-start="183" selection-end="183" vertical-scroll-proportion="0.07293355" vertical-offset="0" max-vertical-offset="617">
+            <state line="3" column="76" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014-04-12-creating-this-site.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="95" column="35" selection-start="3515" selection-end="3515" vertical-scroll-proportion="0.8504983" vertical-offset="913" max-vertical-offset="1665">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
           </provider>
         </entry>
       </file>
@@ -100,18 +112,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2014-01-01-edit-template.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/templates/2014-01-01-edit-template.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="10" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="300">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="edit.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -144,7 +144,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/js/form.js" />
         <option value="$PROJECT_DIR$/app/admin/fork.html" />
-        <option value="$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md" />
         <option value="$PROJECT_DIR$/assets/js/octokit-0.9.19/octokit.js" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
         <option value="$PROJECT_DIR$/app/admin/editConfig.html" />
@@ -155,6 +154,7 @@
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/app/js/routes.js" />
+        <option value="$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md" />
       </list>
     </option>
   </component>
@@ -359,24 +359,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="_posts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maltretieren.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="maltretieren.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_posts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -599,11 +581,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/admin/fork.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="69" selection-start="1046" selection-end="1046" vertical-scroll-proportion="-7.7916665" vertical-offset="83" max-vertical-offset="510" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/editConfig.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="38" selection-start="269" selection-end="269" vertical-scroll-proportion="-4.6666665" vertical-offset="53" max-vertical-offset="480" />
@@ -704,9 +681,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="76" selection-start="183" selection-end="183" vertical-scroll-proportion="0.07293355" vertical-offset="0" max-vertical-offset="617">
+        <state line="3" column="76" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="35" selection-start="3515" selection-end="3515" vertical-scroll-proportion="0.8504983" vertical-offset="913" max-vertical-offset="1665">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
   </component>
