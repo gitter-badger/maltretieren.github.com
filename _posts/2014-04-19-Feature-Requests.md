@@ -25,4 +25,4 @@ The current ToDos focus to cleanup current functionality...
 * Disable comments for pages via the YAML frontmatter. Comments are enabled by default
 * When a user login via github, check if he can commit to the current repository. If yes he is the admin of the site (green button, show menu entries: edit config, edit post, create post). If no, he is a normal user and propably wants to fork the site (orange button, hide menu entries: edit config, edit post, create post - shoe menu entries: fork).
 * Cleanup logging
-* Refactor code (cleanup)
+* Refactor code (cleanup controllers, services, ...)
