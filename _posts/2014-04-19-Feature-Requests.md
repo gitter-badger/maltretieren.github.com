@@ -3,7 +3,7 @@
 layout: post
 categories: 
   - frontpage
-tagline: 
+tagline:
 tags: 
   - development
   - jekyll
