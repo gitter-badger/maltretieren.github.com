@@ -28,6 +28,7 @@
         .script( "/assets/js/angular-1.3.0/angular.min.js" )
         .script( "/assets/js/angular-1.3.0/angular-route.min.js" )
         .script( "/assets/js/angular-1.3.0/angular-sanitize.min.js" )
+        .script( "/assets/js/dialogs-3.0/dialogs.min.js" )
 		.script( "/assets/js/angular-1.3.0/angular-animate.min.js" )
         .script( "/assets/js/angular-1.3.0/angular-resource.min.js" )
         .script( "/app/js/routes.js" )

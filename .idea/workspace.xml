@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/dialogs-3.0/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/dialogs-3.0/dialogs.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/dialogs-3.0/dialogs.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/themes/twitter/default.html" afterPath="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/main.js" afterPath="$PROJECT_DIR$/app/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/routes.js" afterPath="$PROJECT_DIR$/app/js/routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +31,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="274" column="99" selection-start="9162" selection-end="9162" vertical-scroll-proportion="0.53808755" vertical-offset="3778" max-vertical-offset="4950">
+            <state line="274" column="99" selection-start="9162" selection-end="9162" vertical-scroll-proportion="0.0" vertical-offset="3778" max-vertical-offset="4950">
               <folding />
             </state>
           </provider>
@@ -37,16 +43,28 @@
       <file leaf-file-name="routes.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="510">
+            <state line="28" column="0" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/dialogs-3.0/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1005">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="50" selection-start="4113" selection-end="4113" vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="1575">
+            <state line="32" column="54" selection-start="1603" selection-end="1603" vertical-scroll-proportion="0.7504216" vertical-offset="35" max-vertical-offset="1590">
               <folding />
             </state>
           </provider>
@@ -55,7 +73,16 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="59" selection-start="1465" selection-end="1465" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1320">
+            <state line="30" column="48" selection-start="1524" selection-end="1524" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1320">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
               <folding />
             </state>
           </provider>
@@ -65,24 +92,6 @@
         <entry file="file://$PROJECT_DIR$/app/js/form.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="16" column="0" selection-start="488" selection-end="488" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="465">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/page.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="post.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/post.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="204" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="960">
               <folding />
             </state>
           </provider>
@@ -143,15 +152,15 @@
         <option value="$PROJECT_DIR$/app/admin/fork.html" />
         <option value="$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md" />
         <option value="$PROJECT_DIR$/assets/js/octokit-0.9.19/octokit.js" />
-        <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
         <option value="$PROJECT_DIR$/app/admin/editConfig.html" />
         <option value="$PROJECT_DIR$/app/admin/edit.html" />
         <option value="$PROJECT_DIR$/_posts/templates/2014-01-01-edit-template.md" />
         <option value="$PROJECT_DIR$/app/js/services.js" />
+        <option value="$PROJECT_DIR$/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/app/js/routes.js" />
         <option value="$PROJECT_DIR$/app/js/main.js" />
-        <option value="$PROJECT_DIR$/app/js/controllers.js" />
+        <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
       </list>
     </option>
   </component>
@@ -269,7 +278,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="angular-1.3.0" />
+              <option name="myItemId" value="github-0.9.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maltretieren.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dialogs-3.0" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -426,11 +457,11 @@
       <recent name="$PROJECT_DIR$/_layouts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/js/dialogs" />
+      <recent name="$PROJECT_DIR$/assets/js" />
+      <recent name="$PROJECT_DIR$/assets/js/angular-1.3.0/dialogs" />
+      <recent name="$PROJECT_DIR$/assets/js/angular-1.3.0" />
       <recent name="$PROJECT_DIR$/app" />
-      <recent name="$PROJECT_DIR$/admin" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/app/data" />
-      <recent name="$PROJECT_DIR$/assets/themes/patterns" />
     </key>
   </component>
   <component name="RunManager">
@@ -574,11 +605,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/js/octokit-0.9.19/octokit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1329" column="0" selection-start="63784" selection-end="63784" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="20025" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/fork.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="69" selection-start="1046" selection-end="1046" vertical-scroll-proportion="-7.7916665" vertical-offset="83" max-vertical-offset="510" />
@@ -599,23 +625,9 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="464" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/post.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="204" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="960">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="50" selection-start="4113" selection-end="4113" vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="1575">
           <folding />
         </state>
       </provider>
@@ -656,23 +668,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/routes.js">
+    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+        <state line="274" column="99" selection-start="9162" selection-end="9162" vertical-scroll-proportion="0.0" vertical-offset="3778" max-vertical-offset="4950">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/dialogs-3.0/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1005">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="59" selection-start="1465" selection-end="1465" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1305">
+        <state line="30" column="48" selection-start="1524" selection-end="1524" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1320">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
+    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="274" column="99" selection-start="9162" selection-end="9162" vertical-scroll-proportion="0.53808755" vertical-offset="3778" max-vertical-offset="4950">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="54" selection-start="1603" selection-end="1603" vertical-scroll-proportion="0.7504216" vertical-offset="35" max-vertical-offset="1590">
           <folding />
         </state>
       </provider>
