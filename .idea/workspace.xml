@@ -37,7 +37,7 @@
       <file leaf-file-name="routes.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="76" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+            <state line="2" column="91" selection-start="54" selection-end="106" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
               <folding />
             </state>
           </provider>
@@ -46,7 +46,7 @@
       <file leaf-file-name="2014-04-12-creating-this-site.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="35" selection-start="3515" selection-end="3515" vertical-scroll-proportion="0.8504983" vertical-offset="913" max-vertical-offset="1665">
+            <state line="92" column="0" selection-start="3291" selection-end="3291" vertical-scroll-proportion="0.52657807" vertical-offset="1063" max-vertical-offset="1680">
               <folding />
             </state>
           </provider>
@@ -665,13 +665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="287" column="34" selection-start="9672" selection-end="9672" vertical-scroll-proportion="0.0" vertical-offset="3898" max-vertical-offset="4965">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="235" column="55" selection-start="9645" selection-end="9645" vertical-scroll-proportion="0.0" vertical-offset="3255" max-vertical-offset="5520">
@@ -681,14 +674,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="76" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+        <state line="2" column="91" selection-start="54" selection-end="106" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="287" column="34" selection-start="9672" selection-end="9672" vertical-scroll-proportion="0.0" vertical-offset="3898" max-vertical-offset="4965">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="35" selection-start="3515" selection-end="3515" vertical-scroll-proportion="0.8504983" vertical-offset="913" max-vertical-offset="1665">
+        <state line="92" column="0" selection-start="3291" selection-end="3291" vertical-scroll-proportion="0.52657807" vertical-offset="1063" max-vertical-offset="1680">
           <folding />
         </state>
       </provider>
