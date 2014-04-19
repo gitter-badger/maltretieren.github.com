@@ -26,4 +26,4 @@ The current ToDos focus to cleanup current functionality...
 * When a user login via github, check if he can commit to the current repository. If yes he is the admin of the site (green button, show menu entries: edit config, edit post, create post). If no, he is a normal user and propably wants to fork the site (orange button, hide menu entries: edit config, edit post, create post - shoe menu entries: fork).
 * Cleanup logging
 * Refactor code (clear responsibilities for controllers, services, ...)
-* Cleanup user login
+* Cleanup user login - if the user gets to a page where a login is required ASK him what todo: login with github er stay in normal mode
