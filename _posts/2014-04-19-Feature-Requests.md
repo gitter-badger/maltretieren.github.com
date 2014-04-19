@@ -28,3 +28,4 @@ The current ToDos focus to cleanup current functionality...
 * Refactor code (clear responsibilities for controllers, services, ...)
 * Cleanup user login - if the user gets to a page where a login is required ASK him what todo: login with github er stay in normal mode
 * Intoduce Test and switch to test driven development
+* test edit from smartphone
