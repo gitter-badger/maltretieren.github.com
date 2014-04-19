@@ -269,7 +269,7 @@ myApp.controller('GithubEditCtrl', function($scope, $modal, ParameterSrvc, Githu
     var promise = GithubSrvc.editContent(path);
     promise.then(function(content) {
         var commitPath = "";
-        if(typeof($scope.options.date) === Date) {
+        if($scope.options.date instanceof Date) {
             commitPath = "_posts/"+$scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replace(" ","-")+".md";
         } else {
             commitPath = "_posts/"+$scope.options.date+"-"+$scope.options.title.replace(" ","-")+".md";
