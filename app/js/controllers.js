@@ -239,7 +239,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
     };
 });
 
-myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
+myApp.controller('GithubEditCtrl', function($scope, $dialogs, ParameterSrvc, GithubSrvc) {
     var scope = $scope;
 
     $scope.options = {}
@@ -269,7 +269,7 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
     var promise = GithubSrvc.editContent(path);
     promise.then(function(content) {
         var commitPath = "";
-        if(typof($scope.options.date) === Date) {
+        if(typeof($scope.options.date) === Date) {
             commitPath = "_posts/"+$scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replace(" ","-")+".md";
         } else {
             commitPath = "_posts/"+$scope.options.date+"-"+$scope.options.title.replace(" ","-")+".md";
@@ -285,7 +285,12 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
     });
 
     $scope.delete = function() {
-
+        dlg = $dialogs.confirm('Please Confirm','Is this awesome or what?');
+        dlg.result.then(function(btn){
+            $scope.confirmed = 'You thought this quite awesome!';
+        },function(btn){
+            $scope.confirmed = 'Shame on you for not thinking this is awesome!';
+        });
     }
 
     $scope.today = function() {
