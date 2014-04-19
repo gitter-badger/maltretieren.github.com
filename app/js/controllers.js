@@ -290,7 +290,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
             } else {
                 console.log("post saved, there is no url provided to redirect - should be constructed from the commit path...")
             }
-        }, 5000);
+        }, 10000);
     });
 
     $scope.confirmed = 'You have yet to be confirmed!';
