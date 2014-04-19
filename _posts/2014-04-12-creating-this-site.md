@@ -3,7 +3,7 @@
 layout: post
 categories: 
   - frontpage
-tagline: with github.js
+tagline: some short notes
 tags: 
   - development
   - jekyll
