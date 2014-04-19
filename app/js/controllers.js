@@ -260,31 +260,29 @@ myApp.controller('GithubEditCtrl', function($scope, ParameterSrvc, GithubSrvc) {
                 $scope.options.title += splif[i].split(".")[0];
             }
         }
-
-        var promise = GithubSrvc.editContent(path);
-        promise.then(function(content) {
-            var path = "_posts/"+$scope.options.date+"-"+$scope.options.title.replace(" ","-")+".md";
-            //var path = "_posts/"+$scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replace(" ","-")+".md";
-            console.log("edit existing content");
-            console.log("should check, if the path has changed... if yes, it should post/delete or move/commit")
-            console.log("path"+path);
-            console.log("content"+content);
-
-            GithubSrvc.commit(content, path);
-        });
     } else {
         console.log("new content...")
-
-        var promise = GithubSrvc.editContent("_posts/templates/2014-01-01-edit-template.md");
-        promise.then(function(content) {
-            var path = "_posts/"+$scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replace(" ","-")+".md";
-            console.log("new content");
-            console.log("path: "+path);
-            console.log("conten: " +content);
-
-            GithubSrvc.commit(content, path);
-        });
+        path = "_posts/templates/2014-01-01-edit-template.md";
     }
+
+    // promise to save...
+    var promise = GithubSrvc.editContent(path);
+    promise.then(function(content) {
+        var commitPath = "";
+        if(typof($scope.options.date) === Date) {
+            commitPath = "_posts/"+$scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replace(" ","-")+".md";
+        } else {
+            commitPath = "_posts/"+$scope.options.date+"-"+$scope.options.title.replace(" ","-")+".md";
+        }
+
+        //var path = "_posts/"+$scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replace(" ","-")+".md";
+        console.log("edit existing content");
+        console.log("should check, if the path has changed... if yes, it should post/delete or move/commit")
+        console.log("path"+path);
+        console.log("content"+content);
+
+        GithubSrvc.commit(content, path);
+    });
 
     $scope.delete = function() {
 

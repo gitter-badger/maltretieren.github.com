@@ -1,6 +1,7 @@
 'use strict';
 
-var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ngResource', 'ui.bootstrap', 'toaster']);
+// ngSantinize: for confirm dialogs
+var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ngSanitize','ngResource', 'ui.bootstrap', 'toaster']);
 
 myApp.config(function ($routeProvider) {
 
