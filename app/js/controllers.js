@@ -281,7 +281,7 @@ myApp.controller('GithubEditCtrl', function($scope, $modal, ParameterSrvc, Githu
         console.log("path"+path);
         console.log("content"+content);
 
-        GithubSrvc.commit(content, path);
+        GithubSrvc.commit(content, commitPath);
     });
 
     $scope.delete = function() {
