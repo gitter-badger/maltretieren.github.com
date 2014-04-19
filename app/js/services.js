@@ -254,6 +254,16 @@ myApp.service("GithubSrvc", function (
                 $rootScope.$broadcast('Toast::githubCommitSuccess');
             });
         },
+        deleteContent: function(path) {
+            var githubInstance = GithubAuthService.instance();
+            var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
+            var branch = repo.getBranch("master");
+
+            branch.remove(path, 'Deleted Post from GUI').done(function() {
+                console.log("deleted");
+                $rootScope.$broadcast('Toast::githubDeleteSuccess');
+            });
+        },
 		goodByeGithub : function() {
 			UserModel.logout();
 		}

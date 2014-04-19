@@ -289,14 +289,11 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, ParameterS
         console.log("delete....");
         var dlg = $dialogs.confirm('Please Confirm','Do you want to delete the post?');
         dlg.result.then(function(btn){
-            $scope.deleteConfirmed();
+            GithubSrvc.delete(path);
         },function(btn){
             console.log("cancel delete")
             //$scope.confirmed = 'Shame on you for not thinking this is awesome!';
         });
-    }
-    $scope.deleteConfirmed = function() {
-        console.log("delete confirmed...");
     }
 
     $scope.today = function() {
