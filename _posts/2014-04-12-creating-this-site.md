@@ -34,8 +34,18 @@ JavaScript library it interact with the GitHub API. This was simple
 and I was now able to change the content of the posts and commit it
 back to GitHub. After GitHub rendering it is available for all people...
 
-## Editing config files with the GUI
+# Edit / Create content
+For a blogging platform it is import to have edit / delete / create functionality.
+This was introduced in April 2014. For delete confirmation I wanted a modal window
+to confirm that you really, really want to delete - so the
+(dialogs)[https://github.com/m-e-conroy/angular-dialog-service) where introduced...
 
+One feature missing is the support of folders inside the _posts directory to keep
+the folder a little bit more organized. It would be also great to have some
+basic support of image uploading...
+
+## Editing config files with the GUI
+There are two different config files. A Frontend config file, which configures e.g. the home repository Name ... and a Backend configuration file which is needed for the Github Pages Site Generation... Booth can be edited Form the GUI.
 
 # Forking
 I thought it is cool to have a zero effort fork process and get a
@@ -85,16 +95,6 @@ understandable code. I think promises helped me alot. This is how it looks like:
         scope.pop();
     });
 {% endhighlight %}
-
-# Edit / Create content
-For a blogging platform it is import to have edit / delete / create functionality.
-This was introduced in April 2014. For delete confirmation I wanted a modal window
-to confirm that you really, really want to delete - so the
-(dialogs)[https://github.com/m-e-conroy/angular-dialog-service) where introduced...
-
-One feature missing is the support of folders inside the _posts directory to keep
-the folder a little bit more organized. It would be also great to have some
-basic support of image uploading...
 
 # Getting more professional
 As soon as I started out with the GitHub fork functionality there the need
