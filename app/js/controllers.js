@@ -284,6 +284,9 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, ParameterS
         return GithubSrvc.commit(content, commitPath);
     }).then(function() {
         console.log("post saved.... wait for 5 seconds and redirect to the site...")
+        if(typeof(url) !='undefined') {
+            window.location = url;
+        }
     });
 
     $scope.confirmed = 'You have yet to be confirmed!';
