@@ -270,9 +270,9 @@ myApp.controller('GithubEditCtrl', function($scope, $modal, ParameterSrvc, Githu
     promise.then(function(content) {
         var commitPath = "";
         if($scope.options.date instanceof Date) {
-            commitPath = "_posts/"+$scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replaceAll(/ /g,"-")+".md";
+            commitPath = "_posts/"+$scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replace(/ /g,"-")+".md";
         } else {
-            commitPath = "_posts/"+$scope.options.date+"-"+$scope.options.title.replaceAll(/ /g,"-")+".md";
+            commitPath = "_posts/"+$scope.options.date+"-"+$scope.options.title.replace(/ /g,"-")+".md";
         }
 
         //var path = "_posts/"+$scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replaceAll(" ","-")+".md";
