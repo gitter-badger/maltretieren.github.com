@@ -239,7 +239,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
     };
 });
 
-myApp.controller('GithubEditCtrl', function($scope, $dialogs, ParameterSrvc, GithubSrvc) {
+myApp.controller('GithubEditCtrl', function($scope, $modal, ParameterSrvc, GithubSrvc) {
     var scope = $scope;
 
     $scope.options = {}
@@ -285,12 +285,12 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, ParameterSrvc, Git
     });
 
     $scope.delete = function() {
-        dlg = $dialogs.confirm('Please Confirm','Is this awesome or what?');
+        /**dlg = $modal.confirm('Please Confirm','Is this awesome or what?');
         dlg.result.then(function(btn){
             $scope.confirmed = 'You thought this quite awesome!';
         },function(btn){
             $scope.confirmed = 'Shame on you for not thinking this is awesome!';
-        });
+        });*/
     }
 
     $scope.today = function() {
