@@ -37,6 +37,8 @@ back to GitHub in April 2014.
 ## Detail
 Github Oauth2 worklow, token.... 
 
+Reise the seit page for New content and updates in existing content
+
 For delete confirmation I wanted a modal window
 to confirm that you really, really want to delete - so the
 (dialogs)[https://github.com/m-e-conroy/angular-dialog-service) where introduced...
