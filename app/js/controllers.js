@@ -286,6 +286,8 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, ParameterS
         console.log("post saved.... wait for 5 seconds and redirect to the site...")
         if(typeof(url) !='undefined') {
             window.location = url;
+        } else {
+            console.log("post saved, there is no url provided to redirect - should be constructed from the commit path...")
         }
     });
 
