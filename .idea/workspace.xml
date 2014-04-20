@@ -112,7 +112,7 @@
       <file leaf-file-name="config.json" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="4" selection-start="368" selection-end="368" vertical-scroll-proportion="0.37906137" vertical-offset="0" max-vertical-offset="554">
+            <state line="15" column="20" selection-start="380" selection-end="380" vertical-scroll-proportion="0.4061372" vertical-offset="0" max-vertical-offset="554">
               <folding />
             </state>
           </provider>
@@ -669,7 +669,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="4" selection-start="368" selection-end="368" vertical-scroll-proportion="0.37906137" vertical-offset="0" max-vertical-offset="554">
+        <state line="15" column="20" selection-start="380" selection-end="380" vertical-scroll-proportion="0.4061372" vertical-offset="0" max-vertical-offset="554">
           <folding />
         </state>
       </provider>
