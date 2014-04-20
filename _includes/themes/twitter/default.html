@@ -65,8 +65,8 @@
                 {% include JB/pages_list %}
             </ul>
             <form class="navbar-form navbar-right" style="padding-right:0px" ng-controller="GithubCtrl">
-                <button type="button" class="btn btn-warning btn-middle ng-hide" ng-click="requestCode()" ng-show="!user">Login with Github</button>
-				<div style="text-align:right" class="btn-group ng-hide" ng-show="user">
+                <button ng-cloak type="button" class="btn btn-warning btn-middle ng-hide" ng-click="requestCode()" ng-show="!user">Login with Github</button>
+				<div ng-cloak style="text-align:right" class="btn-group ng-hide" ng-show="user">
                     <button type="button" class="btn btn-success btn-middle" ng-click="logout()" >
                         <span class="glyphicon glyphicon-user"></span>
                         {% raw %} {{user}} {% endraw %}
