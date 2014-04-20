@@ -28,7 +28,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="7" selection-start="3999" selection-end="3999" vertical-scroll-proportion="0.1554054" vertical-offset="1633" max-vertical-offset="5130">
+            <state line="125" column="28" selection-start="4378" selection-end="4378" vertical-scroll-proportion="0.4087838" vertical-offset="1633" max-vertical-offset="5130">
               <folding />
             </state>
           </provider>
@@ -37,7 +37,7 @@
       <file leaf-file-name="editConfig.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/editConfig.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="480">
+            <state line="10" column="46" selection-start="228" selection-end="228" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="480">
               <folding />
             </state>
           </provider>
@@ -666,6 +666,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/editConfig.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="46" selection-start="228" selection-end="228" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="480">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="13" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="554">
@@ -673,16 +680,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/editConfig.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="617">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="7" selection-start="3999" selection-end="3999" vertical-scroll-proportion="0.1554054" vertical-offset="1633" max-vertical-offset="5130">
+        <state line="125" column="28" selection-start="4378" selection-end="4378" vertical-scroll-proportion="0.4087838" vertical-offset="1633" max-vertical-offset="5130">
           <folding />
         </state>
       </provider>
