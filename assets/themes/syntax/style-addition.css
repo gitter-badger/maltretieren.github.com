@@ -66,6 +66,10 @@ figure:hover:before {
 .cap-bot figcaption { left: 0; bottom: -30%;}
 .cap-bot:hover figcaption { bottom: 0; }
 
+/**
+*   Make sure ng-hide elements don't show up to early
+*   http://stackoverflow.com/questions/11249768/angularjs-ng-cloak-ng-show-elements-blink
+*/
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
 .ng-cloak, .x-ng-cloak,
 .ng-hide {
