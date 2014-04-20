@@ -123,7 +123,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, Gi
 myApp.controller('ConfigCtrl', function($scope, $http, GithubSrvc) {
     $scope.inputs = {}
 	$http({method: 'GET', url: '/app/js/config.json'}).success(function(data, status, headers, config) {
-		$scope.inputs = data;
+		$scope.inputs = data.config;
 	});
     $scope.setOutput = function(key, key2, newValue) {
         $scope.inputs[key][key2] = newValue;
