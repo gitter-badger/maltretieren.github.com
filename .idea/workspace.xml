@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/config.js" afterPath="$PROJECT_DIR$/app/js/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/editConfig.html" afterPath="$PROJECT_DIR$/app/admin/editConfig.html" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -106,7 +105,7 @@
       <file leaf-file-name="config.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="1" selection-start="391" selection-end="391" vertical-scroll-proportion="0.433213" vertical-offset="0" max-vertical-offset="554">
+            <state line="18" column="5" selection-start="470" selection-end="470" vertical-scroll-proportion="0.48736462" vertical-offset="0" max-vertical-offset="554">
               <folding />
             </state>
           </provider>
@@ -684,13 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/editConfig.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="46" selection-start="228" selection-end="228" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="480">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="122" column="40" selection-start="4202" selection-end="4202" vertical-scroll-proportion="-8.48" vertical-offset="1618" max-vertical-offset="5160">
@@ -698,9 +690,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/editConfig.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="46" selection-start="228" selection-end="228" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="480">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="1" selection-start="391" selection-end="391" vertical-scroll-proportion="0.433213" vertical-offset="0" max-vertical-offset="554">
+        <state line="18" column="5" selection-start="470" selection-end="470" vertical-scroll-proportion="0.48736462" vertical-offset="0" max-vertical-offset="554">
           <folding />
         </state>
       </provider>
