@@ -8,6 +8,7 @@ comments: false
 
     <div ng-controller="ConfigCtrl">
         <h1>Edit Frontend Configuration</h1>
+        <div>{{inputs}}</div>
         <div ng-repeat="(key, value) in inputs">
             <h2>{{key|uppercase}}</h2>
 			<form class="form-horizontal" role="form" >
