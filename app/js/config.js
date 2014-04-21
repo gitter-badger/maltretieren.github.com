@@ -1,4 +1,4 @@
-var config = [
+config = [
     {
         keenio: {
             comments_url: "comments_url",
