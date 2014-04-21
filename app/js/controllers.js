@@ -124,7 +124,8 @@ myApp.controller('ConfigCtrl', function($scope, $http, $parse, GithubSrvc) {
     $scope.inputs = {}
 	$http({method: 'GET', url: '/app/js/config.js'}).success(function(data, status, headers, config) {
 		console.log($parse,(data));
-        $scope.inputs = data;
+        data = $parse,(data);
+        $scope.inputs = data.config;
 	});
     $scope.setOutput = function(key, key2, newValue) {
         $scope.inputs[key][key2] = newValue;
