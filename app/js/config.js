@@ -1,4 +1,4 @@
-var config = {
+var config = [{
     "keenio": {
         "comments_url": "comments_url",
         "projectId": "hggg",
@@ -15,4 +15,4 @@ var config = {
     "heroku": {
         "authenticate": "test"
     }
-}
+}];
