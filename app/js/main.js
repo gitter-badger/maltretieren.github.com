@@ -13,7 +13,7 @@
 		// we can refer to it later in the code.
 		var queue = $LAB
         .script( "/assets/js/jquery-2.1.0/jquery-2.1.0.min.js" )
-        .script( "/app/js/config.json")
+        .script( "/app/js/config.js")
 		.script( "/assets/js/oauth/jso.js" )
         .script( "/assets/js/keenio-2.1.0/keenio.js" )
         .script( "/assets/js/listjs-0.2.0/list.js" )
