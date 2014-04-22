@@ -221,6 +221,7 @@ myApp.service("GithubSrvc", function (
                     var split = configLine[i].split(":");
                     if(configLine.indexOf(":")!==-1 && split[1]!=="") {
                         if(split[0].indexOf("name")!==-1) {
+                            console.log("HITTTTTT")
                             newConfigData += split[0]+": HAAHHAHHAHA\n"
                         } else {
                             newConfigData += configLine[i]+"\n";
@@ -280,7 +281,6 @@ myApp.service("GithubSrvc", function (
         },
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
-            console.log("-------");
             var repo = githubInstance.getRepo(UserModel.user.name, UserModel.user.name+".github.com");
             var branch = repo.getBranch("master");
             var contents = {};
