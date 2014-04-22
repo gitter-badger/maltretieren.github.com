@@ -206,7 +206,7 @@ myApp.service("GithubSrvc", function (
                 //PollingSrvc.checkForBranchContent(branch, "README.md", callback);
 			});
         },
-        postProcess: function(path) {
+        postProcess: function(path, replace) {
             // change page slogan:
             // request _config.yml
             // search/replace "title : Place to pee free!"/"title: slogan)
@@ -219,6 +219,8 @@ myApp.service("GithubSrvc", function (
                 var newConfigData = "";
                 for(var i = 0;i < configLine.length;i++){
                     var split = configLine[i].split(":");
+                    var replaceKey = split[0].trim();
+                    console.log(replace[replaceKey]);
                     if(split.length===2 && split[1]!=="") {
                         if(split[0].indexOf("title")!==-1) {
                             console.log("HITTTTTT")
