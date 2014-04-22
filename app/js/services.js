@@ -281,7 +281,7 @@ myApp.service("GithubSrvc", function (
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
             console.log("-------");
-            var repo = githubInstance.getRepo(UserModel.user.name, UserModel.user.name+"github.com");
+            var repo = githubInstance.getRepo(UserModel.user.name, UserModel.user.name+".github.com");
             var branch = repo.getBranch("master");
             var contents = {};
             contents[path] = text;
