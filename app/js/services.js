@@ -120,7 +120,7 @@ myApp.service("GithubSrvc", function (
 			var githubInstance = GithubAuthService.instance();
 			if(githubInstance != null) {
                 // this is the name of the original repo
-                var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
+                var repo = githubInstance.getRepo(config.github.user, config.github.repository);
                 var promise = $q.when(repo.fork());
                 return promise;
             } else {
@@ -139,7 +139,7 @@ myApp.service("GithubSrvc", function (
             };
             var githubInstance = GithubAuthService.instance();
             //var userName = UserModel.getUser().name;
-            var repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
+            var repo = githubInstance.getRepo("flamed0011", config.github.repository);
             return $q.when(repo.updateInfo(patch)).then(function(res) {
                 console.log("Repository renamed...")
                 //that.renameBranch(forkName, "heads/master");
@@ -220,7 +220,7 @@ myApp.service("GithubSrvc", function (
             var self = this;
             var path = path;
             var githubInstance = GithubAuthService.instance();
-            var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
+            var repo = githubInstance.getRepo(config.github.user, config.github.repository);
 
             //console.log(path);
             var branch = repo.getBranch("master");
@@ -243,7 +243,7 @@ myApp.service("GithubSrvc", function (
         },
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
-            var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
+            var repo = githubInstance.getRepo(config.github.user, config.github.repository);
             //console.log(path);
             var branch = repo.getBranch("master");
             var contents = {};
@@ -256,7 +256,7 @@ myApp.service("GithubSrvc", function (
         },
         deleteContent: function(path) {
             var githubInstance = GithubAuthService.instance();
-            var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
+            var repo = githubInstance.getRepo(config.github.user, config.github.repository);
             var branch = repo.getBranch("master");
 
             branch.remove(path, 'Deleted Post from GUI').then(function() {
