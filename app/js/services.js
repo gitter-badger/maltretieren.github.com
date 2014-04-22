@@ -18,7 +18,7 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
 			var oauthToken = localStorage.getItem("oauthToken");
 			if(oauthToken != "undefined" && oauthToken != null) {
 				//console.log("oauthToken is available");
-                github = new Octokit({
+				github = new Octokit({
 					token: oauthToken,
 					auth: "oauth"
 				});
@@ -35,9 +35,9 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
 			// request a token, this generates a state random string, the string has to be validated after login
 			jso_configure({
 				"github": {
-					client_id: "e5923f3d7f1182fe886f",
-					redirect_uri: "http://maltretieren.github.com",
-					authorization: "https://github.com/login/oauth/authorize?scope=public_repo"
+					client_id: config.github.client_id,
+					redirect_uri: config.github.redirection_url,
+					authorization: config.github.redirection_url
 				}
 			});
 	
@@ -48,7 +48,7 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
 		},
         requestToken: function(oauthCode) {
             var that = this;
-            $http({method: 'GET', url: 'https://maltretieren.herokuapp.com/authenticate/'+oauthCode}).
+            $http({method: 'GET', url: config.heroku.authenticate+""+oauthCode}).
                 success(function(data, status, headers, config) {
                     if(typeof data.token != 'undefined') {
                         console.log("Yaayy, got a token: "+data.token);
@@ -120,7 +120,7 @@ myApp.service("GithubSrvc", function (
 			var githubInstance = GithubAuthService.instance();
 			if(githubInstance != null) {
                 // this is the name of the original repo
-                var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
+                var repo = githubInstance.getRepo(config.github.user, config.github.repository);
                 var promise = $q.when(repo.fork());
                 return promise;
             } else {
@@ -139,7 +139,7 @@ myApp.service("GithubSrvc", function (
             };
             var githubInstance = GithubAuthService.instance();
             //var userName = UserModel.getUser().name;
-            var repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
+            var repo = githubInstance.getRepo("flamed0011", config.github.repository);
             return $q.when(repo.updateInfo(patch)).then(function(res) {
                 console.log("Repository renamed...")
                 //that.renameBranch(forkName, "heads/master");
@@ -175,7 +175,7 @@ myApp.service("GithubSrvc", function (
 			var that = this;
 			var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo("flamed0011", forkName);			
-			return repo.git.deleteRef(branchName).done(function(result) {
+			return repo.git.deleteRef(branchName).then(function(result) {
 				console.log("deleted branch"+branchName);
 				//that.renameBranch(forkName);
 			});
@@ -184,7 +184,7 @@ myApp.service("GithubSrvc", function (
 			var that = this;
 			var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo("flamed0011", forkName);			
-			return repo.git.deleteRef("heads/master").done(function(result) {
+			return repo.git.deleteRef("heads/master").then(function(result) {
 				console.log("deleted master branch");
 				//that.createBranch(forkName, "master");
 			});
@@ -197,7 +197,7 @@ myApp.service("GithubSrvc", function (
 			var branch = repo.getBranch("template");
 			var forkName = forkName;
 			console.log("create master branch from template");
-			return branch.createBranch("master").done(function() {
+			return branch.createBranch("master").then(function() {
 				console.log("master branch created from template branch");
                 branch = repo.getBranch("master");
                 var callback = function() {
@@ -220,13 +220,13 @@ myApp.service("GithubSrvc", function (
             var self = this;
             var path = path;
             var githubInstance = GithubAuthService.instance();
-            var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
+            var repo = githubInstance.getRepo(config.github.user, config.github.repository);
 
             //console.log(path);
             var branch = repo.getBranch("master");
             var contents = branch.read(path, false)
             var deferred = $q.defer();
-            contents.done(function(result) {
+            contents.then(function(result) {
                 //console.log(result.content);
                 $('#target-editor').markdown({
                     savable:true,
@@ -243,7 +243,7 @@ myApp.service("GithubSrvc", function (
         },
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
-            var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
+            var repo = githubInstance.getRepo(config.github.user, config.github.repository);
             //console.log(path);
             var branch = repo.getBranch("master");
             var contents = {};
@@ -256,10 +256,10 @@ myApp.service("GithubSrvc", function (
         },
         deleteContent: function(path) {
             var githubInstance = GithubAuthService.instance();
-            var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
+            var repo = githubInstance.getRepo(config.github.user, config.github.repository);
             var branch = repo.getBranch("master");
 
-            branch.remove(path, 'Deleted Post from GUI').done(function() {
+            branch.remove(path, 'Deleted Post from GUI').then(function() {
                 console.log("deleted");
                 $rootScope.$broadcast('Toast::githubDeleteSuccess');
             });

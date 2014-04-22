@@ -8,7 +8,6 @@ comments: false
 
     <div ng-controller="ConfigCtrl">
         <h1>Edit Frontend Configuration</h1>
-        <div>{{inputs.config}}</div>
         <div ng-repeat="(key, value) in inputs">
             <h2>{{key|uppercase}}</h2>
 			<form class="form-horizontal" role="form" >
@@ -23,6 +22,11 @@ comments: false
 		<div class="container col-sm-12" style="margin-top:15px;margin-bottom:15px">
 			<button class='btn btn-warning pull-right' ng-click="githubCommit()">Commit to GitHub</button>
 		</div>
+		<h1>Edit Backend Configuration</h1>
+		<div ng-repeat="backendEntry in backendEntries">
+			{{backendEntry}}
+		</div>
+		<textarea id="target-editor" style="display:none;"></textarea>
     </div>
 
 {% endraw %}

@@ -120,20 +120,29 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, Gi
     });
 });
 
-myApp.controller('ConfigCtrl', function($scope, $http, $parse, GithubSrvc) {
+myApp.controller('ConfigCtrl', function($scope, $window, GithubSrvc) {
     $scope.inputs = {}
-	$http({method: 'GET', url: '/app/js/config.js'}).success(function(data, status, headers, config) {
-		//console.log(data);
-        //data = $parse(data);
-        $scope.inputs = data;
-	});
+	$scope.inputs = $window.config,
     $scope.setOutput = function(key, key2, newValue) {
         $scope.inputs[key][key2] = newValue;
     }
 	
 	$scope.githubCommit = function() {
-		GithubSrvc.commit(JSON.stringify($scope.inputs), "app/js/config.json");
+		var config = "var config = "+JSON.stringify($scope.inputs);
+		console.log(config);
+		GithubSrvc.commit(config, "app/js/config.js");
 	}
+	
+	var content = GithubSrvc.editContent("_config.yml");
+	content.then(function(data) {
+		var lines = data.split('\n');
+		for(var i = 0;i < lines.length;i++){
+			var split = lines[i].split(":");
+			if(split.length===2 && split[1]!=="") {
+				console.log(split[1]);
+			}
+		}
+	});
 });
 
 myApp.controller('ToasterController', function($scope, toaster) {

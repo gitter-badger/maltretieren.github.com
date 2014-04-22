@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_includes/demos/form-json-binding - Kopie.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/config.js" afterPath="$PROJECT_DIR$/app/js/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/editConfig.html" afterPath="$PROJECT_DIR$/app/admin/editConfig.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/keenio-2.1.0/keenio.js" afterPath="$PROJECT_DIR$/assets/js/keenio-2.1.0/keenio.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/main.js" afterPath="$PROJECT_DIR$/app/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/octokit-0.9.19/octokit.js" afterPath="$PROJECT_DIR$/assets/js/octokit-0.9.19/octokit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services.js" afterPath="$PROJECT_DIR$/app/js/services.js" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +35,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="10" selection-start="4395" selection-end="4395" vertical-scroll-proportion="0.0" vertical-offset="1603" max-vertical-offset="5160">
+            <state line="126" column="10" selection-start="4354" selection-end="4354" vertical-scroll-proportion="0.0" vertical-offset="1890" max-vertical-offset="5295">
               <folding />
             </state>
           </provider>
@@ -37,7 +44,7 @@
       <file leaf-file-name="octokit.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/octokit-0.9.19/octokit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1419" column="0" selection-start="67643" selection-end="67643" vertical-scroll-proportion="0.92346936" vertical-offset="20923" max-vertical-offset="21375">
+            <state line="1419" column="0" selection-start="67643" selection-end="67643" vertical-scroll-proportion="0.77040815" vertical-offset="20983" max-vertical-offset="21375">
               <folding />
             </state>
           </provider>
@@ -46,7 +53,7 @@
       <file leaf-file-name="editConfig.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/editConfig.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="28" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="495">
+            <state line="10" column="28" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="555">
               <folding />
             </state>
           </provider>
@@ -91,7 +98,7 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="36" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1350">
+            <state line="26" column="36" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1350">
               <folding />
             </state>
           </provider>
@@ -100,7 +107,7 @@
       <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="301" selection-start="301" selection-end="301" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
+            <state line="0" column="301" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
               <folding />
             </state>
           </provider>
@@ -448,13 +455,13 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../node-github" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="86" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="935" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="850" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="935" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="93" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="88" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
   </component>
@@ -475,6 +482,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -483,14 +498,6 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -642,9 +649,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/themes/syntax/style-addition.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="89" selection-start="1733" selection-end="1733" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1230">
-          <folding />
-        </state>
+        <state line="70" column="89" selection-start="1733" selection-end="1733" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1230" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
@@ -691,14 +696,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="36" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335">
+        <state line="26" column="36" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1350">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="10" selection-start="4395" selection-end="4395" vertical-scroll-proportion="0.0" vertical-offset="1603" max-vertical-offset="5160">
+        <state line="126" column="10" selection-start="4354" selection-end="4354" vertical-scroll-proportion="0.0" vertical-offset="1890" max-vertical-offset="5295">
           <folding />
         </state>
       </provider>
@@ -712,7 +717,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/octokit-0.9.19/octokit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1419" column="0" selection-start="67643" selection-end="67643" vertical-scroll-proportion="0.92346936" vertical-offset="20923" max-vertical-offset="21375">
+        <state line="1419" column="0" selection-start="67643" selection-end="67643" vertical-scroll-proportion="0.77040815" vertical-offset="20983" max-vertical-offset="21375">
           <folding />
         </state>
       </provider>
