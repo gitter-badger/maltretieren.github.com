@@ -36,8 +36,8 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
 			jso_configure({
 				"github": {
 					client_id: config.github.client_id,
-					redirect_uri: "http://maltretieren.github.com",
-					authorization: "https://github.com/login/oauth/authorize?scope=public_repo"
+					redirect_uri: config.github.redirection_url,
+					authorization: config.github.redirection_url
 				}
 			});
 	
