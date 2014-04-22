@@ -229,10 +229,10 @@ myApp.service("GithubSrvc", function (
                     }
                 }
                 //console.log(newConfigData);
-                var commitPromise = self.commit(newConfigData, path);
-                commitPromise.then(function() {
+                //var commitPromise = self.commit(newConfigData, path);
+                //commitPromise.then(function() {
                     deferred.resolve(newConfigData);
-                });
+                //});
             });
             return deferred.promise;
         },
