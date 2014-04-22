@@ -212,7 +212,7 @@ myApp.service("GithubSrvc", function (
             // search/replace "title : Place to pee free!"/"title: slogan)
             // commit
         },
-        editContent: function(path, config) {
+        editContent: function(path) {
             // change page slogan:
             // request _config.yml
             // search/replace "title : Place to pee free!"/"title: slogan)
