@@ -221,6 +221,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
     $scope.fork = function() {
         var forkName = $scope.options.forkName;
         var forkSlogan = $scope.options.forkSlogan;
+        var author = $scope.options.forkRealName;
 
         // pass in options
         GithubSrvc.fork($scope.options)
@@ -244,7 +245,8 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
         })
         .then( function() {
              var replace = {
-                 title: forkSlogan
+                 title: forkSlogan,
+                 author: author
              }
              return GithubSrvc.postProcess("_config.yml", replace);
         })
