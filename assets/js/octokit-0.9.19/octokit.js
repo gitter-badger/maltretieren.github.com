@@ -1364,6 +1364,7 @@
                         return $promise.reject(val);
                     };
                     fn(resolve, reject);
+					Promise = $promise.promise;
                     return $promise.promise;
                 };
                 allPromises = function(promises) {
