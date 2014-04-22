@@ -241,7 +241,7 @@ myApp.service("GithubSrvc", function (
             })
             return deferred.promise;
         },
-		commit: function(text, path) {
+		commit: function(text, $q, path) {
             var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
             //console.log(path);
@@ -249,7 +249,7 @@ myApp.service("GithubSrvc", function (
             var contents = {};
             contents[path] = text;
 
-            return branch.writeMany(contents, 'Save from GUI').then(function() {
+            return $q.when(branch.writeMany(contents, 'Save from GUI')).then(function() {
                 console.log("saved");
                 $rootScope.$broadcast('Toast::githubCommitSuccess');
             });
