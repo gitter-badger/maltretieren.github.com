@@ -214,7 +214,7 @@ myApp.service("GithubSrvc", function (
             var content = this.getContent(path);
             var deferred = $q.defer();
             content.then(function(data) {
-                var configLine = data.split('\n');
+                var configLine = data.content.split('\n');
                 var newConfigData = "";
                 for(var i = 0;i < configLine.length;i++){
                     var split = configLine[i].split(":");
