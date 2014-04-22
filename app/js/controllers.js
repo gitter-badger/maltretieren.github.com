@@ -138,7 +138,7 @@ myApp.controller('ConfigCtrl', function($scope, $window, GithubSrvc) {
 		var lines = data.split('\n');
 		for(var i = 0;i < lines.length;i++){
 			var split = lines[i].split(":");
-			if(split.length===2) {
+			if(split.length===2 && split[1]!=="") {
 				console.log(split[1]);
 			}
 		}
