@@ -22,6 +22,10 @@ comments: false
 		<div class="container col-sm-12" style="margin-top:15px;margin-bottom:15px">
 			<button class='btn btn-warning pull-right' ng-click="githubCommit()">Commit to GitHub</button>
 		</div>
+		<h1>Edit Backend Configuration</h1>
+		<div ng-repeat="backendEntry in backendEntries">
+			{{backendEntry}}
+		</div>
     </div>
 
 {% endraw %}

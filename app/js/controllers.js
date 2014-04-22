@@ -132,6 +132,14 @@ myApp.controller('ConfigCtrl', function($scope, $window, GithubSrvc) {
 		console.log(config);
 		GithubSrvc.commit(config, "app/js/config.js");
 	}
+	
+	var content = GithubSrvc.editContent("_config.yml");
+	content.then(function(data) {
+		var lines = data.split('\n');
+		for(var i = 0;i < lines.length;i++){
+			console.log(lines[i]);
+		}
+	});
 });
 
 myApp.controller('ToasterController', function($scope, toaster) {
