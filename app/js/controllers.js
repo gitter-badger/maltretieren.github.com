@@ -142,13 +142,13 @@ myApp.controller('ConfigCtrl', function($scope, $window, GithubSrvc) {
 			if(split.length===2 && split[1]!=="") {
 				console.log(split[1]);
                 if(split[0]==="name") {
-                    newConfigData += "name : HAAHHAHHAHA"
+                    newConfigData += "name : HAAHHAHHAHA\n"
                 } else {
-                    newConfigData += lines[i];
+                    newConfigData += lines[i]+"\n";
                 }
 
 			} else {
-                newConfigData += lines[i];
+                newConfigData += lines[i]+"\n";
             }
 		}
         console.log(newConfigData);
