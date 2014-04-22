@@ -280,6 +280,8 @@ myApp.service("GithubSrvc", function (
         },
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
+            console.log("-------");
+            console.log(UserModel.user.name);
             var repo = githubInstance.getRepo(config.github.user, config.github.repository);
             //console.log(path);
             var branch = repo.getBranch("master");
