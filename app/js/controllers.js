@@ -180,6 +180,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
     $scope.options.forkSlogan = "Yihaa"             // Default title
     $scope.options.forkName = "";                   // Gets overridden, when the user is logged in
     $scope.options.forkRealName = "";               // Gets overridden, when the user is logged in
+    $scope.options.twitter = "";               // Gets overridden, when the user is logged in
 
     var checkUnique = function() {
         var url = "";
@@ -217,6 +218,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
         console.log(event);
         $scope.options.forkName = userName+".github.com";
         $scope.options.forkRealName = userName;
+        scope.options.twitter = "@"+userName;
         $scope.$apply();
     });
 
@@ -224,6 +226,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
         var forkName = $scope.options.forkName;
         var forkSlogan = $scope.options.forkSlogan;
         var author = $scope.options.forkRealName;
+        var twitter = $scope.options.twitter;
 
         // pass in options
         GithubSrvc.fork($scope.options)
@@ -248,7 +251,8 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
         .then( function() {
              var replace = {
                  title: forkSlogan,
-                 author: author
+                 author: author,
+                 twitter: twitter
              }
              return GithubSrvc.postProcess("_config.yml", replace);
         })
