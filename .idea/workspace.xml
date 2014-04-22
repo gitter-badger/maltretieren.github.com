@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services.js" afterPath="$PROJECT_DIR$/app/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/fork.html" afterPath="$PROJECT_DIR$/app/admin/fork.html" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,19 +34,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fork.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="fork.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/fork.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="510">
+            <state line="32" column="14" selection-start="2007" selection-end="2007" vertical-scroll-proportion="0.6487119" vertical-offset="203" max-vertical-offset="690">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="278" column="88" selection-start="11495" selection-end="11495" vertical-scroll-proportion="0.7183099" vertical-offset="3864" max-vertical-offset="6165">
+            <state line="278" column="88" selection-start="11495" selection-end="11495" vertical-scroll-proportion="-12.24" vertical-offset="3864" max-vertical-offset="6165">
               <folding />
             </state>
           </provider>
@@ -133,7 +133,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/admin/fork.html" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/post.html" />
         <option value="$PROJECT_DIR$/_posts/templates/2014-01-01-edit-template.md" />
         <option value="$PROJECT_DIR$/app/js/routes.js" />
@@ -149,6 +148,7 @@
         <option value="$PROJECT_DIR$/assets/js/octokit-0.9.19/octokit.js" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/app/js/services.js" />
+        <option value="$PROJECT_DIR$/app/admin/fork.html" />
       </list>
     </option>
   </component>
@@ -559,7 +559,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24304539" sideWeight="0.8329278" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329429" sideWeight="0.49959448" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24938875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22764228" sideWeight="0.7569546" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22764228" sideWeight="0.7569546" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329429" sideWeight="0.5004055" order="7" side_tool="true" content_ui="tabs" />
@@ -610,7 +610,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/themes/syntax/style-addition.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="89" selection-start="1733" selection-end="1733" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1230" />
+        <state line="70" column="89" selection-start="1733" selection-end="1733" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1230">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/default.html">
@@ -676,13 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/fork.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="246" column="34" selection-start="8183" selection-end="8183" vertical-scroll-proportion="-12.88" vertical-offset="3368" max-vertical-offset="5535">
@@ -692,7 +687,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="278" column="88" selection-start="11495" selection-end="11495" vertical-scroll-proportion="0.7183099" vertical-offset="3864" max-vertical-offset="6165">
+        <state line="278" column="88" selection-start="11495" selection-end="11495" vertical-scroll-proportion="-12.24" vertical-offset="3864" max-vertical-offset="6165">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/fork.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="14" selection-start="2007" selection-end="2007" vertical-scroll-proportion="0.6487119" vertical-offset="203" max-vertical-offset="690">
           <folding />
         </state>
       </provider>
