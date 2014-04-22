@@ -316,8 +316,8 @@ myApp.service("UserModel", function ($rootScope) {
 	this.login = function(loginData) {
 		this.loggedIn = true;
 		this.user = {
-			name: loginData.login;
-            repository: loginData.;
+			name: loginData.login,
+            repository: ""
 		};
 		console.log("send a userLoggedIn event for user: "+loginData.login);
 		$rootScope.$broadcast('UserModel::userLoggedIn', loginData.login);
