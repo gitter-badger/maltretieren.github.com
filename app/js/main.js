@@ -13,6 +13,7 @@
 		// we can refer to it later in the code.
 		var queue = $LAB
         .script( "/assets/js/jquery-2.1.0/jquery-2.1.0.min.js" )
+        .script( "/app/js/config.js")
 		.script( "/assets/js/oauth/jso.js" )
         .script( "/assets/js/keenio-2.1.0/keenio.js" )
         .script( "/assets/js/listjs-0.2.0/list.js" )
@@ -23,11 +24,12 @@
 		.script( "/assets/js/bootstrap-markdown-2.3.1/libs/markdown.js" )
 		.script( "/assets/js/bootstrap-markdown-2.3.1/js/bootstrap-markdown.js" )
         .script ( "/assets/js/wikiquotes/wikiquote-api.js" )
-		.script( "/app/js/github-functions.js" )
 		.script( "/assets/js/listjs-0.2.0/list.js" )
 		.script( "/app/js/form.js" )
         .script( "/assets/js/angular-1.3.0/angular.min.js" )
         .script( "/assets/js/angular-1.3.0/angular-route.min.js" )
+        .script( "/assets/js/angular-1.3.0/angular-sanitize.min.js" )
+        .script( "/assets/js/dialogs-3.0/dialogs.min.js" )
 		.script( "/assets/js/angular-1.3.0/angular-animate.min.js" )
         .script( "/assets/js/angular-1.3.0/angular-resource.min.js" )
         .script( "/app/js/routes.js" )

@@ -25,11 +25,12 @@
     {% endif %}
 
     <!-- Le styles -->
-    <link href="/assets/themes/bootstrap-3.1.1/css/angularui/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/bootstrap-3.1.1/css/lumen/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/themes/syntax/style-addition.css?body=1" rel="stylesheet" type="text/css" media="all">
     <link href="/assets/themes/syntax/syntax.css" rel="stylesheet" type="text/css" media="all">
     <link href="/assets/js/bootstrap-markdown-2.3.1/css/bootstrap-markdown.min.css" rel="stylesheet" type="text/css" media="all">
 	<link href="/assets/js/toaster-0.4.5/toaster.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/js/dialogs-3.0/dialogs.min.css" rel="stylesheet" type="text/css" media="all">
 
 
     <!-- Le fav and touch icons -->
@@ -64,20 +65,20 @@
                 {% include JB/pages_list %}
             </ul>
             <form class="navbar-form navbar-right" style="padding-right:0px" ng-controller="GithubCtrl">
-                <button type="button" class="btn btn-warning btn-middle" ng-click="requestCode()" ng-show="!user">Login with Github</button>
-				<div style="text-align:right" class="btn-group" ng-show="user">
+                <button ng-cloak type="button" class="btn btn-warning btn-middle ng-hide" ng-click="requestCode()" ng-show="!user">Login with Github</button>
+				<div ng-cloak style="text-align:right" class="btn-group ng-hide" ng-show="user">
                     <button type="button" class="btn btn-success btn-middle" ng-click="logout()" >
                         <span class="glyphicon glyphicon-user"></span>
                         {% raw %} {{user}} {% endraw %}
                     </button>
-                    <button type="button" class="btn btn-success btn-middle dropdown-toggle" style="height:34px" data-toggle="dropdown">
+                    <button type="button" class="btn btn-success btn-middle dropdown-toggle" style="height:36px" data-toggle="dropdown">
                         <span class="caret"></span>
                         <span class="sr-only">Toggle Dropdown</span>
                     </button>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="/app/admin/fork.html">Fork</a></li>
+                        <li><a href="/app/admin/fork.html">Clone/Fork</a></li>
                         <li><a href="/app/admin/editConfig.html">Edit Config</a></li>
-                        <li><a href="/app/admin/createPost.html">Create Post</a></li>
+                        <li><a href="/app/admin/edit.html">Create Post</a></li>
                     </ul>
                 </div>
             </form>

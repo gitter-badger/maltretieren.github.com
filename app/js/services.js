@@ -17,7 +17,7 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
 			// maybe store the instance in localStorage????
 			var oauthToken = localStorage.getItem("oauthToken");
 			if(oauthToken != "undefined" && oauthToken != null) {
-				console.log("oauthToken is available");
+				//console.log("oauthToken is available");
                 github = new Octokit({
 					token: oauthToken,
 					auth: "oauth"
@@ -115,21 +115,6 @@ myApp.service("GithubSrvc", function (
         requestCode: function() {
             GithubAuthService.requestCode();
         },
-        clone : function(options) {
-            // poll for content
-            // http://stackoverflow.com/questions/4777535/how-do-i-rename-a-github-repository-via-their-api
-            var self = this;
-            var poll = PollingSrvc.poll();
-            console.log(poll);
-
-            self.fork(options)
-            .then( poll )
-            .then( console.log("ready?" ))
-            //.then( PollingSrvc.checkForBranchContent("flamed0011.github.com", "template"))
-            //.then( self.deleteBranch("flamed0011.github.com", "master"))
-            //.then( self.renameBranch("template", "master"))
-            //.then( console.log("READY!!!") )
-        },
 		fork: function(options) {
             // options contain the name for the new github page and the site slogan
 			var githubInstance = GithubAuthService.instance();
@@ -143,7 +128,7 @@ myApp.service("GithubSrvc", function (
             }
 		},
         renameRepo: function(forkName) {
-			console.log("rename repo");
+			console.log("rename repo to "+forkName);
             if(!forkName || forkName.length < 5){
 				forkName = "flamed0011.github.com"
 			}
@@ -155,7 +140,7 @@ myApp.service("GithubSrvc", function (
             var githubInstance = GithubAuthService.instance();
             //var userName = UserModel.getUser().name;
             var repo = githubInstance.getRepo("flamed0011", "maltretieren.github.com");
-            $q.when(repo.updateInfo(patch)).then(function(res) {
+            return $q.when(repo.updateInfo(patch)).then(function(res) {
                 console.log("Repository renamed...")
                 //that.renameBranch(forkName, "heads/master");
             })
@@ -190,18 +175,18 @@ myApp.service("GithubSrvc", function (
 			var that = this;
 			var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo("flamed0011", forkName);			
-			repo.git.deleteRef(branchName).done(function(result) {
+			return repo.git.deleteRef(branchName).done(function(result) {
 				console.log("deleted branch"+branchName);
-				that.renameBranch(forkName);
+				//that.renameBranch(forkName);
 			});
         },
         renameBranch: function(forkName) {
 			var that = this;
 			var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo("flamed0011", forkName);			
-			repo.git.deleteRef("heads/master").done(function(result) {
+			return repo.git.deleteRef("heads/master").done(function(result) {
 				console.log("deleted master branch");
-				that.createBranch(forkName, "master");
+				//that.createBranch(forkName, "master");
 			});
         },
         createBranch: function(forkName, branchName) {
@@ -212,13 +197,13 @@ myApp.service("GithubSrvc", function (
 			var branch = repo.getBranch("template");
 			var forkName = forkName;
 			console.log("create master branch from template");
-			branch.createBranch("master").done(function() {
+			return branch.createBranch("master").done(function() {
 				console.log("master branch created from template branch");
                 branch = repo.getBranch("master");
                 var callback = function() {
-                    repo.git.deleteRef("heads/template");
+                    //repo.git.deleteRef("heads/template");
                 };
-                PollingSrvc.checkForBranchContent(branch, "README.md", callback);
+                //PollingSrvc.checkForBranchContent(branch, "README.md", callback);
 			});
         },
         postProcess: function() {
@@ -227,27 +212,57 @@ myApp.service("GithubSrvc", function (
             // search/replace "title : Place to pee free!"/"title: slogan)
             // commit
         },
-        getContent: function() {
+        editContent: function(path) {
             // change page slogan:
             // request _config.yml
             // search/replace "title : Place to pee free!"/"title: slogan)
             // commit
+            var self = this;
+            var path = path;
             var githubInstance = GithubAuthService.instance();
-            var repo = githubInstance.getRepo("flamed0011", forkName);
+            var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
+
+            //console.log(path);
+            var branch = repo.getBranch("master");
+            var contents = branch.read(path, false)
+            var deferred = $q.defer();
+            contents.done(function(result) {
+                //console.log(result.content);
+                $('#target-editor').markdown({
+                    savable:true,
+                    height:500,
+                    onSave: function(e) {
+                        //self.commit(e.getContent(), path)
+                        deferred.resolve(e.getContent());
+                    }
+                });
+                $('#target-editor').show();
+                $("#target-editor").val(result.content);
+            })
+            return deferred.promise;
         },
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
-			var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
-			repo.write("master", path, text, "Updated config.js from GUI", function(err) {
-				var url = $('#url').text()+"?success=true";
-				if(err) {
-					alert("Maybe you are not the owner of this repo - you can try to commit a pull request...")
-				} else {
-					//window.location = url;
-					console.log("send a githubCommitSuccess event");
-					$rootScope.$broadcast('Toast::githubCommitSuccess');
-				}
-			});
+            var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
+            //console.log(path);
+            var branch = repo.getBranch("master");
+            var contents = {};
+            contents[path] = text;
+
+            return branch.writeMany(contents, 'Save from GUI').then(function() {
+                console.log("saved");
+                $rootScope.$broadcast('Toast::githubCommitSuccess');
+            });
+        },
+        deleteContent: function(path) {
+            var githubInstance = GithubAuthService.instance();
+            var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
+            var branch = repo.getBranch("master");
+
+            branch.remove(path, 'Deleted Post from GUI').done(function() {
+                console.log("deleted");
+                $rootScope.$broadcast('Toast::githubDeleteSuccess');
+            });
         },
 		goodByeGithub : function() {
 			UserModel.logout();
@@ -299,32 +314,59 @@ myApp.service("ParameterSrvc", function ($window) {
     }
 });
 
-// EXAMPLE OF CORRECT DECLARATION OF SERVICE
-// here is a declaration of simple utility function to know if an given param is a String.
-myApp.service("UtilSrvc", function () {
-    return {
-        isAString: function(o) {
-            return typeof o == "string" || (typeof o == "object" && o.constructor === String);
-        },
-        helloWorld : function(name) {
-        	var result = "Hum, Hello you, but your name is too weird...";
-        	if (this.isAString(name)) {
-        		result = "Hello, " + name;
-        	}
-        	return result;
-        }
-    }
-});
-
 myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
-    return {
-        poll: function () {
-            var deferred = $q.defer();
-            $timeout(function() {
-                deferred.resolve('All done... eventually');
-            }, 5000);
-            return deferred.promise
-        }
-    }
+
+    var poll = function (repoName, branchName) {
+        var resource = "README.md";
+        var deferred = $q.defer();
+        // poll for availability - implement as promise, resolve as soon as it is available
+        var githubInstance = GithubAuthService.instance();
+        var repo = githubInstance.getRepo("flamed0011", repoName);
+        var branch = repo.getBranch(branchName);
+        var repoName = repoName;
+        var branchName = branchName;
+
+        var promise = $q.when(branch.read(resource,false));
+        promise.then(function(res) {
+            console.log("branch available")
+            deferred.resolve();
+        }, function(err) {
+            var restartPolling = function(){
+                poll(repoName, branchName)
+            }
+            $timeout(restartPolling, 2000);
+        });
+
+        return deferred.promise;
+    };
+    return { checkForBranchContent: poll }
 });
 
+myApp.service("PollingImgSrvc", function ($q, $timeout) {
+
+    var poll = function (repoName, branchName) {
+        var deferred = $q.defer();
+
+        var pollForImg = function() {
+            console.log("poll");
+            var img = new Image();
+
+            img.onload = function() {
+                console.log("yehh");
+                deferred.resolve();
+            }
+            img.onerror = function() {
+                console.log("oh noooo");
+                var pollForImage = function() {
+                    pollForImg();
+                }
+                $timeout(pollForImage, 50000);
+            }
+            img.src = "https://flamed0011.github.com/app/img/ping.gif";
+        }
+        pollForImg();
+
+        return deferred.promise;
+    };
+    return { checkReady: poll }
+});

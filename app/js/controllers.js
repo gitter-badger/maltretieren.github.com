@@ -1,7 +1,8 @@
 'use strict';
 
 /**
-*	The controller must be responsible for binding model data to views using $scope.
+*	The controller must be responsible for binding model data to views using $scope,
+ *	and control information flow.
 *	It does not contain logic to fetch the data or manipulating it.
 */
 
@@ -111,7 +112,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, Gi
 	$scope.$on('UserModel::userLoggedIn', function(event) {
 		console.log("the GithubCtrl received an userLoggedIn event for user: "+UserModel.user.name);
         $scope.user = UserModel.user.name;
-		$scope.$apply();
+		//$scope.$apply();
     });
 	$scope.$on('UserModel::userLoggedOut', function(event) {
 		console.log("the GithubCtrl received an userLoggedOut event");
@@ -119,10 +120,12 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, Gi
     });
 });
 
-myApp.controller('ConfigCtrl', function($scope, $http, GithubSrvc) {
+myApp.controller('ConfigCtrl', function($scope, $http, $parse, GithubSrvc) {
     $scope.inputs = {}
-	$http({method: 'GET', url: '/app/js/config.json'}).success(function(data, status, headers, config) {
-		$scope.inputs = data;
+	$http({method: 'GET', url: '/app/js/config.js'}).success(function(data, status, headers, config) {
+		//console.log(data);
+        //data = $parse(data);
+        $scope.inputs = data;
 	});
     $scope.setOutput = function(key, key2, newValue) {
         $scope.inputs[key][key2] = newValue;
@@ -152,7 +155,7 @@ myApp.controller('ToasterController', function($scope, toaster) {
     };
 });
 
-myApp.controller('GithubForkCtrl', function($scope, toaster, GithubSrvc) {
+myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSrvc, PollingSrvc, PollingImgSrvc) {
 	var scope = $scope;
 
     $scope.options = {}
@@ -163,16 +166,34 @@ myApp.controller('GithubForkCtrl', function($scope, toaster, GithubSrvc) {
         var url = "";
         var forkName = $scope.options.forkName;
 
-        if(forkName.length>4) {
-            if(forkName.indexOf(".")===-1) {
-                url =  "http://"+forkName+".github.io";
+        if($scope.options.forkName.length>4) {
+            if($scope.options.forkName.indexOf(".")===-1) {
+                url =  "http://"+$scope.options.forkName+".github.io";
             }
 
-            console.log("here the test should come if the url is available: "+url);
+            this.img = new Image();
+
+            this.img.onload = function() {_good();};
+            this.img.onerror = function(e) { error(e);};
+
+            this.img.src = "https://"+$scope.options.forkName;
+
+            var good= function() {
+                console.log("yehh");
+            }
+
+            var error= function(e) {
+                console.log("oh noooo");
+                console.log(e);
+            }
+
+
+            //$http.jsonp("http://"+$scope.options.forkName+"&callback=JSON_CALLBACK");
+            console.log("here the test should come if the url is available: "+$scope.options.forkName);
         }
     };
 
-    //$scope.$watch('options.forkName', checkUnique);
+    $scope.$watch('options.forkName', checkUnique);
     $scope.$on('UserModel::userLoggedIn', function(event, userName) {
         console.log(event);
         $scope.options.forkName = userName+".github.com";
@@ -180,44 +201,127 @@ myApp.controller('GithubForkCtrl', function($scope, toaster, GithubSrvc) {
     });
 
     $scope.fork = function() {
+        var forkName = $scope.options.forkName;
+
         // pass in options
-		GithubSrvc.clone($scope.options);
+        GithubSrvc.fork($scope.options)
+        .then( function() {
+            return PollingSrvc.checkForBranchContent("maltretieren.github.com", "master")
+        })
+        .then( function() {
+            return GithubSrvc.renameRepo(forkName);
+        })
+        .then( function() {
+            return PollingSrvc.checkForBranchContent(forkName, "template")
+        })
+        .then( function() {
+            return GithubSrvc.deleteBranch(forkName, "heads/master")
+        })
+        .then( function() {
+            return GithubSrvc.createBranch(forkName, "master")
+        })
+        .then( function() {
+            scope.pop("Fork to GitHub successful", "<ul><li>You will be notified, when the fork is ready...</li></ul>");
+        })
+        .then(function(){
+            return PollingImgSrvc.checkReady();
+        })
+        .then(function() {
+            return $q.when(scope.pop("Page available", "Visit "+forkName+" to see it live..."));
+        })
 	};
 	
 	$scope.$on('Toast::githubForkSuccess', function(event) {
 		scope.pop();
 	});
 	
-	$scope.pop = function(text){
-		toaster.pop('success', "Fork to GitHub successful", '<ul><li>You will be notified, when the fork is ready...</li></ul>', 5000, 'trustedHtml');
+	$scope.pop = function(title, text){
+		toaster.pop('success', title, text, 5000, 'trustedHtml');
 		$scope.$apply();
     };
 });
 
-myApp.controller('PostCtrl', function($scope, toaster, GithubSrvc) {
-    $scope.today = function() {
-        $scope.dt = new Date();
-    };
-    $scope.today();
+myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, ParameterSrvc, GithubSrvc) {
+    var scope = $scope;
 
-    $scope.showWeeks = true;
-    $scope.toggleWeeks = function () {
-        $scope.showWeeks = ! $scope.showWeeks;
+    $scope.options = {}
+    var date = "";
+    $scope.options.title = "";
+
+    var path = ParameterSrvc.urlParams['path'];
+    var url = ParameterSrvc.urlParams['url'];
+
+    if(typeof(path) != 'undefined' && typeof(url) !='undefined') {
+        var splif = path.split("-");
+        date = splif[0].split("/")[1]+"-"+splif[1]+"-"+splif[2];
+        $scope.options.title = "";
+        for(var i=3;i<splif.length;i++) {
+            if(i!==splif.length-1) {
+                $scope.options.title += splif[i]+" ";
+            } else {
+                $scope.options.title += splif[i].split(".")[0];
+            }
+        }
+    } else {
+        console.log("new content...")
+        path = "_posts/templates/2014-01-01-edit-template.md";
+    }
+
+    // promise to save...
+    var promise = GithubSrvc.editContent(path);
+    promise.then(function(content) {
+        var commitPath = "";
+        if($scope.options.date instanceof Date) {
+            commitPath = "_posts/"+$scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replace(/ /g,"-")+".md";
+        } else {
+            commitPath = "_posts/"+$scope.options.date+"-"+$scope.options.title.replace(/ /g,"-")+".md";
+        }
+
+        //var path = "_posts/"+$scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replaceAll(" ","-")+".md";
+        console.log("edit existing content");
+        console.log("should check, if the path has changed... if yes, it should post/delete or move/commit")
+        console.log("path"+path);
+        console.log("content"+content);
+
+        return GithubSrvc.commit(content, commitPath);
+    }).then(function() {
+        console.log("post saved.... wait for 5 seconds and redirect to the site...")
+        $timeout(function(){
+            if(typeof(url) !='undefined') {
+                window.location = url;
+            } else {
+                console.log("post saved, there is no url provided to redirect - should be constructed from the commit path...")
+            }
+        }, 8000);
+    });
+
+    $scope.confirmed = 'You have yet to be confirmed!';
+    $scope.delete = function() {
+        console.log("delete....");
+        var dlg = $dialogs.confirm('Please Confirm','Do you want to delete the post?');
+        dlg.result.then(function(btn){
+            GithubSrvc.deleteContent(path);
+        },function(btn){
+            console.log("cancel delete")
+            //$scope.confirmed = 'Shame on you for not thinking this is awesome!';
+        });
+    }
+
+    $scope.today = function() {
+        $scope.options.date = new Date();
     };
+
+    $scope.options.date = date;
+
+    if(date==='') {
+        $scope.today();
+    } else {
+        $scope.options.date = date;
+    }
 
     $scope.clear = function () {
-        $scope.dt = null;
+        $scope.options.date = null;
     };
-
-    // Disable weekend selection
-    $scope.disabled = function(date, mode) {
-        return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
-    };
-
-    $scope.toggleMin = function() {
-        $scope.minDate = ( $scope.minDate ) ? null : new Date();
-    };
-    $scope.toggleMin();
 
     $scope.open = function($event) {
         $event.preventDefault();
@@ -231,6 +335,5 @@ myApp.controller('PostCtrl', function($scope, toaster, GithubSrvc) {
         'starting-day': 1
     };
 
-    $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'shortDate'];
-    $scope.format = $scope.formats[0];
+    $scope.format = 'yyyy-MM-dd';
 });
