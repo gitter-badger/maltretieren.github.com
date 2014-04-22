@@ -220,7 +220,7 @@ myApp.service("GithubSrvc", function (
                 for(var i = 0;i < configLine.length;i++){
                     var split = configLine[i].split(":");
                     if(split.length===2 && split[1]!=="") {
-                        if(split[0].indexOf("name")!==-1) {
+                        if(split[0].indexOf("title")!==-1) {
                             console.log("HITTTTTT")
                             newConfigData += split[0]+": HAAHHAHHAHA\n"
                         } else {
