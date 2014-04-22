@@ -213,7 +213,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
             return PollingSrvc.checkForBranchContent(forkName, "template")
         })
         .then( function() {
-            return GithubSrvc.deleteBranch(forkName, "master")
+            return GithubSrvc.deleteBranch(forkName, "heads/master")
         })
         .then( function() {
             return GithubSrvc.createBranch(forkName, "master")
