@@ -132,16 +132,26 @@ myApp.controller('ConfigCtrl', function($scope, $window, GithubSrvc) {
 		console.log(config);
 		GithubSrvc.commit(config, "app/js/config.js");
 	}
-	
+
 	var content = GithubSrvc.editContent("_config.yml");
 	content.then(function(data) {
 		var lines = data.split('\n');
+        var newConfigData = "";
 		for(var i = 0;i < lines.length;i++){
 			var split = lines[i].split(":");
 			if(split.length===2 && split[1]!=="") {
 				console.log(split[1]);
-			}
+                if(split[0]==="name") {
+                    newConfigData += "name : HAAHHAHHAHA"
+                } else {
+                    newConfigData += lines[i];
+                }
+
+			} else {
+                newConfigData += lines[i];
+            }
 		}
+        console.log(newConfigData);
 	});
 });
 
