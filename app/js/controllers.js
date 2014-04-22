@@ -135,20 +135,19 @@ myApp.controller('ConfigCtrl', function($scope, $window, GithubSrvc) {
 
 	var content = GithubSrvc.editContent("_config.yml");
 	content.then(function(data) {
-		var lines = data.split('\n');
+		var configLine = data.split('\n');
         var newConfigData = "";
-		for(var i = 0;i < lines.length;i++){
-			var split = lines[i].split(":");
-			if(split.length===2 && split[1]!=="") {
-                //console.log(split[1]);
+		for(var i = 0;i < configLine.length;i++){
+			var split = configLine[i].split(":");
+			if(configLine.indexOf(":")!==-1 && split[1]!=="") {
                 if(split[0].indexOf("name")!==-1) {
                     newConfigData += split[0]+": HAAHHAHHAHA\n"
                 } else {
-                    newConfigData += lines[i]+"\n";
+                    newConfigData += configLine[i]+"\n";
                 }
 
 			} else {
-                newConfigData += lines[i]+"\n";
+                newConfigData += configLine[i]+"\n";
             }
 		}
         console.log(newConfigData);
@@ -241,6 +240,9 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
         })
         .then( function() {
             scope.pop("Fork to GitHub successful", "<ul><li>You will be notified, when the fork is ready...</li></ul>");
+        })
+        .then( function() {
+             return GithubSrvc.postProcess();
         })
         .then(function(){
             return PollingImgSrvc.checkReady();

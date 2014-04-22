@@ -211,6 +211,41 @@ myApp.service("GithubSrvc", function (
             // request _config.yml
             // search/replace "title : Place to pee free!"/"title: slogan)
             // commit
+            var content = this.getContent;
+            var deferred = $q.defer();
+            content.then(function(data) {
+                var configLine = data.split('\n');
+                var newConfigData = "";
+                for(var i = 0;i < configLine.length;i++){
+                    var split = configLine[i].split(":");
+                    if(configLine.indexOf(":")!==-1 && split[1]!=="") {
+                        if(split[0].indexOf("name")!==-1) {
+                            newConfigData += split[0]+": HAAHHAHHAHA\n"
+                        } else {
+                            newConfigData += configLine[i]+"\n";
+                        }
+
+                    } else {
+                        newConfigData += configLine[i]+"\n";
+                    }
+                }
+                //console.log(newConfigData);
+                deferred.resolve(newConfigData);
+            });
+            return deferred.promise;
+        },
+        getContent: function(path) {
+            var githubInstance = GithubAuthService.instance();
+            var repo = githubInstance.getRepo(config.github.user, config.github.repository);
+
+            //console.log(path);
+            var branch = repo.getBranch("master");
+            var contents = branch.read(path, false)
+            var deferred = $q.defer();
+            contents.then(function(result) {
+               deferred.resolve(result);
+            })
+            return deferred.promise;
         },
         editContent: function(path) {
             // change page slogan:

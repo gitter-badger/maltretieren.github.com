@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services.js" afterPath="$PROJECT_DIR$/app/js/services.js" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,19 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="143" column="51" selection-start="4930" selection-end="4930" vertical-scroll-proportion="0.54460096" vertical-offset="1913" max-vertical-offset="5445">
+            <state line="244" column="45" selection-start="8113" selection-end="8113" vertical-scroll-proportion="-11.04" vertical-offset="3384" max-vertical-offset="5475">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="284" column="40" selection-start="11368" selection-end="11368" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5670">
+            <state line="232" column="46" selection-start="9576" selection-end="9576" vertical-scroll-proportion="0.83370286" vertical-offset="3104" max-vertical-offset="6195">
               <folding />
             </state>
           </provider>
@@ -681,16 +682,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/services.js">
+    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="284" column="40" selection-start="11368" selection-end="11368" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5670">
+        <state line="244" column="45" selection-start="8113" selection-end="8113" vertical-scroll-proportion="-11.04" vertical-offset="3384" max-vertical-offset="5475">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
+    <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="51" selection-start="4930" selection-end="4930" vertical-scroll-proportion="0.54460096" vertical-offset="1913" max-vertical-offset="5445">
+        <state line="232" column="46" selection-start="9576" selection-end="9576" vertical-scroll-proportion="0.83370286" vertical-offset="3104" max-vertical-offset="6195">
           <folding />
         </state>
       </provider>
