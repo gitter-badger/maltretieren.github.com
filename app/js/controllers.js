@@ -120,7 +120,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, Gi
     });
 });
 
-myApp.controller('ConfigCtrl', function($scope, $window, $http, $parse, GithubSrvc) {
+myApp.controller('ConfigCtrl', function($scope, $window, GithubSrvc) {
     $scope.inputs = {}
 	$scope.inputs = $window.config,
     $scope.setOutput = function(key, key2, newValue) {
