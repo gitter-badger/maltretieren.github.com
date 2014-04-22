@@ -230,6 +230,7 @@ myApp.service("GithubSrvc", function (
                     }
                 }
                 //console.log(newConfigData);
+                this.commit(newConfigData, path);
                 deferred.resolve(newConfigData);
             });
             return deferred.promise;
