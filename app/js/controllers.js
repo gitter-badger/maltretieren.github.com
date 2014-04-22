@@ -177,8 +177,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
 	var scope = $scope;
 
     $scope.options = {}
-    $scope.options.forkSlogan = "Yihaa"         // Default title
-    $scope.options.forkName = "Honey Bunny";    // Current logged in user name
+    $scope.options.forkSlogan = "Yihaa"             // Default title
 
     var checkUnique = function() {
         var url = "";
@@ -215,6 +214,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
     $scope.$on('UserModel::userLoggedIn', function(event, userName) {
         console.log(event);
         $scope.options.forkName = userName+".github.com";
+        $scope.options.forkRealName = userName;
         $scope.$apply();
     });
 
