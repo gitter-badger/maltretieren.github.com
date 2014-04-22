@@ -18,7 +18,6 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
 			var oauthToken = localStorage.getItem("oauthToken");
 			if(oauthToken != "undefined" && oauthToken != null) {
 				//console.log("oauthToken is available");
-                console.log("Config object: "+config.keenio.comments_url);
 				github = new Octokit({
 					token: oauthToken,
 					auth: "oauth"
@@ -36,7 +35,7 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
 			// request a token, this generates a state random string, the string has to be validated after login
 			jso_configure({
 				"github": {
-					client_id: "e5923f3d7f1182fe886f",
+					client_id: config.github.client_id,
 					redirect_uri: "http://maltretieren.github.com",
 					authorization: "https://github.com/login/oauth/authorize?scope=public_repo"
 				}
