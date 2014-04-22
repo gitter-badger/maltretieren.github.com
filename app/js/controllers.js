@@ -178,6 +178,8 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
 
     $scope.options = {}
     $scope.options.forkSlogan = "Yihaa"             // Default title
+    $scope.options.forkName = "";                   // Gets overridden, when the user is logged in
+    $scope.options.forkRealName = "";               // Gets overridden, when the user is logged in
 
     var checkUnique = function() {
         var url = "";
