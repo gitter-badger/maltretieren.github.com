@@ -70,7 +70,7 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
                 var user = githubInstance.getUser();
                 $q.when(user.getInfo()).then(function(res) {
                     console.log("login successfull: "+res.login);
-                    UserModel.login(res.login);
+                    UserModel.login(res);
                 }, function(err) {
                     console.log("there was an error getting user information, maybe the token is invalid?");
                     // delete the token from localStorage, because it is invalid...
@@ -281,9 +281,7 @@ myApp.service("GithubSrvc", function (
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
             console.log("-------");
-            console.log(UserModel.user.name);
-            var repo = githubInstance.getRepo(config.github.user, config.github.repository);
-            //console.log(path);
+            var repo = githubInstance.getRepo(UserModel.user.name, UserModel.user.name+"github.com");
             var branch = repo.getBranch("master");
             var contents = {};
             contents[path] = text;
@@ -315,13 +313,14 @@ myApp.service("UserModel", function ($rootScope) {
 	this.isAdmin = false;
 	this.token = "";
 	
-	this.login = function(userName) {
+	this.login = function(loginData) {
 		this.loggedIn = true;
 		this.user = {
-			name: userName
+			name: loginData.login;
+            repository: loginData.;
 		};
-		console.log("send a userLoggedIn event for user: "+userName);
-		$rootScope.$broadcast('UserModel::userLoggedIn', userName);
+		console.log("send a userLoggedIn event for user: "+loginData.login);
+		$rootScope.$broadcast('UserModel::userLoggedIn', loginData.login);
 	};
 	this.logout = function() {
 		this.user = {};
