@@ -141,7 +141,7 @@ myApp.controller('ConfigCtrl', function($scope, $window, GithubSrvc) {
 			var split = lines[i].split(":");
 			if(split.length===2 && split[1]!=="") {
                 //console.log(split[1]);
-                if(split[0]==="name") {
+                if(split[0].indexOf("name")!==-1) {
                     console.log("HITTTT");
                     newConfigData += "name : HAAHHAHHAHA\n"
                 } else {
