@@ -128,9 +128,7 @@ myApp.controller('ConfigCtrl', function($scope, $window, GithubSrvc) {
     }
 	
 	$scope.githubCommit = function() {
-		var config = {
-			$scope.inputs
-		};
+		var config = $scope.inputs;
 		GithubSrvc.commit(config, "app/js/config.js");
 	}
 });
