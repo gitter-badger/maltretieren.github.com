@@ -242,7 +242,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
             scope.pop("Fork to GitHub successful", "<ul><li>You will be notified, when the fork is ready...</li></ul>");
         })
         .then( function() {
-             return GithubSrvc.postProcess();
+             return GithubSrvc.postProcess("_config.yml");
         })
         .then(function(){
             return PollingImgSrvc.checkReady();

@@ -206,12 +206,12 @@ myApp.service("GithubSrvc", function (
                 //PollingSrvc.checkForBranchContent(branch, "README.md", callback);
 			});
         },
-        postProcess: function() {
+        postProcess: function(path) {
             // change page slogan:
             // request _config.yml
             // search/replace "title : Place to pee free!"/"title: slogan)
             // commit
-            var content = this.getContent;
+            var content = this.getContent(path);
             var deferred = $q.defer();
             content.then(function(data) {
                 var configLine = data.split('\n');
