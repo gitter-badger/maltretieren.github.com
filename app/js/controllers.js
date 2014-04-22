@@ -219,6 +219,9 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
     });
 
     $scope.fork = function() {
+        // predefined value
+        $scope.options.forkRealName = "Honey Bunny"; // this should be the user name
+
         var forkName = $scope.options.forkName;
         var forkSlogan = $scope.options.forkSlogan;
         var author = $scope.options.forkRealName;
