@@ -223,7 +223,7 @@ myApp.service("GithubSrvc", function (
                     var replaceHit = replace[replaceKey];
                     if(typeof replaceHit != 'undefined') {
                        console.log("HITTTTTT")
-                       newConfigData += split[0]+": "+replaceHit;
+                       newConfigData += split[0]+": "+replaceHit+"\n";
                     } else {
                        newConfigData += configLine[i]+"\n";
                     }
