@@ -220,17 +220,12 @@ myApp.service("GithubSrvc", function (
                 for(var i = 0;i < configLine.length;i++){
                     var split = configLine[i].split(":");
                     var replaceKey = split[0].trim();
-                    console.log(replace[replaceKey]);
-                    if(split.length===2 && split[1]!=="") {
-                        if(split[0].indexOf("title")!==-1) {
-                            console.log("HITTTTTT")
-                            newConfigData += split[0]+": HAAHHAHHAHA\n"
-                        } else {
-                            newConfigData += configLine[i]+"\n";
-                        }
-
+                    var replaceHit = replace[replaceKey];
+                    if(typeof replaceHit != 'undefined') {
+                       console.log("HITTTTTT")
+                       newConfigData += split[0]+": "+replaceHit;
                     } else {
-                        newConfigData += configLine[i]+"\n";
+                       newConfigData += configLine[i]+"\n";
                     }
                 }
                 //console.log(newConfigData);
