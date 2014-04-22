@@ -175,7 +175,7 @@ myApp.service("GithubSrvc", function (
 			var that = this;
 			var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo("flamed0011", forkName);			
-			return repo.git.deleteRef(branchName).done(function(result) {
+			return repo.git.deleteRef(branchName).then(function(result) {
 				console.log("deleted branch"+branchName);
 				//that.renameBranch(forkName);
 			});
@@ -184,7 +184,7 @@ myApp.service("GithubSrvc", function (
 			var that = this;
 			var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo("flamed0011", forkName);			
-			return repo.git.deleteRef("heads/master").done(function(result) {
+			return repo.git.deleteRef("heads/master").then(function(result) {
 				console.log("deleted master branch");
 				//that.createBranch(forkName, "master");
 			});
@@ -197,7 +197,7 @@ myApp.service("GithubSrvc", function (
 			var branch = repo.getBranch("template");
 			var forkName = forkName;
 			console.log("create master branch from template");
-			return branch.createBranch("master").done(function() {
+			return branch.createBranch("master").then(function() {
 				console.log("master branch created from template branch");
                 branch = repo.getBranch("master");
                 var callback = function() {
@@ -226,7 +226,7 @@ myApp.service("GithubSrvc", function (
             var branch = repo.getBranch("master");
             var contents = branch.read(path, false)
             var deferred = $q.defer();
-            contents.done(function(result) {
+            contents.then(function(result) {
                 //console.log(result.content);
                 $('#target-editor').markdown({
                     savable:true,
@@ -259,7 +259,7 @@ myApp.service("GithubSrvc", function (
             var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
             var branch = repo.getBranch("master");
 
-            branch.remove(path, 'Deleted Post from GUI').done(function() {
+            branch.remove(path, 'Deleted Post from GUI').then(function() {
                 console.log("deleted");
                 $rootScope.$broadcast('Toast::githubDeleteSuccess');
             });
