@@ -273,7 +273,7 @@
                 if (jqXHR.responseText && 'json' === ajaxConfig.dataType) {
                   data = JSON.parse(jqXHR.responseText);
                 } else {
-                  data = jqXHR.responseText || "";
+                  data = jqXHR.responseText || firstArg;
                 }
                 if ('GET' === method && options.isBase64) {
                   converted = '';
