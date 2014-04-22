@@ -105,6 +105,7 @@
 
     makeOctokit = function(newPromise, allPromises, XMLHttpRequest, base64encode, userAgent) {
         var Octokit, ajax;
+		Promise = newPromise;
         ajax = function(options) {
             return newPromise(function(resolve, reject) {
                 var name, value, xhr, _ref;
@@ -1364,7 +1365,6 @@
                         return $promise.reject(val);
                     };
                     fn(resolve, reject);
-					Promise = $promise.promise;
                     return $promise.promise;
                 };
                 allPromises = function(promises) {
