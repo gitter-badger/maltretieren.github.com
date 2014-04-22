@@ -211,6 +211,7 @@ myApp.service("GithubSrvc", function (
             // request _config.yml
             // search/replace "title : Place to pee free!"/"title: slogan)
             // commit
+            var self = this;
             var content = this.getContent(path);
             var deferred = $q.defer();
             content.then(function(data) {
@@ -230,7 +231,7 @@ myApp.service("GithubSrvc", function (
                     }
                 }
                 //console.log(newConfigData);
-                this.commit(newConfigData, path);
+                self.commit(newConfigData, path);
                 deferred.resolve(newConfigData);
             });
             return deferred.promise;
