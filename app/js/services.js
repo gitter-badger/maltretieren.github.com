@@ -250,10 +250,6 @@ myApp.service("GithubSrvc", function (
             return deferred.promise;
         },
         editContent: function(path) {
-            // change page slogan:
-            // request _config.yml
-            // search/replace "title : Place to pee free!"/"title: slogan)
-            // commit
             var self = this;
             var path = path;
             var githubInstance = GithubAuthService.instance();
@@ -280,7 +276,7 @@ myApp.service("GithubSrvc", function (
         },
 		commit: function(text, path) {
             var githubInstance = GithubAuthService.instance();
-            var repo = githubInstance.getRepo(UserModel.user.name, UserModel.user.name+".github.com");
+            var repo = githubInstance.getRepo(UserModel.user.name, UserModel.user.name+"1.github.com");
             var branch = repo.getBranch("master");
             var contents = {};
             contents[path] = text;
