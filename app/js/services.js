@@ -241,7 +241,7 @@ myApp.service("GithubSrvc", function (
             })
             return deferred.promise;
         },
-		commit: function(text, $q, path) {
+		commit: function(text, path, $q) {
             var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
             //console.log(path);
