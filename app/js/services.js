@@ -231,7 +231,7 @@ myApp.service("GithubSrvc", function (
                         newConfigData += configLine[i]+"\n";
                     }
                 }
-                //console.log(newConfigData);
+                console.log(newConfigData);
                 self.commit(newConfigData, path);
                 deferred.resolve(newConfigData);
             });
