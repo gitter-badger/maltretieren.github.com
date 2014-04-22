@@ -183,6 +183,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
     $scope.options.twitter = "";               // Gets overridden, when the user is logged in
     $scope.options.ssl = "";
     $scope.options.github = "";
+    $scope.options.theme = "lumen";
 
     var checkUnique = function() {
         var url = "";
@@ -233,6 +234,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
         var twitter = $scope.options.twitter;
         var ssl = $scope.options.ssl;
         var github = $scope.options.github;
+        var theme = $scope.options.theme;
 
         // pass in options
         GithubSrvc.fork($scope.options)
@@ -260,7 +262,8 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
                  name: name,
                  twitter: twitter,
                  github: github,
-                 enforce_ssl: ssl
+                 enforce_ssl: ssl,
+                 theme: theme
              }
              return GithubSrvc.postProcess("_config.yml", replace);
         })
