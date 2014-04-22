@@ -232,8 +232,10 @@ myApp.service("GithubSrvc", function (
                     }
                 }
                 console.log(newConfigData);
-                self.commit(newConfigData, path);
-                deferred.resolve(newConfigData);
+                var commitPromise = self.commit(newConfigData, path);
+                commitPromise.then(function() {
+                    deferred.resolve(newConfigData);
+                });
             });
             return deferred.promise;
         },
