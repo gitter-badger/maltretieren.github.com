@@ -18,7 +18,7 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
 			var oauthToken = localStorage.getItem("oauthToken");
 			if(oauthToken != "undefined" && oauthToken != null) {
 				//console.log("oauthToken is available");
-                console.log("Config object: "+config.keenio);
+                console.log("Config object: "+config.keenio.comments_url);
 				github = new Octokit({
 					token: oauthToken,
 					auth: "oauth"
