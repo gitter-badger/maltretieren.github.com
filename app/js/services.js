@@ -137,6 +137,7 @@ myApp.service("GithubSrvc", function (
             promise.then(function() {
                 deferred.resolve();
             }, function(reason) {
+                console.log("errrrorrr");
                 deferred.reject();
             })
             return deferred.promise;
