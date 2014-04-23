@@ -348,15 +348,11 @@ myApp.service("UserModel", function ($rootScope) {
         isAdmin: false
     };
 
+    // promise1 = token
+    // promise2 = isAdminTest
+
 	this.login = function(loginData) {
-		this.loggedIn = true;
-		this.user = {
-			name: loginData.login,
-            token: "",
-            mail: "",
-            repository: "",
-            isAdmin: false
-		};
+		this.user.name = loginData.login;
 		console.log("send a userLoggedIn event for user: "+loginData.login);
 		$rootScope.$broadcast('UserModel::userLoggedIn', loginData.login);
 	};
@@ -365,7 +361,6 @@ myApp.service("UserModel", function ($rootScope) {
     },
 	this.logout = function() {
 		this.user = {};
-		this.loggedIn = false;
 		localStorage.clear();
 		console.log("send a userLoggedOut event");
 		$rootScope.$broadcast('UserModel::userLoggedOut');
