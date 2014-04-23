@@ -111,8 +111,10 @@ myApp.service("GithubSrvc", function (
                     var promise = self.testAdmin();
                     promise.then(function() {
                         console.log("user is admin");
+                        UserModel.setIsAdmin(true);
                     }, function(reason) {
                         console.log("user is not an admin");
+                        UserModel.setIsAdmin(false);
                     })
                 });
             } else if(typeof oauthCode === 'undefined' && (typeof oauthToken === 'undefined' || oauthToken === "undefined" || oauthToken === null) ) {
@@ -338,11 +340,14 @@ myApp.service("GithubSrvc", function (
 
 // Inspired by http://joelhooks.com/blog/2013/04/24/modeling-data-and-state-in-your-angularjs-application/
 myApp.service("UserModel", function ($rootScope) {
-	this.user = {};
+	this.user = {
+        name: "",
+        repository: "",
+        isAdmin: false
+    };
 	this.isAdmin = false;
 	this.token = "";
 
-    this.testAdmin
 	this.login = function(loginData) {
 		this.loggedIn = true;
 		this.user = {
@@ -352,6 +357,9 @@ myApp.service("UserModel", function ($rootScope) {
 		console.log("send a userLoggedIn event for user: "+loginData.login);
 		$rootScope.$broadcast('UserModel::userLoggedIn', loginData.login);
 	};
+    this.setIsAdmin = function(isAdmin) {
+        this.user.isAdmin = isAdmin;
+    },
 	this.logout = function() {
 		this.user = {};
 		this.loggedIn = false;
