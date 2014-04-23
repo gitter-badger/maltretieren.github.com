@@ -359,7 +359,7 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
         var repoName = repoName;
         var branchName = branchName;
 
-        var promise = $q.when(branch.read(resource,false));
+        var promise = branch.read(resource,false);
         promise.then(function(res) {
             console.log("branch available")
             deferred.resolve();
