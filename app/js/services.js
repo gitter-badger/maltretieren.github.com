@@ -350,8 +350,17 @@ myApp.service("UserModel", function ($rootScope) {
 
     // promise1 = token
     // promise2 = isAdminTest
+    // if promise1 & promise2 -> save in JSON.stringify(user) in localStorage
 
 	this.login = function(loginData) {
+        var userObject = localStorage.getItem("user");
+        console.log("login: "+userObject);
+        // check, if there is a user object in localStorage
+        //      -> if yes, get from localStorage and return this object with broadcast
+        //      -> if no, is there a code in url?
+        //          -> if no, request oauth workflo
+        //          -> if yes, request the token with the url
+        //
 		this.user.name = loginData.login;
 		console.log("send a userLoggedIn event for user: "+loginData.login);
 		$rootScope.$broadcast('UserModel::userLoggedIn', loginData.login);
