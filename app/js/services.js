@@ -54,6 +54,7 @@ myApp.service("GithubAuthService", function ($http, $q) {
                         console.log("Yaayy, got a token: "+data.token);
                         localStorage.setItem("oauthToken", data.token);
                         //that.userInfo().user();
+                        return data.token;
                     } else {
                         console.log("It was not possible to get a token with the provided code");
 
@@ -374,7 +375,7 @@ myApp.service("UserModel", function ($rootScope, ParameterSrvc, GithubAuthServic
             console.log("login: code provided, request token");
             var oauthCodePromise = GithubAuthService.requestToken(oauthCode);
             oauthCodePromise.then(function(res) {
-               console.log("login: token="+res.token);
+               console.log(res);
                GithubAuthService.getUser
             });
             return null;
