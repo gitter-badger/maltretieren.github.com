@@ -69,15 +69,10 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
                 var githubInstance = self.instance();
                 var user = githubInstance.getUser();
 
-                $q.when(user.getInfo()).then(function(res) {
+                return $q.when(user.getInfo()).then(function(res) {
                     console.log("login successfull: "+res.login);
-                    UserModel.login(res);
-                    var promise = self.testAdmin();
-                    promise.then(function() {
-                        console.log("user is admin");
-                    }, function(reason) {
-                        console.log("user is not an admin");
-                    })
+                    UserModel.login(res)
+
                 }, function(err) {
                     console.log("there was an error getting user information, maybe the token is invalid?");
                     // delete the token from localStorage, because it is invalid...
@@ -108,7 +103,13 @@ myApp.service("GithubSrvc", function (
 
             if(typeof oauthToken != 'undefined' && oauthToken != null && oauthToken != 'undefined') {
                 console.log("Token provided, try to use it - Token: "+oauthToken)
-                GithubAuthService.userInfo().user();
+                var userPromise = GithubAuthService.userInfo().user();
+                var promise = this.testAdmin();
+                promise.then(function() {
+                    console.log("user is admin");
+                }, function(reason) {
+                    console.log("user is not an admin");
+                })
             } else if(typeof oauthCode === 'undefined' && (typeof oauthToken === 'undefined' || oauthToken === "undefined" || oauthToken === null) ) {
                 console.log("nothing (no code, no token) provided, wait until user presses login button");
                 // after page reload code is available and it will requestToken()
