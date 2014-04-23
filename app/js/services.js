@@ -135,9 +135,10 @@ myApp.service("GithubSrvc", function (
             var branch = repo.getBranch("master");
             var promise = this.commit("test", "test", branch);
             promise.then(function() {
+                console.log("testAdming: success");
                 deferred.resolve();
             }, function(reason) {
-                console.log("errrrorrr");
+                console.log("testAdmin: errrrorrr");
                 deferred.reject();
             })
             return deferred.promise;
