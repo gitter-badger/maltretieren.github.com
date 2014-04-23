@@ -74,20 +74,22 @@
                 {% include JB/pages_list %}
             </ul>
             <form class="navbar-form navbar-right" style="padding-right:0px" ng-controller="GithubCtrl">
-                <button ng-cloak type="button" class="btn btn-warning btn-middle ng-hide" ng-click="requestCode()" ng-show="!user">Login with Github</button>
-				<div ng-cloak class="btn-group" ng-show="user" style="text-align:right ng-hide">
-				  <button type="button" class="btn btn-success">
-					<span class="glyphicon glyphicon-user"></span>
-                    {% raw %} {{user}} {% endraw %}
-				  </button>
-				  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-				  <ul class="dropdown-menu">
-                        <li><a href="/app/admin/fork.html">Clone/Fork</a></li>
-                        <li><a href="/app/admin/editConfig.html">Edit Config</a></li>
-                        <li><a href="/app/admin/edit.html">Create Post</a></li>
-						<li class="divider"></li>
-						<li><a href="#" ng-click="logout()">Logout</a></li>
-				  </ul>
+                <div class="btn-toolbar bs-component">
+					<button ng-cloak type="button" class="btn btn-warning btn-middle ng-hide" ng-click="requestCode()" ng-show="!user">Login with Github</button>
+					<div ng-cloak class="btn-group" ng-show="user" style="text-align:right ng-hide">
+					  <button type="button" class="btn btn-success">
+						<span class="glyphicon glyphicon-user"></span>
+						{% raw %} {{user}} {% endraw %}
+					  </button>
+					  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+					  <ul class="dropdown-menu">
+							<li><a href="/app/admin/fork.html">Clone/Fork</a></li>
+							<li><a href="/app/admin/editConfig.html">Edit Config</a></li>
+							<li><a href="/app/admin/edit.html">Create Post</a></li>
+							<li class="divider"></li>
+							<li><a href="#" ng-click="logout()">Logout</a></li>
+					  </ul>
+					</div>
 				</div>
             </form>
         </div>
