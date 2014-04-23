@@ -200,6 +200,15 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwi
         var url = "";
         var forkName = $scope.options.forkName;
 
+		$http({
+			method: 'GET',
+			url: forkname
+		 }).success(function(data){
+			console.log("yessssss")
+		}).error(function(){
+			console.log("noooooo");
+		});
+		
         if($scope.options.forkName.length>4) {
             if($scope.options.forkName.indexOf(".")===-1) {
                 url =  "http://"+$scope.options.forkName+".github.io";
