@@ -374,8 +374,7 @@ myApp.service("UserModel", function ($rootScope, ParameterSrvc, GithubAuthServic
 
         if(userObject==null) {
             console.log("login: no user object in local storage");
-            if(code)
-            var userPromise =
+            console.log(code);
             return null;
         } else {
             console.log("login: "+userObject);
