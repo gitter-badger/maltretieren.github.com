@@ -413,7 +413,7 @@ myApp.service("StyleSwitcher", function () {
 			if ((link_tag[i].rel.indexOf( "stylesheet" ) != -1) &&
 			  link_tag[i].title) {
 			  link_tag[i].disabled = true ;
-			  if (link_tag[i].title == css_title) {
+			  if (link_tag[i].title == styleName) {
 				link_tag[i].disabled = false ;
 			  }
 			}
