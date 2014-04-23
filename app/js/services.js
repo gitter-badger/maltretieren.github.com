@@ -303,7 +303,7 @@ myApp.service("GithubSrvc", function (
             })
             return deferred.promise;
         },
-		commit: function(text, path, repo) {
+		commit: function(text, path, branch) {
             var contents = {};
             contents[path] = text;
 
