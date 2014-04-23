@@ -12,7 +12,7 @@ comments: false
         <h2>Instructions</h2>
         <div>Login to this page with your GitHub account. Enter the name of your blog (xyz.github.com) and a page slogan. Click on fork...</div>
 		
-		<form class="form-horizontal">
+		<form class="form-horizontal" role="form">
 			<fieldset>
 
 			<!-- Form Name -->
@@ -22,8 +22,10 @@ comments: false
 			<div class="control-group">
 			  <label class="control-label" for="pageName">Page name</label>
 			  <div class="controls">
-				<input id="pageName" name="pageName" ng-model="options.forkName"  ng-model-options="{ debounce: 2000 }" ng-change="checkUnique()" placeholder="xyz.github.io" class="form-control" required="" type="text">
-				<p class="help-block">This will be the address of your blog</p>
+				<div class="col-sm-10">
+					<input id="pageName" name="pageName" ng-model="options.forkName"  ng-model-options="{ debounce: 2000 }" ng-change="checkUnique()" placeholder="xyz.github.io" class="form-control" required="" type="text">
+					<p class="help-block">This will be the address of your blog</p>
+				</div>
 			  </div>
 			</div>
 
