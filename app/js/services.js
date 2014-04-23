@@ -48,11 +48,11 @@ myApp.service("GithubAuthService", function ($http, $q) {
 		},
         requestToken: function(oauthCode) {
             var that = this;
-            return $http({method: 'GET', url: config.heroku.authenticate+""+oauthCode}).
+            $http({method: 'GET', url: config.heroku.authenticate+""+oauthCode}).
                 success(function(data, status, headers, config) {
                     if(typeof data.token != 'undefined') {
                         console.log("Yaayy, got a token: "+data.token);
-                        localStorage.setItem("oauthToken", data.token);
+                        //localStorage.setItem("oauthToken", data.token);
                         //that.userInfo().user();
                     } else {
                         console.log("It was not possible to get a token with the provided code");
@@ -62,37 +62,13 @@ myApp.service("GithubAuthService", function ($http, $q) {
                 error(function(data, status, headers, config) {
                     alert("Error while getting a token for the provided code");
             });
-        },
-        userInfo: function() {
-            var self = this;
-            var user = function() {
-                var githubInstance = GithubAuthService.instance();
-                var user = githubInstance.getUser();
-
-                var userPromise = user.getInfo().then(function(res) {
-                    console.log("login successfull: "+res.login);
-                    //UserModel.login(res)
-
-                }, function(err) {
-                    console.log("there was an error getting user information, maybe the token is invalid?");
-                    // delete the token from localStorage, because it is invalid...
-                    GithubAuthService.requestToken();
-                });
-
-                return userPromise;
-            };
-
-            return {
-                user: function() { return user(); },
-                logout: function() { return UserModel.logout(); }
-            }
         }
     }
 });
 
 myApp.service("GithubSrvc", function (
     $rootScope, $q, $interval, GithubAuthService,
-    PollingSrvc, ParameterSrvc, $http, $timeout) {
+    UserModel, PollingSrvc, ParameterSrvc, $http, $timeout) {
 
     return {
         // there are different states: token & code provided, token or code, nothing
@@ -111,10 +87,10 @@ myApp.service("GithubSrvc", function (
                     var promise = self.testAdmin();
                     promise.then(function() {
                         console.log("user is admin");
-                        //UserModel.setIsAdmin(true);
+                        UserModel.setIsAdmin(true);
                     }, function(reason) {
                         console.log("user is not an admin");
-                        //UserModel.setIsAdmin(false);
+                        UserModel.setIsAdmin(false);
                     })
                 });
             } else if(typeof oauthCode === 'undefined' && (typeof oauthToken === 'undefined' || oauthToken === "undefined" || oauthToken === null) ) {
@@ -130,8 +106,29 @@ myApp.service("GithubSrvc", function (
         requestCode: function() {
             GithubAuthService.requestCode();
         },
-        requestToken: function(oauthCode) {
-            return GithubAuthService.requestToken(oauthCode);
+        userInfo: function() {
+            var self = this;
+            var user = function() {
+                var githubInstance = GithubAuthService.instance();
+                var user = githubInstance.getUser();
+
+                var userPromise = user.getInfo().then(function(res) {
+                    console.log("login successfull: "+res.login);
+                    UserModel.login(res)
+
+                }, function(err) {
+                    console.log("there was an error getting user information, maybe the token is invalid?");
+                    // delete the token from localStorage, because it is invalid...
+                    GithubAuthService.requestToken();
+                });
+
+                return userPromise;
+            };
+
+            return {
+                user: function() { return user(); },
+                logout: function() { return UserModel.logout(); }
+            }
         },
         testAdmin: function() {
             var deferred = $q.defer();
@@ -342,7 +339,7 @@ myApp.service("GithubSrvc", function (
 });
 
 // Inspired by http://joelhooks.com/blog/2013/04/24/modeling-data-and-state-in-your-angularjs-application/
-myApp.service("UserModel", function ($rootScope, ParameterSrvc, GithubSrvc) {
+myApp.service("UserModel", function ($rootScope, ParameterSrvc, GithubAuthService) {
 	this.user = {
         name: "",
         token: "",
@@ -367,24 +364,18 @@ myApp.service("UserModel", function ($rootScope, ParameterSrvc, GithubSrvc) {
         }
     }
 
-    this.login = function() {
-        GithubSrvc.requestCode();
-    }
-	this.getUser = function(loginData) {
-        var oauthCode = ParameterSrvc.urlParams['code'];
+	this.login = function(loginData) {
+        var userObject = this.getLoggedInUser();
+        var code = ParameterSrvc.urlParams['code'];
+        console.log("login: code ="+code);
 
-        if(typeof oauthCode !== 'undefined') {
-            console.log("login: code provided, request token");
-            var oauthCodePromise = GithubSrvc.requestToken(oauthCode);
-            oauthCodePromise.then(function() {
-               return GithubSrvc.userInfo().getUser();
-            });
+        if(userObject==null) {
+            console.log("login: no user object in local storage")
             return null;
         } else {
-            console.log("login: code not provided, wait for the user to press login");
-            return null;
+            console.log("login: "+userObject);
+            return userObject;
         }
-
 
         // test if the user logged in before
 

@@ -93,18 +93,19 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, Gi
 	// if no token is available listen for button click...
 
 	($scope.login = function() {
-		UserModel.getUser();
+		console.log("Request login");
+		GithubSrvc.helloGithub();
 	})();
 
 	// Request a login code from github if the user presses the login button
     $scope.requestCode = function() {
-        UserModel.login();
+        GithubSrvc.requestCode();
     }
 
 	// logout - this is not really a logout from github, but the access token is deleted
 	$scope.logout = function() {
 		console.log("Logout");
-		UserModel.logout();
+		GithubSrvc.goodByeGithub();
 	}
 
 	// bind user model to the view and listen for events
