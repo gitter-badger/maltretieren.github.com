@@ -11,34 +11,54 @@ comments: false
         <div>Create a copy of this site on your own GitHub account. After the clone is ready you can create/edit your own content on your page. If you dive into you can even customize the page because you have complete control over all sources. Try it...</div>
         <h2>Instructions</h2>
         <div>Login to this page with your GitHub account. Enter the name of your blog (xyz.github.com) and a page slogan. Click on fork...</div>
-        <div class="form-group">
-            <label for="forkName" class="col-md-3 control-label">Address of your blog (please check if it is available)</label>
-            <input type="text" class="col-md-9 form-control" ng-model="options.forkName" ng-model-options="{ debounce: 2000 }" ng-change="checkUnique()" id="forkName" placeholder="xyz.github.com"/>
-        </div>
-        <div class="form-group">
-            <label for="forkSlogan" class="col-md-3 control-label">Slogan of your site</label>
-            <input type="text" class="col-md-9 form-control" ng-model="options.forkSlogan" id="forkSlogan" placeholder="Enter your site slogan"/>
-        </div>
-        <div class="form-group">
-            <label for="realName" class="col-md-3 control-label">Your Name - if you don't like to use your real name, use your GitHub name...</label>
-            <input type="text" class="col-md-9 form-control" ng-model="options.forkRealName" id="realName" placeholder="Enter your name"/>
-        </div>
-        <div class="form-group">
-            <label for="twitter" class="col-md-3 control-label">Twitter</label>
-            <input type="text" class="col-md-9 form-control" ng-model="options.twitter" id="twitter" placeholder="Your twitter account"/>
-        </div>
-		<div class="control-group">
-		  <label class="control-label" for="theme">Theme</label>
-		  <div class="controls">
-			<select ng-model="options.selectedTheme" ng-options="c.name for c in options.availableThemes" id="theme" name="theme">
-				<option value="">Theme</option>
-			</select>
-		  </div>
-		</div>
-		<div class="container col-sm-12" style="margin-top:15px;margin-bottom:15px">
-			<button class='btn btn-warning pull-left' ng-click="fork()">Create a Fork</button>
+		
+		<form class="form-horizontal">
+			<fieldset>
 
-		</div>
+			<!-- Form Name -->
+			<legend>Fork options</legend>
+
+			<!-- Text input-->
+			<div class="control-group">
+			  <label class="control-label" for="pageName">Page name</label>
+			  <div class="controls">
+				<input id="pageName" name="pageName" ng-model="options.forkName"  ng-model-options="{ debounce: 2000 }" ng-change="checkUnique()" placeholder="xyz.github.io" class="input-large" required="" type="text">
+				<p class="help-block">This will be the address of your blog</p>
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="control-group">
+			  <label class="control-label" for="pageSlogan">Slogan</label>
+			  <div class="controls">
+				<input id="pageSlogan" name="pageSlogan" ng-model="options.forkSlogan" placeholder="Yihaaaa" class="input-large" required="" type="text">
+				<p class="help-block">Text in the upper left cornder</p>
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="control-group">
+			  <label class="control-label" for="authorName">Your Name</label>
+			  <div class="controls">
+				<input id="authorName" name="authorName" ng-model="options.forkRealName" placeholder="placeholder" class="input-large" type="text">
+				<p class="help-block">Provide your real name or use your alias</p>
+			  </div>
+			</div>
+
+			<!-- Select Basic -->
+			<div class="control-group">
+			  <label class="control-label" for="theme">Theme</label>
+			  <div class="controls">
+				<select id="theme" name="theme" class="input-large" ng-model="options.selectedTheme" ng-options="c.name for c in options.availableThemes"></select>
+			  </div>
+			</div>
+
+			<div class="container col-sm-12" style="margin-top:15px;margin-bottom:15px">
+				<button class='btn btn-warning pull-left' ng-click="fork()">Create a Fork</button>
+			</div>
+			
+			</fieldset>
+		</form>
     </div>
 	
 {% endraw %}
