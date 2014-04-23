@@ -62,49 +62,6 @@ myApp.service("GithubAuthService", function ($http, $q) {
                 error(function(data, status, headers, config) {
                     alert("Error while getting a token for the provided code");
             });
-        }
-    }
-});
-
-myApp.service("GithubSrvc", function (
-    $rootScope, $q, $interval, GithubAuthService,
-    UserModel, PollingSrvc, ParameterSrvc, $http, $timeout) {
-
-    return {
-        // there are different states: token & code provided, token or code, nothing
-        helloGithub : function(oauthCode, oauthToken) {
-            var self = this;
-            var oauthCode = ParameterSrvc.urlParams['code'];
-            var oauthToken = localStorage.getItem("oauthToken");
-
-            console.log("Token: "+oauthToken);
-            console.log("Code: "+oauthCode);
-
-            if(typeof oauthToken != 'undefined' && oauthToken != null && oauthToken != 'undefined') {
-                console.log("Token provided, try to use it - Token: "+oauthToken)
-                var userPromise = self.userInfo().user();
-                userPromise.then(function() {
-                    var promise = self.testAdmin();
-                    promise.then(function() {
-                        console.log("user is admin");
-                        UserModel.setIsAdmin(true);
-                    }, function(reason) {
-                        console.log("user is not an admin");
-                        UserModel.setIsAdmin(false);
-                    })
-                });
-            } else if(typeof oauthCode === 'undefined' && (typeof oauthToken === 'undefined' || oauthToken === "undefined" || oauthToken === null) ) {
-                console.log("nothing (no code, no token) provided, wait until user presses login button");
-                // after page reload code is available and it will requestToken()
-            } else if(typeof oauthCode != "undefined" && (oauthToken != 'undefined' || oauthToken != null)) {
-                console.log("Code provided, no Token, request token - Code: "+oauthCode)
-                GithubAuthService.requestToken(oauthCode);
-            } else {
-                console.log("There is something wrong with the login");
-            }
-        },
-        requestCode: function() {
-            GithubAuthService.requestCode();
         },
         userInfo: function() {
             var self = this;
@@ -129,7 +86,50 @@ myApp.service("GithubSrvc", function (
                 user: function() { return user(); },
                 logout: function() { return UserModel.logout(); }
             }
+        }
+    }
+});
+
+myApp.service("GithubSrvc", function (
+    $rootScope, $q, $interval, GithubAuthService,
+    UserModel, PollingSrvc, ParameterSrvc, $http, $timeout) {
+
+    return {
+        // there are different states: token & code provided, token or code, nothing
+        helloGithub : function(oauthCode, oauthToken) {
+            var self = this;
+            var oauthCode = ParameterSrvc.urlParams['code'];
+            var oauthToken = localStorage.getItem("oauthToken");
+
+            console.log("Token: "+oauthToken);
+            console.log("Code: "+oauthCode);
+
+            if(typeof oauthToken != 'undefined' && oauthToken != null && oauthToken != 'undefined') {
+                console.log("Token provided, try to use it - Token: "+oauthToken)
+                var userPromise = GithubAuthService.userInfo().user();
+                userPromise.then(function() {
+                    var promise = self.testAdmin();
+                    promise.then(function() {
+                        console.log("user is admin");
+                        UserModel.setIsAdmin(true);
+                    }, function(reason) {
+                        console.log("user is not an admin");
+                        UserModel.setIsAdmin(false);
+                    })
+                });
+            } else if(typeof oauthCode === 'undefined' && (typeof oauthToken === 'undefined' || oauthToken === "undefined" || oauthToken === null) ) {
+                console.log("nothing (no code, no token) provided, wait until user presses login button");
+                // after page reload code is available and it will requestToken()
+            } else if(typeof oauthCode != "undefined" && (oauthToken != 'undefined' || oauthToken != null)) {
+                console.log("Code provided, no Token, request token - Code: "+oauthCode)
+                GithubAuthService.requestToken(oauthCode);
+            } else {
+                console.log("There is something wrong with the login");
+            }
         },
+        requestCode: function() {
+            GithubAuthService.requestCode();
+        },,
         testAdmin: function() {
             var deferred = $q.defer();
             var githubInstance = GithubAuthService.instance();
@@ -375,6 +375,7 @@ myApp.service("UserModel", function ($rootScope, ParameterSrvc, GithubAuthServic
             var oauthCodePromise = GithubAuthService.requestToken(oauthCode);
             oauthCodePromise.then(function(res) {
                console.log("login: token="+res.token);
+               GithubAuthService.getUser
             });
             return null;
         } else {
