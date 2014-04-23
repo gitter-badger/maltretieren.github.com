@@ -194,7 +194,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwi
 	  {name:'superhero'},
 	  {name:'yeti'}
     ];
-	$scope.options.selectedTheme = "";
+	$scope.options.selectedTheme = "lumen";
 
     var checkUnique = function() {
         var url = "";
