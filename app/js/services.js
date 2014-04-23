@@ -368,17 +368,16 @@ myApp.service("UserModel", function ($rootScope, ParameterSrvc, GithubAuthServic
         GithubAuthService.requestCode();
     }
 	this.getUser = function(loginData) {
-        var userObject = this.getLoggedInUser();
         var code = ParameterSrvc.urlParams['code'];
         console.log("login: code ="+code);
 
-        if(userObject==null) {
-            console.log("login: no user object in local storage");
+        if(typeof code !== 'undefined') {
+            console.log("login: code provided, request token");
             console.log(code);
             return null;
         } else {
-            console.log("login: "+userObject);
-            return userObject;
+            console.log("login: code not provided");
+            return null;
         }
 
 
