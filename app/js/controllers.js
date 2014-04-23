@@ -229,7 +229,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwi
 
     $scope.$watch('options.forkName', checkUnique);
 	// change theme
-	$scope.$watch('options.selectedTheme', StyleSwitcher($scope.options.selectedTheme));
+	$scope.$watch('options.selectedTheme', StyleSwitcher.switch($scope.options.selectedTheme));
 	
     $scope.$on('UserModel::userLoggedIn', function(event, userName) {
         console.log(event);
