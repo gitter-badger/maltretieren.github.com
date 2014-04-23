@@ -349,27 +349,29 @@ myApp.service("ParameterSrvc", function ($window) {
 
 myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
 
-	var deferred = $q.defer();
+	
     var poll = function (repoName, branchName) {
         var resource = "README.md";
-        deferred = $q.defer();
+        var deferred = $q.defer();
         // poll for availability - implement as promise, resolve as soon as it is available
-        var githubInstance = GithubAuthService.instance();
-        var repo = githubInstance.getRepo("flamed0011", repoName);
-        var branch = repo.getBranch(branchName);
-        var repoName = repoName;
-        var branchName = branchName;
-
-        var promise = branch.read(resource,false);
-        promise.then(function(res) {
-            console.log("branch available")
-            deferred.resolve();
-        }, function(err) {
-            var restartPolling = function(){
-                poll(repoName, branchName)
-            }
-            $timeout(restartPolling, 2000);
-        });
+		var githubInstance = GithubAuthService.instance();
+		var repo = githubInstance.getRepo("flamed0011", repoName);
+		var branch = repo.getBranch(branchName);
+		var repoName = repoName;
+		var branchName = branchName;
+		
+		var restartPolling = function() {
+		    var promise = branch.read(resource,false);
+			promise.then(function(res) {
+				console.log("branch available")
+				deferred.resolve();
+			}, function(err) {
+				var restart = function(){
+					restartPolling(repoName, branchName)
+				}
+				$timeout(restart, 2000);
+			});
+		}
 
         return deferred.promise;
     };
