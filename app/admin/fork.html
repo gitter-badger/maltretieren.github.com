@@ -29,7 +29,9 @@ comments: false
         </div>
         <div class="form-group">
             <label for="theme" class="col-md-3 control-label">Theme</label>
-            <input type="text" class="col-md-9 form-control" ng-model="options.theme" id="theme" placeholder="Your twitter account"/>
+			<select ng-model="options.theme" ng-options="c.name for c in options.theme">
+				<option value="">Theme</option>
+			</select>
         </div>
 		<div class="container col-sm-12" style="margin-top:15px;margin-bottom:15px">
 			<button class='btn btn-warning pull-left' ng-click="fork()">Create a Fork</button>
