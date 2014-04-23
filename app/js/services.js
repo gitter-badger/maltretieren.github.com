@@ -69,7 +69,7 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
                 var githubInstance = self.instance();
                 var user = githubInstance.getUser();
 
-                return user.getInfo().then(function(res) {
+                var userPromise = user.getInfo().then(function(res) {
                     console.log("login successfull: "+res.login);
                     UserModel.login(res)
 
@@ -78,6 +78,8 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
                     // delete the token from localStorage, because it is invalid...
                     GithubAuthService.requestToken();
                 });
+
+                return userPromise;
             };
 
             return {
