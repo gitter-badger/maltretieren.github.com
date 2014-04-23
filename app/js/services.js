@@ -103,11 +103,11 @@ myApp.service("GithubSrvc", function (
                 console.log("Token provided, try to use it - Token: "+oauthToken)
                 GithubAuthService.userInfo().user();
                 var promise = this.testAdmin();
-                promise.then(function() {
-                    console.log("user is admin");
-                }, function(reason) {
-                    console.log("user is not an admin");
-                })
+                //promise.then(function() {
+                //    console.log("user is admin");
+                //}, function(reason) {
+                //    console.log("user is not an admin");
+                //})
             } else if(typeof oauthCode === 'undefined' && (typeof oauthToken === 'undefined' || oauthToken === "undefined" || oauthToken === null) ) {
                 console.log("nothing (no code, no token) provided, wait until user presses login button");
                 // after page reload code is available and it will requestToken()
