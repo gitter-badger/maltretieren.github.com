@@ -183,6 +183,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwi
     $scope.options.twitter = "";               // Gets overridden, when the user is logged in
     $scope.options.ssl = "";
     $scope.options.github = "";
+	$scope.options.selectedTheme = "lumen";
     $scope.options.availableThemes = [
       {name:'angularui'},
       {name:'darkly'},
@@ -194,7 +195,6 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwi
 	  {name:'superhero'},
 	  {name:'yeti'}
     ];
-	$scope.options.selectedTheme = "lumen";
 
     var checkUnique = function() {
         var url = "";
@@ -228,13 +228,14 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwi
     };
 
     $scope.$watch('options.forkName', checkUnique);
+	$scope.$watch('options.selectedTheme', switchTheme);
+	
 	// change theme
 	var switchTheme = function(themeName) {
 		console.log("controller: switch theme");
 		StyleSwitcher.switch(themeName);
 	}
-	$scope.$watch('options.selectedTheme', switchTheme($scope.options.selectedTheme));
-	
+
     $scope.$on('UserModel::userLoggedIn', function(event, userName) {
         console.log(event);
         $scope.options.forkName = userName+".github.com";
