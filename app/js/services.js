@@ -125,11 +125,11 @@ myApp.service("GithubSrvc", function (
             var deferred = $q.defer();
             var promise = this.commit("test", "test");
             promise.then(function() {
-                promise.resolve();
+                deferred.resolve();
             }, function(reason) {
-                promise.reject();
+                deferred.reject();
             })
-            return promise;
+            return deferred.promise;
         },
 		fork: function(options) {
             // options contain the name for the new github page and the site slogan
