@@ -104,12 +104,14 @@ myApp.service("GithubSrvc", function (
             if(typeof oauthToken != 'undefined' && oauthToken != null && oauthToken != 'undefined') {
                 console.log("Token provided, try to use it - Token: "+oauthToken)
                 var userPromise = GithubAuthService.userInfo().user();
-                var promise = this.testAdmin();
-                promise.then(function() {
-                    console.log("user is admin");
-                }, function(reason) {
-                    console.log("user is not an admin");
-                })
+                userPromise.then(function() {
+                    var promise = this.testAdmin();
+                    promise.then(function() {
+                        console.log("user is admin");
+                    }, function(reason) {
+                        console.log("user is not an admin");
+                    })
+                }
             } else if(typeof oauthCode === 'undefined' && (typeof oauthToken === 'undefined' || oauthToken === "undefined" || oauthToken === null) ) {
                 console.log("nothing (no code, no token) provided, wait until user presses login button");
                 // after page reload code is available and it will requestToken()
@@ -325,7 +327,8 @@ myApp.service("UserModel", function ($rootScope) {
 	this.user = {};
 	this.isAdmin = false;
 	this.token = "";
-	
+
+    this.testAdmin
 	this.login = function(loginData) {
 		this.loggedIn = true;
 		this.user = {
