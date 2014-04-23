@@ -175,7 +175,7 @@ myApp.controller('ToasterController', function($scope, toaster) {
 
 myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwitcher, GithubSrvc, PollingSrvc, PollingImgSrvc) {
 	var scope = $scope;
-	$scope.success = false;
+	scope.success = false;
 	
     $scope.options = {}
     $scope.options.forkSlogan = "Yihaa"             // Default title
