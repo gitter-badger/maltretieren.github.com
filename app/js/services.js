@@ -9,7 +9,7 @@
 // EXAMPLE OF CORRECT DECLARATION OF SERVICE AS A VALUE
 myApp.value('version', '0.1');
 
-myApp.service("GithubAuthService", function ($http, $q) {
+myApp.service("GithubAuthService", function ($http, $q, UserModel) {
 	return {
 		instance : function() {
 			var github = null;
@@ -52,8 +52,8 @@ myApp.service("GithubAuthService", function ($http, $q) {
                 success(function(data, status, headers, config) {
                     if(typeof data.token != 'undefined') {
                         console.log("Yaayy, got a token: "+data.token);
-                        //localStorage.setItem("oauthToken", data.token);
-                        //that.userInfo().user();
+                        localStorage.setItem("oauthToken", data.token);
+                        that.userInfo().user();
                     } else {
                         console.log("It was not possible to get a token with the provided code");
 
@@ -62,6 +62,30 @@ myApp.service("GithubAuthService", function ($http, $q) {
                 error(function(data, status, headers, config) {
                     alert("Error while getting a token for the provided code");
             });
+        },
+        userInfo: function() {
+            var self = this;
+            var user = function() {
+                var githubInstance = self.instance();
+                var user = githubInstance.getUser();
+
+                var userPromise = user.getInfo().then(function(res) {
+                    console.log("login successfull: "+res.login);
+                    UserModel.login(res)
+
+                }, function(err) {
+                    console.log("there was an error getting user information, maybe the token is invalid?");
+                    // delete the token from localStorage, because it is invalid...
+                    GithubAuthService.requestToken();
+                });
+
+                return userPromise;
+            };
+
+            return {
+                user: function() { return user(); },
+                logout: function() { return UserModel.logout(); }
+            }
         }
     }
 });
@@ -105,30 +129,6 @@ myApp.service("GithubSrvc", function (
         },
         requestCode: function() {
             GithubAuthService.requestCode();
-        },
-        userInfo: function() {
-            var self = this;
-            var user = function() {
-                var githubInstance = GithubAuthService.instance();
-                var user = githubInstance.getUser();
-
-                var userPromise = user.getInfo().then(function(res) {
-                    console.log("login successfull: "+res.login);
-                    UserModel.login(res)
-
-                }, function(err) {
-                    console.log("there was an error getting user information, maybe the token is invalid?");
-                    // delete the token from localStorage, because it is invalid...
-                    GithubAuthService.requestToken();
-                });
-
-                return userPromise;
-            };
-
-            return {
-                user: function() { return user(); },
-                logout: function() { return UserModel.logout(); }
-            }
         },
         testAdmin: function() {
             var deferred = $q.defer();
@@ -339,7 +339,7 @@ myApp.service("GithubSrvc", function (
 });
 
 // Inspired by http://joelhooks.com/blog/2013/04/24/modeling-data-and-state-in-your-angularjs-application/
-myApp.service("UserModel", function ($rootScope, ParameterSrvc, GithubAuthService) {
+myApp.service("UserModel", function ($rootScope) {
 	this.user = {
         name: "",
         token: "",
@@ -348,43 +348,7 @@ myApp.service("UserModel", function ($rootScope, ParameterSrvc, GithubAuthServic
         isAdmin: false
     };
 
-    // promise1 = token
-    // promise2 = isAdminTest
-    // if promise1 & promise2 -> save in JSON.stringify(user) in localStorage
-
-    this.getLoggedInUser = function() {
-        var userObject = localStorage.getItem("user");
-        console.log("login: userObject ="+userObject);
-        if(userObject==null) {
-            console.log("login: no user object in local storage")
-            return null;
-        } else {
-            console.log("login: "+userObject);
-            return userObject;
-        }
-    }
-
 	this.login = function(loginData) {
-        var userObject = this.getLoggedInUser();
-        var code = ParameterSrvc.urlParams['code'];
-        console.log("login: code ="+code);
-
-        if(userObject==null) {
-            console.log("login: no user object in local storage")
-            return null;
-        } else {
-            console.log("login: "+userObject);
-            return userObject;
-        }
-
-        // test if the user logged in before
-
-        // check, if there is a user object in localStorage
-        //      -> if yes, get from localStorage and return this object with broadcast
-        //      -> if no, is there a code in url?
-        //          -> if no, request oauth workflo
-        //          -> if yes, request the token with the url
-        //
 		this.user.name = loginData.login;
 		console.log("send a userLoggedIn event for user: "+loginData.login);
 		$rootScope.$broadcast('UserModel::userLoggedIn', loginData.login);
