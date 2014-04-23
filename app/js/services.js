@@ -407,7 +407,7 @@ myApp.service("PollingImgSrvc", function ($q, $timeout) {
 myApp.service("StyleSwitcher", function () {
 	return { switch: function(styleName) {
 		console.log("switch to style: "+styleName);
-		if(styleName!=="") {
+		if(typeof styleName!=='undefined' && styleName !== '') {
 			var i, link_tag ;
 			  for (i = 0, link_tag = document.getElementsByTagName("link") ;
 				i < link_tag.length ; i++ ) {
