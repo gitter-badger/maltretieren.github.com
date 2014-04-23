@@ -199,15 +199,6 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwi
     var checkUnique = function() {
         var url = "";
         var forkName = $scope.options.forkName;
-
-		$http({
-			method: 'GET',
-			url: "https://"+forkName
-		 }).success(function(data){
-			console.log("yessssss")
-		}).error(function(){
-			console.log("noooooo");
-		});
 		
         if($scope.options.forkName.length>4) {
             if($scope.options.forkName.indexOf(".")===-1) {
