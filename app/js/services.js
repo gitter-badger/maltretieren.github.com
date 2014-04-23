@@ -9,7 +9,7 @@
 // EXAMPLE OF CORRECT DECLARATION OF SERVICE AS A VALUE
 myApp.value('version', '0.1');
 
-myApp.service("GithubAuthService", function ($http, $q, UserModel) {
+myApp.service("GithubAuthService", function ($http, $q) {
 	return {
 		instance : function() {
 			var github = null;
@@ -52,8 +52,8 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
                 success(function(data, status, headers, config) {
                     if(typeof data.token != 'undefined') {
                         console.log("Yaayy, got a token: "+data.token);
-                        localStorage.setItem("oauthToken", data.token);
-                        that.userInfo().user();
+                        //localStorage.setItem("oauthToken", data.token);
+                        //that.userInfo().user();
                     } else {
                         console.log("It was not possible to get a token with the provided code");
 
@@ -62,30 +62,6 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
                 error(function(data, status, headers, config) {
                     alert("Error while getting a token for the provided code");
             });
-        },
-        userInfo: function() {
-            var self = this;
-            var user = function() {
-                var githubInstance = self.instance();
-                var user = githubInstance.getUser();
-
-                var userPromise = user.getInfo().then(function(res) {
-                    console.log("login successfull: "+res.login);
-                    UserModel.login(res)
-
-                }, function(err) {
-                    console.log("there was an error getting user information, maybe the token is invalid?");
-                    // delete the token from localStorage, because it is invalid...
-                    GithubAuthService.requestToken();
-                });
-
-                return userPromise;
-            };
-
-            return {
-                user: function() { return user(); },
-                logout: function() { return UserModel.logout(); }
-            }
         }
     }
 });
@@ -106,7 +82,7 @@ myApp.service("GithubSrvc", function (
 
             if(typeof oauthToken != 'undefined' && oauthToken != null && oauthToken != 'undefined') {
                 console.log("Token provided, try to use it - Token: "+oauthToken)
-                var userPromise = GithubAuthService.userInfo().user();
+                var userPromise = self.userInfo().user();
                 userPromise.then(function() {
                     var promise = self.testAdmin();
                     promise.then(function() {
@@ -129,6 +105,30 @@ myApp.service("GithubSrvc", function (
         },
         requestCode: function() {
             GithubAuthService.requestCode();
+        },
+        userInfo: function() {
+            var self = this;
+            var user = function() {
+                var githubInstance = GithubAuthService.instance();
+                var user = githubInstance.getUser();
+
+                var userPromise = user.getInfo().then(function(res) {
+                    console.log("login successfull: "+res.login);
+                    UserModel.login(res)
+
+                }, function(err) {
+                    console.log("there was an error getting user information, maybe the token is invalid?");
+                    // delete the token from localStorage, because it is invalid...
+                    GithubAuthService.requestToken();
+                });
+
+                return userPromise;
+            };
+
+            return {
+                user: function() { return user(); },
+                logout: function() { return UserModel.logout(); }
+            }
         },
         testAdmin: function() {
             var deferred = $q.defer();
