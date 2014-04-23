@@ -365,7 +365,7 @@ myApp.service("UserModel", function ($rootScope, ParameterSrvc) {
     }
 
 	this.login = function(loginData) {
-        var userObject = getLoggedInUser();
+        var userObject = this.getLoggedInUser();
         var code = ParameterSrvc.urlParams['code'];
         console.log("login: code ="+code);
 
