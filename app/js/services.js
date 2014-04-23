@@ -130,7 +130,10 @@ myApp.service("GithubSrvc", function (
         },
         testAdmin: function() {
             var deferred = $q.defer();
-            var promise = this.commit("test", "test");
+            var githubInstance = GithubAuthService.instance();
+            var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
+            var branch = repo.getBranch("master");
+            var promise = this.commit("test", "test", branch);
             promise.then(function() {
                 deferred.resolve();
             }, function(reason) {
@@ -252,7 +255,10 @@ myApp.service("GithubSrvc", function (
                     }
                 }
                 //console.log(newConfigData);
-                var commitPromise = self.commit(newConfigData, path);
+                var githubInstance = GithubAuthService.instance();
+                var repo = githubInstance.getRepo(UserModel.user.name, UserModel.user.name+".github.com");
+                var branch = repo.getBranch("master");
+                var commitPromise = self.commit(newConfigData, path, branch);
                 commitPromise.then(function() {
                     deferred.resolve(newConfigData);
                 });
@@ -297,10 +303,7 @@ myApp.service("GithubSrvc", function (
             })
             return deferred.promise;
         },
-		commit: function(text, path) {
-            var githubInstance = GithubAuthService.instance();
-            var repo = githubInstance.getRepo(UserModel.user.name, UserModel.user.name+".github.com");
-            var branch = repo.getBranch("master");
+		commit: function(text, path, repo) {
             var contents = {};
             contents[path] = text;
 
