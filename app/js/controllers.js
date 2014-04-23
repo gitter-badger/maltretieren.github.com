@@ -264,6 +264,9 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
         .then( function() {
             return GithubSrvc.createBranch(forkName, "master")
         })
+		.then ( function() {
+			return GithubSrvc.deleteBranch(forkName, "heads/template")
+		}
         .then( function() {
             scope.pop("Fork to GitHub successful", "<ul><li>You will be notified, when the fork is ready...</li></ul>");
         })
