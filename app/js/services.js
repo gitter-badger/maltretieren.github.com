@@ -102,7 +102,7 @@ myApp.service("GithubSrvc", function (
             if(typeof oauthToken != 'undefined' && oauthToken != null && oauthToken != 'undefined') {
                 console.log("Token provided, try to use it - Token: "+oauthToken)
                 GithubAuthService.userInfo().user();
-                var promise = this.testAdmin();
+                //var promise = this.testAdmin();
                 //promise.then(function() {
                 //    console.log("user is admin");
                 //}, function(reason) {
