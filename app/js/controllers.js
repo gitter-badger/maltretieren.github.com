@@ -259,24 +259,31 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwi
         // pass in options
         GithubSrvc.fork($scope.options)
         .then( function() {
+			scope.progress = 10;
             return PollingSrvc.checkForBranchContent("maltretieren.github.com", "master")
         })
         .then( function() {
+			scope.progress = 20;
             return GithubSrvc.renameRepo(forkName);
         })
         .then( function() {
+			scope.progress = 30;
             return PollingSrvc.checkForBranchContent(forkName, "template")
         })
         .then( function() {
+			scope.progress = 40;
             return GithubSrvc.deleteBranch(forkName, "heads/master")
         })
         .then( function() {
+			scope.progress = 50;
             return GithubSrvc.createBranch(forkName, "master")
         })
 		.then ( function() {
+			scope.progress = 60;
 			return GithubSrvc.deleteBranch(forkName, "heads/template")
 		})
         .then( function() {
+			scope.progress = 70;
             scope.pop("Fork to GitHub successful", "<ul><li>You will be notified, when the fork is ready...</li></ul>");
         })
         .then( function() {
@@ -290,13 +297,16 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwi
                  enforce_ssl: ssl,
                  theme: theme
              }
+			 scope.progress = 80;
              return GithubSrvc.postProcess("_config.yml", replace);
         })
         .then(function(){
+			scope.progress = 90;
             return PollingImgSrvc.checkReady();
         })
         .then(function() {
 			scope.success = true;
+			scope.progress = 100;
             return $q.when(scope.pop("Page available", "Visit "+forkName+" to see it live..."));
         })
 	};

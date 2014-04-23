@@ -58,6 +58,9 @@ comments: false
 				<div class="container col-sm-2" >
 					<button class='btn btn-warning pull-left' ng-click="fork()">Create a Fork</button>
 				</div>
+				<div class="progress progress-striped active container col-sm-10" ng-show="!success">
+				  <div class="progress-bar" style="width: {{progress}}%"></div>
+				</div>
 				<div ng-cloak class="container col-sm-10 ng-hide" ng-show="success">
 					<h4>Successful!!! Please visit <a href="https://{{options.forkName}}" target="_blank">{{options.forkName}}</a></h4>
 				</div>
