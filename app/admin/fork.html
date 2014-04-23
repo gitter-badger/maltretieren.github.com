@@ -26,7 +26,7 @@ comments: false
 			  <label class="control-label col-sm-2" style="text-align:left;" for="pageName">Page name</label>
 			  <div class="controls col-sm-10">
 					<input id="pageName" name="pageName" ng-model="options.forkName"  ng-model-options="{ debounce: 2000 }" ng-change="checkUnique()" placeholder="xyz.github.io" class="form-control" required="" type="text">
-					<p class="help-block">This will be the address of your blog (please check if the address is available). <span class="text-warning">WARNING: Make sure you don't already have a repository with this name in your account - otherwise the master branch of that will get deleted...</p>
+					<p class="help-block">This will be the address of your blog (please check if the address is available). <span class="text-danger">WARNING: Make sure you don't already have a repository with this name in your account - otherwise the master branch of that will get deleted...</p>
 			  </div>
 			</div>
 
