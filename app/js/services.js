@@ -307,6 +307,8 @@ myApp.service("GithubSrvc", function (
             return branch.writeMany(contents, 'Save from GUI').then(function() {
                 console.log("saved");
                 $rootScope.$broadcast('Toast::githubCommitSuccess');
+            }, function(error) {
+                console.log("there was a commit error");
             });
         },
         deleteContent: function(path) {
