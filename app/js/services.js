@@ -375,8 +375,6 @@ myApp.service("UserModel", function ($rootScope, ParameterSrvc, GithubService) {
             var oauthCodePromise = GithubService.requestToken(oauthCode);
             oauthCodePromise.then(function() {
                return GithubService.userInfo().getUser();
-            }).then(function() {
-
             });
             return null;
         } else {
