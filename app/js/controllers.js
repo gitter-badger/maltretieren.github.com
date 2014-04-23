@@ -271,7 +271,9 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
             scope.pop("Fork to GitHub successful", "<ul><li>You will be notified, when the fork is ready...</li></ul>");
         })
         .then( function() {
-             var replace = {
+             // the key is the string to search for
+			 // the value is the text to replace with
+			 var replace = {
                  title: forkSlogan,
                  name: name,
                  twitter: twitter,
