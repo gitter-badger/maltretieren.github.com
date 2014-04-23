@@ -226,15 +226,16 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwi
             console.log("here the test should come if the url is available: "+$scope.options.forkName);
         }
     };
-
-    $scope.$watch('options.forkName', checkUnique);
-	$scope.$watch('options.selectedTheme', switchTheme);
 	
 	// change theme
 	var switchTheme = function(themeName) {
 		console.log("controller: switch theme"+$scope.options.selectedTheme);
 		StyleSwitcher.switch(themeName);
 	}
+	
+    $scope.$watch('options.forkName', checkUnique);
+	$scope.$watch('options.selectedTheme', switchTheme);
+
 
     $scope.$on('UserModel::userLoggedIn', function(event, userName) {
         console.log(event);
