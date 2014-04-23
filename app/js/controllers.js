@@ -93,7 +93,6 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, Gi
 	// if no token is available listen for button click...
 
 	($scope.login = function() {
-		console.log("Request login");
 		UserModel.getUser();
 	})();
 
