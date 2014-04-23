@@ -221,7 +221,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
         console.log(event);
         $scope.options.forkName = userName+".github.com";
         $scope.options.forkRealName = userName;
-        $scope.options.twitter = "@"+userName;
+        $scope.options.twitter = userName;
         $scope.options.ssl = userName+".github.io";
         $scope.options.github = userName;
         $scope.$apply();
