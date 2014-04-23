@@ -229,8 +229,8 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwi
 
     $scope.$watch('options.forkName', checkUnique);
 	// change theme
-	var switchTheme(themeName) {
-		StyleSwitcher.switch(themeName)
+	var switchTheme = function(themeName) {
+		StyleSwitcher.switch(themeName);
 	}
 	$scope.$watch('options.selectedTheme', switchTheme($scope.options.selectedTheme));
 	
