@@ -27,11 +27,13 @@ comments: false
             <label for="twitter" class="col-md-3 control-label">Twitter</label>
             <input type="text" class="col-md-9 form-control" ng-model="options.twitter" id="twitter" placeholder="Your twitter account"/>
         </div>
-		<div class="row">
-			<label for="theme" class="col-md-3 control-label">Theme</label>
-			<select ng-model="options.selectedTheme" ng-options="c.name for c in options.availableThemes" id="theme">
+		<div class="control-group">
+		  <label class="control-label" for="theme">Theme</label>
+		  <div class="controls">
+			<select ng-model="options.selectedTheme" ng-options="c.name for c in options.availableThemes" id="theme" name="theme">
 				<option value="">Theme</option>
 			</select>
+		  </div>
 		</div>
 		<div class="container col-sm-12" style="margin-top:15px;margin-bottom:15px">
 			<button class='btn btn-warning pull-left' ng-click="fork()">Create a Fork</button>

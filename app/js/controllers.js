@@ -245,7 +245,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
         var twitter = $scope.options.twitter;
         var ssl = $scope.options.ssl;
         var github = $scope.options.github;
-        var theme = $scope.options.theme;
+        var theme = $scope.options.selectedTheme;
 
         // pass in options
         GithubSrvc.fork($scope.options)
