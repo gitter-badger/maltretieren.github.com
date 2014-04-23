@@ -239,10 +239,10 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwi
 
     $scope.$on('UserModel::userLoggedIn', function(event, userName) {
         console.log(event);
-        $scope.options.forkName = userName+".github.io";
+        $scope.options.forkName = userName+".github.com";
         $scope.options.forkRealName = userName;
         $scope.options.twitter = userName;
-        $scope.options.ssl = userName+".github.io";
+        $scope.options.ssl = userName+".github.com";
         $scope.options.github = userName;
         $scope.$apply();
     });
