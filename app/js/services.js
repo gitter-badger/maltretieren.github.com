@@ -372,6 +372,7 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
 				$timeout(restart, 2000);
 			});
 		}
+		restartPolling();
 
         return deferred.promise;
     };
