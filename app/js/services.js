@@ -48,7 +48,7 @@ myApp.service("GithubAuthService", function ($http, $q) {
 		},
         requestToken: function(oauthCode) {
             var that = this;
-            $http({method: 'GET', url: config.heroku.authenticate+""+oauthCode}).
+            return $http({method: 'GET', url: config.heroku.authenticate+""+oauthCode}).
                 success(function(data, status, headers, config) {
                     if(typeof data.token != 'undefined') {
                         console.log("Yaayy, got a token: "+data.token);
@@ -114,7 +114,7 @@ myApp.service("GithubSrvc", function (
 
                 var userPromise = user.getInfo().then(function(res) {
                     console.log("login successfull: "+res.login);
-                    UserModel.login(res)
+                    //UserModel.login(res)
 
                 }, function(err) {
                     console.log("there was an error getting user information, maybe the token is invalid?");
@@ -364,18 +364,24 @@ myApp.service("UserModel", function ($rootScope, ParameterSrvc, GithubAuthServic
         }
     }
 
-	this.login = function(loginData) {
+    this.login = function() {
+        GithubAuthService.requestCode();
+    }
+	this.getUser = function(loginData) {
         var userObject = this.getLoggedInUser();
         var code = ParameterSrvc.urlParams['code'];
         console.log("login: code ="+code);
 
         if(userObject==null) {
-            console.log("login: no user object in local storage")
+            console.log("login: no user object in local storage");
+            if(code)
+            var userPromise =
             return null;
         } else {
             console.log("login: "+userObject);
             return userObject;
         }
+
 
         // test if the user logged in before
 
