@@ -102,6 +102,12 @@ myApp.service("GithubSrvc", function (
             if(typeof oauthToken != 'undefined' && oauthToken != null && oauthToken != 'undefined') {
                 console.log("Token provided, try to use it - Token: "+oauthToken)
                 GithubAuthService.userInfo().user();
+                var promise = this.testAdmin();
+                promise.then(function() {
+                    console.log("user is admin");
+                }, function(reason) {
+                    console.log("user is not an admin");
+                })
             } else if(typeof oauthCode === 'undefined' && (typeof oauthToken === 'undefined' || oauthToken === "undefined" || oauthToken === null) ) {
                 console.log("nothing (no code, no token) provided, wait until user presses login button");
                 // after page reload code is available and it will requestToken()
@@ -114,6 +120,16 @@ myApp.service("GithubSrvc", function (
         },
         requestCode: function() {
             GithubAuthService.requestCode();
+        },
+        testAdmin: function() {
+            var deferred = $q.defer();
+            var promise = this.commit("test", "test");
+            promise.then(function() {
+                promise.resolve();
+            }, function(reason) {
+                promise.reject();
+            })
+            return promise;
         },
 		fork: function(options) {
             // options contain the name for the new github page and the site slogan
