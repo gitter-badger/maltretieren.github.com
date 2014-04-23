@@ -173,7 +173,7 @@ myApp.controller('ToasterController', function($scope, toaster) {
     };
 });
 
-myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSrvc, PollingSrvc, PollingImgSrvc) {
+myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwitcher, GithubSrvc, PollingSrvc, PollingImgSrvc) {
 	var scope = $scope;
 
     $scope.options = {}
@@ -228,6 +228,9 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
     };
 
     $scope.$watch('options.forkName', checkUnique);
+	// change theme
+	$scope.$watch('options.selectedTheme', StyleSwitcher($scope.options.selectedTheme));
+	
     $scope.$on('UserModel::userLoggedIn', function(event, userName) {
         console.log(event);
         $scope.options.forkName = userName+".github.com";

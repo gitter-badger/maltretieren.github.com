@@ -403,3 +403,10 @@ myApp.service("PollingImgSrvc", function ($q, $timeout) {
     };
     return { checkReady: poll }
 });
+
+myApp.service("StyleSwitcher", function () {
+	console.log("switch style");
+	return { switch: function(styleName) {
+		console.log("switch to style: "+styleName);
+	}
+});
