@@ -69,7 +69,7 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
                 var githubInstance = self.instance();
                 var user = githubInstance.getUser();
 
-                return $q.when(user.getInfo()).then(function(res) {
+                return user.getInfo().then(function(res) {
                     console.log("login successfull: "+res.login);
                     UserModel.login(res)
 
