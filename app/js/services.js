@@ -368,11 +368,14 @@ myApp.service("UserModel", function ($rootScope, ParameterSrvc, GithubAuthServic
         GithubAuthService.requestCode();
     }
 	this.getUser = function(loginData) {
-        var code = ParameterSrvc.urlParams['code'];
+        var oauthCode = ParameterSrvc.urlParams['code'];
 
         if(typeof code !== 'undefined') {
             console.log("login: code provided, request token");
-            console.log(code);
+            var oauthCodePromise = GithubAuthService.requestToken(oauthCode);
+            oauthCodePromise.then(function(token) {
+               console.log("login: token="+token);
+            });
             return null;
         } else {
             console.log("login: code not provided, wait for the user to press login");
