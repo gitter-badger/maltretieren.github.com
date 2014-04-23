@@ -339,7 +339,7 @@ myApp.service("GithubSrvc", function (
 });
 
 // Inspired by http://joelhooks.com/blog/2013/04/24/modeling-data-and-state-in-your-angularjs-application/
-myApp.service("UserModel", function ($rootScope, ParameterSrvc, GithubAuthService) {
+myApp.service("UserModel", function ($rootScope, ParameterSrvc, GithubService) {
 	this.user = {
         name: "",
         token: "",
@@ -365,16 +365,18 @@ myApp.service("UserModel", function ($rootScope, ParameterSrvc, GithubAuthServic
     }
 
     this.login = function() {
-        GithubAuthService.requestCode();
+        GithubService.requestCode();
     }
 	this.getUser = function(loginData) {
         var oauthCode = ParameterSrvc.urlParams['code'];
 
         if(typeof oauthCode !== 'undefined') {
             console.log("login: code provided, request token");
-            var oauthCodePromise = GithubAuthService.requestToken(oauthCode);
-            oauthCodePromise.then(function(res) {
-               GithubAuthService.getUser();
+            var oauthCodePromise = GithubService.requestToken(oauthCode);
+            oauthCodePromise.then(function() {
+               return GithubService.userInfo().getUser();
+            }).then(function() {
+
             });
             return null;
         } else {
