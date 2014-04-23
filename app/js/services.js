@@ -342,17 +342,20 @@ myApp.service("GithubSrvc", function (
 myApp.service("UserModel", function ($rootScope) {
 	this.user = {
         name: "",
+        token: "",
+        mail: "",
         repository: "",
         isAdmin: false
     };
-	this.isAdmin = false;
-	this.token = "";
 
 	this.login = function(loginData) {
 		this.loggedIn = true;
 		this.user = {
 			name: loginData.login,
-            repository: ""
+            token: "",
+            mail: "",
+            repository: "",
+            isAdmin: false
 		};
 		console.log("send a userLoggedIn event for user: "+loginData.login);
 		$rootScope.$broadcast('UserModel::userLoggedIn', loginData.login);
