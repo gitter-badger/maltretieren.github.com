@@ -175,7 +175,8 @@ myApp.controller('ToasterController', function($scope, toaster) {
 
 myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwitcher, GithubSrvc, PollingSrvc, PollingImgSrvc) {
 	var scope = $scope;
-
+	$scope.success = false;
+	
     $scope.options = {}
     $scope.options.forkSlogan = "Yihaa"             // Default title
     $scope.options.forkName = "";                   // Gets overridden, when the user is logged in
@@ -202,7 +203,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwi
 		
         if($scope.options.forkName.length>4) {
             if($scope.options.forkName.indexOf(".")===-1) {
-                url =  "http://"+$scope.options.forkName+".github.io";
+                url =  "http://"+$scope.options.forkName+".github.com";
             }
 
             this.img = new Image();
@@ -295,6 +296,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwi
             return PollingImgSrvc.checkReady();
         })
         .then(function() {
+			scope.success = true;
             return $q.when(scope.pop("Page available", "Visit "+forkName+" to see it live..."));
         })
 	};
