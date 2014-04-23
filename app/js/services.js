@@ -349,9 +349,10 @@ myApp.service("ParameterSrvc", function ($window) {
 
 myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
 
+	var deferred = $q.defer();
     var poll = function (repoName, branchName) {
         var resource = "README.md";
-        var deferred = $q.defer();
+        deferred = $q.defer();
         // poll for availability - implement as promise, resolve as soon as it is available
         var githubInstance = GithubAuthService.instance();
         var repo = githubInstance.getRepo("flamed0011", repoName);
