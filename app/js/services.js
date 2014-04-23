@@ -97,6 +97,7 @@ myApp.service("GithubSrvc", function (
     return {
         // there are different states: token & code provided, token or code, nothing
         helloGithub : function(oauthCode, oauthToken) {
+            var self = this;
             var oauthCode = ParameterSrvc.urlParams['code'];
             var oauthToken = localStorage.getItem("oauthToken");
 
@@ -107,7 +108,7 @@ myApp.service("GithubSrvc", function (
                 console.log("Token provided, try to use it - Token: "+oauthToken)
                 var userPromise = GithubAuthService.userInfo().user();
                 userPromise.then(function() {
-                    var promise = this.testAdmin();
+                    var promise = self.testAdmin();
                     promise.then(function() {
                         console.log("user is admin");
                     }, function(reason) {
