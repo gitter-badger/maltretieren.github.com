@@ -348,6 +348,9 @@ myApp.service("UserModel", function ($rootScope) {
         isAdmin: false
     };
 
+    // promise1 = token
+    // promise2 = isAdminTest
+
 	this.login = function(loginData) {
 		this.user.name = loginData.login;
 		console.log("send a userLoggedIn event for user: "+loginData.login);
