@@ -202,7 +202,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwi
 
 		$http({
 			method: 'GET',
-			url: forkname
+			url: forkName
 		 }).success(function(data){
 			console.log("yessssss")
 		}).error(function(){
