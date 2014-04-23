@@ -68,18 +68,16 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
             var user = function() {
                 var githubInstance = self.instance();
                 var user = githubInstance.getUser();
-                user.then(function(){
+
+                $q.when(user.getInfo()).then(function(res) {
+                    console.log("login successfull: "+res.login);
+                    UserModel.login(res);
                     var promise = this.testAdmin();
                     promise.then(function() {
                         console.log("user is admin");
                     }, function(reason) {
                         console.log("user is not an admin");
                     })
-                })
-
-                $q.when(user.getInfo()).then(function(res) {
-                    console.log("login successfull: "+res.login);
-                    UserModel.login(res);
                 }, function(err) {
                     console.log("there was an error getting user information, maybe the token is invalid?");
                     // delete the token from localStorage, because it is invalid...
