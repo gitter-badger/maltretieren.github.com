@@ -92,7 +92,7 @@ myApp.service("GithubAuthService", function ($http, $q) {
 
 myApp.service("GithubSrvc", function (
     $rootScope, $q, $interval, GithubAuthService,
-    UserModel, PollingSrvc, ParameterSrvc, $http, $timeout) {
+    PollingSrvc, ParameterSrvc, $http, $timeout) {
 
     return {
         // there are different states: token & code provided, token or code, nothing
@@ -111,10 +111,10 @@ myApp.service("GithubSrvc", function (
                     var promise = self.testAdmin();
                     promise.then(function() {
                         console.log("user is admin");
-                        UserModel.setIsAdmin(true);
+                        //UserModel.setIsAdmin(true);
                     }, function(reason) {
                         console.log("user is not an admin");
-                        UserModel.setIsAdmin(false);
+                        //UserModel.setIsAdmin(false);
                     })
                 });
             } else if(typeof oauthCode === 'undefined' && (typeof oauthToken === 'undefined' || oauthToken === "undefined" || oauthToken === null) ) {
