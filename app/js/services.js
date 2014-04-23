@@ -339,7 +339,7 @@ myApp.service("GithubSrvc", function (
 });
 
 // Inspired by http://joelhooks.com/blog/2013/04/24/modeling-data-and-state-in-your-angularjs-application/
-myApp.service("UserModel", function ($rootScope) {
+myApp.service("UserModel", function ($rootScope, ParameterSrvc) {
 	this.user = {
         name: "",
         token: "",
@@ -352,9 +352,33 @@ myApp.service("UserModel", function ($rootScope) {
     // promise2 = isAdminTest
     // if promise1 & promise2 -> save in JSON.stringify(user) in localStorage
 
-	this.login = function(loginData) {
+    this.getLoggedInUser = function() {
         var userObject = localStorage.getItem("user");
-        console.log("login: "+userObject);
+        console.log("login: userObject ="+userObject);
+        if(userObject==null) {
+            console.log("login: no user object in local storage")
+            return null;
+        } else {
+            console.log("login: "+userObject);
+            return userObject;
+        }
+    }
+
+	this.login = function(loginData) {
+        var userObject = getLoggedInUser();
+        var code = ParameterSrvc.urlParams['code'];
+        console.log("login: code ="+code);
+
+        if(userObject==null) {
+            console.log("login: no user object in local storage")
+            return null;
+        } else {
+            console.log("login: "+userObject);
+            return userObject;
+        }
+
+        // test if the user logged in before
+
         // check, if there is a user object in localStorage
         //      -> if yes, get from localStorage and return this object with broadcast
         //      -> if no, is there a code in url?
