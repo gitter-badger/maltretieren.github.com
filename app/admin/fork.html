@@ -20,19 +20,17 @@ comments: false
 
 			<!-- Text input-->
 			<div class="control-group">
-			  <label class="control-label col-sm-1" for="pageName">Page name</label>
-			  <div class="controls">
-				<div class="col-sm-10">
+			  <label class="control-label col-sm-2" for="pageName">Page name</label>
+			  <div class="controls col-sm-10">
 					<input id="pageName" name="pageName" ng-model="options.forkName"  ng-model-options="{ debounce: 2000 }" ng-change="checkUnique()" placeholder="xyz.github.io" class="form-control" required="" type="text">
 					<p class="help-block">This will be the address of your blog</p>
-				</div>
 			  </div>
 			</div>
 
 			<!-- Text input-->
 			<div class="control-group">
-			  <label class="control-label" for="pageSlogan">Slogan</label>
-			  <div class="controls">
+			  <label class="control-label col-sm-2" for="pageSlogan">Slogan</label>
+			  <div class="controls col-sm-10">
 				<input id="pageSlogan" name="pageSlogan" ng-model="options.forkSlogan" placeholder="Yihaaaa" class="form-control" required="" type="text">
 				<p class="help-block">Text in the upper left cornder</p>
 			  </div>
@@ -40,8 +38,8 @@ comments: false
 
 			<!-- Text input-->
 			<div class="control-group">
-			  <label class="control-label" for="authorName">Your Name</label>
-			  <div class="controls">
+			  <label class="control-label col-sm-2" for="authorName">Your Name</label>
+			  <div class="controls col-sm-10">
 				<input id="authorName" name="authorName" ng-model="options.forkRealName" placeholder="placeholder" class="form-control" type="text">
 				<p class="help-block">Provide your real name or use your alias</p>
 			  </div>
@@ -49,8 +47,8 @@ comments: false
 
 			<!-- Select Basic -->
 			<div class="control-group">
-			  <label class="control-label" for="theme">Theme</label>
-			  <div class="controls">
+			  <label class="control-label col-sm-2" for="theme">Theme</label>
+			  <div class="controls col-sm-10">
 				<select id="theme" name="theme" class="form-control" ng-init="" ng-model="options.selectedTheme" ng-options="c.name for c in options.availableThemes"></select>
 				<p class="help-block">Themes are from <a href="http://bootswatch.com">http://bootswatch.com</a></p>
 			  </div>
