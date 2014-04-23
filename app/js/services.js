@@ -308,13 +308,17 @@ myApp.service("GithubSrvc", function (
 		commit: function(text, path, branch) {
             var contents = {};
             contents[path] = text;
+            var deferred = $q.defer();
 
-            return branch.writeMany(contents, 'Save from GUI').then(function() {
+            branch.writeMany(contents, 'Save from GUI').then(function() {
                 console.log("saved");
+                deferred.resolve();
                 $rootScope.$broadcast('Toast::githubCommitSuccess');
             }, function(error) {
                 console.log("there was a commit error");
+                deferred.reject();
             });
+            return deferred.promise;
         },
         deleteContent: function(path) {
             var githubInstance = GithubAuthService.instance();
