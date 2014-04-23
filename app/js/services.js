@@ -201,9 +201,9 @@ myApp.service("GithubSrvc", function (
 				console.log("master branch created from template branch");
                 branch = repo.getBranch("master");
                 var callback = function() {
-                    //repo.git.deleteRef("heads/template");
+                    repo.git.deleteRef("heads/template");
                 };
-                //PollingSrvc.checkForBranchContent(branch, "README.md", callback);
+                PollingSrvc.checkForBranchContent(branch, "README.md", callback);
 			});
         },
         postProcess: function(path, replace) {
