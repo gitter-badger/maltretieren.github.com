@@ -339,7 +339,7 @@ myApp.service("GithubSrvc", function (
 });
 
 // Inspired by http://joelhooks.com/blog/2013/04/24/modeling-data-and-state-in-your-angularjs-application/
-myApp.service("UserModel", function ($rootScope, ParameterSrvc) {
+myApp.service("UserModel", function ($rootScope, ParameterSrvc, GithubAuthService) {
 	this.user = {
         name: "",
         token: "",
