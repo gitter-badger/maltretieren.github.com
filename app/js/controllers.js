@@ -183,7 +183,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
     $scope.options.twitter = "";               // Gets overridden, when the user is logged in
     $scope.options.ssl = "";
     $scope.options.github = "";
-    $scope.options.theme = [
+    $scope.options.availableThemes = [
       {name:'angularui'},
       {name:'darkly'},
       {name:'flatly'},
@@ -194,6 +194,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, GithubSr
 	  {name:'superhero'},
 	  {name:'yeti'}
     ];
+	$scope.options.selectedTheme = "";
 
     var checkUnique = function() {
         var url = "";

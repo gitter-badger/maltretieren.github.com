@@ -28,7 +28,7 @@ comments: false
             <input type="text" class="col-md-9 form-control" ng-model="options.twitter" id="twitter" placeholder="Your twitter account"/>
         </div>
         <label for="theme" class="col-md-3 control-label">Theme</label>
-		<ui-select ng-model="options.theme" ng-options="c.name for c in options.theme" id="theme">
+		<ui-select ng-model="options.selectedTheme" ng-options="c.name for c in options.availableThemes" id="theme">
 			<option value="">Theme</option>
 			</ui-select>
 		<div class="container col-sm-12" style="margin-top:15px;margin-bottom:15px">
