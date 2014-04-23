@@ -129,7 +129,7 @@ myApp.service("GithubSrvc", function (
         },
         requestCode: function() {
             GithubAuthService.requestCode();
-        },,
+        },
         testAdmin: function() {
             var deferred = $q.defer();
             var githubInstance = GithubAuthService.instance();
