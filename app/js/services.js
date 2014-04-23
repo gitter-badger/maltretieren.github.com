@@ -72,7 +72,7 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
                 $q.when(user.getInfo()).then(function(res) {
                     console.log("login successfull: "+res.login);
                     UserModel.login(res);
-                    var promise = this.testAdmin();
+                    var promise = self.testAdmin();
                     promise.then(function() {
                         console.log("user is admin");
                     }, function(reason) {
