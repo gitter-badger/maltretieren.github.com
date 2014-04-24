@@ -91,7 +91,8 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, Gi
 	//      - guide them with a link to the new repo and encourage them to click on "edit"
 	
 	// if no token is available listen for button click...
-	($scope.login = function() {
+	$scope.user = {};
+	$scope.login = function() {
 		console.log("Request login");
 		var user = UserModel.getUser();
 		if(typeof user !== 'undefined') {
@@ -115,7 +116,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, Gi
 	}
 
 	// bind user model to the view and listen for events
-	$scope.user = UserModel.user;
+	//$scope.user = UserModel.user;
 	$scope.$on('UserModel::userLoggedIn', function(event) {
 		console.log("the GithubCtrl received an userLoggedIn event for user: "+UserModel.user.name);
         $scope.user = UserModel.user;
