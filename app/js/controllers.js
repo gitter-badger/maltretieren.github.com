@@ -113,7 +113,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, ParameterSrvc
 					return GithubSrvc.testAdmin();
 				}).then(function() {
 					console.log("login done....");
-				}
+				});
 			} else {
 				console.log("nothing to do, wait for the user to press the login button");
 			}
