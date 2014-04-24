@@ -99,43 +99,6 @@ myApp.service("GithubSrvc", function (
     UserModel, PollingSrvc, ParameterSrvc, $http, $timeout) {
 
     return {
-        // there are different states: token & code provided, token or code, nothing
-        helloGithub : function(oauthCode, oauthToken) {
-            var self = this;
-            var oauthCode = ParameterSrvc.urlParams['code'];
-            var oauthToken = localStorage.getItem("oauthToken");
-
-            console.log("Token: "+oauthToken);
-            console.log("Code: "+oauthCode);
-
-            if(typeof oauthToken != 'undefined' && oauthToken != null && oauthToken != 'undefined') {
-                console.log("Token provided, try to use it - Token: "+oauthToken)
-                var userPromise = GithubAuthService.userInfo().user();
-                userPromise.then(function() {
-					console.log("got a user object, now test if the user is an admin....");
-                    var promise = self.testAdmin();
-                    promise.then(function() {
-                        console.log("user is admin");
-                        UserModel.setIsAdmin(true);
-                    }, function(reason) {
-                        console.log("user is not an admin");
-                        UserModel.setIsAdmin(false);
-                    })
-                });
-            } else if(typeof oauthCode === 'undefined' && (typeof oauthToken === 'undefined' || oauthToken === "undefined" || oauthToken === null) ) {
-                console.log("nothing (no code, no token) provided, wait until user presses login button");
-                // after page reload code is available and it will requestToken()
-            } else if(typeof oauthCode != "undefined" && (oauthToken != 'undefined' || oauthToken != null)) {
-                console.log("Code provided, no Token, request token - Code: "+oauthCode)
-                var tokenPromise = GithubAuthService.requestToken(oauthCode);
-				tokenPromise.then(function() {
-					console.log("token available... use it to get the user object");
-					self.helloGithub();
-				})
-            } else {
-                console.log("There is something wrong with the login");
-            }
-        },
         requestCode: function() {
             GithubAuthService.requestCode();
         },
