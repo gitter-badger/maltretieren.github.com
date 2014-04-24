@@ -118,7 +118,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, Gi
 		console.log("the GithubCtrl received an userLoggedIn event for user: "+UserModel.user.name);
         var user = UserModel.getUser();
 		if(typeof user !== 'undefined' && user !== null) {
-			scope.user = user;
+			$scope.user = user;
 		} else {
 			GithubSrvc.helloGithub();
 		}
