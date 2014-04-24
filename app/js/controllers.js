@@ -95,8 +95,11 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, Gi
 	($scope.login = function() {
 		console.log("Request login");
 		var user = UserModel.getUser();
-		console.log(user);
-		GithubSrvc.helloGithub();
+		if(typeof user !== 'undefined) {
+			$scope.user = user;
+		} else {
+			GithubSrvc.helloGithub();
+		}
 	})();
 
 	// Request a login code from github if the user presses the login button
