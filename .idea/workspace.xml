@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services.js" afterPath="$PROJECT_DIR$/app/js/services.js" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +28,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="217" column="58" selection-start="7525" selection-end="7525" vertical-scroll-proportion="0.49324325" vertical-offset="2963" max-vertical-offset="7155">
+            <state line="352" column="62" selection-start="11979" selection-end="11979" vertical-scroll-proportion="0.7347973" vertical-offset="4845" max-vertical-offset="7440">
               <folding />
             </state>
           </provider>
@@ -83,7 +82,7 @@
       <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="327" column="47" selection-start="12775" selection-end="12775" vertical-scroll-proportion="-12.88" vertical-offset="4583" max-vertical-offset="6750">
+            <state line="233" column="0" selection-start="9050" selection-end="9264" vertical-scroll-proportion="-14.08" vertical-offset="3143" max-vertical-offset="6750">
               <folding />
             </state>
           </provider>
@@ -712,14 +711,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="327" column="47" selection-start="12775" selection-end="12775" vertical-scroll-proportion="-12.88" vertical-offset="4583" max-vertical-offset="6750">
+        <state line="233" column="0" selection-start="9050" selection-end="9264" vertical-scroll-proportion="-14.08" vertical-offset="3143" max-vertical-offset="6750">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="217" column="58" selection-start="7525" selection-end="7525" vertical-scroll-proportion="0.49324325" vertical-offset="2963" max-vertical-offset="7155">
+        <state line="352" column="62" selection-start="11979" selection-end="11979" vertical-scroll-proportion="0.7347973" vertical-offset="4845" max-vertical-offset="7440">
           <folding />
         </state>
       </provider>

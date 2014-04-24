@@ -337,7 +337,26 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserMode
         })
         .then(function() {
             console.log(config);
-            return config;
+            var configMod = {}
+
+            for (var key in config) {
+                var obj = config[key];
+                for (var prop in obj) {
+                    // important check that this is objects own property
+                    // not from prototype prop inherited
+                    if(obj.hasOwnProperty(prop)){
+                        console.log(prop);
+                    }
+                }
+            }
+
+            var githubInstance = GithubAuthService.instance();
+            var repo = githubInstance.getRepo(UserModel.getUser().name, UserModel.getUser().name+".github.com");
+            var branch = repo.getBranch("master");
+            var configModJson = "var config = "+JSON.stringify(configMod);
+            console.log(configMod);
+            GithubSrvc.commit(configMod, "app/js/config.js", branch, true);
+            return configMod;
         })
         .then(function(){
 			scope.progress = 90;
