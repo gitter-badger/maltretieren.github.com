@@ -337,10 +337,7 @@ myApp.service("GithubSrvc", function (
                 console.log("deleted");
                 $rootScope.$broadcast('Toast::githubDeleteSuccess');
             });
-        },
-		goodByeGithub : function() {
-			UserModel.logout();
-		}
+        }
     }
 });
 
@@ -367,7 +364,6 @@ myApp.service("UserModel", function ($rootScope) {
 	this.logout = function() {
 		this.user = {};
 		localStorage.clear();
-		console.log("send a userLoggedOut event");
 		$rootScope.$broadcast('UserModel::userLoggedOut');
 	}
 	this.getUser = function() {
