@@ -35,7 +35,7 @@ and I was able to change the content of the posts and commit it
 back to GitHub in April 2014.
 
 ## Detail
-Github Oauth2 worklow, token.... 
+To auhenticate with Github the preferred way is the Oauth2 worklow. The goal is to geht a token which gets attached to every request.... After getting the token the APP retrieves the user information. To get the info if a user is the site admin I do a test commit. If it succeeds, the user is the admin, if it fails he is not.
 
 Reise the seit page for New content and updates in existing content
 
