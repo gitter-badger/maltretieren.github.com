@@ -312,15 +312,16 @@ myApp.service("GithubSrvc", function (
             })
             return deferred.promise;
         },
-		commit: function(text, path, branch) {
+		commit: function(text, path, branch, showMessage) {
             var contents = {};
             contents[path] = text;
             var deferred = $q.defer();
 
             branch.writeMany(contents, 'Save from GUI').then(function() {
-                console.log("saved");
                 deferred.resolve();
-                $rootScope.$broadcast('Toast::githubCommitSuccess');
+				if(showMessage) {
+					$rootScope.$broadcast('Toast::githubCommitSuccess');
+				}
             }, function(error) {
                 console.log("there was a commit error");
                 deferred.reject();
