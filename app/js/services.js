@@ -108,6 +108,7 @@ myApp.service("GithubSrvc", function (
                 console.log("Token provided, try to use it - Token: "+oauthToken)
                 var userPromise = GithubAuthService.userInfo().user();
                 userPromise.then(function() {
+					console.log("got a user object, now test if the user is an admin....");
                     var promise = self.testAdmin();
                     promise.then(function() {
                         console.log("user is admin");
@@ -356,7 +357,6 @@ myApp.service("UserModel", function ($rootScope) {
 		console.log("send a userLoggedIn event for user: "+loginData.login);
 		var userJson = JSON.stringify(this.user);
 		localStorage.setItem("user", userJson);
-		$rootScope.$broadcast('UserModel::userLoggedIn', loginData.login);
 	};
     this.setIsAdmin = function(isAdmin) {
         this.user.isAdmin = isAdmin;
