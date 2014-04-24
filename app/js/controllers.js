@@ -94,9 +94,9 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $window, Para
 	$scope.user = UserModel.user;
 	if($window.config.heroku.authenticate != "") {
 		$scope.githubLogin = true;
-	} else (
+	} else {
 		$scope.githubLogin = false;
-	)
+	}
 	
 	($scope.login = function() {
 		var user = UserModel.getUser();
