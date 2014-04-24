@@ -1,6 +1,7 @@
 <!-- only show this block, if there are any comments for this page -->
 <div ng-show="(comments.entries | filter: { pageTitle: filterString }).length>0">
 	<legend><span class="glyphicon glyphicon-comment" style="font-size:0.8em"></span> Comments</legend>
+		<div class="panel panel-default widget">
 			<div class="panel-body">
 				<ul class="list-group">
 					<li class="list-group-item" ng:repeat="comment in comments.entries | filter: { pageTitle: filterString }| orderObjectBy:'timestamp':true | limitTo:quantity">
@@ -18,4 +19,5 @@
 				</ul>
 				<a href="#" class="btn btn-primary btn-sm btn-block" role="button" ng-click="more()"><span class="glyphicon glyphicon-refresh"></span> More</a>
 			</div>
+		</div>
 </div>
