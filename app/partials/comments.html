@@ -1,28 +1,30 @@
 <!-- only show this block, if there are any comments for this page -->
-<div class="row" ng-show="(comments.entries | filter: { pageTitle: filterString }).length>0">
+<div ng-show="(comments.entries | filter: { pageTitle: filterString }).length>0">
 	<legend>Comments</legend>
-    <div class="panel panel-default widget" style="margin-left:13px;margin-right:13px">
-        <div class="panel-heading">
-            <span class="glyphicon glyphicon-comment"></span>
-            <h3 class="panel-title">Recent Comments</h3>
-            <span class="label label-info">{{result.length}}</span>
-        </div>
-        <div class="panel-body">
-            <ul class="list-group">
-                <li class="list-group-item" ng:repeat="comment in comments.entries | filter: { pageTitle: filterString }| orderObjectBy:'timestamp':true | limitTo:quantity">
-                    <div class="row">
+	<div class="row">
+		<div class="panel panel-default widget" style="margin-left:13px;margin-right:13px">
+			<div class="panel-heading">
+				<span class="glyphicon glyphicon-comment"></span>
+				<h3 class="panel-title">Recent Comments</h3>
+				<span class="label label-info">{{result.length}}</span>
+			</div>
+			<div class="panel-body">
+				<ul class="list-group">
+					<li class="list-group-item" ng:repeat="comment in comments.entries | filter: { pageTitle: filterString }| orderObjectBy:'timestamp':true | limitTo:quantity">
+						<div class="row">
 
-                        <div class="col-xs-10 col-md-11">
-                            <div>
-                                <a href="{{comment.pageUrl}}">{{comment.pageTitle}}</a>
-                                <div class="mic-info"> By: <a href="mailto:{{mail}}">{{comment.name}}</a> on {{comment.keen.timestamp | date:'dd MMM yyyy' }}</div>
-                            </div>
-                            <div class="comment-text">{{comment.message}}</div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            <a href="#" class="btn btn-primary btn-sm btn-block" role="button" ng-click="more()"><span class="glyphicon glyphicon-refresh"></span> More</a>
-        </div>
-    </div>
+							<div class="col-xs-10 col-md-11">
+								<div>
+									<a href="{{comment.pageUrl}}">{{comment.pageTitle}}</a>
+									<div class="mic-info"> By: <a href="mailto:{{mail}}">{{comment.name}}</a> on {{comment.keen.timestamp | date:'dd MMM yyyy' }}</div>
+								</div>
+								<div class="comment-text">{{comment.message}}</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<a href="#" class="btn btn-primary btn-sm btn-block" role="button" ng-click="more()"><span class="glyphicon glyphicon-refresh"></span> More</a>
+			</div>
+		</div>
+	</div>
 </div>
