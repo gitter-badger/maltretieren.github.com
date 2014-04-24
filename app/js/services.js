@@ -126,7 +126,7 @@ myApp.service("GithubSrvc", function (
                 var tokenPromise = GithubAuthService.requestToken(oauthCode);
 				tokenPromise.then(function() {
 					console.log("token available... use it to get the user object");
-					this.helloGithub();
+					self.helloGithub();
 				})
             } else {
                 console.log("There is something wrong with the login");
