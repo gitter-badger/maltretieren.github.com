@@ -214,7 +214,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserMode
 	
     $scope.options = {}
     $scope.options.forkSlogan = "Yihaa"             // Default title
-    $scope.options.forkName = UserModel.getUser().name+".github.com";                   // Gets overridden, when the user is logged in
+    $scope.options.forkName = UserModel.getUser().name+".github.io";                   // Gets overridden, when the user is logged in
     $scope.options.forkRealName = UserModel.getUser().name;               // Gets overridden, when the user is logged in
     $scope.options.twitter = "";               // Gets overridden, when the user is logged in
     $scope.options.ssl = "";
@@ -238,7 +238,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserMode
 		
         if($scope.options.forkName.length>4) {
             if($scope.options.forkName.indexOf(".")===-1) {
-                url =  "http://"+$scope.options.forkName+".github.com";
+                url =  "http://"+$scope.options.forkName+".github.io";
             }
 
             this.img = new Image();
@@ -274,10 +274,10 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserMode
 
     $scope.$on('UserModel::userLoggedIn', function(event, userName) {
         console.log(event);
-        $scope.options.forkName = userName+".github.com";
+        $scope.options.forkName = userName+".github.io";
         $scope.options.forkRealName = userName;
         $scope.options.twitter = userName;
-        $scope.options.ssl = userName+".github.com";
+        $scope.options.ssl = userName+".github.io";
         $scope.options.github = userName;
         $scope.$apply();
     });
@@ -356,7 +356,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserMode
             }
 
             var githubInstance = GithubAuthService.instance();
-            var repo = githubInstance.getRepo(UserModel.getUser().name, UserModel.getUser().name+".github.com");
+            var repo = githubInstance.getRepo(UserModel.getUser().name, UserModel.getUser().name+".github.io");
             var branch = repo.getBranch("master");
             var configModJson = "var config = "+JSON.stringify(configMod);
             console.log(configMod);

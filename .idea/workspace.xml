@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/fork.html" afterPath="$PROJECT_DIR$/app/admin/fork.html" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +29,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="349" column="55" selection-start="11974" selection-end="11974" vertical-scroll-proportion="0.7347973" vertical-offset="4800" max-vertical-offset="7515">
+            <state line="362" column="26" selection-start="12500" selection-end="12504" vertical-scroll-proportion="0.33277026" vertical-offset="5233" max-vertical-offset="7515">
               <folding />
             </state>
           </provider>
@@ -46,7 +47,7 @@
       <file leaf-file-name="fork.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/fork.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="1716" selection-end="1716" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1245">
+            <state line="29" column="241" selection-start="1450" selection-end="1450" vertical-scroll-proportion="-5.0" vertical-offset="315" max-vertical-offset="1245">
               <folding />
             </state>
           </provider>
@@ -145,9 +146,9 @@
         <option value="$PROJECT_DIR$/app/js/config.js" />
         <option value="$PROJECT_DIR$/assets/js/octokit-0.9.19/octokit.js" />
         <option value="$PROJECT_DIR$/_config.yml" />
-        <option value="$PROJECT_DIR$/app/admin/fork.html" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/app/js/services.js" />
+        <option value="$PROJECT_DIR$/app/admin/fork.html" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
       </list>
     </option>
@@ -667,13 +668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/fork.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="1716" selection-end="1716" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="1245">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="15" selection-start="1409" selection-end="1409" vertical-scroll-proportion="0.0" vertical-offset="481" max-vertical-offset="2175">
@@ -716,9 +710,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/fork.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="241" selection-start="1450" selection-end="1450" vertical-scroll-proportion="-5.0" vertical-offset="315" max-vertical-offset="1245">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="349" column="55" selection-start="11974" selection-end="11974" vertical-scroll-proportion="0.7347973" vertical-offset="4800" max-vertical-offset="7515">
+        <state line="362" column="26" selection-start="12500" selection-end="12504" vertical-scroll-proportion="0.33277026" vertical-offset="5233" max-vertical-offset="7515">
           <folding />
         </state>
       </provider>
