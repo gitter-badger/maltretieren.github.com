@@ -106,8 +106,11 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, ParameterSrvc
 				GithubAuthService.requestToken(oauthCode).then(function() {
 					console.log("token available");
 				}).then(function() {
-					
-				}
+					console.log("request userInfo");
+					return GithubAuthService.userInfo().user();
+				}).then(function() {
+					console.log("testAdmin");
+				})
 			} else {
 				console.log("nothing to do, wait for the user to press the login button");
 			}
