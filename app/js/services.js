@@ -282,7 +282,7 @@ myApp.service("GithubSrvc", function (
             return deferred.promise;
         },
 		commit: function(text, path, branch, showMessage) {
-			if(typeof branch === 'undefined") {
+			if(typeof branch === 'undefined') {
 				var githubInstance = GithubAuthService.instance();
 				var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
 				branch = repo.getBranch("master");
