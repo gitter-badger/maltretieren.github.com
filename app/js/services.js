@@ -352,8 +352,11 @@ myApp.service("UserModel", function ($rootScope) {
     // promise2 = isAdminTest
 
 	this.login = function(loginData) {
+		console.log(this.user);
 		this.user.name = loginData.login;
 		console.log("send a userLoggedIn event for user: "+loginData.login);
+		var userJson = JSON.stringify(this.user);
+		localStorage.setItem("user", userJson);
 		$rootScope.$broadcast('UserModel::userLoggedIn', loginData.login);
 	};
     this.setIsAdmin = function(isAdmin) {
