@@ -353,9 +353,10 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
     var scope = $scope;
 
     $scope.options = {}
+	// binding to hide the edit button for non-admin users...
 	$scope.isAdmin = UserModel.getUser().isAdmin;
-	console.log("isAdmin: "+UserModel.getUser().isAdmin);
-    var date = "";
+    
+	var date = "";
     $scope.options.title = "";
 
     var path = ParameterSrvc.urlParams['path'];
