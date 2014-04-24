@@ -352,7 +352,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwi
 /**
 *	This controller unlocks/lock admin functionality
 */
-myApp.controller('AdminCtrl', function(UserModel) {
+myApp.controller('AdminCtrl', function($scope, UserModel) {
 	// binding to hide the edit button for non-admin users...
 	$scope.isAdmin = UserModel.getUser().isAdmin;
 });
