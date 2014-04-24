@@ -346,7 +346,11 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserMode
                     // important check that this is objects own property
                     // not from prototype prop inherited
                     if(obj.hasOwnProperty(prop)){
-                        configMod[key][prop] = "";
+                        if(prop==="user") {
+                            configMod[key][prop] = name;
+                        } else {
+                            configMod[key][prop] = "";
+                        }
                     }
                 }
             }
@@ -356,7 +360,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserMode
             var branch = repo.getBranch("master");
             var configModJson = "var config = "+JSON.stringify(configMod);
             console.log(configMod);
-            GithubSrvc.commit(configMod, "app/js/config.js", branch, true);
+            GithubSrvc.commit(configModJson, "app/js/config.js", branch, true);
             return configMod;
         })
         .then(function(){
