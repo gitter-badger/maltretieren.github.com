@@ -358,12 +358,16 @@ myApp.service("UserModel", function ($rootScope) {
 	};
     this.setIsAdmin = function(isAdmin) {
         this.user.isAdmin = isAdmin;
+		localStorage.setItem("user", this.user);
     },
 	this.logout = function() {
 		this.user = {};
 		localStorage.clear();
 		console.log("send a userLoggedOut event");
 		$rootScope.$broadcast('UserModel::userLoggedOut');
+	}
+	this.getUser = function() {
+		return this.user;
 	}
 });
 
