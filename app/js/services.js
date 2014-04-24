@@ -48,12 +48,12 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
 		},
         requestToken: function(oauthCode) {
             var that = this;
-            $http({method: 'GET', url: config.heroku.authenticate+""+oauthCode}).
+            return $http({method: 'GET', url: config.heroku.authenticate+""+oauthCode}).
                 success(function(data, status, headers, config) {
                     if(typeof data.token != 'undefined') {
                         console.log("Yaayy, got a token: "+data.token);
                         localStorage.setItem("oauthToken", data.token);
-                        that.userInfo().user();
+                        //that.userInfo().user();
                     } else {
                         console.log("It was not possible to get a token with the provided code");
 
@@ -123,7 +123,10 @@ myApp.service("GithubSrvc", function (
                 // after page reload code is available and it will requestToken()
             } else if(typeof oauthCode != "undefined" && (oauthToken != 'undefined' || oauthToken != null)) {
                 console.log("Code provided, no Token, request token - Code: "+oauthCode)
-                GithubAuthService.requestToken(oauthCode);
+                var tokenPromise = GithubAuthService.requestToken(oauthCode);
+				tokenPromise.then(function() {
+					console.log("token available... use it to get the user object");
+				}
             } else {
                 console.log("There is something wrong with the login");
             }
