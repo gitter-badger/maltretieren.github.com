@@ -354,7 +354,6 @@ myApp.service("UserModel", function ($rootScope) {
 
 	this.login = function(loginData) {
 		this.user.name = loginData.login;
-		console.log("send a userLoggedIn event for user: "+loginData.login);
 		var userJson = JSON.stringify(this.user);
 		localStorage.setItem("user", userJson);
 	};
@@ -362,6 +361,8 @@ myApp.service("UserModel", function ($rootScope) {
         this.user.isAdmin = isAdmin;
 		var userJson = JSON.stringify(this.user);
 		localStorage.setItem("user", userJson);
+		console.log("send a userLoggedIn event for user: "+loginData.login);
+		$rootScope.$broadcast('UserModel::userLoggedIn', loginData.login);
     },
 	this.logout = function() {
 		this.user = {};
