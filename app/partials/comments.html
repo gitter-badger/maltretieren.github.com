@@ -1,5 +1,5 @@
 <legend>Comments</legend>
-<div>{{comments.entries.length | filter: pageTitle: filterString }}</div>
+<div>{{comments.entries | filter: pageTitle: filterString }}</div>
 <div class="row" ng-show="comments.entries.length > 0">
     <div class="panel panel-default widget" style="margin-left:13px;margin-right:13px">
         <div class="panel-heading">
