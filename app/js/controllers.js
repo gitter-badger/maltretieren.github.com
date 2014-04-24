@@ -90,7 +90,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $window, Para
 	//      - poll for repo.contents until the forked repo is ready
 	//      - guide them with a link to the new repo and encourage them to click on "edit"
 	
-	// if no token is available listen for button click...
+
 	$scope.user = UserModel.user;
 	if($window.config.heroku.authenticate != "") {
 		$scope.githubLogin = true;
@@ -98,6 +98,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $window, Para
 		$scope.githubLogin = false;
 	}
 	
+	// if no token is available listen for button click...
 	($scope.login = function() {
 		var user = UserModel.getUser();
 		// first check if there is a valid user already stored in the localStorage
