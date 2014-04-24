@@ -96,8 +96,10 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, Gi
 		console.log("Request login");
 		var user = UserModel.getUser();
 		if(typeof user !== 'undefined' && user !== null) {
+			console.log("found a valid user object in localStorage, use that...");
 			$scope.user = user;
 		} else {
+			console.log("no user object found in localStorage - if a code is provided use that to get a token");
 			GithubSrvc.helloGithub();
 		}
 	})();
