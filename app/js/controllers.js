@@ -295,7 +295,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwi
         GithubSrvc.fork($scope.options)
         .then( function() {
 			scope.progress = 10;
-            return PollingSrvc.checkForBranchContent("maltretieren.github.com", "master")
+            return PollingSrvc.checkForBranchContent(config.github.repository, "master")
         })
         .then( function() {
 			scope.progress = 20;
