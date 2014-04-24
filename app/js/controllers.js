@@ -349,10 +349,11 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwi
     };
 });
 
-myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, ParameterSrvc, GithubSrvc) {
+myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, UserModel, ParameterSrvc, GithubSrvc) {
     var scope = $scope;
 
     $scope.options = {}
+	$scope.isAdmin = UserModel.getUser().isAdmin;
     var date = "";
     $scope.options.title = "";
 
