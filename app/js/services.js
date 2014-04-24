@@ -358,7 +358,8 @@ myApp.service("UserModel", function ($rootScope) {
 	};
     this.setIsAdmin = function(isAdmin) {
         this.user.isAdmin = isAdmin;
-		localStorage.setItem("user", this.user);
+		var userJson = JSON.stringify(this.user);
+		localStorage.setItem("user", userJson);
     },
 	this.logout = function() {
 		this.user = {};
@@ -367,7 +368,13 @@ myApp.service("UserModel", function ($rootScope) {
 		$rootScope.$broadcast('UserModel::userLoggedOut');
 	}
 	this.getUser = function() {
-		return this.user;
+		var userString = localStorage.getItem("user"):
+		if(typeof userString !== 'undefined') {
+			var userObject = JSON.parse(userString);
+			console.log(userObject);
+		} else {
+			return null;
+		}
 	}
 });
 
