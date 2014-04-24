@@ -361,7 +361,12 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwi
 */
 myApp.controller('AdminCtrl', function($scope, UserModel) {
 	// binding to hide the edit button for non-admin users...
-	$scope.isAdmin = UserModel.getUser().isAdmin;
+	var user = UserModel.getUser();
+	if(user !== null) {
+		$scope.isAdmin = UserModel.getUser().isAdmin;
+	} else {
+		$scope.isAdmin = false;
+	}
 });
 
 myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, UserModel, ParameterSrvc, GithubSrvc) {
