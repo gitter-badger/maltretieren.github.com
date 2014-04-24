@@ -208,7 +208,7 @@ myApp.service("GithubSrvc", function (
                 //PollingSrvc.checkForBranchContent(branch, "README.md", callback);
 			});
         },
-        postProcess: function(path, replace) {
+        postProcess: function(path, replace, repositoryName) {
             // change page slogan:
             // request _config.yml
             // search/replace "title : Place to pee free!"/"title: slogan)
@@ -232,7 +232,7 @@ myApp.service("GithubSrvc", function (
                 }
                 //console.log(newConfigData);
                 var githubInstance = GithubAuthService.instance();
-                var repo = githubInstance.getRepo(UserModel.getUser().name, UserModel.getUser().name+".github.com");
+                var repo = githubInstance.getRepo(UserModel.getUser().name, repositoryName);
                 var branch = repo.getBranch("master");
                 var commitPromise = self.commit(newConfigData, path, branch);
                 commitPromise.then(function() {

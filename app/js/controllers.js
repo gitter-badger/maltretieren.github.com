@@ -333,7 +333,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwi
                  theme: theme
              }
 			 scope.progress = 80;
-             return GithubSrvc.postProcess("_config.yml", replace);
+             return GithubSrvc.postProcess("_config.yml", replace, forkName);
         })
         .then(function(){
 			scope.progress = 90;
