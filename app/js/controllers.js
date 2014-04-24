@@ -98,7 +98,6 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, Gi
 			console.log("found user object in localStorage");
 			console.log(user);
 			$scope.user = user;
-			$scope.$apply();
 		} else {
 			GithubSrvc.helloGithub();
 		}
