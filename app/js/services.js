@@ -350,14 +350,18 @@ myApp.service("UserModel", function ($rootScope) {
 
     // promise1 = token
     // promise2 = isAdminTest
-
+	
 	this.login = function(loginData) {
 		this.user.name = loginData.login;
 		console.log("send a userLoggedIn event for user: "+loginData.login);
+		var userJson = JSON.stringify(this.user);
+		localStorage.setItem("user", userJson);
 		$rootScope.$broadcast('UserModel::userLoggedIn', loginData.login);
 	};
     this.setIsAdmin = function(isAdmin) {
         this.user.isAdmin = isAdmin;
+		var userJson = JSON.stringify(this.user);
+		localStorage.setItem("user", userJson);
     },
 	this.logout = function() {
 		this.user = {};
@@ -366,7 +370,14 @@ myApp.service("UserModel", function ($rootScope) {
 		$rootScope.$broadcast('UserModel::userLoggedOut');
 	}
 	this.getUser = function() {
-	
+		var userString = localStorage.getItem("user");
+		if(typeof userString !== 'undefined') {
+			var userObject = JSON.parse(userString);
+			this.user = userObject;
+			console.log(userObject);
+		} else {
+			return null;
+		}
 	}
 });
 
