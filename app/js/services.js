@@ -17,18 +17,16 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
 			// maybe store the instance in localStorage????
 			var oauthToken = localStorage.getItem("oauthToken");
 			if(oauthToken != "undefined" && oauthToken != null) {
-				//console.log("oauthToken is available");
 				github = new Octokit({
 					token: oauthToken,
 					auth: "oauth"
 				});
-				// test the token, if it is still valid... if not,
+                return github;
 			} else {
 				console.log("oauthToken is not available or not valid");
 				console.log("Did you login via github? Otherwise you can connect via Basic Authentication... Please provide a username and password...")
-				this.requestToken();
 			}
-			return github;
+			return null;
 		},
 		requestCode: function() {
 			console.log("Request a new token, the page will be reloaded with code appended to the address...");
