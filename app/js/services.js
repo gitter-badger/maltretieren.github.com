@@ -9,7 +9,7 @@
 // EXAMPLE OF CORRECT DECLARATION OF SERVICE AS A VALUE
 myApp.value('version', '0.1');
 
-myApp.service("GithubAuthService", function ($http, $q, UserModel) {
+myApp.service("GithubAuthService", function ($http, $q, $window, UserModel) {
 	return {
 		instance : function() {
 			var github = null;
@@ -33,9 +33,9 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
 			// request a token, this generates a state random string, the string has to be validated after login
 			jso_configure({
 				"github": {
-                    client_id: "e5923f3d7f1182fe886f",
-                    redirect_uri: "http://maltretieren.github.com",
-                    authorization: "https://github.com/login/oauth/authorize?scope=public_repo"
+                    client_id: $window.config.github.client_id,
+                    redirect_uri: $window.config.github.repository,
+                    authorization: $window.config.github.authorization
 				}
 			});
 	
@@ -103,7 +103,7 @@ myApp.service("GithubSrvc", function (
         testAdmin: function() {
             var deferred = $q.defer();
             var githubInstance = GithubAuthService.instance();
-            var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
+            var repo = githubInstance.getRepo($window.config.github.user, $window.config.github.repository);
             var branch = repo.getBranch("master");
             var promise = this.commit("test", "test", branch);
             promise.then(function() {
@@ -141,7 +141,7 @@ myApp.service("GithubSrvc", function (
             };
             var githubInstance = GithubAuthService.instance();
             //var userName = UserModel.getUser().name;
-            var repo = githubInstance.getRepo("flamed0011", config.github.repository);
+            var repo = githubInstance.getRepo(UserModel.getUser().name, config.github.repository);
             return $q.when(repo.updateInfo(patch)).then(function(res) {
                 console.log("Repository renamed...")
                 //that.renameBranch(forkName, "heads/master");
@@ -149,7 +149,7 @@ myApp.service("GithubSrvc", function (
         },
         batchDelete: function(forkName) {
             var githubInstance = GithubAuthService.instance();
-            var repo = githubInstance.getRepo("flamed0011", forkName);
+            var repo = githubInstance.getRepo(UserModel.getUser().name, forkName);
             var branch = repo.getBranch("master");
 
 			// polling for the posts dir every second until rename complete,
@@ -176,7 +176,7 @@ myApp.service("GithubSrvc", function (
         deleteBranch: function(forkName, branchName) {
 			var that = this;
 			var githubInstance = GithubAuthService.instance();
-			var repo = githubInstance.getRepo("flamed0011", forkName);			
+			var repo = githubInstance.getRepo(UserModel.getUser().name, forkName);
 			return repo.git.deleteRef(branchName).then(function(result) {
 				console.log("deleted branch"+branchName);
 				//that.renameBranch(forkName);
@@ -185,7 +185,7 @@ myApp.service("GithubSrvc", function (
         renameBranch: function(forkName) {
 			var that = this;
 			var githubInstance = GithubAuthService.instance();
-			var repo = githubInstance.getRepo("flamed0011", forkName);			
+			var repo = githubInstance.getRepo(UserModel.getUser().name, forkName);
 			return repo.git.deleteRef("heads/master").then(function(result) {
 				console.log("deleted master branch");
 				//that.createBranch(forkName, "master");
@@ -194,7 +194,7 @@ myApp.service("GithubSrvc", function (
         createBranch: function(forkName, branchName) {
 			var that = this;
 			var githubInstance = GithubAuthService.instance();
-			var repo = githubInstance.getRepo("flamed0011", forkName);
+			var repo = githubInstance.getRepo(UserModel.getUser().name, forkName);
 			console.log("switch to template branche");
 			var branch = repo.getBranch("template");
 			var forkName = forkName;
