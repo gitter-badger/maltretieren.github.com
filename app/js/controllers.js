@@ -208,14 +208,14 @@ myApp.controller('ToasterController', function($scope, toaster) {
     };
 });
 
-myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwitcher, GithubSrvc, PollingSrvc, PollingImgSrvc) {
+myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserModel, StyleSwitcher, GithubSrvc, PollingSrvc, PollingImgSrvc) {
 	var scope = $scope;
 	scope.success = false;
 	
     $scope.options = {}
     $scope.options.forkSlogan = "Yihaa"             // Default title
-    $scope.options.forkName = "";                   // Gets overridden, when the user is logged in
-    $scope.options.forkRealName = "";               // Gets overridden, when the user is logged in
+    $scope.options.forkName = UserModel.getUser().name+".github.com";                   // Gets overridden, when the user is logged in
+    $scope.options.forkRealName = UserModel.getUser().name;               // Gets overridden, when the user is logged in
     $scope.options.twitter = "";               // Gets overridden, when the user is logged in
     $scope.options.ssl = "";
     $scope.options.github = "";
