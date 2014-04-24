@@ -369,8 +369,8 @@ myApp.service("UserModel", function ($rootScope) {
 	this.logout = function() {
 		this.user = {};
 		localStorage.clear();
-		//console.log("send a userLoggedOut event");
-		//$rootScope.$broadcast('UserModel::userLoggedOut');
+		console.log("send a userLoggedOut event");
+		$rootScope.$broadcast('UserModel::userLoggedOut');
 	}
 	this.getUser = function() {
 		var userString = localStorage.getItem("user");
