@@ -337,7 +337,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserMode
         })
         .then(function() {
             console.log(config);
-            this.configMod = {}
+            var configMod = {}
 
             for (var key in config) {
                 var obj = config[key];
@@ -345,7 +345,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserMode
                     // important check that this is objects own property
                     // not from prototype prop inherited
                     if(obj.hasOwnProperty(prop)){
-                        this.configMod[key][prop] = "";
+                        configMod[key][prop] = "";
                     }
                 }
             }
