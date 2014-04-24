@@ -208,7 +208,7 @@ myApp.controller('ToasterController', function($scope, toaster) {
     };
 });
 
-myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwitcher, ConfigCtrl, GithubSrvc, PollingSrvc, PollingImgSrvc) {
+myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwitcher, GithubSrvc, PollingSrvc, PollingImgSrvc) {
 	var scope = $scope;
 	scope.success = false;
 	
@@ -336,8 +336,8 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwi
              return GithubSrvc.postProcess("_config.yml", replace, forkName);
         })
         .then(function() {
-            console.log(ConfigCtrl.inputs);
-            return ConfigCtrl.inputs;
+            console.log(config);
+            return config;
         })
         .then(function(){
 			scope.progress = 90;
