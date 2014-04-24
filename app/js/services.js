@@ -234,7 +234,7 @@ myApp.service("GithubSrvc", function (
                 }
                 //console.log(newConfigData);
                 var githubInstance = GithubAuthService.instance();
-                var repo = githubInstance.getRepo(UserModel.user.name, UserModel.user.name+".github.com");
+                var repo = githubInstance.getRepo(UserModel.getUser().name, UserModel.getUser().name+".github.com");
                 var branch = repo.getBranch("master");
                 var commitPromise = self.commit(newConfigData, path, branch);
                 commitPromise.then(function() {
