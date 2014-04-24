@@ -132,7 +132,7 @@ myApp.service("GithubSrvc", function (
         renameRepo: function(forkName) {
 			console.log("rename repo to "+forkName);
             if(!forkName || forkName.length < 5){
-				forkName = "flamed0011.github.com"
+				forkName = UserModel.getUser().name+".github.com"
 			}
 			
             var that = this;
@@ -282,7 +282,7 @@ myApp.service("GithubSrvc", function (
 		commit: function(text, path, branch, showMessage) {
 			if(typeof branch === 'undefined') {
 				var githubInstance = GithubAuthService.instance();
-				var repo = githubInstance.getRepo("Maltretieren", "maltretieren.github.com");
+				var repo = githubInstance.getRepo(config.github.user, config.github.repository);
 				branch = repo.getBranch("master");
 			}
 			var contents = {};
@@ -364,7 +364,7 @@ myApp.service("ParameterSrvc", function ($window) {
     }
 });
 
-myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
+myApp.service("PollingSrvc", function ($q, $timeout, UserModel, GithubAuthService) {
 
 	
     var poll = function (repoName, branchName) {
@@ -372,7 +372,7 @@ myApp.service("PollingSrvc", function ($q, $timeout, GithubAuthService) {
         var deferred = $q.defer();
         // poll for availability - implement as promise, resolve as soon as it is available
 		var githubInstance = GithubAuthService.instance();
-		var repo = githubInstance.getRepo("flamed0011", repoName);
+		var repo = githubInstance.getRepo(UserModel.getUser().name, repoName);
 		var branch = repo.getBranch(branchName);
 		var repoName = repoName;
 		var branchName = branchName;
@@ -416,7 +416,7 @@ myApp.service("PollingImgSrvc", function ($q, $timeout) {
                 }
                 $timeout(pollForImage, 30000);
             }
-            img.src = "https://flamed0011.github.com/app/img/ping.gif";
+            img.src = "https://"+repoName+"/app/img/ping.gif";
         }
         pollForImg();
 
