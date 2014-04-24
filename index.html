@@ -6,7 +6,7 @@ uuid: frontpage
 ---
 {% include JB/setup %}
 
-<p class="lead" ng-show="wikiquote" ng-controller="WikiquoteCtrl">
+<p ng-cloak class="lead" ng-show="wikiquote" ng-controller="WikiquoteCtrl">
     {% raw %} {{ wikiquote }} {% endraw %}
 </p>
 <hr>
