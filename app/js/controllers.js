@@ -208,7 +208,7 @@ myApp.controller('ToasterController', function($scope, toaster) {
     };
 });
 
-myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserModel, StyleSwitcher, GithubSrvc, PollingSrvc, PollingImgSrvc) {
+myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserModel, StyleSwitcher, GithubSrvc, GithubAuthService, PollingSrvc, PollingImgSrvc) {
 	var scope = $scope;
 	scope.success = false;
 	
