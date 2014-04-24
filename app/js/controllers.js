@@ -354,6 +354,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
 
     $scope.options = {}
 	$scope.isAdmin = UserModel.getUser().isAdmin;
+	console.log("isAdmin: "+UserModel.getUser().isAdmin);
     var date = "";
     $scope.options.title = "";
 
