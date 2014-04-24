@@ -345,7 +345,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserMode
                     // important check that this is objects own property
                     // not from prototype prop inherited
                     if(obj.hasOwnProperty(prop)){
-                        console.log(prop);
+                        configMod[key][prop] = "";
                     }
                 }
             }
