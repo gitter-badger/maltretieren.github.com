@@ -106,10 +106,10 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, ParameterSrvc
 				GithubAuthService.requestToken(oauthCode).then(function() {
 					console.log("token available");
 				}).then(function() {
-					console.log("request userInfo");
+					console.log("request user");
 					return GithubAuthService.userInfo().user();
 				}).then(function() {
-					console.log("testAdmin");
+					console.log("test if the user is the admin");
 					return GithubSrvc.testAdmin();
 				}).then(function() {
 					console.log("login done....");
