@@ -343,13 +343,7 @@ myApp.service("GithubSrvc", function (
 
 // Inspired by http://joelhooks.com/blog/2013/04/24/modeling-data-and-state-in-your-angularjs-application/
 myApp.service("UserModel", function ($rootScope) {
-	this.user = {
-        name: "",
-        token: "",
-        mail: "",
-        repository: "",
-        isAdmin: false
-    };
+	this.user = {};
 
 	this.login = function(loginData) {
 		this.user.name = loginData.login;
