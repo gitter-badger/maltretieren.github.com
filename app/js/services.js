@@ -147,9 +147,11 @@ myApp.service("GithubSrvc", function (
             var promise = this.commit("test", "test", branch);
             promise.then(function() {
                 console.log("testAdming: success");
+				UserModel.setIsAdmin(true);
                 deferred.resolve();
             }, function(reason) {
                 console.log("testAdmin: errrrorrr");
+				UserModel.setIsAdmin(false);
                 deferred.reject();
             })
             return deferred.promise;
