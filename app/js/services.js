@@ -340,6 +340,7 @@ myApp.service("GithubSrvc", function (
 
 // Inspired by http://joelhooks.com/blog/2013/04/24/modeling-data-and-state-in-your-angularjs-application/
 myApp.service("UserModel", function ($rootScope) {
+	self = this;
 	this.user = {
         name: "",
         token: "",
@@ -352,10 +353,10 @@ myApp.service("UserModel", function ($rootScope) {
     // promise2 = isAdminTest
 
 	this.login = function(loginData) {
-		console.log(this.user);
-		this.user.name = loginData.login;
+		console.log(self.user);
+		self.user.name = loginData.login;
 		console.log("send a userLoggedIn event for user: "+loginData.login);
-		var userJson = JSON.stringify(this.user);
+		var userJson = JSON.stringify(self.user);
 		localStorage.setItem("user", userJson);
 		$rootScope.$broadcast('UserModel::userLoggedIn', loginData.login);
 	};
