@@ -117,8 +117,12 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, Gi
 	//$scope.user = UserModel.user;
 	$scope.$on('UserModel::userLoggedIn', function(event) {
 		console.log("the GithubCtrl received an userLoggedIn event for user: "+UserModel.user.name);
-        $scope.user = UserModel.user;
-		//$scope.$apply();
+        var user = UserModel.getUser();
+		if(typeof user !== 'undefined' && user !== null) {
+			$scope.user = user;
+		} else {
+			GithubSrvc.helloGithub();
+		}
     });
 	$scope.$on('UserModel::userLoggedOut', function(event) {
 		console.log("the GithubCtrl received an userLoggedOut event");
