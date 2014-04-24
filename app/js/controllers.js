@@ -91,11 +91,11 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, Gi
 	//      - guide them with a link to the new repo and encourage them to click on "edit"
 	
 	// if no token is available listen for button click...
-
 	($scope.login = function() {
 		console.log("Request login");
 		var user = UserModel.getUser();
-		if(typeof user !== 'undefined) {
+		if(typeof user !== 'undefined') {
+			console.log("found user object in localStorage");
 			$scope.user = user;
 		} else {
 			GithubSrvc.helloGithub();
