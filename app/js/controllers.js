@@ -94,13 +94,19 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, ParameterSrvc
 	$scope.user = UserModel.user;
 	($scope.login = function() {
 		var user = UserModel.getUser();
+		// first check if there is a valid user already stored in the localStorage
 		if(typeof user !== 'undefined' && user !== null) {
 			console.log("found a valid user object in localStorage, use that...");
 			$scope.user = user;
 		} else {
 			console.log("no user object found in localStorage - if a code is provided use that to get a token");
 			var oauthCode = ParameterSrvc.urlParams['code'];
-			console.log(oauthCode);
+			if(typeof oauthCode !== 'undefined') {
+				console.log("code provided, request a token with that code");
+			} else {
+				console.log("nothing to do, wait for the user to press the login button");
+			}
+			// if no valid user: check if there is a code
 			GithubSrvc.helloGithub();
 		}
 	})();
