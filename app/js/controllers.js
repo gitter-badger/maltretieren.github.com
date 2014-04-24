@@ -349,12 +349,15 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, StyleSwi
     };
 });
 
+myApp.controller('AdminCtrl', function(UserModel) {
+	// binding to hide the edit button for non-admin users...
+	$scope.isAdmin = UserModel.getUser().isAdmin;
+}
+
 myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, UserModel, ParameterSrvc, GithubSrvc) {
     var scope = $scope;
 
     $scope.options = {}
-	// binding to hide the edit button for non-admin users...
-	$scope.isAdmin = UserModel.getUser().isAdmin;
     
 	var date = "";
     $scope.options.title = "";
