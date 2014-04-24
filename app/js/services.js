@@ -374,7 +374,7 @@ myApp.service("UserModel", function ($rootScope) {
 		if(typeof userString !== 'undefined') {
 			var userObject = JSON.parse(userString);
 			//this.user = userObject;
-			console.log(userObject);
+			return userObject;
 		} else {
 			return null;
 		}
