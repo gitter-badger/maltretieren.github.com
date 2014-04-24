@@ -9,7 +9,7 @@
 // EXAMPLE OF CORRECT DECLARATION OF SERVICE AS A VALUE
 myApp.value('version', '0.1');
 
-myApp.service("GithubAuthService", function ($http, $q, $window, UserModel) {
+myApp.service("GithubAuthService", function ($http, $q, UserModel) {
 	return {
 		instance : function() {
 			var github = null;
@@ -30,13 +30,12 @@ myApp.service("GithubAuthService", function ($http, $q, $window, UserModel) {
 		},
 		requestCode: function() {
 			console.log("Request a new token, the page will be reloaded with code appended to the address...");
-			console.log($window.config.github.redirection_url)
 			// request a token, this generates a state random string, the string has to be validated after login
 			jso_configure({
 				"github": {
-                    client_id: $window.config.github.client_id,
-                    redirect_uri: $window.config.github.redirection_url,
-                    authorization: $window.config.github.authorization
+                    client_id: config.github.client_id,
+                    redirect_uri: config.github.redirection_url,
+                    authorization: config.github.authorization
 				}
 			});
 	
