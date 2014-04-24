@@ -83,7 +83,7 @@ myApp.controller("TableCtrl",function ($scope, $http) {
 /**
  * GitHub controller using the GitHub service
  */
-myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, GithubSrvc) {	
+myApp.controller("GithubCtrl", function ($scope, $location, $http, ParameterSrvc, UserModel, GithubSrvc) {	
 	// login by the owner of the repository: edits on the blog are possible
 	// login by someone else: create an empty fork of the repository, automatically available
 	//      - ask for a name: the fork will be created for that name: xyz.github.io
@@ -93,13 +93,14 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, UserModel, Gi
 	// if no token is available listen for button click...
 	$scope.user = UserModel.user;
 	($scope.login = function() {
-		console.log("Request login");
 		var user = UserModel.getUser();
 		if(typeof user !== 'undefined' && user !== null) {
 			console.log("found a valid user object in localStorage, use that...");
 			$scope.user = user;
 		} else {
 			console.log("no user object found in localStorage - if a code is provided use that to get a token");
+			var oauthCode = ParameterSrvc.urlParams['code'];
+			console.log(oauthCode);
 			GithubSrvc.helloGithub();
 		}
 	})();

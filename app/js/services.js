@@ -353,9 +353,6 @@ myApp.service("UserModel", function ($rootScope) {
         isAdmin: false
     };
 
-    // promise1 = token
-    // promise2 = isAdminTest
-
 	this.login = function(loginData) {
 		this.user.name = loginData.login;
 		var userJson = JSON.stringify(this.user);
@@ -376,7 +373,6 @@ myApp.service("UserModel", function ($rootScope) {
 		var userString = localStorage.getItem("user");
 		if(typeof userString !== 'undefined') {
 			var userObject = JSON.parse(userString);
-			//this.user = userObject;
 			return userObject;
 		} else {
 			return null;
