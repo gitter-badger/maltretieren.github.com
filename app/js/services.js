@@ -365,10 +365,17 @@ myApp.service("UserModel", function ($rootScope) {
 		console.log("send a userLoggedOut event");
 		$rootScope.$broadcast('UserModel::userLoggedOut');
 	}
+
 	this.getUser = function() {
-	
+		var userString = localStorage.getItem("user");
+		if(typeof userString !== 'undefined') {
+			var userObject = JSON.parse(userString);
+			this.user = userObject;
+			console.log(userObject);
+		} else {
+			return null;
+		}
 	}
-	
 });
 
 /**
