@@ -341,6 +341,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserMode
 
             for (var key in config) {
                 var obj = config[key];
+                configMod[key] = {};
                 for (var prop in obj) {
                     // important check that this is objects own property
                     // not from prototype prop inherited
