@@ -1,1 +1,19 @@
-test
+<div class="modal-dialog modal-content">
+  <div class="modal-header">
+	<h4 class="modal-title">
+	  User's Name
+	</h4>
+  </div>
+  <div class="modal-body form-group input-group-lg" ng-class=
+  "{true: 'has-error'}[nameDialog.username.$dirty &amp;&amp; nameDialog.username.$invalid]">
+	<label for="course" class="control-label">Name:</label><input type="text" required=""
+	ng-keyup="hitEnter($event)" ng-model="user.name" id="username" name="username" class=
+	"form-control ng-pristine ng-invalid ng-invalid-required" /><span class="help-block">Enter
+	your full name, first &amp; last.</span>
+  </div>
+  <div class="modal-footer">
+	<button ng-click="cancel()" class="btn btn-default" type=
+	"button">Cancel</button><button ng-disabled=
+	"(nameDialog.$dirty &amp;&amp; nameDialog.$invalid) || nameDialog.$pristine" ng-click=
+	"save()" class="btn btn-primary" type="button" disabled="disabled">Save</button>
+  </div>
