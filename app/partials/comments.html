@@ -1,10 +1,9 @@
 <!-- only show this block, if there are any comments for this page -->
 <div ng-show="(comments.entries | filter: { pageTitle: filterString }).length>0">
 	<legend><span class="glyphicon glyphicon-comment" style="font-size:0.8em"></span> Comments</legend>
-	<div ng:repeat="comment in comments.entries | filter: { pageTitle: filterString }| orderObjectBy:'timestamp':true | limitTo:quantity">
 		<table class="table table-condensed table-striped"">
 			<tbody>
-				<tr>
+				<tr ng:repeat="comment in comments.entries | filter: { pageTitle: filterString }| orderObjectBy:'timestamp':true | limitTo:quantity">
 					<td class="col-sm-2">
 						<tr>
 							<td>
@@ -23,5 +22,4 @@
 				</tr>
 			</tbody>
 		</table>
-	</div>
 </div>
