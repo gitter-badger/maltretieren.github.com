@@ -1,5 +1,5 @@
 {% include widgets/comments/recentComments.css %}
 
-<div ng-cloak ng-hide="commentsToggle" data-ng-controller="CommentsCtrl">
+<div ng-cloak ng-hide="!commentsToggle" data-ng-controller="CommentsCtrl">
     <div data-ng-include data-src="'/app/partials/comments.html'"></div>
 </div>
