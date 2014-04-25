@@ -88,7 +88,7 @@ myApp.controller("TableCtrl",function ($scope, $http) {
 /**
  * GitHub controller using the GitHub service
  */
-myApp.controller("GithubCtrl", ['$modalInstance', function ($scope, $location, $http, $dialogs, $modalInstance, ParameterSrvc, UserModel, GithubSrvc, GithubAuthService) {	
+myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, $modalInstance, ParameterSrvc, UserModel, GithubSrvc, GithubAuthService) {	
 	// login by the owner of the repository: edits on the blog are possible
 	// login by someone else: create an empty fork of the repository, automatically available
 	//      - ask for a name: the fork will be created for that name: xyz.github.io
@@ -135,12 +135,13 @@ myApp.controller("GithubCtrl", ['$modalInstance', function ($scope, $location, $
 	})();
 
 	// Request a login code from github if the user presses the login button
-    $scope.requestCode = function() {
+    var dlg;
+	$scope.requestCode = function() {
 		if($scope.githubLogin) {
 			GithubSrvc.requestCode();
 		} else {
 			//var dlg = $dialogs.confirm('This app is not configured for the github oauth login workflow. Please provide your username/password');
-			var dlg = $dialogs.create('/app/partials/githubLogin.html','GithubCtrl',{},{key: false});
+			dlg = $dialogs.create('/app/partials/githubLogin.html','GithubCtrl',{},{key: false});
 		}
     }
 	
@@ -149,7 +150,7 @@ myApp.controller("GithubCtrl", ['$modalInstance', function ($scope, $location, $
 	};
 	
 	$scope.cancel = function(evt) {
-		$modalInstance.close();
+		dlg.close();
 	}
 
 	// logout - this is not really a logout from github, but the access token is deleted
@@ -171,7 +172,7 @@ myApp.controller("GithubCtrl", ['$modalInstance', function ($scope, $location, $
 		console.log("the GithubCtrl received an userLoggedOut event");
         $scope.user = "";
     });
-}]);
+});
 
 myApp.controller('ConfigCtrl', function($scope, GithubSrvc) {
     $scope.inputs = {}
