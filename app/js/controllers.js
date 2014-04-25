@@ -92,7 +92,7 @@ myApp.controller("GithubModalCtrl", function ($scope, $modalInstance) {
 	}; // end cancel
 	
 	$scope.save = function() {
-		alert($scope.user.name+" - "+$scope.user.password);
+		//alert($scope.user.name+" - "+$scope.user.password);
 	};
 });
 
@@ -153,7 +153,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, Par
 			//var dlg = $dialogs.confirm('This app is not configured for the github oauth login workflow. Please provide your username/password');
 			var dlg = $dialogs.create('/app/partials/githubLogin.html','GithubModalCtrl',{},{key: false});
 			dlg.result.then(function(name){
-				$scope.name = name;
+				//$scope.name = name;
 			},function(){
 				console.log("exit");
 			});
