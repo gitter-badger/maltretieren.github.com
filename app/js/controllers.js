@@ -14,7 +14,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
 	var commentsUrl = config.keenio.comments_url;
 	if(commentsUrl==='') {
 		$scope.commentsToggle = false;
-	} esle {
+	} else {
 		$scope.commentsToggle = true;
 	}
 
