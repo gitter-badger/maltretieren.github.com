@@ -3,8 +3,8 @@
 	<legend><span class="glyphicon glyphicon-comment" style="font-size:0.8em"></span> Comments</legend>
 		<table class="table table-hover" style="border-top: none;">
 			<tbody>
-				<tr ng:repeat="comment in comments.entries | filter: { pageTitle: filterString }| orderObjectBy:'timestamp':true | limitTo:quantity">
-					<td class="col-sm-2">
+				<tr ng:repeat="comment in comments.entries | filter: { pageTitle: filterString }| orderObjectBy:'timestamp':true | limitTo:quantity" style="border-top: none;">
+					<td class="col-sm-2" >
 						<a href="tst">{{comment.pageTitle}}</a><br>
 						<span style="font-size:0.8em;">By: <a href="mailto:{{mail}}">{{comment.name}}</a> on {{comment.keen.timestamp | date:'dd MMM yyyy' }}</span>
 					</td>
