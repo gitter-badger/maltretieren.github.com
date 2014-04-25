@@ -5,7 +5,7 @@
 			<div class="row" ng:repeat="comment in comments.entries | filter: { pageTitle: filterString }| orderObjectBy:'timestamp':true | limitTo:quantity">
 				<div class="col-md-2" style="">
 					<a href="tst">{{comment.pageTitle}}</a>
-					<div class="mic-info"> By: <a href="mailto:{{mail}}">{{comment.name}}</a> on {{comment.keen.timestamp | date:'dd MMM yyyy' }}</div>
+					<div class="mic-info"><small>By: <a href="mailto:{{mail}}">{{comment.name}}</a> on {{comment.keen.timestamp | date:'dd MMM yyyy' }}</small></div>
 				</div>
 				<div class="col-md-10" style="">
 					<div class="comment-text">{{comment.message}}</div>
