@@ -396,9 +396,9 @@ myApp.service("PollingSrvc", function ($q, $timeout, UserModel, GithubAuthServic
     return { checkForBranchContent: poll }
 });
 
-myApp.service("PollingImgSrvc", function ($q, $timeout, forkName) {
+myApp.service("PollingImgSrvc", function ($q, $timeout) {
 
-    var poll = function (repoName, branchName) {
+    var poll = function (repoName, branchName, forkName) {
         var deferred = $q.defer();
 
         var pollForImg = function() {
