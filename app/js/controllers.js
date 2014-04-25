@@ -88,7 +88,7 @@ myApp.controller("TableCtrl",function ($scope, $http) {
 /**
  * GitHub controller using the GitHub service
  */
-myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, $modalInstance, ParameterSrvc, UserModel, GithubSrvc, GithubAuthService) {	
+myApp.controller("GithubCtrl", ['$modalInstance', function ($scope, $location, $http, $dialogs, $modalInstance, ParameterSrvc, UserModel, GithubSrvc, GithubAuthService) {	
 	// login by the owner of the repository: edits on the blog are possible
 	// login by someone else: create an empty fork of the repository, automatically available
 	//      - ask for a name: the fork will be created for that name: xyz.github.io
@@ -171,7 +171,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, $mo
 		console.log("the GithubCtrl received an userLoggedOut event");
         $scope.user = "";
     });
-});
+}]);
 
 myApp.controller('ConfigCtrl', function($scope, GithubSrvc) {
     $scope.inputs = {}
