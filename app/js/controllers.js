@@ -98,7 +98,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $window, Para
 
 	$scope.user = UserModel.user;
 	if($window.config.heroku.authenticate != "") {
-		$scope.githubLogin = true;
+		$scope.githubLogin = false;
 	} else {
 		$scope.githubLogin = false;
 	}
@@ -136,7 +136,11 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $window, Para
 
 	// Request a login code from github if the user presses the login button
     $scope.requestCode = function() {
-        GithubSrvc.requestCode();
+		if($scope.githubLogin) {
+			GithubSrvc.requestCode();
+		} else {
+			alert("This app is not configured for the github oauth login workflow. Please provide your username/password")
+		}
     }
 
 	// logout - this is not really a logout from github, but the access token is deleted
