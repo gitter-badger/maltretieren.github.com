@@ -1,5 +1,5 @@
 <!-- only show this block, if there are any comments for this page -->
-<div ng-hide="config.keenio.comments_url == ''" ng-show="(comments.entries | filter: { pageTitle: filterString }).length>0">
+<div ng-cloak ng-hide="config.keenio.comments_url == ''" ng-show="(comments.entries | filter: { pageTitle: filterString }).length>0">
 	<legend><span class="glyphicon glyphicon-comment" style="font-size:0.8em"></span> 
 		Comments
 		<button class="btn btn-primary btn-xs" type="button" ng-click="more()">
