@@ -3,13 +3,19 @@
 	<legend><span class="glyphicon glyphicon-comment" style="font-size:0.8em"></span> Comments</legend>
 	<div class="row">
 		<div ng:repeat="comment in comments.entries | filter: { pageTitle: filterString }| orderObjectBy:'timestamp':true | limitTo:quantity">
-			<div class="col-md-2" style="">
-				<a href="tst">{{comment.pageTitle}}</a>
-				<div class="mic-info"><small>By: <a href="mailto:{{mail}}">{{comment.name}}</a> on {{comment.keen.timestamp | date:'dd MMM yyyy' }}</small></div>
-			</div>
-			<div class="col-md-10" style="">
-				<div class="comment-text">{{comment.message}}</div>
-			</div>
+			<table class="table">
+				<tbody>
+					<tr class="active">
+						<td>
+							<a href="tst">{{comment.pageTitle}}</a>
+							<small>By: <a href="mailto:{{mail}}">{{comment.name}}</a> on {{comment.keen.timestamp | date:'dd MMM yyyy' }}</small>
+						</td>
+						<td>
+							{{comment.message}}
+						</td>
+					</tr>
+				</tbody>
+			</table>
 		<div>
 	</div>
 </div>
