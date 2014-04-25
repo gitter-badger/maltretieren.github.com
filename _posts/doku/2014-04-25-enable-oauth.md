@@ -2,7 +2,7 @@
 layout: post
 categories: 
   - doku
-tagline: a post to the main page
+tagline: 
 tags: 
   - development
   - test
