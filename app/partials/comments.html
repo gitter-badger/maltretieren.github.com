@@ -5,7 +5,7 @@
 			<tbody>
 				<tr ng:repeat="comment in comments.entries | filter: { pageTitle: filterString }| orderObjectBy:'timestamp':true | limitTo:quantity">
 					<td class="col-sm-2">
-						<a href="tst">{{comment.pageTitle}}</a>
+						<a href="tst">{{comment.pageTitle}}</a><br>
 						<small>By: <a href="mailto:{{mail}}">{{comment.name}}</a> on {{comment.keen.timestamp | date:'dd MMM yyyy' }}</small>
 					</td>
 					<td>
