@@ -139,7 +139,12 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $window, Para
 		if($scope.githubLogin) {
 			GithubSrvc.requestCode();
 		} else {
-			alert("This app is not configured for the github oauth login workflow. Please provide your username/password")
+			var dlg = $dialogs.confirm('This app is not configured for the github oauth login workflow. Please provide your username/password');
+		    dlg.result.then(function(btn){
+				alert("okay");
+			},function(btn){
+				alert("cancel");
+			});
 		}
     }
 
@@ -217,7 +222,7 @@ myApp.controller('ToasterController', function($scope, toaster) {
     };
 });
 
-myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserModel, StyleSwitcher, GithubSrvc, GithubAuthService, PollingSrvc, PollingImgSrvc) {
+myApp.controller('GithubForkCtrl', function($scope, $http, $q, $dialogs, toaster, UserModel, StyleSwitcher, GithubSrvc, GithubAuthService, PollingSrvc, PollingImgSrvc) {
 	var scope = $scope;
 	scope.success = false;
 	
