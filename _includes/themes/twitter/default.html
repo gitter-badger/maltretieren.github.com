@@ -74,7 +74,8 @@
                 {% include JB/pages_list %}
             </ul>
             <form class="navbar-form navbar-right" style="padding-right:0px" ng-controller="GithubCtrl">
-                <div class="btn-toolbar bs-component" ng-cloak ng-show="githubLogin">
+                <!-- <div class="btn-toolbar bs-component" ng-cloak ng-show="githubLogin"> -->
+				<div class="btn-toolbar bs-component">
 					<button ng-cloak type="button" class="btn btn-warning btn-middle ng-hide" ng-click="requestCode()" ng-show="!user.name">Login with Github</button>
 					<div ng-cloak class="btn-group" ng-show="user.name" style="text-align:right ng-hide">
 					  <button type="button" class="btn btn-success">
