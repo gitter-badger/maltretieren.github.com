@@ -139,8 +139,8 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, Par
 		if($scope.githubLogin) {
 			GithubSrvc.requestCode();
 		} else {
-			//var dlg = $dialogs.confirm('This app is not configured for the github oauth login workflow. Please provide your username/password');
-			var dlg = $dialogs.create('/app/partials/githubLogin.html','GithubCtrl',{},{key: false,back: 'static'});
+			var dlg = $dialogs.confirm('This app is not configured for the github oauth login workflow. Please provide your username/password');
+			//var dlg = $dialogs.create('/app/partials/githubLogin.html','GithubCtrl',{},{key: false,back: 'static'});
 		    dlg.result.then(function(btn){
 				alert("okay");
 			},function(btn){
