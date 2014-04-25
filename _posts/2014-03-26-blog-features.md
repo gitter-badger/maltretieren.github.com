@@ -20,7 +20,7 @@ published: true
 - GitHub Pages compatible
 - HTTPS always
 - Edit feature (append ?edit=true to the url and see, edit, provide password and save)
-- Login via Github (dependency to "gatekeeper" running on github, but there is a fallback to provide username and password)
+- Login via Github (dependency to "gatekeeper" running on github (Oauth), but there is a fallback to provide username and password (basic authentication))
 - Interactive tables build out of blog posts - beautiful, searchable, sortable
 - Comments via keen.io
 - Ratings via keen.io
