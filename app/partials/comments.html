@@ -1,26 +1,23 @@
 <!-- only show this block, if there are any comments for this page -->
 <div ng-show="(comments.entries | filter: { pageTitle: filterString }).length>0">
-	<legend><span class="glyphicon glyphicon-comment" style="font-size:0.8em"></span> Comments</legend>
-		<table class="table table-hover">
-			<tbody>
-				<tr ng:repeat="comment in comments.entries | filter: { pageTitle: filterString }| orderObjectBy:'timestamp':true | limitTo:quantity">
-					<td class="col-sm-2" style="border-top: none;">
-						<a href="tst">{{comment.pageTitle}}</a><br>
-						<span style="font-size:0.8em;">By: <a href="mailto:{{mail}}">{{comment.name}}</a> on {{comment.keen.timestamp | date:'dd MMM yyyy' }}</span>
-					</td>
-					<td style="border-top: none;">
-						{{comment.message}}
-					</td>
-				</tr>
-			</tbody>
-		</table>
-		<div class="row">
-			<div class="col-xs-12 col-md-12 form-group">
-				<button class="btn btn-primary pull-right" type="button" ng-click="more()">
-					<span class="glyphicon glyphicon-refresh"></span>
-					More
-				</button>
-                </div>
-            </div>
-		</div>
+	<legend><span class="glyphicon glyphicon-comment" style="font-size:0.8em"></span> 
+		Comments
+		<button class="btn btn-primary pull-right" type="button" ng-click="more()">
+			<span class="glyphicon glyphicon-refresh"></span>
+			More	
+		</button>
+	</legend>
+	<table class="table table-hover">
+		<tbody>
+			<tr ng:repeat="comment in comments.entries | filter: { pageTitle: filterString }| orderObjectBy:'timestamp':true | limitTo:quantity">
+				<td class="col-sm-2" style="border-top: none;">
+					<a href="tst">{{comment.pageTitle}}</a><br>
+					<span style="font-size:0.8em;">By: <a href="mailto:{{mail}}">{{comment.name}}</a> on {{comment.keen.timestamp | date:'dd MMM yyyy' }}</span>
+				</td>
+				<td style="border-top: none;">
+					{{comment.message}}
+				</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
