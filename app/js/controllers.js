@@ -150,7 +150,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, Par
 	};
 	
 	$scope.cancel = function(evt) {
-		dlg.close();
+		dlg.dismiss();
 	}
 
 	// logout - this is not really a logout from github, but the access token is deleted
