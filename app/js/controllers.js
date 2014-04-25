@@ -135,13 +135,12 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, Par
 	})();
 
 	// Request a login code from github if the user presses the login button
-    var dlg;
 	$scope.requestCode = function() {
 		if($scope.githubLogin) {
 			GithubSrvc.requestCode();
 		} else {
 			//var dlg = $dialogs.confirm('This app is not configured for the github oauth login workflow. Please provide your username/password');
-			dlg = $dialogs.create('/app/partials/githubLogin.html','GithubCtrl',{},{key: false});
+			$scope.dlg = $dialogs.create('/app/partials/githubLogin.html','GithubCtrl',{},{key: false});
 		}
     }
 	
@@ -150,7 +149,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, Par
 	};
 	
 	$scope.cancel = function(evt) {
-		dlg.close();
+		$scope.dlg.close();
 	}
 
 	// logout - this is not really a logout from github, but the access token is deleted
