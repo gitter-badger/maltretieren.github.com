@@ -141,13 +141,16 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, Par
 		} else {
 			//var dlg = $dialogs.confirm('This app is not configured for the github oauth login workflow. Please provide your username/password');
 			var dlg = $dialogs.create('/app/partials/githubLogin.html','GithubCtrl',{},{key: false,back: 'static'});
-		    dlg.result.then(function(btn){
-				alert("okay");
-			},function(btn){
-				alert("cancel");
-			});
 		}
     }
+	
+	$scope.save = function() {
+		alert($scope.user.name+" - "+$scope.user.password);
+	};
+	
+	$scope.cancel = function() {
+		alert("cancel")
+	}
 
 	// logout - this is not really a logout from github, but the access token is deleted
 	$scope.logout = function() {
