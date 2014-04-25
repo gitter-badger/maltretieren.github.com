@@ -86,6 +86,7 @@ myApp.controller("TableCtrl",function ($scope, $http) {
 });
 
 myApp.controller("GithubModalCtrl", function ($scope, $modalInstance) {
+	$scope.user = {}
 	$scope.cancel = function(){
 		$modalInstance.dismiss('canceled');  
 	}; // end cancel
