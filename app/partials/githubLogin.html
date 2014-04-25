@@ -2,18 +2,21 @@
 	<div class="modal-content">
 	  <div class="modal-header dialog-header-confirm">
 		<h4 class="modal-title">
-		  User's Name
+		  Github Login
 		</h4>
 	  </div>
 	  <div class="modal-body form-group input-group-lg" ng-class="{true: 'has-error'}[nameDialog.username.$dirty && nameDialog.username.$invalid]">
 		<label for="course" class="control-label">Name:</label>
 		<input type="text" required ng-keyup="hitEnter($event)" ng-model="user.name" id="username" name="username" class="form-control ng-pristine ng-invalid ng-invalid-required" />
 		<span class="help-block">
-			Enter your full name, first &amp; last.
+			This app is not configured for the github oauth login workflow. Please enter your github username/password. The credentials are stored in your browser. Generally you should
+			consider not to enter any of your secrets in broser windows other than the original site. If you are the administrator of this site please consider to enable oauth access - you
+			can find useful information here <a href="/2014/04/25/enable-oauth-for-github">on the help pages</a>.
 		</span>
 	  </div>
 	  <div class="modal-footer">
-		<button ng-click="cancel()" class="btn btn-default" type="button">Cancel</button><button ng-disabled="(nameDialog.$dirty &amp;&amp; nameDialog.$invalid) || nameDialog.$pristine" ng-click="save()" class="btn btn-primary" type="button" disabled="disabled">
+		<button ng-click="cancel()" class="btn btn-default" type="button">Cancel</button>
+		<button ng-disabled="(nameDialog.$dirty && nameDialog.$invalid) || nameDialog.$pristine" ng-click="save()" class="btn btn-primary" type="button" disabled="disabled">
 			Save
 		</button>
 	  </div>
