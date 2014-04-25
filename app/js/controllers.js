@@ -97,7 +97,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, Par
 	
 
 	$scope.user = UserModel.user;
-	if($window.config.heroku.authenticate != "") {
+	if(config.heroku.authenticate != "") {
 		$scope.githubLogin = false;
 	} else {
 		$scope.githubLogin = false;
@@ -169,9 +169,9 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, Par
     });
 });
 
-myApp.controller('ConfigCtrl', function($scope, $window, GithubSrvc) {
+myApp.controller('ConfigCtrl', function($scope, GithubSrvc) {
     $scope.inputs = {}
-	$scope.inputs = $window.config,
+	$scope.inputs = config,
     $scope.setOutput = function(key, key2, newValue) {
         $scope.inputs[key][key2] = newValue;
     }
