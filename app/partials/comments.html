@@ -1,9 +1,8 @@
 <!-- only show this block, if there are any comments for this page -->
 <div ng-show="(comments.entries | filter: { pageTitle: filterString }).length>0">
 	<legend><span class="glyphicon glyphicon-comment" style="font-size:0.8em"></span> Comments</legend>
-
-		<div class="row">
-			<div ng:repeat="comment in comments.entries | filter: { pageTitle: filterString }| orderObjectBy:'timestamp':true | limitTo:quantity">
+		<div class="container">
+			<div class="row" ng:repeat="comment in comments.entries | filter: { pageTitle: filterString }| orderObjectBy:'timestamp':true | limitTo:quantity">
 				<div class="col-md-2" style="background-color:blue">
 					<a href="tst">{{comment.pageTitle}}</a>
 					<div class="mic-info"> By: <a href="mailto:{{mail}}">{{comment.name}}</a> on {{comment.keen.timestamp | date:'dd MMM yyyy' }}</div>
