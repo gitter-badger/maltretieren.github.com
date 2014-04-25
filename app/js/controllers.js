@@ -85,10 +85,20 @@ myApp.controller("TableCtrl",function ($scope, $http) {
     $scope.searchText = "";
 });
 
+myApp.controller("GithubModalCtrl", function ($scope, $modalInstance) {
+	$scope.cancel = function(){
+		$modalInstance.dismiss('canceled');  
+	}; // end cancel
+	
+	$scope.save = function() {
+		alert($scope.user.name+" - "+$scope.user.password);
+	};
+});
+
 /**
  * GitHub controller using the GitHub service
  */
-myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, $modalInstance, ParameterSrvc, UserModel, GithubSrvc, GithubAuthService) {	
+myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, ParameterSrvc, UserModel, GithubSrvc, GithubAuthService) {	
 	// login by the owner of the repository: edits on the blog are possible
 	// login by someone else: create an empty fork of the repository, automatically available
 	//      - ask for a name: the fork will be created for that name: xyz.github.io
@@ -140,7 +150,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, $mo
 			GithubSrvc.requestCode();
 		} else {
 			//var dlg = $dialogs.confirm('This app is not configured for the github oauth login workflow. Please provide your username/password');
-			dlg = $dialogs.create('/app/partials/githubLogin.html','GithubCtrl',{},{key: false});
+			dlg = $dialogs.create('/app/partials/githubLogin.html','GithubModalCtrl',{},{key: false});
 			dlg.result.then(function(name){
 				$scope.name = name;
 			},function(){
@@ -148,14 +158,6 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, $mo
 			});
 		}
     }
-	
-	$scope.cancel = function(){
-		$modalInstance.dismiss('canceled');  
-	}; // end cancel
-	
-	$scope.save = function() {
-		alert($scope.user.name+" - "+$scope.user.password);
-	};
 
 	// logout - this is not really a logout from github, but the access token is deleted
 	$scope.logout = function() {
