@@ -16,10 +16,10 @@ published: true
 
 # Overview
 - Build with Jekyll (based on Jekyll Bootstrap)
-- Completly OpenSourcee
+- Completly OpenSource
 - GitHub Pages compatible
 - HTTPS always
-- Edit feature (append ?edit=true to the url and see, edit, provide password and save)
+- Create / Edit Delete posts
 - Login via Github (dependency to "gatekeeper" running on github (Oauth), but there is a fallback to provide username and password (basic authentication))
 - Interactive tables build out of blog posts - beautiful, searchable, sortable
 - Comments via keen.io
