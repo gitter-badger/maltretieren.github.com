@@ -134,7 +134,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, Par
 		}
 	})();
 
-	var dlg = {};
+	var dlg = null;
 	// Request a login code from github if the user presses the login button
 	$scope.requestCode = function() {
 		if($scope.githubLogin) {
