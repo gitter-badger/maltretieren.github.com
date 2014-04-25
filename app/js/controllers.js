@@ -88,7 +88,7 @@ myApp.controller("TableCtrl",function ($scope, $http) {
 /**
  * GitHub controller using the GitHub service
  */
-myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, ParameterSrvc, UserModel, GithubSrvc, GithubAuthService) {	
+myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, $modalInstance, ParameterSrvc, UserModel, GithubSrvc, GithubAuthService) {	
 	// login by the owner of the repository: edits on the blog are possible
 	// login by someone else: create an empty fork of the repository, automatically available
 	//      - ask for a name: the fork will be created for that name: xyz.github.io
@@ -134,7 +134,6 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, Par
 		}
 	})();
 
-	var dlg = null;
 	// Request a login code from github if the user presses the login button
 	$scope.requestCode = function() {
 		if($scope.githubLogin) {
@@ -149,6 +148,10 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, Par
 			});
 		}
     }
+	
+	$scope.cancel = function(){
+		$modalInstance.dismiss('canceled');  
+	}; // end cancel
 	
 	$scope.save = function() {
 		alert($scope.user.name+" - "+$scope.user.password);
