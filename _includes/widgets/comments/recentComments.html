@@ -1,6 +1,6 @@
 {% include widgets/comments/recentComments.css %}
 
 <div ng-cloak ng-hide="config.keenio.comments_url == ''" data-ng-controller="CommentsCtrl">
-	{{config.keenio.comments_url}}
+	{{config}}
     <div data-ng-include data-src="'/app/partials/comments.html'"></div>
 </div>
