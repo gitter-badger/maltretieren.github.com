@@ -366,7 +366,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserMode
         })
         .then(function(){
 			scope.progress = 90;
-            return PollingImgSrvc.checkReady(forkName);
+            return PollingImgSrvc.checkReady(UserModel.getUser().name+".github.com");
         })
         .then(function() {
 			scope.success = true;

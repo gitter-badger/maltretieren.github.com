@@ -398,7 +398,7 @@ myApp.service("PollingSrvc", function ($q, $timeout, UserModel, GithubAuthServic
 
 myApp.service("PollingImgSrvc", function ($q, $timeout) {
 
-    var poll = function (repoName, branchName, forkName) {
+    var poll = function (repoName) {
         var deferred = $q.defer();
 
         var pollForImg = function() {
