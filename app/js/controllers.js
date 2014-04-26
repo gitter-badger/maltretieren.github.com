@@ -385,7 +385,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserMode
                         if(prop==="user") {
                             configMod[key][prop] = name;
                         } else if(prop=="repository"){
-                            configMod[key][prop] = name+".github.com";
+                            configMod[key][prop] =name+".github.com";
                         } else {
                             configMod[key][prop] = "";
                         }
