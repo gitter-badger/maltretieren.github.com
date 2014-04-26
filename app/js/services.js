@@ -21,7 +21,7 @@ myApp.service("GithubAuthService", function ($http, $q, $rootScope, UserModel) {
                 var oauthToken = localStorage.getItem("oauthToken");
 
                 // search for info in localStorage
-                if(typeof username === 'undefined' && typeof password === 'undefined') {
+                if(typeof username === 'undefined' && typeof password === 'undefined' && UserModel.getUser() !== null) {
                     username = UserModel.getUser().name;
                     password = UserModel.getUser().password;
                     console.log("localStorage - Username: "+username);
