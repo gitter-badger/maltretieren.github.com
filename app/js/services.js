@@ -224,17 +224,9 @@ myApp.service("GithubSrvc", function (
 			return branch.createBranch("master").then(function() {
 				console.log("master branch created from template branch");
                 branch = repo.getBranch("master");
-                var callback = function() {
-                    //repo.git.deleteRef("heads/template");
-                };
-                //PollingSrvc.checkForBranchContent(branch, "README.md", callback);
 			});
         },
         postProcess: function(path, replace, repositoryName) {
-            // change page slogan:
-            // request _config.yml
-            // search/replace "title : Place to pee free!"/"title: slogan)
-            // commit
             var self = this;
             var content = this.getContent(path);
             var deferred = $q.defer();
@@ -345,6 +337,7 @@ myApp.service("UserModel", function ($rootScope) {
 
 	this.setUserName = function(userName) {
 		this.user.name = userName;
+        $rootScope.$broadcast('UserModel::userLoggedIn');
         serializeUser(this.user);
 	};
     this.setIsAdmin = function(isAdmin) {
