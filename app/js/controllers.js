@@ -101,6 +101,7 @@ myApp.controller("GithubModalCtrl", function ($scope, $modalInstance, UserModel,
             GithubSrvc.testAdmin();
         }, function() {
             console.log("Username invalid");
+            GithubAuthService.github = null;
         });
 	};
 });
