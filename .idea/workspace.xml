@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services.js" afterPath="$PROJECT_DIR$/app/js/services.js" />
-    </list>
+    <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="" />
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="12" selection-start="3089" selection-end="3089" vertical-scroll-proportion="-12.6" vertical-offset="1200" max-vertical-offset="8040">
+            <state line="101" column="12" selection-start="3089" selection-end="3089" vertical-scroll-proportion="0.7347973" vertical-offset="1080" max-vertical-offset="8040">
               <folding />
             </state>
           </provider>
@@ -70,10 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="108" selection-start="4064" selection-end="4064" vertical-scroll-proportion="0.6841216" vertical-offset="1065" max-vertical-offset="7050">
+            <state line="98" column="108" selection-start="4064" selection-end="4064" vertical-scroll-proportion="-16.2" vertical-offset="1065" max-vertical-offset="7050">
               <folding />
             </state>
           </provider>
@@ -709,16 +707,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
+    <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="12" selection-start="3089" selection-end="3089" vertical-scroll-proportion="-12.6" vertical-offset="1200" max-vertical-offset="8040">
+        <state line="98" column="108" selection-start="4064" selection-end="4064" vertical-scroll-proportion="-16.2" vertical-offset="1065" max-vertical-offset="7050">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/services.js">
+    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="108" selection-start="4064" selection-end="4064" vertical-scroll-proportion="0.6841216" vertical-offset="1065" max-vertical-offset="7050">
+        <state line="101" column="12" selection-start="3089" selection-end="3089" vertical-scroll-proportion="0.7347973" vertical-offset="1080" max-vertical-offset="8040">
           <folding />
         </state>
       </provider>
