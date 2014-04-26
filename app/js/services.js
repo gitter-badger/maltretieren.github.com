@@ -9,7 +9,7 @@
 // EXAMPLE OF CORRECT DECLARATION OF SERVICE AS A VALUE
 myApp.value('version', '0.1');
 
-myApp.service("GithubAuthService", function ($http, $q, UserModel) {
+myApp.service("GithubAuthService", function ($http, $q, UserModel, GithubModalCtrl) {
     var github = null;
 
     return {
@@ -91,7 +91,9 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
                 }, function(err) {
                     console.log("there was an error getting user information, maybe the token is invalid?");
                     // delete the token from localStorage, because it is invalid...
-                    GithubAuthService.requestToken();
+                    //GithubAuthService.requestToken();
+                    GithubModalCtrl.cancel();
+                    $rootScope.$broadcast('Toast::githubLoginFail');
                 });
 
                 return userPromise;
