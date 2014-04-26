@@ -100,6 +100,8 @@ myApp.controller("GithubModalCtrl", function ($scope, $modalInstance, UserModel,
             UserModel.setPassword($scope.user.password);
             $modalInstance.dismiss('canceled');
             return GithubSrvc.testAdmin();
+        }, function() {
+            console.log("Username invalid");
         });
 	};
 });
