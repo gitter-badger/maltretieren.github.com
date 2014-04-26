@@ -140,7 +140,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, Par
 				GithubAuthService.requestToken(oauthCode).then(function() {
 					console.log("token available");
 				}).then(function() {
-					console.log("request user");
+					console.log("request user"); 
 					return GithubAuthService.userInfo().user();
 				}).then(function(loginData) {
                     UserModel.setUserName(loginData.login);
