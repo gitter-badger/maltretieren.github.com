@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/githubLogin.html" afterPath="$PROJECT_DIR$/app/partials/githubLogin.html" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
@@ -82,7 +83,7 @@
       <file leaf-file-name="githubLogin.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/partials/githubLogin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="61" selection-start="274" selection-end="274" vertical-scroll-proportion="0.20236088" vertical-offset="0" max-vertical-offset="593">
+            <state line="25" column="6" selection-start="1644" selection-end="1644" vertical-scroll-proportion="0.63237774" vertical-offset="0" max-vertical-offset="593">
               <folding />
             </state>
           </provider>
@@ -720,7 +721,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/partials/githubLogin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="61" selection-start="274" selection-end="274" vertical-scroll-proportion="0.20236088" vertical-offset="0" max-vertical-offset="593">
+        <state line="25" column="6" selection-start="1644" selection-end="1644" vertical-scroll-proportion="0.63237774" vertical-offset="0" max-vertical-offset="593">
           <folding />
         </state>
       </provider>
