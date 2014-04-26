@@ -98,8 +98,6 @@ myApp.service("GithubAuthService", function ($http, $q, $rootScope, UserModel) {
                 }, function(err) {
                     console.log("there was an error getting user information, maybe the token is invalid?");
                     // delete the token from localStorage, because it is invalid...
-                    //GithubAuthService.requestToken();
-                    //GithubModalCtrl.cancel();
                     $rootScope.$broadcast('Toast::githubLoginFail');
                 });
 
