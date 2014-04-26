@@ -97,7 +97,7 @@ myApp.controller("GithubModalCtrl", function ($scope, $modalInstance, UserModel,
         var userPromise = GithubAuthService.userInfo().user();
         userPromise.then(function() {
             console.log("test if the user is the admin");
-            UserModel.setName($scope.user.name);
+            UserModel.setUserName($scope.user.name);
             UserModel.setPassword($scope.user.password);
             return GithubSrvc.testAdmin();
         });
