@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/githubLogin.html" afterPath="$PROJECT_DIR$/app/partials/githubLogin.html" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="387" column="50" selection-start="13067" selection-end="13067" vertical-scroll-proportion="0.4814189" vertical-offset="5520" max-vertical-offset="8100">
+            <state line="387" column="50" selection-start="13067" selection-end="13067" vertical-scroll-proportion="-11.4" vertical-offset="5520" max-vertical-offset="8100">
               <folding />
             </state>
           </provider>
@@ -79,10 +79,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="githubLogin.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="githubLogin.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/partials/githubLogin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="6" selection-start="1644" selection-end="1644" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="465">
+            <state line="8" column="69" selection-start="282" selection-end="282" vertical-scroll-proportion="0.20236088" vertical-offset="0" max-vertical-offset="593">
               <folding />
             </state>
           </provider>
@@ -146,9 +146,9 @@
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/app/admin/fork.html" />
-        <option value="$PROJECT_DIR$/app/partials/githubLogin.html" />
         <option value="$PROJECT_DIR$/app/js/services.js" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
+        <option value="$PROJECT_DIR$/app/partials/githubLogin.html" />
       </list>
     </option>
   </component>
@@ -695,13 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/partials/githubLogin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="6" selection-start="1644" selection-end="1644" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/directives.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="464">
@@ -718,7 +711,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="387" column="50" selection-start="13067" selection-end="13067" vertical-scroll-proportion="0.4814189" vertical-offset="5520" max-vertical-offset="8100">
+        <state line="387" column="50" selection-start="13067" selection-end="13067" vertical-scroll-proportion="-11.4" vertical-offset="5520" max-vertical-offset="8100">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/partials/githubLogin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="69" selection-start="282" selection-end="282" vertical-scroll-proportion="0.20236088" vertical-offset="0" max-vertical-offset="593">
           <folding />
         </state>
       </provider>
