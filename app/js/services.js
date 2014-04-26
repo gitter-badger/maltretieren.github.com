@@ -93,7 +93,7 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
 
                 var userPromise = user.getInfo().then(function(res) {
                     console.log("login successfull: "+res.login);
-                    UserModel.login(res)
+                    UserModel.setUserName(res.login)
 
                 }, function(err) {
                     console.log("there was an error getting user information, maybe the token is invalid?");
@@ -343,8 +343,8 @@ myApp.service("UserModel", function ($rootScope) {
         localStorage.setItem("user", userJson);
     }
 
-	this.login = function(loginData) {
-		this.user.name = loginData.login;
+	this.setUserName = function(userName) {
+		this.user.name = userName;
         serializeUser(this.user);
 	};
     this.setIsAdmin = function(isAdmin) {
