@@ -36,6 +36,7 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
                     console.log("Did you login via github? Otherwise you can connect via Basic Authentication... Please provide a username and password...")
                 }
             } else {
+                console.log("service already instanciated")
                 return github;
             }
 		},
