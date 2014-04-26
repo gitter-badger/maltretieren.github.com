@@ -10,9 +10,10 @@
 myApp.value('version', '0.1');
 
 myApp.service("GithubAuthService", function ($http, $q, UserModel) {
-	return {
+    var github = null;
+
+    return {
 		instance : function(username, password) {
-			var github = null;
 			// this should ask for the UserModel - user object, and get the token from there...
 			// maybe store the instance in localStorage????
             if(github===null) {
