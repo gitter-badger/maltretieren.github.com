@@ -142,9 +142,8 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, Par
 				}).then(function() {
 					console.log("request user");
 					return GithubAuthService.userInfo().user();
-				}).then(function(tst) {
-                        console.log(tst);
-                    UserModel.setUserName(user);
+				}).then(function(loginData) {
+                    UserModel.setUserName(loginData.login);
 					console.log("test if the user is the admin");
 					return GithubSrvc.testAdmin();
 				}).then(function() {
