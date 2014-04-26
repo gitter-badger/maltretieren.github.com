@@ -118,6 +118,8 @@ myApp.service("GithubSrvc", function (
         testAdmin: function() {
             var deferred = $q.defer();
             var githubInstance = GithubAuthService.instance();
+            console.log(config.github.user);
+            console.log(config.github.repository);
             var repo = githubInstance.getRepo(config.github.user, config.github.repository);
             var branch = repo.getBranch("master");
             var promise = this.commit("test", "test", branch);
