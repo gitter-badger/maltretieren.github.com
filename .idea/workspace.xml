@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="" />
+    <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
+    </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,7 +28,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="12" selection-start="3089" selection-end="3089" vertical-scroll-proportion="0.7347973" vertical-offset="1080" max-vertical-offset="8040">
+            <state line="95" column="48" selection-start="2808" selection-end="2808" vertical-scroll-proportion="0.6081081" vertical-offset="1065" max-vertical-offset="8025">
               <folding />
             </state>
           </provider>
@@ -145,8 +147,8 @@
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/app/admin/fork.html" />
         <option value="$PROJECT_DIR$/app/partials/githubLogin.html" />
-        <option value="$PROJECT_DIR$/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/app/js/services.js" />
+        <option value="$PROJECT_DIR$/app/js/controllers.js" />
       </list>
     </option>
   </component>
@@ -716,7 +718,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="12" selection-start="3089" selection-end="3089" vertical-scroll-proportion="0.7347973" vertical-offset="1080" max-vertical-offset="8040">
+        <state line="95" column="48" selection-start="2808" selection-end="2808" vertical-scroll-proportion="0.6081081" vertical-offset="1065" max-vertical-offset="8025">
           <folding />
         </state>
       </provider>
