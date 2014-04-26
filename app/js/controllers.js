@@ -94,11 +94,11 @@ myApp.controller("GithubModalCtrl", function ($scope, $modalInstance, UserModel,
 	$scope.save = function() {
 		console.log($scope.user.name+" - "+$scope.user.password);
         GithubAuthService.instance($scope.user.name, $scope.user.password);
-        UserModel.setName($scope.user.name);
-        UserModel.setPassword($scope.user.password);
         var userPromise = GithubAuthService.userInfo().user();
         userPromise.then(function() {
             console.log("test if the user is the admin");
+            UserModel.setName($scope.user.name);
+            UserModel.setPassword($scope.user.password);
             return GithubSrvc.testAdmin();
         });
 	};
