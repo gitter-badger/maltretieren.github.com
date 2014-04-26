@@ -11,8 +11,13 @@
  */
 myApp.controller("CommentsCtrl",function ($scope, $http) {
 
-	var commentsUrl = "https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/queries/extraction?api_key=fca64cb411fe523d053f2d9b1d159011135be6ce55da682f1ad8d6b1d4f629b84dd564edb1c0d7a0d7575ebaaa79b55daa075f7c866d7430ace403bab51b7513aa41b30ce443f9d736d45d33c78a0b44420c2ecd35223b76d67af37df1d0cc52bf67e73cb32d949eb58cb5814e7e5e6a&event_collection=comments&timezone=3600"
- 
+	var commentsUrl = config.keenio.comments_url;
+	if(commentsUrl==='') {
+		$scope.commentsToggle = false;
+	} else {
+		$scope.commentsToggle = true;
+	}
+
     $http({method: 'GET', url: commentsUrl}).
         success(function(data, status, headers, config) {
             // this callback will be called asynchronously
@@ -80,10 +85,21 @@ myApp.controller("TableCtrl",function ($scope, $http) {
     $scope.searchText = "";
 });
 
+myApp.controller("GithubModalCtrl", function ($scope, $modalInstance) {
+	$scope.user = {}
+	$scope.cancel = function(){
+		$modalInstance.dismiss('canceled');  
+	}; // end cancel
+	
+	$scope.save = function() {
+		//alert($scope.user.name+" - "+$scope.user.password);
+	};
+});
+
 /**
  * GitHub controller using the GitHub service
  */
-myApp.controller("GithubCtrl", function ($scope, $location, $http, $window, ParameterSrvc, UserModel, GithubSrvc, GithubAuthService) {	
+myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, ParameterSrvc, UserModel, GithubSrvc, GithubAuthService) {	
 	// login by the owner of the repository: edits on the blog are possible
 	// login by someone else: create an empty fork of the repository, automatically available
 	//      - ask for a name: the fork will be created for that name: xyz.github.io
@@ -92,8 +108,8 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $window, Para
 	
 
 	$scope.user = UserModel.user;
-	if($window.config.heroku.authenticate != "") {
-		$scope.githubLogin = true;
+	if(config.heroku.authenticate != "") {
+		$scope.githubLogin = false;
 	} else {
 		$scope.githubLogin = false;
 	}
@@ -130,8 +146,18 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $window, Para
 	})();
 
 	// Request a login code from github if the user presses the login button
-    $scope.requestCode = function() {
-        GithubSrvc.requestCode();
+	$scope.requestCode = function() {
+		if($scope.githubLogin) {
+			GithubSrvc.requestCode();
+		} else {
+			//var dlg = $dialogs.confirm('This app is not configured for the github oauth login workflow. Please provide your username/password');
+			var dlg = $dialogs.create('/app/partials/githubLogin.html','GithubModalCtrl',{},{key: false});
+			dlg.result.then(function(name){
+				//$scope.name = name;
+			},function(){
+				console.log("exit");
+			});
+		}
     }
 
 	// logout - this is not really a logout from github, but the access token is deleted
@@ -155,9 +181,9 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $window, Para
     });
 });
 
-myApp.controller('ConfigCtrl', function($scope, $window, GithubSrvc) {
+myApp.controller('ConfigCtrl', function($scope, GithubSrvc) {
     $scope.inputs = {}
-	$scope.inputs = $window.config,
+	$scope.inputs = config,
     $scope.setOutput = function(key, key2, newValue) {
         $scope.inputs[key][key2] = newValue;
     }

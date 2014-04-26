@@ -1,32 +1,23 @@
 <!-- only show this block, if there are any comments for this page -->
-<div ng-show="(comments.entries | filter: { pageTitle: filterString }).length>0">
-	<legend><span class="glyphicon glyphicon-comment" style="font-size:0.8em"></span> Comments</legend>
-		<div>
-			<div class="col-md-2" style="background-color:blue">
-				<a href="tst">Page Title</a>
-				<div class="mic-info"> By: <a href="mailto:">Blabla</a> on 2014</div>
-			</div>
-			<div class="col-md-10" style="background-color:green">
-				<div class="comment-text">Text Kommentar Text Kommentar Text Kommentar Text Kommentar Text Kommentar Text Kommentar Text Kommentar Text Kommentar Text Kommentar Text Kommentar</div>
-			</div>
-		<div>
-		<div class="panel panel-default widget">
-			<div class="panel-body">
-				<ul class="list-group">
-					<li class="list-group-item" ng:repeat="comment in comments.entries | filter: { pageTitle: filterString }| orderObjectBy:'timestamp':true | limitTo:quantity">
-						<div class="row">
-
-							<div class="col-xs-10 col-md-11">
-								<div>
-									<a href="{{comment.pageUrl}}">{{comment.pageTitle}}</a>
-									<div class="mic-info"> By: <a href="mailto:{{mail}}">{{comment.name}}</a> on {{comment.keen.timestamp | date:'dd MMM yyyy' }}</div>
-								</div>
-								<div class="comment-text">{{comment.message}}</div>
-							</div>
-						</div>
-					</li>
-				</ul>
-				<a href="#" class="btn btn-primary btn-sm btn-block" role="button" ng-click="more()"><span class="glyphicon glyphicon-refresh"></span> More</a>
-			</div>
-		</div>
+<div ng-cloak ng-hide="!commentsToggle" ng-show="(comments.entries | filter: { pageTitle: filterString }).length>0">
+	<legend><span class="glyphicon glyphicon-comment" style="font-size:0.8em"></span> 
+		Comments
+		<button class="btn btn-primary btn-xs" type="button" ng-click="more()">
+			<span class="glyphicon glyphicon-refresh"></span>
+			More	
+		</button>
+	</legend>
+	<table class="table table-hover table-striped">
+		<tbody>
+			<tr ng:repeat="comment in comments.entries | filter: { pageTitle: filterString }| orderObjectBy:'timestamp':true | limitTo:quantity">
+				<td class="col-sm-2" style="border-top: none;">
+					<a href="tst">{{comment.pageTitle}}</a><br>
+					<span style="font-size:0.8em;">By: <a href="mailto:{{mail}}">{{comment.name}}</a> on {{comment.keen.timestamp | date:'dd MMM yyyy' }}</span>
+				</td>
+				<td style="border-top: none;">
+					{{comment.message}}
+				</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
