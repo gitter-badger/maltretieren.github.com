@@ -94,7 +94,7 @@ myApp.controller("GithubModalCtrl", function ($scope, $modalInstance, GithubAuth
 	$scope.save = function() {
 		console.log($scope.user.name+" - "+$scope.user.password);
         GithubAuthService.instance($scope.user.name, $scope.user.password);
-        GithubAuthService.userInfo();
+        GithubAuthService.userInfo().user();
 	};
 });
 
