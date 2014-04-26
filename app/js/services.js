@@ -18,6 +18,13 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
 			// maybe store the instance in localStorage????
             if(github===null) {
                 var oauthToken = localStorage.getItem("oauthToken");
+
+                // search for info in localStorage
+                if(typeof username === 'undefined' && typeof password === 'undefined') {
+                    username = UserModel.getUser().name;
+                    password = UserModel.getUser().password;
+                }
+
                 if(typeof username !== 'undefined' && typeof password !== 'undefined') {
                     console.log("using username/password workflow")
                     github = new Octokit({
@@ -331,16 +338,22 @@ myApp.service("GithubSrvc", function (
 // Inspired by http://joelhooks.com/blog/2013/04/24/modeling-data-and-state-in-your-angularjs-application/
 myApp.service("UserModel", function ($rootScope) {
 	this.user = {};
+    var serializeUser = function() {
+        var userJson = JSON.stringify(this.user);
+        localStorage.setItem("user", userJson);
+    }
 
 	this.login = function(loginData) {
 		this.user.name = loginData.login;
-		var userJson = JSON.stringify(this.user);
-		localStorage.setItem("user", userJson);
+        serializeUser();
 	};
     this.setIsAdmin = function(isAdmin) {
         this.user.isAdmin = isAdmin;
-		var userJson = JSON.stringify(this.user);
-		localStorage.setItem("user", userJson);
+        serializeUser();
+    },
+    this.setPassword = function(password) {
+        this.user.password = password;
+        serializeUser();
     },
 	this.logout = function() {
 		this.user = {};
@@ -380,9 +393,7 @@ myApp.service("ParameterSrvc", function ($window) {
 });
 
 myApp.service("PollingSrvc", function ($q, $timeout, UserModel, GithubAuthService) {
-
-	
-    var poll = function (repoName, branchName) {
+        var poll = function (repoName, branchName) {
         var resource = "README.md";
         var deferred = $q.defer();
         // poll for availability - implement as promise, resolve as soon as it is available

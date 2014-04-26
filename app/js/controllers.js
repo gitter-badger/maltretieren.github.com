@@ -85,7 +85,7 @@ myApp.controller("TableCtrl",function ($scope, $http) {
     $scope.searchText = "";
 });
 
-myApp.controller("GithubModalCtrl", function ($scope, $modalInstance, GithubAuthService, GithubSrvc) {
+myApp.controller("GithubModalCtrl", function ($scope, $modalInstance, UserModel, GithubAuthService, GithubSrvc) {
 	$scope.user = {}
 	$scope.cancel = function(){
 		$modalInstance.dismiss('canceled');  
@@ -94,6 +94,8 @@ myApp.controller("GithubModalCtrl", function ($scope, $modalInstance, GithubAuth
 	$scope.save = function() {
 		console.log($scope.user.name+" - "+$scope.user.password);
         GithubAuthService.instance($scope.user.name, $scope.user.password);
+        UserModel.setName($scope.user.name);
+        UserModel.setPassword($scope.user.password);
         var userPromise = GithubAuthService.userInfo().user();
         userPromise.then(function() {
             console.log("test if the user is the admin");
@@ -178,7 +180,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, Par
 		if(typeof user !== 'undefined' && user !== null) {
 			$scope.user = user;
 		} else {
-			GithubSrvc.helloGithub();
+			//GithubSrvc.helloGithub();
 		}
     });
 	$scope.$on('UserModel::userLoggedOut', function(event) {
