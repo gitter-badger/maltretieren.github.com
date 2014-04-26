@@ -17,6 +17,7 @@ myApp.service("GithubAuthService", function ($http, $q, $rootScope, UserModel) {
 			// this should ask for the UserModel - user object, and get the token from there...
 			// maybe store the instance in localStorage????
             if(github===null) {
+                console.log("new github instance "+username);
                 var oauthToken = localStorage.getItem("oauthToken");
 
                 // search for info in localStorage
