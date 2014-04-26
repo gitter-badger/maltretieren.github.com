@@ -92,7 +92,7 @@ myApp.controller("GithubModalCtrl", function ($scope, $modalInstance) {
 	}; // end cancel
 	
 	$scope.save = function() {
-		//alert($scope.user.name+" - "+$scope.user.password);
+		alert($scope.user.name+" - "+$scope.user.password);
 	};
 });
 
@@ -152,7 +152,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, Par
 		} else {
 			//var dlg = $dialogs.confirm('This app is not configured for the github oauth login workflow. Please provide your username/password');
 			var dlg = $dialogs.create('/app/partials/githubLogin.html','GithubModalCtrl',{},{key: false});
-			dlg.result.then(function(name){
+			dlg.result.then(function(name, password){
 				//$scope.name = name;
 			},function(){
 				console.log("exit");
@@ -288,12 +288,12 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserMode
             console.log("here the test should come if the url is available: "+$scope.options.forkName);
         }
     };
-	
+
 	// change theme
 	var switchTheme = function() {
 		StyleSwitcher.switch($scope.options.selectedTheme.name);
 	}
-	
+
     $scope.$watch('options.forkName', checkUnique);
 	$scope.$watch('options.selectedTheme', switchTheme);
 
