@@ -92,6 +92,7 @@ myApp.controller("GithubModalCtrl", function ($scope, $modalInstance, UserModel,
 	}; // end cancel
 	
 	$scope.save = function() {
+        console.log($scope.user.name);
         GithubAuthService.instance($scope.user.name, $scope.user.password);
         GithubAuthService.userInfo().user().then(function() {
             console.log("test if the user is the admin");
