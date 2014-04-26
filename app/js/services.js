@@ -97,7 +97,6 @@ myApp.service("GithubAuthService", function ($http, $q, $rootScope, UserModel) {
 
                 }, function(err) {
                     console.log("there was an error getting user information, maybe the token is invalid?");
-                    userPromise.reject();
                     // delete the token from localStorage, because it is invalid...
                     $rootScope.$broadcast('Toast::githubLoginFail');
                 });
