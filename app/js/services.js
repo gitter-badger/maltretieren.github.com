@@ -39,15 +39,14 @@ myApp.service("GithubAuthService", function ($http, $q, $rootScope, UserModel) {
                         token: oauthToken,
                         auth: "oauth"
                     });
-                    return github;
                 } else {
                     console.log("oauthToken is not available or not valid");
                     console.log("Did you login via github? Otherwise you can connect via Basic Authentication... Please provide a username and password...")
                 }
             } else {
                 console.log("service already instanciated")
-                return github;
             }
+            return github;
 		},
 		requestCode: function() {
 			console.log("Request a new token, the page will be reloaded with code appended to the address...");
