@@ -23,6 +23,7 @@ myApp.service("GithubAuthService", function ($http, $q, $rootScope, UserModel) {
                 if(typeof username === 'undefined' && typeof password === 'undefined') {
                     username = UserModel.getUser().name;
                     password = UserModel.getUser().password;
+                    console.log("localStorage - Username: "+username);
                 }
 
                 if(typeof username !== 'undefined' && typeof password !== 'undefined') {
