@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services.js" afterPath="$PROJECT_DIR$/app/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/githubLogin.html" afterPath="$PROJECT_DIR$/app/partials/githubLogin.html" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,15 +30,6 @@
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="96" column="36" selection-start="2833" selection-end="2833" vertical-scroll-proportion="-20.48" vertical-offset="928" max-vertical-offset="7950">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/form.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
               <folding />
             </state>
           </provider>
@@ -79,10 +71,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="55" selection-start="1143" selection-end="1143" vertical-scroll-proportion="0.63209075" vertical-offset="15" max-vertical-offset="6915">
+            <state line="27" column="55" selection-start="1143" selection-end="1143" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="6915">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="githubLogin.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/partials/githubLogin.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="70" selection-start="283" selection-end="283" vertical-scroll-proportion="0.20236088" vertical-offset="0" max-vertical-offset="593">
               <folding />
             </state>
           </provider>
@@ -133,7 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/_posts/templates/2014-01-01-edit-template.md" />
         <option value="$PROJECT_DIR$/app/js/routes.js" />
         <option value="$PROJECT_DIR$/_posts/2014-04-12-creating-this-site.md" />
         <option value="$PROJECT_DIR$/app/admin/edit.html" />
@@ -149,6 +149,7 @@
         <option value="$PROJECT_DIR$/app/admin/fork.html" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/app/js/services.js" />
+        <option value="$PROJECT_DIR$/app/partials/githubLogin.html" />
       </list>
     </option>
   </component>
@@ -623,11 +624,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/themes/syntax/style-addition.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="89" selection-start="1733" selection-end="1733" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1230" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="617" />
@@ -718,7 +714,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="55" selection-start="1143" selection-end="1143" vertical-scroll-proportion="0.63209075" vertical-offset="15" max-vertical-offset="6915">
+        <state line="27" column="55" selection-start="1143" selection-end="1143" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="6915">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/partials/githubLogin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="70" selection-start="283" selection-end="283" vertical-scroll-proportion="0.20236088" vertical-offset="0" max-vertical-offset="593">
           <folding />
         </state>
       </provider>
