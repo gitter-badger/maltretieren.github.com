@@ -18,12 +18,14 @@ myApp.service("GithubAuthService", function ($http, $q, UserModel) {
             if(github===null) {
                 var oauthToken = localStorage.getItem("oauthToken");
                 if(typeof username !== 'undefined' && typeof password !== 'undefined') {
+                    console.log("using username/password workflow")
                     github = new Octokit({
                         username: username,
                         password: password,
                         auth: "basic"
                     });
                 } else if(oauthToken != "undefined" && oauthToken != null) {
+                    console.log("using oath workflow");
                     github = new Octokit({
                         token: oauthToken,
                         auth: "oauth"
