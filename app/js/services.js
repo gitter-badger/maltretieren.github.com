@@ -105,9 +105,12 @@ myApp.service("GithubAuthService", function ($http, $q, $rootScope, UserModel) {
             };
 
             return {
-                user: function() { return user(); },
-                logout: function() { return UserModel.logout(); }
+                user: function() { return user(); }
             }
+        },
+        logout: function() {
+            github = null;
+            UserModel.logout();
         }
     }
 });
