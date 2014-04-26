@@ -85,14 +85,16 @@ myApp.controller("TableCtrl",function ($scope, $http) {
     $scope.searchText = "";
 });
 
-myApp.controller("GithubModalCtrl", function ($scope, $modalInstance) {
+myApp.controller("GithubModalCtrl", function ($scope, $modalInstance, GithubAuthService) {
 	$scope.user = {}
 	$scope.cancel = function(){
 		$modalInstance.dismiss('canceled');  
 	}; // end cancel
 	
 	$scope.save = function() {
-		alert($scope.user.name+" - "+$scope.user.password);
+		console.log($scope.user.name+" - "+$scope.user.password);
+        GithubAuthService.instance($scope.user.name, $scope.user.password);
+        GithubAuthService.userInfo()
 	};
 });
 

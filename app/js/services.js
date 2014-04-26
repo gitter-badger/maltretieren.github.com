@@ -11,22 +11,31 @@ myApp.value('version', '0.1');
 
 myApp.service("GithubAuthService", function ($http, $q, UserModel) {
 	return {
-		instance : function() {
+		instance : function(username, password) {
 			var github = null;
 			// this should ask for the UserModel - user object, and get the token from there...
 			// maybe store the instance in localStorage????
-			var oauthToken = localStorage.getItem("oauthToken");
-			if(oauthToken != "undefined" && oauthToken != null) {
-				github = new Octokit({
-					token: oauthToken,
-					auth: "oauth"
-				});
+            if(github===null) {
+                var oauthToken = localStorage.getItem("oauthToken");
+                if(typeof username !== 'undefined' && typeof password !== 'undefined') {
+                    github = new Octokit({
+                        username: username,
+                        password: password,
+                        auth: "basic"
+                    });
+                } else if(oauthToken != "undefined" && oauthToken != null) {
+                    github = new Octokit({
+                        token: oauthToken,
+                        auth: "oauth"
+                    });
+                    return github;
+                } else {
+                    console.log("oauthToken is not available or not valid");
+                    console.log("Did you login via github? Otherwise you can connect via Basic Authentication... Please provide a username and password...")
+                }
+            } else {
                 return github;
-			} else {
-				console.log("oauthToken is not available or not valid");
-				console.log("Did you login via github? Otherwise you can connect via Basic Authentication... Please provide a username and password...")
-			}
-			return null;
+            }
 		},
 		requestCode: function() {
 			console.log("Request a new token, the page will be reloaded with code appended to the address...");
