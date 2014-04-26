@@ -85,7 +85,7 @@ myApp.controller("TableCtrl",function ($scope, $http) {
     $scope.searchText = "";
 });
 
-myApp.controller("GithubModalCtrl", function ($scope, $modalInstance, GithubAuthService) {
+myApp.controller("GithubModalCtrl", function ($scope, $modalInstance, GithubAuthService, GithubSrvc) {
 	$scope.user = {}
 	$scope.cancel = function(){
 		$modalInstance.dismiss('canceled');  
