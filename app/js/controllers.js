@@ -18,16 +18,16 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
 		$scope.commentsToggle = true;
 	}
 
-    $http({method: 'GET', url: commentsUrl}).
-        success(function(data, status, headers, config) {
+    $http({method: 'GET', url: commentsUrl})
+        .success(function(data, status, headers, config) {
             // this callback will be called asynchronously
             // when the response is available
             console.log("Successfully received comments from keen.io")
             $scope.comments = {
                 entries: data.result
             }
-        }).
-        error(function(data, status, headers, config) {
+        })
+        .error(function(data, status, headers, config) {
             alert("Error while getting comments from keen.io: "+status)
         });
 
@@ -94,14 +94,15 @@ myApp.controller("GithubModalCtrl", function ($scope, $modalInstance, UserModel,
 	$scope.save = function() {
         GithubAuthService.instance($scope.user.name, $scope.user.password);
         var userPromise = GithubAuthService.userInfo().user();
-        userPromise.then(function() {
+        userPromise.success(function() {
             console.log("test if the user is the admin");
             UserModel.setUserName($scope.user.name);
             UserModel.setPassword($scope.user.password);
             $modalInstance.dismiss('canceled');
             return GithubSrvc.testAdmin();
-        }, function() {
-            console.log("Username invalid");
+        })
+        .error(function() {
+            console.log("Username/Password is invalid")
         });
 	};
 });
