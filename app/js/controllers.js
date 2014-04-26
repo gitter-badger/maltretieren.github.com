@@ -92,7 +92,6 @@ myApp.controller("GithubModalCtrl", function ($scope, $modalInstance, UserModel,
 	}; // end cancel
 	
 	$scope.save = function() {
-		console.log($scope.user.name+" - "+$scope.user.password);
         GithubAuthService.instance($scope.user.name, $scope.user.password);
         var userPromise = GithubAuthService.userInfo().user();
         userPromise.then(function() {
@@ -107,8 +106,7 @@ myApp.controller("GithubModalCtrl", function ($scope, $modalInstance, UserModel,
 /**
  * GitHub controller using the GitHub service
  */
-myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, ParameterSrvc,
-                                         UserModel, GithubSrvc, GithubAuthService, GithubModalCtrl) {
+myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, ParameterSrvc, GithubModalCtrl, UserModel, GithubSrvc, GithubAuthService) {
 	// login by the owner of the repository: edits on the blog are possible
 	// login by someone else: create an empty fork of the repository, automatically available
 	//      - ask for a name: the fork will be created for that name: xyz.github.io
