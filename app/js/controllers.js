@@ -98,6 +98,7 @@ myApp.controller("GithubModalCtrl", function ($scope, $modalInstance, UserModel,
             console.log("test if the user is the admin");
             UserModel.setUserName($scope.user.name);
             UserModel.setPassword($scope.user.password);
+            $modalInstance.dismiss('canceled');
             return GithubSrvc.testAdmin();
         });
 	};
@@ -106,7 +107,7 @@ myApp.controller("GithubModalCtrl", function ($scope, $modalInstance, UserModel,
 /**
  * GitHub controller using the GitHub service
  */
-myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, ParameterSrvc, GithubModalCtrl, UserModel, GithubSrvc, GithubAuthService) {
+myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, ParameterSrvc, UserModel, GithubSrvc, GithubAuthService) {
 	// login by the owner of the repository: edits on the blog are possible
 	// login by someone else: create an empty fork of the repository, automatically available
 	//      - ask for a name: the fork will be created for that name: xyz.github.io
@@ -178,10 +179,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, Par
         var user = UserModel.getUser();
 		if(typeof user !== 'undefined' && user !== null) {
 			$scope.user = user;
-		} else {
-			//GithubSrvc.helloGithub();
 		}
-        GithubModalCtrl.cancel();
     });
 	$scope.$on('UserModel::userLoggedOut', function(event) {
 		console.log("the GithubCtrl received an userLoggedOut event");
