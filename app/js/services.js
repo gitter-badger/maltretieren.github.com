@@ -338,22 +338,22 @@ myApp.service("GithubSrvc", function (
 // Inspired by http://joelhooks.com/blog/2013/04/24/modeling-data-and-state-in-your-angularjs-application/
 myApp.service("UserModel", function ($rootScope) {
 	this.user = {};
-    var serializeUser = function() {
-        var userJson = JSON.stringify(this.user);
+    var serializeUser = function(user) {
+        var userJson = JSON.stringify(user);
         localStorage.setItem("user", userJson);
     }
 
 	this.login = function(loginData) {
 		this.user.name = loginData.login;
-        serializeUser();
+        serializeUser(this.user);
 	};
     this.setIsAdmin = function(isAdmin) {
         this.user.isAdmin = isAdmin;
-        serializeUser();
+        serializeUser(this.user);
     },
     this.setPassword = function(password) {
         this.user.password = password;
-        serializeUser();
+        serializeUser(this.user);
     },
 	this.logout = function() {
 		this.user = {};
