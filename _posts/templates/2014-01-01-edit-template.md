@@ -2,7 +2,6 @@
 
 layout: post
 categories: 
-  - frontpage
 tagline: with github.js
 tags: 
   - development
