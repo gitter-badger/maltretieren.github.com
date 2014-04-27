@@ -406,8 +406,24 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, $timeout, toaster
                    console.log("commit errrror");
                 })
             }
-            $timeout(modifiyConfig, 5000);
+            $timeout(modifiyConfig, 1000);
 
+            return commitPromise.promise;
+        })
+        .then(function() {
+            // commit to make sure it shows the right page
+            console.log("commit a post")
+            var commitPromise = $q.defer();
+            var modifiyConfig = function() {
+                var githubInstance = GithubAuthService.instance();
+                var repo = githubInstance.getRepo(UserModel.getUser().name, UserModel.getUser().name+".github.com");
+                var branch = repo.getBranch("master");
+                var content = "---/nlayout: post/ncategories:/n- frontpage/ntagline: with github.js/ntags:/n- development/n- jekyll/npublished: true/n---/n{% include JB/setup %}/nHELLO!";
+                GithubSrvc.commit(content, "_posts/2000-01-01-test.md", branch, false).then(function() {
+                    commitPromise.resolve()
+                });
+            }
+            $timeout(modifiyConfig, 1000);
             return commitPromise.promise;
         })
         .then(function(){
@@ -418,15 +434,6 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, $timeout, toaster
 			scope.success = true;
 			scope.progress = 100;
             return $q.when(scope.pop("Page available", "Visit "+forkName+" to see it live..."));
-        })
-        .then(function() {
-            // commit to make sure it shows the right page
-            console.log("commit to ")
-            //var githubInstance = GithubAuthService.instance();
-            //var repo = githubInstance.getRepo(UserModel.getUser().name, UserModel.getUser().name+".github.com");
-            //var branch = repo.getBranch("master");
-            //var content = "---/nlayout: post/ncategories:/n- frontpage/ntagline: with github.js/ntags:/n- development/n- jekyll/npublished: true/n---/n{% include JB/setup %}/nHELLO!";
-            //return GithubSrvc.commit(content, "_posts/2000-01-01-test.md", branch, false)
         })
 	};
 	
