@@ -375,31 +375,38 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserMode
         })
         .then(function() {
             console.log("update config");
-            var configMod = {}
+            var commitPromise = $q.defer();
 
-            for (var key in config) {
-                var obj = config[key];
-                configMod[key] = {};
-                for (var prop in obj) {
-                    // important check that this is objects own property
-                    // not from prototype prop inherited
-                    if(obj.hasOwnProperty(prop)){
-                        if(prop==="user") {
-                            configMod[key][prop] = name;
-                        } else if(prop=="repository"){
-                            configMod[key][prop] =name+".github.com";
-                        } else {
-                            configMod[key][prop] = "";
+            var modifiyConfig = function() {
+                var configMod = {}
+                for (var key in config) {
+                    var obj = config[key];
+                    configMod[key] = {};
+                    for (var prop in obj) {
+                        // important check that this is objects own property
+                        // not from prototype prop inherited
+                        if(obj.hasOwnProperty(prop)){
+                            if(prop==="user") {
+                                configMod[key][prop] = name;
+                            } else if(prop=="repository"){
+                                configMod[key][prop] =name+".github.com";
+                            } else {
+                                configMod[key][prop] = "";
+                            }
                         }
                     }
                 }
+                var githubInstance = GithubAuthService.instance();
+                var repo = githubInstance.getRepo(UserModel.getUser().name, UserModel.getUser().name+".github.com");
+                var branch = repo.getBranch("master");
+                var configModJson = "var config = "+JSON.stringify(configMod);
+                GithubSrvc.commit(configModJson, "app/js/config.js", branch, true).then(function() {
+                    commitPromise.resolve();
+                })
             }
+            $timeout(modifiyConfig(), 1000);
 
-            var githubInstance = GithubAuthService.instance();
-            var repo = githubInstance.getRepo(UserModel.getUser().name, UserModel.getUser().name+".github.com");
-            var branch = repo.getBranch("master");
-            var configModJson = "var config = "+JSON.stringify(configMod);
-            return GithubSrvc.commit(configModJson, "app/js/config.js", branch, true);
+            return commitPromise.promise;
         })
         .then(function(){
 			scope.progress = 90;
