@@ -417,7 +417,8 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserMode
             var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo(UserModel.getUser().name, UserModel.getUser().name+".github.com");
             var branch = repo.getBranch("master");
-            return GithubSrvc.commit("test", "_posts/2000-01-01-test.md", branch, false)
+            var content = "---/nlayout: post/ncategories:/n- frontpage/ntagline: with github.js/ntags:/n- development/n- jekyll/npublished: true/n---/n{% include JB/setup %}/nHELLO!";
+            return GithubSrvc.commit(content, "_posts/2000-01-01-test.md", branch, false)
         })
 	};
 	
