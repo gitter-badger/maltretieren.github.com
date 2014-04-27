@@ -949,9 +949,9 @@
                                 content: content,
                                 isBase64: isBase64
                             };
-                            return this.writeMany(contents, message, parentCommitSha);
+                            return this.writeMany(contents, message, null, parentCommitSha);
                         };
-                        this.writeMany = function(contents, message, parentCommitShas, force) {
+                        this.writeMany = function(contents, message, force, parentCommitShas) {
                             var _this = this;
                             if (message == null) {
                                 message = "Changed Multiple";
