@@ -406,7 +406,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, $timeout, toaster
                    console.log("commit errrror");
                 })
             }
-            $timeout(modifiyConfig, 1000);
+            $timeout(modifiyConfig, 3000);
 
             return commitPromise.promise;
         })
@@ -423,7 +423,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, $timeout, toaster
                     commitPromise.resolve()
                 });
             }
-            $timeout(modifiyConfig, 1000);
+            $timeout(modifiyConfig, 3000);
             return commitPromise.promise;
         })
         .then(function(){
