@@ -401,7 +401,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, $timeout, toaster
                 var branch = repo.getBranch("master");
                 var configModJson = "var config = "+JSON.stringify(configMod);
                 scope.progress =83;
-                GithubSrvc.commit(configModJson, "app/js/config.js", branch, false).then(function() {
+                GithubSrvc.commit(configModJson, "app/js/config.js", branch, true).then(function() {
                     commitPromise.resolve();
                 }, function() {
                    console.log("commit errrror");
