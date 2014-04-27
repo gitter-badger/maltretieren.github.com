@@ -51,16 +51,18 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
  * Receive a complete list of all comments
  */
 myApp.controller("WikiquoteCtrl",function ($scope) {
-    WikiquoteApi.getRandomQuote("Programming|Computer",
-        function(newQuote) {
-            $scope.wikiquote = newQuote.quote;
-            $scope.$apply();
-        },
-        function(msg){
-            console.log("Error while retrieving quote from wikiquote "+msg);
-        }
-    );
-});
+    var wikiquote = function() {
+        WikiquoteApi.getRandomQuote("Programming|Computer",
+            function(newQuote) {
+                $scope.wikiquote = newQuote.quote;
+                $scope.$apply();
+            },
+            function(msg){
+                console.log("Error while retrieving quote from wikiquote "+msg);
+            }
+        );
+    }
+};
 
 /**
  * Function for table sort and search
