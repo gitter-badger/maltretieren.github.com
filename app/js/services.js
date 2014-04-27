@@ -243,7 +243,7 @@ myApp.service("GithubSrvc", function (
                 var githubInstance = GithubAuthService.instance();
                 var repo = githubInstance.getRepo(UserModel.getUser().name, repositoryName);
                 var branch = repo.getBranch("master");
-                var commitPromise = self.commit(newConfigData, path, branch);
+                var commitPromise = self.commit(newConfigData, path, branch, false);
                 commitPromise.then(function() {
                     console.log("updated backend config data");
                     deferred.resolve(newConfigData);
@@ -289,7 +289,7 @@ myApp.service("GithubSrvc", function (
             })
             return deferred.promise;
         },
-		commit: function(text, path, branch, showMessage) {
+		commit: function(text, path, branch, showMessage, force) {
 			if(typeof branch === 'undefined') {
 				var githubInstance = GithubAuthService.instance();
 				var repo = githubInstance.getRepo(config.github.user, config.github.repository);
@@ -299,7 +299,7 @@ myApp.service("GithubSrvc", function (
             contents[path] = text;
             var deferred = $q.defer();
 
-            branch.writeMany(contents, 'Save from GUI').then(function() {
+            branch.writeMany(contents, 'Save from GUI', force).then(function() {
                 deferred.resolve();
 				if(showMessage) {
 					$rootScope.$broadcast('Toast::githubCommitSuccess');

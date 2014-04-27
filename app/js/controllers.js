@@ -401,7 +401,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, $timeout, toaster
                 var branch = repo.getBranch("master");
                 var configModJson = "var config = "+JSON.stringify(configMod);
                 scope.progress =83;
-                GithubSrvc.commit(configModJson, "app/js/config.js", branch, true).then(function() {
+                GithubSrvc.commit(configModJson, "app/js/config.js", branch, false, true).then(function() {
                     commitPromise.resolve();
                 }, function() {
                    console.log("commit errrror");
@@ -422,7 +422,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, $timeout, toaster
                 var content = "---\nlayout: post\ncategories:\n- frontpage\ntagline: \ntags:\n- development\n- jekyll\npublished: true\n---\n{% include JB/setup %}\nHi, this is the first post!";
                 scope.progress = 86;
                 var date = new Date();
-                GithubSrvc.commit(content, "_posts/"+date.toISOString().slice(0,10)+"-hello-world.md", branch, false).then(function() {
+                GithubSrvc.commit(content, "_posts/"+date.toISOString().slice(0,10)+"-hello-world.md", branch, false, true).then(function() {
                     commitPromise.resolve()
                 });
             }
