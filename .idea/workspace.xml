@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/templates/2014-01-01-edit-template.md" afterPath="$PROJECT_DIR$/_posts/templates/2014-01-01-edit-template.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services.js" afterPath="$PROJECT_DIR$/app/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,22 +27,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="421" column="123" selection-start="14800" selection-end="14800" vertical-scroll-proportion="0.0" vertical-offset="5858" max-vertical-offset="8490">
+            <state line="403" column="82" selection-start="13946" selection-end="13946" vertical-scroll-proportion="0.27876824" vertical-offset="5873" max-vertical-offset="8505">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2014-01-01-edit-template.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="2014-01-01-edit-template.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/templates/2014-01-01-edit-template.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="10" selection-start="40" selection-end="40" vertical-scroll-proportion="0.09966777" vertical-offset="0" max-vertical-offset="602">
+            <state line="4" column="10" selection-start="40" selection-end="40" vertical-scroll-proportion="-2.142857" vertical-offset="0" max-vertical-offset="285">
               <folding />
             </state>
           </provider>
@@ -85,7 +87,7 @@
       <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="296" column="30" selection-start="11818" selection-end="11818" vertical-scroll-proportion="0.0" vertical-offset="4033" max-vertical-offset="6960">
+            <state line="301" column="61" selection-start="11985" selection-end="11985" vertical-scroll-proportion="0.0" vertical-offset="4153" max-vertical-offset="6975">
               <folding />
             </state>
           </provider>
@@ -149,9 +151,9 @@
         <option value="$PROJECT_DIR$/app/admin/fork.html" />
         <option value="$PROJECT_DIR$/app/partials/githubLogin.html" />
         <option value="$PROJECT_DIR$/assets/js/octokit-0.9.19/octokit.js" />
+        <option value="$PROJECT_DIR$/_posts/templates/2014-01-01-edit-template.md" />
         <option value="$PROJECT_DIR$/app/js/services.js" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
-        <option value="$PROJECT_DIR$/_posts/templates/2014-01-01-edit-template.md" />
       </list>
     </option>
   </component>
@@ -186,6 +188,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -348,7 +351,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -363,9 +365,9 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../node-github" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="86" />
-    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="850" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="935" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="93" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="88" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -611,26 +613,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/templates/2014-01-01-edit-template.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="10" selection-start="40" selection-end="40" vertical-scroll-proportion="-2.142857" vertical-offset="0" max-vertical-offset="285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="296" column="30" selection-start="11818" selection-end="11818" vertical-scroll-proportion="0.0" vertical-offset="4033" max-vertical-offset="6960">
+        <state line="301" column="61" selection-start="11985" selection-end="11985" vertical-scroll-proportion="0.0" vertical-offset="4153" max-vertical-offset="6975">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="421" column="123" selection-start="14800" selection-end="14800" vertical-scroll-proportion="0.0" vertical-offset="5858" max-vertical-offset="8490">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/templates/2014-01-01-edit-template.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="10" selection-start="40" selection-end="40" vertical-scroll-proportion="0.09966777" vertical-offset="0" max-vertical-offset="602">
+        <state line="403" column="82" selection-start="13946" selection-end="13946" vertical-scroll-proportion="0.27876824" vertical-offset="5873" max-vertical-offset="8505">
           <folding />
         </state>
       </provider>

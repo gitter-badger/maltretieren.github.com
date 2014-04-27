@@ -298,7 +298,8 @@ myApp.service("GithubSrvc", function (
             contents[path] = text;
             var deferred = $q.defer();
 
-            branch.writeMany(contents, 'Save from GUI', true).then(function() {
+            var force = true;
+            branch.writeMany(contents, 'Save from GUI', force).then(function() {
                 deferred.resolve();
 				if(showMessage) {
 					$rootScope.$broadcast('Toast::githubCommitSuccess');

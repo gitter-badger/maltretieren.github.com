@@ -401,7 +401,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, $timeout, toaster
                 var branch = repo.getBranch("master");
                 var configModJson = "var config = "+JSON.stringify(configMod);
                 scope.progress =83;
-                GithubSrvc.commit(configModJson, "app/js/config.js", branch, true).then(function() {
+                GithubSrvc.commit(configModJson, "app/js/config.js", branch, false).then(function() {
                     commitPromise.resolve();
                 }, function() {
                    console.log("commit errrror");
@@ -419,9 +419,10 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, $timeout, toaster
                 var githubInstance = GithubAuthService.instance();
                 var repo = githubInstance.getRepo(UserModel.getUser().name, UserModel.getUser().name+".github.com");
                 var branch = repo.getBranch("master");
-                var content = "---\nlayout: post\ncategories:\n- frontpage\ntagline: with github.js\ntags:\n- development\n- jekyll\npublished: true\n---\n{% include JB/setup %}\nHELLO!";
+                var content = "---\nlayout: post\ncategories:\n- frontpage\ntagline: \ntags:\n- development\n- jekyll\npublished: true\n---\n{% include JB/setup %}\nHi, this is the first post!";
                 scope.progress = 86;
-                GithubSrvc.commit(content, "_posts/2000-01-01-test.md", branch, false).then(function() {
+                var date = new Date();
+                GithubSrvc.commit(content, "_posts/"+date.toISOString().slice(0,10)+"-hello-world.md", branch, false).then(function() {
                     commitPromise.resolve()
                 });
             }
