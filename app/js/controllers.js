@@ -62,7 +62,7 @@ myApp.controller("WikiquoteCtrl",function ($scope) {
             }
         );
     }
-};
+});
 
 /**
  * Function for table sort and search
