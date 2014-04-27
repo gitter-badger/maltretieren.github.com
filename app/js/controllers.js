@@ -400,8 +400,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserMode
             var branch = repo.getBranch("master");
             var configModJson = "var config = "+JSON.stringify(configMod);
             console.log(configMod);
-            GithubSrvc.commit(configModJson, "app/js/config.js", branch, true);
-            return configMod;
+            return GithubSrvc.commit(configModJson, "app/js/config.js", branch, true);
         })
         .then(function(){
 			scope.progress = 90;

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +29,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="5" selection-start="1854" selection-end="1854" vertical-scroll-proportion="0.7082658" vertical-offset="508" max-vertical-offset="8220">
+            <state line="402" column="86" selection-start="13755" selection-end="13755" vertical-scroll-proportion="0.63209075" vertical-offset="5640" max-vertical-offset="8205">
               <folding />
             </state>
           </provider>
@@ -183,7 +184,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -350,6 +350,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -364,13 +365,13 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../node-github" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="86" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="850" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="935" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="850" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="93" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="88" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
   </component>
@@ -391,14 +392,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -407,6 +400,14 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -626,7 +627,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="5" selection-start="1854" selection-end="1854" vertical-scroll-proportion="0.7082658" vertical-offset="508" max-vertical-offset="8220">
+        <state line="402" column="86" selection-start="13755" selection-end="13755" vertical-scroll-proportion="0.63209075" vertical-offset="5640" max-vertical-offset="8205">
           <folding />
         </state>
       </provider>
