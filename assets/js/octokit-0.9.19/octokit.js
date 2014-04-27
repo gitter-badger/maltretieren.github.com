@@ -951,7 +951,7 @@
                             };
                             return this.writeMany(contents, message, parentCommitSha);
                         };
-                        this.writeMany = function(contents, message, parentCommitShas) {
+                        this.writeMany = function(contents, message, parentCommitShas, force) {
                             var _this = this;
                             if (message == null) {
                                 message = "Changed Multiple";
@@ -981,7 +981,7 @@
                                     return allPromises(promises).then(function(newTrees) {
                                         return _git.updateTreeMany(parentCommitShas, newTrees).then(function(tree) {
                                             return _git.commit(parentCommitShas, tree, message).then(function(commitSha) {
-                                                return _git.updateHead(branch, commitSha).then(function(res) {
+                                                return _git.updateHead(branch, commitSha, force).then(function(res) {
                                                     return res.object;
                                                 });
                                             });
