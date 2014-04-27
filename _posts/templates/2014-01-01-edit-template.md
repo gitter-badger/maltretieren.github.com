@@ -1,8 +1,8 @@
 ---
 
 layout: post
-categories: 
-tagline: with github.js
+categories:
+tagline: 
 tags: 
   - development
   - jekyll
