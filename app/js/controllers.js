@@ -402,9 +402,11 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, $timeout, toaster
                 var configModJson = "var config = "+JSON.stringify(configMod);
                 GithubSrvc.commit(configModJson, "app/js/config.js", branch, true).then(function() {
                     commitPromise.resolve();
+                }, function() {
+                   console.log("commit errrror");
                 })
             }
-            $timeout(modifiyConfig(), 1000);
+            $timeout(modifiyConfig(), 5000);
 
             return commitPromise.promise;
         })
