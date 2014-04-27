@@ -394,8 +394,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserMode
             }
 
             var githubInstance = GithubAuthService.instance();
-            var repo = githubInstance.getRepo(UserModel.getUser().name, UserModel.getUser().name+".github.com" +
-                "");
+            var repo = githubInstance.getRepo(UserModel.getUser().name, UserModel.getUser().name+".github.com");
             var branch = repo.getBranch("master");
             var configModJson = "var config = "+JSON.stringify(configMod);
             console.log(configMod);
@@ -405,6 +404,12 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserMode
         .then(function(){
 			scope.progress = 90;
             return PollingImgSrvc.checkReady(UserModel.getUser().name+".github.com");
+        })
+        .then(function() {
+            // commit to make sure it shows the right page
+            var repo = githubInstance.getRepo(UserModel.getUser().name, UserModel.getUser().name+".github.com");
+            var branch = repo.getBranch("master");
+            return GithubSrvc.commit("test", "_posts/2000-01-01-test.md", branch)
         })
         .then(function() {
 			scope.success = true;
