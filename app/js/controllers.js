@@ -441,7 +441,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, $timeout, toaster
 	};
 	
 	$scope.$on('Toast::githubForkSuccess', function(event) {
-		scope.pop();
+		//scope.pop();
 	});
 	
 	$scope.pop = function(title, text){
