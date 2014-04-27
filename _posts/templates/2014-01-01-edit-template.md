@@ -2,7 +2,7 @@
 
 layout: post
 categories:
-tagline: 
+tagline:  
 tags: 
   - development
   - jekyll
