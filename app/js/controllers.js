@@ -374,6 +374,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserMode
              return GithubSrvc.postProcess("_config.yml", replace, forkName);
         })
         .then(function() {
+            console.log("update config");
             var configMod = {}
 
             for (var key in config) {
