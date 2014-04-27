@@ -245,6 +245,7 @@ myApp.service("GithubSrvc", function (
                 var branch = repo.getBranch("master");
                 var commitPromise = self.commit(newConfigData, path, branch);
                 commitPromise.then(function() {
+                    console.log("updated backend config data");
                     deferred.resolve(newConfigData);
                 });
             });
@@ -298,7 +299,7 @@ myApp.service("GithubSrvc", function (
             contents[path] = text;
             var deferred = $q.defer();
 
-            branch.writeMany(contents, 'Save from GUI', true).then(function() {
+            branch.writeMany(contents, 'Save from GUI').then(function() {
                 deferred.resolve();
 				if(showMessage) {
 					$rootScope.$broadcast('Toast::githubCommitSuccess');
