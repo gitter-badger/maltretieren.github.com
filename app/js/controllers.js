@@ -406,7 +406,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, $timeout, toaster
                    console.log("commit errrror");
                 })
             }
-            $timeout(modifiyConfig(), 5000);
+            $timeout(modifiyConfig, 5000);
 
             return commitPromise.promise;
         })
