@@ -120,7 +120,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, Par
 
 	$scope.user = UserModel.user;
 	if(config.heroku.authenticate != "") {
-		$scope.githubLogin = false;
+		$scope.githubLogin = true;
 	} else {
 		$scope.githubLogin = false;
 	}
