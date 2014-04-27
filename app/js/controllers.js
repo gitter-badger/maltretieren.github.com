@@ -406,13 +406,14 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, toaster, UserMode
 			scope.progress = 90;
             return PollingImgSrvc.checkReady(UserModel.getUser().name+".github.com");
         })
-        .then(function() {
+        //.then(function() {
             // commit to make sure it shows the right page
-            var githubInstance = GithubAuthService.instance();
-            var repo = githubInstance.getRepo(UserModel.getUser().name, UserModel.getUser().name+".github.com");
-            var branch = repo.getBranch("master");
-            return GithubSrvc.commit("test", "_posts/2000-01-01-test.md", branch)
-        })
+            //console.log("commit to ")
+            //var githubInstance = GithubAuthService.instance();
+            //var repo = githubInstance.getRepo(UserModel.getUser().name, UserModel.getUser().name+".github.com");
+            //var branch = repo.getBranch("master");
+            //return GithubSrvc.commit("test", "_posts/2000-01-01-test.md", branch, false)
+        //})
         .then(function() {
 			scope.success = true;
 			scope.progress = 100;
