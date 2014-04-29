@@ -197,6 +197,7 @@ myApp.service("GithubSrvc", function (
 
 			// polling for the posts dir every second until rename complete,
 			// then start delete every second....
+			console.log(path);
 			(function tick(path) {
 				branch.contents(path).then(function(res) {
 					var response = JSON.parse(res);
