@@ -207,7 +207,7 @@ myApp.service("GithubSrvc", function (
 					var i = 0;
 					$interval(function() {
 						if(i === response.length) {
-							console.log("last entry");
+							console.log(contentArray);
 						}
 						
 						if(response[i].type === "file") {
