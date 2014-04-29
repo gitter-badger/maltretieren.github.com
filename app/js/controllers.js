@@ -472,7 +472,7 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 		console.log("export posts...");
 		
 		GithubSrvc.batchGet("_posts").then(function(content) {
-			console.log(content);
+			console.log("generate zip");
 			var zip = new JSZip();
 			for(var i in content) {
 				zip.file(i, content[i]);
