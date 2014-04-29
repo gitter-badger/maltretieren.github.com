@@ -201,7 +201,6 @@ myApp.service("GithubSrvc", function (
 				var response = JSON.parse(res);
 				var i = 0;
 				$interval(function() {
-					console.log(response[i].path);
 					if(response[i].type === "file") {
 						console.log(response[i].path);
 						//branch.getContent(res[i].path, "deleted");
