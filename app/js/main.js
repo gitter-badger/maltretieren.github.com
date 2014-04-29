@@ -35,6 +35,7 @@
 		.script( "/assets/js/octokit-0.9.19/octokit.js" )
 		.script( "/assets/js/toaster-0.4.5/toaster.js" )
 		.script( "/assets/js/jszip-2.2.1/jszip.min.js" )
+		.script( "/assets/js/jszip-2.2.1/FileSaver.js" )
         .script( "/assets/themes/bootstrap-3.1.1/js/bootstrap.min.js" )
         .script("/assets/themes/bootstrap-3.1.1/js/ui-bootstrap-tpls-0.10.0.min.js")
         .script( "/app/js/controllers.js" )
