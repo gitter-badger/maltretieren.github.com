@@ -20,6 +20,7 @@ comments: false
 			</div>
             <ul>
                 <li ng-repeat="entry in import">{{entry.name}}</li>
+                {{import | JSON}}
             </ul>
 		</div>
     </div>
