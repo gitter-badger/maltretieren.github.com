@@ -468,7 +468,7 @@ myApp.controller('AdminCtrl', function($scope, UserModel) {
 */
 myApp.controller('ImportExportCtrl', function($scope) {
 	// binding to hide the edit button for non-admin users...
-	var zip = function() {
+	$scope.zip = function() {
 		console.log("export posts...");
 	}
 });
