@@ -207,7 +207,7 @@ myApp.service("GithubSrvc", function (
 							//branch.getContent(res[i].path, "deleted");
 						} else {
 							console.log(response[i].path + " is a folder - delete the content instead");
-							//tick(res[i].path);
+							tick(response[i].path);
 						}
 						i++;
 					}, 1500, response.length);
