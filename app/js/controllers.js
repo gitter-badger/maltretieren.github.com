@@ -505,6 +505,10 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 	  r.readAsBinaryString(f);
 	}
 
+    $scope.toggleSelection = function(selected) {
+        $scope.selection.push(selected);
+    }
+
     $scope.doImport = function() {
         console.log($scope.selection);
     }

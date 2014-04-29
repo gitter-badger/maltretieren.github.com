@@ -22,7 +22,7 @@ comments: false
             <tr ng-repeat="(key, user) in import">
                 <td>{{key}}</td>
                 <td>
-                    <input type = "checkbox" id="{{key}}" ng-model="selection"/>
+                    <input type = "checkbox" id="{{key}}" ng-model="selection" ng-click="toggleSelection(fruitName)/>
                 </td>
             </tr>
         </table>
