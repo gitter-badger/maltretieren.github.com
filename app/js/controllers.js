@@ -487,7 +487,7 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 	  var f = document.getElementById('file').files[0],
 		  r = new FileReader();
 	  r.onloadend = function(e){
-		console.log(e.target.result);
+		var data e.target.result;
 		//var data = e.target.result;
 		//send you binary data via $http or $resource or do anything else with it
 	  }
