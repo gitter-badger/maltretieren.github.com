@@ -199,7 +199,7 @@ myApp.service("GithubSrvc", function (
 			// then start delete every second....
 			console.log(path);
 			var contentArray = {};
-			var readyPromise = $q.deferred()
+			var readyPromise = $q.defer();
 			
 			(function tick(path) {
 				console.log(path);
