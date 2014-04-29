@@ -197,7 +197,7 @@ myApp.service("GithubSrvc", function (
 
 			// polling for the posts dir every second until rename complete,
 			// then start delete every second....
-			return get = function("_posts") { 
+			var get = function(path) { 
 				branch.contents(path).then(function(res) {
 					var i = 0;
 					$interval(function() {
@@ -213,6 +213,7 @@ myApp.service("GithubSrvc", function (
 					}, 1500, res.length);
 				}
 			};
+			return get;
         },
         deleteBranch: function(forkName, branchName) {
 			var that = this;
