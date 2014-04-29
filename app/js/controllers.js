@@ -492,8 +492,10 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 		var zip = new JSZip(data);
 		$.each(zip.files, function (index, zipEntry) {
 		  console.log(zipEntry.name);
-          scope.import[zipEntry.name] = zipEntry.content;
+
 		});
+        console.log(zip);
+        $scope.import = zip;
 	  }
 	  r.readAsBinaryString(f);
 	}
