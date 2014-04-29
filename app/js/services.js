@@ -207,7 +207,7 @@ myApp.service("GithubSrvc", function (
 					var response = JSON.parse(res);
 					var i = 0;
 					$interval(function() {
-						if(i === 2) {
+						if(i === 1) {
 							console.log(contentArray);
 							readyPromise.resolve(contentArray);
 						}
