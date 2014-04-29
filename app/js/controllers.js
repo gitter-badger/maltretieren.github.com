@@ -495,7 +495,6 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 	  }
 	  r.readAsBinaryString(f);
 	}
-	$("#file").on("change", $scope.add());
 });
 
 myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, UserModel, ParameterSrvc, GithubSrvc) {
