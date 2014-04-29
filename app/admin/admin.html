@@ -13,6 +13,11 @@ comments: false
                 <button type="button" class="btn btn-danger btn-middle" ng-click="zip()">Export</button>
             </div>
         </div>
+		<div class="row">
+			<h1 style="float:left">Import</small></h1>
+			<label for="fileToUpload">Select a File to Upload</label><br />
+			<input type="file" ng-model-instant id="fileToUpload" multiple onchange="angular.element(this).scope().setFiles(this)" />
+		</div>
     </div>
 	
 {% endraw %}
