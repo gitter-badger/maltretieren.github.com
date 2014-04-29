@@ -210,7 +210,7 @@ myApp.service("GithubSrvc", function (
 							console.log(response[i].path);
 							branch.read(response[i].path, false).then(function(res) {
 								console.log(res);
-							};
+							});
 						} else {
 							console.log(response[i].path + " is a folder - delete the content instead");
 							tick(response[i].path);
