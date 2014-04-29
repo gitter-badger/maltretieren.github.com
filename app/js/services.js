@@ -197,20 +197,22 @@ myApp.service("GithubSrvc", function (
 
 			// polling for the posts dir every second until rename complete,
 			// then start delete every second....
-			branch.contents(path).then(function(res) {
-				var response = JSON.parse(res);
-				var i = 0;
-				$interval(function() {
-					if(response[i].type === "file") {
-						console.log(response[i].path);
-						//branch.getContent(res[i].path, "deleted");
-					} else {
-						console.log(response[i].path + " is a folder - delete the content instead");
-						//tick(res[i].path);
-					}
-					i++;
-				}, 1500, response.length);
-			});
+			(function tick(path) {
+				branch.contents(path).then(function(res) {
+					var response = JSON.parse(res);
+					var i = 0;
+					$interval(function() {
+						if(response[i].type === "file") {
+							console.log(response[i].path);
+							//branch.getContent(res[i].path, "deleted");
+						} else {
+							console.log(response[i].path + " is a folder - delete the content instead");
+							//tick(res[i].path);
+						}
+						i++;
+					}, 1500, response.length);
+				});
+			})();
         },
         deleteBranch: function(forkName, branchName) {
 			var that = this;
