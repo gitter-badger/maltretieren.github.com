@@ -190,15 +190,15 @@ myApp.service("GithubSrvc", function (
 			})();
 
         },
-        batchGet: function(path) {
+        batch: function() {
             var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo(config.github.user, config.github.repository);
             var branch = repo.getBranch("master");
 
 			// polling for the posts dir every second until rename complete,
 			// then start delete every second....
-			(function tick(path) {
-				$q.when(branch.contents(path)).then(function(res) {
+			return get = function("_posts") { 
+				branch.contents(path).then(function(res) {
 					var i = 0;
 					$interval(function() {
 						console.log("get post: "+res[i].type);
@@ -211,11 +211,8 @@ myApp.service("GithubSrvc", function (
 						}
 						i++;
 					}, 1500, res.length);
-				}, function(err) {
-					$timeout(tick("_posts"), 1000);
-				});
-			})();
-
+				}
+			};
         },
         deleteBranch: function(forkName, branchName) {
 			var that = this;

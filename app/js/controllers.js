@@ -473,7 +473,7 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 		var zip = new JSZip();
 		zip.file("Hello.txt", "Hello World\n");
 		var content = zip.generate({type:"blob"});
-		GithubSrvc.batchGet("_posts");
+		GithubSrvc.batch.get("_posts");
 		// see FileSaver.js
 		saveAs(content, "example.zip");
 	}
