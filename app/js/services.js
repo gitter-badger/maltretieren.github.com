@@ -198,9 +198,10 @@ myApp.service("GithubSrvc", function (
 			// polling for the posts dir every second until rename complete,
 			// then start delete every second....
 			branch.contents(path).then(function(res) {
+				var response = JSON.parse(res);
 				var i = 0;
 				$interval(function() {
-					console.log(res[0]);
+					console.log(res[i].path);
 					if(res[i].type === "file") {
 						console.log(res[i].path);
 						//branch.getContent(res[i].path, "deleted");
