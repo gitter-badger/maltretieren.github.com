@@ -206,10 +206,14 @@ myApp.service("GithubSrvc", function (
 					var response = JSON.parse(res);
 					var i = 0;
 					$interval(function() {
+						if(i === response.length) {
+							console.log("last entry");
+						}
+						
 						if(response[i].type === "file") {
 							console.log(response[i].path);
 							branch.read(response[i].path, false).then(function(res) {
-								contentArray[response[i].path] = res;
+								contentArray[response[i].path] = res.content;
 							});
 						} else {
 							console.log(response[i].path + " is a folder - delete the content instead");
