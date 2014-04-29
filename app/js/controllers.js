@@ -502,15 +502,15 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 	}
 
     $scope.toggleSelection = function(selected) {
-        console.log(selected);
         $scope.selection.push(selected);
     }
 
     $scope.doImport = function() {
+        var importObject = {};
         for(var i=0; i<$scope.selection.length;i++) {
-            console.log($scope.import[$scope.selection[i]].name);
-            console.log($scope.import[$scope.selection[i]].asText());
+            importObject[$scope.import[$scope.selection[i]].name] = $scope.import[$scope.selection[i]].asText();
         }
+        console.log(importObject);
     }
 });
 
