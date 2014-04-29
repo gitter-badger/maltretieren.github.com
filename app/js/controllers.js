@@ -466,7 +466,7 @@ myApp.controller('AdminCtrl', function($scope, UserModel) {
 */
 myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 	// binding to hide the edit button for non-admin users...
-	var scope = $scope;
+
 
     $scope.zip = function() {
 		console.log("export posts...");
@@ -485,6 +485,7 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
     $scope.import = {}
 	$scope.add = function(){
 	  console.log("read zip file");
+      var scope = $scope;
 	  var f = document.getElementById('file').files[0],
 		  r = new FileReader();
 	  r.onloadend = function(e){
