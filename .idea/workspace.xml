@@ -28,7 +28,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="487" column="36" selection-start="16713" selection-end="16713" vertical-scroll-proportion="0.60777956" vertical-offset="6930" max-vertical-offset="9105">
+            <state line="487" column="40" selection-start="16717" selection-end="16717" vertical-scroll-proportion="0.60777956" vertical-offset="6930" max-vertical-offset="9105">
               <folding />
             </state>
           </provider>
@@ -37,7 +37,7 @@
       <file leaf-file-name="admin.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="59" selection-start="848" selection-end="848" vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="480">
+            <state line="21" column="59" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="480">
               <folding />
             </state>
           </provider>
@@ -68,15 +68,6 @@
         <entry file="file://$PROJECT_DIR$/tags.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tags_list" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_includes/JB/tags_list">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
               <folding />
             </state>
           </provider>
@@ -349,13 +340,13 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../node-github" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="86" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="850" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="935" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="850" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="93" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="88" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
   </component>
@@ -376,14 +367,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -392,6 +375,14 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -538,16 +529,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/fork.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="241" selection-start="1450" selection-end="1450" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1245">
-          <folding />
-        </state>
+        <state line="29" column="241" selection-start="1450" selection-end="1450" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1245" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="9" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="585">
-          <folding />
-        </state>
+        <state line="3" column="9" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="585" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/directives.js">
@@ -580,16 +567,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/JB/tags_list">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="617">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/octokit-0.9.19/octokit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="954" column="39" selection-start="45769" selection-end="45769" vertical-scroll-proportion="0.0" vertical-offset="14068" max-vertical-offset="21375">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="617" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/templates/2014-01-01-edit-template.md">
@@ -611,14 +589,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="59" selection-start="848" selection-end="848" vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="480">
+        <state line="21" column="59" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="480">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/octokit-0.9.19/octokit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="954" column="39" selection-start="45769" selection-end="45769" vertical-scroll-proportion="0.0" vertical-offset="14068" max-vertical-offset="21375">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="487" column="36" selection-start="16713" selection-end="16713" vertical-scroll-proportion="0.60777956" vertical-offset="6930" max-vertical-offset="9105">
+        <state line="487" column="40" selection-start="16717" selection-end="16717" vertical-scroll-proportion="0.60777956" vertical-offset="6930" max-vertical-offset="9105">
           <folding />
         </state>
       </provider>
