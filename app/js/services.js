@@ -202,11 +202,11 @@ myApp.service("GithubSrvc", function (
 				var i = 0;
 				$interval(function() {
 					console.log(response[i].path);
-					if(res[i].type === "file") {
-						console.log(res[i].path);
+					if(response[i].type === "file") {
+						console.log(response[i].path);
 						//branch.getContent(res[i].path, "deleted");
 					} else {
-						console.log(res[i].path + " is a folder - delete the content instead");
+						console.log(response[i].path + " is a folder - delete the content instead");
 						//tick(res[i].path);
 					}
 					i++;
