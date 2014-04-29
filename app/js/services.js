@@ -192,7 +192,7 @@ myApp.service("GithubSrvc", function (
         },
         batchGet: function(path) {
             var githubInstance = GithubAuthService.instance();
-            var repo = githubInstance.getRepo(UserModel.getUser().name, UserModel.getUser().name+".github.com");
+            var repo = githubInstance.getRepo(config.github.user, config.github.repository);
             var branch = repo.getBranch("master");
 
 			// polling for the posts dir every second until rename complete,
@@ -207,7 +207,7 @@ myApp.service("GithubSrvc", function (
 							//branch.getContent(res[i].path, "deleted");
 						} else {
 							console.log(res[i].path + " is a folder - delete the content instead");
-							tick(res[i].path);
+							//tick(res[i].path);
 						}
 						i++;
 					}, 1500, res.length);
