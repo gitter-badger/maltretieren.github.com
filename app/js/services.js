@@ -219,7 +219,7 @@ myApp.service("GithubSrvc", function (
 							});
 						} else {
 							console.log(response[i].path + " is a folder - delete the content instead");
-							tick(response[i].path);
+							//tick(response[i].path);
 						}
 						i++;
 					}, 1000, response.length);
