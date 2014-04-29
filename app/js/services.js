@@ -190,6 +190,33 @@ myApp.service("GithubSrvc", function (
 			})();
 
         },
+        batchGet: function(path) {
+            var githubInstance = GithubAuthService.instance();
+            var repo = githubInstance.getRepo(UserModel.getUser().name, UserModel.getUser().name+".github.com");
+            var branch = repo.getBranch("master");
+
+			// polling for the posts dir every second until rename complete,
+			// then start delete every second....
+			(function tick(path) {
+				$q.when(branch.contents(path)).then(function(res) {
+					console.log("cleanup of _posts...");
+					var i = 0;
+					$interval(function() {
+						if(res[i].type === "file") {
+							console.log(res[i].path);
+							//branch.getContent(res[i].path, "deleted");
+						} else {
+							console.log(res[i].path + " is a folder - delete the content instead");
+							tick(res[i].path);
+						}
+						i++;
+					}, 1500, res.length);
+				}, function(err) {
+					$timeout(tick("_posts"), 1000);
+				});
+			})();
+
+        },
         deleteBranch: function(forkName, branchName) {
 			var that = this;
 			var githubInstance = GithubAuthService.instance();

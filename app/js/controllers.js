@@ -466,13 +466,14 @@ myApp.controller('AdminCtrl', function($scope, UserModel) {
 /**
 *	This controller exports/imports post as a zip
 */
-myApp.controller('ImportExportCtrl', function($scope) {
+myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 	// binding to hide the edit button for non-admin users...
 	$scope.zip = function() {
 		console.log("export posts...");
 		var zip = new JSZip();
 		zip.file("Hello.txt", "Hello World\n");
 		var content = zip.generate({type:"blob"});
+		GithubSrvc.batchGet("_posts");
 		// see FileSaver.js
 		saveAs(content, "example.zip");
 	}
