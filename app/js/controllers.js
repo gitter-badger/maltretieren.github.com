@@ -473,9 +473,9 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 		var zip = new JSZip();
 		GithubSrvc.batchGet("_posts").then(function(content) {
 			console.log(content);
-			//zip.file("Hello.txt", "Hello World\n");
-			//var content = zip.generate({type:"blob"});
-			//saveAs(content, "example.zip");
+			zip.file(content);
+			var content = zip.generate({type:"blob"});
+			saveAs(content, "example.zip");
 		});
 	}
 });
