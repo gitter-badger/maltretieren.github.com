@@ -208,7 +208,7 @@ myApp.service("GithubSrvc", function (
 					var i = 0;
 					$interval(function() {
 						if(i === response.length-1) {
-							console.log(contentArray);
+							//console.log(contentArray);
 							readyPromise.resolve(contentArray);
 						}
 						
