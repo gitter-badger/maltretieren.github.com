@@ -463,6 +463,16 @@ myApp.controller('AdminCtrl', function($scope, UserModel) {
 	}
 });
 
+/**
+*	This controller exports/imports post as a zip
+*/
+myApp.controller('ImportExportCtrl', function($scope) {
+	// binding to hide the edit button for non-admin users...
+	var zip = function() {
+		console.log("export posts...");
+	}
+});
+
 myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, UserModel, ParameterSrvc, GithubSrvc) {
     var scope = $scope;
 
