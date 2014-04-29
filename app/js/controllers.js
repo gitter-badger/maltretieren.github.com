@@ -510,7 +510,7 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
         for(var i=0; i<$scope.selection.length;i++) {
             importObject[$scope.import[$scope.selection[i]].name] = $scope.import[$scope.selection[i]].asText();
         }
-        console.log(importObject);
+        GithubSrvc.writeMany(importObject, "Save from Gui");
     }
 });
 
