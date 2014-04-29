@@ -226,7 +226,7 @@ myApp.service("GithubSrvc", function (
 				});
 			})(path);
 			
-			return readyPromise;
+			return readyPromise.promise;
         },
         deleteBranch: function(forkName, branchName) {
 			var that = this;
