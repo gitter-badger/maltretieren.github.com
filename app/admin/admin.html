@@ -13,15 +13,12 @@ comments: false
                 <button type="button" class="btn btn-danger btn-middle" ng-click="zip()">Export</button>
             </div>
         </div>
-		<div style="margin-top: 0px" class="page-header">
-			<h1 style="float:left">Import</small></h1>
-			<div class="row">
-				<input type="file" multiple="" name="file" id="file" onchange="angular.element(this).scope().add(this)">
-			</div>
-            <ul>
-                <li ng-repeat="(key, user) in import">{{key}}</li>
-            </ul>
-		</div>
-    </div>
+        <h1>Import</h1>
+        <div class="row">
+            <input type="file" multiple="" name="file" id="file" onchange="angular.element(this).scope().add(this)">
+        </div>
+        <ul>
+            <li ng-repeat="(key, user) in import">{{key}}</li>
+        </ul>
 	
 {% endraw %}
