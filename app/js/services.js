@@ -190,30 +190,27 @@ myApp.service("GithubSrvc", function (
 			})();
 
         },
-        batch: function() {
+        batchGet: function(path) {
             var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo(config.github.user, config.github.repository);
             var branch = repo.getBranch("master");
 
 			// polling for the posts dir every second until rename complete,
 			// then start delete every second....
-			var get = function(path) { 
-				branch.contents(path).then(function(res) {
-					var i = 0;
-					$interval(function() {
-						console.log("get post: "+res[i].type);
-						if(res[i].type === "file") {
-							console.log(res[i].path);
-							//branch.getContent(res[i].path, "deleted");
-						} else {
-							console.log(res[i].path + " is a folder - delete the content instead");
-							//tick(res[i].path);
-						}
-						i++;
-					}, 1500, res.length);
-				});
-			};
-			return get;
+			branch.contents(path).then(function(res) {
+				var i = 0;
+				$interval(function() {
+					console.log("get post: "+res[i].type);
+					if(res[i].type === "file") {
+						console.log(res[i].path);
+						//branch.getContent(res[i].path, "deleted");
+					} else {
+						console.log(res[i].path + " is a folder - delete the content instead");
+						//tick(res[i].path);
+					}
+					i++;
+				}, 1500, res.length);
+			});
         },
         deleteBranch: function(forkName, branchName) {
 			var that = this;
