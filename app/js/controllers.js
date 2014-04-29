@@ -503,6 +503,10 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 	  }
 	  r.readAsBinaryString(f);
 	}
+
+    $scope.doImport = function() {
+        console.log("do import");
+    }
 });
 
 myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, UserModel, ParameterSrvc, GithubSrvc) {
