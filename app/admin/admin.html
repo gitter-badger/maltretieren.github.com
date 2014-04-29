@@ -19,8 +19,7 @@ comments: false
 				<input type="file" multiple="" name="file" id="file" onchange="angular.element(this).scope().add(this)">
 			</div>
             <ul>
-                <li ng-repeat="entry in import">{{entry.name}}</li>
-                {{import | JSON}}
+                <li ng-repeat="entry in import">{{entry}}</li>
             </ul>
 		</div>
     </div>
