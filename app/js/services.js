@@ -207,7 +207,7 @@ myApp.service("GithubSrvc", function (
 					var response = JSON.parse(res);
 					var i = 0;
 					$interval(function() {
-						if(i === 1) {
+						if(i === response.length-1) {
 							console.log(contentArray);
 							readyPromise.resolve(contentArray);
 						}
@@ -222,7 +222,7 @@ myApp.service("GithubSrvc", function (
 							tick(response[i].path);
 						}
 						i++;
-					}, 1500, 2);
+					}, 1500, response.length);
 					//}, 1500, response.length);
 				});
 			})(path);
