@@ -506,7 +506,9 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
     }
 
     $scope.doImport = function() {
-        console.log($scope.selection);
+        for(var i=0; i<$scope.selection.length;i++) {
+            console.log($scope.import[$scope.selection[i]]);
+        }
     }
 });
 
