@@ -154,8 +154,6 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, Par
 			} else {
 				console.log("nothing to do, wait for the user to press the login button");
 			}
-			// if no valid user: check if there is a code
-			//GithubSrvc.helloGithub();
 		}
 	})();
 
@@ -481,7 +479,8 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 			saveAs(content, "example.zip");
 		});
 	}
-	
+
+    $scope.import = {}
 	$scope.add = function(){
 	  console.log("read zip file");
 	  var f = document.getElementById('file').files[0],
@@ -491,6 +490,7 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 		var zip = new JSZip(data);
 		$.each(zip.files, function (index, zipEntry) {
 		  console.log(zipEntry.name);
+          $scope.import[zipEntry.name] = zipEntry.content;
 		});
 	  }
 	  r.readAsBinaryString(f);
