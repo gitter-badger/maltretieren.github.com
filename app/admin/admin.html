@@ -17,12 +17,12 @@ comments: false
         <div class="row">
             <input type="file" multiple="" name="file" id="file" onchange="angular.element(this).scope().add(this)">
         </div>
-        <button type="button" class="btn btn-danger btn-middle" ng-click="doImport()">Export</button>
+        <button type="button" class="btn btn-danger btn-middle" ng-click="doImport()">Import Selected</button>
         <table>
             <tr ng-repeat="(key, user) in import">
                 <td>{{key}}</td>
                 <td>
-                    <input type = "checkbox" id="{{key}}"/>
+                    <input type = "checkbox" id="{{key}}" ng-model="selection"/>
                 </td>
             </tr>
         </table>

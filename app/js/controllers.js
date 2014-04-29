@@ -483,6 +483,7 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 	}
 
     $scope.import = {};
+    $scope.selection = [];
 	$scope.add = function(){
 	  console.log("read zip file");
       console.log($scope.import);
@@ -505,7 +506,7 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 	}
 
     $scope.doImport = function() {
-        console.log("do import");
+        console.log($scope.selection);
     }
 });
 
