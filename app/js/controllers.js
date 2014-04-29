@@ -488,8 +488,10 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 		  r = new FileReader();
 	  r.onloadend = function(e){
 		var data e.target.result;
-		//var data = e.target.result;
-		//send you binary data via $http or $resource or do anything else with it
+		var zip = new JSZip(data);
+		$.each(zip.files, function (index, zipEntry) {
+		  console.log(zipEntry.name);
+		});
 	  }
 	  r.readAsBinaryString(f);
 	}
