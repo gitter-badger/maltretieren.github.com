@@ -506,6 +506,7 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 	}
 
     $scope.toggleSelection = function(selected) {
+        console.log(selected);
         $scope.selection.push(selected);
     }
 
