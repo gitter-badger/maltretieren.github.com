@@ -495,6 +495,7 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 		});
         //console.log(zip);
         $scope.import = zip.files;
+        console.log(zip.files);
         $scope.$apply()
 	  }
 	  r.readAsBinaryString(f);
@@ -508,7 +509,7 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
     $scope.doImport = function() {
         for(var i=0; i<$scope.selection.length;i++) {
             console.log($scope.import[$scope.selection[i]].name);
-            console.log($scope.import[$scope.selection[i]]._data.getContent());
+            console.log($scope.import[$scope.selection[i]]);
         }
     }
 });
