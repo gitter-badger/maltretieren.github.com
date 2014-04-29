@@ -199,6 +199,7 @@ myApp.service("GithubSrvc", function (
 			// then start delete every second....
 			console.log(path);
 			var contentArray = {};
+			var readyPromise = $q.deferred()
 			
 			(function tick(path) {
 				console.log(path);
@@ -206,8 +207,9 @@ myApp.service("GithubSrvc", function (
 					var response = JSON.parse(res);
 					var i = 0;
 					$interval(function() {
-						if(i === response.length) {
+						if(i === 2) {
 							console.log(contentArray);
+							readyPromise.resolve(contentArray);
 						}
 						
 						if(response[i].type === "file") {
@@ -223,6 +225,8 @@ myApp.service("GithubSrvc", function (
 					}, 1500, response.length);
 				});
 			})(path);
+			
+			return readyPromise;
         },
         deleteBranch: function(forkName, branchName) {
 			var that = this;

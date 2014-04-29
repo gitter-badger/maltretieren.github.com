@@ -471,11 +471,12 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 	$scope.zip = function() {
 		console.log("export posts...");
 		var zip = new JSZip();
-		zip.file("Hello.txt", "Hello World\n");
-		var content = zip.generate({type:"blob"});
-		GithubSrvc.batchGet("_posts");
-		// see FileSaver.js
-		saveAs(content, "example.zip");
+		GithubSrvc.batchGet("_posts").then(function(content) {
+			console.log(content);
+			//zip.file("Hello.txt", "Hello World\n");
+			//var content = zip.generate({type:"blob"});
+			//saveAs(content, "example.zip");
+		});
 	}
 });
 
