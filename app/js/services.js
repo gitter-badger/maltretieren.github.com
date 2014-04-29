@@ -211,7 +211,7 @@ myApp.service("GithubSrvc", function (
 						}
 						i++;
 					}, 1500, res.length);
-				}
+				});
 			};
 			return get;
         },
