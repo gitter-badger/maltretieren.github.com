@@ -487,6 +487,7 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 	  console.log("read zip file");
       console.log($scope.import);
       $scope.import = {test2: 'test2'};
+        $scope.$apply()
       console.log($scope.import);
 	  var f = document.getElementById('file').files[0],
 		  r = new FileReader();
