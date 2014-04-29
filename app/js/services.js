@@ -209,7 +209,7 @@ myApp.service("GithubSrvc", function (
 						if(response[i].type === "file") {
 							console.log(response[i].path);
 							branch.read(response[i].path, false).then(function(res) {
-								console.log(res);
+								contentArray[response[i].path] = res;
 							});
 						} else {
 							console.log(response[i].path + " is a folder - delete the content instead");
