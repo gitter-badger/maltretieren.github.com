@@ -334,7 +334,12 @@ myApp.service("GithubSrvc", function (
 				branch = repo.getBranch("master");
 			}
 			var contents = {};
-            contents[path] = text;
+            if(typeof text == 'string') {
+                contents[path] = text;
+            } else {
+                contents = text;
+            }
+
             var deferred = $q.defer();
 
             branch.writeMany(contents, 'Save from GUI', force).then(function() {
