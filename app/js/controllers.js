@@ -486,16 +486,17 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 	$scope.add = function(){
 	  console.log("read zip file");
       $scope.import = {test: 'test'};
+      console.log($scope.import);
 	  var f = document.getElementById('file').files[0],
 		  r = new FileReader();
 	  r.onloadend = function(e){
 		var data = e.target.result;
 		var zip = new JSZip(data);
 		$.each(zip.files, function (index, zipEntry) {
-		  console.log(zipEntry.name);
+		  //console.log(zipEntry.name);
 
 		});
-        console.log(zip);
+        //console.log(zip);
         $scope.import = zip.files;
 	  }
 	  r.readAsBinaryString(f);
