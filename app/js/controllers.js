@@ -470,10 +470,13 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 	// binding to hide the edit button for non-admin users...
 	$scope.zip = function() {
 		console.log("export posts...");
-		var zip = new JSZip();
+		
 		GithubSrvc.batchGet("_posts").then(function(content) {
 			console.log(content);
-			zip.file(content);
+			var zip = new JSZip();
+			for(var i in content) {
+				zip.file(i, content[i]);
+			};
 			var content = zip.generate({type:"blob"});
 			saveAs(content, "example.zip");
 		});
