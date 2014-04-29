@@ -199,7 +199,7 @@ myApp.service("GithubSrvc", function (
 			// then start delete every second....
 			(function tick(path) {
 				$q.when(branch.contents(path)).then(function(res) {
-					console.log("cleanup of _posts...");
+					console.log("get post: "+res[i].type);
 					var i = 0;
 					$interval(function() {
 						if(res[i].type === "file") {
