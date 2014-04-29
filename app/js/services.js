@@ -214,7 +214,7 @@ myApp.service("GithubSrvc", function (
 						i++;
 					}, 1500, response.length);
 				});
-			})();
+			})(path);
         },
         deleteBranch: function(forkName, branchName) {
 			var that = this;
