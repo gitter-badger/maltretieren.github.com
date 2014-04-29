@@ -470,6 +470,13 @@ myApp.controller('ImportExportCtrl', function($scope) {
 	// binding to hide the edit button for non-admin users...
 	$scope.zip = function() {
 		console.log("export posts...");
+		var zip = new JSZip();
+		zip.file("Hello.txt", "Hello World\n");
+		var img = zip.folder("images");
+		img.file("smile.gif", imgData, {base64: true});
+		var content = zip.generate({type:"blob"});
+		// see FileSaver.js
+		saveAs(content, "example.zip");
 	}
 });
 
