@@ -466,7 +466,9 @@ myApp.controller('AdminCtrl', function($scope, UserModel) {
 */
 myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 	// binding to hide the edit button for non-admin users...
-	$scope.zip = function() {
+	var scope = $scope;
+
+    $scope.zip = function() {
 		console.log("export posts...");
 		
 		GithubSrvc.batchGet("_posts").then(function(content) {
@@ -480,7 +482,7 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 		});
 	}
 
-    $scope.import = {test: "test"}
+    scope.import = {test: "test"}
 	$scope.add = function(){
 	  console.log("read zip file");
 	  var f = document.getElementById('file').files[0],
@@ -490,7 +492,7 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 		var zip = new JSZip(data);
 		$.each(zip.files, function (index, zipEntry) {
 		  console.log(zipEntry.name);
-          $scope.import[zipEntry.name] = zipEntry.content;
+          scope.import[zipEntry.name] = zipEntry.content;
 		});
 	  }
 	  r.readAsBinaryString(f);
