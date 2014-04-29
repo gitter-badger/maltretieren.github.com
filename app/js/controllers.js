@@ -288,7 +288,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, $timeout, toaster
 
             var good= function() {
                 console.log("yehh");
-            }
+            } 
 
             var error= function(e) {
                 console.log("oh noooo");
