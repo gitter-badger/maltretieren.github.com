@@ -482,12 +482,12 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 		});
 	}
 
-    $scope.import = {test: 'test'};
+    $scope.import = {};
 	$scope.add = function(){
 	  console.log("read zip file");
       console.log($scope.import);
       $scope.import = {test2: 'test2'};
-        $scope.$apply()
+
       console.log($scope.import);
 	  var f = document.getElementById('file').files[0],
 		  r = new FileReader();
@@ -496,10 +496,10 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 		var zip = new JSZip(data);
 		$.each(zip.files, function (index, zipEntry) {
 		  //console.log(zipEntry.name);
-
 		});
         //console.log(zip);
         $scope.import = zip.files;
+        $scope.$apply()
 	  }
 	  r.readAsBinaryString(f);
 	}
