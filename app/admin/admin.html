@@ -17,8 +17,8 @@ comments: false
         <div class="row">
             <input type="file" multiple="" name="file" id="file" onchange="angular.element(this).scope().add(this)">
         </div>
-        <ul>
-            <li ng-repeat="(key, user) in import">{{key}}</li>
-        </ul>
+        <table>
+            <tr ng-repeat="(key, user) in import"><td>{{key}}</td><td>checkbox</td></tr>
+        </table>
 	
 {% endraw %}
