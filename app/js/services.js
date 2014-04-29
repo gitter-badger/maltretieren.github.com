@@ -200,7 +200,7 @@ myApp.service("GithubSrvc", function (
 			branch.contents(path).then(function(res) {
 				var i = 0;
 				$interval(function() {
-					console.log(res);
+					console.log(res[0]);
 					if(res[i].type === "file") {
 						console.log(res[i].path);
 						//branch.getContent(res[i].path, "deleted");
