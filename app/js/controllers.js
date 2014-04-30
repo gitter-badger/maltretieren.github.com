@@ -490,7 +490,9 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 			if($scope.maxValue === 0) {
 				$scope.maxValue = update;
 			} else {
-				$scope.exportStatus = ($scope.maxValue / 100) * update;
+				var percentage = ($scope.maxValue / 100) * update;
+				console.log("percentage: "+percentage);
+				$scope.exportStatus = percentage;
 			}
 		});
 	}
