@@ -240,15 +240,16 @@ myApp.service("GithubSrvc", function (
 			return fileCountDeferred.promise;
         },
 		getFiles: function(fileNames) {
+			var self = this;
+			
 			var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo(config.github.user, config.github.repository);
             var branch = repo.getBranch("master");
-			var self = this;
+						
+			var contents = {};
+			var i=1;
 			
 			var fileDeferred = $q.defer();
-			var contents = {};
-			
-			var i=1;
 			var doGet = function(fileName) {
 				var fileName = fileName;
 				self.getContent(fileName).then(function(response) {
@@ -265,13 +266,6 @@ myApp.service("GithubSrvc", function (
 			// trigger with first, proceed all with a promise loop
 			doGet(fileNames[0]);
 			
-			/**for(var i=0; i<fileNames.length; i++) {
-				console.log(fileNames[i]);
-				
-				if(i===fileNames.length-1){
-					fileDeferred.resolve();
-				}
-			}*/
 			return fileDeferred.promise;
 		},
         deleteBranch: function(forkName, branchName) {
