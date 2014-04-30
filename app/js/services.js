@@ -195,8 +195,6 @@ myApp.service("GithubSrvc", function (
             var repo = githubInstance.getRepo(config.github.user, config.github.repository);
             var branch = repo.getBranch("master");
 
-			// polling for the posts dir every second until rename complete,
-			// then start delete every second....
 			console.log(path);
 			var contentArray = {};
 			var readyPromise = $q.defer();
@@ -213,12 +211,9 @@ myApp.service("GithubSrvc", function (
 						}
 						
 						if(response[i].type === "file") {
-							console.log("---");
 							console.log(response[i].path);
 							branch.read(response[i].path, false).then(function(res) {
 								contentArray[response[i].path] = res.content;
-								console.log(res.content);
-								console.log("---");
 							});
 						} else {
 							console.log(response[i].path + " is a folder - delete the content instead");

@@ -483,7 +483,7 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 			};
 			var content = zip.generate({type:"blob"});
 			var date = new Date();
-			saveAs(content, date.toISOString().slice(0,10)+"export.zip");
+			saveAs(content, date.toISOString().slice(0,10)+"-posts-export.zip");
 		});
 	}
 
