@@ -207,6 +207,7 @@ myApp.service("GithubSrvc", function (
 			var foldersPath = [];
 			var i = 0;
 			
+			var fileCountDeferred = $q.defer();
 			// find all files to export also in subfolders
 			(function fileCount(path) {
 				console.log(path);
@@ -228,12 +229,22 @@ myApp.service("GithubSrvc", function (
 							fileCount(foldersPath[i]);
 							i++;
 						} else {
+							fileCountDeferred.notify(filesPath);
 							console.log("There are "+filesPath.length+" files to process");
 						}
 					}, 1000, foldersPath.length);
 				});
 			// this is the toplevel folder to search for files
 			})(path);
+			
+			var fileCountPromise = fileCountDeferred.promise;
+			fileCountPromise.then(function() {
+			
+			}, function(reason) {
+				console.log("There was a ready counting all files to export");
+			}, function(files) {
+				console.log("There are "+files.length+" files to process");
+			});
 			
 				/*	
 					// for loading bar, notify overall steps
