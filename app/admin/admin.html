@@ -47,12 +47,12 @@ comments: false
         <table>
             <th>Post</th>
             <th><a href="" ng-click="selectAllImport()">Select All</a> / <a href="" ng-click="unselectAllImport()">Unselect All</a></th>
-            <tr ng-repeat="(key, value) in import">
+            <tr ng-repeat="entry in import">
                 <td>
 					<div ng-click="showContent(key)">{{key}}</div>
 				</td>
                 <td>
-                    <input type="checkbox" id="{{key}}" value="{{value}}" check-list='importSelection'/>
+                    <input type="checkbox" id="{{entry}}" value="{{entry}}" check-list='importSelection'/>
                 </td>
             </tr>
         </table>
