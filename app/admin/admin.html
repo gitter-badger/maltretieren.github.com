@@ -16,6 +16,16 @@ comments: false
 				<progressbar class="progress-striped active" value="exportStatus" type="{{type}}" >{{processingPostNr}} / {{maxValue}}</progressbar>
 			</div>
 		</div>
+		<table>
+            <tr ng-repeat="(key, user) in export">
+                <td>
+					<div ng-click="showContent(key)">{{key}}</div>
+				</td>
+                <td>
+                    <input type = "checkbox" id="{{key}}" name="selection[]" value="{{key}}" ng-click="toggleExportSelection(key)"/>
+                </td>
+            </tr>
+        </table>
         
 		<h1>Import</h1>
         <div class="row">
