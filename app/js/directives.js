@@ -20,6 +20,7 @@ myApp.directive('version', function(version) {
   };
 });
 
+// http://stackoverflow.com/questions/14514461/how-can-angularjs-bind-to-list-of-checkbox-values
 myApp.directive('checkList', function() {
   return {
     scope: {
@@ -50,5 +51,3 @@ myApp.directive('checkList', function() {
     }
   };
 });
-
-// you may add as much directives as you want below
