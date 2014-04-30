@@ -222,7 +222,9 @@ myApp.service("GithubSrvc", function (
                         }
 
                         if(j!==foldersPath.length) {
-                            fileCount(foldersPath[j++]);
+                            var newFolder = foldersPath[j++];
+                            console.log(newFolder);
+                            fileCount(newFolder);
                         } else {
                             fileCountDeferred.resolve(fileCount);
                         }
