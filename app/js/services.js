@@ -202,6 +202,7 @@ myApp.service("GithubSrvc", function (
 			var folders = 0;
 			var files = 0;
 			var folderPath = "";
+			var init=false;
 			(function tick(path) {
 				console.log(path);
 				branch.contents(path).then(function(res) {
@@ -217,7 +218,10 @@ myApp.service("GithubSrvc", function (
 						}
 					}
 					console.log(path+" contains "+files+" files and "+folders+ "folders");
-					tick(folderPath);
+					if(init===false) {
+						tick(folderPath);
+						init=true;
+					}
 					
 					// for loading bar, notify overall steps
 					readyPromise.notify(response.length);
