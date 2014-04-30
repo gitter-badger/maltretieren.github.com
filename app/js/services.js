@@ -353,13 +353,13 @@ myApp.service("GithubSrvc", function (
             });
             return deferred.promise;
         },
-		commitMany: function(posts, showMessage, showMessage, force) {
+		commitMany: function(posts, message, showMessage, force) {
 			var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo(config.github.user, config.github.repository);
 			branch = repo.getBranch("master");
 
             var deferred = $q.defer();
-            branch.writeMany(posts, 'Save from GUI', force).then(function() {
+            branch.writeMany(posts, message, force).then(function() {
                 deferred.resolve();
 				if(showMessage) {
 					$rootScope.$broadcast('Toast::githubCommitSuccess');
