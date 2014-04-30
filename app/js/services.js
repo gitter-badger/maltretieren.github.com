@@ -225,7 +225,7 @@ myApp.service("GithubSrvc", function (
 					}
 					
 					$interval(function() {
-						if(i<=foldersPath.length) {
+						if(i<foldersPath.length) {
 							fileCount(foldersPath[i]);
 							i++;
 						} else {
@@ -233,7 +233,7 @@ myApp.service("GithubSrvc", function (
 							fileCountDeferred.resolve(filesPath);
 							//console.log("There are "+filesPath.length+" files to process");
 						}
-					}, 1000, foldersPath.length);
+					}, 2000, foldersPath.length);
 				});
 			// this is the toplevel folder to search for files
 			})(path);
