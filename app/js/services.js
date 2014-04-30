@@ -207,10 +207,11 @@ myApp.service("GithubSrvc", function (
 			var foldersPath = [];
 			var i = 0;
 			
-			var fileCountDeferred = $q.defer();
+			
 			// find all files to export also in subfolders
 			(function fileCount(path) {
 				console.log(path);
+				var fileCountDeferred = $q.defer();
 				branch.contents(path).then(function(res) {
 					var response = JSON.parse(res);
 					
