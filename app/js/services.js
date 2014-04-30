@@ -202,6 +202,10 @@ myApp.service("GithubSrvc", function (
 			var folders = 0;
 			var files = 0;
 
+			branch.read(path, false).then(function(res) {
+				console.log(path);
+			};
+			
 			(function tick(path) {
 				console.log(path);
 				branch.contents(path).then(function(res) {
