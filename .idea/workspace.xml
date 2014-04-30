@@ -46,7 +46,7 @@
       <file leaf-file-name="admin.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="32" selection-start="399" selection-end="399" vertical-scroll-proportion="0.42154565" vertical-offset="30" max-vertical-offset="840">
+            <state line="14" column="50" selection-start="417" selection-end="417" vertical-scroll-proportion="0.42154565" vertical-offset="30" max-vertical-offset="840">
               <folding />
             </state>
           </provider>
@@ -616,7 +616,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="32" selection-start="399" selection-end="399" vertical-scroll-proportion="0.42154565" vertical-offset="30" max-vertical-offset="840">
+        <state line="14" column="50" selection-start="417" selection-end="417" vertical-scroll-proportion="0.42154565" vertical-offset="30" max-vertical-offset="840">
           <folding />
         </state>
       </provider>
