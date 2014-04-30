@@ -488,10 +488,7 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 		filePromise.then(function(contents) {
 			console.log("files available - zip them");
 			console.log(contents);
-		});
-		/*batchGet.then(function(content) {
-			console.log("generate zip");
-			console.log(content);
+			
 			var zip = new JSZip();
 			for(var i in content) {
 				zip.file(i, content[i]);
@@ -512,7 +509,7 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 				$scope.processingPostNr = update;
 				$scope.exportStatus = percentage;
 			}
-		});*/
+		}););
 	}
 
     $scope.import = {};
