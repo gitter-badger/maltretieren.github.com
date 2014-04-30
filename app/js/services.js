@@ -254,8 +254,8 @@ myApp.service("GithubSrvc", function (
 				var fileName = fileName;
 				self.getContent(fileName).then(function(response) {
 					contents[fileName] = response.content;
-					if(i !== fileNames.length) {
-						fileDeferred.notify(i);
+                    fileDeferred.notify(i);
+                    if(i !== fileNames.length) {
 						doGet(fileNames[i++]);
 					} else {
 						fileDeferred.resolve(contents);
