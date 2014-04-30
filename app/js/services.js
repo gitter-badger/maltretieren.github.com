@@ -221,7 +221,7 @@ myApp.service("GithubSrvc", function (
                             foldersPath.push(res[j].path);
                         }
 
-                        if(j!==folderPath.length) {
+                        if(j!==foldersPath.length) {
                             fileCount(foldersPath[j++]);
                         } else {
                             fileCountDeferred.resolve(fileCount);
