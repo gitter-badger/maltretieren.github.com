@@ -206,25 +206,31 @@ myApp.service("GithubSrvc", function (
 			// preprocess response to seperate files/folders 
 			var filesPath = [];
 			var foldersPath = [];
-			var i = 0;
-			
+
+            var j = 0;
 			var fileCountDeferred = $q.defer();
 			// find all files to export also in subfolders
-			(function fileCount(path) {
-				console.log(path);
-				branch.contents(path).then(function(res) {
-					var response = JSON.parse(res);
+			var fileCount = function(path) {
+				branch.contents(path).then(function(response) {
+					var res = JSON.parse(response);
 
-                    if(response[i].type === "file") {
-                        filesPath.push(response[i].path);
-                    } else {
-                        foldersPath.push(response[i].path);
-                        fileCount(foldersPath[i++]);
-                        //fileCountDeferred.resolve(fileCount);
+                    for(var i=0; i<res.length;i++) {
+                        if(res[j].type === "file") {
+                            filesPath.push(res[j].path);
+                        } else {
+                            foldersPath.push(res[j].path);
+                        }
+
+                        if(i!==res.length) {
+                            fileCount(foldersPath[j++]);
+                        } else {
+                            fileCountDeferred.resolve(fileCount);
+                        }
                     }
 				});
-			// this is the toplevel folder to search for files
-			})(path);
+			};
+            // this is the toplevel folder to search for files
+            fileCount(path);
 
 			return fileCountDeferred.promise;
         },
