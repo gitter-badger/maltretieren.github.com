@@ -225,7 +225,7 @@ myApp.service("GithubSrvc", function (
 					}
 					
 					$interval(function() {
-						if(i<foldersPath.length) {
+						if(i===foldersPath.length) {
 							fileCount(foldersPath[i]);
 							i++;
 						} else {
