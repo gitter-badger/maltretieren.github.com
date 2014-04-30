@@ -215,10 +215,10 @@ myApp.service("GithubSrvc", function (
 					var res = JSON.parse(response);
 
                     for(var i=0; i<res.length;i++) {
-                        if(res[j].type === "file") {
-                            filesPath.push(res[j].path);
+                        if(res[i].type === "file") {
+                            filesPath.push(res[i].path);
                         } else {
-                            foldersPath.push(res[j].path);
+                            foldersPath.push(res[i].path);
                         }
 
                         if(j!==foldersPath.length) {
