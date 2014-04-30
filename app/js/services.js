@@ -245,12 +245,18 @@ myApp.service("GithubSrvc", function (
             var branch = repo.getBranch("master");
 			
 			var fileDeferred = $q.defer();
-			for(var i=0; i<fileNames.length; i++) {
+			var contents = {};
+			this.getContent(fileNames[0]).then(function(content) {
+				contents[fileNames[0]] = content;
+				fileDeferred.resolve();
+			}
+			/**for(var i=0; i<fileNames.length; i++) {
 				console.log(fileNames[i]);
+				
 				if(i===fileNames.length-1){
 					fileDeferred.resolve();
 				}
-			}
+			}*/
 			return fileDeferred.promise;
 		},
         deleteBranch: function(forkName, branchName) {
