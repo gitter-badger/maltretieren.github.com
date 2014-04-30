@@ -218,6 +218,7 @@ myApp.service("GithubSrvc", function (
 						} else {
 							console.log("add to folder: "+response[j].path);
 							foldersPath[j] = response[j].path;
+							console.log(foldersPath);
 						}
 					}
 					console.log(path+" contains "+filesPath.length+" files and "+foldersPath.length+ " folders");
