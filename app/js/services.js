@@ -237,16 +237,8 @@ myApp.service("GithubSrvc", function (
 				});
 			// this is the toplevel folder to search for files
 			})(path);
-			
 			var fileCountPromise = fileCountDeferred.promise;
-			fileCountPromise.then(function(files) {
-				console.log("There are "+files.length+" files to process");
-				$scope.export = files;
-			}, function(reason) {
-				console.log("There was a ready counting all files to export");
-			}, function(update) {
-				console.log("Update from the fileCount process: "+update);
-			});
+			return fileCountPromise;
 			
 				/*	
 					// for loading bar, notify overall steps

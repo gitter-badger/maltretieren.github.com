@@ -474,8 +474,17 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
     $scope.zip = function() {
 		console.log("export posts...");
 		
-		var batchGet = GithubSrvc.batchGet("_posts")
-		batchGet.then(function(content) {
+		var fileCountPromise = GithubSrvc.batchGet("_posts");
+		fileCountPromise.then(function(files) {
+				console.log("There are "+files.length+" files to process");
+				$scope.export = files;
+			}, function(reason) {
+				console.log("There was a ready counting all files to export");
+			}, function(update) {
+				console.log("Update from the fileCount process: "+update);
+		});
+		
+		/*batchGet.then(function(content) {
 			console.log("generate zip");
 			console.log(content);
 			var zip = new JSZip();
@@ -498,7 +507,7 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 				$scope.processingPostNr = update;
 				$scope.exportStatus = percentage;
 			}
-		});
+		});*/
 	}
 
     $scope.import = {};
@@ -515,6 +524,8 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 	  }
 	  r.readAsBinaryString(f);
 	}
+	
+
 
     $scope.toggleSelection = function(selected) {
         $scope.selection.push(selected);
