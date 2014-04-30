@@ -475,10 +475,15 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 			console.log("generate zip");
 			var zip = new JSZip();
 			for(var i in content) {
+				console.log("---");
+				console.log(i);
+				console.log(content[i]);
+				console.log("---");
 				zip.file(i, content[i]);
 			};
 			var content = zip.generate({type:"blob"});
-			saveAs(content, "example.zip");
+			var date = new Date();
+			saveAs(content, date.toISOString().slice(0,10)+"export.zip");
 		});
 	}
 
