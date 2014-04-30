@@ -208,6 +208,7 @@ myApp.service("GithubSrvc", function (
 					readyPromise.notify(response.length);
 					$interval(function() {
 						if(i === response.length-1) {
+							readyPromise.notify(100);
 							//console.log(contentArray);
 							readyPromise.resolve(contentArray);
 						}
