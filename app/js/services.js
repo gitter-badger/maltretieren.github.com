@@ -221,6 +221,7 @@ myApp.service("GithubSrvc", function (
 							});
 						} else {
 							console.log(response[i].path + " is a folder - delete the content instead");
+							readyPromise.notify(i);
 							//tick(response[i].path);
 						}
 						i++;
