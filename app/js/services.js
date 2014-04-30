@@ -220,14 +220,14 @@ myApp.service("GithubSrvc", function (
                         } else {
                             foldersPath.push(res[i].path);
                         }
+                    }
 
-                        if(j!==foldersPath.length) {
-                            var newFolder = foldersPath[j++];
-                            console.log(newFolder);
-                            fileCount(newFolder);
-                        } else {
-                            fileCountDeferred.resolve(fileCount);
-                        }
+                    if(j!==foldersPath.length) {
+                        var newFolder = foldersPath[j++];
+                        console.log(newFolder);
+                        fileCount(newFolder);
+                    } else {
+                        fileCountDeferred.resolve(filesPath.length);
                     }
 				});
 			};
