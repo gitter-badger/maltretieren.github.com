@@ -490,8 +490,8 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 			console.log(contents);
 			
 			var zip = new JSZip();
-			for(var i in content) {
-				zip.file(i, content[i]);
+			for(var i in contents) {
+				zip.file(i, contents[i]);
 			};
 			var content = zip.generate({type:"blob"});
 			var date = new Date();
