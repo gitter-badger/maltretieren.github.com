@@ -213,10 +213,10 @@ myApp.service("GithubSrvc", function (
 					
 					for(var j=0; j<response.length; j++) {
 						if(response[j].type === "file") {
-							console.log("add to file: "+response[j].path);
+							//console.log("add to file: "+response[j].path);
 							filesPath.push(response[j].path);
 						} else {
-							console.log("add to folder: "+response[j].path);
+							//console.log("add to folder: "+response[j].path);
 							foldersPath.push(response[j].path);
 						}
 					}
