@@ -529,7 +529,7 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 	}
 	
 	$scope.selectAll = function() {
-		$scope.exportSelection = $scope.export;
+		$scope.exportSelection = angular.copy($scope.export);
 	}
 	
 	$scope.showContent = function(selected) {
