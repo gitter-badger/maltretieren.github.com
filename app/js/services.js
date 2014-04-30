@@ -204,7 +204,7 @@ myApp.service("GithubSrvc", function (
 
 			branch.read(path, false).then(function(res) {
 				console.log(path);
-			};
+			});
 			
 			(function tick(path) {
 				console.log(path);
