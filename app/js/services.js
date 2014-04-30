@@ -202,7 +202,7 @@ myApp.service("GithubSrvc", function (
 			var folders = 0;
 			var files = 0;
 			var filesPath = {}
-			var folderPath = {};
+			var foldersPath = {};
 			(function tick(path) {
 				console.log(path);
 				branch.contents(path).then(function(res) {
