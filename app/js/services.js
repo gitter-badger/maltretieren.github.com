@@ -190,7 +190,7 @@ myApp.service("GithubSrvc", function (
 			})();
 
         },
-        batchGet: function(path) {
+        batchGet: function($scope, path) {
             var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo(config.github.user, config.github.repository);
             var branch = repo.getBranch("master");
