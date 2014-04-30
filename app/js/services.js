@@ -207,11 +207,11 @@ myApp.service("GithubSrvc", function (
 			var foldersPath = [];
 			var i = 0;
 			
-			(function tick(path) {
+			// find all files to export also in subfolders
+			(function fileCount(path) {
 				console.log(path);
 				branch.contents(path).then(function(res) {
 					var response = JSON.parse(res);
-					
 					
 					for(var j=0; j<response.length; j++) {
 						if(response[j].type === "file") {
@@ -225,16 +225,20 @@ myApp.service("GithubSrvc", function (
 					
 					$interval(function() {
 						if(i<foldersPath.length) {
-							tick(foldersPath[i]);
+							fileCount(foldersPath[i]);
 							i++;
 						} else {
 							console.log("There are "+filesPath.length+" files to process");
 						}
 					}, 1000, foldersPath.length);
-					
+				});
+			// this is the toplevel folder to search for files
+			})(path);
+			
+				/*	
 					// for loading bar, notify overall steps
 					readyPromise.notify(response.length);
-					/*$interval(function() {
+					$interval(function() {
 						if(i === response.length-1) {
 							readyPromise.notify(100);
 							//console.log(contentArray);
@@ -255,10 +259,10 @@ myApp.service("GithubSrvc", function (
 						}
 						i++;
 					}, 1000, response.length);
-				*/
+				
 				});
 			})(path);
-			
+			*/
 			return readyPromise.promise;
         },
         deleteBranch: function(forkName, branchName) {
