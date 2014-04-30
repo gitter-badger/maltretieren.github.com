@@ -511,7 +511,8 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 	}
 
     $scope.import = {};
-	$scope.export = {}
+	$scope.export = {};
+	$scope.exportSelection = {};
     $scope.selection = [];
 	$scope.add = function(){
 	  var f = document.getElementById('file').files[0],
