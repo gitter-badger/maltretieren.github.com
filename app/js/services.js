@@ -213,30 +213,25 @@ myApp.service("GithubSrvc", function (
 				console.log(path);
 				branch.contents(path).then(function(res) {
 					var response = JSON.parse(res);
-					
-					for(var j=0; j<response.length; j++) {
-						if(response[j].type === "file") {
-							//console.log("add to file: "+response[j].path);
-							filesPath.push(response[j].path);
-						} else {
-							//console.log("add to folder: "+response[j].path);
-							foldersPath.push(response[j].path);
-						}
-					}
-					
-					$interval(function() {
-						if(i<foldersPath.length) {
-							fileCount(foldersPath[i]);
-							i++;
-						} else {
-							//fileCountDeferred.notify(filesPath);
-							fileCountDeferred.resolve(filesPath);
-							//console.log("There are "+filesPath.length+" files to process");
-						}
-					}, 1000, foldersPath.length);
+
+                    (function(folderName) {
+                        var folderName = folderName;
+                        self.getContent(folderName).then(function(response) {
+
+                            if(response[j].type === "file") {
+                                filesPath.push(response[i].path);
+                                fileCount(foldersPath[i++]);
+                            } else {
+                                foldersPath.push(response[i].path);
+                                fileCountDeferred.resolve(fileCount);
+                            }
+
+                        });
+                    })(path);
 				});
 			// this is the toplevel folder to search for files
 			})(path);
+
 			return fileCountDeferred.promise;
         },
 		getFiles: function(fileNames) {
