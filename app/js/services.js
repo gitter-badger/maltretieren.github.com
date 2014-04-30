@@ -222,11 +222,13 @@ myApp.service("GithubSrvc", function (
 							foldersPath.push(response[j].path);
 						}
 					}
-					console.log(path+" contains "+filesPath.length+" files and "+foldersPath.length+ " folders");
+					
 					$interval(function() {
 						if(i<foldersPath.length) {
 							tick(foldersPath[i]);
 							i++;
+						} else {
+							console.log("There are "+filesPath.length+" files to process");
 						}
 					}, 1000, foldersPath.length);
 					
