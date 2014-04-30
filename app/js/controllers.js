@@ -471,20 +471,21 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
     $scope.zip = function() {
 		console.log("export posts...");
 		
-		GithubSrvc.batchGet("_posts").then(function(content) {
+		var batchGet = GithubSrvc.batchGet("_posts")
+		batchGet.then(function(content) {
 			console.log("generate zip");
 			console.log(content);
 			var zip = new JSZip();
 			for(var i in content) {
-				//console.log("---");
-				//console.log(i);
-				//console.log(content[i]);
-				//console.log("---");
 				zip.file(i, content[i]);
 			};
 			var content = zip.generate({type:"blob"});
 			var date = new Date();
 			saveAs(content, date.toISOString().slice(0,10)+"-posts-export.zip");
+		}, function(reason) {
+			console.log("There was a error to export the posts: "+reason);
+		}, function(update) {
+			console.log("Update Notification: "+update);
 		});
 	}
 
