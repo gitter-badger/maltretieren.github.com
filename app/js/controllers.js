@@ -532,6 +532,10 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 		$scope.exportSelection = angular.copy($scope.export);
 	}
 	
+	$scope.unselectAll = function() {
+		$scope.exportSelection = [];
+	}
+	
 	$scope.showContent = function(selected) {
 		console.log(selected);
 		var value = $scope.import[selected].asText();
