@@ -202,15 +202,14 @@ myApp.service("GithubSrvc", function (
 			var folders = 0;
 			var files = 0;
 			
+			// preprocess response to seperate files/folders 
+			var filesPath = [];
+			var foldersPath = [];
 			(function tick(path) {
 				console.log(path);
 				branch.contents(path).then(function(res) {
 					var response = JSON.parse(res);
 					var i = 0;
-					
-					// preprocess response to seperate files/folders 
-					var filesPath = [];
-					var foldersPath = [];
 					
 					for(var j=0; j<response.length; j++) {
 						if(response[j].type === "file") {
