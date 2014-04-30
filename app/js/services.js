@@ -207,7 +207,7 @@ myApp.service("GithubSrvc", function (
 					for(var j=0; j<response.length; j++) {
 						var folders = 0;
 						var files = 0;
-						if(response[i].type === "file") {
+						if(response[j].type === "file") {
 							files++;
 						} else {
 							folders++;
