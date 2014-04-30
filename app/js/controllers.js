@@ -537,6 +537,7 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
             var data = e.target.result;
             var zip = new JSZip(data);
             $scope.import = zip.files;
+            $scope.$apply()
         }
         r.readAsBinaryString(f);
     }
@@ -565,8 +566,8 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
         var importObject = {};
         for(var i=0; i<$scope.importSelection.length;i++) {
             console.log($scope.importSelection);
-            var key = $scope.import[$scope.importSelection[i]].name;
-            var value = $scope.import[$scope.importSelection[i]].asText();
+            var key = $scope.importSelection[i].name;
+            var value = $scope.importSelection[i].asText();
             importObject[key] = value;
         }
 
