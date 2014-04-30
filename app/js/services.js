@@ -243,6 +243,7 @@ myApp.service("GithubSrvc", function (
 			var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo(config.github.user, config.github.repository);
             var branch = repo.getBranch("master");
+			var self = this;
 			
 			var fileDeferred = $q.defer();
 			var contents = {};
@@ -250,7 +251,7 @@ myApp.service("GithubSrvc", function (
 			var i=1;
 			var doGet = function(fileName) {
 				var fileName = fileName;
-				this.getContent(fileName).then(function(response) {
+				that.getContent(fileName).then(function(response) {
 					contents[fileName] = response.content;
 					i++;
 					if(i !== fileNames.length) {
