@@ -190,7 +190,7 @@ myApp.service("GithubSrvc", function (
 			})();
 
         },
-        batchGet: function($scope, path) {
+        batchGet: function(path) {
             var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo(config.github.user, config.github.repository);
             var branch = repo.getBranch("master");
@@ -237,8 +237,7 @@ myApp.service("GithubSrvc", function (
 				});
 			// this is the toplevel folder to search for files
 			})(path);
-			var fileCountPromise = fileCountDeferred.promise;
-			return fileCountPromise;
+			return fileCountDeferred.promise;
 			
 				/*	
 					// for loading bar, notify overall steps
