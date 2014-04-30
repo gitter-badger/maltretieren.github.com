@@ -222,7 +222,7 @@ myApp.service("GithubSrvc", function (
 					}
 					console.log(path+" contains "+filesPath.length+" files and "+foldersPath.length+ " folders");
 					$interval(function() {
-						console.log(foldersPath[i]);
+						tick(foldersPath[i]);
 						i++;
 					}, 1000, foldersPath.length);
 					
