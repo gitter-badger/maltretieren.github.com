@@ -473,12 +473,12 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 
 	var fileCountPromise = GithubSrvc.getContents("_posts");
 	fileCountPromise.then(function(files) {
-			console.log("There are "+files.length+" files to process");
-			$scope.export = files;
-		}, function(reason) {
-			console.log("There was a ready counting all files to export");
-		}, function(update) {
-			console.log("Update from the fileCount process: "+update);
+		console.log("There are "+files.length+" files to process");
+		$scope.export = files;
+	}, function(reason) {
+		console.log("There was a ready counting all files to export");
+	}, function(update) {
+		console.log("Update from the fileCount process: "+update);
 	});
 	
     $scope.zip = function() {
