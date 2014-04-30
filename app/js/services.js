@@ -253,12 +253,13 @@ myApp.service("GithubSrvc", function (
 				var fileName = fileName;
 				self.getContent(fileName).then(function(response) {
 					contents[fileName] = response.content;
-					i++;
 					if(i !== fileNames.length) {
 						doGet(fileNames[i]);
+						i++;
 					} else {
 						fileDeferred.resolve(contents);
 					}
+					
 				});
 			}
 			// trigger with first, proceed all with a promise loop
