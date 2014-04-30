@@ -501,6 +501,7 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
     }
 	
 	$scope.showContent = function(selected) {
+		console.log(selected);
 		var value = $scope.import[selected].asText();
 		console.log(value);
 	}
