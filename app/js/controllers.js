@@ -464,14 +464,11 @@ myApp.controller('AdminCtrl', function($scope, UserModel) {
 /**
 *	This controller exports/imports post as a zip
 */
-myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
+myApp.controller('ExportCtrl', function($scope, $dialogs, GithubSrvc) {
 	// binding to hide the edit button for non-admin users...
-	$scope.import = {};
 	$scope.export = {};
 	$scope.exportSelection = [];
-    $scope.importSelection = [];
 	$scope.exportStatus = 0;
-    $scope.importStatus = 0;
 	$scope.maxValue = 0;
 	$scope.processingPostNr = 0;
 	$scope.type = 'info';
@@ -512,18 +509,6 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 			$scope.exportStatus = percentage;
 		});
 	}
-
-	$scope.add = function(){
-	  var f = document.getElementById('file').files[0],
-		  r = new FileReader();
-	  r.onloadend = function(e){
-		var data = e.target.result;
-		var zip = new JSZip(data);
-        $scope.import = zip.files;
-        $scope.$apply()
-	  }
-	  r.readAsBinaryString(f);
-	}
 	
 	$scope.selectAllExport = function() {
 		$scope.exportSelection = angular.copy($scope.export);
@@ -531,36 +516,62 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 	$scope.unselectAllExport = function() {
 		$scope.exportSelection = [];
 	}
+});
+
+/**
+ *	This controller exports/imports post as a zip
+ */
+myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
+    // binding to hide the edit button for non-admin users...
+    $scope.import = {};
+    $scope.importSelection = [];
+    $scope.importStatus = 0;
+    $scope.maxValue = 0;
+    $scope.processingPostNr = 0;
+    $scope.type = 'info';
+
+    $scope.add = function(){
+        var f = document.getElementById('file').files[0],
+            r = new FileReader();
+        r.onloadend = function(e){
+            var data = e.target.result;
+            var zip = new JSZip(data);
+            $scope.import = zip.files;
+            $scope.$apply()
+        }
+        r.readAsBinaryString(f);
+    }
+
     $scope.selectAllImport = function() {
         $scope.importSelection = angular.copy($scope.import);
     }
     $scope.unselectAllImport = function() {
         $scope.importSelection = [];
     }
-	
-	$scope.showContent = function(selected) {
-		console.log(selected);
-		var value = $scope.import[selected].asText();
-		var dlg = $dialogs.confirm(selected,value);
+
+    $scope.showContent = function(selected) {
+        console.log(selected);
+        var value = $scope.import[selected].asText();
+        var dlg = $dialogs.confirm(selected,value);
         dlg.result.then(function(btn){
             //GithubSrvc.deleteContent(path);
         },function(btn){
             console.log("cancel delete")
             //$scope.confirmed = 'Shame on you for not thinking this is awesome!';
         });
-		console.log();
-	}
+        console.log();
+    }
 
     $scope.doImport = function() {
         var importObject = {};
         for(var i=0; i<$scope.importSelection.length;i++) {
-			var key = $scope.import[$scope.importSelection[i]].name;
-			var value = $scope.import[$scope.importSelection[i]].asText();
+            var key = $scope.import[$scope.importSelection[i]].name;
+            var value = $scope.import[$scope.importSelection[i]].asText();
             importObject[key] = value;
         }
-		
-		var showMessage = false;
-		var force = false;
+
+        var showMessage = false;
+        var force = false;
         GithubSrvc.commitMany(importObject, "Import", false, false);
     }
 });
