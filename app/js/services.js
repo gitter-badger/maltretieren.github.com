@@ -229,7 +229,7 @@ myApp.service("GithubSrvc", function (
 							fileCount(foldersPath[i]);
 							i++;
 						} else {
-							fileCountDeferred.notify(filesPath);
+							//fileCountDeferred.notify(filesPath);
 							fileCountDeferred.resolve(filesPath);
 							console.log("There are "+filesPath.length+" files to process");
 						}
