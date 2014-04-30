@@ -525,13 +525,18 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 	  r.readAsBinaryString(f);
 	}
 	
-	$scope.selectAll = function() {
+	$scope.selectAllExport = function() {
 		$scope.exportSelection = angular.copy($scope.export);
-	}
-	
-	$scope.unselectAll = function() {
+    }
+	$scope.unselectAllExport = function() {
 		$scope.exportSelection = [];
 	}
+    $scope.selectAllImport = function() {
+        $scope.importSelection = angular.copy($scope.import);
+    }
+    $scope.unselectAllImport = function() {
+        $scope.importSelection = [];
+    }
 	
 	$scope.showContent = function(selected) {
 		console.log(selected);
