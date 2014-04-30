@@ -467,7 +467,7 @@ myApp.controller('AdminCtrl', function($scope, UserModel) {
 myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 	// binding to hide the edit button for non-admin users...
 	$scope.exportStatus = 0;
-	$scope.maxValue = 0;
+	$scope.maxValue = $scope.exportSelection.length;
 	$scope.processingPostNr = 0;
 	$scope.type = 'info';
 
