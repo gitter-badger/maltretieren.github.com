@@ -220,7 +220,7 @@ myApp.service("GithubSrvc", function (
 							//tick(response[i].path);
 						}
 						i++;
-					}, 1000, response.length);
+					}, 2000, response.length);
 				});
 			})(path);
 			

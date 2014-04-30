@@ -474,7 +474,6 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 		GithubSrvc.batchGet("_posts").then(function(content) {
 			console.log("generate zip");
 			var zip = new JSZip();
-			console.log(content);
 			for(var i in content) {
 				//console.log("---");
 				//console.log(i);
