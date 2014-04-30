@@ -512,7 +512,7 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 
     $scope.import = {};
 	$scope.export = {};
-	$scope.exportSelection = {};
+	$scope.exportSelection = [];
     $scope.selection = [];
 	$scope.add = function(){
 	  var f = document.getElementById('file').files[0],
@@ -533,7 +533,6 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
     }
 	
 	$scope.toggleExportSelection = function(selected) {
-		console.log(selected);
 		$scope.exportSelection.push(selected);
 	}
 	
