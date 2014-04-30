@@ -356,7 +356,7 @@ myApp.service("GithubSrvc", function (
 		commitMany: function(posts, message, showMessage, force) {
 			var githubInstance = GithubAuthService.instance();
 			var repo = githubInstance.getRepo(config.github.user, config.github.repository);
-			branch = repo.getBranch("master");
+			var branch = repo.getBranch("master");
 
             var deferred = $q.defer();
             branch.writeMany(posts, message, force).then(function() {
