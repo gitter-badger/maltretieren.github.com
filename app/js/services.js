@@ -241,6 +241,7 @@ myApp.service("GithubSrvc", function (
 			var fileCountPromise = fileCountDeferred.promise;
 			fileCountPromise.then(function(files) {
 				console.log("There are "+files.length+" files to process");
+				$scope.export = files;
 			}, function(reason) {
 				console.log("There was a ready counting all files to export");
 			}, function(update) {
