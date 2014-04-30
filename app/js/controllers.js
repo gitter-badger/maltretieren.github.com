@@ -485,8 +485,9 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 		console.log($scope.exportSelection);
 		
 		var filePromise = GithubSrvc.getFiles($scope.exportSelection);
-		filePromise.then(function() {
+		filePromise.then(function(contents) {
 			console.log("files available - zip them");
+			console.log(contents);
 		});
 		/*batchGet.then(function(content) {
 			console.log("generate zip");

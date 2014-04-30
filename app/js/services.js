@@ -248,7 +248,7 @@ myApp.service("GithubSrvc", function (
 			var contents = {};
 			this.getContent(fileNames[0]).then(function(content) {
 				contents[fileNames[0]] = content;
-				fileDeferred.resolve();
+				fileDeferred.resolve(contents);
 			});
 			/**for(var i=0; i<fileNames.length; i++) {
 				console.log(fileNames[i]);
