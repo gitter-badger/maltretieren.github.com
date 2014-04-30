@@ -221,7 +221,10 @@ myApp.service("GithubSrvc", function (
 						}
 					}
 					console.log(path+" contains "+filesPath.length+" files and "+foldersPath.length+ " folders");
-										
+					$interval(function() {
+						console.log(foldersPath[i]);
+						i++;
+					}, 1000, foldersPath.length);
 					
 					// for loading bar, notify overall steps
 					readyPromise.notify(response.length);
