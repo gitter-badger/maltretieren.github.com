@@ -46,7 +46,7 @@
       <file leaf-file-name="admin.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="14" selection-start="757" selection-end="757" vertical-scroll-proportion="0.6674473" vertical-offset="30" max-vertical-offset="900">
+            <state line="15" column="36" selection-start="456" selection-end="456" vertical-scroll-proportion="0.4566745" vertical-offset="30" max-vertical-offset="900">
               <folding>
                 <element signature="n#style#0;n#progressbar#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#progressbar#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -619,7 +619,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="14" selection-start="757" selection-end="757" vertical-scroll-proportion="0.6674473" vertical-offset="30" max-vertical-offset="900">
+        <state line="15" column="36" selection-start="456" selection-end="456" vertical-scroll-proportion="0.4566745" vertical-offset="30" max-vertical-offset="900">
           <folding>
             <element signature="n#style#0;n#progressbar#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#progressbar#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
