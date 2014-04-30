@@ -378,7 +378,7 @@ myApp.service("GithubSrvc", function (
             if(typeof text == 'string') {
                 contents[path] = text;
             } else {
-                contents = text;
+               contents = text;
             }
 
             var deferred = $q.defer();
