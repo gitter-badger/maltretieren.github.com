@@ -204,6 +204,8 @@ myApp.service("GithubSrvc", function (
 				branch.contents(path).then(function(res) {
 					var response = JSON.parse(res);
 					var i = 0;
+					// for loading bar, notify overall steps
+					readyPromise.notify(response.length);
 					$interval(function() {
 						if(i === response.length-1) {
 							//console.log(contentArray);
@@ -213,6 +215,8 @@ myApp.service("GithubSrvc", function (
 						if(response[i].type === "file") {
 							var contentPath = response[i].path;
 							branch.read(response[i].path, false).then(function(res) {
+								// for loading bar, notify current steps
+								readyPromise.notify(i);
 								contentArray[contentPath] = res.content;
 							});
 						} else {
