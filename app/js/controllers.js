@@ -543,7 +543,7 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
     }
 
     $scope.selectAllImport = function() {
-        $scope.importSelection = angular.copy($scope.import);
+        $scope.importSelection = $scope.import;
     }
     $scope.unselectAllImport = function() {
         $scope.importSelection = [];
