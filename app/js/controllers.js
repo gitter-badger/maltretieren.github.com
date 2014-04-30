@@ -482,7 +482,7 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 	});
 	
     $scope.zip = function() {
-		console.log($scope.export);
+		console.log($scope.exportSelection);
 		
 
 		
