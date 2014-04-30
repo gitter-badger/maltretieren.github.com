@@ -194,6 +194,7 @@ myApp.service("GithubSrvc", function (
             var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo(config.github.user, config.github.repository);
             var branch = repo.getBranch("master");
+            var self = this;
 
 			console.log(path);
 			var contentArray = {};
