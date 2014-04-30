@@ -214,11 +214,10 @@ myApp.service("GithubSrvc", function (
 				console.log(path);
 				branch.contents(path).then(function(res) {
 					var response = JSON.parse(res);
-
+                    console.log(response);
                     (function(folderName) {
                         var folderName = folderName;
                         self.getContent(folderName).then(function(response) {
-
                             if(response[j].type === "file") {
                                 filesPath.push(response[i].path);
                                 fileCount(foldersPath[i++]);
