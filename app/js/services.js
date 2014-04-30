@@ -233,7 +233,7 @@ myApp.service("GithubSrvc", function (
 							fileCountDeferred.resolve(filesPath);
 							//console.log("There are "+filesPath.length+" files to process");
 						}
-					}, 2000, foldersPath.length);
+					}, 1000, foldersPath.length);
 				});
 			// this is the toplevel folder to search for files
 			})(path);
