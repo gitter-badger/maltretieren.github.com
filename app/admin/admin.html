@@ -25,6 +25,7 @@ comments: false
 						<div ng-click="showContent(value)">{{value}}</div>
 					</td>
 					<td>
+						<!-- http://stackoverflow.com/questions/14514461/how-can-angularjs-bind-to-list-of-checkbox-values -->
 						<input type="checkbox" id="{{key}}" name="selection[]" value="{{value}}" check-list='selection[]'/>
 					</td>
 				</tr>
