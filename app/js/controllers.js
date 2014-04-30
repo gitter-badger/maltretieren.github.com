@@ -475,6 +475,7 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 	fileCountPromise.then(function(files) {
 		console.log("There are "+files.length+" files to process");
 		$scope.export = files;
+		$scope.maxValue = files.length;
 	}, function(reason) {
 		console.log("There was a ready counting all files to export");
 	}, function(update) {
@@ -499,14 +500,10 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 			console.log("There was a error to export the posts: "+reason);
 		}, function(update) {
 			console.log("Update Notification: "+update);
-			if($scope.maxValue === 0) {
-				$scope.maxValue = update;
-			} else {
-				var percentage = (update * 100) / $scope.maxValue;
-				console.log("percentage: "+percentage);
-				$scope.processingPostNr = update;
-				$scope.exportStatus = percentage;
-			}
+			var percentage = (update * 100) / $scope.maxValue;
+			console.log("percentage: "+percentage);
+			$scope.processingPostNr = update;
+			$scope.exportStatus = percentage;
 		});
 	}
 

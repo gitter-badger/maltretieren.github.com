@@ -255,6 +255,8 @@ myApp.service("GithubSrvc", function (
 				self.getContent(fileName).then(function(response) {
 					contents[fileName] = response.content;
 					if(i !== fileNames.length) {
+						$scope.processingPostNr
+						fileDeferred.notify(i);
 						doGet(fileNames[i]);
 						i++;
 					} else {
