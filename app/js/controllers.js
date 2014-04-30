@@ -563,7 +563,7 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
     }
 
     $scope.toggleSelection = function(selection) {
-        console.log(selection);
+        $scope.importSelection.push(selected)
     }
 
     $scope.doImport = function() {
