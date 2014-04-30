@@ -230,6 +230,7 @@ myApp.service("GithubSrvc", function (
 							i++;
 						} else {
 							fileCountDeferred.notify(filesPath);
+							fileCountDeferred.resolve(filesPath);
 							console.log("There are "+filesPath.length+" files to process");
 						}
 					}, 1000, foldersPath.length);
@@ -238,12 +239,12 @@ myApp.service("GithubSrvc", function (
 			})(path);
 			
 			var fileCountPromise = fileCountDeferred.promise;
-			fileCountPromise.then(function() {
-			
+			fileCountPromise.then(function(files) {
+				console.log("There are "+files.length+" files to process");
 			}, function(reason) {
 				console.log("There was a ready counting all files to export");
-			}, function(files) {
-				console.log("There are "+files.length+" files to process");
+			}, function(update) {
+				console.log("Update from the fileCount process: "+update);
 			});
 			
 				/*	
