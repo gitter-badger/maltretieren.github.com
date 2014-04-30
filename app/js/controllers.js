@@ -469,6 +469,7 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 	$scope.exportStatus = 0;
 	$scope.maxValue = 0;
 	$scope.processingPostNr = 0;
+	$scope.type = 'info';
 
     $scope.zip = function() {
 		console.log("export posts...");
@@ -483,6 +484,7 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 			};
 			var content = zip.generate({type:"blob"});
 			var date = new Date();
+			$scope.type = 'success';
 			saveAs(content, date.toISOString().slice(0,10)+"-posts-export.zip");
 		}, function(reason) {
 			console.log("There was a error to export the posts: "+reason);
