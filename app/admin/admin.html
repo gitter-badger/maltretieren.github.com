@@ -19,7 +19,7 @@ comments: false
 		<table>
             <tr ng-repeat="(key, value) in export">
                 <td>
-					<div ng-click="showContent(key)">{{key}}</div>
+					<div ng-click="showContent(value)">{{value}}</div>
 				</td>
                 <td>
                     <input type = "checkbox" id="{{key}}" name="selection[]" value="{{value}}" ng-click="toggleExportSelection(value)"/>
