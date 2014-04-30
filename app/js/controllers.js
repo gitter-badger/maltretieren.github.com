@@ -466,8 +466,8 @@ myApp.controller('AdminCtrl', function($scope, UserModel) {
 */
 myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 	// binding to hide the edit button for non-admin users...
-	$scope.exportStatus = "";
-	$scope.max = 0;
+	$scope.exportStatus = 0;
+	$scope.maxValue = 0;
 
     $scope.zip = function() {
 		console.log("export posts...");
@@ -487,10 +487,10 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 			console.log("There was a error to export the posts: "+reason);
 		}, function(update) {
 			console.log("Update Notification: "+update);
-			if($scope.max === 0) {
-				$scope.max = update;
+			if($scope.maxValue === 0) {
+				$scope.maxValue = update;
 			} else {
-				$scope.exportStatus = update;
+				$scope.exportStatus = ($scope.maxValue / 100) * update;
 			}
 		});
 	}
