@@ -219,7 +219,7 @@ myApp.service("GithubSrvc", function (
 							foldersPath[j] = response[j].path;
 						}
 					}
-					console.log(path+" contains "+filesPath.length+" files and "+foldersPath.length+ "folders");
+					console.log(path+" contains "+filesPath.length+" files and "+foldersPath.length+ " folders");
 										
 					
 					// for loading bar, notify overall steps
