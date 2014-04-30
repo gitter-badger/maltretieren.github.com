@@ -246,8 +246,8 @@ myApp.service("GithubSrvc", function (
 			
 			var fileDeferred = $q.defer();
 			var contents = {};
-			this.getContent(fileNames[0]).then(function(content) {
-				contents[fileNames[0]] = "'"+content+"'";
+			this.getContent(fileNames[0]).then(function(response) {
+				contents[fileNames[0]] = response.content;
 				fileDeferred.resolve(contents);
 			});
 			/**for(var i=0; i<fileNames.length; i++) {
