@@ -509,7 +509,7 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 				$scope.processingPostNr = update;
 				$scope.exportStatus = percentage;
 			}
-		}););
+		});
 	}
 
     $scope.import = {};
