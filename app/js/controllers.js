@@ -466,6 +466,10 @@ myApp.controller('AdminCtrl', function($scope, UserModel) {
 */
 myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 	// binding to hide the edit button for non-admin users...
+	$scope.import = {};
+	$scope.export = {};
+	$scope.exportSelection = [];
+    $scope.selection = [];
 	$scope.exportStatus = 0;
 	$scope.maxValue = $scope.exportSelection.length;
 	$scope.processingPostNr = 0;
@@ -507,10 +511,6 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 		});
 	}
 
-    $scope.import = {};
-	$scope.export = {};
-	$scope.exportSelection = [];
-    $scope.selection = [];
 	$scope.add = function(){
 	  var f = document.getElementById('file').files[0],
 		  r = new FileReader();
