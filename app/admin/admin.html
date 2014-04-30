@@ -21,7 +21,7 @@ comments: false
         <table>
             <tr ng-repeat="(key, user) in import">
                 <td>
-					<div ng-click="showContent(key)" value="{{key}}>{{key}}</div>
+					<div ng-click="showContent(key)">{{key}}</div>
 				</td>
                 <td>
                     <input type = "checkbox" id="{{key}}" name="selection[]" value="{{key}}" ng-click="toggleSelection(key)"/>
