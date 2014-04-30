@@ -201,8 +201,8 @@ myApp.service("GithubSrvc", function (
 			
 			var folders = 0;
 			var files = 0;
-			var folderPath = "";
-			var init=false;
+			var filesPath = {}
+			var folderPath = {};
 			(function tick(path) {
 				console.log(path);
 				branch.contents(path).then(function(res) {
@@ -211,17 +211,13 @@ myApp.service("GithubSrvc", function (
 					
 					for(var j=0; j<response.length; j++) {
 						if(response[j].type === "file") {
-							files++;
+							filesPath[j] = response[j].path;
 						} else {
-							folders++;
-							folderPath = response[j].path;
+							folderPath[j] = response[j].path;
 						}
 					}
-					console.log(path+" contains "+files+" files and "+folders+ "folders");
-					if(init===false) {
-						tick(folderPath);
-						init=true;
-					}
+					console.log(path+" contains "+filesPath.length+" files and "+foldersPath.length+ "folders");
+										
 					
 					// for loading bar, notify overall steps
 					readyPromise.notify(response.length);
