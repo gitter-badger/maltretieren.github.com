@@ -214,20 +214,14 @@ myApp.service("GithubSrvc", function (
 				console.log(path);
 				branch.contents(path).then(function(res) {
 					var response = JSON.parse(res);
-                    console.log(response);
-                    (function(folderName) {
-                        var folderName = folderName;
-                        self.getContent(folderName).then(function(response) {
-                            if(response[j].type === "file") {
-                                filesPath.push(response[i].path);
-                                fileCount(foldersPath[i++]);
-                            } else {
-                                foldersPath.push(response[i].path);
-                                fileCountDeferred.resolve(fileCount);
-                            }
 
-                        });
-                    })(path);
+                    if(response[i].type === "file") {
+                        filesPath.push(response[i].path);
+                        fileCount(foldersPath[i++]);
+                    } else {
+                        foldersPath.push(response[i].path);
+                        fileCountDeferred.resolve(fileCount);
+                    }
 				});
 			// this is the toplevel folder to search for files
 			})(path);
