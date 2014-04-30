@@ -7,9 +7,13 @@ comments: false
 {% raw %}
 
     <div style="padding-bottom:15px" ng-controller="ImportExportCtrl" class="containter">
-        <h1 style="float:left">Export</small></h1>
-        <button type="button" class="btn btn-danger btn-middle" ng-click="zip()">Export</button>
-		<progressbar class="progress-striped active" value="dynamic" type="info"></progressbar>
+        <div class="row">
+			<h1>Export</h1>
+		</div>
+		<div class="row">
+			<button type="button" class="btn btn-danger btn-middle" ng-click="zip()">Export</button>
+			<progressbar class="progress-striped active" value="dynamic" type="info"></progressbar>
+		</div>
         
 		<h1>Import</h1>
         <div class="row">
