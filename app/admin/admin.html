@@ -18,7 +18,9 @@ comments: false
 		</div>
 		<table>
             <tr ng-repeat="(key, value) in export">
-                <td>
+                <th>Post</th>
+				<th><a href="" ng-click="selectAll()">Select All</th></th>
+				<td>
 					<div ng-click="showContent(value)">{{value}}</div>
 				</td>
                 <td>

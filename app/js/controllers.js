@@ -526,8 +526,10 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 	  r.readAsBinaryString(f);
 	}
 	
-
-
+	$scope.selectAll = function() {
+		$scope.exportSelection = $scope.export;
+	}
+	
     $scope.toggleSelection = function(selected) {
         $scope.selection.push(selected);
     }
