@@ -205,11 +205,13 @@ myApp.service("GithubSrvc", function (
 			// preprocess response to seperate files/folders 
 			var filesPath = [];
 			var foldersPath = [];
+			var i = 0;
+			
 			(function tick(path) {
 				console.log(path);
 				branch.contents(path).then(function(res) {
 					var response = JSON.parse(res);
-					var i = 0;
+					
 					
 					for(var j=0; j<response.length; j++) {
 						if(response[j].type === "file") {
@@ -222,8 +224,10 @@ myApp.service("GithubSrvc", function (
 					}
 					console.log(path+" contains "+filesPath.length+" files and "+foldersPath.length+ " folders");
 					$interval(function() {
-						tick(foldersPath[i]);
-						i++;
+						if(i<foldersPath.length) {
+							tick(foldersPath[i]);
+							i++;
+						}
 					}, 1000, foldersPath.length);
 					
 					// for loading bar, notify overall steps
