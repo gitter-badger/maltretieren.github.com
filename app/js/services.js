@@ -249,7 +249,7 @@ myApp.service("GithubSrvc", function (
 			this.getContent(fileNames[0]).then(function(content) {
 				contents[fileNames[0]] = content;
 				fileDeferred.resolve();
-			}
+			});
 			/**for(var i=0; i<fileNames.length; i++) {
 				console.log(fileNames[i]);
 				
