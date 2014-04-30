@@ -469,9 +469,10 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 	$scope.import = {};
 	$scope.export = {};
 	$scope.exportSelection = [];
-    $scope.selection = [];
+    $scope.importSelection = [];
 	$scope.exportStatus = 0;
-	$scope.maxValue = $scope.exportSelection.length;
+    $scope.importStatus = 0;
+	$scope.maxValue = 0;
 	$scope.processingPostNr = 0;
 	$scope.type = 'info';
 
@@ -499,14 +500,15 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 			var content = zip.generate({type:"blob"});
 			var date = new Date();
 			$scope.type = 'success';
+            $scope.maxValue = $scope.exportSelection.length;
 			saveAs(content, date.toISOString().slice(0,10)+"-posts-export.zip");
 		}, function(reason) {
 			console.log("There was a error to export the posts: "+reason);
 		}, function(update) {
 			console.log("Update Notification: "+update);
-			var percentage = (update * 100) / $scope.exportSelection.length;
 			console.log("percentage: "+percentage);
 			$scope.processingPostNr = update;
+            var percentage = (update * 100) / $scope.exportSelection.length;
 			$scope.exportStatus = percentage;
 		});
 	}
