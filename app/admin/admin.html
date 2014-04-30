@@ -20,7 +20,9 @@ comments: false
         <button type="button" class="btn btn-danger btn-middle" ng-click="doImport()">Import Selected</button>
         <table>
             <tr ng-repeat="(key, user) in import">
-                <td>{{key}}</td>
+                <td>
+					<div ng-click="showContent()">{{key}}</div>
+				</td>
                 <td>
                     <input type = "checkbox" id="{{key}}" name="selection[]" value="{{key}}" ng-click="toggleSelection(key)"/>
                 </td>

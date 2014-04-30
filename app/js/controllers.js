@@ -490,12 +490,7 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 	  r.onloadend = function(e){
 		var data = e.target.result;
 		var zip = new JSZip(data);
-		$.each(zip.files, function (index, zipEntry) {
-		  //console.log(zipEntry.name);
-		});
-        //console.log(zip);
         $scope.import = zip.files;
-        console.log(zip.files);
         $scope.$apply()
 	  }
 	  r.readAsBinaryString(f);
@@ -504,11 +499,18 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
     $scope.toggleSelection = function(selected) {
         $scope.selection.push(selected);
     }
+	
+	$scope.showContent = function(selected) {
+		var value = $scope.import[selected].asText();
+		console.log(value);
+	}
 
     $scope.doImport = function() {
         var importObject = {};
         for(var i=0; i<$scope.selection.length;i++) {
-            importObject[$scope.import[$scope.selection[i]].name] = $scope.import[$scope.selection[i]].asText();
+			var key = $scope.import[$scope.selection[i]].name;
+			var value = $scope.import[$scope.selection[i]].asText();
+            importObject[key] = value;
         }
 		
 		var showMessage = false;
