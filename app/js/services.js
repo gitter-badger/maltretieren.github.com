@@ -353,6 +353,23 @@ myApp.service("GithubSrvc", function (
             });
             return deferred.promise;
         },
+		commitMany: function(posts, showMessage, showMessage, force) {
+			var githubInstance = GithubAuthService.instance();
+			var repo = githubInstance.getRepo(config.github.user, config.github.repository);
+			branch = repo.getBranch("master");
+
+            var deferred = $q.defer();
+            branch.writeMany(posts, 'Save from GUI', force).then(function() {
+                deferred.resolve();
+				if(showMessage) {
+					$rootScope.$broadcast('Toast::githubCommitSuccess');
+				}
+            }, function(error) {
+                console.log("there was a commit error");
+                deferred.reject();
+            });
+            return deferred.promise;
+        },
         deleteContent: function(path) {
             var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo(config.github.user, config.github.repository);
