@@ -213,7 +213,7 @@ myApp.service("GithubSrvc", function (
 						if(response[j].type === "file") {
 							filesPath[j] = response[j].path;
 						} else {
-							folderPath[j] = response[j].path;
+							foldersPath[j] = response[j].path;
 						}
 					}
 					console.log(path+" contains "+filesPath.length+" files and "+foldersPath.length+ "folders");
