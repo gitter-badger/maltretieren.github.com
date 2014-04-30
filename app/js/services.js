@@ -190,7 +190,7 @@ myApp.service("GithubSrvc", function (
 			})();
 
         },
-        batchGet: function(path) {
+        getContents: function(path) {
             var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo(config.github.user, config.github.repository);
             var branch = repo.getBranch("master");
@@ -238,37 +238,21 @@ myApp.service("GithubSrvc", function (
 			// this is the toplevel folder to search for files
 			})(path);
 			return fileCountDeferred.promise;
-			
-				/*	
-					// for loading bar, notify overall steps
-					readyPromise.notify(response.length);
-					$interval(function() {
-						if(i === response.length-1) {
-							readyPromise.notify(100);
-							//console.log(contentArray);
-							readyPromise.resolve(contentArray);
-						}
-						
-						if(response[i].type === "file") {
-							var contentPath = response[i].path;
-							branch.read(response[i].path, false).then(function(res) {
-								// for loading bar, notify current steps
-								readyPromise.notify(i);
-								contentArray[contentPath] = res.content;
-							});
-						} else {
-							console.log(response[i].path + " is a folder - delete the content instead");
-							readyPromise.notify(i);
-							//tick(response[i].path);
-						}
-						i++;
-					}, 1000, response.length);
-				
-				});
-			})(path);
-			*/
-			//return readyPromise.promise;
         },
+		getFiles: function(fileNames) {
+			var githubInstance = GithubAuthService.instance();
+            var repo = githubInstance.getRepo(config.github.user, config.github.repository);
+            var branch = repo.getBranch("master");
+			
+			var fileDeferred = $q.defer();
+			for(var i=0; i<fileNames.length; i++) {
+				console.log(fileNames[i]);
+				if(i===fileNames.length-1){
+					fileDeferred.resolve();
+				}
+			}
+			return fileDeferred.promise;
+		}
         deleteBranch: function(forkName, branchName) {
 			var that = this;
 			var githubInstance = GithubAuthService.instance();

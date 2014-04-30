@@ -471,7 +471,7 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 	$scope.processingPostNr = 0;
 	$scope.type = 'info';
 
-	var fileCountPromise = GithubSrvc.batchGet("_posts");
+	var fileCountPromise = GithubSrvc.getContents("_posts");
 	fileCountPromise.then(function(files) {
 			console.log("There are "+files.length+" files to process");
 			$scope.export = files;
@@ -484,8 +484,10 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
     $scope.zip = function() {
 		console.log($scope.exportSelection);
 		
-
-		
+		filePromise = GithubSrvc.getFiles();
+		filePromise.then(function() {
+			console.log("files available - zip them");
+		});
 		/*batchGet.then(function(content) {
 			console.log("generate zip");
 			console.log(content);
