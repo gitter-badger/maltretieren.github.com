@@ -566,9 +566,9 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
         var importObject = {};
         for(var i=0; i<$scope.importSelection.length;i++) {
             console.log($scope.importSelection);
-            var key = $scope.importSelection[i].name;
-            var value = $scope.importSelection[i].asText();
-            importObject[key] = value;
+            //var key = $scope.importSelection[i].name;
+            //var value = $scope.importSelection[i].asText();
+            //importObject[key] = value;
         }
 
         var showMessage = false;
