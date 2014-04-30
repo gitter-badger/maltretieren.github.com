@@ -251,7 +251,7 @@ myApp.service("GithubSrvc", function (
 			var i=1;
 			var doGet = function(fileName) {
 				var fileName = fileName;
-				that.getContent(fileName).then(function(response) {
+				self.getContent(fileName).then(function(response) {
 					contents[fileName] = response.content;
 					i++;
 					if(i !== fileNames.length) {
