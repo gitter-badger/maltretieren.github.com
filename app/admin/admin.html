@@ -17,12 +17,12 @@ comments: false
 			</div>
 		</div>
 		<table>
-            <tr ng-repeat="(key, user) in export">
+            <tr ng-repeat="(key, value) in export">
                 <td>
 					<div ng-click="showContent(key)">{{key}}</div>
 				</td>
                 <td>
-                    <input type = "checkbox" id="{{key}}" name="selection[]" value="{{key}}" ng-click="toggleExportSelection(key)"/>
+                    <input type = "checkbox" id="{{key}}" name="selection[]" value="{{value}}" ng-click="toggleExportSelection(value)"/>
                 </td>
             </tr>
         </table>
