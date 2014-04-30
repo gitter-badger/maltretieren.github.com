@@ -246,10 +246,23 @@ myApp.service("GithubSrvc", function (
 			
 			var fileDeferred = $q.defer();
 			var contents = {};
-			this.getContent(fileNames[0]).then(function(response) {
-				contents[fileNames[0]] = response.content;
-				fileDeferred.resolve(contents);
-			});
+			
+			var i=1;
+			var doGet = function(fileName) {
+				var fileName = fileName;
+				this.getContent(fileName).then(function(response) {
+					contents[fileName] = response.content;
+					i++;
+					if(i !== fileNames.length) {
+						doGet(fileNames[i]);
+					} else {
+						fileDeferred.resolve(contents);
+					}
+				});
+			}
+			// trigger with first, proceed all with a promise loop
+			doGet(fileNames[0]);
+			
 			/**for(var i=0; i<fileNames.length; i++) {
 				console.log(fileNames[i]);
 				
