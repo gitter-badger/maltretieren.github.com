@@ -480,7 +480,7 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 	fileCountPromise.then(function(files) {
 		console.log("There are "+files.length+" files to process");
 		$scope.export = files;
-		//$scope.maxValue = files.length;
+		$scope.maxValue = $scope.exportSelection.length;
 	}, function(reason) {
 		console.log("There was a ready counting all files to export");
 	}, function(update) {
