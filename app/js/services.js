@@ -252,7 +252,7 @@ myApp.service("GithubSrvc", function (
 				}
 			}
 			return fileDeferred.promise;
-		}
+		}.
         deleteBranch: function(forkName, branchName) {
 			var that = this;
 			var githubInstance = GithubAuthService.instance();
