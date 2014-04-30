@@ -227,7 +227,7 @@ myApp.service("GithubSrvc", function (
                         console.log(newFolder);
                         fileCount(newFolder);
                     } else {
-                        fileCountDeferred.resolve(filesPath.length);
+                        fileCountDeferred.resolve(filesPath);
                     }
 				});
 			};
