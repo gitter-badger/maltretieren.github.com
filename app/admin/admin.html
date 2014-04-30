@@ -16,19 +16,20 @@ comments: false
 				<progressbar class="progress-striped active" value="exportStatus" type="{{type}}" >{{processingPostNr}} / {{maxValue}}</progressbar>
 			</div>
 		</div>
-		<table>
-			<th>Post</th>
-			<th><a href="" ng-click="selectAll()">Select All</th></th>
-            <tr ng-repeat="(key, value) in export">  
-				<td>
-					<div ng-click="showContent(value)">{{value}}</div>
-				</td>
-                <td>
-                    <input type = "checkbox" id="{{key}}" name="selection[]" value="{{value}}" ng-click="toggleExportSelection(value)"/>
-                </td>
-            </tr>
-        </table>
-        
+		<div class="row">
+			<table>
+				<th>Post</th>
+				<th><a href="" ng-click="selectAll()">Select All</th></th>
+				<tr ng-repeat="(key, value) in export">  
+					<td>
+						<div ng-click="showContent(value)">{{value}}</div>
+					</td>
+					<td>
+						<input type = "checkbox" id="{{key}}" name="selection[]" value="{{value}}" ng-click="toggleExportSelection(value)"/>
+					</td>
+				</tr>
+			</table>
+        </div>
 		<h1>Import</h1>
         <div class="row">
             <input type="file" multiple="" name="file" id="file" onchange="angular.element(this).scope().add(this)">
