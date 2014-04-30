@@ -199,26 +199,29 @@ myApp.service("GithubSrvc", function (
 			var contentArray = {};
 			var readyPromise = $q.defer();
 			
+			var folders = 0;
+			var files = 0;
+			var folderPath = "";
 			(function tick(path) {
 				console.log(path);
 				branch.contents(path).then(function(res) {
 					var response = JSON.parse(res);
 					var i = 0;
 					
-					var folders = 0;
-					var files = 0;
 					for(var j=0; j<response.length; j++) {
 						if(response[j].type === "file") {
 							files++;
 						} else {
 							folders++;
+							folderPath = response[j].path;
 						}
 					}
 					console.log(path+" contains "+files+" files and "+folders+ "folders");
+					tick(folderPath);
 					
 					// for loading bar, notify overall steps
 					readyPromise.notify(response.length);
-					$interval(function() {
+					/*$interval(function() {
 						if(i === response.length-1) {
 							readyPromise.notify(100);
 							//console.log(contentArray);
@@ -239,6 +242,7 @@ myApp.service("GithubSrvc", function (
 						}
 						i++;
 					}, 1000, response.length);
+				*/
 				});
 			})(path);
 			
