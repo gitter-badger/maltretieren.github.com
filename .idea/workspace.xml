@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/admin.html" afterPath="$PROJECT_DIR$/app/admin/admin.html" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="482" column="55" selection-start="16726" selection-end="16726" vertical-scroll-proportion="0.16851442" vertical-offset="7154" max-vertical-offset="9960">
+            <state line="482" column="55" selection-start="16726" selection-end="16726" vertical-scroll-proportion="0.0" vertical-offset="7244" max-vertical-offset="9960">
               <folding />
             </state>
           </provider>
@@ -43,12 +43,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="admin.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="82" selection-start="502" selection-end="502" vertical-scroll-proportion="-8.125" vertical-offset="30" max-vertical-offset="840">
+            <state line="21" column="14" selection-start="757" selection-end="757" vertical-scroll-proportion="0.6674473" vertical-offset="30" max-vertical-offset="900">
               <folding>
                 <element signature="n#style#0;n#progressbar#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#progressbar#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -152,8 +153,8 @@
         <option value="$PROJECT_DIR$/assets/js/octokit-0.9.19/octokit.js" />
         <option value="$PROJECT_DIR$/_posts/templates/2014-01-01-edit-template.md" />
         <option value="$PROJECT_DIR$/app/js/services.js" />
-        <option value="$PROJECT_DIR$/app/admin/admin.html" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
+        <option value="$PROJECT_DIR$/app/admin/admin.html" />
       </list>
     </option>
   </component>
@@ -609,19 +610,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/admin.html">
+    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="82" selection-start="502" selection-end="502" vertical-scroll-proportion="-8.125" vertical-offset="30" max-vertical-offset="840">
-          <folding>
-            <element signature="n#style#0;n#progressbar#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="482" column="55" selection-start="16726" selection-end="16726" vertical-scroll-proportion="0.0" vertical-offset="7244" max-vertical-offset="9960">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
+    <entry file="file://$PROJECT_DIR$/app/admin/admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="482" column="55" selection-start="16726" selection-end="16726" vertical-scroll-proportion="0.16851442" vertical-offset="7154" max-vertical-offset="9960">
-          <folding />
+        <state line="21" column="14" selection-start="757" selection-end="757" vertical-scroll-proportion="0.6674473" vertical-offset="30" max-vertical-offset="900">
+          <folding>
+            <element signature="n#style#0;n#progressbar#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#progressbar#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
