@@ -217,10 +217,10 @@ myApp.service("GithubSrvc", function (
 
                     if(response[i].type === "file") {
                         filesPath.push(response[i].path);
-                        fileCount(foldersPath[i++]);
                     } else {
                         foldersPath.push(response[i].path);
-                        fileCountDeferred.resolve(fileCount);
+                        fileCount(foldersPath[i++]);
+                        //fileCountDeferred.resolve(fileCount);
                     }
 				});
 			// this is the toplevel folder to search for files
