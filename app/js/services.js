@@ -207,11 +207,10 @@ myApp.service("GithubSrvc", function (
 			var foldersPath = [];
 			var i = 0;
 			
-			
+			var fileCountDeferred = $q.defer();
 			// find all files to export also in subfolders
 			(function fileCount(path) {
 				console.log(path);
-				var fileCountDeferred = $q.defer();
 				branch.contents(path).then(function(res) {
 					var response = JSON.parse(res);
 					
@@ -232,7 +231,7 @@ myApp.service("GithubSrvc", function (
 						} else {
 							//fileCountDeferred.notify(filesPath);
 							fileCountDeferred.resolve(filesPath);
-							console.log("There are "+filesPath.length+" files to process");
+							//console.log("There are "+filesPath.length+" files to process");
 						}
 					}, 1000, foldersPath.length);
 				});
