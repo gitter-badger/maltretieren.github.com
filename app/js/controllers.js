@@ -504,7 +504,7 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 			console.log("There was a error to export the posts: "+reason);
 		}, function(update) {
 			console.log("Update Notification: "+update);
-			var percentage = (update * 100) / $scope.maxValue;
+			var percentage = (update * 100) / $scope.exportSelection.length;
 			console.log("percentage: "+percentage);
 			$scope.processingPostNr = update;
 			$scope.exportStatus = percentage;
