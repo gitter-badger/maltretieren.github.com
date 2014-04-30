@@ -468,6 +468,7 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 	// binding to hide the edit button for non-admin users...
 	$scope.exportStatus = 0;
 	$scope.maxValue = 0;
+	$scope.processingPostNr = 0;
 
     $scope.zip = function() {
 		console.log("export posts...");
@@ -492,6 +493,7 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 			} else {
 				var percentage = (update * 100) / $scope.maxValue;
 				console.log("percentage: "+percentage);
+				$scope.processingPostNr = update;
 				$scope.exportStatus = percentage;
 			}
 		});
