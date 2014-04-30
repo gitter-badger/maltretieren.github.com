@@ -464,7 +464,7 @@ myApp.controller('AdminCtrl', function($scope, UserModel) {
 /**
 *	This controller exports/imports post as a zip
 */
-myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
+myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 	// binding to hide the edit button for non-admin users...
 
 
@@ -503,7 +503,14 @@ myApp.controller('ImportExportCtrl', function($scope, GithubSrvc) {
 	$scope.showContent = function(selected) {
 		console.log(selected);
 		var value = $scope.import[selected].asText();
-		console.log(value);
+		var dlg = $dialogs.confirm(selected,value);
+        dlg.result.then(function(btn){
+            //GithubSrvc.deleteContent(path);
+        },function(btn){
+            console.log("cancel delete")
+            //$scope.confirmed = 'Shame on you for not thinking this is awesome!';
+        });
+		console.log();
 	}
 
     $scope.doImport = function() {
