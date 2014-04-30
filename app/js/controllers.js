@@ -528,6 +528,7 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
 	
 	$scope.selectAll = function() {
 		$scope.exportSelection = $scope.export;
+		console.log($scope.exportSelection);
 	}
 	
     $scope.toggleSelection = function(selected) {
