@@ -208,7 +208,7 @@ myApp.service("GithubSrvc", function (
 					var response = JSON.parse(res);
 					var i = 0;
 					
-					// preprocess response to seperate files/folders
+					// preprocess response to seperate files/folders 
 					var filesPath = {}
 					var foldersPath = {};
 					
