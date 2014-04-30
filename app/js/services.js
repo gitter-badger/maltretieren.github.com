@@ -204,16 +204,17 @@ myApp.service("GithubSrvc", function (
 				branch.contents(path).then(function(res) {
 					var response = JSON.parse(res);
 					var i = 0;
+					
+					var folders = 0;
+					var files = 0;
 					for(var j=0; j<response.length; j++) {
-						var folders = 0;
-						var files = 0;
 						if(response[j].type === "file") {
 							files++;
 						} else {
 							folders++;
 						}
-						console.log(path+" contains "+files+" files and "+folders+ "folders");
 					}
+					console.log(path+" contains "+files+" files and "+folders+ "folders");
 					
 					// for loading bar, notify overall steps
 					readyPromise.notify(response.length);
