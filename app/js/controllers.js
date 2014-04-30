@@ -532,6 +532,7 @@ myApp.controller('ImportExportCtrl', function($scope, $dialogs, GithubSrvc) {
     }
 	
 	$scope.toggleExportSelection = function(selected) {
+		console.log(selected);
 		$scope.exportSelection.push(selected);
 	}
 	
