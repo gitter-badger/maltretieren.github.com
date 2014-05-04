@@ -6,38 +6,6 @@ comments: false
 ---
 {% raw %}
 
-    <div style="padding-bottom:15px" ng-controller="ExportCtrl" class="containter">
-        <div class="row">
-			<h1>Export</h1>
-		</div>
-		<div class="row">
-			<button type="button" class="col-md-2 btn btn-danger btn-middle" ng-click="zip()">Export</button>
-            <div class="col-md-10 padding-top:10px">
-                <progressbar class="" style="margin-top:5px" value="exportStatus" type="{{type}}" >
-                    <span style="color:black; white-space:nowrap;">
-                        {{processingPostNr}} / {{maxValue}}
-                    </span>
-                </progressbar>
-            </div>
-		</div>
-
-		<div class="row">
-			<table>
-				<th>Post</th>
-				<th><a href="" ng-click="selectAllExport()">Select All</a> / <a href="" ng-click="unselectAllExport()">Unselect All</a></th>
-				<tr ng-repeat="(key, value) in export">
-					<td>
-						<div ng-click="showContent(value)">{{value}}</div>
-					</td>
-					<td>
-						<!-- http://stackoverflow.com/questions/14514461/how-can-angularjs-bind-to-list-of-checkbox-values -->
-                        <!-- https://github.com/vitalets/checklist-model -->
-						<input type="checkbox" value="{{value}}" check-list='exportSelection'/>
-					</td>
-				</tr>
-			</table>
-        </div>
-    </div>
     <div style="padding-bottom:15px" ng-controller="ImportCtrl" class="containter">
         <h1>Import</h1>
         <div class="row">

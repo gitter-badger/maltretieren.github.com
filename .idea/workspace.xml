@@ -79,12 +79,9 @@
       <file leaf-file-name="admin.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="1363" selection-end="2354" vertical-scroll-proportion="0.19203748" vertical-offset="518" max-vertical-offset="1020">
+            <state line="7" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.24590164" vertical-offset="0" max-vertical-offset="540">
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#progressbar#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#progressbar#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -651,12 +648,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1363" selection-end="2354" vertical-scroll-proportion="0.19203748" vertical-offset="518" max-vertical-offset="1020">
+        <state line="7" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.24590164" vertical-offset="0" max-vertical-offset="540">
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#progressbar#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#progressbar#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
