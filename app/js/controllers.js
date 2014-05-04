@@ -535,7 +535,7 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
     $scope.add = function(){
         var f = document.getElementById('file').files[0],
             r = new FileReader();
-        var importTemp = {};
+        var importTemp = [];
 
         r.onloadend = function(e){
             var data = e.target.result;
