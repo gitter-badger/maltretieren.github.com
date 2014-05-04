@@ -534,6 +534,8 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
     $scope.add = function(){
         var f = document.getElementById('file').files[0],
             r = new FileReader();
+        var importTemp = {};
+
         r.onloadend = function(e){
             var data = e.target.result;
             var zip = new JSZip(data);
@@ -541,9 +543,10 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
                 var fileObj = zip.files[file];
                 var isDir = endsWith(fileObj.name, "/");
                 if(!isDir) {
-                    $scope.import[fileObj.name] = fileObj.asText();
+                    importTemp[fileObj.name] = fileObj.asText();
                 }
             }
+            $scope.import = importTemp;
             $scope.$apply()
         }
         r.readAsBinaryString(f);
