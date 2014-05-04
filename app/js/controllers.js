@@ -539,7 +539,7 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
             var zip = new JSZip(data);
             console.log(Object.keys(zip.files).length);
             for(var file in zip.files) {
-                console.log(file.name);
+                console.log(file);
                 //$scope.import[zip.files[i].name] =
             }
             $scope.import = zip.files;
