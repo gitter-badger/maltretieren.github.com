@@ -512,6 +512,7 @@ myApp.controller('ExportCtrl', function($scope, $dialogs, GithubSrvc) {
 	}
 	
 	$scope.selectAllExport = function() {
+        console.log($scope.export);
 		$scope.exportSelection = angular.copy($scope.export);
     }
 	$scope.unselectAllExport = function() {
@@ -556,7 +557,7 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
     }
 
     $scope.selectAllImport = function() {
-        //console.log($scope.import);
+        console.log($scope.import);
         $scope.importSelection = $scope.import;
         //console.log($scope.importSelection);
     }
