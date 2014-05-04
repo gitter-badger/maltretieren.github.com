@@ -545,7 +545,7 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
                 var fileObj = zip.files[file];
                 var isDir = endsWith(fileObj.name, "/");
                 if(!isDir) {
-                    importTemp[i] = fileObj.name;
+                    importTemp[fileObj.name] = fileObj.asText();
                     i++;
                 }
             }
@@ -584,14 +584,15 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
     $scope.doImport = function() {
         var importObject = {};
         for(var i=0; i<$scope.importSelection.length;i++) {
-            var key = $scope.import[$scope.importSelection[i]].name;
-            var value = $scope.import[$scope.importSelection[i]].asText();
-            importObject[key] = value;
+            //var key = $scope.import[$scope.importSelection[i]].name;
+            //var value = $scope.import[$scope.importSelection[i]].asText();
+            //importObject[key] = value;
+            console.log($scope.importSelection[i]);
         }
 
-        var showMessage = false;
-        var force = false;
-        GithubSrvc.commitMany(importObject, "Import", false, false);
+        //var showMessage = false;
+        //var force = false;
+        //GithubSrvc.commitMany(importObject, "Import", false, false);
     }
 
     function endsWith(str, suffix) {
