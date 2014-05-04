@@ -543,10 +543,10 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
                 var fileObj = zip.files[file];
                 var isDir = endsWith(fileObj.name, "/");
                 if(!isDir) {
-                    importTemp[fileObj.name] = fileObj.asText();
+                    importTemp[fileObj.name] = "test";
                 }
             }
-            //$scope.import = importTemp;
+            $scope.import = importTemp;
             $scope.$apply()
         }
         r.readAsBinaryString(f);
