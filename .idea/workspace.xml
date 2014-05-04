@@ -28,7 +28,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="543" column="20" selection-start="18757" selection-end="18757" vertical-scroll-proportion="0.36807096" vertical-offset="7979" max-vertical-offset="10500">
+            <state line="545" column="17" selection-start="18851" selection-end="18851" vertical-scroll-proportion="0.36807096" vertical-offset="8009" max-vertical-offset="10470">
               <folding />
             </state>
           </provider>
@@ -70,7 +70,7 @@
       <file leaf-file-name="admin.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="51" selection-start="1975" selection-end="1975" vertical-scroll-proportion="0.0" vertical-offset="503" max-vertical-offset="975">
+            <state line="49" column="51" selection-start="1975" selection-end="1975" vertical-scroll-proportion="-17.791666" vertical-offset="308" max-vertical-offset="975">
               <folding />
             </state>
           </provider>
@@ -608,13 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="51" selection-start="1975" selection-end="1975" vertical-scroll-proportion="0.0" vertical-offset="503" max-vertical-offset="975">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="229" column="59" selection-start="8663" selection-end="8663" vertical-scroll-proportion="0.0" vertical-offset="4500" max-vertical-offset="8430">
@@ -642,9 +635,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="51" selection-start="1975" selection-end="1975" vertical-scroll-proportion="-17.791666" vertical-offset="308" max-vertical-offset="975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="543" column="20" selection-start="18757" selection-end="18757" vertical-scroll-proportion="0.36807096" vertical-offset="7979" max-vertical-offset="10500">
+        <state line="545" column="17" selection-start="18851" selection-end="18851" vertical-scroll-proportion="0.36807096" vertical-offset="8009" max-vertical-offset="10470">
           <folding />
         </state>
       </provider>
