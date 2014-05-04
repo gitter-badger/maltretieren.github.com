@@ -554,7 +554,7 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
     }
 
     $scope.selectAllImport = function() {
-        $scope.importSelection = $scope.import;
+        $scope.importSelection = angular.copy($scope.import);
     }
     $scope.unselectAllImport = function() {
         $scope.importSelection = [];
@@ -580,14 +580,15 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
     $scope.doImport = function() {
         var importObject = {};
         for(var i=0; i<$scope.importSelection.length;i++) {
-            var key = $scope.import[$scope.importSelection[i]].name;
-            var value = $scope.import[$scope.importSelection[i]].asText();
-            importObject[key] = value;
+            //var key = $scope.importSelection[i].name;
+            //var value = $scope.import[$scope.importSelection[i]].asText();
+            //importObject[key] = value;
+            console.log($scope.importSelection[i]);
         }
 
-        var showMessage = false;
-        var force = false;
-        GithubSrvc.commitMany(importObject, "Import", false, false);
+        //var showMessage = false;
+        //var force = false;
+        //GithubSrvc.commitMany(importObject, "Import", false, false);
     }
 
     function endsWith(str, suffix) {
