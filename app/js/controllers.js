@@ -577,17 +577,13 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
         console.log();
     }
 
-    $scope.toggleSelection = function(selection) {
-        $scope.importSelection.push(selection);
-    }
-
     $scope.doImport = function() {
         var importObject = {};
         for(var i=0; i<$scope.importSelection.length;i++) {
-            var key = $scope.import[$scope.importSelection[i]];
-            //var value = $scope.import[$scope.importSelection[i]].asText();
+            var key = $scope.importSelection[i];
+            var value = $scope.import[$scope.importSelection[i]];
             //importObject[key] = value;
-            console.log(key);
+            console.log($scope.importSelection[i]);
         }
 
         //var showMessage = false;
