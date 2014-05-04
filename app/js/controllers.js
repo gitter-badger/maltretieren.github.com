@@ -584,14 +584,14 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
         for(var i=0; i<$scope.importSelection.length;i++) {
             var key = $scope.importSelection[i];
             var value = importValue[$scope.importSelection[i]];
-            //importObject[key] = value;
+            importObject[key] = value;
             console.log(key);
             console.log(value);
         }
 
-        //var showMessage = false;
-        //var force = false;
-        //GithubSrvc.commitMany(importObject, "Import", false, false);
+        var showMessage = false;
+        var force = false;
+        GithubSrvc.commitMany(importObject, "Import", false, false);
     }
 
     function endsWith(str, suffix) {
