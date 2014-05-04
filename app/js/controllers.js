@@ -539,13 +539,11 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
         r.onloadend = function(e){
             var data = e.target.result;
             var zip = new JSZip(data);
-            var i = 0;
             for(var file in zip.files) {
                 var fileObj = zip.files[file];
                 var isDir = endsWith(fileObj.name, "/");
                 if(!isDir) {
-                    importTemp[i] = "test";
-                    i++;
+                    importTemp[fileObj.name] = "test";
                 }
             }
             console.log(importTemp);

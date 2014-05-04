@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/admin.html" afterPath="$PROJECT_DIR$/app/admin/admin.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
@@ -28,7 +29,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="541" column="22" selection-start="18588" selection-end="18588" vertical-scroll-proportion="2.263858" vertical-offset="7094" max-vertical-offset="10545">
+            <state line="550" column="12" selection-start="18916" selection-end="18916" vertical-scroll-proportion="0.135255" vertical-offset="8189" max-vertical-offset="10515">
               <folding />
             </state>
           </provider>
@@ -79,7 +80,7 @@
       <file leaf-file-name="admin.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="104" selection-start="2184" selection-end="2184" vertical-scroll-proportion="-18.416666" vertical-offset="368" max-vertical-offset="975">
+            <state line="51" column="66" selection-start="2048" selection-end="2048" vertical-scroll-proportion="-11.541667" vertical-offset="488" max-vertical-offset="975">
               <folding />
             </state>
           </provider>
@@ -630,13 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="104" selection-start="2184" selection-end="2184" vertical-scroll-proportion="-18.416666" vertical-offset="368" max-vertical-offset="975">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="229" column="59" selection-start="8663" selection-end="8663" vertical-scroll-proportion="0.0" vertical-offset="3569" max-vertical-offset="8430">
@@ -644,9 +638,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="66" selection-start="2048" selection-end="2048" vertical-scroll-proportion="-11.541667" vertical-offset="488" max-vertical-offset="975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="541" column="22" selection-start="18588" selection-end="18588" vertical-scroll-proportion="2.263858" vertical-offset="7094" max-vertical-offset="10545">
+        <state line="550" column="12" selection-start="18916" selection-end="18916" vertical-scroll-proportion="0.135255" vertical-offset="8189" max-vertical-offset="10515">
           <folding />
         </state>
       </provider>
