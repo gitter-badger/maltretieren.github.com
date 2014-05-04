@@ -540,7 +540,7 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
             console.log(Object.keys(zip.files).length);
             for(var file in zip.files) {
                 var fileObj = zip.files[file];
-                console.log(fileObj);
+                console.log(endsWith(fileObj, "/"));
                 console.log(fileObj.name);
                 //console.log(fileObj.asText());
                 //$scope.import[zip.files[i].name] =
@@ -586,6 +586,10 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
         var showMessage = false;
         var force = false;
         GithubSrvc.commitMany(importObject, "Import", false, false);
+    }
+
+    function endsWith(str, suffix) {
+        return str.indexOf(suffix, str.length - suffix.length) !== -1;
     }
 });
 
