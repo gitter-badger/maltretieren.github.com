@@ -50,7 +50,7 @@ comments: false
                 <th><a href="" ng-click="selectAllImport()">Select All</a> / <a href="" ng-click="unselectAllImport()">Unselect All</a></th>
                 <tr ng-repeat="(key, value) in import">
                     <td>
-                        <div ng-click="showContent(key)">{{key}}</div>
+                        <div ng-click="showContent(value)">{{value}}</div>
                     </td>
                     <td>
                         <input type="checkbox" value="{{value}}" check-list='importSelection'/>
