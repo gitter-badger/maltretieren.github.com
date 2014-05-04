@@ -477,6 +477,7 @@ myApp.controller('ExportCtrl', function($scope, $dialogs, GithubSrvc) {
 	fileCountPromise.then(function(files) {
 		console.log("There are "+files.length+" files to process");
 		$scope.export = files;
+        // this is for the loading bar
 		$scope.maxValue = $scope.exportSelection.length;
 	}, function(reason) {
 		console.log("There was a ready counting all files to export");
@@ -524,7 +525,7 @@ myApp.controller('ExportCtrl', function($scope, $dialogs, GithubSrvc) {
 myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
     // binding to hide the edit button for non-admin users...
     $scope.import = {};
-    $scope.importSelection = {};
+    $scope.importSelection = [];
     $scope.importStatus = 0;
     $scope.maxValue = 0;
     $scope.processingPostNr = 0;
@@ -536,6 +537,10 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
         r.onloadend = function(e){
             var data = e.target.result;
             var zip = new JSZip(data);
+            for(var i=0; i<zip.files.length; i++) {
+                console.log(zip.files[0].name);
+                //$scope.import[zip.files[i].name] =
+            }
             $scope.import = zip.files;
             $scope.$apply()
         }
@@ -543,9 +548,7 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
     }
 
     $scope.selectAllImport = function() {
-        console.log($scope.import);
         $scope.importSelection = $scope.import;
-        $scope.$apply();
     }
     $scope.unselectAllImport = function() {
         $scope.importSelection = [];
