@@ -540,16 +540,13 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
         r.onloadend = function(e){
             var data = e.target.result;
             var zip = new JSZip(data);
-            var i = 0;
             for(var file in zip.files) {
                 var fileObj = zip.files[file];
                 var isDir = endsWith(fileObj.name, "/");
                 if(!isDir) {
-                    importTemp[i] = fileObj.name;
-                    i++;
+                    importTemp[fileObj.name] = fileObj.asText();
                 }
             }
-            console.log(importTemp);
             $scope.import = importTemp;
             $scope.$apply()
         }
@@ -557,9 +554,7 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
     }
 
     $scope.selectAllImport = function() {
-        console.log($scope.import);
         $scope.importSelection = $scope.import;
-        //console.log($scope.importSelection);
     }
     $scope.unselectAllImport = function() {
         $scope.importSelection = [];
