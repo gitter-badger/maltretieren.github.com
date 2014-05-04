@@ -546,7 +546,7 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
                     importTemp[fileObj.name] = fileObj.asText();
                 }
             }
-            $scope.import = importTemp;
+            //$scope.import = importTemp;
             $scope.$apply()
         }
         r.readAsBinaryString(f);
