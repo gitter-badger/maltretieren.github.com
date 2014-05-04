@@ -546,6 +546,7 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
                 }
             }
             //$scope.import = zip.files;
+            console.log($scope.import);
             $scope.$apply()
         }
         r.readAsBinaryString(f);
