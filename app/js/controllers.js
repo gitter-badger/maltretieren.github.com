@@ -532,6 +532,7 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
     $scope.processingPostNr = 0;
     $scope.type = 'info';
 
+    var importValue = [];
     $scope.add = function(){
         var f = document.getElementById('file').files[0],
             r = new FileReader();
@@ -546,6 +547,7 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
                 var isDir = endsWith(fileObj.name, "/");
                 if(!isDir) {
                     importTemp[i] = fileObj.name;
+                    importValue[fileObj.name] = fileObj.asText();
                     i++;
                 }
             }
@@ -581,7 +583,7 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
         var importObject = {};
         for(var i=0; i<$scope.importSelection.length;i++) {
             var key = $scope.importSelection[i];
-            var value = $scope.import[$scope.importSelection[i]];
+            var value = importValue[$scope.importSelection[i]];
             //importObject[key] = value;
             console.log(key);
             console.log(value);
