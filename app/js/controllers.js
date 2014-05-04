@@ -541,7 +541,7 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
             for(var file in zip.files) {
                 var fileObj = zip.files[file];
                 var isDir = endsWith(fileObj.name, "/");
-                if(isDir) {
+                if(!isDir) {
                     $scope.import[fileObj.name] = fileObj.asText();
                 }
                 console.log();
