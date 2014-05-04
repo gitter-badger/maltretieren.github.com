@@ -540,7 +540,7 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
             console.log(Object.keys(zip.files).length);
             for(var file in zip.files) {
                 var fileObj = zip.files[file];
-                console.log(endsWith(fileObj, "/"));
+                console.log(endsWith(fileObj.name, "/"));
                 console.log(fileObj.name);
                 //console.log(fileObj.asText());
                 //$scope.import[zip.files[i].name] =
