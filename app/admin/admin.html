@@ -32,7 +32,7 @@ comments: false
 					<td>
 						<!-- http://stackoverflow.com/questions/14514461/how-can-angularjs-bind-to-list-of-checkbox-values -->
                         <!-- https://github.com/vitalets/checklist-model -->
-						<input type="checkbox" id="{{key}}" value="{{value}}" check-list='exportSelection'/>
+						<input type="checkbox" value="{{value}}" check-list='exportSelection'/>
 					</td>
 				</tr>
 			</table>
@@ -52,7 +52,7 @@ comments: false
 					<div ng-click="showContent(value)">{{value}}</div>
 				</td>
                 <td>
-                    <input type="checkbox" id="{{key}}" value="{{value}}" check-list='importSelection'/>
+                    <input type="checkbox" value="{{value}}" check-list='importSelection'/>
                 </td>
             </tr>
         </table>
