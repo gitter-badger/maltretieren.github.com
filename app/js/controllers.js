@@ -583,7 +583,7 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
             var key = $scope.importSelection[i];
             var value = $scope.import[$scope.importSelection[i]];
             //importObject[key] = value;
-            console.log($scope.importSelection[i]);
+            console.log(key);
         }
 
         //var showMessage = false;
