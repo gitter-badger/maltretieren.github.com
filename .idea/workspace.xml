@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/templates/2014-01-01-edit-template.md" afterPath="$PROJECT_DIR$/_posts/templates/2014-01-01-edit-template.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2014-02-08-powering-the-pi.md" afterPath="$PROJECT_DIR$/_posts/2014-02-08-powering-the-pi.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2014-02-19-findings.md" afterPath="$PROJECT_DIR$/_posts/2014-02-19-findings.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2014-02-27-ssh.md" afterPath="$PROJECT_DIR$/_posts/2014-02-27-ssh.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="526" column="30" selection-start="18145" selection-end="18145" vertical-scroll-proportion="0.0" vertical-offset="7814" max-vertical-offset="10260">
+            <state line="545" column="35" selection-start="18691" selection-end="18691" vertical-scroll-proportion="0.40133038" vertical-offset="7994" max-vertical-offset="10275">
               <folding />
             </state>
           </provider>
@@ -43,19 +40,19 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="405">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2014-02-19-findings.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="2014-02-19-findings.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2014-02-19-findings.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="436">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="375">
               <folding />
             </state>
           </provider>
@@ -73,12 +70,8 @@
       <file leaf-file-name="admin.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="51" selection-start="1975" selection-end="1975" vertical-scroll-proportion="-9.666667" vertical-offset="503" max-vertical-offset="975">
-              <folding>
-                <element signature="n#style#0;n#progressbar#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#progressbar#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
+            <state line="49" column="51" selection-start="1975" selection-end="1975" vertical-scroll-proportion="0.0" vertical-offset="503" max-vertical-offset="975">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -199,7 +192,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -362,6 +354,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -376,13 +369,13 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../node-github" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="86" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="850" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="935" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="850" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="93" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="88" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
   </component>
@@ -403,6 +396,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -411,14 +412,6 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -550,9 +543,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/fork.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="241" selection-start="1450" selection-end="1450" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1245">
-          <folding />
-        </state>
+        <state line="29" column="241" selection-start="1450" selection-end="1450" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1245" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
@@ -619,25 +610,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="51" selection-start="1975" selection-end="1975" vertical-scroll-proportion="-9.666667" vertical-offset="503" max-vertical-offset="975">
-          <folding>
-            <element signature="n#style#0;n#progressbar#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#progressbar#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
+        <state line="49" column="51" selection-start="1975" selection-end="1975" vertical-scroll-proportion="0.0" vertical-offset="503" max-vertical-offset="975">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="229" column="59" selection-start="8663" selection-end="8663" vertical-scroll-proportion="0.0" vertical-offset="4500" max-vertical-offset="8430">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="526" column="30" selection-start="18145" selection-end="18145" vertical-scroll-proportion="0.0" vertical-offset="7814" max-vertical-offset="10260">
           <folding />
         </state>
       </provider>
@@ -658,6 +638,13 @@
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="436">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="545" column="35" selection-start="18691" selection-end="18691" vertical-scroll-proportion="0.40133038" vertical-offset="7994" max-vertical-offset="10275">
           <folding />
         </state>
       </provider>
