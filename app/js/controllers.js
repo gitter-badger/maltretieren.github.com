@@ -33,9 +33,9 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
 
     $scope.quantity = 5;
     $scope.sortorder = 'created_at';
-	$scope.deleteComment = function(obj) {
-		console.log(obj);
-		var dataValue = obj.id;
+	$scope.deleteComment = function(event) {
+		console.log(event);
+		var dataValue = event.target.id;
 		console.log(dataValue);
 	}
 	
