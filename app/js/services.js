@@ -556,15 +556,3 @@ myApp.service("StyleSwitcher", function () {
 	}}
 });
 
-/**
-*	This controller unlocks/lock admin functionality
-*/
-myApp.service("AdminSrvc", function($scope, UserModel) {
-	// binding to hide the edit button for non-admin users...
-	var user = UserModel.getUser();
-	if(user !== null) {
-		return UserModel.getUser().isAdmin;
-	} else {
-		return false;
-	}
-});

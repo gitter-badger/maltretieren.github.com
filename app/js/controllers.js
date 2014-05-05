@@ -9,7 +9,7 @@
 /**
  * Receive a complete list of all comments
  */
-myApp.controller("CommentsCtrl",function ($scope, $http, AdminSrvc) {
+myApp.controller("CommentsCtrl",function ($scope, $http) {
 	
 	var commentsUrl = config.keenio.comments_url;
 	if(commentsUrl==='') {
@@ -451,6 +451,19 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, $timeout, toaster
 		toaster.pop('success', title, text, 5000, 'trustedHtml');
 		$scope.$apply();
     };
+});
+
+/**
+*	This controller unlocks/lock admin functionality
+*/
+myApp.controller('AdminCtrl', function($scope, UserModel) {
+	// binding to hide the edit button for non-admin users...
+	var user = UserModel.getUser();
+	if(user !== null) {
+		$scope.isAdmin = UserModel.getUser().isAdmin;
+	} else {
+		$scope.isAdmin = false;
+	}
 });
 
 /**
