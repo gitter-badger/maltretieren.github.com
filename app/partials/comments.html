@@ -18,7 +18,7 @@
 					{{comment.message}}
 				</td>
 				<td class="col-sm-1" style="border-top: none;">
-					<button ng-click="deleteComment('{{comment.keen.timestamp}}')" class="btn btn-danger btn-small" type="button" >Delete</button>
+					<button ng-click="deleteComment(this.id)" id="{{comment.keen.timestamp}}" class="btn btn-danger btn-small" type="button" >Delete</button>
 				</td>
 			</tr>
 		</tbody>
