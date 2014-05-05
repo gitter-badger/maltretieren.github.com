@@ -609,7 +609,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
 
     var path = ParameterSrvc.urlParams['path'];
     var url = ParameterSrvc.urlParams['url'];
-	var isNewContent = false;
+	$scope.isNewContent = false;
 	
     if(typeof(path) != 'undefined' && typeof(url) !='undefined') {
         var splif = path.split("-");
@@ -623,7 +623,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
             }
         }
     } else {
-		isNewContent = true;
+		$scope.isNewContent = true;
         console.log("new content...")
         path = "_posts/templates/2014-01-01-edit-template.md";
     }
