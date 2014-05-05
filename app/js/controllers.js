@@ -9,7 +9,7 @@
 /**
  * Receive a complete list of all comments
  */
-myApp.controller("CommentsCtrl",function ($scope, $http) {
+myApp.controller("CommentsCtrl",function ($scope, $http, AdminSrvc) {
 	
 	var commentsUrl = config.keenio.comments_url;
 	if(commentsUrl==='') {
@@ -33,9 +33,11 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
 
     $scope.quantity = 5;
     $scope.sortorder = 'created_at';
+	$scope.isAdmin = AdminSrvc.isAdmin();
 	$scope.deleteComment = function(event) {
 		var id = event.target.id;
 		console.log("Delete: "+id);
+		//https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/events/comments?api_key=MASTERKEY&filters=<your_filters_here>
 	}
 	
     // hacky way to determine if it is the frontpage
@@ -450,19 +452,6 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, $timeout, toaster
 		toaster.pop('success', title, text, 5000, 'trustedHtml');
 		$scope.$apply();
     };
-});
-
-/**
-*	This controller unlocks/lock admin functionality
-*/
-myApp.controller('AdminCtrl', function($scope, UserModel) {
-	// binding to hide the edit button for non-admin users...
-	var user = UserModel.getUser();
-	if(user !== null) {
-		$scope.isAdmin = UserModel.getUser().isAdmin;
-	} else {
-		$scope.isAdmin = false;
-	}
 });
 
 /**
