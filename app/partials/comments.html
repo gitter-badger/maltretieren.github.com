@@ -18,7 +18,7 @@
 					{{comment.message}}
 				</td>
 				<td class="col-sm-1" style="border-top: none;">
-					<button ng-click="deleteComment(event.id)" data="{{comment.keen.id}}" class="btn btn-danger btn-small" type="button" >Delete</button>
+					<button ng-click="deleteComment({% raw %}{comment.keen.id}}{% endraw %})" class="btn btn-danger btn-small" type="button" >Delete</button>
 				</td>
 			</tr>
 		</tbody>
