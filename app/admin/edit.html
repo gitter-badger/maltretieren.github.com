@@ -17,7 +17,8 @@ comments: false
         </div>
 		<div class="clearfix"></div>
         <div>
-            <form class="form-horizontal" role="form">
+		<div class="col-sm-12">
+            <form class="form" role="form">
 				<div class="row">
 					<div class="col-xs-6 col-md-6 form-group">
 						<div class="input-group">
@@ -32,6 +33,9 @@ comments: false
 						</div>
 					</div>
 				</div>
+			</form>
+		</div>
+			<form class="form" role="form">
                 <div class="form-group col-md-4">
                       <label for="date" class="control-label">Date</label>
                       <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="options.date" is-open="opened" min="minDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" id="date"/>
