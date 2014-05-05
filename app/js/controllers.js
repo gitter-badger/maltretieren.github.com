@@ -34,9 +34,8 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
     $scope.quantity = 5;
     $scope.sortorder = 'created_at';
 	$scope.deleteComment = function(event) {
-		console.log(event);
-		var dataValue = event.target.id;
-		console.log(dataValue);
+		var id = event.target.id;
+		console.log("Delete: "+id);
 	}
 	
     // hacky way to determine if it is the frontpage
