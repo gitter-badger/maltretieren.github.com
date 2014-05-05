@@ -17,6 +17,9 @@
 				<td style="border-top: none;">
 					{{comment.message}}
 				</td>
+				<td>
+					<button ng-hide="!isAdmin" ng-click="delete()" class="btn btn-danger btn-middle" type="button">Delete</button>
+				</td>
 			</tr>
 		</tbody>
 	</table>
