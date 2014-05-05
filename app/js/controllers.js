@@ -9,7 +9,7 @@
 /**
  * Receive a complete list of all comments
  */
-myApp.controller("CommentsCtrl",function ($scope, $http, AdminSrvc) {
+myApp.controller("CommentsCtrl", function ($scope, $http, AdminSrvc) {
 	
 	var commentsUrl = config.keenio.comments_url;
 	if(commentsUrl==='') {
