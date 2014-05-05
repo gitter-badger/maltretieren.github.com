@@ -9,7 +9,7 @@
 /**
  * Receive a complete list of all comments
  */
-myApp.controller("CommentsCtrl", function ($scope, $http, AdminSrvc) {
+myApp.controller("CommentsCtrl",function ($scope, $http) {
 	
 	var commentsUrl = config.keenio.comments_url;
 	if(commentsUrl==='') {
@@ -33,7 +33,6 @@ myApp.controller("CommentsCtrl", function ($scope, $http, AdminSrvc) {
 
     $scope.quantity = 5;
     $scope.sortorder = 'created_at';
-	$scope.isAdmin = AdminSrvc.isAdmin();
 	$scope.deleteComment = function(event) {
 		var id = event.target.id;
 		console.log("Delete: "+id);
