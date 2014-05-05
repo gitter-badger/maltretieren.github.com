@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/postsFrontpage.html" afterPath="$PROJECT_DIR$/app/partials/postsFrontpage.html" />
-    </list>
+    <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="" />
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -78,7 +76,7 @@
       <file leaf-file-name="postsFrontpage.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/partials/postsFrontpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="10" selection-start="328" selection-end="328" vertical-scroll-proportion="0.15817223" vertical-offset="0" max-vertical-offset="615">
+            <state line="20" column="18" selection-start="910" selection-end="910" vertical-scroll-proportion="0.4463972" vertical-offset="46" max-vertical-offset="615">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -622,7 +620,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/partials/postsFrontpage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="10" selection-start="328" selection-end="328" vertical-scroll-proportion="0.15817223" vertical-offset="0" max-vertical-offset="615">
+        <state line="20" column="18" selection-start="910" selection-end="910" vertical-scroll-proportion="0.4463972" vertical-offset="46" max-vertical-offset="615">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#!!top" expanded="true" />
