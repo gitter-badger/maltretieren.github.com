@@ -54,7 +54,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
 
 		var success = function() {
 			toaster.pop('success', "Comment saved", '<ul><li>Comment was saved and will be available shortly</li></ul>', 5000, 'trustedHtml');
-			$timeout(getComments, 5000);
+			$timeout(getComments, 10000);
 			$scope.$apply();
 		}
 		var error = function() {
