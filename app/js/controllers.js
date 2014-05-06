@@ -9,7 +9,7 @@
 /**
  * Receive a complete list of all comments
  */
-myApp.controller("CommentsCtrl",function ($scope, $http) {
+myApp.controller("CommentsCtrl",function ($scope, $http, toaster) {
 	
 	var commentsUrl = config.keenio.comments_url;
 	if(commentsUrl==='') {
@@ -51,6 +51,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
 
 		var success = function() {
 			console.log("Succeessssfully sent comment");
+			toaster.pop('success', "Comment saved", '<ul><li>Comment was saved and will be available shortly</li></ul>', 5000, 'trustedHtml');
 		}
 		var error = function() {
 			console.log("Error sending comment");
