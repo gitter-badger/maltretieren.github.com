@@ -675,7 +675,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
         console.log("edit existing content");
         console.log("should check, if the path has changed... if yes, it should post/delete or move/commit")
 
-        return GithubSrvc.commit(content, "_posts/"+commitPath);
+        return GithubSrvc.commit(content, "_posts/"+$scope.commitPath);
     }).then(function() {
         toaster.pop('success', "Post saved", '<ul><li>The post was successfully saved. You will be redirected to the post in around 10 seconds...</li></ul>', 5000, 'trustedHtml');
         // redirect to the frontpage after 10 seconds
