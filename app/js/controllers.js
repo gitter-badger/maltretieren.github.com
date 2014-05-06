@@ -679,10 +679,9 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
 
         return GithubSrvc.commit(content, "_posts/"+commitPath);
     }).then(function() {
-        console.log("post saved.... wait for 5 seconds and redirect to the site...")
+        toaster.pop('success', "Post saved", '<ul><li>The post was successfully saved. You will be redirected to the post in around 10 seconds...</li></ul>', 5000, 'trustedHtml');
+		$scope.$apply();
         $timeout(function(){
-            toaster.pop('success', "Post saved", '<ul><li>The post was successfully saved. You will be redirected to the post in around 10 seconds...</li></ul>', 5000, 'trustedHtml');
-			$scope.$apply();
 			if(typeof(url) !='undefined') {
                 window.location = url;
             } else {
