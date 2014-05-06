@@ -50,11 +50,10 @@ myApp.controller("CommentsCtrl",function ($scope, $http, toaster) {
 		} 
 
 		var success = function() {
-			console.log("Succeessssfully sent comment");
 			toaster.pop('success', "Comment saved", '<ul><li>Comment was saved and will be available shortly</li></ul>', 5000, 'trustedHtml');
 		}
 		var error = function() {
-			console.log("Error sending comment");
+			toaster.pop('error', "Comment failed", '<ul><li>There was an error while saving the comment</li></ul>', 5000, 'trustedHtml');
 		}
 		Keen.addEvent("comments", data, success);
 	}
