@@ -47,7 +47,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
 			"message": $scope.commentText,
 			"pageTitle": $scope.pageTitle,
 			"pageUrl": $scope.pageUrl
-		}
+		} 
 
 		Keen.addEvent("comments", data);
 	}
