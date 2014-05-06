@@ -662,12 +662,13 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
 
     // promise to save...
     var promise = GithubSrvc.editContent(path);
+	var commitPath = "";
     promise.then(function(content) {
         var commitPath = "";
         if($scope.options.date instanceof Date) {
-            commitPath = "_posts/"+$scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replace(/ /g,"-")+".md";
+            commitPath = $scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replace(/ /g,"-")+".md";
         } else {
-            commitPath = "_posts/"+$scope.options.date+"-"+$scope.options.title.replace(/ /g,"-")+".md";
+            commitPath = $scope.options.date+"-"+$scope.options.title.replace(/ /g,"-")+".md";
         }
 
         //var path = "_posts/"+$scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replaceAll(" ","-")+".md";
@@ -676,13 +677,14 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
         console.log("path"+path);
         console.log("content"+content);
 
-        return GithubSrvc.commit(content, commitPath);
+        return GithubSrvc.commit(content, "_posts/"+commitPath);
     }).then(function() {
         console.log("post saved.... wait for 5 seconds and redirect to the site...")
         $timeout(function(){
             if(typeof(url) !='undefined') {
                 window.location = url;
             } else {
+				window.location = commitPath;
                 console.log("post saved, there is no url provided to redirect - should be constructed from the commit path...")
             }
         }, 8000);
