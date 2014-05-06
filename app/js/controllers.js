@@ -9,7 +9,7 @@
 /**
  * Receive a complete list of all comments
  */
-myApp.controller("CommentsCtrl",function ($scope, $http, toaster) {
+myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
 	
 	var commentsUrl = config.keenio.comments_url;
 	if(commentsUrl==='') {
@@ -18,7 +18,8 @@ myApp.controller("CommentsCtrl",function ($scope, $http, toaster) {
 		$scope.commentsToggle = true;
 	}
 
-    $http({method: 'GET', url: commentsUrl})
+    var getComments = function() {
+		$http({method: 'GET', url: commentsUrl})
         .success(function(data, status, headers, config) {
             // this callback will be called asynchronously
             // when the response is available
@@ -30,6 +31,8 @@ myApp.controller("CommentsCtrl",function ($scope, $http, toaster) {
         .error(function(data, status, headers, config) {
             alert("Error while getting comments from keen.io: "+status)
         });
+	}
+	getComments();
 
     $scope.quantity = 5;
     $scope.sortorder = 'created_at';
@@ -56,6 +59,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, toaster) {
 		var error = function() {
 			toaster.pop('error', "Comment failed", '<ul><li>There was an error while saving the comment</li></ul>', 5000, 'trustedHtml');
 			$scope.$apply();
+			$timeout(getComments, 5000);
 		}
 		Keen.addEvent("comments", data, success);
 	}
