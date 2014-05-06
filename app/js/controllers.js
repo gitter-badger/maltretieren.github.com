@@ -40,10 +40,14 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
 	}
 	$scope.submit = function() {
 		console.log($scope.userName);
+		console.log($scope.userMail);
+		console.log($scope.commentText);
+		console.log($scope.pageTitle);
+		console.log($scope.pageUrl);
 	}
 	$scope.userName = "";
 	$scope.userMail = "";
-	$scope.comment = "";
+	$scope.commentText = "";
 
     // hacky way to determine if it is the frontpage
     // -> on frontpage show all comments
