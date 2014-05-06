@@ -2,11 +2,10 @@
 
 layout: post
 categories: 
-  - frontpage
-tagline: with github.js
+  - template
+tagline: small letters after the title
 tags: 
-  - development
-  - jekyll
+  - example
 published: true
 
 ---
