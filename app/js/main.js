@@ -44,7 +44,7 @@
         .script( "/app/js/filters.js" )
         .script( "/app/js/directives.js" )
         .script( "assets/js/raty/jquery.raty.js ")
-        .script( "assets/js/keen-2.1.0/keenio.js" )
+        .script( "assets/js/keenio-2.1.0/keenio.js" )
 		.wait(function(){
 			// this is needed for manual bootstrapping
 			// angularjs, otherwise it's called wrong time
