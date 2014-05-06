@@ -631,7 +631,7 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
     }
 });
 
-myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, UserModel, ParameterSrvc, GithubSrvc) {
+myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, toaster, UserModel, ParameterSrvc, GithubSrvc) {
     var scope = $scope;
 
     $scope.options = {}
@@ -681,7 +681,9 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
     }).then(function() {
         console.log("post saved.... wait for 5 seconds and redirect to the site...")
         $timeout(function(){
-            if(typeof(url) !='undefined') {
+            toaster.pop('success', "Post saved", '<ul><li>The post was successfully saved. You will be redirected to the post in around 10 seconds...</li></ul>', 5000, 'trustedHtml');
+			$scope.$apply();
+			if(typeof(url) !='undefined') {
                 window.location = url;
             } else {
 				window.location = "http://maltretieren.github.io/"+commitPath;
