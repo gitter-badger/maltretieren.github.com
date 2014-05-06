@@ -42,8 +42,6 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
 		console.log($scope.userName);
 		console.log($scope.userMail);
 		console.log($scope.commentText);
-		console.log($scope.pageTitle);
-		console.log($scope.pageUrl);
 	}
 	$scope.userName = "";
 	$scope.userMail = "";
