@@ -1,4 +1,4 @@
-var form = document.getElementById("comment");
+//var form = document.getElementById("comment");
 
 if(form !== null) {
     form.onsubmit = function (e) {
