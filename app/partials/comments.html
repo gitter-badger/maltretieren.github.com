@@ -12,7 +12,7 @@
 			<tr ng:repeat="comment in comments.entries | filter: { pageTitle: filterString }| orderObjectBy:'timestamp':true | limitTo:quantity">
 				<td class="col-sm-2" style="border-top: none;">
 					<a href="{{comment.pageUrl}}">{{comment.pageTitle}}</a><br>
-					<span style="font-size:0.8em;">By: <a href="mailto:{{email}}">{{comment.name}}</a> on {{comment.keen.timestamp | date:'dd MMM yyyy' }}</span>
+					<span style="font-size:0.8em;">By: <a href="mailto:{{comment.email}}">{{comment.name}}</a> on {{comment.keen.timestamp | date:'dd MMM yyyy' }}</span>
 				</td>
 				<td class="col-sm-9" style="border-top: none;">
 					{{comment.message}}
