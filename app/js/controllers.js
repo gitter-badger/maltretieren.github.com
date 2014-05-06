@@ -42,7 +42,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
 	// comments form
 	$scope.submit = function() {
 		var data = {
-			"name": $scope.userName),
+			"name": $scope.userName,
 			"email" $scope.userMail,
 			"message": $scope.commentText,
 			"pageTitle": $scope.pageTitle,
