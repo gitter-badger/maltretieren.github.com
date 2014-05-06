@@ -744,7 +744,7 @@ myApp.controller('RatingCtrl', function($scope) {
     var success = function (data) {
         alert("success");
     }
-    for(i=0;i<ratyElements.length;i++) {
+    for(var i=0;i<ratyElements.length;i++) {
         $(ratyElements[i]).raty({
             path: 'assets/js/raty/images',
             click: function(score, evt) {
