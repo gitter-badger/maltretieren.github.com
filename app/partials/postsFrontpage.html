@@ -20,7 +20,7 @@
 				</thead>
 				<tbody class="list">
 				<tr ng:repeat="post in posts.entries |orderBy:orderByField:reverseSort | filter:searchText">
-					<td class="date">{{ post.Date | date:'dd MMM yyyy' }}<img width="150px" src="{{post.Preview}}" ng-show="post.Preview"></td>
+					<td class="date" style="min-width: 100px;">{{ post.Date | date:'dd MMM yyyy' }}<img width="150px" src="{{post.Preview}}" ng-show="post.Preview"></td>
 					<td class="title"><a href="{{ post.Url }}">{{ post.Title }}</a></td>
 					<td class="tags" style="min-width: 100px;">
 							<span ng-repeat="tag in post.Tags" style="margin-right:5px;margin-bottom:5px" class="label label-default">{{tag}}</span>
