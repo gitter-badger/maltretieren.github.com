@@ -696,8 +696,11 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
         dlg.result.then(function(btn){
             var deletePromise = GithubSrvc.deleteContent(path);
 			deletePromise.then(function() {
-				toaster.pop('error', "Post deleted", '<ul><li>The post was successfully deleted</li></ul>', 5000, 'trustedHtml');
+				toaster.pop('error', "Post deleted", '<ul><li>The post was successfully deleted. You will be redirected to the frontpage shortly...</li></ul>', 5000, 'trustedHtml');
 				$scope.$apply();
+				$timeout(function(){
+					window.location = config.github.redirection_url;
+				}, 5000);
 			});
         },function(btn){
             console.log("cancel delete")
