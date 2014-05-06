@@ -1,6 +1,6 @@
 <div id="entry-list">
     <div class="clearfix">
-			<table class="table table-striped" style="white-space: wrap;" >
+			<table class="table table-striped" style="word-wrap: normal;word-break:normal;" >
 				<thead>
 				<tr>
 					<th style="width:20%;">
@@ -23,7 +23,7 @@
 					<td class="date">{{ post.Date | date:'dd MMM yyyy' }}<img width="150px" src="{{post.Preview}}" ng-show="post.Preview"></td>
 					<td class="title"> <a href="{{ post.Url }}">{{ post.Title }}</a></td>
 					<td class="tags" >
-							<span ng-repeat="tag in post.Tags" style="margin-right:5px;margin-bottom:5px" class="label label-default">{{tag}}</span>&nbsp;
+							<span ng-repeat="tag in post.Tags" style="margin-right:5px;margin-bottom:5px" class="label label-default">{{tag}}</span> &nbsp;
 					</td>
 				</tr>
 				</tbody>
