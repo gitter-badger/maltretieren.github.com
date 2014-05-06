@@ -679,12 +679,12 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
     }).then(function() {
         toaster.pop('success', "Post saved", '<ul><li>The post was successfully saved. You will be redirected to the post in around 10 seconds...</li></ul>', 5000, 'trustedHtml');
         // redirect to the frontpage after 10 seconds
-		console.log($scope.commitPath);
+		console.log($scope.commitPath.replaceAll("-","/");
 		$timeout(function(){
 			if(typeof(url) !='undefined') {
                 window.location = url;
             } else {
-				window.location = config.github.redirection_url+"/"+$scope.commitPath;
+				window.location = config.github.redirection_url+"/frontpage/"+$scope.commitPath;
             }
         }, 10000);
     });
