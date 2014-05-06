@@ -674,8 +674,8 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
         //var path = "_posts/"+$scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replaceAll(" ","-")+".md";
         console.log("edit existing content");
         console.log("should check, if the path has changed... if yes, it should post/delete or move/commit")
-        console.log("path"+path);
-        console.log("content"+content);
+        console.log("path: "+path);
+        //console.log("content"+content);
 
         return GithubSrvc.commit(content, "_posts/"+commitPath);
     }).then(function() {
