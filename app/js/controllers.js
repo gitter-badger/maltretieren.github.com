@@ -88,7 +88,7 @@ myApp.controller("TableCtrl",function ($scope, $http) {
 	});
 
     $scope.orderByField = 'Date';
-    $scope.reverseSort = false;
+    $scope.reverseSort = true;
     $scope.searchText = "";
 });
 
