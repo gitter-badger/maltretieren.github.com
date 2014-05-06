@@ -27,6 +27,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
             $scope.comments = {
                 entries: data.result
             }
+			$scope.$apply();
         })
         .error(function(data, status, headers, config) {
             alert("Error while getting comments from keen.io: "+status)
