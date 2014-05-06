@@ -42,11 +42,11 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
 	// comments form
 	$scope.submit = function() {
 		var data = {
-			"name": $scope.userName);
-			"email" $scope.userMail);
-			"message": $scope.commentText);
-			"pageTitle": $scope.pageTitle);
-			"pageUrl": $scope.pageUrl);
+			"name": $scope.userName),
+			"email" $scope.userMail,
+			"message": $scope.commentText,
+			"pageTitle": $scope.pageTitle,
+			"pageUrl": $scope.pageUrl
 		}
 
 		Keen.addEvent("comments", data);
