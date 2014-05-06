@@ -85,7 +85,7 @@ Inspired by https://github.com/angular/angular-seed & https://github.com/plusjad
 	- (optional) dependencies to markdown.js and to-markdown.js for the preview functionality
 - [JSO](https://github.com/andreassolberg/jso)
     - Javascript OAuth Library
-
+ 
 ### External Services
 - [GitHub](https://github.com/)
     - you know it...
