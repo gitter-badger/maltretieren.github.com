@@ -12,6 +12,7 @@
 myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
 	
 	var commentsUrl = config.keenio.comments_url;
+	// disable comments if there is no config for it...
 	if(commentsUrl==='') {
 		$scope.commentsToggle = false;
 	} else {
@@ -68,7 +69,8 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
 	$scope.commentText = "";
 
     // hacky way to determine if it is the frontpage
-    // -> on frontpage show all comments
+    // -> on frontpage show all comments, on other pages
+	// filter only comments matching the pageTitle
     var parts = window.location.href.split("/");
     if(parts.length != 4) {
         $scope.filterString = document.title;
@@ -195,7 +197,6 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, Par
 		if($scope.githubLogin) {
 			GithubSrvc.requestCode();
 		} else {
-			//var dlg = $dialogs.confirm('This app is not configured for the github oauth login workflow. Please provide your username/password');
 			var dlg = $dialogs.create('/app/partials/githubLogin.html','GithubModalCtrl',{},{key: false});
 			dlg.result.then(function(name, password){
 				//$scope.name = name;
@@ -554,7 +555,7 @@ myApp.controller('ExportCtrl', function($scope, $dialogs, GithubSrvc) {
 });
 
 /**
- *	This controller exports/imports post as a zip
+ *	This controller exports/imports posts as a zip
  */
 myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
     // binding to hide the edit button for non-admin users...
@@ -618,8 +619,6 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
             var key = $scope.importSelection[i];
             var value = importValue[$scope.importSelection[i]];
             importObject[key] = value;
-            //console.log(key); 
-            //console.log(value);
         }
 
         var showMessage = false;
