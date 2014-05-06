@@ -18,7 +18,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
 		$scope.commentsToggle = true;
 	}
 
-    var getComments = function() {
+    $scope.getComments = function() {
 		$http({method: 'GET', url: commentsUrl})
         .success(function(data, status, headers, config) {
             // this callback will be called asynchronously
@@ -32,7 +32,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
             //alert("Error while getting comments from keen.io: "+status)
         });
 	}
-	getComments();
+	$scope.getComments();
 
     $scope.quantity = 5;
     $scope.sortorder = 'created_at';
