@@ -697,7 +697,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
             var deletePromise = GithubSrvc.deleteContent(path);
 			deletePromise.then(function() {
 				toaster.pop('error', "Post deleted", '<ul><li>The post was successfully deleted</li></ul>', 5000, 'trustedHtml');
-			}
+			});
         },function(btn){
             console.log("cancel delete")
             //$scope.confirmed = 'Shame on you for not thinking this is awesome!';
