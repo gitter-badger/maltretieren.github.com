@@ -14,9 +14,7 @@
                 </th>
                 <th style="width:50%"><span class="sort" data-sort="title">Title</span></th>
                 <th style="width:30%"><span class="sort" data-sort="tags">
-					<div class="container-fluid">
-						<input type="text" style="height: 25px;font-size: 14px;line-height: 25px;" class="search form-control" placeholder="Search" ng-model="searchText"/></span>
-					</div>
+					<input type="text" style="height: 25px;font-size: 14px;line-height: 25px;" class="search form-control" placeholder="Search" ng-model="searchText"/></span>
 				</th>
             </tr>
             </thead>
@@ -25,7 +23,7 @@
                 <td class="date">{{ post.Date | date:'dd MMM yyyy' }}<img width="150px" src="{{post.Preview}}" ng-show="post.Preview"></td>
                 <td class="title"><a href="{{ post.Url }}">{{ post.Title }}</a></td>
                 <td class="tags">
-					<span ng-repeat="tag in post.Tags" style="margin-right:5px;margin-bottom:5px" class="label label-default">
+					<span ng-repeat="tag in post.Tags" style="margin-right:5px;margin-bottom:5px" class="label label-default container-fluid">
 						{{ tag }}&nbsp;
 					</span>
 				</td>
