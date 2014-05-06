@@ -38,7 +38,10 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
 		console.log("Delete: "+id);
 		//https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/events/comments?api_key=MASTERKEY&filters=<your_filters_here>
 	}
-	
+	$scope.submit = function() {
+		console.log("submit comment");
+	}
+
     // hacky way to determine if it is the frontpage
     // -> on frontpage show all comments
     var parts = window.location.href.split("/");

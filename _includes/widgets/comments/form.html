@@ -1,7 +1,7 @@
 <legend><span class="glyphicon glyphicon-edit" style="font-size:0.8em"></span> Drop me a line!</legend>
 <div class="row">
     <div class="col-sm-12 contact-form">
-        <form id="comment" class="form" role="form">
+        <form ng-controller="CommentsCtrl" id="comment" class="form" role="form">
             <div class="row">
                 <div class="col-xs-6 col-md-6 form-group">
                     <div class="input-group">
@@ -25,7 +25,7 @@
             <br />
             <div class="row">
                 <div class="col-xs-12 col-md-12 form-group">
-                    <button class="btn btn-primary pull-right" type="submit">Submit</button>
+                    <button class="btn btn-primary pull-right" ng-click="submitComment()">Submit</button>
                 </div>
             </div>
         </form>
