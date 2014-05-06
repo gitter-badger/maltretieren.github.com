@@ -49,7 +49,13 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
 			"pageUrl": $scope.pageUrl
 		} 
 
-		Keen.addEvent("comments", data);
+		var success = function() {
+			console.log("Succeessssfully sent comment");
+		}
+		var error = function() {
+			console.log("Error sending comment");
+		}
+		Keen.addEvent("comments", data, success);
 	}
 	$scope.userName = "";
 	$scope.userMail = "";
