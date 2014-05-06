@@ -738,3 +738,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
 
     $scope.format = 'yyyy-MM-dd';
 });
+
+myApp.controller('RatingCtrl', function($scope) {
+    console.log("rating ctrl")
+});
