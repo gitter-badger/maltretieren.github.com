@@ -50,8 +50,6 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
 	$scope.userName = "";
 	$scope.userMail = "";
 	$scope.commentText = "";
-	$scope.pageTitle = "";
-	$scope.pageUrl = "";
 
     // hacky way to determine if it is the frontpage
     // -> on frontpage show all comments

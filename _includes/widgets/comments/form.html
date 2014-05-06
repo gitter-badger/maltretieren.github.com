@@ -19,8 +19,8 @@
             <div class="input-group" >
                 <span class="input-group-addon" style="vertical-align: top"><span class="glyphicon glyphicon-comment" style="margin-top:3px"></span></span>
                 <textarea class="form-control" id="message" name="message" ng-model="commentText" placeholder="Message" rows="5" required></textarea>
-                <input type="hidden" name="pageTitle" ng-model="pageTitle" value="{{page.title}}">
-                <input type="hidden" name="pageUrl" ng-model="pageUrl" value="{{page.url}}">
+                <input type="hidden" name="pageTitle" ng-model="pageTitle" ng-init="{{page.title}}">
+                <input type="hidden" name="pageUrl" ng-model="pageUrl" ng-init="{{page.url}}">
             </div>
             <br />
             <div class="row">
