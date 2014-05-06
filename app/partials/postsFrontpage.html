@@ -22,7 +22,7 @@
             <tr ng:repeat="post in posts.entries |orderBy:orderByField:reverseSort | filter:searchText">
                 <td class="date">{{ post.Date | date:'dd MMM yyyy' }}<img width="150px" src="{{post.Preview}}" ng-show="post.Preview"></td>
                 <td class="title"><a href="{{ post.Url }}">{{ post.Title }}</a></td>
-                <td class="tags"><input style="margin-right:10px" ng-repeat="tag in post.Tags" class="btn btn-default" type="button" value="{{ tag }}"></td>
+                <td class="tags"><input style="margin-right:10px;margin-bottom:10px" ng-repeat="tag in post.Tags" class="btn btn-default" type="button" value="{{ tag }}"></td>
             </tr>
             </tbody>
         </table>
