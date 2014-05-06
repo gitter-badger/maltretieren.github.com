@@ -1,31 +1,31 @@
 <legend><span class="glyphicon glyphicon-edit" style="font-size:0.8em"></span> Drop me a line!</legend>
-<div class="row">
+<div class="row" ng-controller="CommentsCtrl">
     <div class="col-sm-12 contact-form">
-        <form id="comment" class="form" role="form">
+        <form name="commentForm" class="form" role="form">
             <div class="row">
                 <div class="col-xs-6 col-md-6 form-group">
                     <div class="input-group">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                        <input class="form-control" id="name" name="name" placeholder="Your Name" type="text" required />
+                        <input class="form-control" id="name" name="name" placeholder="Your Name" ng-model="userName" type="text" required />
                     </div>
                 </div>
                 <div class="col-xs-6 col-md-6 form-group">
                     <div class="input-group">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-                        <input class="form-control" id="email" name="email" placeholder="Mail Address" type="email" />
+                        <input class="form-control" id="email" name="email" placeholder="Mail Address" ng-model="userMail" type="email" />
                     </div>
                 </div>
             </div>
             <div class="input-group" >
                 <span class="input-group-addon" style="vertical-align: top"><span class="glyphicon glyphicon-comment" style="margin-top:3px"></span></span>
-                <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5" required></textarea>
-                <input type="hidden" name="pageTitle" value="{{page.title}}">
-                <input type="hidden" name="pageUrl" value="{{page.url}}">
+                <textarea class="form-control" id="message" name="message" ng-model="commentText" placeholder="Message" rows="5" required></textarea>
+                <input type="hidden" name="pageTitle" ng-model="pageTitle" ng-init="pageTitle='{{page.title}}'">
+                <input type="hidden" name="pageUrl" ng-model="pageUrl" ng-init="pageUrl='{{page.url}}'">
             </div>
             <br />
             <div class="row">
                 <div class="col-xs-12 col-md-12 form-group">
-                    <button class="btn btn-primary pull-right" type="submit">Submit</button>
+                    <button ng-disabled="(commentForm.$dirty && commentForm.$invalid) || commentForm.$pristine" class="btn btn-primary pull-right" ng-click="submit()">Submit</button>
                 </div>
             </div>
         </form>

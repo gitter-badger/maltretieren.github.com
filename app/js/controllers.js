@@ -9,16 +9,18 @@
 /**
  * Receive a complete list of all comments
  */
-myApp.controller("CommentsCtrl",function ($scope, $http) {
+myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
 	
 	var commentsUrl = config.keenio.comments_url;
+	// disable comments if there is no config for it...
 	if(commentsUrl==='') {
 		$scope.commentsToggle = false;
 	} else {
 		$scope.commentsToggle = true;
 	}
 
-    $http({method: 'GET', url: commentsUrl})
+    $scope.getComments = function() {
+		$http({method: 'GET', url: commentsUrl})
         .success(function(data, status, headers, config) {
             // this callback will be called asynchronously
             // when the response is available
@@ -28,8 +30,10 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
             }
         })
         .error(function(data, status, headers, config) {
-            alert("Error while getting comments from keen.io: "+status)
+            //alert("Error while getting comments from keen.io: "+status)
         });
+	}
+	$scope.getComments();
 
     $scope.quantity = 5;
     $scope.sortorder = 'created_at';
@@ -39,8 +43,34 @@ myApp.controller("CommentsCtrl",function ($scope, $http) {
 		//https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/events/comments?api_key=MASTERKEY&filters=<your_filters_here>
 	}
 	
+	// comments form
+	$scope.submit = function() {
+		var data = {
+			"name": $scope.userName,
+			"email": $scope.userMail,
+			"message": $scope.commentText,
+			"pageTitle": $scope.pageTitle,
+			"pageUrl": $scope.pageUrl
+		} 
+
+		var success = function() {
+			toaster.pop('success', "Comment saved", '<ul><li>Comment was saved and will be available shortly</li></ul>', 5000, 'trustedHtml');
+			$timeout($scope.getComments, 10000);
+			$scope.$apply();
+		}
+		var error = function() {
+			toaster.pop('error', "Comment failed", '<ul><li>There was an error while saving the comment</li></ul>', 5000, 'trustedHtml');
+			$scope.$apply();
+		}
+		Keen.addEvent("comments", data, success);
+	}
+	$scope.userName = "";
+	$scope.userMail = "";
+	$scope.commentText = "";
+
     // hacky way to determine if it is the frontpage
-    // -> on frontpage show all comments
+    // -> on frontpage show all comments, on other pages
+	// filter only comments matching the pageTitle
     var parts = window.location.href.split("/");
     if(parts.length != 4) {
         $scope.filterString = document.title;
@@ -88,7 +118,7 @@ myApp.controller("TableCtrl",function ($scope, $http) {
 	});
 
     $scope.orderByField = 'Date';
-    $scope.reverseSort = false;
+    $scope.reverseSort = true;
     $scope.searchText = "";
 });
 
@@ -167,7 +197,6 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, Par
 		if($scope.githubLogin) {
 			GithubSrvc.requestCode();
 		} else {
-			//var dlg = $dialogs.confirm('This app is not configured for the github oauth login workflow. Please provide your username/password');
 			var dlg = $dialogs.create('/app/partials/githubLogin.html','GithubModalCtrl',{},{key: false});
 			dlg.result.then(function(name, password){
 				//$scope.name = name;
@@ -526,7 +555,7 @@ myApp.controller('ExportCtrl', function($scope, $dialogs, GithubSrvc) {
 });
 
 /**
- *	This controller exports/imports post as a zip
+ *	This controller exports/imports posts as a zip
  */
 myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
     // binding to hide the edit button for non-admin users...
@@ -590,8 +619,6 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
             var key = $scope.importSelection[i];
             var value = importValue[$scope.importSelection[i]];
             importObject[key] = value;
-            //console.log(key); 
-            //console.log(value);
         }
 
         var showMessage = false;
@@ -604,7 +631,7 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
     }
 });
 
-myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, UserModel, ParameterSrvc, GithubSrvc) {
+myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, toaster, UserModel, ParameterSrvc, GithubSrvc) {
     var scope = $scope;
 
     $scope.options = {}
@@ -635,30 +662,31 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
 
     // promise to save...
     var promise = GithubSrvc.editContent(path);
+	$scope.commitPath = "";
     promise.then(function(content) {
         var commitPath = "";
         if($scope.options.date instanceof Date) {
-            commitPath = "_posts/"+$scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replace(/ /g,"-")+".md";
+            $scope.commitPath = $scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replace(/ /g,"-")+".md";
         } else {
-            commitPath = "_posts/"+$scope.options.date+"-"+$scope.options.title.replace(/ /g,"-")+".md";
+            $scope.commitPath = $scope.options.date+"-"+$scope.options.title.replace(/ /g,"-")+".md";
         }
 
         //var path = "_posts/"+$scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replaceAll(" ","-")+".md";
         console.log("edit existing content");
         console.log("should check, if the path has changed... if yes, it should post/delete or move/commit")
-        console.log("path"+path);
-        console.log("content"+content);
 
-        return GithubSrvc.commit(content, commitPath);
+        return GithubSrvc.commit(content, "_posts/"+$scope.commitPath);
     }).then(function() {
-        console.log("post saved.... wait for 5 seconds and redirect to the site...")
-        $timeout(function(){
-            if(typeof(url) !='undefined') {
+        toaster.pop('success', "Post saved", '<ul><li>The post was successfully saved. You will be redirected to the post in around 10 seconds...</li></ul>', 5000, 'trustedHtml');
+        // redirect to the frontpage after 10 seconds
+		console.log($scope.commitPath.replace("-","/"));
+		$timeout(function(){
+			if(typeof(url) !='undefined') {
                 window.location = url;
             } else {
-                console.log("post saved, there is no url provided to redirect - should be constructed from the commit path...")
+				window.location = config.github.redirection_url+"/frontpage/"+$scope.commitPath.replace("-","/");
             }
-        }, 8000);
+        }, 10000);
     });
 
     $scope.confirmed = 'You have yet to be confirmed!';
@@ -666,7 +694,14 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
         console.log("delete....");
         var dlg = $dialogs.confirm('Please Confirm','Do you want to delete the post?');
         dlg.result.then(function(btn){
-            GithubSrvc.deleteContent(path);
+            var deletePromise = GithubSrvc.deleteContent(path);
+			deletePromise.then(function() {
+				toaster.pop('error', "Post deleted", '<ul><li>The post was successfully deleted. You will be redirected to the frontpage shortly...</li></ul>', 5000, 'trustedHtml');
+				$scope.$apply();
+				$timeout(function(){
+					window.location = config.github.redirection_url;
+				}, 5000);
+			});
         },function(btn){
             console.log("cancel delete")
             //$scope.confirmed = 'Shame on you for not thinking this is awesome!';

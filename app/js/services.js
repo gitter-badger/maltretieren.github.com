@@ -411,11 +411,7 @@ myApp.service("GithubSrvc", function (
             var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo(config.github.user, config.github.repository);
             var branch = repo.getBranch("master");
-
-            branch.remove(path, 'Deleted Post from GUI').then(function() {
-                console.log("deleted");
-                $rootScope.$broadcast('Toast::githubDeleteSuccess');
-            });
+            return branch.remove(path, 'Deleted Post from GUI');
         }
     }
 });
