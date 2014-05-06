@@ -59,7 +59,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
 		var error = function() {
 			toaster.pop('error', "Comment failed", '<ul><li>There was an error while saving the comment</li></ul>', 5000, 'trustedHtml');
 			$scope.$apply();
-			$timeout(getComments, 5000);
+			$timeout(getComments(), 5000);
 		}
 		Keen.addEvent("comments", data, success);
 	}
