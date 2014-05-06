@@ -90,9 +90,9 @@ Inspired by https://github.com/angular/angular-seed & https://github.com/plusjad
 - [GitHub](https://github.com/)
     - you know it...
 - [Keen.io](https://keen.io)
-    - Cloud database (build for analytics)
+    - Cloud database (built for analytics)
 - [Heroku](https://dashboard.heroku.com)
-    - Hosting of nodejs apps
+    - Hosting of nodejs apps (required for "client side" oAuth2 workflow)
 
 ## License
 
