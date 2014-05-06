@@ -24,7 +24,7 @@
                 <th style="width:30%"><span class="sort" data-sort="tags">Tags</span></th>
             </tr>
             </thead>
-            <tbody class="list">
+            <tbody class="list"> 
             <tr ng:repeat="post in posts.entries |orderBy:orderByField:reverseSort | filter:searchText">
                 <td class="date">{{ post.Date | date:'dd MMM yyyy' }}<img width="150px" src="{{post.Preview}}" ng-show="post.Preview"></td>
                 <td class="title"><a href="{{ post.Url }}">{{ post.Title }}</a></td>
