@@ -662,19 +662,19 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
 
     // promise to save...
     var promise = GithubSrvc.editContent(path);
-	var commitPath = "";
+	$scope.commitPath = "";
     promise.then(function(content) {
         var commitPath = "";
         if($scope.options.date instanceof Date) {
-            commitPath = $scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replace(/ /g,"-")+".md";
+            $scope.commitPath = $scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replace(/ /g,"-")+".md";
         } else {
-            commitPath = $scope.options.date+"-"+$scope.options.title.replace(/ /g,"-")+".md";
+            $scope.commitPath = $scope.options.date+"-"+$scope.options.title.replace(/ /g,"-")+".md";
         }
 
         //var path = "_posts/"+$scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replaceAll(" ","-")+".md";
         console.log("edit existing content");
         console.log("should check, if the path has changed... if yes, it should post/delete or move/commit")
-        console.log("path: "+path);
+        console.log("path: "+$scope.path);
         //console.log("content"+content);
 
         return GithubSrvc.commit(content, "_posts/"+commitPath);
@@ -686,7 +686,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
 			if(typeof(url) !='undefined') {
                 window.location = url;
             } else {
-				window.location = config.github.redirection_url+"/"+commitPath;
+				window.location = config.github.redirection_url+"/"+$scope.commitPath;
             }
         }, 10000);
     });
