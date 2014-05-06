@@ -686,7 +686,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
             } else {
 				window.location = "http://maltretieren.github.io/"+commitPath;
             }
-        }, 8000);
+        }, 10000);
     });
 
     $scope.confirmed = 'You have yet to be confirmed!';
