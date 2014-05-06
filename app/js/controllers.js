@@ -685,7 +685,6 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
                 window.location = url;
             } else {
 				window.location = commitPath;
-                console.log("post saved, there is no url provided to redirect - should be constructed from the commit path...")
             }
         }, 8000);
     });
