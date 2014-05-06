@@ -1,34 +1,36 @@
 <div id="entry-list">
     <div class="clearfix">
-        <table class="table table-striped" style="table-layout: fixed; word-wrap: break-word;" >
-            <thead>
-            <tr>
-                <th style="width:20%;">
-                    <a href="#" ng-click="orderByField='Date'; reverseSort = !reverseSort">
-                        Date
-                        <span ng-show="orderByField == 'Date'">
-							<span class="caret" ng-show="!reverseSort"></span>
-							<span class="caret caret-reversed" ng-show="reverseSort"></span>
-                        </span>
-                    </a>
-                </th>
-                <th style="width:50%"><span class="sort" data-sort="title">Title</span></th>
-                <th style="width:30%"><span class="sort" data-sort="tags">
-					<input type="text" style="height: 25px;font-size: 14px;line-height: 25px;" class="search form-control" placeholder="Search" ng-model="searchText"/></span>
-				</th>
-            </tr>
-            </thead>
-            <tbody class="list">
-            <tr ng:repeat="post in posts.entries |orderBy:orderByField:reverseSort | filter:searchText">
-                <td class="date">{{ post.Date | date:'dd MMM yyyy' }}<img width="150px" src="{{post.Preview}}" ng-show="post.Preview"></td>
-                <td class="title"><a href="{{ post.Url }}">{{ post.Title }}</a></td>
-                <td class="tags">
-						<span ng-repeat="tag in post.Tags" style="margin-right:5px;margin-bottom:5px" class="label label-default">
-							{{ tag }}&nbsp;
-						</span>
-				</td>
-            </tr>
-            </tbody>
-        </table>
+		<div class="table-responsive">
+			<table class="table table-striped" style="table-layout: fixed; word-wrap: break-word;" >
+				<thead>
+				<tr>
+					<th style="width:20%;">
+						<a href="#" ng-click="orderByField='Date'; reverseSort = !reverseSort">
+							Date
+							<span ng-show="orderByField == 'Date'">
+								<span class="caret" ng-show="!reverseSort"></span>
+								<span class="caret caret-reversed" ng-show="reverseSort"></span>
+							</span>
+						</a>
+					</th>
+					<th style="width:50%"><span class="sort" data-sort="title">Title</span></th>
+					<th style="width:30%"><span class="sort" data-sort="tags">
+						<input type="text" style="height: 25px;font-size: 14px;line-height: 25px;" class="search form-control" placeholder="Search" ng-model="searchText"/></span>
+					</th>
+				</tr>
+				</thead>
+				<tbody class="list">
+				<tr ng:repeat="post in posts.entries |orderBy:orderByField:reverseSort | filter:searchText">
+					<td class="date">{{ post.Date | date:'dd MMM yyyy' }}<img width="150px" src="{{post.Preview}}" ng-show="post.Preview"></td>
+					<td class="title"><a href="{{ post.Url }}">{{ post.Title }}</a></td>
+					<td class="tags">
+							<span ng-repeat="tag in post.Tags" style="margin-right:5px;margin-bottom:5px" class="label label-default">
+								{{ tag }}&nbsp;
+							</span>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
     </div>
 </div>
