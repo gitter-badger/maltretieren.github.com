@@ -684,7 +684,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
             if(typeof(url) !='undefined') {
                 window.location = url;
             } else {
-				window.location = "/"+commitPath;
+				window.location = "http://maltretieren.github.io/"+commitPath;
             }
         }, 8000);
     });
