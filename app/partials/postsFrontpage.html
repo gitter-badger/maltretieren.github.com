@@ -23,7 +23,7 @@
 					<td class="date" style="min-width: 100px;">{{ post.Date | date:'dd MMM yyyy' }}<img width="150px" src="{{post.Preview}}" ng-show="post.Preview"></td>
 					<td class="title" style="min-width: 100px;"> <a href="{{ post.Url }}">{{ post.Title }}</a></td>
 					<td class="tags" style="min-width: 100px;">
-							<span ng-repeat="tag in post.Tags" style="margin-right:5px;margin-bottom:5px" class="label label-default">{{tag}}</span>
+							<span ng-repeat="tag in post.Tags" style="margin-right:5px;margin-bottom:5px" class="label label-default">{{tag}} &nbsp;</span>
 					</td>
 				</tr>
 				</tbody>
