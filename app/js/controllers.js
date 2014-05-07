@@ -30,7 +30,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
         $scope.filterString = '&filters=[{"property_name":"pageTitle","operator":"eq","property_value":"'+document.title+'"}]';
     }
     $scope.more = function() {
-        $scope.quantity += 5;
+        $scope.quantity += 3;
     }
 	
     $scope.getComments = function() {
@@ -49,7 +49,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
 	}
 	$scope.getComments();
 
-    $scope.quantity = 5;
+    $scope.quantity = 3;
     $scope.sortorder = 'created_at';
 	$scope.deleteComment = function(event) {
 		var id = event.target.id;
