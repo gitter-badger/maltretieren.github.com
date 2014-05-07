@@ -22,9 +22,13 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster, User
 	if(user !== null) {	
 		$scope.isAdmin = user.isAdmin;
 		$scope.userName = user.name;
-		$scope.userMail = "";
-		$scope.commentText = "";
+
+	} else {
+		$scope.isAdmin = false;
+		$scope.userName = "";
 	}
+	$scope.userMail = "";
+	$scope.commentText = "";
 	
 	// hacky way to determine if it is the frontpage
     // -> on frontpage show all comments, on other pages
