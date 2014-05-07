@@ -27,8 +27,12 @@
 				<tbody class="list">
 				<tr ng:repeat="post in posts.entries |orderBy:orderByField:reverseSort | filter:searchText">
 					<td class="date">
-						{{ post.Date | date:'dd MM yyyy' }}
-						<img width="150px" ng-src="{{ post.Preview || '' }}">
+						<div>
+							{{ post.Date | date:'dd MM yyyy' }}
+						</div>
+						<div>
+							<img width="150px" ng-src="{{ post.Preview || '' }}">
+						</div>
 					</td>
 					<td class="title">
 						<a href="{{ post.Url }}">{{ post.Title }}</a>
