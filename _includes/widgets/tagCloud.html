@@ -15,14 +15,34 @@ For more Jekyll widgets, see <http://www.github.com/NetzwergX/jekyll-template-to
 {% endcomment %}
 <section>
     <h1>Tags<span class="hint">({{site.tags.size}})</span></h1>
-    <ul class="tagCloud">
-        {% for tag in site.tags %}
-        <li>
-            <a href="tags.html#{{ tag | first | cgi_encode }}"
-               style="font-size:{{tag | last | size | times:100 | divided_by:site.tags.size | plus:100}}%">
-                {{ tag | first }}</a>
-            {% unless forloop.last %}, {% endunless %}
-        </li>
-        {% endfor %}
-    </ul>
+{% for  post in site.categories[page.title]  % }
+
+<div class="postmeta extract">
+<p class="timestamp">
+{{ post.date }}
+<br/>
+<span class="time"></span>
+</div>
+
+<div class="post extract">
+  
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+
+
+  <p>{{ post.content | strip_html | truncatewords:80 }}</p>
+
+	<div class="blocked tags">
+<p>
+	{% for tag in post.categories   % }
+	<a href="/categories/{{ tag}}.html"></a>
+,
+	{% endfor %}
+</p>
+	</div>
+	<div class="hr"></div>
+</div>
+
+<div class="c">&nbsp;</div>
+
+{% endfor %}
 </section>
