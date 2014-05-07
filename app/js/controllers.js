@@ -22,7 +22,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
 	// https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/queries/extraction?api_key=fca64cb411fe523d053f2d9b1d159011135be6ce55da682f1ad8d6b1d4f629b84dd564edb1c0d7a0d7575ebaaa79b55daa075f7c866d7430ace403bab51b7513aa41b30ce443f9d736d45d33c78a0b44420c2ecd35223b76d67af37df1d0cc52bf67e73cb32d949eb58cb5814e7e5e6a&event_collection=comments&timezone=3600
 	//https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/queries/extraction?api_key=fca64cb411fe523d053f2d9b1d159011135be6ce55da682f1ad8d6b1d4f629b84dd564edb1c0d7a0d7575ebaaa79b55daa075f7c866d7430ace403bab51b7513aa41b30ce443f9d736d45d33c78a0b44420c2ecd35223b76d67af37df1d0cc52bf67e73cb32d949eb58cb5814e7e5e6a&event_collection=comments&filters=%5B%7B%22property_name%22%3A%22pageTitle%22%2C%22operator%22%3A%22eq%22%2C%22property_value%22%3A%22Raspi%22%7D%5D&timezone=7200&percentile=50
 	
-	// https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/queries/extraction?api_key=fca64cb411fe523d053f2d9b1d159011135be6ce55da682f1ad8d6b1d4f629b84dd564edb1c0d7a0d7575ebaaa79b55daa075f7c866d7430ace403bab51b7513aa41b30ce443f9d736d45d33c78a0b44420c2ecd35223b76d67af37df1d0cc52bf67e73cb32d949eb58cb5814e7e5e6a&event_collection=comments&timezone=3600undefined
+	// https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/queries/extraction?api_key=fca64cb411fe523d053f2d9b1d159011135be6ce55da682f1ad8d6b1d4f629b84dd564edb1c0d7a0d7575ebaaa79b55daa075f7c866d7430ace403bab51b7513aa41b30ce443f9d736d45d33c78a0b44420c2ecd35223b76d67af37df1d0cc52bf67e73cb32d949eb58cb5814e7e5e6a&event_collection=comments&timezone=3600&[{%27property_name%27:%27pageTitle%27,%27operator%27:%27eq%27,%27property_value%27:%27Archive%27}]
 	
 	// hacky way to determine if it is the frontpage
     // -> on frontpage show all comments, on other pages
@@ -32,7 +32,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
 		console.log("no filter for comments");
 		$scope.filterString = '';
     } else {
-        $scope.filterString = "&[{'property_name':'pageTitle','operator':'eq','property_value':'"+document.title+"'}]";
+        $scope.filterString = "&filters=[{'property_name':'pageTitle','operator':'eq','property_value':'"+document.title+"'}]";
     }
     $scope.more = function() {
         $scope.quantity += 5;
