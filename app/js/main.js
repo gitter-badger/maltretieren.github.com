@@ -15,8 +15,6 @@
         .script( "/assets/js/jquery-2.1.0/jquery-2.1.0.min.js" )
         .script( "/app/js/config.js")
 		.script( "/assets/js/oauth/jso.js" )
-        .script( "/assets/js/keenio-2.1.0/keenio.js" )
-        .script( "/assets/js/listjs-0.2.0/list.js" )
 		.script( "/assets/js/octokit-0.9.19/base64.js" )
 		.script( "/assets/js/octokit-0.9.19/underscore-min.js" )
 		.script( "/assets/js/bootstrap-markdown-2.3.1/libs/to-markdown.js" )
