@@ -28,7 +28,7 @@
 				<tr ng:repeat="post in posts.entries |orderBy:orderByField:reverseSort | filter:searchText">
 					<td class="date">{{ post.Date | date:'dd MMM yyyy' }}</td>
 					<td class="title">
-						{% if %}
+						{% if post.Preview %}
 							<img width="150px" src="{{post.Preview}}">
 						{% endif %}
 						<a href="{{ post.Url }}">{{ post.Title }}</a>
