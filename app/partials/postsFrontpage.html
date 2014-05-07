@@ -35,8 +35,10 @@
 							<img width="150px" ng-src="{{ post.Preview || '' }}">
 						</div>
 					</td>
-					<td class="title" style="padding:10px">
-						{{ post.Preview }}
+					<td class="title">
+						<div>
+							{{ post.Preview }}
+						</div style="padding:10px">
 					</td>
 					<td class="tags">
 						<div ng-repeat="tag in post.Tags" style="display:inline-block;margin-right:5px;">
