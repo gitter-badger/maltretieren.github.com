@@ -33,7 +33,6 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
             //alert("Error while getting comments from keen.io: "+status)
         });
 	}
-	$scope.getComments();
 
     $scope.quantity = 5;
     $scope.sortorder = 'created_at';
@@ -72,9 +71,6 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
     // -> on frontpage show all comments, on other pages
 	// filter only comments matching the pageTitle
     var parts = window.location.href.split("/");
-	console.log(parts[3] === '');
-	console.log(parts);
-	console.log(parts[3]);
 	if(parts[3] === '') {
 		console.log("no filter for comments");
 		$scope.filterString = '';
