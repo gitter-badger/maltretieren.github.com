@@ -9,7 +9,7 @@
 	</legend>
 	<table class="table table-hover table-striped">
 		<tbody>
-			<tr ng:repeat="comment in comments.entries | filter: { pageTitle: filterString }| orderObjectBy:'timestamp':true | limitTo:quantity">
+			<tr ng:repeat="comment in comments.entries | orderObjectBy:'timestamp':true | limitTo:quantity">
 				<td class="col-sm-2" style="border-top: none;">
 					<a href="{{comment.pageUrl}}">{{comment.pageTitle}}</a><br>
 					<span style="font-size:0.8em;">By: <a href="mailto:{{comment.email}}">{{comment.name}}</a> on {{comment.keen.timestamp | date:'dd MMM yyyy' }}</span>
