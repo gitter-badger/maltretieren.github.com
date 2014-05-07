@@ -18,7 +18,7 @@ For more Jekyll widgets, see <http://www.github.com/NetzwergX/jekyll-template-to
 	{% for tag in site.tags %}
 		<a href="tags.html#{{ tag | first | cgi_encode }}"
 		   style="font-size:{{tag | last | size | times:100 | divided_by:site.tags.size | plus:100}}%">
-			{{ tag | first }} ({{ site.tags[tag].size }})</a>
+			{{ tag | first }} ({{ site.tags.size }})</a>
 		{% unless forloop.last %}, {% endunless %}
 	{% endfor %}
 </section>
