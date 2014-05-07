@@ -9,7 +9,7 @@
 /**
  * Receive a complete list of all comments
  */
-myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
+myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster, UserModel) {
 	
 	var commentsUrl = config.keenio.comments_url;
 	// disable comments if there is no config for it...
@@ -18,6 +18,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
 	} else {
 		$scope.commentsToggle = true;
 	}
+	$scope.isAdmin = UserModel.user.isAdmin;
 	
 	// hacky way to determine if it is the frontpage
     // -> on frontpage show all comments, on other pages
@@ -77,7 +78,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
 		}
 		Keen.addEvent("comments", data, success);
 	}
-	$scope.userName = "";
+	$scope.userName = UserModel.user.name;
 	$scope.userMail = "";
 	$scope.commentText = "";
 });
