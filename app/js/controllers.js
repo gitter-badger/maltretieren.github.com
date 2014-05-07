@@ -32,7 +32,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
 		console.log("no filter for comments");
 		$scope.filterString = '';
     } else {
-        $scope.filterString = "[{'property_name':'pageTitle','operator':'eq','property_value':'"+document.title+"'}]";
+        $scope.filterString = "&[{'property_name':'pageTitle','operator':'eq','property_value':'"+document.title+"'}]";
     }
     $scope.more = function() {
         $scope.quantity += 5;
