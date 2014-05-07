@@ -18,8 +18,8 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster, User
 	} else {
 		$scope.commentsToggle = true;
 	}
-	$scope.isAdmin = UserModel.user.isAdmin;
-	console.log($scope.isAdmin);
+	var user = UserModel.getUser()
+	$scope.isAdmin = user.user.isAdmin;
 	
 	// hacky way to determine if it is the frontpage
     // -> on frontpage show all comments, on other pages
@@ -79,7 +79,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster, User
 		}
 		Keen.addEvent("comments", data, success);
 	}
-	$scope.userName = UserModel.user.name;
+	$scope.userName = user.name;
 	$scope.userMail = "";
 	$scope.commentText = "";
 });
