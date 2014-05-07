@@ -118,7 +118,7 @@ myApp.controller("TableCtrl",function ($scope, $http) {
 	});
 
     $scope.orderByField = 'Date';
-    $scope.reverseSort = true;
+    $scope.reverseSort = false;
     $scope.searchText = "";
 });
 
