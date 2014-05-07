@@ -101,7 +101,7 @@
 <div class="container col-lg-7 col-centered" style="float:none">
     {{ content }}
 
-	<div ng-cloak ng-hide="!commentsToggle" data-ng-controller="CommentsCtrl">
+	<div ng-cloak data-ng-controller="CommentsCtrl">
 		{% if page.comments != false %}
 			{% include widgets/comments/recentComments.html %}
 			{% include widgets/comments/form.html %}
