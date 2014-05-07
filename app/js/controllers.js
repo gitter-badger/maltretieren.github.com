@@ -73,7 +73,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
 	// filter only comments matching the pageTitle
     var parts = window.location.href.split("/");
     console.log(parts[4]);
-	if(parts[4] !== '') {
+	if(typeof parts[4] !== 'undefined') {
         $scope.filterString = document.title;
     } else {
         $scope.filterString = '';
