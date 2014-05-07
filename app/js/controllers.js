@@ -24,7 +24,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
 	// filter only comments matching the pageTitle
     var parts = window.location.href.split("/");
 	if(parts[3] === '') {
-		console.log("no filter for comments");
+		//console.log("no filter for comments");
 		$scope.filterString = '';
     } else {
         $scope.filterString = '&filters=[{"property_name":"pageTitle","operator":"eq","property_value":"'+document.title+'"}]';
@@ -38,7 +38,6 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
         .success(function(data, status, headers, config) {
             // this callback will be called asynchronously
             // when the response is available
-            console.log("Successfully received comments from keen.io")
             $scope.comments = {
                 entries: data.result
             }
@@ -109,7 +108,7 @@ myApp.controller("TableCtrl",function ($scope, $http) {
 		success(function(data, status, headers, config) {
 			// this callback will be called asynchronously
 			// when the response is available
-			console.log("Successfully received json containing all posts")
+			//console.log("Successfully received json containing all posts")
 			$scope.posts = {
 				entries: data
 			}
@@ -168,7 +167,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, Par
 		var user = UserModel.getUser();
 		// first check if there is a valid user already stored in the localStorage
 		if(typeof user !== 'undefined' && user !== null) {
-			console.log("found a valid user object in localStorage, use that...");
+			//console.log("found a valid user object in localStorage, use that...");
 			$scope.user = user;
 		} else {
 			console.log("no user object found in localStorage - if a code is provided use that to get a token");
