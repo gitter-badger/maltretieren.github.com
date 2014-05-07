@@ -6,11 +6,11 @@ group: navigation
 comments: false
 ---
 {% include JB/setup %}
-{% include widgets/tagCloud.html %}
+
 
 <ul class="tag_box inline">
-  {% assign tags_list = site.tags %}  
-  {% include JB/tags_list %}
+  {% assign tags_list = site.tags %}
+  {% include widgets/tagCloud.html %}
 </ul>
 
 
