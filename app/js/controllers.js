@@ -72,8 +72,8 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
     // -> on frontpage show all comments, on other pages
 	// filter only comments matching the pageTitle
     var parts = window.location.href.split("/");
-    console.log(parts[3]);
 	if(typeof parts[3] === 'undefined') {
+		console.log("no filter for comments");
 		$scope.filterString = '';
     } else {
         $scope.filterString = document.title;
