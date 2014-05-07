@@ -19,14 +19,14 @@
 							<span class="caret" ng-show="!reverseSort"></span>
 							<span class="caret caret-reversed" ng-show="reverseSort"></span>
 						</span>
-					<th style=""><span class="sort" data-sort="tags">
+					<th style="width:100px;max-width:200px;"><span class="sort" data-sort="tags">
 						<input type="text" style="height: 25px;font-size: 14px;line-height: 25px;" class="search form-control" placeholder="Search" ng-model="searchText"/></span>
 					</th>
 				</tr>
 				</thead>
 				<tbody class="list">
 				<tr ng:repeat="post in posts.entries |orderBy:orderByField:reverseSort | filter:searchText">
-					<td class="date" width="100px">{{ post.Date | date:'dd MM yyyy' }}</td>
+					<td class="date">{{ post.Date | date:'dd MM yyyy' }}</td>
 					<td class="title">
 						<img width="150px" ng-src="{{ post.Preview || '' }}">
 						<a href="{{ post.Url }}">{{ post.Title }}</a>
