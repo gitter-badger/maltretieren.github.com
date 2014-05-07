@@ -19,7 +19,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster, User
 		$scope.commentsToggle = true;
 	}
 	var user = UserModel.getUser()
-	$scope.isAdmin = user.user.isAdmin;
+	$scope.isAdmin = user.isAdmin;
 	
 	// hacky way to determine if it is the frontpage
     // -> on frontpage show all comments, on other pages
