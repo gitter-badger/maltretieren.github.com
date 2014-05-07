@@ -33,6 +33,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $timeout, toaster) {
             //alert("Error while getting comments from keen.io: "+status)
         });
 	}
+	$scope.getComments();
 
     $scope.quantity = 5;
     $scope.sortorder = 'created_at';
