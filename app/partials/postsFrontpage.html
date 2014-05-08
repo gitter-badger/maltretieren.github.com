@@ -14,7 +14,7 @@
 					</th>
 					<th class="col-xs-12 col-md-8">
 						<a href="#" ng-click="orderByField='Title'; reverseSort = !reverseSort">
-						Title
+						Excerpt
 						<span ng-show="orderByField == 'Title'">
 							<span class="caret" ng-show="!reverseSort"></span>
 							<span class="caret caret-reversed" ng-show="reverseSort"></span>
@@ -28,7 +28,7 @@
 				<tr ng:repeat="post in posts.entries | orderBy:orderByField:reverseSort | filter:searchText">
 					<td class="date">
 						<div>
-							<a href="{{comment.Url}}">{{ post.Title }}</a><br>
+							<a href="{{post.Url}}">{{ post.Title }}</a><br>
 							<span style="font-size:0.8em;">{{ post.Date | date:'dd MM yyyy' }}</span>
 						</div>
 						<div>
