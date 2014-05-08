@@ -25,10 +25,10 @@
 				</tr>
 				</thead>
 				<tbody class="list">
-				<tr ng:repeat="post in posts.entries |orderBy:orderByField:reverseSort | filter:searchText">
+				<tr ng:repeat="post in posts.entries | orderBy:orderByField:reverseSort | filter:searchText">
 					<td class="date">
 						<div>
-							<a href="{{comment.pageUrl}}">{{ post.Title }}</a><br>
+							<a href="{{comment.Url}}">{{ post.Title }}</a><br>
 							<span style="font-size:0.8em;">{{ post.Date | date:'dd MM yyyy' }}</span>
 						</div>
 						<div>
