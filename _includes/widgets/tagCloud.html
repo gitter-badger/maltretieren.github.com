@@ -23,7 +23,7 @@ For more Jekyll widgets, see <http://www.github.com/NetzwergX/jekyll-template-to
 </section> 
 
 <section>
-    <h1>Categories <span class="hint">({{site.categories.size}})</span></h1>
+    <h1>Categories</h1>
 	{% for category in site.categories %}
 		<a href="tags.html#{{ category | first | cgi_encode }}" style="font-size:{{category | last | size | times:100 | divided_by:site.categories | plus:100}}%">
 			{{ category | first }}
