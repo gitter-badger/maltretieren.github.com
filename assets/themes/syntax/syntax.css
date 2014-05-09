@@ -45,12 +45,6 @@ code {
     font-family:'Bitstream Vera Sans Mono','Courier', monospace;
 }
 
-.codehilite{
-    width:100%;
-    height: auto;
-    overflow: auto;
-}
-
 .highlight .c { color: #586E75 } /* Comment */
 .highlight .err { color: #93A1A1 } /* Error */
 .highlight .g { color: #93A1A1 } /* Generic */

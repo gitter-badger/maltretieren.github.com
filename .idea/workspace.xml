@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/themes/syntax/syntax.css" afterPath="$PROJECT_DIR$/assets/themes/syntax/syntax.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,7 +64,7 @@
       <file leaf-file-name="syntax.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/themes/syntax/syntax.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="1" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.9073276" vertical-offset="344" max-vertical-offset="1890">
+            <state line="44" column="64" selection-start="985" selection-end="985" vertical-scroll-proportion="0.6810345" vertical-offset="344" max-vertical-offset="1800">
               <folding />
             </state>
           </provider>
@@ -551,7 +550,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/themes/syntax/syntax.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="1" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.9073276" vertical-offset="344" max-vertical-offset="1890">
+        <state line="44" column="64" selection-start="985" selection-end="985" vertical-scroll-proportion="0.6810345" vertical-offset="344" max-vertical-offset="1800">
           <folding />
         </state>
       </provider>
