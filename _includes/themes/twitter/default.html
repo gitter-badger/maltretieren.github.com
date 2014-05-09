@@ -95,8 +95,8 @@
 					</div>
 				</div>
             </form>
-			<div class="visible-xs">
-				<li class="divider"></li>
+			<span class="divider"></span>
+			<div class="visible-xs" ng-show="user.name">
 				<button ng-cloak type="button" class="btn btn-warning btn-middle ng-hide" ng-click="requestCode()" ng-show="!user.name">Login with Github</button>
 				<ul class="nav navbar-nav">
 					<li><a href="/app/admin/fork.html">Clone/Fork</a></li>
