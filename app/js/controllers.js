@@ -62,10 +62,9 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $dialogs,$timeout, toas
     $scope.quantity = 3;
     $scope.sortorder = 'created_at';
 	$scope.deleteComment = function(event) {
-		var id = event.target.id;
+		$scope.id = event.target.id;
 		console.log("Delete: "+id);
 		var dlg = $dialogs.create('/app/partials/keenMaster.html','KeenioMasterCtrl',{},{key: false});
-		//https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/events/comments?api_key=MASTERKEY&filters=<your_filters_here>
 	}
 	
 	// comments form
@@ -101,6 +100,10 @@ myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance, UserModel
 	$scope.save = function() {
 		var masterKey = $scope.user.name;
         console.log("Keenio Master key: "+masterKey);
+		console.log("$scope.id ":$scope.id);
+		var url = 'https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/events/comments?api_key='+masterKey+'&filters=[{"property_name":"keen.id","operator":"eq","property_value":"'+$scope.id+'"}]';
+		console.log(url);
+		//https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/events/comments?api_key=MASTERKEY&filters=<your_filters_here>
 	};
 });
 
