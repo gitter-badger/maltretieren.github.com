@@ -67,7 +67,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $dialogs,$timeout, toas
 		var passIns = {commentId: cId};
 		var dlg = $dialogs.create('/app/partials/keenMaster.html','KeenioMasterCtrl',passIns,{key: false});
 		dlg.result.then(function(test){
-			console.log(test);
+			console.log("fdasd" +test);
 		},function(){
 			console.log("exit");
 		});
