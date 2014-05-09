@@ -64,7 +64,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $dialogs,$timeout, toas
 	$scope.deleteComment = function(event) {
 		$scope.id = event.target.id;
 		console.log("Delete: "+id);
-		var dlg = $dialogs.create('/app/partials/keenMaster.html','KeenioMasterCtrl',{},{key: false});
+		var dlg = $dialogs.create('/app/partials/keenMaster.html','KeenioMasterCtrl',{id: $scope.id},{key: false});
 	}
 	
 	// comments form
