@@ -93,7 +93,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $dialogs,$timeout, toas
 
 myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance, UserModel, GithubAuthService, GithubSrvc) {
 	$scope.user = {};
-	console.log(this);
+	console.log(this.commentId);
 	
 	$scope.cancel = function(){
 		$modalInstance.dismiss('canceled');  
