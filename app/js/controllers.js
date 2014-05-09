@@ -97,7 +97,8 @@ myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance, UserModel
 	}; // end cancel
 	
 	$scope.save = function() {
-        console.log("Keenio Master key: ");
+		var masterKey = $scope.user.name;
+        console.log("Keenio Master key: "+masterKey);
 	};
 });
 
