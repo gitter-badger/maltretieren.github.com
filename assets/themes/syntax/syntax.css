@@ -29,6 +29,7 @@ border-bottom: none !important;
 -webkit-border-top-right-radius: 10px;
 }
 
+
 .highlight {
     background-color: #efefef;
     padding: 7px 7px 7px 10px;
@@ -42,6 +43,7 @@ border-bottom: none !important;
 
 code {
     font-family:'Bitstream Vera Sans Mono','Courier', monospace;
+    overflow:auto;
 }
 
 .highlight .c { color: #586E75 } /* Comment */

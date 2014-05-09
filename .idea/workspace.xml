@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/js/object.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/js/tests/object.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/themes/syntax/syntax.css" afterPath="$PROJECT_DIR$/assets/themes/syntax/syntax.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -68,7 +65,7 @@
       <file leaf-file-name="syntax.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/themes/syntax/syntax.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="67" selection-start="4816" selection-end="4816" vertical-scroll-proportion="3.2349138" vertical-offset="194" max-vertical-offset="1785">
+            <state line="45" column="4" selection-start="990" selection-end="990" vertical-scroll-proportion="0.6810345" vertical-offset="359" max-vertical-offset="1815">
               <folding />
             </state>
           </provider>
@@ -554,7 +551,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/themes/syntax/syntax.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="67" selection-start="4816" selection-end="4816" vertical-scroll-proportion="3.2349138" vertical-offset="194" max-vertical-offset="1785">
+        <state line="45" column="4" selection-start="990" selection-end="990" vertical-scroll-proportion="0.6810345" vertical-offset="359" max-vertical-offset="1815">
           <folding />
         </state>
       </provider>
