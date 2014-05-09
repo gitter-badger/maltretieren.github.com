@@ -98,7 +98,6 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $dialogs,$timeout, toas
 
 myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance) {
 	$scope.user = {};
-	console.log($modalInstance);
 	
 	$scope.cancel = function(){
 		$modalInstance.dismiss('canceled');  
