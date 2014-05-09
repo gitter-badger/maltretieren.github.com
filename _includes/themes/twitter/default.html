@@ -84,7 +84,7 @@
 						{% raw %} {{user.name}} {% endraw %}
 					  </button>
 					  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-					  <ul class="dropdown-menu">
+					  <ul class="dropdown-menu hidden-xs">
 							<li><a href="/app/admin/fork.html">Clone/Fork</a></li>
 							<li ng-hide="!user.isAdmin"><a href="/app/admin/editConfig.html">Edit Config</a></li>
 							<li ng-hide="!user.isAdmin"><a href="/app/admin/edit.html">Create Post</a></li>
@@ -92,6 +92,9 @@
 							<li class="divider"></li>
 							<li><a href="#" ng-click="logout()">Logout</a></li>
 					  </ul>
+					  <div class="visible-xs">
+						tet
+					  </div>
 					</div>
 				</div>
             </form>
