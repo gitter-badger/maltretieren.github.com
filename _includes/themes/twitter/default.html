@@ -97,9 +97,9 @@
             </form>
 			<div class="visible-xs">
 				<a href="/app/admin/fork.html">Clone/Fork</a>
-				<a href="/app/admin/editConfig.html">Edit Config</a>
-				<a href="/app/admin/edit.html">Create Post</a>
-				<a href="/app/admin/admin.html">Admin</a>
+				<a ng-hide="!user.isAdmin" href="/app/admin/editConfig.html">Edit Config</a>
+				<a ng-hide="!user.isAdmin" href="/app/admin/edit.html">Create Post</a>
+				<a ng-hide="!user.isAdmin" href="/app/admin/admin.html">Admin</a>
 			</div>
         </div>
     </div>
