@@ -37,7 +37,7 @@
 					</td>
 					<td class="title ">
 						<div style="margin-left: 10px;">
-							<a class="visible-xs" href="{{post.Url}}">{{ post.Title }}</a>
+							<span class="visible-xs"><h2><a href="{{post.Url}}">{{ post.Title }}</a></h2><small>{{ post.Date | date:'dd MM yyyy' }}</small></span>
 							{{ post.PreviewText }}
 						</div>
 					</td>
