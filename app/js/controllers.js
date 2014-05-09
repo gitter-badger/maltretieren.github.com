@@ -103,7 +103,7 @@ myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance) {
 		$modalInstance.dismiss('canceled');  
 	}; // end cancel
 	
-	$scope.save = function(test) {
+	$scope.save = function() {
 		$scope.masterKey = $scope.user.name;
         console.log("Keenio Master key: "+$scope.masterKey);
 		console.log($modalInstance.data);
