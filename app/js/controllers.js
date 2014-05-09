@@ -91,9 +91,10 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $dialogs,$timeout, toas
 	}
 });
 
-myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance, UserModel, GithubAuthService, GithubSrvc) {
+myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance, UserModel, GithubAuthService, GithubSrvc, commentId) {
 	$scope.user = {};
-	console.log($scope);
+	console.log($scope.commentId);
+	console.log(commentId);
 	
 	$scope.cancel = function(){
 		$modalInstance.dismiss('canceled');  
