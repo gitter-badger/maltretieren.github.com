@@ -64,7 +64,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $dialogs,$timeout, toas
 	$scope.deleteComment = function(event) {
 		var keenId = event.target.id;
 		//console.log("Delete: "+$scope.id);
-		var passIns = {id: keend};
+		var passIns = {id: keenId};
 		var dlg = $dialogs.create('/app/partials/keenMaster.html','KeenioMasterCtrl',passIns,{key: false});
 	}
 	
