@@ -91,7 +91,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $dialogs,$timeout, toas
 	}
 });
 
-myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance, UserModel, GithubAuthService, GithubSrvc, commentId) {
+myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance, UserModel, GithubAuthService, GithubSrvc) {
 	$scope.user = {};
 	console.log($scope.commentId);
 	console.log(commentId);
