@@ -104,10 +104,10 @@ myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance) {
 		$modalInstance.dismiss('canceled');  
 	}; // end cancel
 	
-	$scope.save = function(data) {
+	$scope.save = function() {
 		$scope.masterKey = $scope.user.name;
         console.log("Keenio Master key: "+$scope.masterKey);
-		console.log(data);
+		$modalInstance.resolve();
 		//console.log("$scope.id: "+$scope.id);
 		//var url = 'https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/events/comments?api_key='+masterKey+'&filters=[{"property_name":"keen.id","operator":"eq","property_value":"'+$scope.id+'"}]';
 		//console.log(url);
