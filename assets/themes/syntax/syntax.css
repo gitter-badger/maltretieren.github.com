@@ -43,7 +43,12 @@ border-bottom: none !important;
 
 code {
     font-family:'Bitstream Vera Sans Mono','Courier', monospace;
-    overflow:auto;
+}
+
+.codehilite{
+    width:100%;
+    height: auto;
+    overflow: auto;
 }
 
 .highlight .c { color: #586E75 } /* Comment */
