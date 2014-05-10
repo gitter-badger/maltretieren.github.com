@@ -45,6 +45,18 @@ code {
     font-family:'Bitstream Vera Sans Mono','Courier', monospace;
 }
 
+.highlight pre code * {
+    white-space: nowrap;    // this sets all children inside to nowrap
+}
+
+.highlight pre {
+    overflow-x: auto;       // this sets the scrolling in x
+}
+
+.highlight pre code {
+    white-space: pre;       // forces <code> to respect <pre> formatting
+}
+
 .highlight .c { color: #586E75 } /* Comment */
 .highlight .err { color: #93A1A1 } /* Error */
 .highlight .g { color: #93A1A1 } /* Generic */
