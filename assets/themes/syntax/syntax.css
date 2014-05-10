@@ -31,14 +31,14 @@ border-bottom: none !important;
 
 .highlight pre code * {
     white-space: nowrap;    // this sets all children inside to nowrap
-    width:100%;
+    width:400px;
     height: auto;
     overflow: auto;
 }
 
 .highlight pre {
     overflow-x: auto;       // this sets the scrolling in x
-    width:100%;
+    width:400px;
     height: auto;
     overflow: auto;
 }
