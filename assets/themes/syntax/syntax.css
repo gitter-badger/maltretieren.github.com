@@ -39,6 +39,7 @@ border-bottom: none !important;
 .highlight pre {
     overflow-x: auto;       // this sets the scrolling in x
     width:400px;
+    white-space: pre-line;
     height: auto;
     overflow: auto;
 }
