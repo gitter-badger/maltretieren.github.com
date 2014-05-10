@@ -41,7 +41,7 @@ border-bottom: none !important;
     white-space: pre;       // forces <code> to respect <pre> formatting
 }
 
-pre { white-space: pre; overflow: scroll; width:inherit;}
+pre { white-space: pre; overflow-x: scroll;}
 
 .highlight .c { color: #586E75 } /* Comment */
 .highlight .err { color: #93A1A1 } /* Error */
