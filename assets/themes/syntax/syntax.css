@@ -36,6 +36,8 @@ border-bottom: none !important;
 .highlight pre {
     overflow-x: auto;       // this sets the scrolling in x
     width:400px;
+    word-break: normal;
+    word-wrap: normal;
 }
 
 .highlight .c { color: #586E75 } /* Comment */
