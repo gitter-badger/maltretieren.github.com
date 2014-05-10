@@ -35,12 +35,7 @@ border-bottom: none !important;
 
 .highlight pre {
     overflow-x: auto;       // this sets the scrolling in x
-}
-
-.highlight pre code {
-    width: inherit;
-    white-space: pre;       // forces <code> to respect <pre> formatting
-    overflow: auto;
+    width:400px;
 }
 
 .highlight .c { color: #586E75 } /* Comment */
