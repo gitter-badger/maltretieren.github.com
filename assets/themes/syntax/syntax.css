@@ -1,3 +1,47 @@
+/*
+ * cowboycoded / rounded_box_gist.css
+ */
+.gist{
+margin: 15px 0 !important;
+}
+
+.gist-file{
+border: none !important;
+}
+
+.gist-meta{
+border: 1px solid #D2d2d2 !important;
+padding: 12px !important;
+-moz-border-radius-bottomleft: 10px;
+-webkit-border-bottom-left-radius: 10px;
+-moz-border-radius-bottomright: 10px;
+-webkit-border-bottom-right-radius: 10px;
+
+}
+
+.gist-data{
+padding: 15px !important;
+border: 1px solid #D2d2d2 !important;
+border-bottom: none !important;
+-moz-border-radius-topleft: 10px;
+-webkit-border-top-left-radius: 10px;
+-moz-border-radius-topright: 10px;
+-webkit-border-top-right-radius: 10px;
+}
+
+.highlight pre code * {
+    white-space: nowrap;    // this sets all children inside to nowrap
+}
+
+.highlight pre {
+    overflow-x: auto;       // this sets the scrolling in x
+}
+
+.highlight pre code {
+    white-space: pre;       // forces <code> to respect <pre> formatting
+    overflow: auto;
+}
+
 .highlight .c { color: #586E75 } /* Comment */
 .highlight .err { color: #93A1A1 } /* Error */
 .highlight .g { color: #93A1A1 } /* Generic */
