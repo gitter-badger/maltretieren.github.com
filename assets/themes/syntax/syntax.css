@@ -38,6 +38,7 @@ border-bottom: none !important;
 }
 
 .highlight pre code {
+    width: inherit;
     white-space: pre;       // forces <code> to respect <pre> formatting
     overflow: auto;
 }
