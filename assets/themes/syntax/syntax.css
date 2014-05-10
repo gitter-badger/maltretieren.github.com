@@ -39,7 +39,7 @@ border-bottom: none !important;
     width:400px;
     word-break: normal;
     word-wrap: normal;
-    white-space: nowrap;
+    white-space: normal;
 }
 
 .highlight .c { color: #586E75 } /* Comment */
