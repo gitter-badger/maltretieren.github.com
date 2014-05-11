@@ -31,7 +31,6 @@ border-bottom: none !important;
 
 .highlight pre code * {
     overflow: scroll;
-    white-space:nowrap;
 }
 
 .highlight pre {
