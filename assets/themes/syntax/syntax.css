@@ -31,11 +31,12 @@ border-bottom: none !important;
 
 .highlight pre code * {
     overflow: scroll;
-    white-space:pre;
+    white-space:nowrap;
 }
 
 .highlight pre {
     overflow-x: scroll;       // this sets the scrolling in x
+    white-space:nowrap;
 }
 
 .highlight .c { color: #586E75 } /* Comment */
