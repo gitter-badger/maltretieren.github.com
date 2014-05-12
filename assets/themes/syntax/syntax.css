@@ -48,10 +48,6 @@ border-bottom: none !important;
   white-space: pre;       // forces <code> to respect <pre> formatting
 }
 
-.linenos pre {
-	
-}
-
 /* Solarized Light
 
 For use with Jekyll and Pygments
