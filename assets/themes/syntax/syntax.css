@@ -29,10 +29,7 @@ border-bottom: none !important;
 -webkit-border-top-right-radius: 10px;
 }
 
-.linenos {
-  width:45px;
-  vertical-align:top;
-}
+
 
 .highlight pre code * {
   width:100%;
@@ -54,6 +51,11 @@ border-bottom: none !important;
   white-space: pre;
 }
 
+.linenos {
+  width:45px;
+  vertical-align:top;
+}
+
 .highlighttable {
 	width:100%;
     table-layout: fixed
@@ -61,7 +63,6 @@ border-bottom: none !important;
 
 .code {
   table-layout:fixed;
-  overflow-x: auto;
 }
 
 
