@@ -46,8 +46,8 @@ border-bottom: none !important;
 
 /* if linenos=table is activated ... */
 .linenos {
+  width:45px;
   vertical-align:top;
-  white-space: nowrap;
 }
 
 .highlighttable {
