@@ -52,13 +52,17 @@ border-bottom: none !important;
   white-space: pre;
 }
 
-.highlighttable tbody * {
-    overflow-x: auto;
+.highlighttable pre code * {
+  width:100%;
+  word-break:normal;
+  white-space: nowrap;
 }
 
-.code {
+.highlighttable pre {
   width:100%;
-  overflow-x: scroll;
+  overflow-x: auto;
+  word-break: normal;
+  word-wrap:normal;
 }
 
 
