@@ -80,22 +80,22 @@ understandable code. I think promises helped me alot. This is how it looks like:
 {% highlight javascript %}
 GithubSrvc.fork($scope.options)
 .then( function() {
-	return PollingSrvc.checkForBranchContent("maltretieren.github.com", "master")
+  return PollingSrvc.checkForBranchContent("maltretieren.github.com", "master")
 })
 .then( function() {
-	return GithubSrvc.renameRepo(forkName);
+  return GithubSrvc.renameRepo(forkName);
 })
 .then( function() {
-	return PollingSrvc.checkForBranchContent(forkName, "template")
+  return PollingSrvc.checkForBranchContent(forkName, "template")
 })
 .then( function() {
-	return GithubSrvc.deleteBranch(forkName, "heads/master")
+  return GithubSrvc.deleteBranch(forkName, "heads/master")
 })
 .then( function() {
-	return GithubSrvc.createBranch(forkName, "master")
+  return GithubSrvc.createBranch(forkName, "master")
 })
 .then( function() {
-	scope.pop();
+  scope.pop();
 });
 {% endhighlight %}
 
