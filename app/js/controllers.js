@@ -113,7 +113,7 @@ myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance, $http, to
 		console.log(postsUrl)
 		$http({method: 'DELETE', url: postsUrl}).
 			success(function(data, status, headers, config) {
-				$modalInstance.close('deleted');
+				$modalInstance.close();
 				toaster.pop('error', "Comment deleted", '<ul><li>Comment was deleted</li></ul>', 5000, 'trustedHtml');
 			}).
 			error(function(data, status, headers, config) {
