@@ -71,6 +71,9 @@ border-bottom: none !important;
   white-space: pre;
 }
 
+.code {
+  width:100%;
+}
 
 
 /* Solarized Light
