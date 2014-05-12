@@ -65,7 +65,12 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $dialogs,$timeout, toas
 		var cId = event.target.id;
 		//console.log("Delete: "+$scope.id);
 		var passIns = {commentId: cId};
-		$dialogs.create('/app/partials/keenMaster.html','KeenioMasterCtrl',passIns,{key: false});
+		var dlg = $dialogs.create('/app/partials/keenMaster.html','KeenioMasterCtrl',passIns,{key: false});
+		dlg.result.then(function(){
+			$timeout($scope.getComments, 5000);
+		},function(){
+			console.log("exit");
+		});
 	}
 	
 	// comments form
