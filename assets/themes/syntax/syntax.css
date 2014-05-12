@@ -53,11 +53,7 @@ border-bottom: none !important;
 }
 
 .highlighttable tbody {
-    display: block;
-    height: 120px;
     overflow: auto;
-    float: left;
-    width: 100%;
 }
 
 .code {
