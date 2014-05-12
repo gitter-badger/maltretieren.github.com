@@ -53,6 +53,11 @@ border-bottom: none !important;
   white-space: pre;
 }
 
+.highlighttable {
+	word-wrap: break-word;
+    table-layout: fixed
+}
+
 .code {
   table-layout:fixed;
   width:100%;
