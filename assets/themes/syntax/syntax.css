@@ -54,6 +54,7 @@ border-bottom: none !important;
 
 .code {
   width:100%;
+  overflow-x: scroll;
 }
 
 /* Solarized Light
