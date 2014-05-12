@@ -38,6 +38,8 @@ border-bottom: none !important;
 
 .highlight pre code {
   white-space: pre;
+  word-wrap:normal;
+  word-break:normal;
 }
 
 /* if linenos=table is activated ... */
