@@ -45,6 +45,12 @@ border-bottom: none !important;
   white-space: pre;
 }
 
+.highlight pre code {
+  width:100%;
+  word-break:normal;
+  white-space: pre;
+}
+
 /* if linenos=table is activated ... */
 .linenos {
   width:45px;
