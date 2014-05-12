@@ -33,6 +33,7 @@ border-bottom: none !important;
 	Enable horizontal scrolling
 */
 .highlight pre code * {
+  width:100%;
   white-space: nowrap;    // this sets all children inside to nowrap
 }
 
