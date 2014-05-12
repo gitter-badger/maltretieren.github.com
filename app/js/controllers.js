@@ -65,12 +65,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $dialogs,$timeout, toas
 		var cId = event.target.id;
 		//console.log("Delete: "+$scope.id);
 		var passIns = {commentId: cId};
-		var dlg = $dialogs.create('/app/partials/keenMaster.html','KeenioMasterCtrl',passIns,{key: false});
-		dlg.result.then(function(test){
-			console.log("fdasd" +test);
-		},function(){
-			console.log("exit");
-		});
+		$dialogs.create('/app/partials/keenMaster.html','KeenioMasterCtrl',passIns,{key: false});
 	}
 	
 	// comments form
@@ -109,23 +104,16 @@ myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance, $http, da
 		$scope.masterKey = $scope.user.name;
         console.log("Keenio Master key: "+$scope.masterKey);
 		console.log("Keenio Comment Id: "+$scope.commentId);
-		//$scope.$resolve
 		var postsUrl = 'https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/events/comments?api_key='+$scope.masterKey+'&filters=[{"property_name":"keen.id","operator":"eq","property_value":"'+$scope.commentId+'"}]';
 		console.log(postsUrl)
 		$http({method: 'DELETE', url: postsUrl}).
 			success(function(data, status, headers, config) {
-				// this callback will be called asynchronously
-				// when the response is available
-				//console.log("Successfully received json containing all posts")
-				console.log("comment deleted");
+				$modalInstance.dismiss('deleted');
+				toaster.pop('error', "Comment deleted", '<ul><li>Comment was deleted</li></ul>', 5000, 'trustedHtml');
 			}).
 			error(function(data, status, headers, config) {
 				alert("Error while getting json for posts: "+status)
 		});
-		//console.log("$scope.id: "+$scope.id);
-		//var url = 'https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/events/comments?api_key='+masterKey+'&filters=[{"property_name":"keen.id","operator":"eq","property_value":"'+$scope.id+'"}]';
-		//console.log(url);
-		//https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/events/comments?api_key=MASTERKEY&filters=<your_filters_here>
 	};
 });
 
