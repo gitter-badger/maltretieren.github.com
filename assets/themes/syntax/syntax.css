@@ -53,13 +53,6 @@ border-bottom: none !important;
   white-space: pre;
 }
 
-.code * {
-	width:100%;
-	word-break:normal;
-    white-space: nowrap;
-	overflow-x: auto;
-}
-
 /* Solarized Light
 
 For use with Jekyll and Pygments
