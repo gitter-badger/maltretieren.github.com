@@ -45,6 +45,11 @@ border-bottom: none !important;
   word-wrap:normal;
 }
 
+.highlight pre code {
+  width:100%;
+  word-break:normal;
+  white-space: pre;       // forces <code> to respect <pre> formatting
+}
 
 /* Solarized Light
 
