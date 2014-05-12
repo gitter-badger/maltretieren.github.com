@@ -112,7 +112,7 @@ myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance, $http, da
 		//$scope.$resolve
 		var postsUrl = 'https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/events/comments?api_key='+$scope.masterKey+'&filters=[{"property_name":"keen.id","operator":"eq","property_value":"'+$scope.commentId+'"}]';
 		console.log(postsUrl)
-		$http({method: 'GET', url: postsUrl}).
+		$http({method: 'DELETE', url: postsUrl}).
 			success(function(data, status, headers, config) {
 				// this callback will be called asynchronously
 				// when the response is available
