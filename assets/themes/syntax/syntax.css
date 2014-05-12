@@ -36,7 +36,6 @@
     word-wrap:normal;
     background-color : transparent;
     border-radius:0px;
-    white-space: pre;
 }
 
 .highlight pre code {
