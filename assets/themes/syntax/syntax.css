@@ -42,8 +42,6 @@ border-bottom: none !important;
 .highlight pre {
   width:100%;
   overflow-x: auto;
-  word-break: normal;
-  word-wrap:normal;
   white-space: pre;
 }
 
