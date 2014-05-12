@@ -31,6 +31,7 @@ border-bottom: none !important;
 
 .linenos {
   width:45px;
+  vertical-align:top;
 }
 
 .highlight pre code * {
