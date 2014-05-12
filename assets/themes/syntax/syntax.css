@@ -56,7 +56,7 @@ border-bottom: none !important;
 	width:100%; 
 }
 
-.code pre {
+.highlighttable {
   width:100%;
   word-break:normal;
   white-space: pre;
