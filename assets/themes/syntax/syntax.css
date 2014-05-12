@@ -52,8 +52,9 @@ border-bottom: none !important;
   white-space: pre;
 }
 
-.highlighttable tbody {
+.highlighttable tbody * {
     overflow: auto;
+	white-space: nowrap;
 }
 
 .code {
