@@ -37,9 +37,9 @@ border-bottom: none !important;
 
 .highlight pre {
   width:100%;
-    word-break: normal;
-  word-wrap:normal;
   overflow-x: auto;       // this sets the scrolling in x
+  word-break: normal;
+  word-wrap:normal;
 }
 
 .highlight pre code {
