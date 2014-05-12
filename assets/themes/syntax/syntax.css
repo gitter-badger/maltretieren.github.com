@@ -58,8 +58,6 @@ border-bottom: none !important;
 
 .code {
   width:100%;
-  word-break:normal;
-  white-space: pre;
 }
 
 /* Solarized Light
