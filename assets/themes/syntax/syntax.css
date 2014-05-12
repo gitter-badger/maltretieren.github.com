@@ -53,8 +53,7 @@ border-bottom: none !important;
 }
 
 .highlighttable tbody * {
-    overflow: auto;
-	white-space: nowrap;
+    overflow-x: auto;
 }
 
 .code {
