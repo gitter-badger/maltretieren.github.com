@@ -29,12 +29,23 @@ border-bottom: none !important;
 -webkit-border-top-right-radius: 10px;
 }
 
+.highlight pre code * {
+  width:100%;
+  word-break:normal;
+  white-space: nowrap;    // this sets all children inside to nowrap
+}
 
 .highlight pre {
   width:100%;
   overflow-x: auto;       // this sets the scrolling in x
   word-break:normal;
   word-wrap:normal;
+}
+
+.highlight pre code {
+  width:100%;
+  word-break:normal;
+  white-space: pre;       // forces <code> to respect <pre> formatting
 }
 
 /* Solarized Light
