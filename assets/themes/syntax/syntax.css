@@ -33,6 +33,7 @@ border-bottom: none !important;
 
 .highlight pre code * {
   width:100%;
+  word-break:normal;
   white-space: nowrap;
 }
 
