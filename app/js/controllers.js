@@ -96,7 +96,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $dialogs,$timeout, toas
 	}
 });
 
-myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance, data) {
+myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance, $http, data) {
 	$scope.user = {};
 	$scope.commentId = data.commentId;
 	console.log($scope.commentId);
@@ -112,7 +112,7 @@ myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance, data) {
 		//$scope.$resolve
 		var postsUrl = 'https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/events/comments?api_key='+$scope.masterKey+'&filters=[{"property_name":"keen.id","operator":"eq","property_value":"'+$scope.id+'"}]';
 		console.log(postsUrl)
-		$http({method: 'POST', url: postsUrl}).
+		$http({method: 'GET', url: postsUrl}).
 			success(function(data, status, headers, config) {
 				// this callback will be called asynchronously
 				// when the response is available
