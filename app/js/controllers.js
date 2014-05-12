@@ -96,7 +96,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $dialogs,$timeout, toas
 	}
 });
 
-myApp.controller("KeenioMasterCtrl", ['$scope', $modalInstance, function ($scope, $modalInstance) {
+myApp.controller("KeenioMasterCtrl", ['$scope', '$modalInstance', function ($scope, $modalInstance) {
 	$scope.user = {};
 	console.log($scope.commentId);
 	console.log($scope.passIns);
