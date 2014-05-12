@@ -33,6 +33,7 @@ border-bottom: none !important;
   overflow-x: auto;
   white-space: pre;
   background-color : transparent;
+  border-radius:0px;
 }
 
 .highlight pre code {
