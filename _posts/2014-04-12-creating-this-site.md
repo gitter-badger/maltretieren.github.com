@@ -77,7 +77,7 @@ This is the first time I started with promises to chain the different
 operations together. It is very important for me to have clean, easy
 understandable code. I think promises helped me alot. This is how it looks like:
 
-{% highlight javascript %}
+{% highlight javascript linenos %}
 GithubSrvc.fork($scope.options)
 .then( function() {
   return PollingSrvc.checkForBranchContent("maltretieren.github.com", "master")
