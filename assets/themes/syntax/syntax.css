@@ -29,6 +29,9 @@ border-bottom: none !important;
 -webkit-border-top-right-radius: 10px;
 }
 
+/*
+	Enable horizontal scrolling
+*/
 .highlight pre code * {
   white-space: nowrap;    // this sets all children inside to nowrap
 }
