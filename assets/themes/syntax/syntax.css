@@ -47,7 +47,6 @@ border-bottom: none !important;
 /* if linenos=table is activated ... */
 .linenos {
   vertical-align:top;
-  width:1px;
   white-space: nowrap;
 }
 
