@@ -56,6 +56,12 @@ border-bottom: none !important;
 	width:100%; 
 }
 
+.code pre {
+  width:100%;
+  word-break:normal;
+  white-space: pre;
+}
+
 /* Solarized Light
 
 For use with Jekyll and Pygments
