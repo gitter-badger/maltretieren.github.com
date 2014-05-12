@@ -6,6 +6,8 @@
     "grunt-contrib-jshint": "~0.6.3",
     "grunt-contrib-nodeunit": "~0.2.0",
     "grunt-contrib-uglify": "~0.2.2",
-    "grunt-git": "~0.2.6"
+    "grunt-git": "~0.2.6",
+    "karma": "~0.12.0",
+    "karma-jasmine": "~0.1.0"
   }
 }
