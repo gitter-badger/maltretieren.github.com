@@ -42,12 +42,12 @@ border-bottom: none !important;
   overflow-x: auto;
   word-break: normal;
   word-wrap:normal;
+  white-space: pre;
 }
 
 .highlight pre code {
   width:100%;
   word-break:normal;
-  white-space: pre;
 }
 
 /* if linenos=table is activated ... */
