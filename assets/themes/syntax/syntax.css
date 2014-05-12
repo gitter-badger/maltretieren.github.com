@@ -54,7 +54,7 @@ border-bottom: none !important;
 }
 
 .highlighttable {
-	word-wrap: break-word;
+	width:100%;
     table-layout: fixed
 }
 
