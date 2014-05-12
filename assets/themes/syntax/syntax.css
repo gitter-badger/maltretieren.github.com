@@ -37,9 +37,8 @@ border-bottom: none !important;
 }
 
 .highlight pre code {
+  overflow-x:auto;
   white-space: pre;
-  word-wrap:normal;
-  word-break:normal;
 }
 
 /* if linenos=table is activated ... */
