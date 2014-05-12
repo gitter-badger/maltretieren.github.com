@@ -40,7 +40,6 @@ border-bottom: none !important;
   overflow-x: auto;       // this sets the scrolling in x
   word-break: normal;
   word-wrap:normal;
-  white-space: nowrap;
 }
 
 .highlight pre code {
