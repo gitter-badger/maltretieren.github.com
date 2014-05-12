@@ -32,10 +32,9 @@
 .highlight pre {
     width:100%;
     overflow-x: auto;
-    word-break: normal;
-    word-wrap:normal;
     background-color : transparent;
     border-radius:0px;
+    white-space: pre;
 }
 
 .highlight pre code {
