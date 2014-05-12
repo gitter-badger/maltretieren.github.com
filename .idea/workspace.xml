@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/themes/syntax/syntax.css" afterPath="$PROJECT_DIR$/assets/themes/syntax/syntax.css" />
-    </list>
+    <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="" />
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,7 +53,7 @@
       <file leaf-file-name="syntax.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/themes/syntax/syntax.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="214" selection-end="387" vertical-scroll-proportion="0.33333334" vertical-offset="0" max-vertical-offset="2235">
+            <state line="143" column="67" selection-start="5418" selection-end="5418" vertical-scroll-proportion="0.9285714" vertical-offset="1560" max-vertical-offset="2235">
               <folding />
             </state>
           </provider>
@@ -574,7 +572,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/themes/syntax/syntax.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="214" selection-end="387" vertical-scroll-proportion="0.33333334" vertical-offset="0" max-vertical-offset="2235">
+        <state line="143" column="67" selection-start="5418" selection-end="5418" vertical-scroll-proportion="0.9285714" vertical-offset="1560" max-vertical-offset="2235">
           <folding />
         </state>
       </provider>
