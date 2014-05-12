@@ -40,14 +40,14 @@ border-bottom: none !important;
   white-space: nowrap;
 }
 
-.highlight pre {
+.highlight pre td {
   width:100%;
   overflow-x: auto;
   word-break: normal;
   word-wrap:normal;
 }
 
-.highlight pre code {
+.highlight pre code td {
   width:100%;
   word-break:normal;
   white-space: pre;
