@@ -54,6 +54,7 @@ border-bottom: none !important;
 }
 
 .code {
+  table-layout:fixed;
   width:100%;
   overflow-x: auto;
 }
