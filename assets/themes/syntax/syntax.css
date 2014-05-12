@@ -51,6 +51,7 @@ border-bottom: none !important;
   white-space: pre;
 }
 
+/* if linenos=table is activated ... */
 .linenos {
   width:45px;
   vertical-align:top;
