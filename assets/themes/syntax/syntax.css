@@ -47,7 +47,6 @@ border-bottom: none !important;
 
 .highlight pre code {
   width:100%;
-  word-break:normal;
 }
 
 /* if linenos=table is activated ... */
