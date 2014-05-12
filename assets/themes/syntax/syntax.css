@@ -31,6 +31,7 @@ border-bottom: none !important;
 
 .highlight pre code * {
   width:100%;
+  word-break:normal;
   white-space: nowrap;    // this sets all children inside to nowrap
 }
 
@@ -43,6 +44,7 @@ border-bottom: none !important;
 
 .highlight pre code {
   width:100%;
+  word-break:normal;
   white-space: pre;       // forces <code> to respect <pre> formatting
 }
 
