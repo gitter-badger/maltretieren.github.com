@@ -42,6 +42,7 @@ border-bottom: none !important;
   overflow-x: auto;
   word-break: normal;
   word-wrap:normal;
+  white-space: pre;
 }
 
 .highlight pre code {
