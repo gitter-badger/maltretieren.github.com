@@ -32,7 +32,6 @@ border-bottom: none !important;
 
 
 .highlight pre code * {
-  width:100%;
   white-space: nowrap;
 }
 
@@ -51,6 +50,7 @@ border-bottom: none !important;
 }
 
 .highlighttable {
+	width:100%;
     table-layout: fixed
 }
 
