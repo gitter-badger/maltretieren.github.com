@@ -111,7 +111,7 @@ myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance, data) {
 		console.log("Keenio Comment Id: "+$scope.commentId);
 		//$scope.$resolve
 		var postsUrl = 'https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/events/comments?api_key='+$scope.masterKey+'&filters=[{"property_name":"keen.id","operator":"eq","property_value":"'+$scope.id+'"}]';
-		console.log(postsurl)
+		console.log(postsUrl)
 		$http({method: 'POST', url: postsUrl}).
 			success(function(data, status, headers, config) {
 				// this callback will be called asynchronously
