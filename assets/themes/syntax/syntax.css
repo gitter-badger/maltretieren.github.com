@@ -29,6 +29,10 @@ border-bottom: none !important;
 -webkit-border-top-right-radius: 10px;
 }
 
+.linenodiv {
+  width:50px;
+}
+
 .highlight pre code * {
   width:100%;
   word-break:normal;
@@ -48,9 +52,6 @@ border-bottom: none !important;
   white-space: pre;       // forces <code> to respect <pre> formatting
 }
 
-.linenos linenodiv {
-  width:50px;
-}
 
 /* Solarized Light
 
