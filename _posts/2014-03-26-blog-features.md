@@ -32,4 +32,3 @@ published: true
 
 # Planned Improvements
 - Cleanup
-- Create a page to post new posts
