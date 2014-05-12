@@ -29,14 +29,6 @@
     -webkit-border-top-right-radius: 10px;
 }
 
-
-
-.highlight pre code * {
-    width:100%;
-    word-break:normal;
-    white-space: nowrap;
-}
-
 .highlight pre {
     width:100%;
     overflow-x: auto;

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/themes/syntax/syntax.css" afterPath="$PROJECT_DIR$/assets/themes/syntax/syntax.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,7 +55,7 @@
       <file leaf-file-name="syntax.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/themes/syntax/syntax.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="150" column="67" selection-start="5556" selection-end="5556" vertical-scroll-proportion="8.7027025" vertical-offset="318" max-vertical-offset="2340">
+            <state line="29" column="1" selection-start="675" selection-end="675" vertical-scroll-proportion="0.06666667" vertical-offset="393" max-vertical-offset="2220">
               <folding />
             </state>
           </provider>
@@ -445,7 +444,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329429" sideWeight="0.5004055" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.59736454" sideWeight="0.49959448" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.59736454" sideWeight="0.49959448" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -575,7 +574,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/themes/syntax/syntax.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="67" selection-start="5556" selection-end="5556" vertical-scroll-proportion="8.7027025" vertical-offset="318" max-vertical-offset="2340">
+        <state line="29" column="1" selection-start="675" selection-end="675" vertical-scroll-proportion="0.06666667" vertical-offset="393" max-vertical-offset="2220">
           <folding />
         </state>
       </provider>
