@@ -40,19 +40,22 @@ border-bottom: none !important;
   white-space: nowrap;
 }
 
-.highlight pre td {
+.highlight pre {
   width:100%;
   overflow-x: auto;
   word-break: normal;
   word-wrap:normal;
 }
 
-.highlight pre code td {
+.highlight pre code {
   width:100%;
   word-break:normal;
   white-space: pre;
 }
 
+.code {
+	width:100%;
+}
 
 /* Solarized Light
 
