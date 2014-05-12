@@ -96,7 +96,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $dialogs,$timeout, toas
 	}
 });
 
-myApp.controller("KeenioMasterCtrl", [function ($scope, $modalInstance, data) {
+myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance, data) {
 	$scope.user = {};
 	console.log($scope.commentId);
 	console.log(data);
@@ -114,7 +114,7 @@ myApp.controller("KeenioMasterCtrl", [function ($scope, $modalInstance, data) {
 		//console.log(url);
 		//https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/events/comments?api_key=MASTERKEY&filters=<your_filters_here>
 	};
-}]);
+});
 
 /**
  * Receive a complete list of all comments
