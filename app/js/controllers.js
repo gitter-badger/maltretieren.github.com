@@ -109,7 +109,18 @@ myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance, data) {
 		$scope.masterKey = $scope.user.name;
         console.log("Keenio Master key: "+$scope.masterKey);
 		console.log("Keenio Comment Id: "+$scope.commentId);
-		$scope.$resolve
+		//$scope.$resolve
+		var PostsUrl = 'https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/events/comments?api_key='+masterKey+'&filters=[{"property_name":"keen.id","operator":"eq","property_value":"'+$scope.id+'"}]';
+		$http({method: 'POST', url: postsUrl}).
+			success(function(data, status, headers, config) {
+				// this callback will be called asynchronously
+				// when the response is available
+				//console.log("Successfully received json containing all posts")
+				console.log("comment deleted");
+			}).
+			error(function(data, status, headers, config) {
+				alert("Error while getting json for posts: "+status)
+		});
 		//console.log("$scope.id: "+$scope.id);
 		//var url = 'https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/events/comments?api_key='+masterKey+'&filters=[{"property_name":"keen.id","operator":"eq","property_value":"'+$scope.id+'"}]';
 		//console.log(url);
