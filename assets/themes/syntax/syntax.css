@@ -39,8 +39,6 @@ border-bottom: none !important;
 
 .highlight pre {
   overflow-x: auto;
-  word-break: normal;
-  word-wrap:normal;
   white-space: pre;
 }
 
