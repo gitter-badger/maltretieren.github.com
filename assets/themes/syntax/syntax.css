@@ -29,9 +29,6 @@ border-bottom: none !important;
 -webkit-border-top-right-radius: 10px;
 }
 
-/*
-	Enable horizontal scrolling
-*/
 .highlight pre code * {
   width:100%;
   word-break:normal;
