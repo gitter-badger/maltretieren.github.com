@@ -96,10 +96,11 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $dialogs,$timeout, toas
 	}
 });
 
-myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance) {
+myApp.controller("KeenioMasterCtrl", function ($modalInstance) {
 	$scope.user = {};
 	console.log($scope.commentId);
 	console.log($scope.passIns);
+	console.log($scope);
 	
 	$scope.cancel = function(){
 		$modalInstance.dismiss('canceled');  
