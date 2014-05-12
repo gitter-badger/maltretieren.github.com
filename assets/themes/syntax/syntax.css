@@ -65,6 +65,12 @@ border-bottom: none !important;
   word-wrap:normal;
 }
 
+.highlighttable pre code {
+  width:100%;
+  word-break:normal;
+  white-space: pre;
+}
+
 
 
 /* Solarized Light
