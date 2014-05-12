@@ -30,7 +30,7 @@ border-bottom: none !important;
 }
 
 .linenodiv {
-  /* width:45px; */
+  width:45px;
 }
 
 .highlight pre code * {
@@ -54,7 +54,8 @@ border-bottom: none !important;
 }
 
 .highlighttable {
-	white-space:nowrap;
+	word-wrap: break-word;
+    table-layout: fixed
 }
 
 .code {
