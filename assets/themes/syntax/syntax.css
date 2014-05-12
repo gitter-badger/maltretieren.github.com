@@ -36,12 +36,12 @@ border-bottom: none !important;
 .highlight pre code * {
   width:100%;
   word-break:normal;
-  white-space: nowrap;    // this sets all children inside to nowrap
+  white-space: nowrap;
 }
 
 .highlight pre {
   width:100%;
-  overflow-x: auto;       // this sets the scrolling in x
+  overflow-x: auto;
   word-break: normal;
   word-wrap:normal;
 }
@@ -49,7 +49,7 @@ border-bottom: none !important;
 .highlight pre code {
   width:100%;
   word-break:normal;
-  white-space: pre;       // forces <code> to respect <pre> formatting
+  white-space: pre;
 }
 
 
