@@ -64,7 +64,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $dialogs,$timeout, toas
 	$scope.deleteComment = function(event) {
 		var cId = event.target.id;
 		//console.log("Delete: "+$scope.id);
-		var passIns = {commentId: 'blubb'};
+		var passIns = {commentId: cId};
 		var dlg = $dialogs.create('/app/partials/keenMaster.html','KeenioMasterCtrl',passIns,{key: false});
 		dlg.result.then(function(test){
 			console.log("fdasd" +test);
@@ -98,7 +98,8 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $dialogs,$timeout, toas
 
 myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance, data) {
 	$scope.user = {};
-	console.log(data);
+	$scope.commentId = data.commentId;
+	console.log($scope.commentId);
 	
 	$scope.cancel = function(){
 		$modalInstance.dismiss('canceled');  
@@ -107,6 +108,7 @@ myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance, data) {
 	$scope.save = function() {
 		$scope.masterKey = $scope.user.name;
         console.log("Keenio Master key: "+$scope.masterKey);
+		console.log("Keenio Comment Id: "+$scope.commentId);
 		$scope.$resolve
 		//console.log("$scope.id: "+$scope.id);
 		//var url = 'https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/events/comments?api_key='+masterKey+'&filters=[{"property_name":"keen.id","operator":"eq","property_value":"'+$scope.id+'"}]';
