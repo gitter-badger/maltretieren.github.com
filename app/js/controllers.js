@@ -91,7 +91,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $dialogs,$timeout, toas
 	}
 });
 
-myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance, $http, data) {
+myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance, $http, toaster, data) {
 	$scope.user = {};
 	$scope.commentId = data.commentId;
 	console.log($scope.commentId);
