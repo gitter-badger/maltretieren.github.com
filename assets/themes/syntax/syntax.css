@@ -29,11 +29,6 @@ border-bottom: none !important;
 -webkit-border-top-right-radius: 10px;
 }
 
-
-
-.highlight pre code * {
-}
-
 .highlight pre {
   overflow-x: auto;
   white-space: pre;
