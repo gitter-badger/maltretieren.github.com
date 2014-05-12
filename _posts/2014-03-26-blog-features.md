@@ -22,7 +22,7 @@ published: true
 - Create / Edit Delete posts
 - Login via Github (dependency to "gatekeeper" running on github (Oauth), but there is a fallback to provide username and password (basic authentication))
 - Interactive tables build out of blog posts - beautiful, searchable, sortable
-- Comments via keen.io
+- Comments via keen.io (delete comments for admin)
 - Ratings via keen.io
 
 # Design
