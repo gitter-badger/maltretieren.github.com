@@ -709,7 +709,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
     var contentPromise = GithubSrvc.editContent(path);
 	contentPromise.then(function(yaml) {
 		console.log(yaml);
-	}
+	});
 	
 	$scope.commitPath = "";
 	var savePromise = $q.defer();
