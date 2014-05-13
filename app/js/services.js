@@ -514,8 +514,11 @@ myApp.service("YamlFrontmatterSrvc", function () {
 					response[line[0]] = line[1].trim();
 				} else {
 					var element = line[0].split("-");
-					console.log(element);
-					// response[line[0]] = 
+					if(element.length === 1) {
+						console.log(element[0].trim());
+					} else {
+						console.log(element[1].trim());
+					}
 				}
 			}
 		}
