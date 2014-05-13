@@ -304,17 +304,15 @@ myApp.controller('ToasterController', function($scope, toaster) {
 	var scope = $scope;
 	
 	$scope.$on('Toast::githubCommitSuccess', function(event) {
-		scope.pop();
+		var toast = {
+			type: "success",
+			title: "Commit to GitHub successful",
+			message: "Edits saved on GitHub. Changes take some time to appear (refresh page after around 1 minute)..."
+		};
+		scope.pop(toast);
 	});
 	
-	var commitSuccess = {
-		type: "success",
-		title: "Commit to GitHub successful",
-		message: "Edits saved on GitHub. Changes take some time to appear (refresh page after around 1 minute)..."
-	};
-	var toast = commitSuccess;
-	
-	$scope.pop = function(text){
+	$scope.pop = function(toast){
 		toaster.pop(toast.type, toast.title, '<ul><li>'+toast.message+'</li></ul>', 5000, 'trustedHtml');
 		$scope.$apply();
     };

@@ -342,25 +342,25 @@ myApp.service("GithubSrvc", function (
         editContent: function(path) {
             var self = this;
             var path = path;
+			
+			// get the content you want to edit from github
             var githubInstance = GithubAuthService.instance();
             var repo = githubInstance.getRepo(config.github.user, config.github.repository);
-
-            //console.log(path);
             var branch = repo.getBranch("master");
             var contents = branch.read(path, false)
+			
+			// if the content is ready, fill the editor, when the save button is clicked a promise is resolved...
             var deferred = $q.defer();
             contents.then(function(result) {
-                //console.log(result.content);
                 $('#target-editor').markdown({
-                    savable:true,
+                    savable:false,
                     height:500,
                     onSave: function(e) {
-                        //self.commit(e.getContent(), path)
                         deferred.resolve(e.getContent());
                     }
                 });
-                $('#target-editor').show();
                 $("#target-editor").val(result.content);
+				$('#target-editor').show();
             })
             return deferred.promise;
         },
