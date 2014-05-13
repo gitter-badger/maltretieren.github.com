@@ -538,8 +538,14 @@ myApp.service("YamlSrvc", function () {
 		var response = "---\n";
 		for (var key in content) {
 			if(key !== "content") {
-				console.log(typeof content[key]);
-				response += key+": "+content[key]+"\n";
+				response += key+": ";
+				if (typeof content[key] === 'string') {
+					response += content[key]+"\n";
+				} else {
+					for(var i=0; i<content[key].length; i++) {
+						response += " -"+content[key][i];
+					}
+				}
 			}
 		}
 		response += "---\n";
