@@ -675,7 +675,7 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
     }
 });
 
-myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, toaster, UserModel, ParameterSrvc, GithubSrvc) {
+myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeout, toaster, UserModel, ParameterSrvc, GithubSrvc) {
     var scope = $scope;
 
     $scope.options = {}
