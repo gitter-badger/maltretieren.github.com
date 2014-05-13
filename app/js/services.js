@@ -503,7 +503,7 @@ myApp.service("PollingSrvc", function ($q, $timeout, UserModel, GithubAuthServic
 
 myApp.service("YamlFrontmatterSrvc", function () {
     var parse = function (content) {
-		var response = {};
+		var response = [];
 		
 		var contentSplit = content.split("---");
 		var lineSplit = contentSplit[1].split("\n");
