@@ -350,19 +350,19 @@ myApp.service("GithubSrvc", function (
             var contents = branch.read(path, false)
 			
 			// if the content is ready, fill the editor, when the save button is clicked a promise is resolved...
-            var deferred = $q.defer();
             contents.then(function(result) {
-                $('#target-editor').markdown({
+                var editor = document.getElementById('target-editor');
+				editor.markdown({
                     savable:false,
                     height:500,
                     onSave: function(e) {
                         deferred.resolve(e.getContent());
                     }
                 });
-                $("#target-editor").val(result.content);
-				$('#target-editor').show();
+                editor.val(result.content);
+				editor.show();
             })
-            return deferred.promise;
+            return editor;
         },
 		commit: function(text, path, branch, showMessage, force) {
 			if(typeof branch === 'undefined') {
