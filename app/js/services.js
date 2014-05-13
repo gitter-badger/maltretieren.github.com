@@ -535,12 +535,15 @@ myApp.service("YamlSrvc", function () {
     };
 	
 	var create = function (content) {
-		var response = "create response";
+		var response = "---\n";
 		for (var key in content) {
 			if(key !== "content") {
-				console.log(key + " is " + content[key]);
+				response += key+": "content[key]"\n";
 			}
 		}
+		response += "---\n";
+		response += content['content'];
+		console.log(response);
 		return response;
     };
 	
