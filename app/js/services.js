@@ -543,7 +543,7 @@ myApp.service("YamlSrvc", function () {
 					response += content[key]+"\n";
 				} else {
 					for(var i=0; i<content[key].length; i++) {
-						response += " -"+content[key][i]+"\n";
+						response += "\n - "+content[key][i]+"\n";
 					}
 				}
 			}
