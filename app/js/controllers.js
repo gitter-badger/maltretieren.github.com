@@ -708,12 +708,12 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
     // promise to save...
     var editor = GithubSrvc.editContent(path);
 	$scope.commitPath = "";
-	var savePromise = $q.defer().promise;
+	var savePromise = $q.defer();
 	$scope.save = function() {
 		var content = editor.markdown()[0].value;
 		savePromise.resolve(content)
 	}
-    savePromise.then(function(content) {
+    savePromise.promise.then(function(content) {
         var commitPath = "";
         if($scope.options.date instanceof Date) {
             $scope.commitPath = $scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replace(/ /g,"-")+".md";
