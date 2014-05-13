@@ -351,6 +351,7 @@ myApp.service("GithubSrvc", function (
 			
 			// if the content is ready, fill the editor, when the save button is clicked a promise is resolved...
 			var editor = document.getElementById('target-editor');
+			console.log(editor);
             contents.then(function(result) {
 				editor.markdown({
                     savable:false,
