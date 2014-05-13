@@ -535,6 +535,7 @@ myApp.service("YamlSrvc", function () {
     };
 	
 	var create = function (content) {
+        console.log(content)
 		var response = "---\n";
 		for (var key in content) {
 			if(key !== "content") {
