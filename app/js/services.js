@@ -518,8 +518,7 @@ myApp.service("YamlFrontmatterSrvc", function () {
 					if(element.length === 1) {
 						remember = element[0].trim();
 					} else {
-						console.log(remember);
-						console.log(element[1].trim());
+						response[remember].push(element[1].trim())
 					}
 				}
 			}
