@@ -307,9 +307,15 @@ myApp.controller('ToasterController', function($scope, toaster) {
 		scope.pop();
 	});
 	
+	var commitSuccess = {
+		type: "success",
+		title: "Commit to GitHub successful",
+		message: "Edits saved on GitHub. Changes take some time to appear (refresh page after around 1 minute)..."
+	};
+	var toast = commitSuccess;
+	
 	$scope.pop = function(text){
-		console.log("TOAAAST!");
-		toaster.pop('success', "Commit to GitHub successful", '<ul><li>Edits saved on GitHub. Changes take some time to appear (refresh page after around 1 minute)...</li></ul>', 5000, 'trustedHtml');
+		toaster.pop(toast.type, toast.title, '<ul><li>'+toast.message+'</li></ul>', 5000, 'trustedHtml');
 		$scope.$apply();
     };
     
@@ -683,6 +689,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
     var path = ParameterSrvc.urlParams['path'];
     var url = ParameterSrvc.urlParams['url'];
 	
+	// reconstruct data/title from file name...
     if(typeof(path) != 'undefined' && typeof(url) !='undefined') {
         var splif = path.split("-");
         date = splif[0].split("/")[1]+"-"+splif[1]+"-"+splif[2];
@@ -744,10 +751,10 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
 			});
         },function(btn){
             console.log("cancel delete")
-            //$scope.confirmed = 'Shame on you for not thinking this is awesome!';
         });
     }
 
+	// date picker
     $scope.today = function() {
         $scope.options.date = new Date();
     };
