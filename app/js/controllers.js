@@ -149,9 +149,8 @@ myApp.controller("TableCtrl",function ($scope, $http) {
 			// this callback will be called asynchronously
 			// when the response is available
 			//console.log("Successfully received json containing all posts")
-			console.log(data.replace(/\s+/g, ' '));
 			$scope.posts = {
-				entries: data.replace(/\s+/g, ' ')
+				entries: data
 			}
 		}).
 		error(function(data, status, headers, config) {
