@@ -37,7 +37,16 @@
       <file leaf-file-name="edit.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="54" selection-start="1901" selection-end="1901" vertical-scroll-proportion="0.70826304" vertical-offset="195" max-vertical-offset="885">
+            <state line="44" column="38" selection-start="2014" selection-end="2014" vertical-scroll-proportion="0.7841484" vertical-offset="195" max-vertical-offset="945">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/admin/admin.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="99" selection-start="2494" selection-end="2565" vertical-scroll-proportion="-17.5" vertical-offset="345" max-vertical-offset="975">
               <folding />
             </state>
           </provider>
@@ -532,11 +541,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_includes/accessoires/accessoire-table">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/themes/twitter/page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="354">
@@ -639,9 +643,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="99" selection-start="2494" selection-end="2565" vertical-scroll-proportion="-17.5" vertical-offset="345" max-vertical-offset="975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="54" selection-start="1901" selection-end="1901" vertical-scroll-proportion="0.70826304" vertical-offset="195" max-vertical-offset="885">
+        <state line="44" column="38" selection-start="2014" selection-end="2014" vertical-scroll-proportion="0.7841484" vertical-offset="195" max-vertical-offset="945">
           <folding />
         </state>
       </provider>

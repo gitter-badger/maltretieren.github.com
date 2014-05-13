@@ -41,6 +41,10 @@ comments: false
                     <h1>Tags</h1>
                     <div ng-repeat="entry in yaml.tags">{{entry}}</div>
                 </div>
+                <div class="row">
+                    <h2>Frontpage</h2‚>
+                    <input type="checkbox" check-list='yaml.frontpage'/>
+                </div>
 			    <textarea id="target-editor" style="display:none;color:#464545;"></textarea>
 				<br />
 				<button ng-disabled="(editForm.$dirty && editForm.$invalid)" ng-click="save(editForm.$pristine)" class="btn btn-primary pull-right" type="button" disabled="disabled">
