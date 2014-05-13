@@ -33,6 +33,14 @@ comments: false
 						</div>
 					</div>
 				</div>
+                <div class="row">
+                    <h1>Categories</h1>
+                    <div ng-repeat="entry in yaml.categories">{{entry}}</div>
+                </div>
+                <div class="row">
+                    <h1>Tags</h1>
+                    <div ng-repeat="entry in yaml.tags">{{entry}}</div>
+                </div>
 			    <textarea id="target-editor" style="display:none;color:#464545;"></textarea>
 				<br />
 				<button ng-disabled="(editForm.$dirty && editForm.$invalid)" ng-click="save(editForm.$pristine)" class="btn btn-primary pull-right" type="button" disabled="disabled">
@@ -41,7 +49,6 @@ comments: false
 				<br />
 			</form>
 		</div>
-        {{yaml.categories}}
     </div>
 	
 {% endraw %}
