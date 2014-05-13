@@ -109,7 +109,7 @@ myApp.service("GithubAuthService", function ($http, $q, $rootScope, UserModel) {
 
 myApp.service("GithubSrvc", function (
     $rootScope, $q, $interval, GithubAuthService,
-    UserModel, PollingSrvc, YamlFrontmatterSrvc, ParameterSrvc, $http, $timeout) {
+    UserModel, PollingSrvc, YamlSrvc, ParameterSrvc, $http, $timeout) {
 
     return {
         requestCode: function() {
@@ -352,7 +352,7 @@ myApp.service("GithubSrvc", function (
 			// if the content is ready, fill the editor, when the save button is clicked a promise is resolved...
 			var deferred = $q.defer();
             contents.then(function(result) {
-				var frontMatter = YamlFrontmatterSrvc.parse(result.content);
+				var frontMatter = YamlSrvc.parse(result.content);
 				console.log(frontMatter);
 				$('#target-editor').markdown({
                     savable:false,
@@ -505,7 +505,7 @@ myApp.service("PollingSrvc", function ($q, $timeout, UserModel, GithubAuthServic
     return { checkForBranchContent: poll }
 });
 
-myApp.service("YamlFrontmatterSrvc", function () {
+myApp.service("YamlSrvc", function () {
     var parse = function (content) {
 		var response = {};
 		
@@ -534,7 +534,15 @@ myApp.service("YamlFrontmatterSrvc", function () {
 		return response;
     };
 	
-    return { parse: parse }
+	var create = function (content) {
+		var response = "create response";
+		return response;
+    };
+	
+    return { 
+		parse: parse,
+		create: create
+	}
 });
 
 myApp.service("PollingImgSrvc", function ($q, $timeout) {

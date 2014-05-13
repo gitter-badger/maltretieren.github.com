@@ -675,7 +675,7 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
     }
 });
 
-myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeout, toaster, UserModel, ParameterSrvc, GithubSrvc) {
+myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeout, toaster, YamlSrvc, UserModel, ParameterSrvc, GithubSrvc) {
     var scope = $scope;
 
     $scope.options = {}
@@ -708,14 +708,17 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
     // init the editor
     var contentPromise = GithubSrvc.editContent(path);
 	contentPromise.then(function(yaml) {
-		console.log(yaml);
+		// attach yaml object to scope
+		//console.log(yaml);
 	});
 	
 	$scope.commitPath = "";
 	var savePromise = $q.defer();
 	$scope.save = function() {
 		var content = $('#target-editor').markdown()[0].value;
-		savePromise.resolve(content)
+		content = YamlSrvc.create(content);
+		console.log(content);
+		//savePromise.resolve(content)
 	}
     savePromise.promise.then(function(content) {
         var commitPath = "";
