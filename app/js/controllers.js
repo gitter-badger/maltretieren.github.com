@@ -150,7 +150,7 @@ myApp.controller("TableCtrl",function ($scope, $http) {
 			// when the response is available
 			//console.log("Successfully received json containing all posts")
 			$scope.posts = {
-				entries: data.replace(/\s+/g, ' ');
+				entries: data.replace(/\s+/g, ' ')
 			}
 		}).
 		error(function(data, status, headers, config) {
