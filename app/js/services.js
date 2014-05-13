@@ -351,7 +351,8 @@ myApp.service("GithubSrvc", function (
 			
 			// if the content is ready, fill the editor, when the save button is clicked a promise is resolved...
             contents.then(function(result) {
-				YamlFrontmatterSrvc.parse(result.content);
+				var frontMatter = YamlFrontmatterSrvc.parse(result.content);
+				console.log(frontMatter);
 				$('#target-editor').markdown({
                     savable:false,
                     height:500
@@ -526,7 +527,7 @@ myApp.service("YamlFrontmatterSrvc", function () {
 				}
 			}
 		}
-		console.log(response);
+		return response;
     };
 	
     return { parse: parse }
