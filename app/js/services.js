@@ -505,7 +505,11 @@ myApp.service("YamlFrontmatterSrvc", function () {
     var parse = function (content) {
 		var contentSplit = content.split("---");
 		var lineSplit = contentSplit[1].split("\n");
-		console.log(lineSplit);
+		for(var i=0; i<lineSplit.length; i++) {
+			if(lineSplit[i] !== "") {
+				console.log(lineSplit[i]);
+			}
+		}
     };
 	
     return { parse: parse }
