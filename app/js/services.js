@@ -510,8 +510,8 @@ myApp.service("YamlFrontmatterSrvc", function () {
 		for(var i=0; i<lineSplit.length; i++) {
 			if(lineSplit[i] !== "") {
 				var line = lineSplit[i].split(":");
-				if(line.length===2 && line[1] !== "") {
-					response[line[0]] = line[1];
+				if(line.length===2 && line[1].trim() !== "") {
+					response[line[0]] = line[1].trim();
 				}
 			}
 		}
