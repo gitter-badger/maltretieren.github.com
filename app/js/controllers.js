@@ -709,7 +709,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
     var contentPromise = GithubSrvc.editContent(path);
 	contentPromise.then(function(yaml) {
 		// attach yaml object to scope
-		//console.log(yaml);
+		$scope.yaml = yaml;
 	});
 	
 	$scope.commitPath = "";
@@ -717,7 +717,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
 	$scope.save = function() {
 		var content = $('#target-editor').markdown()[0].value;
 		content = YamlSrvc.create(content);
-		console.log(content);
+		console.log($scope.yaml);
 		//savePromise.resolve(content)
 	}
     savePromise.promise.then(function(content) {
