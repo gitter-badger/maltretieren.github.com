@@ -705,7 +705,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
         path = "_posts/templates/2014-01-01-edit-template.md";
     }
 
-    // promise to save...
+    // init the editor
     var editor = GithubSrvc.editContent(path);
 	$scope.commitPath = "";
 	var savePromise = $q.defer();

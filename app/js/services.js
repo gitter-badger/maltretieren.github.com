@@ -109,7 +109,7 @@ myApp.service("GithubAuthService", function ($http, $q, $rootScope, UserModel) {
 
 myApp.service("GithubSrvc", function (
     $rootScope, $q, $interval, GithubAuthService,
-    UserModel, PollingSrvc, ParameterSrvc, $http, $timeout) {
+    UserModel, PollingSrvc, YamlFrontmatterSrvc, ParameterSrvc, $http, $timeout) {
 
     return {
         requestCode: function() {
@@ -351,13 +351,10 @@ myApp.service("GithubSrvc", function (
 			
 			// if the content is ready, fill the editor, when the save button is clicked a promise is resolved...
             contents.then(function(result) {
+				YamlFrontmatterSrvc.parse(result.content);
 				$('#target-editor').markdown({
                     savable:false,
-                    height:500,
-					callback: function(e){
-						var content = e.getContent();
-						console.log(content);
-					}
+                    height:500
 				});
                 $('#target-editor').val(result.content);
 				$('#target-editor').show();
@@ -502,6 +499,13 @@ myApp.service("PollingSrvc", function ($q, $timeout, UserModel, GithubAuthServic
         return deferred.promise;
     };
     return { checkForBranchContent: poll }
+});
+
+myApp.service("YamlFrontmatterSrvc", function () {
+    var parse = function (content) {
+        console.log("parse frontmatter");
+    };
+    return { parse: parse }
 });
 
 myApp.service("PollingImgSrvc", function ($q, $timeout) {
