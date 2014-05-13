@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/themes/syntax/syntax.css" afterPath="$PROJECT_DIR$/assets/themes/syntax/syntax.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,7 +56,7 @@
       <file leaf-file-name="syntax.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/themes/syntax/syntax.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="21" selection-start="777" selection-end="777" vertical-scroll-proportion="0.61904764" vertical-offset="135" max-vertical-offset="2235">
+            <state line="53" column="2" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.9047619" vertical-offset="225" max-vertical-offset="2235">
               <folding />
             </state>
           </provider>
@@ -306,9 +307,9 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../node-github" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="90" />
-    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="891" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="936" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="94" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="89" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
@@ -531,13 +532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="210">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2175">
@@ -572,9 +566,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/themes/syntax/syntax.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="21" selection-start="777" selection-end="777" vertical-scroll-proportion="0.61904764" vertical-offset="135" max-vertical-offset="2235">
+        <state line="53" column="2" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.9047619" vertical-offset="225" max-vertical-offset="2235">
           <folding />
         </state>
       </provider>
