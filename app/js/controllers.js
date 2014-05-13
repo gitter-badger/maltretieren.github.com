@@ -708,6 +708,9 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
     // promise to save...
     var promise = GithubSrvc.editContent(path);
 	$scope.commitPath = "";
+	$scope.save = function() {
+		console.log("save");
+	}
     promise.then(function(content) {
         var commitPath = "";
         if($scope.options.date instanceof Date) {
