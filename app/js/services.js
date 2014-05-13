@@ -354,7 +354,9 @@ myApp.service("GithubSrvc", function (
 				$('#target-editor').markdown({
                     savable:false,
                     height:500
-                });
+                }, callback: function(e){
+					e.getContent();
+				});
                 $('#target-editor').val(result.content);
 				$('#target-editor').show();
             })
