@@ -351,16 +351,14 @@ myApp.service("GithubSrvc", function (
 			
 			// if the content is ready, fill the editor, when the save button is clicked a promise is resolved...
             contents.then(function(result) {
-				var editor = document.getElementById("target-editor");
-				editor.markdown({
+				$('#target-editor').markdown({
                     savable:false,
                     height:500
                 });
-                editor.val(result.content);
-				editor.show();
+                $('#target-editor').val(result.content);
+				$('#target-editor').show();
             })
-			var editor = document.getElementById("target-editor");
-            return editor;
+            return $('#target-editor');
         },
 		commit: function(text, path, branch, showMessage, force) {
 			if(typeof branch === 'undefined') {
