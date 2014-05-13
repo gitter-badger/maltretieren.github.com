@@ -508,7 +508,7 @@ myApp.service("YamlFrontmatterSrvc", function () {
 		
 		var contentSplit = content.split("---");
 		var lineSplit = contentSplit[1].split("\n");
-		response[content] = contentSplit[2];
+		response["content"] = contentSplit[2];
 		
 		var remember = "";	
 		for(var i=0; i<lineSplit.length; i++) {
