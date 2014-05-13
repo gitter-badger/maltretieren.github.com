@@ -357,7 +357,7 @@ myApp.service("GithubSrvc", function (
                     savable:false,
                     height:500
 				});
-                $('#target-editor').val(result.content);
+                $('#target-editor').val(frontMatter.content);
 				$('#target-editor').show();
             })
             return $('#target-editor');
@@ -528,7 +528,6 @@ myApp.service("YamlFrontmatterSrvc", function () {
 				}
 			}
 		}
-		console.log(response);
 		return response;
     };
 	
