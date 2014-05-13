@@ -709,6 +709,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
     var editor = GithubSrvc.editContent(path);
 	$scope.commitPath = "";
 	$scope.save = function() {
+		console.log($('#target-editor'));
 		//console.log($('#target-editor').getContent());
 	}
     /**promise.then(function(content) {
