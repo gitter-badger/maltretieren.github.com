@@ -508,6 +508,7 @@ myApp.service("YamlFrontmatterSrvc", function () {
 		var contentSplit = content.split("---");
 		var lineSplit = contentSplit[1].split("\n");
 		for(var i=0; i<lineSplit.length; i++) {
+			var remember = "";			
 			if(lineSplit[i] !== "") {
 				var line = lineSplit[i].split(":");
 				if(line.length===2 && line[1].trim() !== "") {
@@ -515,8 +516,9 @@ myApp.service("YamlFrontmatterSrvc", function () {
 				} else {
 					var element = line[0].split("-");
 					if(element.length === 1) {
-						console.log(element[0].trim());
+						remember = element[0].trim();
 					} else {
+						console.log(remember);
 						console.log(element[1].trim());
 					}
 				}
