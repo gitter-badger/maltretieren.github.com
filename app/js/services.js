@@ -354,10 +354,7 @@ myApp.service("GithubSrvc", function (
 				var editor = document.getElementById("target-editor");
 				editor.markdown({
                     savable:false,
-                    height:500,
-                    onSave: function(e) {
-                        deferred.resolve(e.getContent());
-                    }
+                    height:500
                 });
                 editor.val(result.content);
 				editor.show();
