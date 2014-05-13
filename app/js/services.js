@@ -353,10 +353,11 @@ myApp.service("GithubSrvc", function (
             contents.then(function(result) {
 				$('#target-editor').markdown({
                     savable:false,
-                    height:500
-                }, callback: function(e){
-					var content = e.getContent();
-					console.log(content);
+                    height:500,
+					callback: function(e){
+						var content = e.getContent();
+						console.log(content);
+					}
 				});
                 $('#target-editor').val(result.content);
 				$('#target-editor').show();
