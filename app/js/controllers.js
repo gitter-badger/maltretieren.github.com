@@ -706,11 +706,15 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
     }
 
     // init the editor
-    var editor = GithubSrvc.editContent(path);
+    var contentPromise = GithubSrvc.editContent(path);
+	contentPromise.then(function(yaml) {
+		console.log(yaml);
+	}
+	
 	$scope.commitPath = "";
 	var savePromise = $q.defer();
 	$scope.save = function() {
-		var content = editor.markdown()[0].value;
+		var content = $('#target-editor').markdown()[0].value;
 		savePromise.resolve(content)
 	}
     savePromise.promise.then(function(content) {

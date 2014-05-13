@@ -350,6 +350,7 @@ myApp.service("GithubSrvc", function (
             var contents = branch.read(path, false)
 			
 			// if the content is ready, fill the editor, when the save button is clicked a promise is resolved...
+			deferred = $q.defer();
             contents.then(function(result) {
 				var frontMatter = YamlFrontmatterSrvc.parse(result.content);
 				console.log(frontMatter);
@@ -359,8 +360,10 @@ myApp.service("GithubSrvc", function (
 				});
                 $('#target-editor').val(frontMatter.content);
 				$('#target-editor').show();
+				
+				deferred.resolve(frontMatter);
             })
-            return $('#target-editor');
+            return deferred.promise;
         },
 		commit: function(text, path, branch, showMessage, force) {
 			if(typeof branch === 'undefined') {
