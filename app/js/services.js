@@ -514,7 +514,7 @@ myApp.service("YamlFrontmatterSrvc", function () {
 					response[line[0]] = line[1].trim();
 				} else {
 					var element = line[1].split("-");
-					console.log(element[1].trim());
+					console.log(element);
 					// response[line[0]] = 
 				}
 			}
