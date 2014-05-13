@@ -355,7 +355,8 @@ myApp.service("GithubSrvc", function (
                     savable:false,
                     height:500
                 }, callback: function(e){
-					e.getContent();
+					var content = e.getContent();
+					console.log(content);
 				});
                 $('#target-editor').val(result.content);
 				$('#target-editor').show();
