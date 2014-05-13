@@ -536,6 +536,9 @@ myApp.service("YamlSrvc", function () {
 	
 	var create = function (content) {
 		var response = "create response";
+		for(var i=0; i<content.length; i++) {
+			console.log(content[i]);
+		}
 		return response;
     };
 	
