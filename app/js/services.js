@@ -538,7 +538,7 @@ myApp.service("YamlSrvc", function () {
 		var response = "---\n";
 		for (var key in content) {
 			if(key !== "content") {
-				response += key+": "content[key]"\n";
+				response += key+": "+content[key]+"\n";
 			}
 		}
 		response += "---\n";
