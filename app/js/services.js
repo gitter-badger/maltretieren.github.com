@@ -503,7 +503,7 @@ myApp.service("PollingSrvc", function ($q, $timeout, UserModel, GithubAuthServic
 
 myApp.service("YamlFrontmatterSrvc", function () {
     var parse = function (content) {
-        console.log("parse frontmatter");
+        console.log("parse "+content);
     };
     return { parse: parse }
 });
