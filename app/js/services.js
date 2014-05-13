@@ -507,18 +507,21 @@ myApp.service("YamlFrontmatterSrvc", function () {
 		
 		var contentSplit = content.split("---");
 		var lineSplit = contentSplit[1].split("\n");
+		
+		var remember = "";	
 		for(var i=0; i<lineSplit.length; i++) {
-			var remember = "";			
 			if(lineSplit[i] !== "") {
 				var line = lineSplit[i].split(":");
 				if(line.length===2 && line[1].trim() !== "") {
 					response[line[0]] = line[1].trim();
+					remember = "";
 				} else {
 					var element = line[0].split("-");
 					if(element.length === 1) {
 						remember = element[0].trim();
+						response[remember] = [];
 					} else {
-						response[remember] = element[1].trim();
+						response[remember].push(element[1].trim());
 					}
 				}
 			}
