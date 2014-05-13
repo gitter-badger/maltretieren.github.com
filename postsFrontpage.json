@@ -1,6 +1,7 @@
 ---
 layout: none
 ---
+{% endstrip %}
 [{% for post in site.categories.frontpage %}{
     "Date": "{{ post.date | date_to_string }}",
     "Title": "{{ post.title }}",
@@ -13,3 +14,4 @@ layout: none
 			"{{tag}}"
 		{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
 }{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
+{% endstrip %}
