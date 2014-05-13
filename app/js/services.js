@@ -550,7 +550,6 @@ myApp.service("YamlSrvc", function () {
 		}
 		response += "---\n";
 		response += content['content'];
-		console.log(response);
 		return response;
     };
 	
