@@ -708,11 +708,12 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
     // promise to save...
     var editor = GithubSrvc.editContent(path);
 	$scope.commitPath = "";
+	var savePromise = $q.defer().promise;
 	$scope.save = function() {
-		editor.markdown()[0].value);
-		//console.log($('#target-editor').getContent());
+		var content = editor.markdown()[0].value;
+		savePromise.resolve(content)
 	}
-    /**promise.then(function(content) {
+    savePromise.then(function(content) {
         var commitPath = "";
         if($scope.options.date instanceof Date) {
             $scope.commitPath = $scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replace(/ /g,"-")+".md";
@@ -736,7 +737,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $modal, $timeout, 
 				window.location = config.github.redirection_url+"/frontpage/"+$scope.commitPath.replace("-","/");
             }
         }, 10000);
-    });*/
+    });
 
     $scope.confirmed = 'You have yet to be confirmed!';
     $scope.delete = function() {
