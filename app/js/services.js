@@ -526,7 +526,11 @@ myApp.service("YamlSrvc", function () {
 						remember = element[0].trim();
 						response[remember] = [];
 					} else {
-						response[remember].push(JSON.stringify(element[1].trim()));
+                        if(element[1].trim() === "true" || element[1].trim() === "false") {
+						    response[remember].push(Boolean(element[1].trim()));
+                        } else {
+                            response[remember].push(element[1].trim());
+                        }
 					}
 				}
 			}
