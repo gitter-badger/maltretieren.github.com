@@ -43,7 +43,7 @@ comments: false
                 </div>
                 <div class="row">
                     <h1>Categories</h1>
-                    <div ng-repeat="entry in yaml.categories">{{entry}}</div>
+                    <div ng-repeat="(title, entry) in yaml.categories">{{title}}, {{entry}}</div>
                 </div>
                 <div class="row">
                     <h1>Tags</h1>
