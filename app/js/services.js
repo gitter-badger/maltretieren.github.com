@@ -507,28 +507,26 @@ myApp.service("PollingSrvc", function ($q, $timeout, UserModel, GithubAuthServic
 
 myApp.service("YamlSrvc", function () {
     var parse = function (content) {
-		var response = [];
+		var response = {};
 		
 		var contentSplit = content.split("---");
 		var lineSplit = contentSplit[1].split("\n");
-		response.push({'content': contentSplit[2]});
+		response["content"] = contentSplit[2];
 		
 		var remember = "";	
 		for(var i=0; i<lineSplit.length; i++) {
 			if(lineSplit[i] !== "") {
 				var line = lineSplit[i].split(":");
 				if(line.length===2 && line[1].trim() !== "") {
-					var obj = {};
-					obj[line[0]] = line[1].trim();
-					response.push(obj);
+					response[line[0]] = line[1].trim();
+					remember = "";
 				} else {
 					var element = line[0].split("-");
 					if(element.length === 1) {
 						remember = element[0].trim();
+						response[remember] = [];
 					} else {
-						var obj = {};
-						obj[remember] = element[1].trim();
-						response.push(obj);
+						response[remember].push(element[1].trim());
 					}
 				}
 			}
