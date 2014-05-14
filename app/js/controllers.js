@@ -711,7 +711,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
 	contentPromise.then(function(yaml) {
 		// attach yaml object to scope
 		scope.yaml = yaml;
-		scope.frontpage = yaml.frontpage
+		console.log(yaml.frontpage);
 	});
 	
 	$scope.commitPath = "";
