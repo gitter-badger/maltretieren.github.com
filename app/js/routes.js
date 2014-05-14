@@ -1,7 +1,8 @@
 'use strict';
 
 // ngSantinize: for confirm dialogs -> https://github.com/m-e-conroy/angular-dialog-service
-var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ngSanitize', 'dialogs', 'ngResource', 'ui.bootstrap', 'toaster']);
+// bootstrap-tagsinput: http://timschlechter.github.io/bootstrap-tagsinput/examples/
+var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ngSanitize', 'dialogs', 'bootstrap-tagsinput', 'ngResource', 'ui.bootstrap', 'toaster']);
 
 myApp.config(function ($routeProvider) {
 
