@@ -513,7 +513,9 @@ myApp.service("YamlSrvc", function () {
 		var lineSplit = contentSplit[1].split("\n");
 		response["content"] = contentSplit[2];
 		
-		var remember = "";	
+		var remember = "";
+
+        // parse the text to an js object
 		for(var i=0; i<lineSplit.length; i++) {
 			if(lineSplit[i] !== "") {
 				var line = lineSplit[i].split(":");
@@ -535,11 +537,8 @@ myApp.service("YamlSrvc", function () {
 						remember = element[0].trim();
 						response[remember] = [];
 					} else {
-                        console.log(element[1].trim());
                         if(element[1].trim() === "true" || element[1].trim() === "false") {
-                            console.log("boolean");
                             var value = Boolean(element[1].trim());
-                            console.log(typeof value);
 						    response[remember].push(value);
                         } else {
                             response[remember].push(element[1].trim());
