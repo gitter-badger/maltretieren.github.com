@@ -528,11 +528,12 @@ myApp.service("YamlSrvc", function () {
                     response[line[0]] = value;
 				} else {
 					var element = line[0].split("-");
-                    var value = element[1].trim();
+                    var value = "";
 					if(element.length === 1) {
 						remember = value;
 						response[remember] = [];
 					} else {
+                        value = element[1].trim();
                         if(value === "true" || value === "false") {
                             value = Boolean(element[1].trim());
 						    response[remember].push(value);
