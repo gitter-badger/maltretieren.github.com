@@ -521,16 +521,11 @@ myApp.service("YamlSrvc", function () {
 				var line = lineSplit[i].split(":");
 				if(line.length===2 && line[1].trim() !== "") {
                     // deal with boolean
-                    if(line[1].trim() === "true" || line[1].trim().trim() === "false") {
-                        console.log("boolean");
-                        var value = Boolean(line[1].trim());
-                        console.log(typeof value);
-                        response[line[0]] = value;
-                        remember = "";
-                    } else {
-                        response[line[0]] = line[1].trim();
-                        remember = "";
+                    var value = line[1].trim();
+                    if(value === "true" || value === "false") {
+                        value = Boolean(line[1].trim());
                     }
+                    response[line[0]] = value;
 				} else {
 					var element = line[0].split("-");
 					if(element.length === 1) {
