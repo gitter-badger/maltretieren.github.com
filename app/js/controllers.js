@@ -695,11 +695,11 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
 
     $scope.getTagClass = function(city) {
         switch (city.continent) {
-            case 'Europe' : return 'badge badge-info';
-            case 'America' : return 'label label-important';
-            case 'Australia': return 'badge badge-success';
-            case 'Africa' : return 'label label-inverse';
-            case 'Asia' : return 'badge badge-warning';
+            case 'Europe' : return 'tag label label-info';
+            case 'America' : return 'tag label label-info';
+            case 'Australia': return 'tag label label-info';
+            case 'Africa' : return 'tag label label-info';
+            case 'Asia' : return 'tag label label-info';
         }
     };
 
