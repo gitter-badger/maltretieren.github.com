@@ -38,16 +38,17 @@ comments: false
                     <div>{{yaml.layout}}</div>
                 </div>
                 <div class="row">
-                    <h1>tagline</h1>
+                    <h1>Tagline</h1>
                     <div>{{yaml.tagline}}</div>
                 </div>
                 <div class="row">
                     <h1>Categories</h1>
-                    <div ng-repeat="(title, entry) in yaml.categories">{{title}}, {{entry}}</div>
+                    <div ng-repeat="entry in yaml.categories">{{entry}}</div>
                 </div>
                 <div class="row">
                     <h1>Tags</h1>
                     <div ng-repeat="entry in yaml.tags">{{entry}}</div>
+                    <input type="text" value="Amsterdam,Washington,Sydney,Beijing,Cairo" data-role="tagsinput" placeholder="Add tags" />
                 </div>
                 <div class="row">
                     <h2>Frontpage</h2>
