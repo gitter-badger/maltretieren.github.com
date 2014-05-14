@@ -527,6 +527,7 @@ myApp.service("YamlSrvc", function () {
 						response[remember] = [];
 					} else {
                         if(element[1].trim() === "true" || element[1].trim() === "false") {
+                            console.log("boolean");
                             var value = Boolean(element[1].trim());
                             console.log(typeof value);
 						    response[remember].push(value);
