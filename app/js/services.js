@@ -507,7 +507,7 @@ myApp.service("PollingSrvc", function ($q, $timeout, UserModel, GithubAuthServic
 
 myApp.service("YamlSrvc", function () {
     var parse = function (content) {
-		var response = {};
+		var response = [];
 		
 		var contentSplit = content.split("---");
 		var lineSplit = contentSplit[1].split("\n");
@@ -524,9 +524,10 @@ myApp.service("YamlSrvc", function () {
 					var element = line[0].split("-");
 					if(element.length === 1) {
 						remember = element[0].trim();
-						response[remember] = [];
 					} else {
-						response[remember].push(element[1].trim());
+						response.push({
+							remember: element[1].trim()
+						});
 					}
 				}
 			}
