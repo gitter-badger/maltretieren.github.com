@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services.js" afterPath="$PROJECT_DIR$/app/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,19 +52,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="681" column="21" selection-start="23160" selection-end="23160" vertical-scroll-proportion="0.0" vertical-offset="10380" max-vertical-offset="12705">
+            <state line="713" column="26" selection-start="24199" selection-end="24199" vertical-scroll-proportion="0.9967585" vertical-offset="10080" max-vertical-offset="12690">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="533" column="41" selection-start="19400" selection-end="19400" vertical-scroll-proportion="0.534846" vertical-offset="7665" max-vertical-offset="9435">
+            <state line="533" column="41" selection-start="19400" selection-end="19400" vertical-scroll-proportion="0.0" vertical-offset="7440" max-vertical-offset="9435">
               <folding />
             </state>
           </provider>
@@ -146,9 +146,9 @@
         <option value="$PROJECT_DIR$/_posts/2014-03-31-heroku.md" />
         <option value="$PROJECT_DIR$/assets/themes/syntax/syntax.css" />
         <option value="$PROJECT_DIR$/app/partials/postsFrontpage.html" />
-        <option value="$PROJECT_DIR$/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/app/admin/edit.html" />
         <option value="$PROJECT_DIR$/app/js/services.js" />
+        <option value="$PROJECT_DIR$/app/js/controllers.js" />
       </list>
     </option>
   </component>
@@ -629,16 +629,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
+    <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="681" column="21" selection-start="23160" selection-end="23160" vertical-scroll-proportion="0.0" vertical-offset="10110" max-vertical-offset="12705">
+        <state line="533" column="41" selection-start="19400" selection-end="19400" vertical-scroll-proportion="0.0" vertical-offset="7440" max-vertical-offset="9435">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/services.js">
+    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="533" column="41" selection-start="19400" selection-end="19400" vertical-scroll-proportion="0.534846" vertical-offset="7665" max-vertical-offset="9435">
+        <state line="713" column="26" selection-start="24199" selection-end="24199" vertical-scroll-proportion="0.9967585" vertical-offset="10080" max-vertical-offset="12690">
           <folding />
         </state>
       </provider>
