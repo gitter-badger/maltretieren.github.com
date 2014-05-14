@@ -518,8 +518,9 @@ myApp.service("YamlSrvc", function () {
 			if(lineSplit[i] !== "") {
 				var line = lineSplit[i].split(":");
 				if(line.length===2 && line[1].trim() !== "") {
-					response[line[0]] = line[1].trim();
-					remember = "";
+					var obj = {};
+					obj[line[0]] = line[1].trim();
+					response.push(obj);
 				} else {
 					var element = line[0].split("-");
 					if(element.length === 1) {
