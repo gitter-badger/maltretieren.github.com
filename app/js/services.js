@@ -526,7 +526,7 @@ myApp.service("YamlSrvc", function () {
 						remember = element[0].trim();
 						response[remember] = [];
 					} else {
-						response[remember].push(element[1].trim());
+						response[remember].push(JSON.stringify(element[1].trim()));
 					}
 				}
 			}
