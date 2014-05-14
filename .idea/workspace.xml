@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/edit.html" afterPath="$PROJECT_DIR$/app/admin/edit.html" />
-    </list>
+    <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="" />
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,10 +32,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="edit.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="51" selection-start="2067" selection-end="2067" vertical-scroll-proportion="0.7588533" vertical-offset="225" max-vertical-offset="960">
+            <state line="45" column="67" selection-start="2083" selection-end="2083" vertical-scroll-proportion="-18.75" vertical-offset="225" max-vertical-offset="960">
               <folding>
                 <element signature="n#style#0;n#textarea#0;n#form#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -54,10 +52,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="711" column="8" selection-start="24128" selection-end="24128" vertical-scroll-proportion="0.0" vertical-offset="10183" max-vertical-offset="12660">
+            <state line="711" column="8" selection-start="24128" selection-end="24128" vertical-scroll-proportion="0.78119934" vertical-offset="10183" max-vertical-offset="12660">
               <folding />
             </state>
           </provider>
@@ -641,19 +639,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="711" column="8" selection-start="24128" selection-end="24128" vertical-scroll-proportion="0.0" vertical-offset="10183" max-vertical-offset="12660">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="51" selection-start="2067" selection-end="2067" vertical-scroll-proportion="0.7588533" vertical-offset="225" max-vertical-offset="960">
+        <state line="45" column="67" selection-start="2083" selection-end="2083" vertical-scroll-proportion="-18.75" vertical-offset="225" max-vertical-offset="960">
           <folding>
             <element signature="n#style#0;n#textarea#0;n#form#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="711" column="8" selection-start="24128" selection-end="24128" vertical-scroll-proportion="0.78119934" vertical-offset="10183" max-vertical-offset="12660">
+          <folding />
         </state>
       </provider>
     </entry>
