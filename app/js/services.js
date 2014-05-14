@@ -525,9 +525,9 @@ myApp.service("YamlSrvc", function () {
 					if(element.length === 1) {
 						remember = element[0].trim();
 					} else {
-						response.push({
-							remember: element[1].trim()
-						});
+						var obj = {};
+						obj[remember] = element[1].trim();
+						response.push(obj);
 					}
 				}
 			}
