@@ -49,8 +49,11 @@ comments: false
                     <h1>Tags</h1>
                     <!--http://timschlechter.github.io/bootstrap-tagsinput/examples/-->
                     <bootstrap-tagsinput
-                        ng-model="yaml.tags">
-
+                            ng-model="cities"
+                            typeahead-source="queryCities"
+                            tagclass="getTagClass"
+                            itemvalue="value"
+                            itemtext="text">
                     </bootstrap-tagsinput>
                 </div>
                 <div class="row">

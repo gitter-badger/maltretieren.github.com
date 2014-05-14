@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/edit.html" afterPath="$PROJECT_DIR$/app/admin/edit.html" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
@@ -28,7 +29,7 @@
       <file leaf-file-name="edit.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="42" selection-start="2171" selection-end="2171" vertical-scroll-proportion="0.92411464" vertical-offset="187" max-vertical-offset="1185">
+            <state line="56" column="42" selection-start="2547" selection-end="2547" vertical-scroll-proportion="0.8735244" vertical-offset="322" max-vertical-offset="1230">
               <folding>
                 <element signature="n#style#0;n#textarea#0;n#form#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -77,7 +78,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="752" column="23" selection-start="25883" selection-end="25883" vertical-scroll-proportion="0.0" vertical-offset="10545" max-vertical-offset="12690">
+            <state line="681" column="21" selection-start="23160" selection-end="23160" vertical-scroll-proportion="0.0" vertical-offset="10050" max-vertical-offset="12795">
               <folding />
             </state>
           </provider>
@@ -148,10 +149,10 @@
         <option value="$PROJECT_DIR$/assets/themes/syntax/syntax.css" />
         <option value="$PROJECT_DIR$/app/partials/postsFrontpage.html" />
         <option value="$PROJECT_DIR$/app/js/services.js" />
-        <option value="$PROJECT_DIR$/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/assets/js/bootstrap-tagsinput-0.3.9/bootstrap-tagsinput-angular.js" />
         <option value="$PROJECT_DIR$/app/js/main.js" />
         <option value="$PROJECT_DIR$/app/js/routes.js" />
+        <option value="$PROJECT_DIR$/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/app/admin/edit.html" />
       </list>
     </option>
@@ -658,13 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="752" column="23" selection-start="25883" selection-end="25883" vertical-scroll-proportion="0.0" vertical-offset="10545" max-vertical-offset="12690">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/bootstrap-tagsinput-0.3.9/bootstrap-tagsinput-angular.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="82" column="8" selection-start="3248" selection-end="3248" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1320">
@@ -688,9 +682,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="681" column="21" selection-start="23160" selection-end="23160" vertical-scroll-proportion="0.0" vertical-offset="10050" max-vertical-offset="12795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="42" selection-start="2171" selection-end="2171" vertical-scroll-proportion="0.92411464" vertical-offset="187" max-vertical-offset="1185">
+        <state line="56" column="42" selection-start="2547" selection-end="2547" vertical-scroll-proportion="0.8735244" vertical-offset="322" max-vertical-offset="1230">
           <folding>
             <element signature="n#style#0;n#textarea#0;n#form#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
           </folding>
