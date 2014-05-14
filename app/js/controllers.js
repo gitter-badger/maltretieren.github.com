@@ -679,8 +679,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
     var scope = $scope;
 
     $scope.options = {}
-	$scope.yaml = {};
-	$scope.yaml.frontpage = !!$scope.yaml.frontpage;
+	$scope.frontpage = true;
     
 	var date = "";
     $scope.options.title = "";
@@ -712,6 +711,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
 	contentPromise.then(function(yaml) {
 		// attach yaml object to scope
 		scope.yaml = yaml;
+		scope.frontpage = yaml.frontpage
 	});
 	
 	$scope.commitPath = "";
