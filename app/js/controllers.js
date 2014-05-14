@@ -693,16 +693,6 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
         return $http.get('cities.json');
     };
 
-    $scope.getTagClass = function(city) {
-        switch (city.continent) {
-            case 'Europe' : return 'badge badge-info';
-            case 'America' : return 'label label-important';
-            case 'Australia': return 'badge badge-success';
-            case 'Africa' : return 'label label-inverse';
-            case 'Asia' : return 'badge badge-warning';
-        }
-    };
-
 	var date = "";
     $scope.options.title = "";
 	$scope.options.isNewContent = false;
