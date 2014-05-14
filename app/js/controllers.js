@@ -688,7 +688,21 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
         { "value": 10, "text": "Beijing" , "continent": "Asia" },
         { "value": 13, "text": "Cairo" , "continent": "Africa" }
     ];
-    
+
+    $scope.queryCities = function(query) {
+        return $http.get('cities.json');
+    };
+
+    $scope.getTagClass = function(city) {
+        switch (city.continent) {
+            case 'Europe' : return 'badge badge-info';
+            case 'America' : return 'label label-important';
+            case 'Australia': return 'badge badge-success';
+            case 'Africa' : return 'label label-inverse';
+            case 'Asia' : return 'badge badge-warning';
+        }
+    };
+
 	var date = "";
     $scope.options.title = "";
 	$scope.options.isNewContent = false;
