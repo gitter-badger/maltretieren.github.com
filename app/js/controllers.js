@@ -679,7 +679,8 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
     var scope = $scope;
 
     $scope.options = {}
-	$scope.frontpage = true;
+    $scope.yaml = {};
+	$scope.yaml.frontpage = true;
     
 	var date = "";
     $scope.options.title = "";
