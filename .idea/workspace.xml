@@ -28,7 +28,7 @@
       <file leaf-file-name="edit.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="51" selection-start="2268" selection-end="2268" vertical-scroll-proportion="0.772344" vertical-offset="292" max-vertical-offset="1140">
+            <state line="49" column="42" selection-start="2171" selection-end="2171" vertical-scroll-proportion="0.92411464" vertical-offset="187" max-vertical-offset="1185">
               <folding>
                 <element signature="n#style#0;n#textarea#0;n#form#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -690,7 +690,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="51" selection-start="2268" selection-end="2268" vertical-scroll-proportion="0.772344" vertical-offset="292" max-vertical-offset="1140">
+        <state line="49" column="42" selection-start="2171" selection-end="2171" vertical-scroll-proportion="0.92411464" vertical-offset="187" max-vertical-offset="1185">
           <folding>
             <element signature="n#style#0;n#textarea#0;n#form#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
           </folding>
