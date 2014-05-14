@@ -48,8 +48,7 @@ comments: false
                 <div class="row">
                     <h1>Tags</h1>
                     <!--http://timschlechter.github.io/bootstrap-tagsinput/examples/-->
-                    <div ng-repeat="entry in yaml.tags">{{entry}}</div>
-                    <input type="text" value="Amsterdam,Washington,Sydney,Beijing,Cairo" data-role="tagsinput" placeholder="Add tags" />
+                    <bootstrap-tagsinput ng-model="yaml.tags">{{entry}}</bootstrap-tagsinput>
                 </div>
                 <div class="row">
                     <h2>Frontpage</h2>
