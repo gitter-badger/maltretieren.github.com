@@ -530,8 +530,9 @@ myApp.service("YamlSrvc", function () {
 					var element = line[0].split("-");
                     var value = "";
 					if(element.length === 1) {
-						remember = value;
-						response[remember] = [];
+						value = element[0].trim();
+                        remember = value;
+						response[value] = [];
 					} else {
                         value = element[1].trim();
                         if(value === "true" || value === "false") {
