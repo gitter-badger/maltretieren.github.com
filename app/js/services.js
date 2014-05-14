@@ -528,16 +528,16 @@ myApp.service("YamlSrvc", function () {
                     response[line[0]] = value;
 				} else {
 					var element = line[0].split("-");
+                    var value = element[1].trim();
 					if(element.length === 1) {
-						remember = element[0].trim();
+						remember = value;
 						response[remember] = [];
 					} else {
-                        if(element[1].trim() === "true" || element[1].trim() === "false") {
-                            var value = Boolean(element[1].trim());
+                        if(value === "true" || value === "false") {
+                            value = Boolean(element[1].trim());
 						    response[remember].push(value);
-                        } else {
-                            response[remember].push(element[1].trim());
                         }
+                        response[remember].push(value);
 					}
 				}
 			}
