@@ -15,7 +15,8 @@ layout: none
 				"{{tag}}"
 			{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
 		}
-		{% if forloop.rindex0 > 0 %},{% endif %}
+		
 	{% endif %}
+	{% if forloop.rindex0 > 0 %},{% endif %}
 {% endfor %}]
 	
