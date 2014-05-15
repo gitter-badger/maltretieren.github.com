@@ -2,7 +2,7 @@
 layout: post
 categories:
  - blog
-tagline: with github.js
+tagline: tralalala
 tags:
  - development
  - jekyll
@@ -11,6 +11,7 @@ tags:
 published: true
 frontpage: true
 ---
+
 
 
 
