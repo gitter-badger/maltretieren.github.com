@@ -1,7 +1,6 @@
 ---
 layout: post
-categories: tagline: some short notes
-tags: 
+categories: tags: 
  - development
  - jekyll
  - edit
@@ -9,6 +8,7 @@ tags:
 frontpage: true
 published: false
 ---
+
 
 
 
