@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2014-01-01-sandbox.md" afterPath="$PROJECT_DIR$/_posts/2014-01-01-sandbox.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/postsFrontpage.json" afterPath="$PROJECT_DIR$/postsFrontpage.json" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,22 +34,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2014-01-01-sandbox.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="2014-01-01-sandbox.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2014-01-01-sandbox.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="240" selection-end="240" vertical-scroll-proportion="0.33106962" vertical-offset="0" max-vertical-offset="735">
+            <state line="13" column="0" selection-start="240" selection-end="240" vertical-scroll-proportion="-6.964286" vertical-offset="0" max-vertical-offset="735">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postsFrontpage.json" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="postsFrontpage.json" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/postsFrontpage.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="71" selection-start="476" selection-end="489" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="495">
+            <state line="14" column="82" selection-start="500" selection-end="500" vertical-scroll-proportion="0.35413152" vertical-offset="0" max-vertical-offset="593">
               <folding />
             </state>
           </provider>
@@ -150,8 +150,8 @@
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/app/js/services.js" />
         <option value="$PROJECT_DIR$/app/admin/edit.html" />
-        <option value="$PROJECT_DIR$/postsFrontpage.json" />
         <option value="$PROJECT_DIR$/_posts/2014-01-01-sandbox.md" />
+        <option value="$PROJECT_DIR$/postsFrontpage.json" />
       </list>
     </option>
   </component>
@@ -738,19 +738,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/postsFrontpage.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="71" selection-start="476" selection-end="489" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="495">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2014-01-01-sandbox.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="240" selection-end="240" vertical-scroll-proportion="0.33106962" vertical-offset="0" max-vertical-offset="735">
+        <state line="13" column="0" selection-start="240" selection-end="240" vertical-scroll-proportion="-6.964286" vertical-offset="0" max-vertical-offset="735">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/postsFrontpage.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="82" selection-start="500" selection-end="500" vertical-scroll-proportion="0.35413152" vertical-offset="0" max-vertical-offset="593">
           <folding />
         </state>
       </provider>
