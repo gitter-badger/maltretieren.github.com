@@ -6,6 +6,7 @@ tags:
  - jekyll
  - edit
  - github
+frontpage: true
 published: true
 ---
 
