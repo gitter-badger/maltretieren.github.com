@@ -25,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="edit.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="edit.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="25" selection-start="2121" selection-end="2121" vertical-scroll-proportion="-12.208333" vertical-offset="352" max-vertical-offset="1455">
+            <state line="42" column="51" selection-start="2103" selection-end="2103" vertical-scroll-proportion="0.4688027" vertical-offset="352" max-vertical-offset="1455">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#form#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#3;n#form#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
@@ -38,10 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editConfig.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="editConfig.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/editConfig.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="37" selection-start="333" selection-end="342" vertical-scroll-proportion="0.3288364" vertical-offset="0" max-vertical-offset="593">
+            <state line="13" column="37" selection-start="333" selection-end="342" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="555">
               <folding />
             </state>
           </provider>
@@ -735,21 +735,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/editConfig.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="37" selection-start="333" selection-end="342" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="25" selection-start="2121" selection-end="2121" vertical-scroll-proportion="-12.208333" vertical-offset="352" max-vertical-offset="1455">
+        <state line="42" column="51" selection-start="2103" selection-end="2103" vertical-scroll-proportion="0.4688027" vertical-offset="352" max-vertical-offset="1455">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#form#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#3;n#form#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#3;n#form#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/editConfig.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="37" selection-start="333" selection-end="342" vertical-scroll-proportion="0.3288364" vertical-offset="0" max-vertical-offset="593">
-          <folding />
         </state>
       </provider>
     </entry>
