@@ -1,16 +1,16 @@
 ---
 layout: post
-categories: 
-  - frontpage
+categories:
 tagline: with github.js
-tags: 
-  - development
-  - jekyll
-  - edit
-  - github
-
+tags:
+ - development
+ - jekyll
+ - edit
+ - github
 published: true
+frontpage: true
 ---
+
 
 {% include JB/setup %}
 
