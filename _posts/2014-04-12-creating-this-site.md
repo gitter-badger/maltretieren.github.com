@@ -1,8 +1,6 @@
 ---
 layout: post
-categories: 
- - documentation
-tagline: some short notes
+categories: tagline: some short notes
 tags: 
  - development
  - jekyll
