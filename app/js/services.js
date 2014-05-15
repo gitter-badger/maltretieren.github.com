@@ -547,7 +547,7 @@ myApp.service("YamlSrvc", function () {
 				}
 			}
 		}
-		console.log(response);
+		//console.log(response);
 		return response;
     };
 	
