@@ -521,16 +521,13 @@ myApp.service("YamlSrvc", function () {
 				if(line.length===2 && line[1].trim() !== "") {
                     // deal with boolean
                     var value;
-					console.log("parse: "+line[0]);
                     if(value === "true" || value === "false") {
 						console.log("Boolean: "+line[1].trim());
                         value = Boolean(line[1].trim());
                     } else {
 						value = line[1].trim();
 					}
-					console.log(value);
                     response[line[0]] = value;
-					console.log(response);
 				} else {
 					var element = line[0].split("-");
                     var value = "";
