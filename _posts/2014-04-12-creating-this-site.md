@@ -1,14 +1,15 @@
 ---
 layout: post
-categories: 
+categories:
  - development
  - jekyll
  - edit
  - github
-frontpage: true
+frontpage: false
 published: true
 tags:
 ---
+
 
 {% include JB/setup %}
 
