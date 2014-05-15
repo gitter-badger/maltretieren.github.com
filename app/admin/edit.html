@@ -33,44 +33,46 @@ comments: false
 						</div>
 					</div>
 				</div>
-                <div class="row">
-                    <h1>Layout</h1>
-                    <div>{{yaml.layout}}</div>
-                </div>
-                <div class="row">
-                    <h1>Tagline</h1>
-					<input type="text" class="form-control" id="title" ng-model="yaml.tagline" placeholder="Tagline (small text after the title)"/>
-                </div>
+
 				<button class="btn btn-default" ng-click="advancedSettings = !advancedSettings">Toggle collapse</button>
 				<div collapse="advancedSettings">
-					<div class="well well-lg">Some content</div> 
+					<div class="well well-lg">
+						<div class="row">
+							<h1>Layout</h1>
+							<div>{{yaml.layout}}</div>
+						</div>
+						<div class="row">
+							<h1>Tagline</h1>
+							<input type="text" class="form-control" id="title" ng-model="yaml.tagline" placeholder="Tagline (small text after the title)"/>
+						</div>
+						<div class="row">
+							<h1>Categories</h1>
+							<!--http://timschlechter.github.io/bootstrap-tagsinput/examples/-->
+							<bootstrap-tagsinput
+								ng-model="yaml.categories"
+								tagclass="getTagClass"
+								placeholder="Add categories here... Confirm with ENTER">
+							</bootstrap-tagsinput>
+						</div>
+						<div class="row">
+							<h1>Tags</h1>
+							<!--http://timschlechter.github.io/bootstrap-tagsinput/examples/-->
+							<bootstrap-tagsinput
+									ng-model="yaml.tags"
+									tagclass="getTagClass"
+									placeholder="Add tags here..." Confirm with ENTER>
+							</bootstrap-tagsinput>
+						</div>
+						<div class="row">
+							<h2>Frontpage</h2>
+							<input type="checkbox" ng-model="yaml.frontpage" />
+						</div>
+						<div class="row">
+							<h2>Published</h2>
+							<input type="checkbox" ng-model="yaml.published" />
+						</div>
+					</div> 
 				</div>
-                <div class="row">
-                    <h1>Categories</h1>
-                    <!--http://timschlechter.github.io/bootstrap-tagsinput/examples/-->
-                    <bootstrap-tagsinput
-						ng-model="yaml.categories"
-						tagclass="getTagClass"
-						placeholder="Add categories here... Confirm with ENTER">
-                    </bootstrap-tagsinput>
-                </div>
-                <div class="row">
-                    <h1>Tags</h1>
-                    <!--http://timschlechter.github.io/bootstrap-tagsinput/examples/-->
-                    <bootstrap-tagsinput
-                            ng-model="yaml.tags"
-                            tagclass="getTagClass"
-							placeholder="Add tags here..." Confirm with ENTER>
-                    </bootstrap-tagsinput>
-                </div>
-                <div class="row">
-                    <h2>Frontpage</h2>
-                    <input type="checkbox" ng-model="yaml.frontpage" />
-                </div>
-                <div class="row">
-                    <h2>Published</h2>
-                    <input type="checkbox" ng-model="yaml.published" />
-                </div>
 			    <textarea id="target-editor" style="display:none;color:#464545;"></textarea>
 				<br />
 				<button ng-disabled="(editForm.$dirty && editForm.$invalid)" ng-click="save(editForm.$pristine)" class="btn btn-primary pull-right" type="button" disabled="disabled">
