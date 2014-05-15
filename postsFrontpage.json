@@ -3,7 +3,7 @@ layout: none
 ---
 [{% for post in site.posts %}
     {% if post.frontpage == true %}
-		{% if forloop.rindex0 > 0 %},{% endif %}
+		{% if forloop.rindex0 > 0 && forloop.rindex0 != site.posts.length %},{% endif %}
 		{
 		"Date": "{{ post.date | date_to_string }}",
 		"Title": "{{ post.title }}",
