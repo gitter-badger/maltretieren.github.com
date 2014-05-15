@@ -6,15 +6,8 @@ categories:
  - edit
  - github
 frontpage: true
-published: false
+published: true
 tags: ---
-
-
-
-
-
-
-
 {% include JB/setup %}
 
 This is a short writeup of the history of creating this page.
