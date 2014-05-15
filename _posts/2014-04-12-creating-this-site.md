@@ -1,8 +1,6 @@
 ---
 layout: post
-categories: 
- - frontpage
-tagline: some short notes
+categories: tagline: some short notes
 tags: 
  - development
  - jekyll
@@ -10,8 +8,6 @@ tags:
  - github
 published: true
 ---
-
-
 {% include JB/setup %}
 
 This is a short writeup of the history of creating this page.
