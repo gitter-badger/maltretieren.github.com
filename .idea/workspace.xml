@@ -40,7 +40,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="4" selection-start="273" selection-end="273" vertical-scroll-proportion="0.4074703" vertical-offset="0" max-vertical-offset="780">
+            <state line="16" column="0" selection-start="269" selection-end="269" vertical-scroll-proportion="0.4074703" vertical-offset="0" max-vertical-offset="780">
               <folding />
             </state>
           </provider>
@@ -750,7 +750,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="4" selection-start="273" selection-end="273" vertical-scroll-proportion="0.4074703" vertical-offset="0" max-vertical-offset="780">
+        <state line="16" column="0" selection-start="269" selection-end="269" vertical-scroll-proportion="0.4074703" vertical-offset="0" max-vertical-offset="780">
           <folding />
         </state>
       </provider>
