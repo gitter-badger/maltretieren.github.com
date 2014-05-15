@@ -527,6 +527,7 @@ myApp.service("YamlSrvc", function () {
                         value = Boolean(line[1].trim());
                     }
                     response[line[0]] = value;
+					console.log(response);
 				} else {
 					var element = line[0].split("-");
                     var value = "";
