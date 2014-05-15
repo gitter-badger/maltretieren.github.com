@@ -680,6 +680,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
 
     $scope.options = {}
     $scope.yaml = {};
+	$scope.advancedSettings = false;
 
 	// styling for tags / categories labels
     $scope.getTagClass = function(city) {

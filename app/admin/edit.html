@@ -41,6 +41,10 @@ comments: false
                     <h1>Tagline</h1>
 					<input type="text" class="form-control" id="title" ng-model="yaml.tagline" placeholder="Tagline (small text after the title)"/>
                 </div>
+				<button class="btn btn-default" ng-click="advancedSettings = !advancedSettings">Toggle collapse</button>
+				<div collapse="advancedSettings">
+					<div class="well well-lg">Some content</div> 
+				</div>
                 <div class="row">
                     <h1>Categories</h1>
                     <!--http://timschlechter.github.io/bootstrap-tagsinput/examples/-->
