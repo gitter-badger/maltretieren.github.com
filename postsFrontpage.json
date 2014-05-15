@@ -16,7 +16,7 @@ layout: none
 			{% endfor %}]
 		}
 	{% endif %}
-	forloop.rindex0
+	{{forloop.rindex0}}
 	{% if forloop.rindex0 > 0 %},{% endif %}
 {% endfor %}]
 	
