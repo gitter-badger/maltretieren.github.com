@@ -353,7 +353,6 @@ myApp.service("GithubSrvc", function (
 			var deferred = $q.defer();
             contents.then(function(result) {
 				var frontMatter = YamlSrvc.parse(result.content);
-				console.log(frontMatter);
 				$('#target-editor').markdown({
                     savable:false,
                     height:500
@@ -547,7 +546,7 @@ myApp.service("YamlSrvc", function () {
 				}
 			}
 		}
-		//console.log(response);
+		console.log(response);
 		return response;
     };
 	
