@@ -694,7 +694,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
     };
 
     $scope.getTagClass = function(city) {
-        return 'tag label label-info';
+        return 'label label-primary';
     };
 
 	var date = "";
