@@ -1,5 +1,5 @@
 /**
- * Created by crunsh on 14.05.14.
+ * modified to get placeholder working https://github.com/TimSchlechter/bootstrap-tagsinput/issues/57 
  */
 angular.module('bootstrap-tagsinput', [])
     .directive('bootstrapTagsinput', [function() {
