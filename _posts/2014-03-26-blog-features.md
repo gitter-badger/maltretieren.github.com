@@ -1,7 +1,6 @@
 ---
 layout: post
 categories:
- - blog
 tagline: with github.js
 tags:
  - development
