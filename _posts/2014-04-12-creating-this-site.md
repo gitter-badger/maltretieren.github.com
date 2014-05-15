@@ -1,18 +1,16 @@
 ---
-
 layout: post
 categories: 
-  - frontpage
+ - frontpage
 tagline: some short notes
 tags: 
-  - development
-  - jekyll
-  - edit
-  - github
-
+ - development
+ - jekyll
+ - edit
+ - github
 published: true
-
 ---
+
 
 {% include JB/setup %}
 
