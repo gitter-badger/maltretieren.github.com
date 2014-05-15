@@ -5,7 +5,6 @@ layout: none
 [{% for post in site.posts %}
 	{% capture postElement %}
 		{% if post.frontpage == true %}
-			{{ hit }}
 			{% assign postSize = site.posts.size | minus: 1 %} 
 			{% if forloop.rindex0 > 0 and forloop.rindex0 != postSize and hit != 0 %},{% endif %}
 			{
