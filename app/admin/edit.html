@@ -34,12 +34,12 @@ comments: false
 					</div>
 				</div>
 			    <textarea id="target-editor" style="display:none;color:#464545;"></textarea>
-				<br />
+				<div class="row></div>
 				<button class="btn btn-default" ng-click="advancedSettings = !advancedSettings">Advanced Settings</button>
 				<button ng-disabled="(editForm.$dirty && editForm.$invalid)" ng-click="save(editForm.$pristine)" class="btn btn-primary pull-right" type="button" disabled="disabled">
 					Submit
 				</button>
-				<br />
+				<div class="row></div>
 				<div ng-cloak collapse="advancedSettings">
 					<div class="well well-lg">
 						<div class="row">
