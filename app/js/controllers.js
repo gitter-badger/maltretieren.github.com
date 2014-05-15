@@ -733,8 +733,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
 	var savePromise = $q.defer();
 	$scope.save = function() {
 		//var content = $('#target-editor').markdown()[0].value;
-		// remove empty lines
-		var content = YamlSrvc.create($scope.yaml).replace(/^\s*\n/gm, "");
+		var content = YamlSrvc.create($scope.yaml);
 		console.log(content);
 		//savePromise.resolve(content)
 	}
