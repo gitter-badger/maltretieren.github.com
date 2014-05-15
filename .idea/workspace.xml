@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/services.js" afterPath="$PROJECT_DIR$/app/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/edit.html" afterPath="$PROJECT_DIR$/app/admin/edit.html" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="edit.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="edit.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="19" selection-start="2035" selection-end="2035" vertical-scroll-proportion="-17.5" vertical-offset="180" max-vertical-offset="1455">
+            <state line="81" column="22" selection-start="4593" selection-end="4593" vertical-scroll-proportion="1.3035413" vertical-offset="442" max-vertical-offset="1440">
               <folding />
             </state>
           </provider>
@@ -80,10 +79,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="547" column="9" selection-start="19826" selection-end="19826" vertical-scroll-proportion="0.6875" vertical-offset="7798" max-vertical-offset="9525">
+            <state line="547" column="9" selection-start="19826" selection-end="19826" vertical-scroll-proportion="-16.28" vertical-offset="7798" max-vertical-offset="9525">
               <folding />
             </state>
           </provider>
@@ -147,9 +146,9 @@
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/assets/js/bootstrap-tagsinput-0.3.9/bootstrap-tagsinput-angular.js" />
         <option value="$PROJECT_DIR$/assets/js/bootstrap-tagsinput-0.3.9/bootstrap-tagsinput.css" />
-        <option value="$PROJECT_DIR$/app/admin/edit.html" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/app/js/services.js" />
+        <option value="$PROJECT_DIR$/app/admin/edit.html" />
       </list>
     </option>
   </component>
@@ -722,13 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="19" selection-start="2035" selection-end="2035" vertical-scroll-proportion="-17.5" vertical-offset="180" max-vertical-offset="1455">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/directives.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="3" selection-start="501" selection-end="594" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="885">
@@ -745,7 +737,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="547" column="9" selection-start="19826" selection-end="19826" vertical-scroll-proportion="0.6875" vertical-offset="7798" max-vertical-offset="9525">
+        <state line="547" column="9" selection-start="19826" selection-end="19826" vertical-scroll-proportion="-16.28" vertical-offset="7798" max-vertical-offset="9525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="22" selection-start="4593" selection-end="4593" vertical-scroll-proportion="1.3035413" vertical-offset="442" max-vertical-offset="1440">
           <folding />
         </state>
       </provider>
