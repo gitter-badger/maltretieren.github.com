@@ -2,8 +2,7 @@
 layout: none
 ---
 [{% for post in site.posts %}{
-	{% if page.type == "post" %}
-		"Frontpage": "{{ post.frontpage }}",
+	{% if page.frontpage == "true" %}
 		"Date": "{{ post.date | date_to_string }}",
 		"Title": "{{ post.title }}",
 		"Url": "{{ post.url}}",
