@@ -2,10 +2,10 @@
 layout: none
 ---
 [{% for post in site.posts %}
-	{% capture postElement %} {%
-		if post.frontpage == true %}{%
-			 assign postSize = site.posts.size | minus: 1 %} {%
-			 if forloop.rindex0 > 0 and forloop.rindex0 != postSize %},{% endif %}
+	{% capture postElement %}
+		{% if post.frontpage == true %}
+			{% assign postSize = site.posts.size | minus: 1 %} 
+			{% if forloop.rindex0 > 0 and forloop.rindex0 != postSize %},{% endif %}
 			{
 			"Date": "{{ post.date | date_to_string }}",
 			"Title": "{{ post.title }}",
@@ -14,11 +14,13 @@ layout: none
 			"PreviewText": "{{ post.content | strip_html | truncatewords:60 | strip_newlines }}  ",
 			"TagsSentence": "{{post.tags | array_to_sentence_string}}",
 			"Tags": 
-				[{% for tag in post.tags %}"{{tag}}"{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
-			}{%
-		 endif %}{%
-	 endcapture %}
-	{{ postElement | remove: ' ' | strip_newlines }}  {%
- endfor %}]
+				[{% for tag in post.tags %}
+					"{{tag}}"
+				{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
+			}
+		 {% endif %}
+	{% endcapture %}
+	{{ postElement | remove: ' ' | strip_newlines }}  
+{% endfor %}]
 
 	
