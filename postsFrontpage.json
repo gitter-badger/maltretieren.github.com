@@ -20,7 +20,7 @@ layout: none
 			}
 		{% endif %}
 	{% endcapture %}
-	{{ postElement | strip_newlines }}  
+	{{ postElement | remove: ' ' | strip_newlines }}  
 {% endfor %}]
 
 	
