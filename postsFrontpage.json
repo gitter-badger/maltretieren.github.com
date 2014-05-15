@@ -2,7 +2,7 @@
 layout: none
 ---
 [{% for post in site.posts %}
-	{% capture element %}
+	{% capture postElement %}
 		{% if post.frontpage == true %}
 			{% assign postSize = site.posts.size | minus: 1 %}
 			{% if forloop.rindex0 > 0 and forloop.rindex0 != postSize %},{% endif %}
@@ -20,7 +20,7 @@ layout: none
 			}
 		{% endif %}
 	{% endcapture %}
-	{{ element | strip_new_lines }} 
+	{{ postElement | strip_newlines }} 
 {% endfor %}]
 
 	
