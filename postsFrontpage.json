@@ -20,6 +20,7 @@ layout: none
 						"{{tag}}"
 					{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
 			}
+			{% hit = 1 %}
 		 {% endif %}
 	{% endcapture %}
 	{{ postElement }}  
