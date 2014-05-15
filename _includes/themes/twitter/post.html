@@ -1,3 +1,5 @@
+{% include JB/setup %}
+
 <div class="page-header" style="margin-top: 0px">
   <h1 style="float:left">{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
   <div style="padding-top:25px;text-align:right" ng-controller="AdminCtrl"><a href="/app/admin/edit.html?path={{page.path}}&url={{page.url}}" class="btn btn-warning btn-middle" ng-cloak ng-hide="!isAdmin">Edit <i class="icon-white icon-pencil"></i></a></div>
