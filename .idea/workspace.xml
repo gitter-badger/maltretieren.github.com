@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/bootstrap-tagsinput-0.3.9/bootstrap-tagsinput-angular.js" afterPath="$PROJECT_DIR$/assets/js/bootstrap-tagsinput-0.3.9/bootstrap-tagsinput-angular.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/edit.html" afterPath="$PROJECT_DIR$/app/admin/edit.html" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="edit.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="edit.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="60" selection-start="2357" selection-end="2357" vertical-scroll-proportion="-23.458334" vertical-offset="202" max-vertical-offset="1290">
+            <state line="72" column="89" selection-start="3192" selection-end="3192" vertical-scroll-proportion="0.54468805" vertical-offset="757" max-vertical-offset="1350">
               <folding />
             </state>
           </provider>
@@ -61,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap-tagsinput-angular.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="bootstrap-tagsinput-angular.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/bootstrap-tagsinput-0.3.9/bootstrap-tagsinput-angular.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="9" selection-start="3249" selection-end="3249" vertical-scroll-proportion="0.8541329" vertical-offset="703" max-vertical-offset="1320">
+            <state line="82" column="9" selection-start="3370" selection-end="3370" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="1380">
               <folding />
             </state>
           </provider>
@@ -82,7 +82,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="696" column="38" selection-start="23707" selection-end="23707" vertical-scroll-proportion="0.0" vertical-offset="10035" max-vertical-offset="12915">
+            <state line="696" column="38" selection-start="23542" selection-end="23542" vertical-scroll-proportion="0.0" vertical-offset="10440" max-vertical-offset="12780">
               <folding />
             </state>
           </provider>
@@ -147,8 +147,8 @@
         <option value="$PROJECT_DIR$/app/js/main.js" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
-        <option value="$PROJECT_DIR$/app/admin/edit.html" />
         <option value="$PROJECT_DIR$/assets/js/bootstrap-tagsinput-0.3.9/bootstrap-tagsinput-angular.js" />
+        <option value="$PROJECT_DIR$/app/admin/edit.html" />
       </list>
     </option>
   </component>
@@ -476,13 +476,13 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../node-github" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="90" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="891" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="936" />
-    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="94" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="89" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
   </component>
@@ -503,14 +503,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -519,6 +511,14 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
@@ -724,21 +724,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="696" column="38" selection-start="23707" selection-end="23707" vertical-scroll-proportion="0.0" vertical-offset="10035" max-vertical-offset="12915">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="60" selection-start="2357" selection-end="2357" vertical-scroll-proportion="-23.458334" vertical-offset="202" max-vertical-offset="1290">
+        <state line="696" column="38" selection-start="23542" selection-end="23542" vertical-scroll-proportion="0.0" vertical-offset="10440" max-vertical-offset="12780">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/bootstrap-tagsinput-0.3.9/bootstrap-tagsinput-angular.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="9" selection-start="3249" selection-end="3249" vertical-scroll-proportion="0.8541329" vertical-offset="703" max-vertical-offset="1320">
+        <state line="82" column="9" selection-start="3370" selection-end="3370" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="1380">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="89" selection-start="3192" selection-end="3192" vertical-scroll-proportion="0.54468805" vertical-offset="757" max-vertical-offset="1350">
           <folding />
         </state>
       </provider>
