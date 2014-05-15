@@ -563,9 +563,10 @@ myApp.service("YamlSrvc", function () {
 			}
 		}
 		response += "---\n";
-		response += content['content'];
 		// remove empty lines
 		response = response.replace(/^\s*\n/gm, "");
+		
+		response += content['content'];
 		return response;
     };
 	
