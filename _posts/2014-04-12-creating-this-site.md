@@ -10,8 +10,6 @@ published: true
 tags:
  - development
 ---
-{% include JB/setup %}
-
 This is a short writeup of the history of creating this page.
 
 Out of the noise in the internet some things pop up more recently.
