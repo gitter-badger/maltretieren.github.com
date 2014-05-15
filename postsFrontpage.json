@@ -20,9 +20,8 @@ layout: none
 						"{{tag}}"
 					{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
 			}
-			
+			{% assign hit = 1 %}
 		 {% endif %}
-		 {% assign hit = 1 %}
 	{% endcapture %}
 	{{ postElement }}  
 {% endfor %}]
