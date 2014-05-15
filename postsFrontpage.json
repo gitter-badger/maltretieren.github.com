@@ -1,11 +1,12 @@
 ---
 layout: none
 ---
+{% assign hit = 0 %}
 [{% for post in site.posts %}
 	{% capture postElement %}
 		{% if post.frontpage == true %}
 			{% assign postSize = site.posts.size | minus: 1 %} 
-			{% if forloop.rindex0 > 0 and forloop.rindex0 != postSize %},{% endif %}
+			{% if forloop.rindex0 > 0 and forloop.rindex0 != postSize % and hit != 0},{% endif %}
 			{
 			"Date": "{{ post.date | date_to_string }}",
 			"Title": "{{ post.title }}",
@@ -18,6 +19,7 @@ layout: none
 					"{{tag}}"
 				{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
 			}
+			{% assign hit = 1 %}
 		 {% endif %}
 	{% endcapture %}
 	{{ postElement }}  
