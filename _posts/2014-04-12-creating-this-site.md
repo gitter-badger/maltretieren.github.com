@@ -1,6 +1,7 @@
 ---
 layout: post
 categories: 
+ - documentation
 tagline: some short notes
 tags: 
  - development
@@ -8,8 +9,9 @@ tags:
  - edit
  - github
 frontpage: true
-published: true
+published: false
 ---
+
 
 
 
