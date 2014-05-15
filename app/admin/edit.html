@@ -44,8 +44,10 @@ comments: false
 					<div class="well well-lg">
                         <div class="row">
                             <label class="col-sm-2 control-label" for="layout">Activate</label>
-                            <input type="checkbox" ng-model="yaml.frontpage" /> Frontpage
-                            <input type="checkbox" ng-model="yaml.published" /> Published
+                            <div class="col-sm-10">
+                                <input type="checkbox" ng-model="yaml.frontpage" /> Frontpage
+                                <input type="checkbox" ng-model="yaml.published" /> Published
+                            </div>
                         </div>
                         <div class="row">
                             <label class="col-sm-2 control-label" for="layout">Layout</label>
