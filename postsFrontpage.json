@@ -6,6 +6,7 @@ layout: none
 	{% capture postElement %}
 		{% if post.frontpage == true %}
 			{% assign postSize = site.posts.size | minus: 1 %} 
+			{{hit}}			
 			{% if forloop.rindex0 > 0 and forloop.rindex0 != postSize % and hit != 0},{% endif %}
 			{
 			"Date": "{{ post.date | date_to_string }}",
