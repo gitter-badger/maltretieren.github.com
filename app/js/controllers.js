@@ -681,18 +681,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
     $scope.options = {}
     $scope.yaml = {};
 
-    $scope.cities = [
-        { "value": 1 , "text": "Amsterdam" , "continent": "Europe" },
-        { "value": 4 , "text": "Washington" , "continent": "America" },
-        { "value": 7 , "text": "Sydney" , "continent": "Australia" },
-        { "value": 10, "text": "Beijing" , "continent": "Asia" },
-        { "value": 13, "text": "Cairo" , "continent": "Africa" }
-    ];
-
-    $scope.queryCities = function(query) {
-        return $http.get('cities.json');
-    };
-
+	// styling for tags / categories labels
     $scope.getTagClass = function(city) {
         return 'label label-primary';
     };
