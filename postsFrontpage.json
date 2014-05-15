@@ -1,9 +1,9 @@
 ---
 layout: none
 ---
+{% assign hit = 0 %}	
 [{% for post in site.posts %}
 	{% capture postElement %}
-		{% assign hit = 0 %}	
 		{% if post.frontpage == true %}
 			{{ hit }}
 			{% assign postSize = site.posts.size | minus: 1 %} 
