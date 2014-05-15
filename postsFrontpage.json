@@ -1,6 +1,7 @@
 ---
 layout: none
 ---
+{{site.posts.frontpage}}
 [{% for post in site.posts.frontpage %}{
     "Date": "{{ post.date | date_to_string }}",
     "Title": "{{ post.title }}",
