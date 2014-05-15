@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin/edit.html" afterPath="$PROJECT_DIR$/app/admin/edit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/bootstrap-tagsinput-0.3.9/bootstrap-tagsinput-angular.js" afterPath="$PROJECT_DIR$/assets/js/bootstrap-tagsinput-0.3.9/bootstrap-tagsinput-angular.js" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="edit.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="edit.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="60" selection-start="2357" selection-end="2357" vertical-scroll-proportion="0.9494098" vertical-offset="202" max-vertical-offset="1290">
+            <state line="51" column="60" selection-start="2357" selection-end="2357" vertical-scroll-proportion="-23.458334" vertical-offset="202" max-vertical-offset="1290">
               <folding />
             </state>
           </provider>
@@ -61,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap-tagsinput-angular.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="bootstrap-tagsinput-angular.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/bootstrap-tagsinput-0.3.9/bootstrap-tagsinput-angular.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="8" selection-start="3248" selection-end="3248" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1320">
+            <state line="82" column="9" selection-start="3249" selection-end="3249" vertical-scroll-proportion="0.8541329" vertical-offset="703" max-vertical-offset="1320">
               <folding />
             </state>
           </provider>
@@ -143,12 +143,12 @@
         <option value="$PROJECT_DIR$/assets/themes/syntax/syntax.css" />
         <option value="$PROJECT_DIR$/app/partials/postsFrontpage.html" />
         <option value="$PROJECT_DIR$/app/js/services.js" />
-        <option value="$PROJECT_DIR$/assets/js/bootstrap-tagsinput-0.3.9/bootstrap-tagsinput-angular.js" />
         <option value="$PROJECT_DIR$/app/js/routes.js" />
         <option value="$PROJECT_DIR$/app/js/main.js" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/app/admin/edit.html" />
+        <option value="$PROJECT_DIR$/assets/js/bootstrap-tagsinput-0.3.9/bootstrap-tagsinput-angular.js" />
       </list>
     </option>
   </component>
@@ -673,13 +673,6 @@
         <state line="533" column="41" selection-start="19400" selection-end="19400" vertical-scroll-proportion="0.0" vertical-offset="7440" max-vertical-offset="9435" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/bootstrap-tagsinput-0.3.9/bootstrap-tagsinput-angular.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="8" selection-start="3248" selection-end="3248" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1320">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="84" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
@@ -738,7 +731,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="60" selection-start="2357" selection-end="2357" vertical-scroll-proportion="0.9494098" vertical-offset="202" max-vertical-offset="1290">
+        <state line="51" column="60" selection-start="2357" selection-end="2357" vertical-scroll-proportion="-23.458334" vertical-offset="202" max-vertical-offset="1290">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/bootstrap-tagsinput-0.3.9/bootstrap-tagsinput-angular.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="9" selection-start="3249" selection-end="3249" vertical-scroll-proportion="0.8541329" vertical-offset="703" max-vertical-offset="1320">
           <folding />
         </state>
       </provider>
