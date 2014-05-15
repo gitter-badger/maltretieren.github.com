@@ -1,6 +1,20 @@
 ---
 layout: none
 ---
-[{% for post in site.posts %}
-	{{post.title}} - {{post.frontpage}}
-{% endfor %}]
+[{% for post in site.posts.frontpage %}
+    {% if post.frontpage == true %}
+		{
+		"Date": "{{ post.date | date_to_string }}",
+		"Title": "{{ post.title }}",
+		"Url": "{{ post.url}}",
+		"Preview": "{{ post.preview  }}",
+		"PreviewText": "{{ post.content | strip_html | truncatewords:60 | strip_newlines }}  ",
+		"TagsSentence": "{{post.tags | array_to_sentence_string}}",
+		"Tags": 
+			[{% for tag in post.tags %}
+				"{{tag}}"
+			{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
+		}
+	{% endif %}
+{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
+	
