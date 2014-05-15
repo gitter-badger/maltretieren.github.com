@@ -520,7 +520,7 @@ myApp.service("YamlSrvc", function () {
 				var line = lineSplit[i].split(":");
 				if(line.length===2 && line[1].trim() !== "") {
                     // deal with boolean
-                    var value = "";
+                    var value = 'undefined';
                     if(line[1].trim() === "true" || line[1].trim() === "false") {
 						console.log("boolean: "+line[1].trim());
                         value = Boolean(line[1].trim());
