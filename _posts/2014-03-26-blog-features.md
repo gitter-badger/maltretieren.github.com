@@ -1,6 +1,7 @@
 ---
 layout: post
 categories:
+ - blog
 tagline: with github.js
 tags:
  - development
@@ -10,6 +11,7 @@ tags:
 published: true
 frontpage: true
 ---
+
 
 
 
