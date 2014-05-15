@@ -1,5 +1,6 @@
 /**
  * modified to get placeholder working https://github.com/TimSchlechter/bootstrap-tagsinput/issues/57 
+ * https://github.com/TimSchlechter/bootstrap-tagsinput/pull/86
  */
 angular.module('bootstrap-tagsinput', [])
     .directive('bootstrapTagsinput', [function() {
@@ -38,6 +39,9 @@ angular.module('bootstrap-tagsinput', [])
                         itemText : getItemProperty(scope, attrs.itemtext),
                         tagClass : angular.isFunction(scope.$parent[attrs.tagclass]) ? scope.$parent[attrs.tagclass] : function(item) { return attrs.tagclass; }
                     });
+					if (typeof(attrs.placeholder) != "undefined") {
+						select.tagsinput('setPlaceholder', attrs.placeholder);
+					}
 
                     for (var i = 0; i < scope.model.length; i++) {
                         select.tagsinput('add', scope.model[i]);
