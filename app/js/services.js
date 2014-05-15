@@ -552,13 +552,15 @@ myApp.service("YamlSrvc", function () {
 		var response = "---\n";
 		for (var key in content) {
 			if(key !== "content") {
-				response += key+":\n";
+				response += key+":";
 				if (typeof content[key] === 'string'|| typeof content[key] === 'boolean') {
 					response += content[key]+"\n";
-				} else {
+				} else if(content[key].length!==0) {
 					for(var i=0; i<content[key].length; i++) {
-						response += " - "+content[key][i]+"\n";
+						response += "\n - "+content[key][i]+"\n";
 					}
+				} else {
+					response += "\n";
 				}
 			}
 		}
