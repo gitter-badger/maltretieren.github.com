@@ -42,7 +42,11 @@ comments: false
 				<div class="row">&nbsp;</div>
 				<div ng-cloak collapse="advancedSettings">
 					<div class="well well-lg">
-						<div class="row">
+                        <div class="row">
+                            <input type="checkbox" ng-model="yaml.frontpage" /> Frontpage
+                            <input type="checkbox" ng-model="yaml.published" /> Published
+                        </div>
+                        <div class="row">
 							<h1>Layout</h1>
 							<div>{{yaml.layout}}</div>
 						</div>
@@ -68,14 +72,7 @@ comments: false
 									placeholder="Add tags here..." Confirm with ENTER>
 							</bootstrap-tagsinput>
 						</div>
-						<div class="row">
-							<h2>Frontpage</h2>
-							<input type="checkbox" ng-model="yaml.frontpage" /> Frontpage
-						</div>
-						<div class="row">
-							<h2>Published</h2>
-							<input type="checkbox" ng-model="yaml.published" /> Published
-						</div>
+
 					</div> 
 				</div>
 			</form>
