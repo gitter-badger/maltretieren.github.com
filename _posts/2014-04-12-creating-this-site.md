@@ -5,10 +5,11 @@ categories:
  - jekyll
  - edit
  - github
-frontpage: false
+frontpage: true
 published: true
 tags:
 ---
+
 
 
 
