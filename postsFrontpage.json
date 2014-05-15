@@ -20,7 +20,7 @@ layout: none
 			}
 		{% endif %}
 	{% endcapture %}
-	{{ postElement | json }}  
+	{{ postElement | strip_newlines }}  
 {% endfor %}]
 
 	
