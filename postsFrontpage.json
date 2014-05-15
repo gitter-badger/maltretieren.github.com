@@ -3,7 +3,7 @@ layout: none
 ---
 [{% for post in site.posts %}
     {% if post.frontpage == true %}
-		assign postSize = site.posts.size | minus: 1
+		{% assign postSize = site.posts.size | minus: 1 %}
 		{% if forloop.rindex0 > 0 and forloop.rindex0 != postSize %},{% endif %}
 		{
 		"Date": "{{ post.date | date_to_string }}",
