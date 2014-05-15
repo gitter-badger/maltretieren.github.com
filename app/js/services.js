@@ -522,6 +522,7 @@ myApp.service("YamlSrvc", function () {
                     // deal with boolean
                     var value;
                     if(line[1].trim() === "true" || line[1].trim() === "false") {
+						console.log("boolean: "+line[1].trim());
                         value = Boolean(line[1].trim());
                     } else {
 						value = line[1].trim();
