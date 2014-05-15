@@ -694,13 +694,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
     };
 
     $scope.getTagClass = function(city) {
-        switch (city.continent) {
-            case 'Europe' : return 'tag label label-info';
-            case 'America' : return 'tag label label-info';
-            case 'Australia': return 'tag label label-info';
-            case 'Africa' : return 'tag label label-info';
-            case 'Asia' : return 'tag label label-info';
-        }
+        return 'tag label label-info';
     };
 
 	var date = "";
