@@ -527,7 +527,6 @@ myApp.service("YamlSrvc", function () {
                     } else {
 						value = line[1].trim();
 					}
-					console.log(value);
                     response[line[0]] = value;
 				} else {
 					var element = line[0].split("-");
@@ -547,12 +546,10 @@ myApp.service("YamlSrvc", function () {
 				}
 			}
 		}
-		console.log(response);
 		return response;
     };
 	
 	var create = function (content) {
-        console.log(content)
 		var response = "---\n";
 		for (var key in content) {
 			if(key !== "content") {
