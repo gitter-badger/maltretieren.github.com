@@ -20,7 +20,7 @@ layout: none
 			}
 		{% endif %}
 	{% endcapture %}
-	{{ element | strip_newline }}
+	{{ element | strip_newline }} 
 {% endfor %}]
 
 	
