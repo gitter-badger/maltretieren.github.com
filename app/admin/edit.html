@@ -43,7 +43,11 @@ comments: false
                 </div>
                 <div class="row">
                     <h1>Categories</h1>
-                    <div ng-repeat="entry in yaml.categories">{{entry}}</div>
+                    <!--http://timschlechter.github.io/bootstrap-tagsinput/examples/-->
+                    <bootstrap-tagsinput
+                            ng-model="yaml.categories"
+                            tagclass="getTagClass">
+                    </bootstrap-tagsinput>
                 </div>
                 <div class="row">
                     <h1>Tags</h1>
