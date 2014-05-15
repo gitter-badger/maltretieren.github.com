@@ -2,7 +2,5 @@
 layout: none
 ---
 [{% for post in site.posts %}
-	{% if post.frontpage == "true" %}
-		"Frontpage": "true"
-	{% endif %}
+	{{post.frontpage}}
 {% endfor %}]
