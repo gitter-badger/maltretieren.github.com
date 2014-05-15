@@ -8,8 +8,9 @@ tags:
  - edit
  - github
 published: true
-frontpage: true
+frontpage: false
 ---
+
 
 
 {% include JB/setup %}
