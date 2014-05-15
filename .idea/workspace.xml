@@ -28,8 +28,12 @@
       <file leaf-file-name="edit.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="75" selection-start="3942" selection-end="3942" vertical-scroll-proportion="0.5193929" vertical-offset="742" max-vertical-offset="1455">
-              <folding />
+            <state line="46" column="77" selection-start="2358" selection-end="2358" vertical-scroll-proportion="0.16526139" vertical-offset="592" max-vertical-offset="1455">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#form#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#3;n#form#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#3;n#form#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -738,8 +742,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="75" selection-start="3942" selection-end="3942" vertical-scroll-proportion="0.5193929" vertical-offset="742" max-vertical-offset="1455">
-          <folding />
+        <state line="46" column="77" selection-start="2358" selection-end="2358" vertical-scroll-proportion="0.16526139" vertical-offset="592" max-vertical-offset="1455">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#form#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#3;n#form#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#3;n#form#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
