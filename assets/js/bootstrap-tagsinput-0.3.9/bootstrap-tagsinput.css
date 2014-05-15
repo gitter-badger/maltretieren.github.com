@@ -9,6 +9,7 @@
   vertical-align: middle;
   border-radius: 4px;
   max-width: 100%;
+  width: 100%;
   line-height: 22px
 }
 .bootstrap-tagsinput input {
@@ -18,7 +19,7 @@
   background-color: transparent;
   padding: 0;
   margin: 0;
-  width: 100% !important;
+  width: auto !important;
   max-width: inherit;
 }
 .bootstrap-tagsinput input:focus {
