@@ -13,7 +13,10 @@ layout: none
 		"Tags": 
 			[{% for tag in post.tags %}
 				"{{tag}}"
+			{% endfor %}]
 		}
 	{% endif %}
+	forloop.rindex0
+	{% if forloop.rindex0 > 0 %},{% endif %}
 {% endfor %}]
 	
