@@ -749,7 +749,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
 			if(typeof(url) !='undefined') {
                 window.location = url;
             } else {
-				window.location = config.github.redirection_url+"/"+$scope.commitPath.replace(/-/g,"/");
+				window.location = config.github.redirection_url+"-"+$scope.commitPath.replace(/-/g,"/");
             }
         }, 10000);
     });
