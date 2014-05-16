@@ -9,4 +9,5 @@ published: true
 frontpage: false
 ---
 # Example Hading
-Please write your text here
+
+Please write your text here...
