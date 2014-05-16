@@ -698,12 +698,12 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
     if(typeof(path) != 'undefined' && typeof(url) !='undefined') {
         var splif = path.split("-");
         date = splif[0].split("/")[1]+"-"+splif[1]+"-"+splif[2];
-        $scope.options.title = "";
+        //$scope.options.title = "";
         for(var i=3;i<splif.length;i++) {
             if(i!==splif.length-1) {
-                $scope.options.title += splif[i]+" ";
+                //$scope.options.title += splif[i]+" ";
             } else {
-                $scope.options.title += splif[i].split(".")[0];
+                //$scope.options.title += splif[i].split(".")[0];
             }
         }
     } else {
