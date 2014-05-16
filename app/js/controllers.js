@@ -701,9 +701,9 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
         //$scope.options.title = "";
         for(var i=3;i<splif.length;i++) {
             if(i!==splif.length-1) {
-                //$scope.options.title += splif[i]+" ";
+                $scope.options.title += splif[i]+" ";
             } else {
-                //$scope.options.title += splif[i].split(".")[0];
+                $scope.options.title += splif[i].split(".")[0];
             }
         }
     } else {
