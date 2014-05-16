@@ -82,7 +82,7 @@ comments: false
                 </div>
             </form>
 			<button class="btn btn-default" ng-click="advancedSettings = !advancedSettings">Advanced Settings</button>
-			<button ng-disabled="(editForm.$dirty && editForm.$invalid)" ng-click="save(editForm.$pristine)" class="btn btn-primary pull-right" type="button" disabled="disabled">
+			<button ng-disabled="(editForm.$dirty && editForm.$invalid) || editForm.$pristine" ng-click="save(editForm.$pristine)" class="btn btn-primary pull-right" type="button" disabled="disabled">
 				Submit
 			</button>
 			<div class="row">&nbsp;</div>
