@@ -1,3 +1,7 @@
+.body {
+	font-family: Lato,​'Helvetica Neue',​Helvetica,​Arial,​sans-serif;
+}
+
 .caret.caret-reversed {
     border-top-width: 0;
     border-bottom: 4px solid;
