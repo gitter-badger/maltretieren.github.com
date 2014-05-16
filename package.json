@@ -1,5 +1,5 @@
 {
-  "name": "my-project-name",
+  "name": "maltretieren",
   "version": "0.1.0",
   "devDependencies": {
     "grunt": "~0.4.4",
@@ -8,6 +8,14 @@
     "grunt-contrib-uglify": "~0.2.2",
     "grunt-git": "~0.2.6",
     "karma": "~0.12.0",
-    "karma-jasmine": "~0.1.0"
+    "grunt-karma": "~0.8.3",
+    "karma-jasmine": "~0.1.0",
+    "karma-chrome-launcher": "~0.1",
+    "karma-ng-html2js-preprocessor": "~0.1.0",
+    "karma-ng-scenario": "~0.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Maltretieren/maltretieren.github.com.git"
   }
 }

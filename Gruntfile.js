@@ -12,12 +12,21 @@ module.exports = function(grunt) {
                 }
             }
         },
+        karma: {
+            unit: {
+                configFile: 'tests/karma.conf.js'
+            }
+        }
     })
 
     // Load the plugin that provides the "grunt-git" task.
     grunt.loadNpmTasks('grunt-git');
+    grunt.loadNpmTasks('grunt-karma');
 
     // Default task(s).
-    grunt.registerTask('default', ['gitcommit']);
+    grunt.registerTask('default', ['karma']);
 
+    if (grunt.option('debug')) {
+        console.log(grunt.config('karma.unit.configFile'));
+    }
 };
