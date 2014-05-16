@@ -723,7 +723,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
 	var savePromise = $q.defer();
 	$scope.save = function() {
 		var content = $('#target-editor').markdown()[0].value;
-		$scope.yaml.content = content;
+		//$scope.yaml.content = content;
 		content = YamlSrvc.create($scope.yaml);
 		savePromise.resolve(content)
 	}
