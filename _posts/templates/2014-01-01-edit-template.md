@@ -1,13 +1,12 @@
 ---
-
 layout: post
 categories: 
   - template
-tagline: small letters after the title
+tagline: 
 tags: 
   - example
 published: true
-
+frontpage: false
 ---
-
-{% include JB/setup %}
+# Example Hading
+Please write your text here
