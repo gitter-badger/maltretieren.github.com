@@ -730,10 +730,11 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
     savePromise.promise.then(function(content) {
         var commitPath = "";
         if($scope.options.date instanceof Date) {
-            $scope.commitPath = $scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replace(/ /g,"-")+".md";
+            $scope.commitPath = $scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title;
         } else {
-            $scope.commitPath = $scope.options.date+"-"+$scope.options.title.replace(/ /g,"-")+".md";
+            $scope.commitPath = $scope.options.date+"-"+$scope.options.title;
         }
+		$scope.commitPath = $scope.commitPath.replace(/ /g,"-")+".md";
 
         //var path = "_posts/"+$scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replaceAll(" ","-")+".md";
         console.log("edit existing content");
