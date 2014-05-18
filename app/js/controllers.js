@@ -495,7 +495,7 @@ myApp.controller('GithubForkCtrl', function($scope, $http, $q, $timeout, toaster
                 var githubInstance = GithubAuthService.instance();
                 var repo = githubInstance.getRepo(UserModel.getUser().name, UserModel.getUser().name+".github.com");
                 var branch = repo.getBranch("master");
-                var content = "---\nlayout: post\ncategories:\n- frontpage\ntagline: \ntags:\n- development\n- jekyll\npublished: true\n---\n{% include JB/setup %}\nHi, this is the first post!";
+                var content = "---\nlayout: post\ncategories:\n- frontpage\ntagline: \ntags:\n- development\n- jekyll\npublished: true\nfrontpage: true\n---\nHi, this is the first post!";
                 scope.progress = 86;
                 var date = new Date();
                 GithubSrvc.commit(content, "_posts/"+date.toISOString().slice(0,10)+"-hello-world.md", branch, false, true).then(function() {
