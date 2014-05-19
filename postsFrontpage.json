@@ -21,7 +21,7 @@ layout: none
 				}
 				{% assign hit = 1 %}
 			{% endif %}
-		 {% endif %}
+		 {% endif %} 
 	{% endcapture %}
 	{{ postElement }}
 {% endfor %}]
