@@ -24,5 +24,4 @@ layout: none
 	{% endcapture %}
 	{{ postElement }}
 {% endfor %}]
-
 	
