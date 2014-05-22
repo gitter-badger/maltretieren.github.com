@@ -28,7 +28,10 @@
 				<tr ng:repeat="post in posts.entries | orderBy:orderByField:reverseSort | filter:searchText">
 					<td class="date hidden-xs">
 						<div>
-							
+							<!--
+							<a href="{{post.Url}}">{{ post.Title }}</a><br>
+							http://jsfiddle.net/P4fSZ/
+							-->
 							<span style="font-size:0.8em;">{{ post.Date | date:'dd MMM yyyy' }}</span>
 						</div>
 						<div>
