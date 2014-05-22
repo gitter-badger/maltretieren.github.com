@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/postsFrontpage.html" afterPath="$PROJECT_DIR$/app/partials/postsFrontpage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers.js" afterPath="$PROJECT_DIR$/app/js/controllers.js" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="142" column="26" selection-start="4502" selection-end="4506" vertical-scroll-proportion="-7.88" vertical-offset="1933" max-vertical-offset="12780">
+            <state line="155" column="55" selection-start="4966" selection-end="4966" vertical-scroll-proportion="0.6621622" vertical-offset="1933" max-vertical-offset="12780">
               <folding />
             </state>
           </provider>
@@ -90,10 +90,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postsFrontpage.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="postsFrontpage.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/partials/postsFrontpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="75" selection-start="1422" selection-end="1422" vertical-scroll-proportion="0.7841484" vertical-offset="30" max-vertical-offset="915">
+            <state line="33" column="75" selection-start="1422" selection-end="1422" vertical-scroll-proportion="-19.375" vertical-offset="30" max-vertical-offset="915">
               <folding>
                 <element signature="n#style#0;n#input#0;n#span#0;n#th#0;n#a#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -152,12 +152,12 @@
         <option value="$PROJECT_DIR$/tests/test.js" />
         <option value="$PROJECT_DIR$/tests/karma-e2e.conf.js" />
         <option value="$PROJECT_DIR$/tests/karma.conf.js" />
-        <option value="$PROJECT_DIR$/app/js/controllers.js" />
         <option value="$PROJECT_DIR$/cache.manifest" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/app/admin/fork.html" />
         <option value="$PROJECT_DIR$/postsFrontpage.json" />
         <option value="$PROJECT_DIR$/app/partials/postsFrontpage.html" />
+        <option value="$PROJECT_DIR$/app/js/controllers.js" />
       </list>
     </option>
   </component>
@@ -628,13 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="26" selection-start="4502" selection-end="4506" vertical-scroll-proportion="-7.88" vertical-offset="1933" max-vertical-offset="12780">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/postsFrontpage.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="40" selection-start="311" selection-end="311" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="480">
@@ -644,7 +637,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/partials/postsFrontpage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="75" selection-start="1422" selection-end="1422" vertical-scroll-proportion="0.7841484" vertical-offset="30" max-vertical-offset="915">
+        <state line="33" column="75" selection-start="1422" selection-end="1422" vertical-scroll-proportion="-19.375" vertical-offset="30" max-vertical-offset="915">
           <folding>
             <element signature="n#style#0;n#input#0;n#span#0;n#th#0;n#a#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -653,6 +646,13 @@
             <element signature="n#style#0;n#div#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="155" column="55" selection-start="4966" selection-end="4966" vertical-scroll-proportion="0.6621622" vertical-offset="1933" max-vertical-offset="12780">
+          <folding />
         </state>
       </provider>
     </entry>
