@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/postsFrontpage.json" afterPath="$PROJECT_DIR$/postsFrontpage.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/postsFrontpage.html" afterPath="$PROJECT_DIR$/app/partials/postsFrontpage.html" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,10 +90,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postsFrontpage.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="postsFrontpage.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/partials/postsFrontpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="80" selection-start="1461" selection-end="1461" vertical-scroll-proportion="-19.375" vertical-offset="45" max-vertical-offset="915">
+            <state line="34" column="87" selection-start="1468" selection-end="1468" vertical-scroll-proportion="0.7841484" vertical-offset="45" max-vertical-offset="915">
               <folding>
                 <element signature="n#style#0;n#input#0;n#span#0;n#th#0;n#a#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -106,10 +106,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postsFrontpage.json" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="postsFrontpage.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/postsFrontpage.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="40" selection-start="311" selection-end="311" vertical-scroll-proportion="0.2529511" vertical-offset="0" max-vertical-offset="593">
+            <state line="10" column="40" selection-start="311" selection-end="311" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="480">
               <folding />
             </state>
           </provider>
@@ -156,8 +156,8 @@
         <option value="$PROJECT_DIR$/cache.manifest" />
         <option value="$PROJECT_DIR$/_includes/themes/twitter/default.html" />
         <option value="$PROJECT_DIR$/app/admin/fork.html" />
-        <option value="$PROJECT_DIR$/app/partials/postsFrontpage.html" />
         <option value="$PROJECT_DIR$/postsFrontpage.json" />
+        <option value="$PROJECT_DIR$/app/partials/postsFrontpage.html" />
       </list>
     </option>
   </component>
@@ -635,9 +635,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/postsFrontpage.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="40" selection-start="311" selection-end="311" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="480">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/partials/postsFrontpage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="80" selection-start="1461" selection-end="1461" vertical-scroll-proportion="-19.375" vertical-offset="45" max-vertical-offset="915">
+        <state line="34" column="87" selection-start="1468" selection-end="1468" vertical-scroll-proportion="0.7841484" vertical-offset="45" max-vertical-offset="915">
           <folding>
             <element signature="n#style#0;n#input#0;n#span#0;n#th#0;n#a#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -646,13 +653,6 @@
             <element signature="n#style#0;n#div#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/postsFrontpage.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="40" selection-start="311" selection-end="311" vertical-scroll-proportion="0.2529511" vertical-offset="0" max-vertical-offset="593">
-          <folding />
         </state>
       </provider>
     </entry>
