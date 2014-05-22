@@ -8,7 +8,7 @@ layout: none
 			{% assign postSize = site.posts.size | minus: 1 %} 
 			{% if forloop.rindex0 > 0 and forloop.rindex0 != postSize and hit != 0 %},{% endif %}
 			{
-				"Date": "{{ post.date }}",
+				"Date": "{{ post.date | date_to_xmlschema }}",
 				"Title": "{{ post.title }}",
 				"Url": "{{ post.url}}",
 				"Preview": "{{ post.preview  }}",
