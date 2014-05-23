@@ -1,3 +1,5 @@
+<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/NDjB_7lAkO8&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/NDjB_7lAkO8&hl=en&fs=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
+
 # Philosophy
 Jekyll Bootstrap states: "The Quickest Way to Blog on GitHub Pages". I'm hoping to provide the
 "Quickest and Easiest Way to Blog on Github Pages", because you don't even need to have any
