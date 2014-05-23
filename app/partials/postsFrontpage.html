@@ -12,7 +12,7 @@
 							</span>
 						</a>
 					</th>
-					<th class="col-xs-12 col-md-8">
+					<th class="col-xs-12 col-md-8 hidden-xs">
 						<a href="#" ng-click="orderByField='Title'; reverseSort = !reverseSort">
 						Posts
 						<span ng-show="orderByField == 'Title'">
@@ -29,7 +29,7 @@
 					<td class="date hidden-xs">
 						<div>
 							<!--
-							http://jsfiddle.net/P4fSZ/
+							http://jsfiddle.net/P4fSZ/ - it is important to receive the dates in ISO 8601 format
 							-->
                             <a href="{{post.Url}}">{{ post.Title }}</a><br>
 							<span style="font-size:0.8em;">{{ post.Date | date:'dd MMM yyyy' }}</span>
