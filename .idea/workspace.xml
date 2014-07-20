@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa22cf5-244d-4173-9ad0-0380914b5e40" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/table_accessoires/2014-07-20-raspi-b-plus.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/table_accessoires/2014-07-20-raspi-b-plus.md" afterPath="$PROJECT_DIR$/_posts/table_accessoires/2014-07-20-raspi-b-plus.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="maltretieren.github.com.iws" />
@@ -77,7 +77,7 @@
       <file leaf-file-name="2014-07-20-raspi-b-plus.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/table_accessoires/2014-07-20-raspi-b-plus.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="52" selection-start="112" selection-end="134" vertical-scroll-proportion="0.08122744" vertical-offset="0" max-vertical-offset="554">
+            <state line="19" column="365" selection-start="764" selection-end="764" vertical-scroll-proportion="0.52680224" vertical-offset="0" max-vertical-offset="541">
               <folding />
             </state>
           </provider>
@@ -657,7 +657,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/table_accessoires/2014-07-20-raspi-b-plus.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="52" selection-start="112" selection-end="134" vertical-scroll-proportion="0.08122744" vertical-offset="0" max-vertical-offset="554">
+        <state line="19" column="365" selection-start="764" selection-end="764" vertical-scroll-proportion="0.52680224" vertical-offset="0" max-vertical-offset="541">
           <folding />
         </state>
       </provider>
