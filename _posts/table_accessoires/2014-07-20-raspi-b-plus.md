@@ -17,7 +17,7 @@ tags:
 
 {% include accessoires/accessoire-table %}
 
-<iframe src="//player.vimeo.com/video/100672311" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/100672311">Meet the Raspberry Pi Model B+ (with bloopers)</a> from <a href="http://vimeo.com/raspberrypi">Raspberry Pi Foundation</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<iframe src="//player.vimeo.com/video/100672311" width="100%" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/100672311">Meet the Raspberry Pi Model B+ (with bloopers)</a> from <a href="http://vimeo.com/raspberrypi">Raspberry Pi Foundation</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
 The GPIO header has grown to 40 pins, while retaining the same pinout for the first 26 pins as the Model B.
 
