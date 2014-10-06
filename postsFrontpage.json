@@ -1,7 +1,4 @@
----
-layout: nil
----
-{% assign hit = 0 %}	
+{% assign hit = 0 %}
 [{% for post in site.posts %}
 	{% capture postElement %}
 		{% if post.frontpage == true %}
