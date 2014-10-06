@@ -2,7 +2,7 @@
 layout: post
 preview: /assets/images/DevicesSetup.png
 categories: 
-  - test
+  - rasbpi
 tagline: a post to the main page
 tags: 
   - development
