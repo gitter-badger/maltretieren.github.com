@@ -1,5 +1,5 @@
 ---
-layout: none
+layout: nil
 ---
 {% assign hit = 0 %}	
 [{% for post in site.posts %}
