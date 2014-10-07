@@ -1,5 +1,5 @@
 (function() {
-    var Octokit, Promise, XMLHttpRequest, allPromises, createGlobalAndAMD, encode, err, injector, makeOctokit, newPromise, _,
+    var Octokit, Promise, XMLHttpRequest, allPromises, createGlobalAndAMD, encode, err, injector, makeOctokit, newPromise, _, _ref,
         _this = this,
         __hasProp = {}.hasOwnProperty,
         __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
@@ -11,8 +11,8 @@
         return Object.keys(object).length === 0;
     };
 
-    _.isArray = function(object) {
-        return !!object.slice;
+    _.isArray = Array.isArray || function(obj) {
+        return toString.call(obj) === '[object Array]';
     };
 
     _.defaults = function(object, values) {
@@ -30,6 +30,9 @@
 
     _.each = function(object, fn) {
         var arr, key, _i, _len, _ref, _results;
+        if (!object) {
+            return;
+        }
         if (_.isArray(object)) {
             object.forEach(fn);
         }
@@ -87,16 +90,16 @@
     };
 
     _.extend = function(object, template) {
-        var key, _i, _len, _ref, _results;
+        var key, _fn, _i, _len, _ref;
         _ref = Object.keys(template);
-        _results = [];
+        _fn = function(key) {
+            return object[key] = template[key];
+        };
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
             key = _ref[_i];
-            _results.push((function(key) {
-                return object[key] = template[key];
-            })(key));
+            _fn(key);
         }
-        return _results;
+        return object;
     };
 
     _.toArray = function(object) {
@@ -198,6 +201,9 @@
                     if ('PATCH' === method && clientOptions.usePostInsteadOfPatch) {
                         method = 'POST';
                     }
+                    if (!/^http/.test(path)) {
+                        path = "" + clientOptions.rootURL + path;
+                    }
                     mimeType = void 0;
                     if (options.isBase64) {
                         mimeType = 'text/plain; charset=x-user-defined';
@@ -225,7 +231,7 @@
                         var ajaxConfig, always, onError, xhrPromise,
                             _this = this;
                         ajaxConfig = {
-                            url: clientOptions.rootURL + path,
+                            url: path,
                             type: method,
                             contentType: 'application/json',
                             mimeType: mimeType,
@@ -258,7 +264,7 @@
                             return _results;
                         };
                         xhrPromise.then(function(jqXHR) {
-                            var converted, eTag, eTagResponse, i, _i, _ref;
+                            var converted, eTag, eTagResponse, i, links, valOptions, _i, _ref;
                             always(jqXHR);
                             if (304 === jqXHR.status) {
                                 if (clientOptions.useETags && _cachedETags[path]) {
@@ -272,6 +278,16 @@
                             } else {
                                 if (jqXHR.responseText && 'json' === ajaxConfig.dataType) {
                                     data = JSON.parse(jqXHR.responseText);
+                                    valOptions = {};
+                                    links = jqXHR.getResponseHeader('Link');
+                                    _.each(links != null ? links.split(',') : void 0, function(part) {
+                                        var discard, href, rel, _ref;
+                                        _ref = part.match(/<([^>]+)>;\ rel="([^"]+)"/), discard = _ref[0], href = _ref[1], rel = _ref[2];
+                                        return valOptions["" + rel + "Page"] = function() {
+                                            return _request('GET', href, null, options);
+                                        };
+                                    });
+                                    _.extend(data, valOptions);
                                 } else {
                                     data = jqXHR.responseText;
                                 }
@@ -290,28 +306,27 @@
                             }
                         });
                         onError = function(jqXHR) {
-                            var json;
+                            var err, json;
                             always(jqXHR);
                             if (options.isBoolean && 404 === jqXHR.status) {
                                 return resolve(false);
                             } else {
                                 if (jqXHR.getResponseHeader('Content-Type') !== 'application/json; charset=utf-8') {
-                                    return reject({
-                                        error: jqXHR.responseText,
-                                        status: jqXHR.status,
-                                        _jqXHR: jqXHR
-                                    });
+                                    err = new Error(jqXHR.responseText);
+                                    err['status'] = jqXHR.status;
+                                    err['__jqXHR'] = jqXHR;
+                                    return reject(err);
                                 } else {
+                                    err = new Error("Github error: " + jqXHR.responseText);
                                     if (jqXHR.responseText) {
                                         json = JSON.parse(jqXHR.responseText);
                                     } else {
                                         json = '';
                                     }
-                                    return reject({
-                                        error: json,
-                                        status: jqXHR.status,
-                                        _jqXHR: jqXHR
-                                    });
+                                    err['error'] = json;
+                                    err['status'] = jqXHR.status;
+                                    err['__jqXHR'] = jqXHR;
+                                    return reject(err);
                                 }
                             }
                         };
@@ -546,6 +561,23 @@
                             options.name = name;
                             return _request('POST', "/user/repos", options);
                         };
+                        this.getReceivedEvents = function(username, page) {
+                            var currentPage;
+                            if (page == null) {
+                                page = 1;
+                            }
+                            currentPage = '?page=' + page;
+                            return _request('GET', '/users/' + username + '/received_events' + currentPage, null);
+                        };
+                        this.getStars = function() {
+                            return _request('GET', "/user/starred");
+                        };
+                        this.putStar = function(owner, repo) {
+                            return _request('PUT', "/user/starred/" + owner + "/" + repo);
+                        };
+                        this.deleteStar = function(owner, repo) {
+                            return _request('DELETE', "/user/starred/" + owner + "/" + repo);
+                        };
                     }
 
                     return AuthenticatedUser;
@@ -692,17 +724,17 @@
                             return this.getTree(branch, {
                                 recursive: true
                             }).then(function(tree) {
-                                    var file;
-                                    file = _.select(tree, function(file) {
-                                        return file.path === path;
-                                    })[0];
-                                    if (file != null ? file.sha : void 0) {
-                                        return file != null ? file.sha : void 0;
-                                    }
-                                    return rejectedPromise({
-                                        message: 'SHA_NOT_FOUND'
-                                    });
+                                var file;
+                                file = _.select(tree, function(file) {
+                                    return file.path === path;
+                                })[0];
+                                if (file != null ? file.sha : void 0) {
+                                    return file != null ? file.sha : void 0;
+                                }
+                                return rejectedPromise({
+                                    message: 'SHA_NOT_FOUND'
                                 });
+                            });
                         };
                         this.getContents = function(path, sha) {
                             var queryString,
@@ -719,8 +751,8 @@
                             return _request('GET', "" + _repoPath + "/contents/" + path + queryString, null, {
                                 raw: true
                             }).then(function(contents) {
-                                    return contents;
-                                });
+                                return contents;
+                            });
                         };
                         this.removeFile = function(path, message, sha, branch) {
                             var params;
@@ -776,8 +808,8 @@
                             return _request('POST', "" + _repoPath + "/git/trees", {
                                 tree: tree
                             }).then(function(res) {
-                                    return res.sha;
-                                });
+                                return res.sha;
+                            });
                         };
                         this.commit = function(parents, tree, message) {
                             var data;
@@ -917,22 +949,22 @@
                                     return _git.getTree(latestCommit, {
                                         recursive: true
                                     }).then(function(tree) {
-                                            _.each(tree, function(ref) {
-                                                if (ref.path === path) {
-                                                    ref.path = newPath;
-                                                }
-                                                if (ref.type === 'tree') {
-                                                    return delete ref.sha;
-                                                }
-                                            });
-                                            return _git.postTree(tree).then(function(rootTree) {
-                                                return _git.commit(latestCommit, rootTree, message).then(function(commit) {
-                                                    return _git.updateHead(branch, commit).then(function(res) {
-                                                        return res;
-                                                    });
+                                        _.each(tree, function(ref) {
+                                            if (ref.path === path) {
+                                                ref.path = newPath;
+                                            }
+                                            if (ref.type === 'tree') {
+                                                return delete ref.sha;
+                                            }
+                                        });
+                                        return _git.postTree(tree).then(function(rootTree) {
+                                            return _git.commit(latestCommit, rootTree, message).then(function(commit) {
+                                                return _git.updateHead(branch, commit).then(function(res) {
+                                                    return res;
                                                 });
                                             });
                                         });
+                                    });
                                 });
                             });
                         };
@@ -949,9 +981,9 @@
                                 content: content,
                                 isBase64: isBase64
                             };
-                            return this.writeMany(contents, message, null, parentCommitSha);
+                            return this.writeMany(contents, message, parentCommitSha);
                         };
-                        this.writeMany = function(contents, message, force, parentCommitShas) {
+                        this.writeMany = function(contents, message, parentCommitShas) {
                             var _this = this;
                             if (message == null) {
                                 message = "Changed Multiple";
@@ -981,7 +1013,7 @@
                                     return allPromises(promises).then(function(newTrees) {
                                         return _git.updateTreeMany(parentCommitShas, newTrees).then(function(tree) {
                                             return _git.commit(parentCommitShas, tree, message).then(function(commitSha) {
-                                                return _git.updateHead(branch, commitSha, force).then(function(res) {
+                                                return _git.updateHead(branch, commitSha).then(function(res) {
                                                     return res.object;
                                                 });
                                             });
@@ -1140,8 +1172,8 @@
                                     return _this.isCollaborator(login);
                                 }
                             }).then(null, function(err) {
-                                    return false;
-                                });
+                                return false;
+                            });
                         };
                         this.getHooks = function() {
                             return _request('GET', "" + this.repoPath + "/hooks", null);
@@ -1327,14 +1359,14 @@
 
     if (typeof exports !== "undefined" && exports !== null) {
         Promise = this.Promise || require('es6-promise').Promise;
-        XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+        XMLHttpRequest = this.XMLHttpRequest || require('xmlhttprequest').XMLHttpRequest;
         newPromise = function(fn) {
             return new Promise(fn);
         };
         allPromises = function(promises) {
-            return Promise.all(promises);
+            return Promise.all.call(Promise, promises);
         };
-        encode = function(str) {
+        encode = this.btoa || function(str) {
             var buffer;
             buffer = new Buffer(str, 'binary');
             return buffer.toString('base64');
@@ -1355,33 +1387,44 @@
                 return _this.Github = Octokit;
             }
         };
-        if (this.Promise) {
+        if (this.Q) {
             newPromise = function(fn) {
-                return new _this.Promise(fn);
+                var deferred, reject, resolve;
+                deferred = _this.Q.defer();
+                resolve = function(val) {
+                    return deferred.resolve(val);
+                };
+                reject = function(err) {
+                    return deferred.reject(err);
+                };
+                fn(resolve, reject);
+                return deferred.promise;
             };
-            allPromises = this.Promise.all;
+            allPromises = function(promises) {
+                return this.Q.all(promises);
+            };
             createGlobalAndAMD(newPromise, allPromises);
         } else if (this.angular) {
             injector = angular.injector(['ng']);
             injector.invoke(function($q) {
                 newPromise = function(fn) {
-                    var $promise, reject, resolve;
-                    $promise = $q.defer();
+                    var deferred, reject, resolve;
+                    deferred = $q.defer();
                     resolve = function(val) {
-                        return $promise.resolve(val);
+                        return deferred.resolve(val);
                     };
-                    reject = function(val) {
-                        return $promise.reject(val);
+                    reject = function(err) {
+                        return deferred.reject(err);
                     };
                     fn(resolve, reject);
-                    return $promise.promise;
+                    return deferred.promise;
                 };
                 allPromises = function(promises) {
                     return $q.all(promises);
                 };
                 return createGlobalAndAMD(newPromise, allPromises);
             });
-        } else if (this.jQuery) {
+        } else if ((_ref = this.jQuery) != null ? _ref.Deferred : void 0) {
             newPromise = function(fn) {
                 var promise, reject, resolve;
                 promise = _this.jQuery.Deferred();
@@ -1395,12 +1438,26 @@
                 return promise.promise();
             };
             allPromises = function(promises) {
-                var _ref;
-                return (_ref = _this.jQuery).when.apply(_ref, promises).then(function() {
+                var _ref1;
+                return (_ref1 = _this.jQuery).when.apply(_ref1, promises).then(function() {
                     var promises;
                     promises = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
                     return promises;
                 });
+            };
+            createGlobalAndAMD(newPromise, allPromises);
+        } else if (this.Promise) {
+            newPromise = function(fn) {
+                return new _this.Promise(function(resolve, reject) {
+                    if (resolve.fulfill) {
+                        return fn(resolve.resolve.bind(resolve), resolve.reject.bind(resolve));
+                    } else {
+                        return fn.apply(null, arguments);
+                    }
+                });
+            };
+            allPromises = function(promises) {
+                return _this.Promise.all.call(_this.Promise, promises);
             };
             createGlobalAndAMD(newPromise, allPromises);
         } else {
