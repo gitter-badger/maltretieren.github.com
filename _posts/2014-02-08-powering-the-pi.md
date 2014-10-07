@@ -5,6 +5,7 @@ categories:
 tagline: a post to the main page
 tags: 
   - development
+  - test
 published: true
 commentIssueId: 1
 ---
