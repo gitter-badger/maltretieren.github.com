@@ -9,6 +9,10 @@ account. Create/Edit your own content from your site...
 To use the power of the static site generator as much content as possible should be prerendered.
 With the power of Javascript and external services you can make your static site even pretty dynamic.
 
+<div class="videoWrapper">
+    <iframe width="100%" src="//www.youtube.com/embed/NDjB_7lAkO8" frameborder="0" allowfullscreen></iframe>
+</div>
+
 ## Features
 - Free to Fork - MIT License
 - GitHub Pages compatible (uses only GitHub whitelistet plugins)
