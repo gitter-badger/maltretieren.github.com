@@ -9,6 +9,7 @@ account. Create/Edit your own content from your site...
 To use the power of the static site generator as much content as possible should be prerendered.
 With the power of Javascript and external services you can make your static site even pretty dynamic.
 
+Click on the image below to see a demo video of how to copy this site to your github account...
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/NDjB_7lAkO8/maxresdefault.jpg)](http://www.youtube.com/watch?v=NDjB_7lAkO8)
 
 ## Features
