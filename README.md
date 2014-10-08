@@ -9,7 +9,7 @@ account. Create/Edit your own content from your site...
 To use the power of the static site generator as much content as possible should be prerendered.
 With the power of Javascript and external services you can make your static site even pretty dynamic.
 
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/NDjB_7lAkO8/0.jpg)](http://www.youtube.com/watch?v=NDjB_7lAkO8)
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/NDjB_7lAkO8/hqdefault.jpg)](http://www.youtube.com/watch?v=NDjB_7lAkO8)
 
 ## Features
 - Free to Fork - MIT License
