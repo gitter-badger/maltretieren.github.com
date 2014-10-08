@@ -10,7 +10,6 @@ To use the power of the static site generator as much content as possible should
 With the power of Javascript and external services you can make your static site even pretty dynamic.
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/NDjB_7lAkO8/0.jpg)](http://www.youtube.com/watch?v=NDjB_7lAkO8)
-YT("ArHQjQyIS70", print = TRUE)
 
 ## Features
 - Free to Fork - MIT License
