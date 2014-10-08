@@ -51,7 +51,7 @@ Inspired by https://github.com/angular/angular-seed & https://github.com/plusjad
 			
 
 ## Setup
-- login with your github account / click on "Fork"
+- Login with your GitHub account / click on "Fork"
 - Wait until you get feedback that your site is available...
 
 ### Enbable advanced features
