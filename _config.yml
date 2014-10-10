@@ -21,8 +21,11 @@ author :
   twitter : username
   feedburner : feedname
 
+# Serve emoji locally - https://github.com/jekyll/jemoji
 gem:
-  emoji
+  jemoji
+emoji:
+  src: "/assets/images/emoji"
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
