@@ -1,5 +1,6 @@
 // Karma configuration
 // http://karma-runner.github.io/0.10/config/configuration-file.html
+grunt.loadNpmTasks('grunt-karma');
 
 module.exports = function(config) {
   config.set({
