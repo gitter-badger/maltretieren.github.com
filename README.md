@@ -97,6 +97,11 @@ Inspired by https://github.com/angular/angular-seed & https://github.com/plusjad
 - [JSO](https://github.com/andreassolberg/jso)
     - Javascript OAuth Library
 
+## Resources available
+rss.xml
+atom.xml
+postsFrontpage.json
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
