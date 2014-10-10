@@ -746,7 +746,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
 
         return GithubSrvc.commit(content, "_posts/"+$scope.commitPath);
     }).then(function() {
-        toaster.pop('success', "Post saved", 'The post was successfully saved. You will be redirected to the post in around 10 seconds..., 5000, 'trustedHtml');
+        toaster.pop('success', "Post saved", 'The post was successfully saved. You will be redirected to the post in around 10 seconds...', 5000, 'trustedHtml');
         // redirect to the frontpage after 10 seconds
 		console.log($scope.commitPath.replace(/-/g,"/").replace(".md", ""));
 		$timeout(function(){
