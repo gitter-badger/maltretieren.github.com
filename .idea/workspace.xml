@@ -54,7 +54,9 @@
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="419">
               <caret line="0" column="186" selection-start-line="0" selection-start-column="186" selection-end-line="0" selection-end-column="186" />
               <folding>
-                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -988,7 +990,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="419">
           <caret line="0" column="186" selection-start-line="0" selection-start-column="186" selection-end-line="0" selection-end-column="186" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
