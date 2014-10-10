@@ -3,7 +3,8 @@
 /**
 *	The controller must be responsible for binding model data to views using $scope,
  *	and control information flow.
-*	It does not contain logic to fetch the data or manipulating it.
+ *
+ *	It does not contain logic to fetch the data or manipulating it.
 */
 
 /**
@@ -84,12 +85,12 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $dialogs,$timeout, toas
 		} 
 
 		var success = function() {
-			toaster.pop('success', "Comment saved", '<ul><li>Comment was saved and will be available shortly</li></ul>', 5000, 'trustedHtml');
+			toaster.pop('success', "Comment saved", 'Comment was saved and will be available shortly', 5000, 'trustedHtml');
 			$timeout($scope.getComments, 9000);
 			$scope.$apply();
 		}
 		var error = function() {
-			toaster.pop('error', "Comment failed", '<ul><li>There was an error while saving the comment</li></ul>', 5000, 'trustedHtml');
+			toaster.pop('error', "Comment failed", 'There was an error while saving the comment', 5000, 'trustedHtml');
 			$scope.$apply();
 		}
 		Keen.addEvent("comments", data, success);
@@ -114,7 +115,7 @@ myApp.controller("KeenioMasterCtrl", function ($scope, $modalInstance, $http, to
 		$http({method: 'DELETE', url: postsUrl}).
 			success(function(data, status, headers, config) {
 				$modalInstance.close();
-				toaster.pop('error', "Comment deleted", '<ul><li>Comment was deleted</li></ul>', 5000, 'trustedHtml');
+				toaster.pop('error', "Comment deleted", 'Comment was deleted<', 5000, 'trustedHtml');
 			}).
 			error(function(data, status, headers, config) {
 				alert("Error while getting json for posts: "+status)
@@ -313,7 +314,7 @@ myApp.controller('ToasterController', function($scope, toaster) {
 	});
 	
 	$scope.pop = function(toast){
-		toaster.pop(toast.type, toast.title, '<ul><li>'+toast.message+'</li></ul>', 5000, 'trustedHtml');
+		toaster.pop(toast.type, toast.title, toast.message, 5000, 'trustedHtml');
 		$scope.$apply();
     };
     
@@ -675,6 +676,9 @@ myApp.controller('ImportCtrl', function($scope, $dialogs, GithubSrvc) {
     }
 });
 
+/**
+ *	This controller manages edits on content on github
+ */
 myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeout, toaster, YamlSrvc, UserModel, ParameterSrvc, GithubSrvc) {
     var scope = $scope;
 
@@ -742,7 +746,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
 
         return GithubSrvc.commit(content, "_posts/"+$scope.commitPath);
     }).then(function() {
-        toaster.pop('success', "Post saved", '<ul><li>The post was successfully saved. You will be redirected to the post in around 10 seconds...</li></ul>', 5000, 'trustedHtml');
+        toaster.pop('success', "Post saved", 'The post was successfully saved. You will be redirected to the post in around 10 seconds..., 5000, 'trustedHtml');
         // redirect to the frontpage after 10 seconds
 		console.log($scope.commitPath.replace(/-/g,"/").replace(".md", ""));
 		$timeout(function(){
@@ -761,7 +765,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
         dlg.result.then(function(btn){
             var deletePromise = GithubSrvc.deleteContent(path);
 			deletePromise.then(function() {
-				toaster.pop('error', "Post deleted", '<ul><li>The post was successfully deleted. You will be redirected to the frontpage shortly...</li></ul>', 5000, 'trustedHtml');
+				toaster.pop('error', "Post deleted", 'The post was successfully deleted. You will be redirected to the frontpage shortly...', 5000, 'trustedHtml');
 				$scope.$apply();
 				$timeout(function(){
 					window.location = config.github.redirection_url;
@@ -804,6 +808,9 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
     $scope.format = 'yyyy-MM-dd';
 });
 
+/**
+ *	Star rating
+ */
 myApp.controller('RatingCtrl', function($scope) {
     var ratyElements =  $('.raty');
     var success = function (data) {
