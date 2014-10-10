@@ -24,8 +24,6 @@ author :
 # Serve emoji locally - https://github.com/jekyll/jemoji
 gem:
   jemoji
-emoji:
-  src: "/assets/images/jemoji"
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
