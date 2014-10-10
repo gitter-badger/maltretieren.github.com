@@ -684,6 +684,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
 
     $scope.options = {}
     $scope.yaml = {};
+    // the advanced settings form is collapsed by default
 	$scope.advancedSettings = true;
 
 	// styling for tags / categories labels
