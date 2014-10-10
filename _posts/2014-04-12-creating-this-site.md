@@ -5,11 +5,12 @@ categories:
  - jekyll
  - edit
  - github
-frontpage: true
+frontpage: false
 published: true
 tags:
  - development
 ---
+
 This is a short writeup of the history of creating this page.
 
 Out of the noise in the internet some things pop up more recently.
