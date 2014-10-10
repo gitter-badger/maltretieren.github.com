@@ -35,9 +35,6 @@ production_url : https://maltretieren.github.io
 # If it is empty there is no redirect to https
 enforce_ssl: maltretieren.github.io
 
-gems:
-  - jemoji
-
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :
