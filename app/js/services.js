@@ -352,7 +352,10 @@ myApp.service("GithubSrvc", function (
 				var frontMatter = YamlSrvc.parse(result.content);
 				$('#target-editor').markdown({
                     savable:false,
-                    height:500
+                    height:500,
+                    onBlur: function(e) {
+                        console.log("blur editor");
+                    }
 				});
                 $('#target-editor').val(frontMatter.content);
 				$('#target-editor').show();
