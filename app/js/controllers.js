@@ -266,19 +266,17 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, Par
     });
 });
 
-myApp.controller('ConfigCtrl', function($scope, GithubSrvc, GithubEditCtrl) {
+myApp.controller('ConfigCtrl', function($scope, GithubSrvc) {
     $scope.inputs = {}
 	$scope.inputs = config,
     $scope.setOutput = function(key, key2, newValue) {
         $scope.inputs[key][key2] = newValue;
     }
-	
 	$scope.saveFrontendConfig = function() {
 		var config = "var config = "+JSON.stringify($scope.inputs);
 		console.log(config);
 		GithubSrvc.commit(config, "app/js/config.js");
 	}
-
     $scope.saveBackendConfig = function() {
         console.log("save backend config");
         GithubEditCtrl.save();
