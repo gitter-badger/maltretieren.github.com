@@ -353,7 +353,7 @@ myApp.service("GithubSrvc", function (
 				$('#target-editor').markdown({
                     savable:false,
                     height:500,
-                    onBlur: function(e) {
+                    onFocus: function(e) {
                         alert("Blur triggered!")
                     }
 				});
