@@ -283,6 +283,7 @@ myApp.controller('ConfigCtrl', function($scope, GithubSrvc) {
 	content.then(function(data) {
 		var configLine = data.split('\n');
         var newConfigData = "";
+        console.log(data)
 		for(var i = 0;i < configLine.length;i++){
 			var split = configLine[i].split(":");
 			if(configLine.indexOf(":")!==-1 && split[1]!=="") {
