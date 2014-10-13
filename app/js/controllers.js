@@ -280,9 +280,7 @@ myApp.controller('ConfigCtrl', function($scope, GithubSrvc, EditorSrvc) {
     $scope.saveBackendConfig = function() {
         console.log("save backend config");
         var editorContent = EditorSrvc.getEditorContent();
-        console.log(editorContent);
-
-        //GithubSrvc.commit(config, "_config.yml");
+        GithubSrvc.commit(editorContent, "_config.yml");
     }
 
 	var content = GithubSrvc.editContent("_config.yml");
