@@ -504,10 +504,15 @@ myApp.service("PollingSrvc", function ($q, $timeout, UserModel, GithubAuthServic
 myApp.service("YamlSrvc", function () {
     var parse = function (content) {
 		var response = {};
-		
+
+        // if there is a frontmatter available....
 		var contentSplit = content.split("---");
-		var lineSplit = contentSplit[1].split("\n");
-		response["content"] = contentSplit[2];
+        var lineSplit = 0;
+
+        if(contentSplit.size === 2) {
+            lineSplit = contentSplit[1].split("\n");
+            response["content"] = contentSplit[2];
+        }
 		
 		var remember = "";
 
