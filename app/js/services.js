@@ -591,10 +591,12 @@ myApp.service("YamlSrvc", function () {
 });
 
 myApp.service("EditorSrvc"), function () {
-    return {
-        getEditorContent: function() {
+    var getEditorContent = function() {
+        return $('#target-editor').markdown()[0].value;
+    }
 
-        }
+    return {
+        getEditorContent: getEditorContent()
     }
 }
 
