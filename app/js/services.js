@@ -509,10 +509,10 @@ myApp.service("YamlSrvc", function () {
 		var contentSplit = content.split("---");
         var lineSplit = 0;
 
-        if(contentSplit.size === 2) {
+        if(contentSplit.length === 2) {
             lineSplit = contentSplit[1].split("\n");
             response["content"] = contentSplit[2];
-        } else if(contentSplit.size === 1) {
+        } else if(contentSplit.length === 1) {
             response["content"] = contentSplit[0];
         }
 
