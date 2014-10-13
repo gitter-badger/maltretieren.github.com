@@ -106,7 +106,7 @@ myApp.service("GithubAuthService", function ($http, $q, $rootScope, UserModel) {
 
 myApp.service("GithubSrvc", function (
     $rootScope, $q, $interval, GithubAuthService,
-    UserModel, PollingSrvc, YamlSrvc, ParameterSrvc, $http, $timeout) {
+    UserModel, PollingSrvc, YamlSrvc, EditorSrvc, ParameterSrvc, $http, $timeout) {
 
     return {
         requestCode: function() {
@@ -350,16 +350,7 @@ myApp.service("GithubSrvc", function (
 			var deferred = $q.defer();
             contents.then(function(result) {
 				var frontMatter = YamlSrvc.parse(result.content);
-				$('#target-editor').markdown({
-                    savable:false,
-                    height:500,
-                    onFocus: function(e) {
-                        console.log("editor focused")
-                    }
-				});
-                $('#target-editor').val(frontMatter.content);
-				$('#target-editor').show();
-				
+				EditorSrvc.open(frontMatter.content);
 				deferred.resolve(frontMatter);
             })
             return deferred.promise;
@@ -596,10 +587,23 @@ myApp.service("YamlSrvc", function () {
 myApp.service("EditorSrvc", function () {
     var getEditorContent = function() {
         return $('#target-editor').markdown()[0].value;
+    };
+
+    var showContentInEditor = function(editorContent) {
+        $('#target-editor').markdown({
+            savable:false,
+            height:500,
+            onFocus: function(e) {
+                console.log("editor focused")
+            }
+        });
+        $('#target-editor').val(editorContent);
+        $('#target-editor').show();
     }
 
     return {
-        getEditorContent: getEditorContent
+        getEditorContent: getEditorContent,
+        open: showContentInEditor
     }
 });
 
