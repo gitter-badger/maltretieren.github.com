@@ -517,7 +517,7 @@ myApp.service("YamlSrvc", function () {
         if(contentSplit.length === 3) {
             lineSplit = contentSplit[1].split("\n");
             // trim leading line breaks
-            trimmedLinebreaks = contentSplit[2].replace(/^\s+|\s+$/g,"");
+            var trimmedLinebreaks = contentSplit[2].replace(/^[\r\n]+|[\r\n]+$/g,'');
             response["content"] = trimmedLinebreaks;
         } else if(contentSplit.length === 1) {
             response["content"] = contentSplit[0];
