@@ -596,7 +596,7 @@ myApp.service("EditorSrvc", function () {
     }
 
     return {
-        getEditorContent: getEditorContent();
+        getEditorContent: getEditorContent
     }
 });
 
