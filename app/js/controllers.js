@@ -281,9 +281,10 @@ myApp.controller('ConfigCtrl', function($scope, GithubSrvc) {
 
 	var content = GithubSrvc.editContent("_config.yml");
 	content.then(function(data) {
-		var configLine = data.split('\n');
-        var newConfigData = "";
         console.log(data)
+        var configLine = data.split('\n');
+        var newConfigData = "";
+
 		for(var i = 0;i < configLine.length;i++){
 			var split = configLine[i].split(":");
 			if(configLine.indexOf(":")!==-1 && split[1]!=="") {
