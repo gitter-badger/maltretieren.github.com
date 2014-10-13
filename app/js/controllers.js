@@ -281,9 +281,9 @@ myApp.controller('ConfigCtrl', function($scope, GithubSrvc, EditorSrvc, toaster)
         console.log("save backend config");
         var editorContent = EditorSrvc.getEditorContent();
         var commitPromise = GithubSrvc.commit(editorContent, "_config.yml");
-        var commitPromise.then(function() {
-            toaster.pop('success', "Backend config saved...")
-        };
+        commitPromise.then(function() {
+            toaster.pop('success', "Backend config saved...");
+        }
     }
 
 	var content = GithubSrvc.editContent("_config.yml");
