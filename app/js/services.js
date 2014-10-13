@@ -354,7 +354,7 @@ myApp.service("GithubSrvc", function (
                     savable:false,
                     height:500,
                     onFocus: function(e) {
-                        alert("Blur triggered!")
+                        console.log("editor focused")
                     }
 				});
                 $('#target-editor').val(frontMatter.content);
