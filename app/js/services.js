@@ -559,7 +559,6 @@ myApp.service("YamlSrvc", function () {
 		}
 		return response;
     };
-	
 	var create = function (content) {
 		var response = "---\n";
 		for (var key in content) {
