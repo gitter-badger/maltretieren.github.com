@@ -297,7 +297,7 @@ myApp.controller('ConfigCtrl', function($scope, GithubSrvc) {
                 newConfigData += configLine[i]+"\n";
             }
 		}
-        console.log(newConfigData);
+        //console.log(newConfigData);
 	});
 });
 
