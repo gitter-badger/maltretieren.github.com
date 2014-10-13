@@ -512,8 +512,10 @@ myApp.service("YamlSrvc", function () {
         if(contentSplit.size === 2) {
             lineSplit = contentSplit[1].split("\n");
             response["content"] = contentSplit[2];
+        } else if(contentSplit.size === 1) {
+            response["content"] = contentSplit[0];
         }
-		
+
 		var remember = "";
 
         // parse the text to an js object

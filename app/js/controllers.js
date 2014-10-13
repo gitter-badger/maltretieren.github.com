@@ -721,7 +721,7 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
     // init the editor
     var contentPromise = GithubSrvc.editContent(path);
 	contentPromise.then(function(yaml) {
-		// attach yaml object to scope
+		// view yaml text in editor
 		scope.yaml = yaml;
 	});
 	
