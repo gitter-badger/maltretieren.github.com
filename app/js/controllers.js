@@ -266,7 +266,7 @@ myApp.controller("GithubCtrl", function ($scope, $location, $http, $dialogs, Par
     });
 });
 
-myApp.controller('ConfigCtrl', function($scope, GithubSrvc) {
+myApp.controller('ConfigCtrl', function($scope, GithubSrvc, EditorSrvc) {
     $scope.inputs = {}
 	$scope.inputs = config,
     $scope.setOutput = function(key, key2, newValue) {
@@ -279,7 +279,7 @@ myApp.controller('ConfigCtrl', function($scope, GithubSrvc) {
 	}
     $scope.saveBackendConfig = function() {
         console.log("save backend config");
-        GithubEditCtrl.save();
+        var editorContent = EditorSrvc.getEditorContent();
         //GithubSrvc.commit(config, "_config.yml");
     }
 

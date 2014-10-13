@@ -582,12 +582,21 @@ myApp.service("YamlSrvc", function () {
 		response += content['content'];
 		return response;
     };
-	
+
+
     return { 
 		parse: parse,
 		create: create
 	}
 });
+
+myApp.service("EditorSrvc"), function () {
+    return {
+        getEditorContent: function() {
+
+        }
+    }
+}
 
 myApp.service("PollingImgSrvc", function ($q, $timeout) {
 
