@@ -1,12 +1,9 @@
 "use strict";
 
 /*
- * Services can be defined as : "value", "service", "factory", "provider", or "constant".
- *
- * For simplicity only example of "value" and "service" are shown here. 
+ * Login information
  */
 
-// EXAMPLE OF CORRECT DECLARATION OF SERVICE AS A VALUE
 myApp.value('version', '0.1');
 
 myApp.service("GithubAuthService", function ($http, $q, $rootScope, UserModel) {
@@ -15,7 +12,7 @@ myApp.service("GithubAuthService", function ($http, $q, $rootScope, UserModel) {
     return {
 		instance : function(username, password) {
 			// this should ask for the UserModel - user object, and get the token from there...
-			// maybe store the instance in localStorage????
+			// the token is stored in localStorage, maybe a session store would work also?
             if(github===null) {
                 console.log("new github instance "+username);
                 var oauthToken = localStorage.getItem("oauthToken");
@@ -200,10 +197,10 @@ myApp.service("GithubSrvc", function (
 			var contentArray = {};
 			var readyPromise = $q.defer();
 			
-			var folders = 0;
-			var files = 0;
+			var folderCounter = 0;
+			var fileCounter = 0;
 			
-			// preprocess response to seperate files/folders 
+			// preprocess response to seperate files/folders
 			var filesPath = [];
 			var foldersPath = [];
 

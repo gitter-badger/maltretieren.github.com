@@ -23,6 +23,11 @@ Click on the image below to see a demo video of how to copy this site to your gi
 - Ratings via keen.io
 - Nice image captions
 
+### Administration area
+- Import/Export of posts
+- Change user interface / backend configuration within the administration area 
+
+
 ## Directory Layout
 Inspired by https://github.com/angular/angular-seed & https://github.com/plusjade/jekyll-bootstrap/
 
