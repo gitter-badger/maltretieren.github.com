@@ -5,7 +5,7 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 
 # Markdown interpreter - Maruku is not maintained any more... Since version 2.2.0
 # this is the default interpreter https://github.com/blog/1867-github-pages-now-runs-jekyll-2-2-0
-highlighter: true
+highlighter: pygments
 
 markdown: kramdown
 
