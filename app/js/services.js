@@ -509,12 +509,12 @@ myApp.service("YamlSrvc", function () {
     var parse = function (content) {
 		var response = {};
 
-        // if there is a frontmatter available....
+        // if there is a frontmatter available (parsing of a post source code)...
 		var contentSplit = content.split("---");
         var lineSplit = 0;
 
         // different handle for _config.yml and normal sites
-        if(contentSplit.length === 2) {
+        if(contentSplit.length === 3) {
             lineSplit = contentSplit[1].split("\n");
             response["content"] = contentSplit[2];
         } else if(contentSplit.length === 1) {

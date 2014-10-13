@@ -111,8 +111,8 @@
       <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38618925" vertical-offset="7409" max-vertical-offset="9660">
-              <caret line="504" column="21" selection-start-line="504" selection-start-column="21" selection-end-line="504" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.5396419" vertical-offset="7454" max-vertical-offset="9660">
+              <caret line="511" column="78" selection-start-line="511" selection-start-column="78" selection-end-line="511" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -1056,8 +1056,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38618925" vertical-offset="7409" max-vertical-offset="9660">
-          <caret line="504" column="21" selection-start-line="504" selection-start-column="21" selection-end-line="504" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.5396419" vertical-offset="7454" max-vertical-offset="9660">
+          <caret line="511" column="78" selection-start-line="511" selection-start-column="78" selection-end-line="511" selection-end-column="78" />
           <folding />
         </state>
       </provider>
