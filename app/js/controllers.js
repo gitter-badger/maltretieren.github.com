@@ -277,7 +277,7 @@ myApp.controller('ConfigCtrl', function($scope, GithubSrvc, EditorSrvc, toaster)
 		console.log(config);
         var commitPromise = GithubSrvc.commit(config, "app/js/config.js");
         commitPromise.then(function() {
-            toaster.pop('success', "Frontend config saved...<br>File: '/app/js/config.js'");
+            toaster.pop('success', "Frontend config saved...<br>File: '/app/js/config.js'", 5000, 'trustedHtml');
         });
 	}
     $scope.saveBackendConfig = function() {
@@ -285,7 +285,7 @@ myApp.controller('ConfigCtrl', function($scope, GithubSrvc, EditorSrvc, toaster)
         var editorContent = EditorSrvc.getEditorContent();
         var commitPromise = GithubSrvc.commit(editorContent, "_config.yml");
         commitPromise.then(function() {
-            toaster.pop('success', "Backend config saved...<br>File: '/_config.yml'");
+            toaster.pop('success', "Backend config saved...<br>File: '/_config.yml'", 5000, 'trustedHtml');
         });
     }
 
