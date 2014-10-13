@@ -281,7 +281,7 @@ myApp.controller('ConfigCtrl', function($scope, GithubSrvc) {
 
 	var content = GithubSrvc.editContent("_config.yml");
 	content.then(function(data) {
-        var configLine = data.split('\n');
+        var configLine = data.content.split('\n');
         var newConfigData = "";
 
 		for(var i = 0;i < configLine.length;i++){
