@@ -287,7 +287,7 @@ myApp.controller('ConfigCtrl', function($scope, GithubSrvc) {
 
 		for(var i = 0;i < configLine.length;i++){
 			var split = configLine[i].split(":");
-			if(configLine.indexOf(":")!==-1 && split[1]!=="") {
+			if(configLine.indexOf(":")!==-1 && split[1]!=="" && split.size > 0) {
                 if(split[0].indexOf("name")!==-1) {
                     newConfigData += split[0]+": HAAHHAHHAHA\n"
                 } else {
