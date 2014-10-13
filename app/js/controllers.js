@@ -273,11 +273,16 @@ myApp.controller('ConfigCtrl', function($scope, GithubSrvc) {
         $scope.inputs[key][key2] = newValue;
     }
 	
-	$scope.githubCommit = function() {
+	$scope.saveFrontendConfig = function() {
 		var config = "var config = "+JSON.stringify($scope.inputs);
 		console.log(config);
 		GithubSrvc.commit(config, "app/js/config.js");
 	}
+
+    $scope.saveBackendConfig = function() {
+        console.log("save backend config");
+        //GithubSrvc.commit(config, "_config.yml");
+    }
 
 	var content = GithubSrvc.editContent("_config.yml");
 	content.then(function(data) {

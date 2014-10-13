@@ -20,7 +20,7 @@ comments: false
 			</form>
         </div>
 		<div class="container col-sm-12" style="margin-top:15px;margin-bottom:15px">
-			<button class='btn btn-warning pull-right' ng-click="githubCommit()">Save frontend config</button>
+			<button class='btn btn-warning pull-right' ng-click="saveFrontendConfig()">Save frontend config</button>
 		</div>
 		<h1>Edit Backend Configuration</h1>
 		<div ng-repeat="backendEntry in backendEntries">
@@ -29,7 +29,7 @@ comments: false
 		<textarea id="target-editor"></textarea>
         <div class="row" id="advanced">&nbsp;</div>
         <div class="container col-sm-12" style="margin-top:15px;margin-bottom:15px">
-            <button class='btn btn-warning pull-right' ng-click="githubCommit()">Save backend config</button>
+            <button class='btn btn-warning pull-right' ng-click="saveBackendConfig()">Save backend config</button>
         </div>
         <div class="row" id="advanced">&nbsp;</div>
     </div>
