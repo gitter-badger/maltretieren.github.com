@@ -501,6 +501,10 @@ myApp.service("PollingSrvc", function ($q, $timeout, UserModel, GithubAuthServic
     return { checkForBranchContent: poll }
 });
 
+/**
+ * YamlSrvc can parse files with frontmatter (normal post)
+ * and the _config.yaml without frontmatter
+ */
 myApp.service("YamlSrvc", function () {
     var parse = function (content) {
 		var response = {};
@@ -509,6 +513,7 @@ myApp.service("YamlSrvc", function () {
 		var contentSplit = content.split("---");
         var lineSplit = 0;
 
+        // different handle for _config.yml and normal sites
         if(contentSplit.length === 2) {
             lineSplit = contentSplit[1].split("\n");
             response["content"] = contentSplit[2];
