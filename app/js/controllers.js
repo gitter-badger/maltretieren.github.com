@@ -770,6 +770,17 @@ myApp.controller('GithubEditCtrl', function($scope, $dialogs, $q, $modal, $timeo
         }, 10000);
     });
 
+    // redirect to normal calling page immediately
+    $scope.cancel = function() {
+        console.log("cancel edit...and redirect ");
+
+        if(typeof(url) !='undefined') {
+            window.location = url;
+        } else {
+            window.location = config.github.redirection_url+"/"+$scope.commitPath.replace(/-/g,"/").replace(".md", "");
+        }
+    };
+
     $scope.confirmed = 'You have yet to be confirmed!';
     $scope.delete = function() {
         console.log("delete....");
