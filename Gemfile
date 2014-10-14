@@ -1,3 +1,3 @@
+# with this the blog behaves locally same as on github.com
 source 'https://rubygems.org'
-# Specify your gem's dependencies in np_search.gemspec
-gemspec
+gem 'github-pages'
