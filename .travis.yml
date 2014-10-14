@@ -1,3 +1,5 @@
+# http://docs.travis-ci.com/user/build-configuration/
+
 branches:
   only:
     - gh-pages
