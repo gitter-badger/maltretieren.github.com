@@ -50,4 +50,4 @@ namespace :blog do
 end
 
 
-task :default => blog:publish
+task :default => :publish
