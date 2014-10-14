@@ -16,3 +16,5 @@ task :generate do
     "destination" => "_site"
   })).process
 end
+
+task :default => :generate
