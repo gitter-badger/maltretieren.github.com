@@ -2,29 +2,7 @@
  * cowboycoded / rounded_box_gist.css
  */
 
-.highlight pre {
-    width:100%;
-    overflow-x: auto;
-    word-break: normal;
-    word-wrap:normal;
-    border-radius:0px;
-    white-space: pre;
-}
 
-.highlight pre code {
-    white-space: pre;
-}
-
-/* if linenos=table is activated ... */
-.linenos {
-    width:45px;
-    vertical-align:top;
-}
-
-.highlighttable {
-    width:100%;
-    table-layout: fixed
-} 
 
 
 /* Solarized Light
