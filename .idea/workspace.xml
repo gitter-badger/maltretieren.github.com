@@ -102,8 +102,8 @@
       <file leaf-file-name="controllers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_site/app/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44757032" vertical-offset="11165" max-vertical-offset="12915">
-              <caret line="756" column="50" selection-start-line="756" selection-start-column="50" selection-end-line="756" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.5242967" vertical-offset="11165" max-vertical-offset="12930">
+              <caret line="758" column="35" selection-start-line="758" selection-start-column="35" selection-end-line="758" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -1027,8 +1027,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_site/app/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44757032" vertical-offset="11165" max-vertical-offset="12915">
-          <caret line="756" column="50" selection-start-line="756" selection-start-column="50" selection-end-line="756" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.5242967" vertical-offset="11165" max-vertical-offset="12930">
+          <caret line="758" column="35" selection-start-line="758" selection-start-column="35" selection-end-line="758" selection-end-column="35" />
           <folding />
         </state>
       </provider>
