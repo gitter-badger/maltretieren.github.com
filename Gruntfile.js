@@ -2,7 +2,8 @@ module.exports = function(grunt) {
     grunt.initConfig({
         karma: {
             unit: {
-                // ...
+                configFile: 'tests/config/karma.conf.js',
+                background: true
             },
             // Add a new travis ci karma configuration
             // configs here override those in our existing karma.conf.js
