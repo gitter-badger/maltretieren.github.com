@@ -14,11 +14,6 @@ module.exports = function(config){
             'karma-firefox-launcher',
             'karma-phantomjs-launcher',
             'karma-jasmine'
-        ],
-        junitReporter : {
-            outputFile: 'test_out/unit.xml',
-            suite: 'unit'
-        }
-    }
-    )
+        ]
+    })
 }
