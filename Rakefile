@@ -37,7 +37,7 @@ namespace :my_tasks do
 		if File.file?(my_text_file)
 		  FileUtils.rm(my_text_file)
 		elsif File.directory?(my_text_file)
-		  puts "directory: #my_text_file"
+		  FileUtils.remove_dir(my_text_file)
         end
       end
 	  puts "\n## Pushing template branches to origin"
