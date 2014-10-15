@@ -3,9 +3,7 @@ module.exports = function(config){
         basePath : '../../',
         files : [
             'assets/js/angular-1.3.0/angular-mocks.js',
-            'app/js/main.js',
-            'assets/**/*.js',
-            'app/**/*.js',
+            'app/version.js',
             'tests/**/*.js'
         ],
         autoWatch : false,
