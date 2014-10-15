@@ -32,6 +32,9 @@ namespace :my_tasks do
 	  puts "\n## Remove _posts directory"
       file_list = FileList.new('_posts/**/*').exclude('_posts/templates')
 	  #rm_f file_list
+      Dir.glob(file_list) do |my_text_file|
+        puts "working on: #{my_text_file}..."
+      end
 	  puts file_list
 	  #status = system("git filter-branch --tree-filter 'rm -rf _posts' HEAD")
 	  #puts status ? "Success" : "Failed"
