@@ -20,6 +20,8 @@ namespace :my_tasks do
 	desc "Deploy _site/ to master branch"
 	task :deploy do
 	  puts "\n## Deleting template branch"
+	  status = system("git checkout template")
+	  puts status ? "Success" : "Failed"
 	  status = system("git branch -D template")
 	  puts status ? "Success" : "Failed"
 	  #puts "\n## Creating new master branch and switching to it"
