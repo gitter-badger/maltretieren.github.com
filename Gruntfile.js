@@ -1,32 +1,27 @@
 module.exports = function(grunt) {
-
-    // Project configuration.
     grunt.initConfig({
-        gitcommit: {
-            your_target: {
-                options: {
-                    message: 'Testing'
-                },
-                files: {
-                    // Specify the files you want to commit
-                }
-            }
-        },
         karma: {
             unit: {
-                configFile: 'tests/karma.conf.js'
+                // ...
+            },
+            // Add a new travis ci karma configuration
+            // configs here override those in our existing karma.conf.js
+            travis: {
+                configFile: 'tests/karma.conf.js',
+                singleRun: true,
+                browsers: ['PhantomJS']
             }
+        },
+        watch: {
+            // ...
         }
-    })
+    });
 
-    // Load the plugin that provides the "grunt-git" task.
-    grunt.loadNpmTasks('grunt-git');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-karma');
 
-    // Default task(s).
-    grunt.registerTask('default', ['karma']);
+    grunt.registerTask('devmode', ['karma:unit', 'watch']);
 
-    if (grunt.option('debug')) {
-        console.log(grunt.config('karma.unit.configFile'));
-    }
+    // Add a new task for travis
+    grunt.registerTask('test', ['karma:travis'])
 };
