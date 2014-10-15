@@ -2,7 +2,7 @@ module.exports = function(config){
     config.set({
         basePath : '../../',
         files : [
-            'app/js/main.js',
+            'assets/js/angular-1.3.0/angular.js',
             'assets/js/angular-1.3.0/angular-mocks.js',
             'app/version.js',
             'tests/versionSpec.js'
