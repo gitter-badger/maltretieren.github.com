@@ -4,7 +4,7 @@ module.exports = function(config){
         files : [
             'assets/js/angular-1.3.0/angular-mocks.js',
             'app/version.js',
-            'tests/**/*.js'
+            'tests/versionSpec.js'
         ],
         autoWatch : false,
         frameworks: ['jasmine'],
