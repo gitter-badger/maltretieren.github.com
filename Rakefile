@@ -28,7 +28,7 @@ namespace :my_tasks do
 	  status = system("git checkout -b template")
 	  puts status ? "Success" : "Failed"
 	  puts "\n## Remove _posts directory"
-      file_list = FileList.new('_posts/**/*').exclude('templates')
+      file_list = FileList.new('_posts/**/*').exclude('_posts/templates/*')
 	  puts file_list
 	  #status = system("git filter-branch --tree-filter 'rm -rf _posts' HEAD")
 	  #puts status ? "Success" : "Failed"
