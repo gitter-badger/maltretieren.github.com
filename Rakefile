@@ -30,7 +30,7 @@ namespace :my_tasks do
 	  status = system("git checkout -b template")
 	  puts status ? "Success" : "Failed"
 	  puts "\n## Remove _posts directory"
-      file_list = FileList.new('_posts/**/*').exclude('_posts/templates/**/*')
+      file_list = FileList.new('_posts/**/*').exclude('_posts/templates', '_posts/templates/*')
 	  #rm_f file_list
       Dir.glob(file_list) do |my_text_file|
 	    puts "working on: #{my_text_file}..."
