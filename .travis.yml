@@ -15,7 +15,7 @@ install:
   - npm install
 
 before_script:
-  - grunt build
+  - grunt karma
 
   - git config --global user.name "Travis CI"
   - git remote set-url origin https://Maltretieren:${GH_TOKEN}@github.com/Maltretieren/maltretieren.github.com.git
