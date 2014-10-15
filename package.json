@@ -8,7 +8,7 @@
       "grunt": "~0.4.5",
       "phantomjs": "~1.9.1-0",
       "grunt-karma": "~0.9",
-      "karma": "~0.12",
+      "karma": "~0.10",
       "karma-chrome-launcher": "0.1.5",
       "karma-script-launcher": "0.1.0",
       "karma-firefox-launcher": "0.1.3",
