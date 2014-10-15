@@ -35,7 +35,7 @@ namespace :my_tasks do
       Dir.glob(file_list) do |my_text_file|
 	    puts "working on: #{my_text_file}..."
 		if File.file?(my_text_file)
-		  puts "file: #my_text_file"
+		  FileUtils.rm(my_text_file)
 		elsif File.directory?(my_text_file)
 		  puts "directory: #my_text_file"
         end
