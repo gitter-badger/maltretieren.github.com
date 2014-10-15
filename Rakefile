@@ -30,7 +30,7 @@ namespace :my_tasks do
 	  puts status ? "Success" : "Failed"
 	  puts "\n## Remove _posts directory"
       file_list = FileList.new('_posts/**/*').exclude('_posts/templates/*')
-	  FileUtils.rm(file_list)
+	  FileUtils.rm_rf(file_list)
 	  puts file_list
 	  #status = system("git filter-branch --tree-filter 'rm -rf _posts' HEAD")
 	  #puts status ? "Success" : "Failed"
