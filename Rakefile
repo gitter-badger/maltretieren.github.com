@@ -33,10 +33,11 @@ namespace :my_tasks do
       file_list = FileList.new('_posts/**/*').exclude('_posts/templates', '_posts/templates/*')
 	  #rm_f file_list
       Dir.glob(file_list) do |my_text_file|
-	    puts "working on: #{my_text_file}..."
 		if File.file?(my_text_file)
+		  puts "deleting file: #{my_text_file}..."
 		  FileUtils.rm(my_text_file)
 		elsif File.directory?(my_text_file)
+		  puts "deleting folder: #{my_text_file}..."
 		  FileUtils.remove_dir(my_text_file)
         end
       end
