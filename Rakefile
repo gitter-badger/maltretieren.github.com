@@ -5,7 +5,7 @@ require "tmpdir"
 
 require "bundler/setup"
 require "jekyll"
-require "FileUtils"
+require "fileutils"
 
 
 # Change your GitHub reponame
