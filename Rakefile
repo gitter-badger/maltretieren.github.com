@@ -1,4 +1,5 @@
-# This RAKEFILE should generate the template branch out of the master branch....
+# This RAKEFILE is for Travis CI - generate a template branch out of the master and commit it to the
+# repo. This is needed to provide the fork functionality...
 
 require "rubygems"
 require "tmpdir"
