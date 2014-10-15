@@ -2,7 +2,7 @@
   "name": "maltretieren",
   "version": "0.1.0",
   "scripts": {
-      a"test": "grunt test"
+      "test": "grunt test"
   },
   "devDependencies": {
       "grunt": "~0.4.0",
