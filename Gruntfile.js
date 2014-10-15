@@ -14,7 +14,10 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            // ...
+            karma: {
+                files: ['app/**/*.js', 'tests/**/*.js'],
+                tasks: ['karma:unit:run']
+            }
         }
     });
 
