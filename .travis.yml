@@ -3,7 +3,6 @@ rvm: 2.0.0
 branches:
   only:
   - master
-  - template
 before_script:
   - git config --global user.name "Travis CI"
   - git remote set-url origin https://Maltretieren:${GH_TOKEN}@github.com/Maltretieren/maltretieren.github.com.git
