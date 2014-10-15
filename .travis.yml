@@ -4,6 +4,9 @@ branches:
   only:
   - master
   - template
+after_success:
+  - git config --global user.name "Travis CI"
+  - git remote set-url origin https://Maltretieren:${GH_TOKEN}@github.com/Maltretieren/maltretieren.github.com.git
 env:
   global:
     secure: e7qb+HWe8cE7z7LVFCHqvCPCFyHRSRIzKYmUZHLfbaHOxE8e6K17eqSPFRIaBRYtEgjlIrx0OZe8Yh5uXehR9IiGRU3A4BlbiUDt0UClfIkplxf2coUMkAzWTa9kMDcErOY7GGBcv66vqKYC+III8Q+cNvyLkJXCZaNUYPhrGuE=

@@ -22,7 +22,6 @@ namespace :my_tasks do
 	desc "Deploy _site/ to master branch"
 	task :deploy do
 	  puts "\n## Deleting template branch"
-	  status = system(git remote set-url origin git@github.com:Maltretieren/maltretieren.github.com.git)
 	  status = system("git push origin --delete template")
 	  puts status ? "Success" : "Failed"
 	  #status = system("git branch -D template")
