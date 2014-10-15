@@ -5,10 +5,12 @@ branches:
   only:
   - master
 
+# first step
 before_install:
   # http://projectpoppycock.com/unit-testing-with-angularjs-grunt-karma-and-travisci/
   - npm install -g grunt-cli
 
+# second step
 install:
   - npm install
 
