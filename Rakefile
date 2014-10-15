@@ -34,10 +34,11 @@ namespace :my_tasks do
 	  #rm_f file_list
       Dir.glob(file_list) do |my_text_file|
 	    puts "working on: #{my_text_file}..."
-		if File.directory?(my_text_file)
-		  puts "directory: #my_text_file"
-        if File.file?(my_text_file)
+		if File.file?(my_text_file)
 		  puts "file: #my_text_file"
+		elsif File.directory?(my_text_file)
+		  puts "directory: #my_text_file"
+        end
       end
 	  puts "\n## Pushing template branches to origin"
 	  status = system("git push origin template")
