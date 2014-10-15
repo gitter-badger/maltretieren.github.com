@@ -28,11 +28,12 @@ namespace :my_tasks do
 	  status = system("git checkout -b template")
 	  puts status ? "Success" : "Failed"
 	  puts "\n## Remove _posts directory"
-	  status = system("git filter-branch --tree-filter 'rm -rf _posts' HEAD")
-	  puts status ? "Success" : "Failed"
-	  puts "\n## Restore _posts/templates folder"
-	  status = system("--index-filter 'git rm --cached -qr -- . && git reset -q $GIT_COMMIT -- _posts'")
-	  puts status ? "Success" : "Failed"
+      Dir['_posts/**/*'].delete_if { |f| f.end_with?('.md') }
+	  #status = system("git filter-branch --tree-filter 'rm -rf _posts' HEAD")
+	  #puts status ? "Success" : "Failed"
+	  #puts "\n## Restore _posts/templates folder"
+	  #status = system("--index-filter 'git rm --cached -qr -- . && git reset -q $GIT_COMMIT -- _posts'")
+	  #puts status ? "Success" : "Failed"
 	  puts "\n## Pushing template branches to origin"
 	  status = system("git push origin template")
 	  puts status ? "Success" : "Failed"
