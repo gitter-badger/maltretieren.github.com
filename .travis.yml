@@ -5,9 +5,15 @@ branches:
   only:
   - master
 
-before_script:
+before_install:
   # http://projectpoppycock.com/unit-testing-with-angularjs-grunt-karma-and-travisci/
-  - 'npm install -g grunt-cli'
+  - npm install -g grunt-cli
+
+install:
+  - npm install
+
+before_script:
+  - grunt build
 
   - git config --global user.name "Travis CI"
   - git remote set-url origin https://Maltretieren:${GH_TOKEN}@github.com/Maltretieren/maltretieren.github.com.git
