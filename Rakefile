@@ -30,17 +30,15 @@ namespace :my_tasks do
 	  status = system("git checkout -b template")
 	  puts status ? "Success" : "Failed"
 	  puts "\n## Remove _posts directory"
-      file_list = FileList.new('_posts/**/*').exclude('_posts/templates')
+      file_list = FileList.new('_posts/**/*').exclude('_posts/templates/**/*')
 	  #rm_f file_list
       Dir.glob(file_list) do |my_text_file|
-        puts "working on: #{my_text_file}..."
+	    puts "working on: #{my_text_file}..."
+		if File.directory?(my_text_file)
+		  puts "directory: #my_text_file"
+        if File.file?(my_text_file)
+		  puts "file: #my_text_file"
       end
-	  puts file_list
-	  #status = system("git filter-branch --tree-filter 'rm -rf _posts' HEAD")
-	  #puts status ? "Success" : "Failed"
-	  #puts "\n## Restore _posts/templates folder"
-	  #status = system("--index-filter 'git rm --cached -qr -- . && git reset -q $GIT_COMMIT -- _posts'")
-	  #puts status ? "Success" : "Failed"
 	  puts "\n## Pushing template branches to origin"
 	  status = system("git push origin template")
 	  puts status ? "Success" : "Failed"
