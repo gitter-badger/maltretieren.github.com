@@ -8,9 +8,6 @@ branches:
 before_script:
   - git config --global user.name "Travis CI"
   - git remote set-url origin https://Maltretieren:${GH_TOKEN}@github.com/Maltretieren/maltretieren.github.com.git
-  # for javascript testing
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
 
 env:
   global:
