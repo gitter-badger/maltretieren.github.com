@@ -2,7 +2,7 @@ module.exports = function(config){
     config.set({
         basePath : '../../',
         files : [
-            'app/**/*.js
+            'app/**/*.js',
             'tests/**/*.js'
         ],
         autoWatch : false,
