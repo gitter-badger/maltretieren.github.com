@@ -7,7 +7,7 @@ module.exports = function(grunt) {
             // Add a new travis ci karma configuration
             // configs here override those in our existing karma.conf.js
             travis: {
-                configFile: 'tests/karma.conf.js',
+                configFile: 'tests/config/karma.conf.js',
                 singleRun: true,
                 browsers: ['PhantomJS']
             }
