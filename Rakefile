@@ -1,3 +1,5 @@
+# This RAKEFILE should generate the template branch out of the master branch....
+
 require "rubygems"
 require "tmpdir"
 
