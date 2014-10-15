@@ -1,7 +1,9 @@
 language: ruby
 rvm: 2.0.0
-
 branches:
   only:
-    - master
-    - template
+  - master
+  - template
+env:
+  global:
+    secure: e7qb+HWe8cE7z7LVFCHqvCPCFyHRSRIzKYmUZHLfbaHOxE8e6K17eqSPFRIaBRYtEgjlIrx0OZe8Yh5uXehR9IiGRU3A4BlbiUDt0UClfIkplxf2coUMkAzWTa9kMDcErOY7GGBcv66vqKYC+III8Q+cNvyLkJXCZaNUYPhrGuE=
