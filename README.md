@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Maltretieren/maltretieren.github.com.svg?branch=master)](https://travis-ci.org/Maltretieren/maltretieren.github.com)
+[See in action...](https://maltretieren.github.io) [![Build Status](https://travis-ci.org/Maltretieren/maltretieren.github.com.svg?branch=master)](https://travis-ci.org/Maltretieren/maltretieren.github.com)
 
 <iframe width="560" height="315"  src="//www.youtube.com/v/NDjB_7lAkO8&hl=en&fs=1" frameborder="0"></iframe>
 # Philosophy
