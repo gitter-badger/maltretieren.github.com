@@ -14,6 +14,10 @@ describe('Unit: MyApp', function() {
         });
     }));
 
+    it('test availabilty of comments url in config'), function() {
+        $scope.commentsUrl.not.toBeUndefined();
+    }
+
     it('should call the function getComments', function () {
         spyOn($scope, 'getComments');
         $scope.getComments();
