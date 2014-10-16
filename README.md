@@ -1,5 +1,5 @@
 [See in action...](https://maltretieren.github.io) [![Build Status](https://travis-ci.org/Maltretieren/maltretieren.github.com.svg?branch=master)](https://travis-ci.org/Maltretieren/maltretieren.github.com)
-![Build Status](https://david-dm.org/Maltretieren/maltretieren.github.io.svg?style=flat)
+[![Build Status](https://david-dm.org/Maltretieren/maltretieren.github.com.svg?style=flat)](https://david-dm.org)
 <iframe width="560" height="315"  src="//www.youtube.com/v/NDjB_7lAkO8&hl=en&fs=1" frameborder="0"></iframe>
 # Philosophy
 Jekyll Bootstrap states: "The Quickest Way to Blog on GitHub Pages". I'm hoping to provide the
