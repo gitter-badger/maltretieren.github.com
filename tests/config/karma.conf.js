@@ -2,7 +2,7 @@ module.exports = function(config){
     config.set({
         basePath : '../../',
         files : [
-			'/assets/js/jquery-2.1.0/jquery-2.1.0.min.js',
+			'assets/js/jquery-2.1.0/jquery-2.1.0.min.js',
 			'app/js/config.js',
 			'assets/js/oauth/jso.js',
 			'assets/js/bootstrap-markdown-2.3.1/libs/to-markdown.js',
@@ -25,13 +25,13 @@ module.exports = function(config){
 			'assets/js/jszip-2.2.1/jszip.min.js',
 			'assets/js/jszip-2.2.1/FileSaver.js',
 			'assets/themes/bootstrap-3.1.1/js/bootstrap.min.js',
-			'/assets/themes/bootstrap-3.1.1/js/ui-bootstrap-tpls-0.10.0.min.js',
+			'assets/themes/bootstrap-3.1.1/js/ui-bootstrap-tpls-0.10.0.min.js',
 			'app/js/controllers.js',
-			'/app/js/services.js',
-			'/app/js/filters.js',
-			'/app/js/directives.js',
-			'/assets/js/raty/jquery.raty.js',
-			'/assets/js/keenio-2.1.0/keenio.js',
+			'app/js/services.js',
+			'app/js/filters.js',
+			'app/js/directives.js',
+			'assets/js/raty/jquery.raty.js',
+			'assets/js/keenio-2.1.0/keenio.js',
 			'assets/js/angular-1.3.0/angular-mocks.js',
             'app/version.js',
             'tests/versionSpec.js'
