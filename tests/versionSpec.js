@@ -1,3 +1,5 @@
+'use strict';
+
 describe('Unit: MyApp', function() {
     // Load the module with MainController
     beforeEach(module('myApp'));
@@ -18,7 +20,7 @@ describe('Unit: MyApp', function() {
     function() {
       expect(scope.comments).toBeUndefined();
       scope.getComments();
-	  console.log(commentsUrl);
+	  console.log(scope.commentsUrl);
       expect(scope.comments).toBeUndefined();
   });
     //it('should return current version', inject(function(version) {
