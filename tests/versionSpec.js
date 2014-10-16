@@ -4,12 +4,13 @@ describe('Unit: MyApp', function() {
     // Load the module with MainController
     beforeEach(angular.mock.module('myApp'));
 
-	var ctrl, scope;
+	var ctrl, scope, q;
     // inject the $controller and $rootScope services
     // in the beforeEach block
-    beforeEach(angular.mock.inject(function($controller, $rootScope) {
+    beforeEach(angular.mock.inject(function($controller, $rootScope, $q) {
       // Create a new scope that's a child of the $rootScope
       scope = $rootScope.$new();
+      q = $q
       // Create the controller
       ctrl = $controller('CommentsCtrl', {
         $scope: scope
@@ -22,7 +23,7 @@ describe('Unit: MyApp', function() {
         var data;
 
         // set up a deferred
-        var deferred = $q.defer();
+        var deferred = q.defer();
         // get promise reference
         var promise = deferred.promise;
 
