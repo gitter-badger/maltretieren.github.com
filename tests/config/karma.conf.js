@@ -38,7 +38,7 @@ module.exports = function(config){
         ],
 		// list of files to exclude
 		exclude = [
-			//'src/main.js'
+			'app/js/main.js'
 		],
         autoWatch : false,
         frameworks: ['jasmine'],
