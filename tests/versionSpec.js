@@ -18,7 +18,7 @@ describe('Unit: MyApp', function() {
 	
 	it('should get comments', 
     function() {
-      expect($scope.comments).toBeUndefined();
+      expect(scope.comments).toBeUndefined();
       scope.getComments();
 	  console.log(scope.comments);
 	  console.log(config.keenio.comments_url);
