@@ -2,12 +2,12 @@
 
 describe('Unit: MyApp', function() {
     // Load the module with MainController
-    beforeEach(module('myApp'));
+    beforeEach(angular.mock.module('myApp'));
 
 	var ctrl, scope;
     // inject the $controller and $rootScope services
     // in the beforeEach block
-    beforeEach(inject(function($controller, $rootScope) {
+    beforeEach(angular.mock.inject(function($controller, $rootScope) {
       // Create a new scope that's a child of the $rootScope
       scope = $rootScope.$new();
       // Create the controller
