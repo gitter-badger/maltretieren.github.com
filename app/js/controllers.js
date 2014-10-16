@@ -52,6 +52,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $dialogs,$timeout, toas
         .success(function(data, status, headers, config) {
             // this callback will be called asynchronously
             // when the response is available
+			console.log("comments received");
             $scope.comments = {
                 entries: data.result
             }
