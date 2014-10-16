@@ -1,11 +1,13 @@
 # Status
 This repository contains the source for my personal blog you can visit at  
-[https://maltretieren.github.io](https://maltretieren.github.io) [![Build Status](https://travis-ci.org/Maltretieren/maltretieren.github.com.svg?branch=master)](https://travis-ci.org/Maltretieren/maltretieren.github.com).
+[https://maltretieren.github.io](https://maltretieren.github.io).
 It is hosted on GitHub Pages and run by Jekyll. I built a GUI on top of this to provide an easy way to edit/create posts
 from within the browser. While prose.io is a more generic solution (for editing content on GitHub via a browser)
 this site is focused on blogging software.  
 
+## Technical Status
 [![Build Status](https://david-dm.org/Maltretieren/maltretieren.github.com.svg?style=flat)](https://david-dm.org)
+[![Build Status](https://travis-ci.org/Maltretieren/maltretieren.github.com.svg?branch=master)](https://travis-ci.org/Maltretieren/maltretieren.github.com)
 <iframe width="560" height="315"  src="//www.youtube.com/v/NDjB_7lAkO8&hl=en&fs=1" frameborder="0"></iframe>
 # Philosophy
 Jekyll Bootstrap states: "The Quickest Way to Blog on GitHub Pages". I'm hoping to provide the
