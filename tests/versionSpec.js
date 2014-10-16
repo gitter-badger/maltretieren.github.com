@@ -4,13 +4,14 @@ describe('Unit: MyApp', function() {
     // Load the module with MainController
     beforeEach(angular.mock.module('myApp'));
 
-	var ctrl, scope, q;
+	var ctrl, scope, q, http;
     // inject the $controller and $rootScope services
     // in the beforeEach block
-    beforeEach(angular.mock.inject(function($controller, $rootScope, $q) {
+    beforeEach(angular.mock.inject(function($controller, $rootScope, $q, $httpBackend) {
       // Create a new scope that's a child of the $rootScope
-      scope = $rootScope.$new();
-      q = $q
+      scope = $rootScope;
+      q = $q;
+      http = $httpBackend;
       // Create the controller
       ctrl = $controller('CommentsCtrl', {
         $scope: scope
@@ -32,10 +33,7 @@ describe('Unit: MyApp', function() {
             data = response.success;
         });
 
-        scope.getComments().then(function(response) {
-            // resolve our deferred with the response when it returns
-            deferred.resolve(response);
-        });
+        scope.getComments();
 
         // force `$digest` to resolve/reject deferreds
         scope.$digest();
