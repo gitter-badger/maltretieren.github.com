@@ -9,7 +9,6 @@
  *
  * Login information
  */
-
 myApp.value('version', '0.1');
 
 myApp.service("GithubAuthService", function ($http, $q, $rootScope, UserModel) {
