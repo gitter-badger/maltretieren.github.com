@@ -19,9 +19,9 @@ describe('Unit: MyApp', function() {
 	it('should get comments', 
     function() {
       expect($scope.comments).toBeUndefined();
-      $scope.getComments();
-	  console.log($scope.comments);
-      expect($scope.comments).toBeUndefined();
+      scope.getComments();
+	  console.log(scope.comments);
+      expect(scope.comments).toBeUndefined();
   });
     //it('should return current version', inject(function(version) {
     //    expect(version).toEqual('0.1');
