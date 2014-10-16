@@ -36,6 +36,10 @@ module.exports = function(config){
             'app/version.js',
             'tests/versionSpec.js'
         ],
+		// list of files to exclude
+		exclude = [
+			//'src/main.js'
+		],
         autoWatch : false,
         frameworks: ['jasmine'],
         browsers : ['Chrome'],
