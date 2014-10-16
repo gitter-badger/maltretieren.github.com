@@ -2,7 +2,6 @@ module.exports = function(config){
     config.set({
         basePath : '../../',
         files : [
-		    'assets/js/labjs-2.0.3/LAB.min.js',
 			'app/js/main.js',
 			'assets/js/angular-1.3.0/angular-mocks.js',
             'app/version.js',
