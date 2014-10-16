@@ -22,7 +22,8 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-karma');
+    
+	grunt.loadNpmTasks('grunt-karma');
 
     grunt.registerTask('devmode', ['karma:unit', 'watch']);
 
