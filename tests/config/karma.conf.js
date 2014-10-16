@@ -1,6 +1,7 @@
 module.exports = function(config){
     config.set({
         basePath : '../../',
+		// manual definition, this is redundant to /app/js/main.js labjs file, but I didn't manage to reuse...
         files : [
 			'assets/js/jquery-2.1.0/jquery-2.1.0.min.js',
 			'app/js/config.js',

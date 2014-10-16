@@ -43,9 +43,10 @@ namespace :my_tasks do
         end
       end
 	  puts "\n## Pushing template branches to origin"
-	  system("git add . -A >> /dev/null")
-	  system("git commit -m 'prepare for template'")
-	  status = system("git push origin template")
+	  # >> /dev/null reduces log output in Travis
+	  system("git add . -A")
+	  system("git commit -m 'prepare for template' >> /dev/null")
+	  status = system("git push origin template >> /dev/null")
 	  puts status ? "Success" : "Failed"
 	end
 end
