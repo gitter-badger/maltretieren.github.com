@@ -26,14 +26,14 @@ describe('Unit: MyApp', function() {
         // set up a deferred
         var deferred = q.defer();
         // get promise reference
-        var promise = deferred.promise;
+        var promise = scope.getComments();
 
         // set up promise resolve callback
         promise.then(function (response) {
             data = response.success;
         });
 
-        scope.getComments();
+
 
         // force `$digest` to resolve/reject deferreds
         scope.$digest();
