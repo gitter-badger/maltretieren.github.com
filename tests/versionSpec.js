@@ -21,6 +21,7 @@ describe('Unit: MyApp', function() {
       expect($scope.comments).toBeUndefined();
       scope.getComments();
 	  console.log(scope.comments);
+	  console.log(config.keenio.comments_url);
       expect(scope.comments).toBeUndefined();
   });
     //it('should return current version', inject(function(version) {
