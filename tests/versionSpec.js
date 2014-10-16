@@ -19,7 +19,7 @@ describe('Unit: MyApp', function() {
 	it('should get comments', 
     function() {
       expect(scope.comments).toBeUndefined();
-      ctrl.getComments();
+      scope.getComments();
 	  console.log(scope.comments);
       expect(scope.comments).toBeUndefined();
   });
