@@ -18,10 +18,9 @@ describe('Unit: MyApp', function() {
 	
 	it('should get comments', 
     function() {
-      expect(scope.comments).toEqual({  });
+      //expect(scope.comments).toEqual({  });
       scope.getComments();
 	  console.log(scope.comments);
-	  console.log(config.keenio.comments_url);
       //expect(scope.comments).not.toMatch("{  }");
   });
     //it('should return current version', inject(function(version) {

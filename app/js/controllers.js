@@ -11,8 +11,6 @@
  * Receive a complete list of all comments
  */
 myApp.controller("CommentsCtrl",function ($scope, $http, $dialogs,$timeout, toaster, UserModel) {
-	$scope.comments = {};
-	
 	var commentsUrl = config.keenio.comments_url;
 	// disable comments if there is no config for it...
 	if(commentsUrl==='') {
@@ -47,12 +45,10 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $dialogs,$timeout, toas
     }
 	
     $scope.getComments = function() {
-		console.log("Get comments");
 		$http({method: 'GET', url: commentsUrl+$scope.filterString})
         .success(function(data, status, headers, config) {
             // this callback will be called asynchronously
             // when the response is available
-			console.log("comments received");
             $scope.comments = {
                 entries: data.result
             }
