@@ -38,6 +38,9 @@ Inspired by https://github.com/angular/angular-seed & https://github.com/plusjad
     _layouts                 --> Jekyll templates for different pages
     _plugins                 --> Only a Debug plugin, nothing else...
     _posts                   --> blog posts, sorted in subfolders
+	_tests                   --> folder to put tests inside
+	  conf/                  --> Karma configuration file: karma.conf.js
+	  ..
     assets                   --> Unchanged assets, include version number in folder name
       img/                   --> Source files for graphics (yED)
       js/                    --> Libraries (not customized stuff)
@@ -105,9 +108,9 @@ Inspired by https://github.com/angular/angular-seed & https://github.com/plusjad
     - Javascript OAuth Library
 
 ## Resources available
-rss.xml
-atom.xml
-postsFrontpage.json
+[rss.xml](http://maltretieren.github.io/rss.xml)
+[atom.xml](http://maltretieren.github.io/atom.xml)
+[postsFrontpage.json](http://maltretieren.github.io/rss.xml)
 
 ## License
 
