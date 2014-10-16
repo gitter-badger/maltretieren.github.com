@@ -14,6 +14,7 @@ describe('Unit: MyApp', function() {
         });
     }));
 
+    // this has a dependency to config.js
     it('test availabilty of comments url in config'), function() {
         $scope.commentsUrl.not.toBeUndefined();
     }
