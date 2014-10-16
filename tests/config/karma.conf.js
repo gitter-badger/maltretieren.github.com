@@ -37,7 +37,7 @@ module.exports = function(config){
             'tests/versionSpec.js'
         ],
 		// list of files to exclude
-		exclude = [
+		exclude: [
 			'app/js/main.js'
 		],
         autoWatch : false,
