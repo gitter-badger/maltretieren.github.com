@@ -4,6 +4,7 @@ module.exports = function(config){
         files : [
             'assets/js/angular-1.3.0/angular.js',
             'assets/js/angular-1.3.0/angular-mocks.js',
+			'assets/js/**/*.js',
 			'app/js/main.js',
             'app/version.js',
             'tests/versionSpec.js'
