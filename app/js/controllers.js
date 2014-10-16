@@ -46,6 +46,7 @@ myApp.controller("CommentsCtrl",function ($scope, $http, $dialogs,$timeout, toas
     }
 	
     $scope.getComments = function() {
+		console.log("Get comments");
 		$http({method: 'GET', url: commentsUrl+$scope.filterString})
         .success(function(data, status, headers, config) {
             // this callback will be called asynchronously
