@@ -11,14 +11,17 @@ describe('Unit: MyApp', function() {
       // Create a new scope that's a child of the $rootScope
       scope = $rootScope.$new();
       // Create the controller
-      ctrl = $controller('TableCtrl', {
+      ctrl = $controller('CommentsCtrl', {
         $scope: scope
       });
     }));
 	
 	it('should get comments', 
     function() {
-	  console.log(scope.orderByField);
+      expect(scope.comments).toBeUndefined();
+      ctrl.getComments();
+	  console.log(scope.comments);
+      expect(scope.comments).toBeUndefined();
   });
     //it('should return current version', inject(function(version) {
     //    expect(version).toEqual('0.1');
