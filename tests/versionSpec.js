@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Unit: MyApp', function() {
+describe('Unit tests for CommentsCtrl', function() {
     var $rootScope, $scope, $controller;
 
     beforeEach(angular.mock.module('myApp'));
@@ -23,6 +23,12 @@ describe('Unit: MyApp', function() {
         spyOn($scope, 'getComments');
         $scope.getComments();
         expect($scope.getComments).toHaveBeenCalled();
+    });
+
+    it('should call the function submit', function () {
+        spyOn($scope, 'submit');
+        $scope.submit();
+        expect($scope.submit).toHaveBeenCalled();
     });
 
     it('should call the function deleteComment', function () {
