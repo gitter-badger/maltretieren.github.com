@@ -32,10 +32,10 @@ describe('Unit: MyApp', function() {
             data = response.success;
         });
 
-        scope.getComments().then(response) {
+        scope.getComments().then(function(response) {
             // resolve our deferred with the response when it returns
             deferred.resolve(response);
-        };
+        });
 
         // force `$digest` to resolve/reject deferreds
         scope.$digest();
