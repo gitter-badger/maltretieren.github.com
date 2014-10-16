@@ -2,7 +2,7 @@
 This repository contains the source for my personal blog you can visit at  
 [https://maltretieren.github.io](https://maltretieren.github.io).
 It is hosted on GitHub Pages and run by Jekyll. I built a GUI on top of this to provide an easy way to edit/create posts
-from within the browser. While prose.io is a more generic solution (for editing content on GitHub via a browser)
+from within the browser. While prose.io is a more generic solution for editing content on GitHub via a browser,
 this site is focused on blogging software.  
 
 ## Technical Status
