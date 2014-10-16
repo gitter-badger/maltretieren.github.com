@@ -19,4 +19,10 @@ describe('Unit: MyApp', function() {
         $scope.getComments();
         expect($scope.getComments).toHaveBeenCalled();
     });
+
+    it('should call the function deleteComment', function () {
+        spyOn($scope, 'deleteComment');
+        $scope.deleteComment();
+        expect($scope.deleteComment).toHaveBeenCalled();
+    });
 });
