@@ -12,6 +12,7 @@ Click on the image below to see a demo video of how to copy this site to your gi
 ## Technical Status
 [![devDependency Status](https://david-dm.org/Maltretieren/maltretieren.github.com/dev-status.svg)](https://david-dm.org/Maltretieren/maltretieren.github.com#info=devDependencies)
 [![Build Status](https://travis-ci.org/Maltretieren/maltretieren.github.com.svg?branch=master)](https://travis-ci.org/Maltretieren/maltretieren.github.com)
+[![Coverage Status](https://img.shields.io/coveralls/Maltretieren/maltretieren.github.com.svg)](https://coveralls.io/r/Maltretieren/maltretieren.github.com?branch=master)
 <iframe width="560" height="315"  src="//www.youtube.com/v/NDjB_7lAkO8&hl=en&fs=1" frameborder="0"></iframe>
 # Philosophy
 Jekyll Bootstrap states: "The Quickest Way to Blog on GitHub Pages". I'm hoping to provide the
