@@ -53,6 +53,7 @@ module.exports = function(config){
 			'karma-coverage'
         ],
 		// https://github.com/karma-runner/karma-coverage
+		// http://karma-runner.github.io/0.8/config/coverage.html
 		reporters: [
 			'progress',
 			'coverage'
@@ -66,7 +67,7 @@ module.exports = function(config){
 
 		// optionally, configure the reporter
 		coverageReporter: {
-		  type : 'text-summary',
+		  type : 'text',
 		}
 		
     })
