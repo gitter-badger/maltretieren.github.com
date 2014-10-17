@@ -58,4 +58,4 @@ namespace :my_tasks do
 end
 
 # first generate the site to see if jekyll is working - after that test the JavaScript code...
-task :default => ["my_tasks:generate", "my_tasks:TestResults", "my_tasks:deploy"]
+task :default => ["my_tasks:generate", "my_tasks:uploadTestResults", "my_tasks:deploy"]
