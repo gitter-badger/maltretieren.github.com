@@ -14,12 +14,19 @@ require "rake/clean"
 GITHUB_REPONAME = "Maltretieren/maltretieren.github.com"
 
 namespace :my_tasks do 
-	desc "Deploy _site/ to master branch"
+	desc "Generate site on travis - if this fail it will also fail on github"
 	 task :generate do
 		Jekyll::Site.new(Jekyll.configuration({
 		"source" => ".",
 		"destination" => "_site"
 		})).process
+	end
+	
+	desc "Upload test results"
+	task :uploadTests do
+		puts "\n## Listing of folder tests/coverage"
+		status = system("ls /tests/coverage")
+		puts status
 	end
 	
 	task :deploy do
