@@ -6,6 +6,9 @@ from within the browser. While [prose.io](http://prose.io) is a more generic sol
 this site is focused on blogging software. With a few clicks you can create your own instance running on your
 github account...
 
+Click on the image below to see a demo video of how to copy this site to your github account...
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/NDjB_7lAkO8/maxresdefault.jpg)](http://www.youtube.com/watch?v=NDjB_7lAkO8)
+
 ## Technical Status
 [![devDependency Status](https://david-dm.org/Maltretieren/maltretieren.github.com/dev-status.svg)](https://david-dm.org/Maltretieren/maltretieren.github.com#info=devDependencies)
 [![Build Status](https://travis-ci.org/Maltretieren/maltretieren.github.com.svg?branch=master)](https://travis-ci.org/Maltretieren/maltretieren.github.com)
@@ -19,9 +22,6 @@ account. Create/Edit your own content from your site...
 
 To use the power of the static site generator as much content as possible should be prerendered.
 With the power of Javascript and external services you can make your static site even pretty dynamic.
-
-Click on the image below to see a demo video of how to copy this site to your github account...
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/NDjB_7lAkO8/maxresdefault.jpg)](http://www.youtube.com/watch?v=NDjB_7lAkO8)
 
 ## Features
 - Free to Fork - MIT License
