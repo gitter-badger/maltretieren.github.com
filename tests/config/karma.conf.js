@@ -49,7 +49,8 @@ module.exports = function(config){
             'karma-chrome-launcher',
             'karma-firefox-launcher',
             'karma-phantomjs-launcher',
-            'karma-jasmine'
+            'karma-jasmine',
+			'karma-coverage'
         ],
 		// https://github.com/karma-runner/karma-coverage
 		reporters: [
@@ -65,7 +66,7 @@ module.exports = function(config){
 
 		// optionally, configure the reporter
 		coverageReporter: {
-		  type : 'html',
+		  type : 'text',
 		  dir : 'coverage/'
 		}
 		
