@@ -1,4 +1,5 @@
 # Status and Overview
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/Maltretieren/maltretieren.github.com?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 This repository contains the source for my personal blog you can see in action at 
 [https://maltretieren.github.io](https://maltretieren.github.io).
 It is hosted on GitHub Pages and run by Jekyll. The user interface provides an easy way to edit/create posts
