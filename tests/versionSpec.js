@@ -38,8 +38,8 @@ describe('Unit tests for CommentsCtrl', function() {
     });
 	
 	it('should test if the more functionality is working', function () {
-        expect($scope.quantity).toBeEqual(3)
+        $scope.quantity.toBeEqual(3)
         $scope.more();
-        expect($scope.quantity).toBeGreaterThan(3);
+        $scope.quantity.toBeGreaterThan(3);
 	});
 });
