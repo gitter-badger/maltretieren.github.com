@@ -52,19 +52,18 @@ module.exports = function(config){
             'karma-jasmine',
 			'karma-coverage'
         ],
-		// https://github.com/karma-runner/karma-coverage
-		// http://karma-runner.github.io/0.8/config/coverage.html
-		// http://blog.dc.esri.com/2014/03/26/js-code-coverage/
-		reporters: [
-			'coverage'
-		],
 		preprocessors: {
 		  // source files, that you wanna generate coverage for
 		  // do not include tests or libraries
 		  // (these files will be instrumented by Istanbul)
 		  'app/js/*.js': ['coverage']
 		},
-
+		// https://github.com/karma-runner/karma-coverage
+		// http://karma-runner.github.io/0.8/config/coverage.html
+		// http://blog.dc.esri.com/2014/03/26/js-code-coverage/
+		reporters: [
+			'coverage'
+		],
 		// optionally, configure the reporter
 		coverageReporter: {
 		  type : 'lcov',
