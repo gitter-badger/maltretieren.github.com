@@ -17,7 +17,7 @@
       "karma-phantomjs-launcher": "0.1.4",
       "grunt-contrib-watch": "0.6.1",
 	  "karma-junit-reporter": "0.2.2",
-	  "karma-coverage": "0.2.6",
+	  "karma-coverage": "0.2.6"
   },
   "repository": {
     "type": "git",
