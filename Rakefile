@@ -25,7 +25,7 @@ namespace :my_tasks do
 	desc "Upload test results"
 	task :uploadTestResults do
 		puts "\n## Listing of folder tests/coverage"
-		status = system("ls /tests/coverage")
+		status = system("ls coverage")
 		puts status
 	end
 	
