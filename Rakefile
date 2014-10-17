@@ -8,6 +8,8 @@ require "bundler/setup"
 require "jekyll"
 require "fileutils"
 require "rake/clean"
+require 'coveralls'
+Coveralls.wear!
 
 
 # Change your GitHub reponame
