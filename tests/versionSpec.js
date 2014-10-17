@@ -43,7 +43,7 @@ describe('Unit tests for CommentsCtrl', function() {
 		console.log(quantity);
 		
 		expect(quantitiy).toEqual(3)
-        //$scope.more();
+        $scope.more();
         //$scope.quantity.toBeGreaterThan(3);
 	});
 });
