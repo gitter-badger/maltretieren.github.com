@@ -25,7 +25,7 @@ namespace :my_tasks do
 	desc "Upload test results"
 	task :uploadTestResults do
 		puts "\n## Listing of folder tests/coverage"
-		system("ls .")
+		system("ls ./coverage")
 	end
 	
 	task :deploy do
