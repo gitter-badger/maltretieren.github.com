@@ -36,4 +36,10 @@ describe('Unit tests for CommentsCtrl', function() {
         $scope.deleteComment();
         expect($scope.deleteComment).toHaveBeenCalled();
     });
+	
+	it('should test if the more functionality is working', function () {
+        expect($scope.quantity).toBeEqual(3)
+        $scope.more();
+        expect($scope.quantity).toBeGreaterThan(3);
+	});
 });
