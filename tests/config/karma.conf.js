@@ -56,7 +56,6 @@ module.exports = function(config){
 		// http://karma-runner.github.io/0.8/config/coverage.html
 		// http://blog.dc.esri.com/2014/03/26/js-code-coverage/
 		reporters: [
-			'progress',
 			'coverage'
 		],
 		preprocessors: {
