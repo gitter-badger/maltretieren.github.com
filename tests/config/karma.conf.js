@@ -68,7 +68,7 @@ module.exports = function(config){
 		// optionally, configure the reporter
 		coverageReporter: {
 		  type : 'html',
-		  dir : 'coverage/coverage-PhantomJS 1.9.7 (Linux)-20141017_122557.json'
+		  dir : 'coverage/'
 		}
 		
     })
