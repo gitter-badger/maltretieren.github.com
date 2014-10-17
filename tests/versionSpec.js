@@ -40,10 +40,8 @@ describe('Unit tests for CommentsCtrl', function() {
 	
 	it('should test if the more functionality is working', function () {
         var quantity = $scope.quantity;
-		console.log(quantity);
-		
 		expect(quantity).toEqual(3)
         $scope.more();
-        //$scope.quantity.toBeGreaterThan(3);
+        expect($scope.quantity).toBeGreaterThan(quantity);
 	});
 });
