@@ -13,15 +13,7 @@ require "rake/clean"
 # Change your GitHub reponame
 GITHUB_REPONAME = "Maltretieren/maltretieren.github.com"
 
-namespace :my_tasks do
-  desc "Generate blog files"
-  task :generate do
-    Jekyll::Site.new(Jekyll.configuration({
-      "source"      => ".",
-      "destination" => "_site"
-    })).process
-  end
-  
+namespace :my_tasks do 
 	desc "Deploy _site/ to master branch"
 	task :deploy do
 	  puts "\n## Deleting template branch"
@@ -51,4 +43,4 @@ namespace :my_tasks do
 	end
 end
 
-task :default => ["my_tasks:generate", "my_tasks:deploy"]
+task :default => ["my_tasks:deploy"]
