@@ -15,6 +15,13 @@ GITHUB_REPONAME = "Maltretieren/maltretieren.github.com"
 
 namespace :my_tasks do 
 	desc "Deploy _site/ to master branch"
+	 task :generate do
+		Jekyll::Site.new(Jekyll.configuration({
+		"source" => ".",
+		"destination" => "_site"
+		})).process
+	end
+	
 	task :deploy do
 	  puts "\n## Deleting template branch"
 	  status = system("git push origin --delete template")
@@ -43,4 +50,5 @@ namespace :my_tasks do
 	end
 end
 
-task :default => ["my_tasks:deploy"]
+# first generate the site to see if jekyll is working - after that test the JavaScript code...
+task :default => ["my_tasks:generate", "my_tasks:deploy"]
