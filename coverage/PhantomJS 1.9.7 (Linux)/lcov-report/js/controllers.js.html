@@ -1,0 +1,2930 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for js/controllers.js</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="../prettify.css">
+
+    <style>
+        body, html {
+            margin:0; padding: 0;
+        }
+        body {
+            font-family: Helvetica Neue, Helvetica,Arial;
+            font-size: 10pt;
+        }
+        div.header, div.footer {
+            background: #eee;
+            padding: 1em;
+        }
+        div.header {
+            z-index: 100;
+            position: fixed;
+            top: 0;
+            border-bottom: 1px solid #666;
+            width: 100%;
+        }
+        div.footer {
+            border-top: 1px solid #666;
+        }
+        div.body {
+            margin-top: 10em;
+        }
+        div.meta {
+            font-size: 90%;
+            text-align: center;
+        }
+        h1, h2, h3 {
+            font-weight: normal;
+        }
+        h1 {
+            font-size: 12pt;
+        }
+        h2 {
+            font-size: 10pt;
+        }
+        pre {
+            font-family: Consolas, Menlo, Monaco, monospace;
+            margin: 0;
+            padding: 0;
+            line-height: 14px;
+            font-size: 14px;
+            -moz-tab-size: 2;
+            -o-tab-size:  2;
+            tab-size: 2;
+        }
+
+        div.path { font-size: 110%; }
+        div.path a:link, div.path a:visited { color: #000; }
+        table.coverage { border-collapse: collapse; margin:0; padding: 0 }
+
+        table.coverage td {
+            margin: 0;
+            padding: 0;
+            color: #111;
+            vertical-align: top;
+        }
+        table.coverage td.line-count {
+            width: 50px;
+            text-align: right;
+            padding-right: 5px;
+        }
+        table.coverage td.line-coverage {
+            color: #777 !important;
+            text-align: right;
+            border-left: 1px solid #666;
+            border-right: 1px solid #666;
+        }
+
+        table.coverage td.text {
+        }
+
+        table.coverage td span.cline-any {
+            display: inline-block;
+            padding: 0 5px;
+            width: 40px;
+        }
+        table.coverage td span.cline-neutral {
+            background: #eee;
+        }
+        table.coverage td span.cline-yes {
+            background: #b5d592;
+            color: #999;
+        }
+        table.coverage td span.cline-no {
+            background: #fc8c84;
+        }
+
+        .cstat-yes { color: #111; }
+        .cstat-no { background: #fc8c84; color: #111; }
+        .fstat-no { background: #ffc520; color: #111 !important; }
+        .cbranch-no { background:  yellow !important; color: #111; }
+        .missing-if-branch {
+            display: inline-block;
+            margin-right: 10px;
+            position: relative;
+            padding: 0 4px;
+            background: black;
+            color: yellow;
+            xtext-decoration: line-through;
+        }
+        .missing-if-branch .typ {
+            color: inherit !important;
+        }
+
+        .entity, .metric { font-weight: bold; }
+        .metric { display: inline-block; border: 1px solid #333; padding: 0.3em; background: white; }
+        .metric small { font-size: 80%; font-weight: normal; color: #666; }
+
+        div.coverage-summary table { border-collapse: collapse; margin: 3em; font-size: 110%; }
+        div.coverage-summary td, div.coverage-summary table  th { margin: 0; padding: 0.25em 1em; border-top: 1px solid #666; border-bottom: 1px solid #666; }
+        div.coverage-summary th { text-align: left; border: 1px solid #666; background: #eee; font-weight: normal; }
+        div.coverage-summary th.file { border-right: none !important; }
+        div.coverage-summary th.pic { border-left: none !important; text-align: right; }
+        div.coverage-summary th.pct { border-right: none !important; }
+        div.coverage-summary th.abs { border-left: none !important; text-align: right; }
+        div.coverage-summary td.pct { text-align: right; border-left: 1px solid #666; }
+        div.coverage-summary td.abs { text-align: right; font-size: 90%; color: #444; border-right: 1px solid #666; }
+        div.coverage-summary td.file { text-align: right; border-left: 1px solid #666; white-space: nowrap;  }
+        div.coverage-summary td.pic { min-width: 120px !important;  }
+        div.coverage-summary a:link { text-decoration: none; color: #000; }
+        div.coverage-summary a:visited { text-decoration: none; color: #333; }
+        div.coverage-summary a:hover { text-decoration: underline; }
+        div.coverage-summary tfoot td { border-top: 1px solid #666; }
+
+        div.coverage-summary .yui3-datatable-sort-indicator, div.coverage-summary .dummy-sort-indicator {
+            height: 10px;
+            width: 7px;
+            display: inline-block;
+            margin-left: 0.5em;
+        }
+        div.coverage-summary .yui3-datatable-sort-indicator {
+            background: url("http://yui.yahooapis.com/3.6.0/build/datatable-sort/assets/skins/sam/sort-arrow-sprite.png") no-repeat scroll 0 0 transparent;
+        }
+        div.coverage-summary .yui3-datatable-sorted .yui3-datatable-sort-indicator {
+            background-position: 0 -20px;
+        }
+        div.coverage-summary .yui3-datatable-sorted-desc .yui3-datatable-sort-indicator {
+            background-position: 0 -10px;
+        }
+
+        .high { background: #b5d592 !important; }
+        .medium { background: #ffe87c !important; }
+        .low { background: #fc8c84 !important; }
+
+        span.cover-fill, span.cover-empty {
+            display:inline-block;
+            border:1px solid #444;
+            background: white;
+            height: 12px;
+        }
+        span.cover-fill {
+            background: #ccc;
+            border-right: 1px solid #444;
+        }
+        span.cover-empty {
+            background: white;
+            border-left: none;
+        }
+        span.cover-full {
+            border-right: none !important;
+        }
+        pre.prettyprint {
+            border: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        .com { color: #999 !important; }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">js/controllers.js</span></h1>
+    <h2>
+        
+        Statements: <span class="metric">7.97% <small>(37 / 464)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Branches: <span class="metric">5.45% <small>(3 / 55)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Functions: <span class="metric">2.46% <small>(3 / 122)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Lines: <span class="metric">8.01% <small>(37 / 462)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">js/</a> &#187; controllers.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626
+627
+628
+629
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639
+640
+641
+642
+643
+644
+645
+646
+647
+648
+649
+650
+651
+652
+653
+654
+655
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665
+666
+667
+668
+669
+670
+671
+672
+673
+674
+675
+676
+677
+678
+679
+680
+681
+682
+683
+684
+685
+686
+687
+688
+689
+690
+691
+692
+693
+694
+695
+696
+697
+698
+699
+700
+701
+702
+703
+704
+705
+706
+707
+708
+709
+710
+711
+712
+713
+714
+715
+716
+717
+718
+719
+720
+721
+722
+723
+724
+725
+726
+727
+728
+729
+730
+731
+732
+733
+734
+735
+736
+737
+738
+739
+740
+741
+742
+743
+744
+745
+746
+747
+748
+749
+750
+751
+752
+753
+754
+755
+756
+757
+758
+759
+760
+761
+762
+763
+764
+765
+766
+767
+768
+769
+770
+771
+772
+773
+774
+775
+776
+777
+778
+779
+780
+781
+782
+783
+784
+785
+786
+787
+788
+789
+790
+791
+792
+793
+794
+795
+796
+797
+798
+799
+800
+801
+802
+803
+804
+805
+806
+807
+808
+809
+810
+811
+812
+813
+814
+815
+816
+817
+818
+819
+820
+821
+822
+823
+824
+825
+826
+827
+828
+829
+830
+831
+832
+833
+834
+835
+836
+837
+838
+839
+840
+841
+842
+843
+844
+845
+846
+847
+848
+849
+850
+851
+852
+853
+854
+855
+856
+857
+858
+859
+860
+861
+862
+863
+864
+865
+866
+867
+868
+869
+870
+871
+872
+873
+874
+875
+876</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+/**
+*	The controller must be responsible for binding model data to views using $scope,
+ *	and control information flow.
+ *
+ *	It does not contain logic to fetch the data or manipulating it.
+*/
+&nbsp;
+/**
+ * Receive a complete list of all comments
+ */
+myApp.controller("CommentsCtrl",function ($scope, $http, $dialogs,$timeout, toaster, UserModel) {
+	var commentsUrl = config.keenio.comments_url;
+	// disable comments if there is no config for it...
+	<span class="missing-if-branch" title="if path not taken"" >I</span>if(commentsUrl==='') {
+<span class="cstat-no" title="statement not covered" >		$scope.commentsToggle = false;</span>
+	} else {
+		$scope.commentsToggle = true;
+	}
+	var user = UserModel.getUser();
+	<span class="missing-if-branch" title="if path not taken"" >I</span>if(user !== null) {	
+<span class="cstat-no" title="statement not covered" >		$scope.isAdmin = user.isAdmin;</span>
+<span class="cstat-no" title="statement not covered" >		$scope.userName = user.name;</span>
+&nbsp;
+	} else {
+		$scope.isAdmin = false;
+		$scope.userName = "";
+	}
+	$scope.userMail = "";
+	$scope.commentText = "";
+	
+	// hacky way to determine if it is the frontpage
+    // -&gt; on frontpage show all comments, on other pages
+	// filter only comments matching the pageTitle
+    var parts = window.location.href.split("/");
+	<span class="missing-if-branch" title="if path not taken"" >I</span>if(parts[3] === '') {
+		//console.log("no filter for comments");
+<span class="cstat-no" title="statement not covered" >		$scope.filterString = '';</span>
+    } else {
+        $scope.filterString = '&amp;filters=[{"property_name":"pageTitle","operator":"eq","property_value":"'+document.title+'"}]';
+    }
+    $scope.more = function() {
+        $scope.quantity += 3;
+    }
+	
+    $scope.getComments = function() {
+		$http({method: 'GET', url: commentsUrl+$scope.filterString})
+        .success(<span class="fstat-no" title="function not covered" >function(data, status, headers, config) {</span>
+            // this callback will be called asynchronously
+            // when the response is available
+<span class="cstat-no" title="statement not covered" >            $scope.comments = {</span>
+                entries: data.result
+            }
+        })
+        .error(<span class="fstat-no" title="function not covered" >function(data, status, headers, config) {</span>
+            //alert("Error while getting comments from keen.io: "+status)
+        });
+	}
+	$scope.getComments();
+&nbsp;
+    $scope.quantity = 3;
+    $scope.sortorder = 'created_at';
+	$scope.deleteComment = <span class="fstat-no" title="function not covered" >function(event) {</span>
+<span class="cstat-no" title="statement not covered" >		var cId = event.target.id;</span>
+		//console.log("Delete: "+$scope.id);
+<span class="cstat-no" title="statement not covered" >		var passIns = {commentId: cId};</span>
+<span class="cstat-no" title="statement not covered" >		var dlg = $dialogs.create('/app/partials/keenMaster.html','KeenioMasterCtrl',passIns,{key: false});</span>
+<span class="cstat-no" title="statement not covered" >		dlg.result.then(<span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >			$timeout($scope.getComments, 5000);</span>
+		},<span class="fstat-no" title="function not covered" >function(){</span>
+<span class="cstat-no" title="statement not covered" >			console.log("exit");</span>
+		});
+	}
+	
+	// comments form
+	$scope.submit = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >		var data = {</span>
+			"name": $scope.userName,
+			"email": $scope.userMail,
+			"message": $scope.commentText,
+			"pageTitle": $scope.pageTitle,
+			"pageUrl": $scope.pageUrl
+		} 
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		var success = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >			toaster.pop('success', "Comment saved", 'Comment was saved and will be available shortly', 5000, 'trustedHtml');</span>
+<span class="cstat-no" title="statement not covered" >			$timeout($scope.getComments, 9000);</span>
+<span class="cstat-no" title="statement not covered" >			$scope.$apply();</span>
+		}
+<span class="cstat-no" title="statement not covered" >		var error = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >			toaster.pop('error', "Comment failed", 'There was an error while saving the comment', 5000, 'trustedHtml');</span>
+<span class="cstat-no" title="statement not covered" >			$scope.$apply();</span>
+		}
+<span class="cstat-no" title="statement not covered" >		Keen.addEvent("comments", data, success);</span>
+	}
+});
+&nbsp;
+myApp.controller("KeenioMasterCtrl", <span class="fstat-no" title="function not covered" >function ($scope, $modalInstance, $http, toaster, data) {</span>
+<span class="cstat-no" title="statement not covered" >	$scope.user = {};</span>
+<span class="cstat-no" title="statement not covered" >	$scope.commentId = data.commentId;</span>
+<span class="cstat-no" title="statement not covered" >	console.log($scope.commentId);</span>
+	
+<span class="cstat-no" title="statement not covered" >	$scope.cancel = <span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >		$modalInstance.dismiss('canceled');  </span>
+	}; // end cancel
+	
+<span class="cstat-no" title="statement not covered" >	$scope.save = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >		$scope.masterKey = $scope.user.name;</span>
+<span class="cstat-no" title="statement not covered" >        console.log("Keenio Master key: "+$scope.masterKey);</span>
+<span class="cstat-no" title="statement not covered" >		console.log("Keenio Comment Id: "+$scope.commentId);</span>
+<span class="cstat-no" title="statement not covered" >		var postsUrl = 'https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/events/comments?api_key='+$scope.masterKey+'&amp;filters=[{"property_name":"keen.id","operator":"eq","property_value":"'+$scope.commentId+'"}]';</span>
+<span class="cstat-no" title="statement not covered" >		console.log(postsUrl)</span>
+<span class="cstat-no" title="statement not covered" >		$http({method: 'DELETE', url: postsUrl}).</span>
+			success(<span class="fstat-no" title="function not covered" >function(data, status, headers, config) {</span>
+<span class="cstat-no" title="statement not covered" >				$modalInstance.close();</span>
+<span class="cstat-no" title="statement not covered" >				toaster.pop('error', "Comment deleted", 'Comment was deleted&lt;', 5000, 'trustedHtml');</span>
+			}).
+			error(<span class="fstat-no" title="function not covered" >function(data, status, headers, config) {</span>
+<span class="cstat-no" title="statement not covered" >				alert("Error while getting json for posts: "+status)</span>
+		});
+	};
+});
+&nbsp;
+/**
+ * Receive a complete list of all comments
+ */
+myApp.controller("WikiquoteCtrl",<span class="fstat-no" title="function not covered" >function ($scope) {</span>
+<span class="cstat-no" title="statement not covered" >    var wikiquote = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        WikiquoteApi.getRandomQuote("Programming|Computer",</span>
+<span class="fstat-no" title="function not covered" >            function(newQuote) {</span>
+<span class="cstat-no" title="statement not covered" >                $scope.wikiquote = newQuote.quote;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.$apply();</span>
+            },
+<span class="fstat-no" title="function not covered" >            function(msg){</span>
+<span class="cstat-no" title="statement not covered" >                console.log("Error while retrieving quote from wikiquote "+msg);</span>
+            }
+        );
+    }
+});
+&nbsp;
+/**
+ * Function for table sort and search
+ */
+myApp.controller("TableCtrl",<span class="fstat-no" title="function not covered" >function ($scope, $http) {</span>
+<span class="cstat-no" title="statement not covered" >    var postsUrl = "/postsFrontpage.json";</span>
+<span class="cstat-no" title="statement not covered" >	$http({method: 'GET', url: postsUrl}).</span>
+		success(<span class="fstat-no" title="function not covered" >function(data, status, headers, config) {</span>
+			// this callback will be called asynchronously
+			// when the response is available
+			//console.log("Successfully received json containing all posts")
+<span class="cstat-no" title="statement not covered" >			$scope.posts = {</span>
+				entries: data
+			}
+		}).
+		error(<span class="fstat-no" title="function not covered" >function(data, status, headers, config) {</span>
+<span class="cstat-no" title="statement not covered" >			alert("Error while getting json for posts: "+status)</span>
+	});
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.orderByField = 'Date';</span>
+<span class="cstat-no" title="statement not covered" >    $scope.reverseSort = true;</span>
+<span class="cstat-no" title="statement not covered" >    $scope.searchText = "";</span>
+});
+&nbsp;
+myApp.controller("GithubModalCtrl", <span class="fstat-no" title="function not covered" >function ($scope, $modalInstance, UserModel, GithubAuthService, GithubSrvc) {</span>
+<span class="cstat-no" title="statement not covered" >	$scope.user = {}</span>
+<span class="cstat-no" title="statement not covered" >	$scope.cancel = <span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >		$modalInstance.dismiss('canceled');  </span>
+	}; // end cancel
+	
+<span class="cstat-no" title="statement not covered" >	$scope.save = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        console.log($scope.user.name);</span>
+<span class="cstat-no" title="statement not covered" >        GithubAuthService.instance($scope.user.name, $scope.user.password);</span>
+<span class="cstat-no" title="statement not covered" >        GithubAuthService.userInfo().user().then(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >            console.log("test if the user is the admin");</span>
+<span class="cstat-no" title="statement not covered" >            UserModel.setUserName($scope.user.name);</span>
+<span class="cstat-no" title="statement not covered" >            UserModel.setPassword($scope.user.password);</span>
+<span class="cstat-no" title="statement not covered" >            $modalInstance.dismiss('canceled');</span>
+<span class="cstat-no" title="statement not covered" >            GithubSrvc.testAdmin();</span>
+        }, <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >            console.log("Username invalid");</span>
+<span class="cstat-no" title="statement not covered" >            GithubAuthService.logout();</span>
+        });
+	};
+});
+&nbsp;
+/**
+ * GitHub controller using the GitHub service
+ */
+myApp.controller("GithubCtrl", <span class="fstat-no" title="function not covered" >function ($scope, $location, $http, $dialogs, ParameterSrvc, UserModel, GithubSrvc, GithubAuthService) {</span>
+	// login by the owner of the repository: edits on the blog are possible
+	// login by someone else: create an empty fork of the repository, automatically available
+	//      - ask for a name: the fork will be created for that name: xyz.github.io
+	//      - poll for repo.contents until the forked repo is ready
+	//      - guide them with a link to the new repo and encourage them to click on "edit"
+	
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	$scope.user = UserModel.user;</span>
+<span class="cstat-no" title="statement not covered" >	if(config.heroku.authenticate != "") {</span>
+<span class="cstat-no" title="statement not covered" >		$scope.githubLogin = true;</span>
+	} else {
+<span class="cstat-no" title="statement not covered" >		$scope.githubLogin = false;</span>
+	}
+	
+	// if no token is available listen for button click...
+<span class="cstat-no" title="statement not covered" >	($scope.login = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >		var user = UserModel.getUser();</span>
+		// first check if there is a valid user already stored in the localStorage
+<span class="cstat-no" title="statement not covered" >		if(typeof user !== 'undefined' &amp;&amp; user !== null) {</span>
+			//console.log("found a valid user object in localStorage, use that...");
+<span class="cstat-no" title="statement not covered" >			$scope.user = user;</span>
+		} else {
+<span class="cstat-no" title="statement not covered" >			console.log("no user object found in localStorage - if a code is provided use that to get a token");</span>
+<span class="cstat-no" title="statement not covered" >			var oauthCode = ParameterSrvc.urlParams['code'];</span>
+<span class="cstat-no" title="statement not covered" >			if(typeof oauthCode !== 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >				console.log("code provided, request a token with that code");</span>
+<span class="cstat-no" title="statement not covered" >				GithubAuthService.requestToken(oauthCode).then(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >					console.log("token available");</span>
+				}).then(<span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >					console.log("request user");</span>
+<span class="cstat-no" title="statement not covered" >					return GithubAuthService.userInfo().user();</span>
+				}).then(<span class="fstat-no" title="function not covered" >function(loginData) {</span>
+<span class="cstat-no" title="statement not covered" >                    UserModel.setUserName(loginData.login);</span>
+<span class="cstat-no" title="statement not covered" >					console.log("test if the user is the admin");</span>
+<span class="cstat-no" title="statement not covered" >					return GithubSrvc.testAdmin();</span>
+				}).then(<span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >					console.log("login done....");</span>
+				});
+			} else {
+<span class="cstat-no" title="statement not covered" >				console.log("nothing to do, wait for the user to press the login button");</span>
+			}
+		}
+	})();
+&nbsp;
+	// Request a login code from github if the user presses the login button
+<span class="cstat-no" title="statement not covered" >	$scope.requestCode = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >		if($scope.githubLogin) {</span>
+<span class="cstat-no" title="statement not covered" >			GithubSrvc.requestCode();</span>
+		} else {
+<span class="cstat-no" title="statement not covered" >			var dlg = $dialogs.create('/app/partials/githubLogin.html','GithubModalCtrl',{},{key: false});</span>
+<span class="cstat-no" title="statement not covered" >			dlg.result.then(<span class="fstat-no" title="function not covered" >function(name, password){</span></span>
+				//$scope.name = name;
+			},<span class="fstat-no" title="function not covered" >function(){</span>
+<span class="cstat-no" title="statement not covered" >				console.log("exit");</span>
+			});
+		}
+    }
+&nbsp;
+	// logout - this is not really a logout from github, but the access token is deleted
+<span class="cstat-no" title="statement not covered" >	$scope.logout = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >		GithubAuthService.logout();</span>
+	}
+&nbsp;
+	// bind user model to the view and listen for events
+<span class="cstat-no" title="statement not covered" >	$scope.$on('UserModel::userLoggedIn', <span class="fstat-no" title="function not covered" >function(event) {</span></span>
+<span class="cstat-no" title="statement not covered" >		console.log("the GithubCtrl received an userLoggedIn event for user: "+UserModel.user.name);</span>
+<span class="cstat-no" title="statement not covered" >        var user = UserModel.getUser();</span>
+<span class="cstat-no" title="statement not covered" >		if(typeof user !== 'undefined' &amp;&amp; user !== null) {</span>
+<span class="cstat-no" title="statement not covered" >			$scope.user = user;</span>
+		}
+    });
+<span class="cstat-no" title="statement not covered" >	$scope.$on('UserModel::userLoggedOut', <span class="fstat-no" title="function not covered" >function(event) {</span></span>
+<span class="cstat-no" title="statement not covered" >		console.log("the GithubCtrl received an userLoggedOut event");</span>
+<span class="cstat-no" title="statement not covered" >        $scope.user = "";</span>
+    });
+});
+&nbsp;
+myApp.controller('ConfigCtrl', <span class="fstat-no" title="function not covered" >function($scope, GithubSrvc, EditorSrvc, toaster) {</span>
+<span class="cstat-no" title="statement not covered" >    $scope.inputs = {}</span>
+<span class="cstat-no" title="statement not covered" >	$scope.inputs = config,</span>
+    $scope.setOutput = <span class="fstat-no" title="function not covered" >function(key, key2, newValue) {</span>
+<span class="cstat-no" title="statement not covered" >        $scope.inputs[key][key2] = newValue;</span>
+    }
+<span class="cstat-no" title="statement not covered" >	$scope.saveFrontendConfig = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >		var config = "var config = "+JSON.stringify($scope.inputs);</span>
+<span class="cstat-no" title="statement not covered" >		console.log(config);</span>
+<span class="cstat-no" title="statement not covered" >        var commitPromise = GithubSrvc.commit(config, "app/js/config.js");</span>
+<span class="cstat-no" title="statement not covered" >        commitPromise.then(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >            toaster.pop('success', "Frontend config saved...");</span>
+        });
+	}
+<span class="cstat-no" title="statement not covered" >    $scope.saveBackendConfig = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        console.log("save backend config");</span>
+<span class="cstat-no" title="statement not covered" >        var editorContent = EditorSrvc.getEditorContent();</span>
+<span class="cstat-no" title="statement not covered" >        var commitPromise = GithubSrvc.commit(editorContent, "_config.yml");</span>
+<span class="cstat-no" title="statement not covered" >        commitPromise.then(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >            toaster.pop('success', "Backend config saved...");</span>
+        });
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	var content = GithubSrvc.editContent("_config.yml");</span>
+<span class="cstat-no" title="statement not covered" >	content.then(<span class="fstat-no" title="function not covered" >function(data) {</span></span>
+<span class="cstat-no" title="statement not covered" >        var configLine = data.content.split('\n');</span>
+<span class="cstat-no" title="statement not covered" >        var newConfigData = "";</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		for(var i = 0;i &lt; configLine.length;i++){</span>
+<span class="cstat-no" title="statement not covered" >			var split = configLine[i].split(":");</span>
+<span class="cstat-no" title="statement not covered" >			if(configLine.indexOf(":")!==-1 &amp;&amp; split[1]!=="" &amp;&amp; split.size &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                if(split[0].indexOf("name")!==-1) {</span>
+<span class="cstat-no" title="statement not covered" >                    newConfigData += split[0]+": HAAHHAHHAHA\n"</span>
+                } else {
+<span class="cstat-no" title="statement not covered" >                    newConfigData += configLine[i]+"\n";</span>
+                }
+&nbsp;
+			} else {
+<span class="cstat-no" title="statement not covered" >                newConfigData += configLine[i]+"\n";</span>
+            }
+		}
+        //console.log(newConfigData);
+	});
+});
+&nbsp;
+myApp.controller('ToasterController', <span class="fstat-no" title="function not covered" >function($scope, toaster) {</span>
+    // save a reference to the current scope...
+<span class="cstat-no" title="statement not covered" >	var scope = $scope;</span>
+	
+<span class="cstat-no" title="statement not covered" >	$scope.$on('Toast::githubCommitSuccess', <span class="fstat-no" title="function not covered" >function(event) {</span></span>
+<span class="cstat-no" title="statement not covered" >		var toast = {</span>
+			type: "success",
+			title: "Commit to GitHub successful",
+			message: "Edits saved on GitHub. Changes take some time to appear (refresh page after around 1 minute)..."
+		};
+<span class="cstat-no" title="statement not covered" >		scope.pop(toast);</span>
+	});
+	
+<span class="cstat-no" title="statement not covered" >	$scope.pop = <span class="fstat-no" title="function not covered" >function(toast){</span></span>
+<span class="cstat-no" title="statement not covered" >		toaster.pop(toast.type, toast.title, toast.message, 5000, 'trustedHtml');</span>
+<span class="cstat-no" title="statement not covered" >		$scope.$apply();</span>
+    };
+    
+<span class="cstat-no" title="statement not covered" >    $scope.clear = <span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >        toaster.clear();</span>
+    };
+});
+&nbsp;
+myApp.controller('GithubForkCtrl', <span class="fstat-no" title="function not covered" >function($scope, $http, $q, $timeout, toaster, UserModel, StyleSwitcher, GithubSrvc, GithubAuthService, PollingSrvc, PollingImgSrvc) {</span>
+<span class="cstat-no" title="statement not covered" >	var scope = $scope;</span>
+<span class="cstat-no" title="statement not covered" >	scope.success = false;</span>
+	
+<span class="cstat-no" title="statement not covered" >    $scope.options = {}</span>
+<span class="cstat-no" title="statement not covered" >    $scope.options.forkSlogan = "Yihaa"             // Default title</span>
+<span class="cstat-no" title="statement not covered" >    $scope.options.forkName = UserModel.getUser().name+".github.com"; </span>                  // Gets overridden, when the user is logged in
+<span class="cstat-no" title="statement not covered" >    $scope.options.forkRealName = UserModel.getUser().name; </span>              // Gets overridden, when the user is logged in
+<span class="cstat-no" title="statement not covered" >    $scope.options.twitter = ""; </span>              // Gets overridden, when the user is logged in
+<span class="cstat-no" title="statement not covered" >    $scope.options.ssl = "";</span>
+<span class="cstat-no" title="statement not covered" >    $scope.options.github = "";</span>
+<span class="cstat-no" title="statement not covered" >	$scope.options.selectedTheme = "lumen";</span>
+<span class="cstat-no" title="statement not covered" >    $scope.options.availableThemes = [</span>
+      {name:'angularui'},
+      {name:'darkly'},
+      {name:'flatly'},
+      {name:'lumen'},
+      {name:'simplex'},
+	  {name:'spacelab'},
+	  {name:'simplex'},
+	  {name:'superhero'},
+	  {name:'yeti'}
+    ];
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var checkUnique = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        var url = "";</span>
+<span class="cstat-no" title="statement not covered" >        var forkName = $scope.options.forkName;</span>
+		
+<span class="cstat-no" title="statement not covered" >        if($scope.options.forkName.length&gt;4) {</span>
+<span class="cstat-no" title="statement not covered" >            if($scope.options.forkName.indexOf(".")===-1) {</span>
+<span class="cstat-no" title="statement not covered" >                url =  "http://"+$scope.options.forkName+".github.com";</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            this.img = new Image();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            this.img.onload = <span class="fstat-no" title="function not covered" >function() {<span class="cstat-no" title="statement not covered" ></span>_good();}</span>;</span>
+<span class="cstat-no" title="statement not covered" >            this.img.onerror = <span class="fstat-no" title="function not covered" >function(e) {</span> <span class="cstat-no" title="statement not covered" >error(e);}</span>;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            this.img.src = "https://"+$scope.options.forkName;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            var good= <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                console.log("yehh");</span>
+            } 
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            var error= <span class="fstat-no" title="function not covered" >function(e) {</span></span>
+<span class="cstat-no" title="statement not covered" >                console.log("oh noooo");</span>
+<span class="cstat-no" title="statement not covered" >                console.log(e);</span>
+            }
+&nbsp;
+&nbsp;
+            //$http.jsonp("http://"+$scope.options.forkName+"&amp;callback=JSON_CALLBACK");
+<span class="cstat-no" title="statement not covered" >            console.log("here the test should come if the url is available: "+$scope.options.forkName);</span>
+        }
+    };
+&nbsp;
+	// change theme
+<span class="cstat-no" title="statement not covered" >	var switchTheme = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >		StyleSwitcher.switch($scope.options.selectedTheme.name);</span>
+	}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.$watch('options.forkName', checkUnique);</span>
+<span class="cstat-no" title="statement not covered" >	$scope.$watch('options.selectedTheme', switchTheme);</span>
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.$on('UserModel::userLoggedIn', <span class="fstat-no" title="function not covered" >function(event, userName) {</span></span>
+<span class="cstat-no" title="statement not covered" >        console.log(event);</span>
+<span class="cstat-no" title="statement not covered" >        $scope.options.forkName = userName+".github.com";</span>
+<span class="cstat-no" title="statement not covered" >        $scope.options.forkRealName = userName;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.options.twitter = userName;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.options.ssl = userName+".github.com";</span>
+<span class="cstat-no" title="statement not covered" >        $scope.options.github = userName;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.$apply();</span>
+    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.fork = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        var forkName = $scope.options.forkName;</span>
+<span class="cstat-no" title="statement not covered" >        var forkSlogan = $scope.options.forkSlogan;</span>
+<span class="cstat-no" title="statement not covered" >        var name = $scope.options.forkRealName;</span>
+<span class="cstat-no" title="statement not covered" >        var twitter = $scope.options.twitter;</span>
+<span class="cstat-no" title="statement not covered" >        var ssl = $scope.options.ssl;</span>
+<span class="cstat-no" title="statement not covered" >        var github = $scope.options.github;</span>
+<span class="cstat-no" title="statement not covered" >        var theme = $scope.options.selectedTheme.name;</span>
+&nbsp;
+        // pass in options
+<span class="cstat-no" title="statement not covered" >        GithubSrvc.fork($scope.options)</span>
+        .then( <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >			scope.progress = 10;</span>
+<span class="cstat-no" title="statement not covered" >            return PollingSrvc.checkForBranchContent(config.github.repository, "master")</span>
+        })
+        .then( <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >			scope.progress = 20;</span>
+<span class="cstat-no" title="statement not covered" >            return GithubSrvc.renameRepo(forkName);</span>
+        })
+        .then( <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >			scope.progress = 30;</span>
+<span class="cstat-no" title="statement not covered" >            return PollingSrvc.checkForBranchContent(forkName, "template")</span>
+        })
+        .then( <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >			scope.progress = 40;</span>
+<span class="cstat-no" title="statement not covered" >            return GithubSrvc.deleteBranch(forkName, "heads/master")</span>
+        })
+        .then( <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >			scope.progress = 50;</span>
+<span class="cstat-no" title="statement not covered" >            return GithubSrvc.createBranch(forkName, "master")</span>
+        })
+		.then ( <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >			scope.progress = 60;</span>
+<span class="cstat-no" title="statement not covered" >			return GithubSrvc.deleteBranch(forkName, "heads/template")</span>
+		})
+        .then( <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >			scope.progress = 70;</span>
+<span class="cstat-no" title="statement not covered" >            scope.pop("Fork to GitHub successful", "&lt;ul&gt;&lt;li&gt;You will be notified, when the fork is ready...&lt;/li&gt;&lt;/ul&gt;");</span>
+        })
+        .then( <span class="fstat-no" title="function not covered" >function() {</span>
+             // the key is the string to search for
+			 // the value is the text to replace with
+<span class="cstat-no" title="statement not covered" >			 var replace = {</span>
+                 title: forkSlogan,
+                 name: name,
+                 twitter: twitter,
+                 github: github,
+                 enforce_ssl: ssl,
+                 theme: theme
+             }
+<span class="cstat-no" title="statement not covered" >			 scope.progress = 80;</span>
+<span class="cstat-no" title="statement not covered" >             return GithubSrvc.postProcess("_config.yml", replace, forkName);</span>
+        })
+        .then(<span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >            console.log("update config");</span>
+<span class="cstat-no" title="statement not covered" >            var commitPromise = $q.defer();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            var modifiyConfig = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                var configMod = {}</span>
+<span class="cstat-no" title="statement not covered" >                for (var key in config) {</span>
+<span class="cstat-no" title="statement not covered" >                    var obj = config[key];</span>
+<span class="cstat-no" title="statement not covered" >                    configMod[key] = {};</span>
+<span class="cstat-no" title="statement not covered" >                    for (var prop in obj) {</span>
+                        // important check that this is objects own property
+                        // not from prototype prop inherited
+<span class="cstat-no" title="statement not covered" >                        if(obj.hasOwnProperty(prop)){</span>
+<span class="cstat-no" title="statement not covered" >                            if(prop==="user") {</span>
+<span class="cstat-no" title="statement not covered" >                                configMod[key][prop] = name;</span>
+                            } else <span class="cstat-no" title="statement not covered" >if(prop=="repository"){</span>
+<span class="cstat-no" title="statement not covered" >                                configMod[key][prop] =name+".github.com";</span>
+                            } else {
+<span class="cstat-no" title="statement not covered" >                                configMod[key][prop] = "";</span>
+                            }
+                        }
+                    }
+                }
+<span class="cstat-no" title="statement not covered" >                var githubInstance = GithubAuthService.instance();</span>
+<span class="cstat-no" title="statement not covered" >                var repo = githubInstance.getRepo(UserModel.getUser().name, UserModel.getUser().name+".github.com");</span>
+<span class="cstat-no" title="statement not covered" >                var branch = repo.getBranch("master");</span>
+<span class="cstat-no" title="statement not covered" >                var configModJson = "var config = "+JSON.stringify(configMod);</span>
+<span class="cstat-no" title="statement not covered" >                scope.progress =83;</span>
+<span class="cstat-no" title="statement not covered" >                GithubSrvc.commit(configModJson, "app/js/config.js", branch, false, true).then(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                    commitPromise.resolve();</span>
+                }, <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >                   console.log("commit errrror");</span>
+                })
+            }
+<span class="cstat-no" title="statement not covered" >            $timeout(modifiyConfig, 1000);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            return commitPromise.promise;</span>
+        })
+        .then(<span class="fstat-no" title="function not covered" >function() {</span>
+            // commit to make sure it shows the right page
+<span class="cstat-no" title="statement not covered" >            console.log("commit a post")</span>
+<span class="cstat-no" title="statement not covered" >            var commitPromise = $q.defer();</span>
+<span class="cstat-no" title="statement not covered" >            var modifiyConfig = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                var githubInstance = GithubAuthService.instance();</span>
+<span class="cstat-no" title="statement not covered" >                var repo = githubInstance.getRepo(UserModel.getUser().name, UserModel.getUser().name+".github.com");</span>
+<span class="cstat-no" title="statement not covered" >                var branch = repo.getBranch("master");</span>
+<span class="cstat-no" title="statement not covered" >                var content = "---\nlayout: post\ncategories:\n- frontpage\ntagline: \ntags:\n- development\n- jekyll\npublished: true\nfrontpage: true\n---\nHi, this is the first post!";</span>
+<span class="cstat-no" title="statement not covered" >                scope.progress = 86;</span>
+<span class="cstat-no" title="statement not covered" >                var date = new Date();</span>
+<span class="cstat-no" title="statement not covered" >                GithubSrvc.commit(content, "_posts/"+date.toISOString().slice(0,10)+"-hello-world.md", branch, false, true).then(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                    commitPromise.resolve()</span>
+                });
+            }
+<span class="cstat-no" title="statement not covered" >            $timeout(modifiyConfig, 1000);</span>
+<span class="cstat-no" title="statement not covered" >            return commitPromise.promise;</span>
+        })
+        .then(<span class="fstat-no" title="function not covered" >function(){</span>
+<span class="cstat-no" title="statement not covered" >			scope.progress = 90;</span>
+<span class="cstat-no" title="statement not covered" >            return PollingImgSrvc.checkReady(UserModel.getUser().name+".github.com");</span>
+        })
+        .then(<span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >			scope.success = true;</span>
+<span class="cstat-no" title="statement not covered" >			scope.progress = 100;</span>
+<span class="cstat-no" title="statement not covered" >            return $q.when(scope.pop("Page available", "Visit "+forkName+" to see it live..."));</span>
+        })
+	};
+	
+<span class="cstat-no" title="statement not covered" >	$scope.$on('Toast::githubForkSuccess', <span class="fstat-no" title="function not covered" >function(event) {</span></span>
+		//scope.pop();
+	});
+	
+<span class="cstat-no" title="statement not covered" >	$scope.pop = <span class="fstat-no" title="function not covered" >function(title, text){</span></span>
+<span class="cstat-no" title="statement not covered" >		toaster.pop('success', title, text, 5000, 'trustedHtml');</span>
+<span class="cstat-no" title="statement not covered" >		$scope.$apply();</span>
+    };
+});
+&nbsp;
+/**
+*	This controller unlocks/lock admin functionality
+*/
+myApp.controller('AdminCtrl', <span class="fstat-no" title="function not covered" >function($scope, UserModel) {</span>
+	// binding to hide the edit button for non-admin users...
+<span class="cstat-no" title="statement not covered" >	var user = UserModel.getUser();</span>
+<span class="cstat-no" title="statement not covered" >	if(user !== null) {</span>
+<span class="cstat-no" title="statement not covered" >		$scope.isAdmin = UserModel.getUser().isAdmin;</span>
+	} else {
+<span class="cstat-no" title="statement not covered" >		$scope.isAdmin = false;</span>
+	}
+});
+&nbsp;
+/**
+*	This controller exports/imports post as a zip
+*/
+myApp.controller('ExportCtrl', <span class="fstat-no" title="function not covered" >function($scope, $dialogs, GithubSrvc) {</span>
+	// binding to hide the edit button for non-admin users...
+<span class="cstat-no" title="statement not covered" >	$scope.export = [];</span>
+<span class="cstat-no" title="statement not covered" >	$scope.exportSelection = [];</span>
+<span class="cstat-no" title="statement not covered" >	$scope.exportStatus = 0;</span>
+<span class="cstat-no" title="statement not covered" >	$scope.maxValue = 0;</span>
+<span class="cstat-no" title="statement not covered" >	$scope.processingPostNr = 0;</span>
+<span class="cstat-no" title="statement not covered" >	$scope.type = 'info';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	var fileCountPromise = GithubSrvc.getContents("_posts");</span>
+<span class="cstat-no" title="statement not covered" >	fileCountPromise.then(<span class="fstat-no" title="function not covered" >function(files) {</span></span>
+<span class="cstat-no" title="statement not covered" >		console.log("There are "+files.length+" files to process");</span>
+<span class="cstat-no" title="statement not covered" >		$scope.export = files;</span>
+        // this is for the loading bar
+<span class="cstat-no" title="statement not covered" >		$scope.maxValue = $scope.exportSelection.length;</span>
+	}, <span class="fstat-no" title="function not covered" >function(reason) {</span>
+<span class="cstat-no" title="statement not covered" >		console.log("There was a ready counting all files to export");</span>
+	}, <span class="fstat-no" title="function not covered" >function(update) {</span>
+<span class="cstat-no" title="statement not covered" >		console.log("Update from the fileCount process: "+update);</span>
+	});
+	
+<span class="cstat-no" title="statement not covered" >    $scope.zip = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >		var filePromise = GithubSrvc.getFiles($scope.exportSelection);</span>
+<span class="cstat-no" title="statement not covered" >		filePromise.then(<span class="fstat-no" title="function not covered" >function(contents) {</span></span>
+<span class="cstat-no" title="statement not covered" >			console.log("files available - zip them");</span>
+<span class="cstat-no" title="statement not covered" >			console.log(contents);</span>
+			
+<span class="cstat-no" title="statement not covered" >			var zip = new JSZip();</span>
+<span class="cstat-no" title="statement not covered" >			for(var i in contents) {</span>
+<span class="cstat-no" title="statement not covered" >				zip.file(i, contents[i]);</span>
+			};
+<span class="cstat-no" title="statement not covered" >			var content = zip.generate({type:"blob"});</span>
+<span class="cstat-no" title="statement not covered" >			var date = new Date();</span>
+<span class="cstat-no" title="statement not covered" >			$scope.type = 'success';</span>
+<span class="cstat-no" title="statement not covered" >            $scope.maxValue = $scope.exportSelection.length;</span>
+<span class="cstat-no" title="statement not covered" >			saveAs(content, date.toISOString().slice(0,10)+"-posts-export.zip");</span>
+		}, <span class="fstat-no" title="function not covered" >function(reason) {</span>
+<span class="cstat-no" title="statement not covered" >			console.log("There was a error to export the posts: "+reason);</span>
+		}, <span class="fstat-no" title="function not covered" >function(update) {</span>
+<span class="cstat-no" title="statement not covered" >			console.log("Update Notification: "+update);</span>
+<span class="cstat-no" title="statement not covered" >			console.log("percentage: "+percentage);</span>
+<span class="cstat-no" title="statement not covered" >			$scope.processingPostNr = update;</span>
+<span class="cstat-no" title="statement not covered" >            var percentage = (update * 100) / $scope.exportSelection.length;</span>
+<span class="cstat-no" title="statement not covered" >			$scope.exportStatus = percentage;</span>
+		});
+	}
+	
+<span class="cstat-no" title="statement not covered" >	$scope.selectAllExport = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        console.log($scope.export);</span>
+<span class="cstat-no" title="statement not covered" >		$scope.exportSelection = angular.copy($scope.export);</span>
+    }
+<span class="cstat-no" title="statement not covered" >	$scope.unselectAllExport = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >		$scope.exportSelection = [];</span>
+	}
+});
+&nbsp;
+/**
+ *	This controller exports/imports posts as a zip
+ */
+myApp.controller('ImportCtrl', <span class="fstat-no" title="function not covered" >function($scope, $dialogs, GithubSrvc) {</span>
+    // binding to hide the edit button for non-admin users...
+<span class="cstat-no" title="statement not covered" >    $scope.import = [];</span>
+<span class="cstat-no" title="statement not covered" >    $scope.importSelection = [];</span>
+<span class="cstat-no" title="statement not covered" >    $scope.importStatus = 0;</span>
+<span class="cstat-no" title="statement not covered" >    $scope.maxValue = 0;</span>
+<span class="cstat-no" title="statement not covered" >    $scope.processingPostNr = 0;</span>
+<span class="cstat-no" title="statement not covered" >    $scope.type = 'info';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var importValue = [];</span>
+<span class="cstat-no" title="statement not covered" >    $scope.add = <span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >        var f = document.getElementById('file').files[0],</span>
+            r = new FileReader();
+<span class="cstat-no" title="statement not covered" >        var importTemp = [];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        r.onloadend = <span class="fstat-no" title="function not covered" >function(e){</span></span>
+<span class="cstat-no" title="statement not covered" >            var data = e.target.result;</span>
+<span class="cstat-no" title="statement not covered" >            var zip = new JSZip(data);</span>
+<span class="cstat-no" title="statement not covered" >            var i = 0;</span>
+<span class="cstat-no" title="statement not covered" >            for(var file in zip.files) {</span>
+<span class="cstat-no" title="statement not covered" >                var fileObj = zip.files[file];</span>
+<span class="cstat-no" title="statement not covered" >                var isDir = endsWith(fileObj.name, "/");</span>
+<span class="cstat-no" title="statement not covered" >                if(!isDir) {</span>
+<span class="cstat-no" title="statement not covered" >                    importTemp[i] = fileObj.name;</span>
+<span class="cstat-no" title="statement not covered" >                    importValue[fileObj.name] = fileObj.asText();</span>
+<span class="cstat-no" title="statement not covered" >                    i++;</span>
+                }
+            }
+<span class="cstat-no" title="statement not covered" >            $scope.import = importTemp;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.$apply()</span>
+        }
+<span class="cstat-no" title="statement not covered" >        r.readAsBinaryString(f);</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.selectAllImport = <span class="fstat-no" title="function not covered" >function() {</span></span>
+        //console.log($scope.import);
+<span class="cstat-no" title="statement not covered" >        $scope.importSelection = $scope.import;</span>
+        //console.log($scope.importSelection);
+    }
+<span class="cstat-no" title="statement not covered" >    $scope.unselectAllImport = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.importSelection = [];</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.showContent = <span class="fstat-no" title="function not covered" >function(selected) {</span></span>
+<span class="cstat-no" title="statement not covered" >        console.log(selected);</span>
+<span class="cstat-no" title="statement not covered" >        var value = $scope.import[selected].asText();</span>
+<span class="cstat-no" title="statement not covered" >        var dlg = $dialogs.confirm(selected,value);</span>
+<span class="cstat-no" title="statement not covered" >        dlg.result.then(<span class="fstat-no" title="function not covered" >function(btn){</span></span>
+            //GithubSrvc.deleteContent(path);
+        },<span class="fstat-no" title="function not covered" >function(btn){</span>
+<span class="cstat-no" title="statement not covered" >            console.log("cancel delete")</span>
+            //$scope.confirmed = 'Shame on you for not thinking this is awesome!';
+        });
+<span class="cstat-no" title="statement not covered" >        console.log();</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.doImport = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        var importObject = {};</span>
+<span class="cstat-no" title="statement not covered" >        for(var i=0; i&lt;$scope.importSelection.length;i++) {</span>
+<span class="cstat-no" title="statement not covered" >            var key = $scope.importSelection[i];</span>
+<span class="cstat-no" title="statement not covered" >            var value = importValue[$scope.importSelection[i]];</span>
+<span class="cstat-no" title="statement not covered" >            importObject[key] = value;</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var showMessage = false;</span>
+<span class="cstat-no" title="statement not covered" >        var force = false;</span>
+<span class="cstat-no" title="statement not covered" >        GithubSrvc.commitMany(importObject, "Import", false, false);</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function endsWith(str, suffix) {</span>
+<span class="cstat-no" title="statement not covered" >        return str.indexOf(suffix, str.length - suffix.length) !== -1;</span>
+    }
+});
+&nbsp;
+/**
+ *	This controller manages edits on content on github
+ */
+myApp.controller('GithubEditCtrl', <span class="fstat-no" title="function not covered" >function($scope, $dialogs, $q, $modal, $timeout, toaster, YamlSrvc, UserModel, ParameterSrvc, GithubSrvc) {</span>
+<span class="cstat-no" title="statement not covered" >    var scope = $scope;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.options = {}</span>
+<span class="cstat-no" title="statement not covered" >    $scope.yaml = {};</span>
+    // the advanced settings form is collapsed by default
+<span class="cstat-no" title="statement not covered" >	$scope.advancedSettings = true;</span>
+&nbsp;
+	// styling for tags / categories labels
+<span class="cstat-no" title="statement not covered" >    $scope.getTagClass = <span class="fstat-no" title="function not covered" >function(city) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return 'label label-primary';</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	var date = "";</span>
+<span class="cstat-no" title="statement not covered" >    $scope.options.title = "";</span>
+<span class="cstat-no" title="statement not covered" >	$scope.options.isNewContent = false;</span>
+	
+<span class="cstat-no" title="statement not covered" >    var path = ParameterSrvc.urlParams['path'];</span>
+<span class="cstat-no" title="statement not covered" >    var url = ParameterSrvc.urlParams['url'];</span>
+	
+	// reconstruct data/title from file name...
+<span class="cstat-no" title="statement not covered" >    if(typeof(path) != 'undefined' &amp;&amp; typeof(url) !='undefined') {</span>
+<span class="cstat-no" title="statement not covered" >        var splif = path.split("-");</span>
+<span class="cstat-no" title="statement not covered" >        date = splif[0].split("/")[1]+"-"+splif[1]+"-"+splif[2];</span>
+        //$scope.options.title = "";
+<span class="cstat-no" title="statement not covered" >        for(var i=3;i&lt;splif.length;i++) {</span>
+<span class="cstat-no" title="statement not covered" >            if(i!==splif.length-1) {</span>
+<span class="cstat-no" title="statement not covered" >                $scope.options.title += splif[i]+" ";</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                $scope.options.title += splif[i].split(".")[0];</span>
+            }
+        }
+    } else {
+<span class="cstat-no" title="statement not covered" >		$scope.options.isNewContent = true;</span>
+<span class="cstat-no" title="statement not covered" >        console.log("new content...")</span>
+<span class="cstat-no" title="statement not covered" >        path = "_posts/templates/2014-01-01-edit-template.md";</span>
+    }
+&nbsp;
+    // init the editor
+<span class="cstat-no" title="statement not covered" >    var contentPromise = GithubSrvc.editContent(path);</span>
+<span class="cstat-no" title="statement not covered" >	contentPromise.then(<span class="fstat-no" title="function not covered" >function(yaml) {</span></span>
+		// view yaml text in editor
+<span class="cstat-no" title="statement not covered" >		scope.yaml = yaml;</span>
+	});
+	
+<span class="cstat-no" title="statement not covered" >	$scope.commitPath = "";</span>
+<span class="cstat-no" title="statement not covered" >	var savePromise = $q.defer();</span>
+<span class="cstat-no" title="statement not covered" >	$scope.save = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >		var content = $('#target-editor').markdown()[0].value;</span>
+<span class="cstat-no" title="statement not covered" >		$scope.yaml.content = content;</span>
+<span class="cstat-no" title="statement not covered" >		content = YamlSrvc.create($scope.yaml);</span>
+<span class="cstat-no" title="statement not covered" >		savePromise.resolve(content)</span>
+	}
+<span class="cstat-no" title="statement not covered" >    savePromise.promise.then(<span class="fstat-no" title="function not covered" >function(content) {</span></span>
+<span class="cstat-no" title="statement not covered" >        var commitPath = "";</span>
+<span class="cstat-no" title="statement not covered" >        if($scope.options.date instanceof Date) {</span>
+<span class="cstat-no" title="statement not covered" >            $scope.commitPath = $scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title;</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >            $scope.commitPath = $scope.options.date+"-"+$scope.options.title;</span>
+        }
+<span class="cstat-no" title="statement not covered" >		$scope.commitPath = $scope.commitPath.replace(/ /g,"-")+".md";</span>
+&nbsp;
+        //var path = "_posts/"+$scope.options.date.toISOString().slice(0,10)+"-"+$scope.options.title.replaceAll(" ","-")+".md";
+<span class="cstat-no" title="statement not covered" >        console.log("edit existing content");</span>
+<span class="cstat-no" title="statement not covered" >        console.log("should check, if the path has changed... if yes, it should post/delete or move/commit")</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return GithubSrvc.commit(content, "_posts/"+$scope.commitPath);</span>
+    }).then(<span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >        toaster.pop('success', "Post saved", 'The post was successfully saved. You will be redirected to the post in around 10 seconds...', 5000, 'trustedHtml');</span>
+        // redirect to the frontpage after 10 seconds
+<span class="cstat-no" title="statement not covered" >		console.log($scope.commitPath.replace(/-/g,"/").replace(".md", ""));</span>
+<span class="cstat-no" title="statement not covered" >		$timeout(<span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >			if(typeof(url) !='undefined') {</span>
+<span class="cstat-no" title="statement not covered" >                window.location = url;</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >				window.location = config.github.redirection_url+"/"+$scope.commitPath.replace(/-/g,"/").replace(".md", "");</span>
+            }
+        }, 10000);
+    });
+&nbsp;
+    // redirect to normal calling page immediately
+<span class="cstat-no" title="statement not covered" >    $scope.cancel = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        console.log("cancel edit...and redirect ");</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if(typeof(url) !='undefined') {</span>
+<span class="cstat-no" title="statement not covered" >            window.location = url;</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >            window.location = config.github.redirection_url+"/"+$scope.commitPath.replace(/-/g,"/").replace(".md", "");</span>
+        }
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.confirmed = 'You have yet to be confirmed!';</span>
+<span class="cstat-no" title="statement not covered" >    $scope.delete = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        console.log("delete....");</span>
+<span class="cstat-no" title="statement not covered" >        var dlg = $dialogs.confirm('Please Confirm','Do you want to delete the post?');</span>
+<span class="cstat-no" title="statement not covered" >        dlg.result.then(<span class="fstat-no" title="function not covered" >function(btn){</span></span>
+<span class="cstat-no" title="statement not covered" >            var deletePromise = GithubSrvc.deleteContent(path);</span>
+<span class="cstat-no" title="statement not covered" >			deletePromise.then(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >				toaster.pop('error', "Post deleted", 'The post was successfully deleted. You will be redirected to the frontpage shortly...', 5000, 'trustedHtml');</span>
+<span class="cstat-no" title="statement not covered" >				$scope.$apply();</span>
+<span class="cstat-no" title="statement not covered" >				$timeout(<span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >					window.location = config.github.redirection_url;</span>
+				}, 5000);
+			});
+        },<span class="fstat-no" title="function not covered" >function(btn){</span>
+<span class="cstat-no" title="statement not covered" >            console.log("cancel delete")</span>
+        });
+    }
+&nbsp;
+	// date picker
+<span class="cstat-no" title="statement not covered" >    $scope.today = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.options.date = new Date();</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.options.date = date;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if(date==='') {</span>
+<span class="cstat-no" title="statement not covered" >        $scope.today();</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >        $scope.options.date = date;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.clear = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.options.date = null;</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.open = <span class="fstat-no" title="function not covered" >function($event) {</span></span>
+<span class="cstat-no" title="statement not covered" >        $event.preventDefault();</span>
+<span class="cstat-no" title="statement not covered" >        $event.stopPropagation();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.opened = true;</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.dateOptions = {</span>
+        'year-format': "'yy'",
+        'starting-day': 1
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.format = 'yyyy-MM-dd';</span>
+});
+&nbsp;
+/**
+ *	Star rating
+ */
+myApp.controller('RatingCtrl', <span class="fstat-no" title="function not covered" >function($scope) {</span>
+<span class="cstat-no" title="statement not covered" >    var ratyElements =  $('.raty');</span>
+<span class="cstat-no" title="statement not covered" >    var success = <span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >        alert("success");</span>
+    }
+<span class="cstat-no" title="statement not covered" >    for(var i=0;i&lt;ratyElements.length;i++) {</span>
+<span class="cstat-no" title="statement not covered" >        $(ratyElements[i]).raty({</span>
+            path: 'assets/js/raty/images',
+            click: <span class="fstat-no" title="function not covered" >function(score, evt) {</span>
+<span class="cstat-no" title="statement not covered" >                accessoireRating(this.id, score);</span>
+            }
+        });
+&nbsp;
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var getRatings = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        var url = "https://api.keen.io/3.0/projects/532b3e5a00111c0da1000006/queries/average?api_key=fca64cb411fe523d053f2d9b1d159011135be6ce55da682f1ad8d6b1d4f629b84dd564edb1c0d7a0d7575ebaaa79b55daa075f7c866d7430ace403bab51b7513aa41b30ce443f9d736d45d33c78a0b44420c2ecd35223b76d67af37df1d0cc52bf67e73cb32d949eb58cb5814e7e5e6a&amp;event_collection=accessoires&amp;timezone=3600&amp;target_property=rating&amp;group_by=id"</span>
+<span class="cstat-no" title="statement not covered" >        var success = <span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            for(i=0;i&lt;data.result.length;i++)</span>
+            {
+<span class="cstat-no" title="statement not covered" >                var rating = data.result[i].result;</span>
+<span class="cstat-no" title="statement not covered" >                var element = data.result[i].id.replace("?","");</span>
+<span class="cstat-no" title="statement not covered" >                console.log(element);</span>
+<span class="cstat-no" title="statement not covered" >                console.log(rating);</span>
+                //$("#"+element).parent().append(rating);
+<span class="cstat-no" title="statement not covered" >                $("#"+element).raty({</span>
+                    score: rating,
+                    path: 'assets/js/raty/images',
+                    click: <span class="fstat-no" title="function not covered" >function(score, evt) {</span>
+<span class="cstat-no" title="statement not covered" >                        accessoireRating(this.id, score);</span>
+                    }
+                });
+            }
+        };
+<span class="cstat-no" title="statement not covered" >        $.ajax({</span>
+            url: url,
+            success: success
+        });
+    }
+<span class="cstat-no" title="statement not covered" >    getRatings();</span>
+});</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Oct 17 2014 13:33:42 GMT+0000 (UTC)</div>
+</div>
+
+<script src="../prettify.js"></script>
+
+<script src="http://yui.yahooapis.com/3.6.0/build/yui/yui-min.js"></script>
+<script>
+
+    YUI().use('datatable', function (Y) {
+
+        var formatters = {
+          pct: function (o) {
+              o.className += o.record.get('classes')[o.column.key];
+              try {
+                  return o.value.toFixed(2) + '%';
+              } catch (ex) { return o.value + '%'; }
+          },
+          html: function (o) {
+              o.className += o.record.get('classes')[o.column.key];
+              return o.record.get(o.column.key + '_html');
+          }
+        },
+          defaultFormatter = function (o) {
+              o.className += o.record.get('classes')[o.column.key];
+              return o.value;
+          };
+
+        function getColumns(theadNode) {
+            var colNodes = theadNode.all('tr th'),
+                cols = [],
+                col;
+            colNodes.each(function (colNode) {
+                col = {
+                    key: colNode.getAttribute('data-col'),
+                    label: colNode.get('innerHTML') || ' ',
+                    sortable: !colNode.getAttribute('data-nosort'),
+                    className: colNode.getAttribute('class'),
+                    type: colNode.getAttribute('data-type'),
+                    allowHTML: colNode.getAttribute('data-html') === 'true' || colNode.getAttribute('data-fmt') === 'html'
+                };
+                col.formatter = formatters[colNode.getAttribute('data-fmt')] || defaultFormatter;
+                cols.push(col);
+            });
+            return cols;
+        }
+
+        function getRowData(trNode, cols) {
+            var tdNodes = trNode.all('td'),
+                    i,
+                    row = { classes: {} },
+                    node,
+                    name;
+            for (i = 0; i < cols.length; i += 1) {
+                name = cols[i].key;
+                node = tdNodes.item(i);
+                row[name] = node.getAttribute('data-value') || node.get('innerHTML');
+                row[name + '_html'] = node.get('innerHTML');
+                row.classes[name] = node.getAttribute('class');
+                //Y.log('Name: ' + name + '; Value: ' + row[name]);
+                if (cols[i].type === 'number') { row[name] = row[name] * 1; }
+            }
+            //Y.log(row);
+            return row;
+        }
+
+        function getData(tbodyNode, cols) {
+            var data = [];
+            tbodyNode.all('tr').each(function (trNode) {
+                data.push(getRowData(trNode, cols));
+            });
+            return data;
+        }
+
+        function replaceTable(node) {
+            if (!node) { return; }
+            var cols = getColumns(node.one('thead')),
+                data = getData(node.one('tbody'), cols),
+                table,
+                parent = node.get('parentNode');
+
+            table = new Y.DataTable({
+                columns: cols,
+                data: data,
+                sortBy: 'file'
+            });
+            parent.set('innerHTML', '');
+            table.render(parent);
+        }
+
+        Y.on('domready', function () {
+            replaceTable(Y.one('div.coverage-summary table'));
+            if (typeof prettyPrint === 'function') {
+                prettyPrint();
+            }
+        });
+    });
+</script>
+</body>
+</html>
