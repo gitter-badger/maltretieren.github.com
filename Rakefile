@@ -28,7 +28,7 @@ namespace :my_tasks do
 	task :uploadTestResults do
 		puts "\n## Listing of folder tests/coverage"
 		system("ls coverage")
-		system("cat covarage/coverage-PhantomJS 1.9.7 (Linux)-20141017_122557.json")
+		system("cat covarage/'coverage-PhantomJS 1.9.7 (Linux)-20141017_122557.json'")
 	end
 	
 	task :deploy do
